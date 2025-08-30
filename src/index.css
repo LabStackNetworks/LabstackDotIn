@@ -72,6 +72,16 @@ All colors MUST be HSL. Inspired by Stripe/Linear/Notion aesthetics with healthc
     /* Animation System */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-bounce: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    --transition-spring: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    --transition-elegant: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+
+    /* Hover Scale Utilities */
+    --scale-102: 1.02;
+    --scale-105: 1.05;
+    --scale-110: 1.10;
+
+    /* Additional Shadow System */
+    --shadow-glow: 0 0 40px hsl(var(--primary) / 0.4);
 
     --sidebar-background: 0 0% 98%;
 
@@ -200,6 +210,50 @@ All colors MUST be HSL. Inspired by Stripe/Linear/Notion aesthetics with healthc
     animation: scroll 20s linear infinite;
   }
 
+  .animate-fade-in {
+    animation: fade-in 0.6s ease-out;
+  }
+
+  .animate-slide-up {
+    animation: slide-up 0.6s ease-out;
+  }
+
+  .animate-scale-in {
+    animation: scale-in 0.4s ease-out;
+  }
+
+  /* Professional Interaction Classes */
+  .hover-scale {
+    @apply transition-all duration-300 hover:scale-105;
+  }
+  
+  .hover-glow {
+    @apply transition-shadow duration-300;
+  }
+  
+  .hover-glow:hover {
+    box-shadow: var(--shadow-glow);
+  }
+  
+  .animate-on-scroll {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease-out;
+  }
+  
+  .animate-on-scroll.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .btn-hover {
+    @apply transition-all duration-300 hover:scale-105;
+  }
+  
+  .btn-hover:hover {
+    box-shadow: var(--shadow-glow);
+  }
+
   .scrollbar-hide {
     -ms-overflow-style: none;
     scrollbar-width: none;
@@ -229,6 +283,39 @@ All colors MUST be HSL. Inspired by Stripe/Linear/Notion aesthetics with healthc
 @keyframes scroll {
   0% { transform: translateX(0); }
   100% { transform: translateX(-50%); }
+}
+
+@keyframes fade-in {
+  0% { 
+    opacity: 0; 
+    transform: translateY(20px); 
+  }
+  100% { 
+    opacity: 1; 
+    transform: translateY(0); 
+  }
+}
+
+@keyframes slide-up {
+  0% { 
+    opacity: 0; 
+    transform: translateY(30px); 
+  }
+  100% { 
+    opacity: 1; 
+    transform: translateY(0); 
+  }
+}
+
+@keyframes scale-in {
+  0% { 
+    opacity: 0; 
+    transform: scale(0.9); 
+  }
+  100% { 
+    opacity: 1; 
+    transform: scale(1); 
+  }
 }
 
 /* Custom Scrollbar */
