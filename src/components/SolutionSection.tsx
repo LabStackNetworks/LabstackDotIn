@@ -1,4 +1,4 @@
-import { Network, Zap, CreditCard, Brain, Stethoscope, Smartphone, Code, Globe } from "lucide-react";
+import { Network, Zap, CreditCard, Brain } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const SolutionSection = () => {
@@ -34,69 +34,6 @@ const SolutionSection = () => {
       features: ["Structured data", "Quality scoring", "Predictive insights", "Smart analytics"],
       gradient: "from-secondary to-primary",
       position: "top-1/2 left-0 transform -translate-y-1/2"
-    }
-  ];
-
-  const solutions = [
-    {
-      icon: Stethoscope,
-      title: "Healthcare Infrastructure",
-      subtitle: "Launch in days, scale nationwide",
-      description: "Skip the 12–18 month build cycle with complete healthcare infrastructure platform.",
-      features: [
-        "Provider network access",
-        "Operations automation", 
-        "Compliance frameworks",
-        "Real-time monitoring"
-      ],
-      proof: "Cut launch time from 12 months to 6 weeks",
-      cta: "Explore Platform",
-      gradient: "from-primary to-primary/60"
-    },
-    {
-      icon: Smartphone,
-      title: "Digital Platform",
-      subtitle: "White-label patient experiences",
-      description: "Structured data, not PDFs. Built for engagement and retention with seamless health journeys.",
-      features: [
-        "White-label patient flows",
-        "Structured health data",
-        "Cross-service continuity",
-        "Engagement analytics"
-      ],
-      proof: "NPS jumped 25 points with digital flows",
-      cta: "Start Building",
-      gradient: "from-secondary to-secondary/60"
-    },
-    {
-      icon: Code,
-      title: "API Solutions",
-      subtitle: "Developer-first healthcare rails",
-      description: "Modern APIs for healthcare services with higher ARPU through prescription monetization.",
-      features: [
-        "RESTful healthcare APIs",
-        "Prescription monetization",
-        "Care coordination tools",
-        "Developer-friendly docs"
-      ],
-      proof: "Prescription monetization grew ARPU by 15%",
-      cta: "Explore API Hub",
-      gradient: "from-primary to-secondary"
-    },
-    {
-      icon: Globe,
-      title: "Coverage Expansion",
-      subtitle: "Tier-1 to Tier-3 instantly",
-      description: "Expand to untapped markets with quality-assured providers and local market expertise.",
-      features: [
-        "Tier-2/3 market access",
-        "Quality assurance",
-        "Local partnerships",
-        "Market intelligence"
-      ],
-      proof: "20% conversion boost after geographic expansion",
-      cta: "Expand Coverage",
-      gradient: "from-secondary to-primary"
     }
   ];
 
@@ -273,97 +210,8 @@ const SolutionSection = () => {
           </div>
         </div>
 
-        {/* Section 2: Solutions Built for Healthcare Scale */}
-        <div className="mb-20">
-          <div className="max-w-4xl mx-auto text-center mb-16">
-            <h2 className="text-3xl lg:text-5xl font-heading font-bold mb-6">
-              Solutions Built for <span className="text-gradient">Healthcare Scale</span>
-            </h2>
-            <p className="text-lg lg:text-xl text-muted-foreground">
-              Four core solutions powering modern healthcare companies
-            </p>
-          </div>
-
-          {/* Horizontal Arc-Shaped Cards */}
-          <div className="relative">
-            <div className="flex space-x-6 lg:space-x-8 overflow-x-auto pb-6 scrollbar-hide">
-              {solutions.map((solution, index) => {
-                const IconComponent = solution.icon;
-                return (
-                  <div 
-                    key={index}
-                    className="flex-shrink-0 w-80 lg:w-96 card-gradient rounded-3xl p-8 lg:p-10 card-hover group relative overflow-hidden transform transition-all duration-700 hover:scale-105 hover:-translate-y-4"
-                    style={{ 
-                      animation: `fade-in 0.6s ease-out ${index * 0.2}s both`,
-                      transform: `perspective(1000px) rotateX(${index % 2 === 0 ? '2deg' : '-2deg'})`,
-                    }}
-                  >
-                    {/* Background Gradient */}
-                    <div className={`absolute inset-0 bg-gradient-to-br ${solution.gradient} opacity-5 group-hover:opacity-15 transition-all duration-500`}></div>
-                    
-                    <div className="relative z-10">
-                      {/* Icon & Title */}
-                      <div className="mb-8">
-                        <div className={`w-16 h-16 lg:w-20 lg:h-20 rounded-3xl bg-gradient-to-br ${solution.gradient} flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 shadow-elegant hover:shadow-glow`}>
-                          <IconComponent className="w-8 h-8 lg:w-10 lg:h-10 text-white" />
-                        </div>
-                        <h3 className="text-xl lg:text-2xl font-heading font-bold text-foreground mb-2 group-hover:text-gradient transition-colors duration-300">
-                          {solution.title}
-                        </h3>
-                        <p className="text-sm text-muted-foreground font-medium mb-4">
-                          {solution.subtitle}
-                        </p>
-                      </div>
-
-                      {/* Description */}
-                      <p className="text-muted-foreground mb-6 leading-relaxed text-sm lg:text-base">
-                        {solution.description}
-                      </p>
-
-                      {/* Features */}
-                      <ul className="space-y-3 mb-8">
-                        {solution.features.map((feature, featureIndex) => (
-                          <li key={featureIndex} className="flex items-center space-x-3 transform transition-all duration-300" style={{ transitionDelay: `${featureIndex * 100}ms` }}>
-                            <div className="w-1.5 h-1.5 bg-primary rounded-full flex-shrink-0 group-hover:scale-150 transition-transform duration-300"></div>
-                            <span className="text-xs lg:text-sm text-muted-foreground group-hover:text-foreground transition-colors duration-300">{feature}</span>
-                          </li>
-                        ))}
-                      </ul>
-
-                      {/* Proof Point */}
-                      <div className="bg-success/10 border border-success/20 rounded-xl p-4 mb-6 group-hover:bg-success/15 transition-colors duration-300">
-                        <div className="flex items-start space-x-3">
-                          <div className="w-2 h-2 bg-success rounded-full mt-1.5 flex-shrink-0 group-hover:scale-125 transition-transform duration-300"></div>
-                          <span className="text-success font-medium text-xs lg:text-sm leading-relaxed">
-                            "{solution.proof}"
-                          </span>
-                        </div>
-                      </div>
-
-                      {/* CTA */}
-                      <Button size="sm" className="w-full btn-gradient text-sm hover:shadow-glow transition-all duration-300">
-                        {solution.cta}
-                      </Button>
-                    </div>
-
-                    {/* Hover Glow Effect */}
-                    <div className="absolute inset-0 bg-gradient-to-br from-primary/0 to-secondary/0 group-hover:from-primary/10 group-hover:to-secondary/10 transition-all duration-500 pointer-events-none rounded-3xl"></div>
-                  </div>
-                );
-              })}
-            </div>
-
-            {/* Scroll Indicators */}
-            <div className="flex justify-center space-x-2 mt-8">
-              {solutions.map((_, index) => (
-                <div key={index} className="w-2 h-2 bg-muted rounded-full opacity-30 hover:opacity-60 transition-opacity cursor-pointer"></div>
-              ))}
-            </div>
-          </div>
-        </div>
-
-        {/* Section 3: Custom Solutions CTA */}
-        <div className="text-center">
+        {/* Section 2: Custom Solutions CTA */}
+        <div className="text-center mt-16">
           <div className="max-w-2xl mx-auto mb-8">
             <h3 className="text-2xl lg:text-3xl font-heading font-bold text-foreground mb-4">
               Need Something <span className="text-gradient">Custom</span>?
