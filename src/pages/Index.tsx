@@ -5,6 +5,7 @@ import SolutionSection from "@/components/SolutionSection";
 import ValuePropositionTabs from "@/components/ValuePropositionTabs";
 import WhoWeServe from "@/components/WhoWeServe";
 import ProofOfScale from "@/components/ProofOfScale";
+import SolutionsShowcase from "@/components/SolutionsShowcase";
 import DualCTA from "@/components/DualCTA";
 import Footer from "@/components/Footer";
 
@@ -19,6 +20,7 @@ const Index = () => {
         <ValuePropositionTabs />
         <WhoWeServe />
         <ProofOfScale />
+        <SolutionsShowcase />
         <DualCTA />
       </main>
       <Footer />
