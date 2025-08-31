@@ -129,77 +129,147 @@ const SolutionSection = () => {
             giving you enterprise-grade capabilities from day one.
           </p>
 
-          {/* Central Orb with Radiating Cards */}
-          <div className="relative h-[600px] lg:h-[700px] mx-auto max-w-4xl">
+          {/* Central Orb with 4 Positioned Cards */}
+          <div className="relative flex items-center justify-center min-h-[600px] lg:min-h-[700px]">
             {/* Central Glowing Orb */}
-            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20">
-              <div className="relative">
-                <div className="w-32 h-32 lg:w-40 lg:h-40 rounded-full bg-gradient-to-br from-primary via-secondary to-primary animate-glow shadow-glow flex items-center justify-center">
-                  <div className="w-20 h-20 lg:w-24 lg:h-24 rounded-full bg-background/90 backdrop-blur flex items-center justify-center">
-                    <Brain className="w-8 h-8 lg:w-10 lg:h-10 text-primary" />
+            <div className="relative z-20">
+              <div className="w-32 h-32 lg:w-48 lg:h-48 rounded-full bg-gradient-to-br from-primary via-secondary to-primary animate-glow shadow-glow flex items-center justify-center">
+                <div className="w-20 h-20 lg:w-32 lg:h-32 rounded-full bg-background/20 backdrop-blur border border-white/10 flex items-center justify-center">
+                  <div className="w-16 h-16 lg:w-24 lg:h-24 rounded-full bg-gradient-to-br from-primary/30 to-secondary/30 backdrop-blur flex items-center justify-center">
+                    <Brain className="w-6 h-6 lg:w-10 lg:h-10 text-white" />
                   </div>
                 </div>
-                {/* Radiating Lines */}
-                <div className="absolute inset-0 animate-spin-slow">
-                  {[0, 90, 180, 270].map((rotation, i) => (
-                    <div 
-                      key={i}
-                      className="absolute w-px h-32 bg-gradient-to-t from-primary/50 to-transparent"
-                      style={{ 
-                        transform: `rotate(${rotation}deg)`,
-                        transformOrigin: 'bottom center',
-                        bottom: '50%',
-                        left: '50%'
-                      }}
-                    />
-                  ))}
+              </div>
+              
+              {/* Connecting Lines */}
+              <div className="absolute inset-0">
+                {/* Top Left Line */}
+                <div className="absolute w-24 h-px bg-gradient-to-l from-primary/60 to-transparent top-4 -left-24 lg:w-32 lg:-left-32 lg:top-6"></div>
+                {/* Top Right Line */}
+                <div className="absolute w-24 h-px bg-gradient-to-r from-primary/60 to-transparent top-4 -right-24 lg:w-32 lg:-right-32 lg:top-6"></div>
+                {/* Bottom Left Line */}
+                <div className="absolute w-24 h-px bg-gradient-to-l from-primary/60 to-transparent bottom-4 -left-24 lg:w-32 lg:-left-32 lg:bottom-6"></div>
+                {/* Bottom Right Line */}
+                <div className="absolute w-24 h-px bg-gradient-to-r from-primary/60 to-transparent bottom-4 -right-24 lg:w-32 lg:-right-32 lg:bottom-6"></div>
+              </div>
+            </div>
+
+            {/* 4 Infrastructure Cards - Positioned around the orb */}
+            {/* Top Left Card */}
+            <div className="absolute top-0 left-0 w-56 lg:w-64 group cursor-pointer" style={{ animation: 'fade-in 0.8s ease-out 0.2s both' }}>
+              <div className="card-gradient rounded-xl p-4 lg:p-6 transform transition-all duration-500 hover:scale-105 hover:-translate-y-1 hover:shadow-glow">
+                <div className="absolute inset-0 bg-gradient-to-br from-primary to-primary/60 opacity-5 group-hover:opacity-15 transition-all duration-500 rounded-xl"></div>
+                <div className="relative z-10">
+                  <div className="w-10 h-10 lg:w-12 lg:h-12 rounded-lg bg-gradient-to-br from-primary to-primary/60 flex items-center justify-center mb-3 group-hover:scale-110 transition-all duration-300">
+                    <Network className="w-5 h-5 lg:w-6 lg:h-6 text-white" />
+                  </div>
+                  <h3 className="text-base lg:text-lg font-heading font-bold text-foreground mb-2 group-hover:text-gradient transition-colors duration-300">
+                    Provider Network
+                  </h3>
+                  <ul className="space-y-1.5">
+                    <li className="flex items-center space-x-2">
+                      <div className="w-1 h-1 bg-primary rounded-full flex-shrink-0"></div>
+                      <span className="text-xs text-muted-foreground">Quality-assured providers</span>
+                    </li>
+                    <li className="flex items-center space-x-2">
+                      <div className="w-1 h-1 bg-primary rounded-full flex-shrink-0"></div>
+                      <span className="text-xs text-muted-foreground">Nationwide coverage</span>
+                    </li>
+                    <li className="flex items-center space-x-2">
+                      <div className="w-1 h-1 bg-primary rounded-full flex-shrink-0"></div>
+                      <span className="text-xs text-muted-foreground">Real-time availability</span>
+                    </li>
+                  </ul>
                 </div>
               </div>
             </div>
 
-            {/* 4 Surrounding Infrastructure Cards */}
-            {infrastructureLayers.map((layer, index) => {
-              const IconComponent = layer.icon;
-              return (
-                <div 
-                  key={index}
-                  className={`absolute w-64 lg:w-72 ${layer.position} group cursor-pointer`}
-                  style={{ animation: `fade-in 0.8s ease-out ${index * 0.3}s both` }}
-                >
-                  <div className="card-gradient rounded-2xl p-6 lg:p-8 transform transition-all duration-500 hover:scale-105 hover:-translate-y-2 hover:shadow-glow">
-                    {/* Gradient Background */}
-                    <div className={`absolute inset-0 bg-gradient-to-br ${layer.gradient} opacity-5 group-hover:opacity-15 transition-all duration-500 rounded-2xl`}></div>
-                    
-                    <div className="relative z-10">
-                      {/* Icon */}
-                      <div className={`w-12 h-12 lg:w-14 lg:h-14 rounded-xl bg-gradient-to-br ${layer.gradient} flex items-center justify-center mb-4 group-hover:scale-110 transition-all duration-300 shadow-elegant`}>
-                        <IconComponent className="w-6 h-6 lg:w-7 lg:h-7 text-white" />
-                      </div>
-                      
-                      {/* Title */}
-                      <h3 className="text-lg lg:text-xl font-heading font-bold text-foreground mb-3 group-hover:text-gradient transition-colors duration-300">
-                        {layer.title}
-                      </h3>
-                      
-                      {/* Description */}
-                      <p className="text-sm text-muted-foreground mb-4 leading-relaxed">
-                        {layer.description}
-                      </p>
-                      
-                      {/* Features */}
-                      <ul className="space-y-2">
-                        {layer.features.map((feature, featureIndex) => (
-                          <li key={featureIndex} className="flex items-center space-x-2">
-                            <div className="w-1.5 h-1.5 bg-primary rounded-full flex-shrink-0 group-hover:scale-125 transition-transform duration-300"></div>
-                            <span className="text-xs text-muted-foreground group-hover:text-foreground transition-colors duration-300">{feature}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
+            {/* Top Right Card */}
+            <div className="absolute top-0 right-0 w-56 lg:w-64 group cursor-pointer" style={{ animation: 'fade-in 0.8s ease-out 0.4s both' }}>
+              <div className="card-gradient rounded-xl p-4 lg:p-6 transform transition-all duration-500 hover:scale-105 hover:-translate-y-1 hover:shadow-glow">
+                <div className="absolute inset-0 bg-gradient-to-br from-secondary to-secondary/60 opacity-5 group-hover:opacity-15 transition-all duration-500 rounded-xl"></div>
+                <div className="relative z-10">
+                  <div className="w-10 h-10 lg:w-12 lg:h-12 rounded-lg bg-gradient-to-br from-secondary to-secondary/60 flex items-center justify-center mb-3 group-hover:scale-110 transition-all duration-300">
+                    <Zap className="w-5 h-5 lg:w-6 lg:h-6 text-white" />
                   </div>
+                  <h3 className="text-base lg:text-lg font-heading font-bold text-foreground mb-2 group-hover:text-gradient transition-colors duration-300">
+                    Operations & Automation
+                  </h3>
+                  <ul className="space-y-1.5">
+                    <li className="flex items-center space-x-2">
+                      <div className="w-1 h-1 bg-primary rounded-full flex-shrink-0"></div>
+                      <span className="text-xs text-muted-foreground">Automated workflows</span>
+                    </li>
+                    <li className="flex items-center space-x-2">
+                      <div className="w-1 h-1 bg-primary rounded-full flex-shrink-0"></div>
+                      <span className="text-xs text-muted-foreground">Smart routing</span>
+                    </li>
+                    <li className="flex items-center space-x-2">
+                      <div className="w-1 h-1 bg-primary rounded-full flex-shrink-0"></div>
+                      <span className="text-xs text-muted-foreground">SLA monitoring</span>
+                    </li>
+                  </ul>
                 </div>
-              );
-            })}
+              </div>
+            </div>
+
+            {/* Bottom Left Card */}
+            <div className="absolute bottom-0 left-0 w-56 lg:w-64 group cursor-pointer" style={{ animation: 'fade-in 0.8s ease-out 0.6s both' }}>
+              <div className="card-gradient rounded-xl p-4 lg:p-6 transform transition-all duration-500 hover:scale-105 hover:-translate-y-1 hover:shadow-glow">
+                <div className="absolute inset-0 bg-gradient-to-br from-primary to-secondary opacity-5 group-hover:opacity-15 transition-all duration-500 rounded-xl"></div>
+                <div className="relative z-10">
+                  <div className="w-10 h-10 lg:w-12 lg:h-12 rounded-lg bg-gradient-to-br from-primary to-secondary flex items-center justify-center mb-3 group-hover:scale-110 transition-all duration-300">
+                    <CreditCard className="w-5 h-5 lg:w-6 lg:h-6 text-white" />
+                  </div>
+                  <h3 className="text-base lg:text-lg font-heading font-bold text-foreground mb-2 group-hover:text-gradient transition-colors duration-300">
+                    Financials
+                  </h3>
+                  <ul className="space-y-1.5">
+                    <li className="flex items-center space-x-2">
+                      <div className="w-1 h-1 bg-primary rounded-full flex-shrink-0"></div>
+                      <span className="text-xs text-muted-foreground">Unified billing</span>
+                    </li>
+                    <li className="flex items-center space-x-2">
+                      <div className="w-1 h-1 bg-primary rounded-full flex-shrink-0"></div>
+                      <span className="text-xs text-muted-foreground">Real-time analytics</span>
+                    </li>
+                    <li className="flex items-center space-x-2">
+                      <div className="w-1 h-1 bg-primary rounded-full flex-shrink-0"></div>
+                      <span className="text-xs text-muted-foreground">Cost optimization</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            {/* Bottom Right Card */}
+            <div className="absolute bottom-0 right-0 w-56 lg:w-64 group cursor-pointer" style={{ animation: 'fade-in 0.8s ease-out 0.8s both' }}>
+              <div className="card-gradient rounded-xl p-4 lg:p-6 transform transition-all duration-500 hover:scale-105 hover:-translate-y-1 hover:shadow-glow">
+                <div className="absolute inset-0 bg-gradient-to-br from-secondary to-primary opacity-5 group-hover:opacity-15 transition-all duration-500 rounded-xl"></div>
+                <div className="relative z-10">
+                  <div className="w-10 h-10 lg:w-12 lg:h-12 rounded-lg bg-gradient-to-br from-secondary to-primary flex items-center justify-center mb-3 group-hover:scale-110 transition-all duration-300">
+                    <Brain className="w-5 h-5 lg:w-6 lg:h-6 text-white" />
+                  </div>
+                  <h3 className="text-base lg:text-lg font-heading font-bold text-foreground mb-2 group-hover:text-gradient transition-colors duration-300">
+                    AI & Intelligence
+                  </h3>
+                  <ul className="space-y-1.5">
+                    <li className="flex items-center space-x-2">
+                      <div className="w-1 h-1 bg-primary rounded-full flex-shrink-0"></div>
+                      <span className="text-xs text-muted-foreground">Structured data</span>
+                    </li>
+                    <li className="flex items-center space-x-2">
+                      <div className="w-1 h-1 bg-primary rounded-full flex-shrink-0"></div>
+                      <span className="text-xs text-muted-foreground">Quality scoring</span>
+                    </li>
+                    <li className="flex items-center space-x-2">
+                      <div className="w-1 h-1 bg-primary rounded-full flex-shrink-0"></div>
+                      <span className="text-xs text-muted-foreground">Predictive insights</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
