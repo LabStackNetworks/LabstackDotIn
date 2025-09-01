@@ -71,19 +71,29 @@ const InfrastructureScrollSection = () => {
     if (isMobile) return;
 
     const handleScroll = () => {
-      const scrollY = window.scrollY;
-      const sectionHeight = window.innerHeight * 0.8;
-      const sectionStart = document.getElementById('infrastructure-scroll')?.offsetTop || 0;
-      const relativeScroll = scrollY - sectionStart;
+      const sections = infrastructureLayers.map((_, index) => 
+        document.getElementById(`section-${index}`)
+      );
       
-      if (relativeScroll > 0 && relativeScroll < sectionHeight * infrastructureLayers.length) {
-        const newActiveSection = Math.floor(relativeScroll / sectionHeight);
-        setActiveSection(Math.max(0, Math.min(newActiveSection, infrastructureLayers.length - 1)));
-      }
+      const scrollY = window.scrollY + window.innerHeight / 2;
+      
+      let newActiveSection = 0;
+      sections.forEach((section, index) => {
+        if (section && scrollY >= section.offsetTop) {
+          newActiveSection = index;
+        }
+      });
+      
+      setActiveSection(newActiveSection);
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    const throttledScroll = () => {
+      requestAnimationFrame(handleScroll);
+    };
+
+    window.addEventListener('scroll', throttledScroll);
+    handleScroll(); // Initial call
+    return () => window.removeEventListener('scroll', throttledScroll);
   }, [isMobile, infrastructureLayers.length]);
 
   const handleNavClick = (index: number) => {
@@ -260,10 +270,13 @@ const InfrastructureScrollSection = () => {
             </div>
 
             {/* Swipeable Cards */}
-            <div className="overflow-x-auto scrollbar-hide">
+            <div className="overflow-x-hidden scrollbar-hide">
               <div 
-                className="flex space-x-6 transition-transform duration-500 ease-out"
-                style={{ transform: `translateX(-${activeSection * (100 / infrastructureLayers.length)}%)` }}
+                className="flex transition-transform duration-700 ease-out"
+                style={{ 
+                  transform: `translateX(-${activeSection * 100}%)`,
+                  width: `${infrastructureLayers.length * 100}%`
+                }}
               >
                 {infrastructureLayers.map((layer, index) => {
                   const IconComponent = layer.icon;
@@ -271,11 +284,12 @@ const InfrastructureScrollSection = () => {
                   return (
                     <div
                       key={layer.id}
-                      className={`flex-shrink-0 w-full p-8 rounded-3xl border-2 transition-all duration-700 ${
+                      className={`flex-shrink-0 p-8 rounded-3xl border-2 transition-all duration-700 ${
                         isActive 
-                          ? 'border-primary/30 bg-gradient-to-br from-card to-card-hover shadow-elegant scale-105' 
+                          ? 'border-primary/30 bg-gradient-to-br from-card to-card-hover shadow-elegant' 
                           : 'border-border/20 bg-card/50'
                       }`}
+                      style={{ width: `${100 / infrastructureLayers.length}%` }}
                     >
                       <div className="relative min-h-[500px] flex flex-col">
                         {/* Gradient Background */}
