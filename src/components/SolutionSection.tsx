@@ -42,12 +42,12 @@ const SolutionSection = () => {
       icon: Stethoscope,
       title: "Healthcare Infrastructure",
       subtitle: "Launch in days, scale nationwide",
-      description: "Skip the 12–18 month build cycle with complete healthcare infrastructure platform.",
+      description: "Access comprehensive healthcare network including labs, pharmacies, home care, and specialist services.",
       features: [
-        "Provider network access",
-        "Operations automation", 
-        "Compliance frameworks",
-        "Real-time monitoring"
+        "Home sample pickup",
+        "Center visits & consultations", 
+        "Pharmacy partnerships",
+        "At-home services"
       ],
       proof: "Cut launch time from 12 months to 6 weeks",
       cta: "Explore Platform",
