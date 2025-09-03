@@ -140,59 +140,59 @@ const ValuePropositionTabs = () => {
                     : 'opacity-0 invisible absolute inset-0 translate-y-4'
                 }`}
               >
-                <div className="bg-card-gradient rounded-3xl p-8 lg:p-12 shadow-card border border-border/20 overflow-hidden relative">
+                <div className="bg-card-gradient rounded-3xl mobile-card-padding shadow-card border border-border/20 overflow-hidden relative mobile-hover-lift mobile-tap-highlight">
                   {/* Background gradient for active tab */}
                   <div className={`absolute inset-0 bg-gradient-to-br ${tab.color} opacity-[0.02] group-hover:opacity-[0.04] transition-opacity duration-500`}></div>
                   
-                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center relative z-10">
-                    <div className="space-y-8">
+                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center relative z-10">
+                    <div className="space-y-6 lg:space-y-8 order-2 lg:order-1">
                       <div>
-                        <h3 className="text-2xl lg:text-4xl font-heading font-bold mb-6 text-foreground leading-tight">
+                        <h3 className="mobile-card-title lg:text-4xl font-heading font-bold mb-4 lg:mb-6 text-foreground leading-tight">
                           {tab.title}
                         </h3>
-                        <p className="text-muted-foreground leading-relaxed text-lg">
+                        <p className="mobile-text-readable lg:text-lg text-muted-foreground leading-relaxed">
                           {tab.description}
                         </p>
                       </div>
                       
-                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 lg:gap-4">
                         {tab.features.map((feature, featureIndex) => (
                           <div 
                             key={featureIndex} 
-                            className="flex items-center space-x-3 group"
+                            className="flex items-center space-x-3 group mobile-touch-target"
                             style={{ 
                               animation: `fade-in 0.5s ease-out ${featureIndex * 0.1}s both`
                             }}
                           >
                             <div className="w-2 h-2 bg-primary rounded-full flex-shrink-0 transition-transform duration-300 group-hover:scale-125"></div>
-                            <span className="text-muted-foreground text-sm lg:text-base group-hover:text-foreground transition-colors duration-300">{feature}</span>
+                            <span className="mobile-text-readable text-muted-foreground group-hover:text-foreground transition-colors duration-300">{feature}</span>
                           </div>
                         ))}
                       </div>
 
-                      <div className="flex items-center justify-between pt-6 border-t border-border/20">
-                        <div className="inline-flex items-center space-x-3 bg-primary/10 border border-primary/20 px-6 py-3 rounded-full">
+                      <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between pt-6 border-t border-border/20 gap-4">
+                        <div className="inline-flex items-center space-x-3 bg-primary/10 border border-primary/20 px-4 sm:px-6 py-3 rounded-full mobile-touch-target">
                           <div className="w-2 h-2 bg-primary rounded-full animate-pulse"></div>
-                          <span className="text-primary font-semibold text-sm lg:text-base">{tab.stat}</span>
+                          <span className="text-primary font-semibold text-sm sm:text-base">{tab.stat}</span>
                         </div>
                         
-                        <ArrowRight className="w-6 h-6 text-muted-foreground/50" />
+                        <ArrowRight className="w-6 h-6 text-muted-foreground/50 hidden sm:block" />
                       </div>
                     </div>
                     
                     {/* Visual Element */}
-                    <div className="relative">
-                      <div className="bg-gradient-subtle rounded-3xl p-12 border border-border/50 relative overflow-hidden">
+                    <div className="relative order-1 lg:order-2">
+                      <div className="bg-gradient-subtle rounded-3xl p-8 lg:p-12 border border-border/50 relative overflow-hidden mobile-hover-lift">
                         <div className={`absolute inset-0 bg-gradient-to-br ${tab.color} opacity-10`}></div>
-                        <div className="relative z-10 flex items-center justify-center h-64">
-                          <div className={`w-24 h-24 rounded-2xl bg-gradient-to-br ${tab.color} flex items-center justify-center shadow-elegant transform transition-all duration-500 hover:scale-110 hover:rotate-6`}>
-                            <tab.icon className="w-12 h-12 text-white" />
+                        <div className="relative z-10 flex items-center justify-center h-48 sm:h-64">
+                          <div className={`w-20 h-20 sm:w-24 sm:h-24 rounded-2xl bg-gradient-to-br ${tab.color} flex items-center justify-center shadow-elegant transform transition-all duration-500 hover:scale-110 hover:rotate-6 mobile-tap-highlight`}>
+                            <tab.icon className="w-10 h-10 sm:w-12 sm:h-12 text-white" />
                           </div>
                         </div>
                         
                         {/* Decorative Elements */}
-                        <div className={`absolute top-6 right-6 w-16 h-16 rounded-full bg-gradient-to-br ${tab.color} opacity-20 blur-xl`}></div>
-                        <div className={`absolute bottom-6 left-6 w-12 h-12 rounded-full bg-gradient-to-br ${tab.color} opacity-30 blur-lg`}></div>
+                        <div className={`absolute top-6 right-6 w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-gradient-to-br ${tab.color} opacity-20 blur-xl`}></div>
+                        <div className={`absolute bottom-6 left-6 w-8 h-8 sm:w-12 sm:h-12 rounded-full bg-gradient-to-br ${tab.color} opacity-30 blur-lg`}></div>
                       </div>
                     </div>
                   </div>

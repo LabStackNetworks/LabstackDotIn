@@ -116,11 +116,11 @@ const WhoWeServe = () => {
   return (
     <section className="py-20 lg:py-32 bg-background">
       <div className="container mx-auto px-6">
-        <div className="max-w-4xl mx-auto text-center mb-16">
-          <h2 className="text-3xl lg:text-5xl font-heading font-bold mb-6">
+        <div className="max-w-4xl mx-auto text-center mb-12 sm:mb-16">
+          <h2 className="mobile-section-title font-heading font-bold mb-6">
             Who We <span className="text-gradient">Serve</span>
           </h2>
-          <p className="text-lg lg:text-xl text-muted-foreground">
+          <p className="mobile-subheading text-muted-foreground">
             Healthcare companies of all sizes trust Labstack to power their growth
           </p>
         </div>

@@ -168,7 +168,7 @@ const ProofOfScale = () => {
 
         {/* Bottom CTA */}
         <div className="text-center mt-16">
-          <Button size="lg" className="btn-gradient text-lg px-8 py-3 h-auto">
+          <Button size="lg" className="btn-gradient mobile-btn-lg mobile-tap-highlight">
             Explore Our Network
           </Button>
         </div>
