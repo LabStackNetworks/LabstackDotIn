@@ -141,7 +141,7 @@ const WhoWeServe = () => {
                   }`}
                 >
                   <IconComponent className="w-5 h-5" />
-                  <span className="hidden sm:inline text-sm lg:text-base">{persona.label}</span>
+                  <span className="text-xs sm:text-sm lg:text-base whitespace-nowrap">{persona.label}</span>
                 </button>
               );
             })}
