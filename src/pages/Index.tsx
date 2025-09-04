@@ -2,7 +2,6 @@ import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import ProblemSection from "@/components/ProblemSection";
 import SolutionSection from "@/components/SolutionSection";
-import Features from "@/components/Features";
 import ValuePropositionTabs from "@/components/ValuePropositionTabs";
 import WhoWeServe from "@/components/WhoWeServe";
 import ProofOfScale from "@/components/ProofOfScale";
@@ -17,7 +16,6 @@ const Index = () => {
         <Hero />
         <ProblemSection />
         <SolutionSection />
-        <Features />
         <ValuePropositionTabs />
         <WhoWeServe />
         <ProofOfScale />
