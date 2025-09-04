@@ -1,42 +1,7 @@
-import { Network, Zap, CreditCard, Brain, Stethoscope, Smartphone, Code, Globe } from "lucide-react";
+import { Network, Zap, CreditCard, Stethoscope, Smartphone, Code, Globe } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const SolutionSection = () => {
-  const infrastructureLayers = [
-    {
-      icon: Network,
-      title: "Provider Network",
-      description: "1000+ verified labs, doctors, pharmacies, home care, specialised services across all tiers",
-      features: ["Quality-assured providers", "Nationwide coverage", "Real-time availability", "Tier-1 to Tier-3 reach"],
-      gradient: "from-primary to-primary/60",
-      position: "top-0 left-1/2 transform -translate-x-1/2"
-    },
-    {
-      icon: Zap,
-      title: "Operations & Automation", 
-      description: "SLA-backed routing, fulfilment, escalations, real-time tracking with intelligent workflows",
-      features: ["Automated workflows", "Smart routing", "SLA monitoring", "Quality assurance"],
-      gradient: "from-secondary to-secondary/60",
-      position: "top-1/2 right-0 transform -translate-y-1/2"
-    },
-    {
-      icon: CreditCard,
-      title: "Financials",
-      description: "Transparent pricing, automated reconciliation, billing, analytics with full visibility",
-      features: ["Unified billing", "Real-time analytics", "Cost optimization", "Revenue tracking"],
-      gradient: "from-primary to-secondary",
-      position: "bottom-0 left-1/2 transform -translate-x-1/2"
-    },
-    {
-      icon: Brain,
-      title: "AI & Intelligence",
-      description: "Raw values, predictive scoring, quality frameworks powered by advanced intelligence",
-      features: ["Structured data", "Quality scoring", "Predictive insights", "Smart analytics"],
-      gradient: "from-secondary to-primary",
-      position: "top-1/2 left-0 transform -translate-y-1/2"
-    }
-  ];
-
   const solutions = [
     {
       icon: Stethoscope,
@@ -121,20 +86,19 @@ const SolutionSection = () => {
                 </div>
                 
                 <h2 className="text-3xl lg:text-5xl font-heading font-bold mb-6">
-                  The Infrastructure Layer for <span className="text-gradient">Connected Care</span>
+                  New Feature <span className="text-gradient">Sections</span>
                 </h2>
                 
                 <div className="relative mb-8">
                   <div className="absolute -left-4 top-0 w-1 h-full bg-gradient-to-b from-primary via-secondary to-primary rounded-full"></div>
                   <blockquote className="pl-8 text-xl lg:text-2xl font-medium italic text-muted-foreground leading-relaxed">
-                    "One API. One Console. One Network."
+                    "Comprehensive healthcare solutions at your fingertips."
                   </blockquote>
                 </div>
                 
                 <p className="text-muted-foreground leading-relaxed mb-8">
-                  Labstack abstracts away healthcare infrastructure complexity, 
-                  giving you enterprise-grade capabilities from day one. Four interconnected layers 
-                  working seamlessly together to power modern healthcare delivery.
+                  Discover our core feature sections designed to streamline healthcare operations, 
+                  enhance provider networks, and optimize financial management for modern healthcare delivery.
                 </p>
 
                 <div className="flex items-center space-x-4">
@@ -146,7 +110,7 @@ const SolutionSection = () => {
 
               {/* Right Side - Modern Card Grid */}
               <div className="lg:col-span-7">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 gap-6">
                   {/* Provider Network Card */}
                   <div className="relative group">
                     <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-primary/10 to-transparent rounded-2xl blur-xl opacity-50 group-hover:opacity-75 transition-all duration-500"></div>
@@ -205,8 +169,8 @@ const SolutionSection = () => {
                     </div>
                   </div>
 
-                  {/* Financials Card */}
-                  <div className="relative group">
+                  {/* Financial Layer Card */}
+                  <div className="relative group md:col-span-2 lg:col-span-1">
                     <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-secondary/10 to-transparent rounded-2xl blur-xl opacity-50 group-hover:opacity-75 transition-all duration-500"></div>
                     <div className="relative card-gradient rounded-2xl p-6 transform transition-all duration-500 hover:scale-105 hover:-translate-y-2 border border-white/10 backdrop-blur-sm">
                       <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-secondary/5 to-transparent rounded-2xl group-hover:from-primary/10 transition-all duration-500"></div>
@@ -214,9 +178,9 @@ const SolutionSection = () => {
                         <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-primary via-secondary to-primary flex items-center justify-center mb-4 shadow-lg group-hover:scale-110 transition-all duration-300">
                           <CreditCard className="w-7 h-7 text-white" />
                         </div>
-                        <h3 className="text-lg font-heading font-bold text-foreground mb-3 group-hover:text-gradient transition-colors duration-300">
-                          Financials
-                        </h3>
+                         <h3 className="text-lg font-heading font-bold text-foreground mb-3 group-hover:text-gradient transition-colors duration-300">
+                           Financial Layer
+                         </h3>
                         <p className="text-sm text-muted-foreground mb-4">
                           Transparent pricing, automated billing, full visibility
                         </p>
@@ -232,43 +196,6 @@ const SolutionSection = () => {
                         </ul>
                       </div>
                     </div>
-                  </div>
-
-                  {/* AI & Intelligence Card */}
-                  <div className="relative group">
-                    <div className="absolute inset-0 bg-gradient-to-br from-secondary/20 via-primary/10 to-transparent rounded-2xl blur-xl opacity-50 group-hover:opacity-75 transition-all duration-500"></div>
-                    <div className="relative card-gradient rounded-2xl p-6 transform transition-all duration-500 hover:scale-105 hover:-translate-y-2 border border-white/10 backdrop-blur-sm">
-                      <div className="absolute inset-0 bg-gradient-to-br from-secondary/5 via-primary/5 to-transparent rounded-2xl group-hover:from-secondary/10 transition-all duration-500"></div>
-                      <div className="relative z-10">
-                        <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-secondary via-primary to-secondary flex items-center justify-center mb-4 shadow-lg group-hover:scale-110 transition-all duration-300">
-                          <Brain className="w-7 h-7 text-white" />
-                        </div>
-                        <h3 className="text-lg font-heading font-bold text-foreground mb-3 group-hover:text-gradient transition-colors duration-300">
-                          AI & Intelligence
-                        </h3>
-                        <p className="text-sm text-muted-foreground mb-4">
-                          Raw values, predictive scoring, quality frameworks
-                        </p>
-                        <ul className="space-y-2">
-                          <li className="flex items-center space-x-2">
-                            <div className="w-2 h-2 bg-secondary rounded-full flex-shrink-0"></div>
-                            <span className="text-xs text-muted-foreground">Structured data</span>
-                          </li>
-                          <li className="flex items-center space-x-2">
-                            <div className="w-2 h-2 bg-secondary rounded-full flex-shrink-0"></div>
-                            <span className="text-xs text-muted-foreground">Predictive insights</span>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Connecting Lines */}
-                <div className="absolute inset-0 pointer-events-none hidden lg:block">
-                  <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                    <div className="w-24 h-px bg-gradient-to-r from-primary/30 to-secondary/30 rotate-45"></div>
-                    <div className="w-24 h-px bg-gradient-to-r from-secondary/30 to-primary/30 -rotate-45 absolute top-0"></div>
                   </div>
                 </div>
               </div>
