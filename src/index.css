@@ -69,11 +69,14 @@ All colors MUST be HSL. Inspired by Stripe/Linear/Notion aesthetics with healthc
     --shadow-elegant: 0 10px 30px -10px hsl(220 27% 8% / 0.5);
     --shadow-card: 0 4px 20px -4px hsl(220 27% 8% / 0.3);
 
-    /* Animation System */
+/* Animation System */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-bounce: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
     --transition-spring: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     --transition-elegant: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+
+    /* Progress Animation */
+    --progress-duration: 4s;
 
     /* Hover Scale Utilities */
     --scale-102: 1.02;
@@ -638,6 +641,48 @@ body {
     opacity: 1; 
     transform: scale(1); 
   }
+}
+
+@keyframes progress-fill {
+  0% { width: 0%; }
+  25% { width: 25%; }
+  50% { width: 50%; }
+  75% { width: 75%; }
+  100% { width: 100%; }
+}
+
+@keyframes step-highlight {
+  0%, 100% { 
+    background-color: hsl(var(--muted) / 0.5); 
+    border-color: hsl(var(--border));
+  }
+  25% { 
+    background-color: hsl(var(--primary) / 0.1); 
+    border-color: hsl(var(--primary) / 0.2);
+  }
+}
+
+.animate-progress {
+  animation: progress-fill var(--progress-duration) ease-in-out infinite;
+}
+
+.animate-step-0 {
+  animation: step-highlight var(--progress-duration) ease-in-out infinite;
+}
+
+.animate-step-1 {
+  animation: step-highlight var(--progress-duration) ease-in-out infinite;
+  animation-delay: calc(var(--progress-duration) * 0.25);
+}
+
+.animate-step-2 {
+  animation: step-highlight var(--progress-duration) ease-in-out infinite;
+  animation-delay: calc(var(--progress-duration) * 0.5);
+}
+
+.animate-step-3 {
+  animation: step-highlight var(--progress-duration) ease-in-out infinite;
+  animation-delay: calc(var(--progress-duration) * 0.75);
 }
 
 /* Custom Scrollbar */

@@ -190,15 +190,15 @@ const SolutionSection = () => {
               </div>
 
               {/* Implementation Process */}
-              <div className="bg-gradient-to-r from-muted/30 to-muted/50 rounded-lg p-6 mb-10 shadow-md">
+              <div className="bg-gradient-to-r from-muted/30 to-muted/50 rounded-lg p-4 sm:p-6 mb-10 shadow-md">
                 <div className="max-w-3xl mx-auto">
                   <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-3 gap-2">
                     <div className="flex items-center">
-                      <h3 className="text-xl font-bold">Implementation Project</h3>
+                      <h3 className="text-lg sm:text-xl font-bold">Implementation Project</h3>
                     </div>
                     <div className="flex items-center">
-                      <span className="text-sm text-muted-foreground mr-2">Iterative Development</span>
-                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-5 w-5 text-muted-foreground animate-spin">
+                      <span className="text-xs sm:text-sm text-muted-foreground mr-2">Iterative Development</span>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-4 w-4 sm:h-5 sm:w-5 text-muted-foreground animate-spin">
                         <path d="M21 12a9 9 0 0 0-9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"></path>
                         <path d="M3 3v5h5"></path>
                         <path d="M3 12a9 9 0 0 0 9 9 9.75 9.75 0 0 0 6.74-2.74L21 16"></path>
@@ -206,19 +206,19 @@ const SolutionSection = () => {
                       </svg>
                     </div>
                   </div>
-                  <p className="text-muted-foreground mb-4">Working iteratively with healthcare teams to tailor solutions to their specific operational needs</p>
+                  <p className="text-sm sm:text-base text-muted-foreground mb-4">Working iteratively with healthcare teams to tailor solutions to their specific operational needs</p>
                   
                   <div className="relative mb-2">
                     <div className="w-full bg-muted rounded-full h-3">
-                      <div className="bg-primary h-3 rounded-full transition-all duration-500" style={{ width: '78%' }}></div>
+                      <div className="bg-primary h-3 rounded-full animate-progress"></div>
                     </div>
                   </div>
                   
-                  <div className="grid gap-1 mt-4 grid-cols-4">
-                    <div className="text-center p-2 rounded transition-all bg-muted/50">
+                  <div className="grid gap-1 sm:gap-2 mt-4 grid-cols-4">
+                    <div className="text-center p-2 rounded transition-all animate-step-0 border">
                       <div className="flex flex-col items-center">
                         <div className="rounded-full p-1 mb-1 bg-success/20 text-success">
-                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-4 w-4">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-3 w-3 sm:h-4 sm:w-4">
                             <path d="M21.801 10A10 10 0 1 1 17 3.335"></path>
                             <path d="m9 11 3 3L22 4"></path>
                           </svg>
@@ -226,10 +226,10 @@ const SolutionSection = () => {
                         <span className="text-xs font-medium">Planning</span>
                       </div>
                     </div>
-                    <div className="text-center p-2 rounded transition-all bg-muted/50">
+                    <div className="text-center p-2 rounded transition-all animate-step-1 border">
                       <div className="flex flex-col items-center">
                         <div className="rounded-full p-1 mb-1 bg-success/20 text-success">
-                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-4 w-4">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-3 w-3 sm:h-4 sm:w-4">
                             <polyline points="16 18 22 12 16 6"></polyline>
                             <polyline points="8 6 2 12 8 18"></polyline>
                           </svg>
@@ -237,10 +237,10 @@ const SolutionSection = () => {
                         <span className="text-xs font-medium">Development</span>
                       </div>
                     </div>
-                    <div className="text-center p-2 rounded transition-all bg-muted/50">
+                    <div className="text-center p-2 rounded transition-all animate-step-2 border">
                       <div className="flex flex-col items-center">
                         <div className="rounded-full p-1 mb-1 bg-success/20 text-success">
-                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-4 w-4">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-3 w-3 sm:h-4 sm:w-4">
                             <path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"></path>
                             <path d="m3.3 7 8.7 5 8.7-5"></path>
                             <path d="M12 22V12"></path>
@@ -249,10 +249,10 @@ const SolutionSection = () => {
                         <span className="text-xs font-medium">Testing</span>
                       </div>
                     </div>
-                    <div className="text-center p-2 rounded transition-all bg-primary/10 border border-primary/20">
+                    <div className="text-center p-2 rounded transition-all animate-step-3 border">
                       <div className="flex flex-col items-center">
                         <div className="rounded-full p-1 mb-1 bg-primary/20 text-primary">
-                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-4 w-4">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-3 w-3 sm:h-4 sm:w-4">
                             <path d="M21 12a9 9 0 0 0-9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"></path>
                             <path d="M3 3v5h5"></path>
                             <path d="M3 12a9 9 0 0 0 9 9 9.75 9.75 0 0 0 6.74-2.74L21 16"></path>
@@ -267,14 +267,14 @@ const SolutionSection = () => {
                   <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mt-6 gap-2">
                     <div className="flex items-center">
                       <div className="bg-success/20 rounded-full p-1 mr-2 shrink-0">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-4 w-4 text-success">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-4 w-4 text-success">
                           <path d="M21.801 10A10 10 0 1 1 17 3.335"></path>
                           <path d="m9 11 3 3L22 4"></path>
                         </svg>
                       </div>
-                      <span className="text-sm text-muted-foreground">Healthcare expertise integrated at every stage</span>
+                      <span className="text-xs sm:text-sm text-muted-foreground">AI-powered optimization at every stage</span>
                     </div>
-                    <div className="text-sm text-muted-foreground flex items-center mt-2 sm:mt-0">
+                    <div className="text-xs sm:text-sm text-muted-foreground flex items-center mt-2 sm:mt-0">
                       <span className="mr-2">Continuous improvement</span>
                       <div className="flex space-x-1">
                         <span className="inline-block w-2 h-2 bg-muted-foreground/60 rounded-full animate-pulse"></span>

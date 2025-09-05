@@ -48,7 +48,7 @@ const ProofOfScale = () => {
       <div className="container mx-auto px-6">
         <div className="max-w-4xl mx-auto text-center mb-16">
           <h2 className="text-3xl lg:text-5xl font-heading font-bold mb-6">
-            Proof of <span className="text-gradient">Nationwide Scale</span>
+            <span className="text-gradient">Nationwide Scale</span>
           </h2>
           <p className="text-lg lg:text-xl text-muted-foreground">
             Numbers that demonstrate our reach and reliability across India
@@ -88,32 +88,112 @@ const ProofOfScale = () => {
             <div className="relative">
               <div className="bg-card-gradient rounded-2xl p-8 border border-border/50 overflow-hidden">
                 <div className="relative h-80 bg-muted/30 rounded-xl flex items-center justify-center mb-6">
-                  {/* Simplified India Map Visualization */}
+                  {/* India Map with Healthcare Hotspots */}
                   <div className="relative w-full h-full flex items-center justify-center">
                     <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-xl opacity-50"></div>
                     
-                    {/* Glowing Coverage Points */}
-                    <div className="absolute top-1/4 left-1/3 w-3 h-3 bg-primary rounded-full animate-pulse-subtle glow-primary"></div>
-                    <div className="absolute top-1/3 right-1/4 w-3 h-3 bg-secondary rounded-full animate-pulse-subtle glow-secondary"></div>
-                    <div className="absolute bottom-1/3 left-1/2 w-3 h-3 bg-success rounded-full animate-pulse-subtle"></div>
-                    <div className="absolute top-1/2 right-1/3 w-3 h-3 bg-warning rounded-full animate-pulse-subtle"></div>
+                    {/* Major Healthcare Hotspots across India */}
+                    {/* Delhi/NCR */}
+                    <div className="absolute top-[25%] left-[40%] group">
+                      <div className="w-4 h-4 bg-primary rounded-full animate-pulse-subtle glow-primary cursor-pointer"></div>
+                      <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 bg-card text-xs px-2 py-1 rounded shadow-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
+                        Delhi NCR - 500+ Centers
+                      </div>
+                    </div>
+                    
+                    {/* Mumbai */}
+                    <div className="absolute top-[45%] left-[20%] group">
+                      <div className="w-4 h-4 bg-secondary rounded-full animate-pulse-subtle glow-secondary cursor-pointer"></div>
+                      <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 bg-card text-xs px-2 py-1 rounded shadow-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
+                        Mumbai - 400+ Centers
+                      </div>
+                    </div>
+                    
+                    {/* Bangalore */}
+                    <div className="absolute bottom-[25%] left-[30%] group">
+                      <div className="w-4 h-4 bg-success rounded-full animate-pulse-subtle cursor-pointer"></div>
+                      <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 bg-card text-xs px-2 py-1 rounded shadow-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
+                        Bangalore - 350+ Centers
+                      </div>
+                    </div>
+                    
+                    {/* Chennai */}
+                    <div className="absolute bottom-[20%] left-[35%] group">
+                      <div className="w-4 h-4 bg-warning rounded-full animate-pulse-subtle cursor-pointer"></div>
+                      <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 bg-card text-xs px-2 py-1 rounded shadow-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
+                        Chennai - 300+ Centers
+                      </div>
+                    </div>
+                    
+                    {/* Kolkata */}
+                    <div className="absolute top-[35%] right-[25%] group">
+                      <div className="w-4 h-4 bg-primary rounded-full animate-pulse-subtle cursor-pointer"></div>
+                      <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 bg-card text-xs px-2 py-1 rounded shadow-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
+                        Kolkata - 250+ Centers
+                      </div>
+                    </div>
+                    
+                    {/* Hyderabad */}
+                    <div className="absolute bottom-[35%] left-[45%] group">
+                      <div className="w-4 h-4 bg-secondary rounded-full animate-pulse-subtle cursor-pointer"></div>
+                      <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 bg-card text-xs px-2 py-1 rounded shadow-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
+                        Hyderabad - 200+ Centers
+                      </div>
+                    </div>
+                    
+                    {/* Pune */}
+                    <div className="absolute top-[50%] left-[25%] group">
+                      <div className="w-3 h-3 bg-success rounded-full animate-pulse-subtle cursor-pointer"></div>
+                      <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 bg-card text-xs px-2 py-1 rounded shadow-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
+                        Pune - 180+ Centers
+                      </div>
+                    </div>
+                    
+                    {/* Ahmedabad */}
+                    <div className="absolute top-[40%] left-[15%] group">
+                      <div className="w-3 h-3 bg-warning rounded-full animate-pulse-subtle cursor-pointer"></div>
+                      <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 bg-card text-xs px-2 py-1 rounded shadow-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
+                        Ahmedabad - 150+ Centers
+                      </div>
+                    </div>
+                    
+                    {/* Connecting lines animation */}
+                    <svg className="absolute inset-0 w-full h-full pointer-events-none opacity-30">
+                      <defs>
+                        <linearGradient id="connectionGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                          <stop offset="0%" stopColor="hsl(var(--primary))" />
+                          <stop offset="100%" stopColor="hsl(var(--secondary))" />
+                        </linearGradient>
+                      </defs>
+                      <path d="M 32% 25% Q 40% 35% 48% 45%" stroke="url(#connectionGradient)" strokeWidth="1" fill="none" strokeDasharray="5,5">
+                        <animate attributeName="stroke-dashoffset" values="0;10" dur="2s" repeatCount="indefinite"/>
+                      </path>
+                      <path d="M 20% 45% Q 35% 40% 48% 35%" stroke="url(#connectionGradient)" strokeWidth="1" fill="none" strokeDasharray="5,5">
+                        <animate attributeName="stroke-dashoffset" values="10;0" dur="2s" repeatCount="indefinite"/>
+                      </path>
+                    </svg>
                     
                     <div className="text-center z-10">
                       <MapPin className="w-12 h-12 text-primary mx-auto mb-2" />
                       <div className="text-sm font-medium text-muted-foreground">
-                        Interactive Coverage Map
+                        Healthcare Network Across India
+                      </div>
+                      <div className="text-xs text-muted-foreground/70 mt-1">
+                        2,600+ Active Service Centers
                       </div>
                     </div>
                   </div>
                 </div>
                 
-                <Button 
-                  variant="outline" 
-                  className="w-full btn-outline-gradient"
-                  onClick={() => setIsMapExpanded(!isMapExpanded)}
-                >
-                  Check Coverage in Your City
-                </Button>
+                <div className="bg-primary/10 border border-primary/20 rounded-xl p-4">
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center space-x-3">
+                      <div className="w-2 h-2 bg-primary rounded-full animate-pulse"></div>
+                      <span className="text-sm font-medium text-primary">Live Network Status</span>
+                    </div>
+                    <div className="text-xs text-muted-foreground">99.5% Uptime</div>
+                  </div>
+                </div>
               </div>
             </div>
 
