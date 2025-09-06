@@ -214,44 +214,44 @@ const SolutionSection = () => {
                     </div>
                   </div>
                   
-                  <div className="grid gap-1 sm:gap-2 mt-4 grid-cols-4">
+                  <div className="grid gap-1 sm:gap-2 mt-4 grid-cols-2 sm:grid-cols-4">
                     <div className="text-center p-2 rounded transition-all animate-step-0 border">
                       <div className="flex flex-col items-center">
-                        <div className="rounded-full p-1 mb-1 bg-success/20 text-success">
+                        <div className="rounded-full p-1 mb-1 bg-primary/30 text-primary">
                           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-3 w-3 sm:h-4 sm:w-4">
                             <path d="M21.801 10A10 10 0 1 1 17 3.335"></path>
                             <path d="m9 11 3 3L22 4"></path>
                           </svg>
                         </div>
-                        <span className="text-xs font-medium">Planning</span>
+                        <span className="text-xs font-medium font-heading">Planning</span>
                       </div>
                     </div>
                     <div className="text-center p-2 rounded transition-all animate-step-1 border">
                       <div className="flex flex-col items-center">
-                        <div className="rounded-full p-1 mb-1 bg-success/20 text-success">
+                        <div className="rounded-full p-1 mb-1 bg-primary/30 text-primary">
                           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-3 w-3 sm:h-4 sm:w-4">
                             <polyline points="16 18 22 12 16 6"></polyline>
                             <polyline points="8 6 2 12 8 18"></polyline>
                           </svg>
                         </div>
-                        <span className="text-xs font-medium">Development</span>
+                        <span className="text-xs font-medium font-heading">Development</span>
                       </div>
                     </div>
                     <div className="text-center p-2 rounded transition-all animate-step-2 border">
                       <div className="flex flex-col items-center">
-                        <div className="rounded-full p-1 mb-1 bg-success/20 text-success">
+                        <div className="rounded-full p-1 mb-1 bg-primary/30 text-primary">
                           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-3 w-3 sm:h-4 sm:w-4">
                             <path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"></path>
                             <path d="m3.3 7 8.7 5 8.7-5"></path>
                             <path d="M12 22V12"></path>
                           </svg>
                         </div>
-                        <span className="text-xs font-medium">Testing</span>
+                        <span className="text-xs font-medium font-heading">Testing</span>
                       </div>
                     </div>
                     <div className="text-center p-2 rounded transition-all animate-step-3 border">
                       <div className="flex flex-col items-center">
-                        <div className="rounded-full p-1 mb-1 bg-primary/20 text-primary">
+                        <div className="rounded-full p-1 mb-1 bg-secondary/30 text-secondary">
                           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-3 w-3 sm:h-4 sm:w-4">
                             <path d="M21 12a9 9 0 0 0-9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"></path>
                             <path d="M3 3v5h5"></path>
@@ -259,7 +259,7 @@ const SolutionSection = () => {
                             <path d="M16 16h5v5"></path>
                           </svg>
                         </div>
-                        <span className="text-xs font-medium">Review</span>
+                        <span className="text-xs font-medium font-heading">Review</span>
                       </div>
                     </div>
                   </div>
