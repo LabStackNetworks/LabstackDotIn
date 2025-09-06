@@ -118,6 +118,19 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
+  font-family: Inter, system-ui, sans-serif;
+  font-weight: 400;
+}
+
+/* Consistent Typography System */
+h1, h2, h3, h4, h5, h6, .font-heading {
+  font-family: 'Space Grotesk', Inter, system-ui, sans-serif;
+  font-weight: 600;
+}
+
+p, span, div, .font-body {
+  font-family: Inter, system-ui, sans-serif;
+  font-weight: 400;
 }
 
   /* Import Premium Fonts */
@@ -296,11 +309,24 @@ body {
     box-shadow: 
       0 8px 32px hsl(var(--foreground) / 0.12),
       0 4px 16px hsl(var(--primary) / 0.08),
-      0 2px 8px hsl(var(--secondary) / 0.06);
+      0 2px 8px hsl(var(--secondary) / 0.06),
+      0 0 0 1px hsl(var(--border) / 0.05);
   }
 
   .shadow-glow {
     box-shadow: var(--shadow-glow);
+  }
+
+  /* Dropdown Menu Enhancements */
+  .dropdown-enter {
+    opacity: 0;
+    transform: translateY(-10px) scale(0.95);
+  }
+
+  .dropdown-enter-active {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   /* Button Variants */
