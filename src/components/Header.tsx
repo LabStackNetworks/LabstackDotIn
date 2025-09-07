@@ -35,27 +35,26 @@ const Header = () => {
       hasDropdown: true,
       dropdown: {
         featured: {
-          title: "Healthcare Infrastructure",
-          description: "Complete platform for modern healthcare delivery",
-          href: "#infrastructure",
+          title: "Complete Healthcare Platform",
+          description: "End-to-end healthcare infrastructure and services",
+          href: "#platform-overview",
           icon: Building2
         },
         sections: [
           {
             title: "Core Services",
             items: [
-              { label: "Diagnostics Network", href: "#diagnostics", description: "Lab tests & imaging" },
-              { label: "Telemedicine", href: "#telemedicine", description: "Virtual consultations" },
-              { label: "Pharmacy Network", href: "#pharmacy", description: "Medicine delivery" },
-              { label: "Home Care", href: "#homecare", description: "Care at your doorstep" }
+              { label: "Overview", href: "#platform-overview", description: "Platform introduction" },
+              { label: "Diagnostics", href: "#diagnostics", description: "Lab tests & imaging" },
+              { label: "Consultations", href: "#consultations", description: "Virtual & in-person" },
+              { label: "Pharmacy", href: "#pharmacy", description: "Medicine delivery" }
             ]
           },
           {
-            title: "Technology",
+            title: "Advanced Features",
             items: [
-              { label: "API Integration", href: "#api", description: "Developer-first platform" },
-              { label: "Dashboard", href: "#dashboard", description: "Real-time analytics" },
-              { label: "Mobile Apps", href: "#mobile", description: "iOS & Android apps" }
+              { label: "Specialized Networks", href: "#specialized-networks", description: "Expert care networks" },
+              { label: "Integrations", href: "#integrations", description: "Third-party connections" }
             ]
           }
         ]
@@ -67,25 +66,18 @@ const Header = () => {
       hasDropdown: true,
       dropdown: {
         featured: {
-          title: "Enterprise Healthcare",
-          description: "Scalable solutions for organizations of all sizes",
-          href: "#enterprise",
+          title: "Healthcare Solutions",
+          description: "Comprehensive solutions for modern healthcare delivery",
+          href: "#solutions-overview",
           icon: Users
         },
         sections: [
           {
-            title: "For Businesses",
+            title: "Platform Solutions",
             items: [
-              { label: "Corporate Wellness", href: "#corporate", description: "Employee health programs" },
-              { label: "Insurance Integration", href: "#insurance", description: "Seamless claim processing" },
-              { label: "B2B Healthcare", href: "#b2b", description: "White-label solutions" }
-            ]
-          },
-          {
-            title: "For Healthcare Providers",
-            items: [
-              { label: "Practice Management", href: "#practice", description: "Streamline operations" },
-              { label: "Patient Engagement", href: "#engagement", description: "Better patient experience" }
+              { label: "Healthcare Infrastructure", href: "#healthcare-infrastructure", description: "Complete healthcare backbone" },
+              { label: "Digital Platform", href: "#digital-platform", description: "End-to-end digital solutions" },
+              { label: "API Solutions", href: "#api-solutions", description: "Developer-first integrations" }
             ]
           }
         ]
@@ -98,25 +90,26 @@ const Header = () => {
       dropdown: {
         featured: {
           title: "Healthcare Ecosystem",
-          description: "Serving patients, providers, and enterprises nationwide",
+          description: "Serving startups, enterprises, and healthcare providers",
           href: "#ecosystem",
           icon: Stethoscope
         },
         sections: [
           {
-            title: "Patients & Families",
+            title: "Technology Partners",
             items: [
-              { label: "Individual Care", href: "#individual", description: "Personal healthcare needs" },
-              { label: "Family Plans", href: "#family", description: "Comprehensive family coverage" },
-              { label: "Chronic Care", href: "#chronic", description: "Long-term condition management" }
+              { label: "HealthTech Startups", href: "#healthtech-startups", description: "Emerging health companies" },
+              { label: "Disease Management Platforms", href: "#disease-management", description: "Chronic care solutions" },
+              { label: "Corporate Wellness", href: "#corporate-wellness", description: "Employee health programs" }
             ]
           },
           {
             title: "Healthcare Partners",
             items: [
-              { label: "Hospitals", href: "#hospitals", description: "Large healthcare institutions" },
-              { label: "Clinics", href: "#clinics", description: "Local healthcare providers" },
-              { label: "Pharmacies", href: "#pharmacies", description: "Medicine retail partners" }
+              { label: "Insurers & TPAs", href: "#insurers-tpas", description: "Insurance companies" },
+              { label: "Insurance Brokers", href: "#insurance-brokers", description: "Insurance intermediaries" },
+              { label: "Hospitals, Labs & Clinics", href: "#hospitals-labs-clinics", description: "Healthcare facilities" },
+              { label: "Nurses & Phlebotomists", href: "#nurses-phlebotomists", description: "Healthcare professionals" }
             ]
           }
         ]
@@ -129,25 +122,24 @@ const Header = () => {
       dropdown: {
         featured: {
           title: "Knowledge Hub",
-          description: "Documentation, guides, and healthcare insights",
-          href: "#knowledge",
+          description: "Resources, insights, and healthcare expertise",
+          href: "#knowledge-hub",
           icon: FileText
         },
         sections: [
           {
-            title: "Documentation",
+            title: "Content & Insights",
             items: [
-              { label: "API Docs", href: "#api-docs", description: "Technical integration guides" },
-              { label: "SDKs", href: "#sdks", description: "Development kits" },
-              { label: "Tutorials", href: "#tutorials", description: "Step-by-step guides" }
+              { label: "Blog / Knowledge Hub", href: "#blog", description: "Healthcare insights & trends" },
+              { label: "Case Studies", href: "#case-studies", description: "Success stories" },
+              { label: "Whitepapers & Reports", href: "#whitepapers", description: "Industry research" }
             ]
           },
           {
-            title: "Content",
+            title: "Resources",
             items: [
-              { label: "Blog", href: "#blog", description: "Healthcare insights" },
-              { label: "Case Studies", href: "#cases", description: "Success stories" },
-              { label: "Whitepapers", href: "#whitepapers", description: "Industry research" }
+              { label: "Templates & Checklists", href: "#templates", description: "Implementation guides" },
+              { label: "Press & Media", href: "#press", description: "News & media coverage" }
             ]
           }
         ]
@@ -161,24 +153,24 @@ const Header = () => {
         featured: {
           title: "About Labstack",
           description: "Mission-driven healthcare technology company",
-          href: "#about",
+          href: "#about-us",
           icon: Info
         },
         sections: [
           {
-            title: "Company",
+            title: "Company Info",
             items: [
-              { label: "Our Story", href: "#story", description: "How we started" },
-              { label: "Team", href: "#team", description: "Meet our experts" },
-              { label: "Careers", href: "#careers", description: "Join our mission" }
+              { label: "About Us", href: "#about-us", description: "Our mission & vision" },
+              { label: "Contact", href: "#contact", description: "Get in touch with us" }
             ]
           },
           {
-            title: "Connect",
+            title: "Legal & Utilities",
             items: [
-              { label: "Contact", href: "#contact", description: "Get in touch" },
-              { label: "Support", href: "#support", description: "Help & assistance" },
-              { label: "Partnership", href: "#partnership", description: "Collaborate with us" }
+              { label: "API Docs", href: "#api-docs", description: "Technical documentation" },
+              { label: "Privacy Policy", href: "#privacy", description: "Data protection policy" },
+              { label: "Terms of Service", href: "#terms", description: "Service terms" },
+              { label: "Partner Terms", href: "#partner-terms", description: "Partnership conditions" }
             ]
           }
         ]
