@@ -10,106 +10,106 @@ const WhoWeServe = () => {
       id: "insurers",
       icon: Shield,
       label: "Insurers & TPAs",
-      title: "Cashless OPD with Zero Fraud Risk",
-      description: "Launch OPD benefits in 24 hours. Real-time fraud detection. PPMC in <48hrs. Convert OPD from a cost center to growth driver with predictable delivery and measurable outcomes.",
+      title: "OPD with Built-in Fraud Controls",
+      description: "Launch in 24hrs. Fraud <5%. PPMC <48hrs. Processing cost <₹100.",
       challenges: [
-        "15-20% fraud in OPD claims",
-        "₹200-400 processing cost on ₹500-2,000 claims",
-        "PPMC delays killing sales (5-10 days = 8-12% conversion loss)",
-        "No preventive care infrastructure"
+        "15-20% fraud in claims",
+        "₹200-400 processing on ₹500 claims",
+        "PPMC delays = lost sales",
+        "No preventive infrastructure"
       ],
       benefits: [
-        "OPD fraud reduced to <5%",
-        "PPMC completed in <48 hours",
-        "Processing cost reduced to <₹100",
-        "Preventive programs with underwriting data"
+        "Fraud drops to <5%",
+        "PPMC in 48 hours",
+        "Processing <₹100 per claim",
+        "Preventive care built-in"
       ],
-      proof: "Conversion jumped >75% with instant PPMC",
+      proof: "Conversion >75% with fast PPMC",
       cta: "Transform OPD"
     },
     {
       id: "disease-management",
       icon: Heart,
       label: "Disease Management",
-      title: "Close the Care Loop, Prove Efficacy",
-      description: "Stop losing patients between services. 95%+ test completion. Structured data for outcomes. Nursing, specialists, pharmacy—all connected. Scale to multiple conditions without operations overhead.",
+      title: "Close Care Loops, Prove Outcomes",
+      description: "95%+ test completion. Structured data. Nursing, specialists, pharmacy connected.",
       challenges: [
-        "25-35% patients never complete testing",
-        "Care loops break: diagnostics gaps, no specialist network, missing home care",
-        "Can't prove efficacy without complete data",
-        "High CAC, low LTV, stuck in single condition"
+        "25-35% drop-off on tests",
+        "Broken care loops",
+        "Can't prove efficacy",
+        "High CAC, low LTV"
       ],
       benefits: [
-        ">90% test completion with 24hr turnaround",
-        "Reports auto-flow to care teams",
-        "Home care & specialist consults across 9,000 pincodes",
-        "Churn drops from 35% to <15%"
+        ">90% completion, 24hr turnaround",
+        "Auto-flow to care teams",
+        "9,000 pincode coverage",
+        "Churn: 35% → <15%"
       ],
-      proof: "LTV improved 2.5-3x with complete care delivery",
-      cta: "Scale Disease Management"
+      proof: "LTV improved 2.5-3x",
+      cta: "Scale Care"
     },
     {
       id: "brokers",
       icon: Users,
       label: "Brokers & Aggregators",
-      title: "Own the Full Health Wallet",
-      description: "Turn ₹1,500 insurance commission into ₹3,000+ recurring revenue. Add PPMC, OPD, preventive, emergency without building anything. Win RFPs, reduce churn, expand wallet share.",
+      title: "2x Revenue Per Customer",
+      description: "₹1,500 commission → ₹3,000+ recurring. Add PPMC, OPD, preventive instantly.",
       challenges: [
-        "Commission capped at ₹500-2,000, then nothing",
+        "Capped commission",
         "Rising CAC, flat LTV",
-        "HR renews on experience—cashless failure = lost account",
-        "No new revenue from existing customers"
+        "No service differentiation",
+        "Zero recurring revenue"
       ],  
       benefits: [
-        "Revenue per customer doubles in 12 months",
-        "Full-stack health platform under your brand",
-        "Win RFPs with unmatched benefits",
-        "30-40% revenue growth without new headcount"
+        "Revenue 2x in 12 months",
+        "White-label platform",
+        "Win more RFPs",
+        "+30-40% without headcount"
       ],
-      proof: "LTV increased 3-5x with healthcare wallet expansion",
+      proof: "LTV increased 3-5x",
       cta: "Expand Revenue"
     },
     {
       id: "digital-health",
       icon: Smartphone,
-      label: "Digital Health Platforms",
+      label: "Digital Health",
       title: "Go Full-Stack in 14 Days",
-      description: "Turn single-service apps into full-stack health platforms. True connected care: prescriptions → diagnostics → reports → follow-ups. Revenue per customer jumps 2-3x.",
+      description: "One API for diagnostics, teleconsult, pharmacy, home care. Revenue +73%.",
       challenges: [
-        "Single-service models have thin margins (10-15%)",
+        "Thin margins (10-15%)",
         "High CAC, low repeat",
-        "Can't scale to Tier 2/3—gaps push users away",
-        "Connected care is marketing, not reality"
+        "Can't reach Tier 2/3",
+        "No care continuity"
       ],
       benefits: [
-        "Launch diagnostics, teleconsult, pharmacy, home care via one API",
-        "Reports auto-flow back for true care continuity",
-        "Revenue per customer increases 73% (₹800→₹1,380)",
-        "Churn drops 30-50%, LTV/CAC >3"
+        "Full stack via one API",
+        "Auto-flow reports",
+        "Revenue: ₹800 → ₹1,380",
+        "Churn -30-50%"
       ],
-      proof: "Full-stack platforms see 2-3x revenue per customer",
-      cta: "Build Full-Stack Health"
+      proof: "Revenue per customer 2-3x",
+      cta: "Go Full-Stack"
     },
     {
       id: "providers",
       icon: Building,
       label: "Providers",
-      title: "Fill Capacity, Modernize Operations",
-      description: "40-50% utilization? Join Labstack to access steady B2B demand. Increase utilization to 60-70%, double revenue, improve margins 15-25%. Payment in 15 days, not 90.",
+      title: "Fill Capacity, Double Revenue",
+      description: "40% → 60-70% utilization. Margins +15-25%. Payment in 15 days.",
       challenges: [
-        "40-50% capacity utilization, fixed costs crushing margins",
-        "Can't tap digital/B2B demand without tech",
-        "60-90 day reconciliation cycles",
-        "Price wars eroding margins"
+        "40-50% utilization",
+        "No digital demand access",
+        "60-90 day payment cycles",
+        "Margin erosion"
       ],
       benefits: [
-        "Steady B2B demand fills idle capacity",
-        "Utilization increases to 60-70%",
-        "Revenue doubles, margins improve 15-25%",
-        "Payment in 15 days, logistics handled"
+        "Steady B2B demand",
+        "Utilization to 60-70%",
+        "Revenue doubles, margins +15-25%",
+        "15-day payments"
       ],
-      proof: "Labs doubled revenue with improved utilization",
-      cta: "Join Provider Network"
+      proof: "Labs doubled revenue",
+      cta: "Join Network"
     }
   ];
 
@@ -118,10 +118,10 @@ const WhoWeServe = () => {
       <div className="container mx-auto px-6">
         <div className="max-w-4xl mx-auto text-center mb-12 sm:mb-16">
           <h2 className="mobile-section-title font-heading font-bold mb-6">
-            Built for Every Player in <span className="text-gradient">Healthcare</span>
+            Who We <span className="text-gradient">Serve</span>
           </h2>
           <p className="mobile-subheading text-muted-foreground">
-            From insurers and healthtech to providers and disease management platforms—infrastructure that scales with your ambition
+            Infrastructure for insurers, healthtech, providers, and disease management
           </p>
         </div>
 

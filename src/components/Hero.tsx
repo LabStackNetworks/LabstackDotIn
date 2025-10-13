@@ -26,14 +26,14 @@ const Hero = () => {
 
             {/* Main Headline */}
             <h1 className="mobile-hero-title font-heading font-bold mb-6 leading-tight text-center">
-              <span className="text-gradient">Healthcare that runs on code,</span>
+              <span className="text-gradient">Healthcare infrastructure</span>
               <br />
-              not coordination
+              that scales like software
             </h1>
 
             {/* Sub-headline */}
             <p className="mobile-subheading text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed text-center">
-              The operating system for healthcare delivery. Access verified labs, doctors, pharmacies, and home care across <span className="text-foreground font-semibold">9,000+ pincodes</span>. One integration. Predictable delivery. Nationwide scale.
+              One API for diagnostics, consultations, pharmacy, and home care across <span className="text-foreground font-semibold">9,000+ pincodes</span>. Launch in 14 days.
             </p>
 
             {/* Value Props */}

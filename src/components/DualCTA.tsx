@@ -20,27 +20,26 @@ const DualCTA = () => {
                 </div>
                 
                 <h3 className="text-2xl lg:text-3xl font-heading font-bold text-foreground mb-4">
-                  Build Products, Not Plumbing
+                  Launch in 14 Days
                 </h3>
                 
                 <p className="text-muted-foreground leading-relaxed mb-8">
-                  Stop rebuilding infrastructure. Launch diagnostics, teleconsults, pharmacy, and home care 
-                  in 14 days. One API. One network. Nationwide scale.
+                  One API for diagnostics, teleconsults, pharmacy, home care. Nationwide.
                 </p>
               </div>
 
               <div className="space-y-4 mb-8">
                 <div className="flex items-center space-x-3">
                   <div className="w-2 h-2 bg-success rounded-full"></div>
-                  <span className="text-sm text-muted-foreground">14-day average go-live (not 12 months)</span>
+                  <span className="text-sm text-muted-foreground">14-day go-live</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <div className="w-2 h-2 bg-success rounded-full"></div>
-                  <span className="text-sm text-muted-foreground">98% on-time delivery, &lt;2% rejection rate</span>
+                  <span className="text-sm text-muted-foreground">98% on-time, &lt;2% rejection</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <div className="w-2 h-2 bg-success rounded-full"></div>
-                  <span className="text-sm text-muted-foreground">Deep integration—not aggregation</span>
+                  <span className="text-sm text-muted-foreground">9,000+ pincodes</span>
                 </div>
               </div>
 
@@ -71,27 +70,26 @@ const DualCTA = () => {
                 </div>
                 
                 <h3 className="text-2xl lg:text-3xl font-heading font-bold text-foreground mb-4">
-                  Fill Capacity. Earn Predictably.
+                  Fill Capacity, Earn More
                 </h3>
                 
                 <p className="text-muted-foreground leading-relaxed mb-8">
-                  Join India's most credentialed healthcare network. Access steady B2B demand. 
-                  Increase utilization from 40% to 60-70%. Payment in 15 days, not 90.
+                  Join India's healthcare network. Steady B2B demand. 40% → 60-70% utilization. 15-day payments.
                 </p>
               </div>
 
               <div className="space-y-4 mb-8">
                 <div className="flex items-center space-x-3">
                   <div className="w-2 h-2 bg-success rounded-full"></div>
-                  <span className="text-sm text-muted-foreground">Steady B2B demand fills idle capacity</span>
+                  <span className="text-sm text-muted-foreground">Steady B2B demand</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <div className="w-2 h-2 bg-success rounded-full"></div>
-                  <span className="text-sm text-muted-foreground">Revenue doubles, margins +15-25%</span>
+                  <span className="text-sm text-muted-foreground">Revenue 2x, margins +15-25%</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <div className="w-2 h-2 bg-success rounded-full"></div>
-                  <span className="text-sm text-muted-foreground">Logistics & reconciliation handled</span>
+                  <span className="text-sm text-muted-foreground">Logistics handled</span>
                 </div>
               </div>
 
