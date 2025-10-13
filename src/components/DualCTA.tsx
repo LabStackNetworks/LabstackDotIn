@@ -20,27 +20,27 @@ const DualCTA = () => {
                 </div>
                 
                 <h3 className="text-2xl lg:text-3xl font-heading font-bold text-foreground mb-4">
-                  Stop Wasting 12–18 Months
+                  Build Products, Not Plumbing
                 </h3>
                 
                 <p className="text-muted-foreground leading-relaxed mb-8">
-                  Start monetizing care delivery instead of building infrastructure. 
-                  Join healthcare companies that launched nationwide in weeks, not months.
+                  Stop rebuilding infrastructure. Launch diagnostics, teleconsults, pharmacy, and home care 
+                  in 14 days. One API. One network. Nationwide scale.
                 </p>
               </div>
 
               <div className="space-y-4 mb-8">
                 <div className="flex items-center space-x-3">
                   <div className="w-2 h-2 bg-success rounded-full"></div>
-                  <span className="text-sm text-muted-foreground">48-hour go-live capability</span>
+                  <span className="text-sm text-muted-foreground">14-day average go-live (not 12 months)</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <div className="w-2 h-2 bg-success rounded-full"></div>
-                  <span className="text-sm text-muted-foreground">9,000+ pincodes ready to serve</span>
+                  <span className="text-sm text-muted-foreground">98% on-time delivery, &lt;2% rejection rate</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <div className="w-2 h-2 bg-success rounded-full"></div>
-                  <span className="text-sm text-muted-foreground">One API for all healthcare services</span>
+                  <span className="text-sm text-muted-foreground">Deep integration—not aggregation</span>
                 </div>
               </div>
 
@@ -71,27 +71,27 @@ const DualCTA = () => {
                 </div>
                 
                 <h3 className="text-2xl lg:text-3xl font-heading font-bold text-foreground mb-4">
-                  Join the Labstack Network
+                  Fill Capacity. Earn Predictably.
                 </h3>
                 
                 <p className="text-muted-foreground leading-relaxed mb-8">
-                  Connect to demand, modernize operations, and maintain your independence. 
-                  30,000+ monthly orders waiting for quality providers like you.
+                  Join India's most credentialed healthcare network. Access steady B2B demand. 
+                  Increase utilization from 40% to 60-70%. Payment in 15 days, not 90.
                 </p>
               </div>
 
               <div className="space-y-4 mb-8">
                 <div className="flex items-center space-x-3">
                   <div className="w-2 h-2 bg-success rounded-full"></div>
-                  <span className="text-sm text-muted-foreground">Instant access to patient demand</span>
+                  <span className="text-sm text-muted-foreground">Steady B2B demand fills idle capacity</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <div className="w-2 h-2 bg-success rounded-full"></div>
-                  <span className="text-sm text-muted-foreground">Digital infrastructure included</span>
+                  <span className="text-sm text-muted-foreground">Revenue doubles, margins +15-25%</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <div className="w-2 h-2 bg-success rounded-full"></div>
-                  <span className="text-sm text-muted-foreground">Maintain your independence</span>
+                  <span className="text-sm text-muted-foreground">Logistics & reconciliation handled</span>
                 </div>
               </div>
 
@@ -113,16 +113,16 @@ const DualCTA = () => {
         <div className="mt-16 text-center">
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 max-w-3xl mx-auto">
             <div>
-              <div className="text-2xl lg:text-3xl font-heading font-bold text-gradient mb-2">1000+</div>
-              <div className="text-sm text-muted-foreground">Healthcare companies trust Labstack</div>
+              <div className="text-2xl lg:text-3xl font-heading font-bold text-gradient mb-2">9,000+</div>
+              <div className="text-sm text-muted-foreground">Pincodes covered nationwide</div>
             </div>
             <div>
-              <div className="text-2xl lg:text-3xl font-heading font-bold text-gradient mb-2">30,000+</div>
-              <div className="text-sm text-muted-foreground">Monthly healthcare services delivered</div>
+              <div className="text-2xl lg:text-3xl font-heading font-bold text-gradient mb-2">2,600+</div>
+              <div className="text-sm text-muted-foreground">Service centers across India</div>
             </div>
             <div>
-              <div className="text-2xl lg:text-3xl font-heading font-bold text-gradient mb-2">99.5%</div>
-              <div className="text-sm text-muted-foreground">Platform uptime guarantee</div>
+              <div className="text-2xl lg:text-3xl font-heading font-bold text-gradient mb-2">98%</div>
+              <div className="text-sm text-muted-foreground">On-time delivery guaranteed</div>
             </div>
           </div>
         </div>

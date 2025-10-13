@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Rocket, Heart, Building, Shield, Users } from "lucide-react";
+import { Rocket, Heart, Building, Shield, Users, Smartphone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const WhoWeServe = () => {
@@ -7,109 +7,109 @@ const WhoWeServe = () => {
 
   const personas = [
     {
-      id: "startups",
-      icon: Rocket,
-      label: "HealthTech Startups",
-      title: "Scale Nationwide in Days",
-      description: "Launch your healthcare product across India with enterprise-grade infrastructure from day one. No 12-18 month build cycles, no vendor management headaches.",
+      id: "insurers",
+      icon: Shield,
+      label: "Insurers & TPAs",
+      title: "Cashless OPD with Zero Fraud Risk",
+      description: "Launch OPD benefits in 24 hours. Real-time fraud detection. PPMC in <48hrs. Convert OPD from a cost center to growth driver with predictable delivery and measurable outcomes.",
       challenges: [
-        "Infrastructure delays blocking launches",
-        "Poor SLAs from individual providers", 
-        "Compliance and regulatory overhead",
-        "Limited coverage outside metros"
+        "15-20% fraud in OPD claims",
+        "₹200-400 processing cost on ₹500-2,000 claims",
+        "PPMC delays killing sales (5-10 days = 8-12% conversion loss)",
+        "No preventive care infrastructure"
       ],
       benefits: [
-        "48-hour go-live capability",
-        "9,000+ pincodes covered instantly",
-        "Built-in compliance frameworks",
-        "One API for all services"
+        "OPD fraud reduced to <5%",
+        "PPMC completed in <48 hours",
+        "Processing cost reduced to <₹100",
+        "Preventive programs with underwriting data"
       ],
-      proof: "+20% conversions after Tier-2/3 expansion",
-      cta: "Book a Demo"
+      proof: "Conversion jumped >75% with instant PPMC",
+      cta: "Transform OPD"
     },
     {
       id: "disease-management",
       icon: Heart,
       label: "Disease Management",
-      title: "Seamless Continuous Care",
-      description: "Deliver protocol-driven care without patient drop-offs. Get structured data, not PDFs. Automate follow-ups and care coordination.",
+      title: "Close the Care Loop, Prove Efficacy",
+      description: "Stop losing patients between services. 95%+ test completion. Structured data for outcomes. Nursing, specialists, pharmacy—all connected. Scale to multiple conditions without operations overhead.",
       challenges: [
-        "Patient drop-offs between services",
-        "Reports stuck in PDF formats",
-        "Manual care coordination",
-        "Inconsistent provider quality"
+        "25-35% patients never complete testing",
+        "Care loops break: diagnostics gaps, no specialist network, missing home care",
+        "Can't prove efficacy without complete data",
+        "High CAC, low LTV, stuck in single condition"
       ],
       benefits: [
-        "Protocol-driven care flows",
-        "Structured raw health data",
-        "Automated follow-up systems",
-        "Quality-assured providers"
+        ">90% test completion with 24hr turnaround",
+        "Reports auto-flow to care teams",
+        "Home care & specialist consults across 9,000 pincodes",
+        "Churn drops from 35% to <15%"
       ],
-      proof: "Drop-offs reduced sharply with raw values + reminders",
-      cta: "Deliver Continuous Care"
-    },
-    {
-      id: "corporate-wellness",
-      icon: Building,
-      label: "Corporate Wellness",
-      title: "One API, One Invoice, Nationwide",
-      description: "Unified wellness programs for your workforce. Single billing, white-label booking flows, comprehensive utilization analytics.",
-      challenges: [
-        "Managing multiple vendor relationships",
-        "Inconsistent experience across locations",
-        "Complex billing and reconciliation",
-        "Limited coverage in smaller cities"
-      ],  
-      benefits: [
-        "Unified billing across all services",
-        "White-label employee experience",
-        "Comprehensive utilization analytics",
-        "Nationwide consistent coverage"
-      ],
-      proof: "Participation rose after nationwide rollout",
-      cta: "Explore Wellness Solutions"
-    },
-    {
-      id: "insurers",
-      icon: Shield,
-      label: "Insurers & TPAs",
-      title: "Fraud-Controlled OPD, SLA-Backed",
-      description: "Launch OPD benefits with built-in fraud controls. Real-time tracking, automated reconciliation, and member experience that drives engagement.",
-      challenges: [
-        "High leakage and fraud rates",
-        "Poor provider networks",
-        "No escalation protocols",
-        "Manual claims processing"
-      ],
-      benefits: [
-        "SKU-level fraud controls",
-        "Real-time service tracking",
-        "Automated reconciliation",
-        "SLA-backed service delivery"
-      ],
-      proof: "12% leakage reduction, faster claims",
-      cta: "Transform Member Experience"
+      proof: "LTV improved 2.5-3x with complete care delivery",
+      cta: "Scale Disease Management"
     },
     {
       id: "brokers",
       icon: Users,
-      label: "Insurance Brokers",
-      title: "New Revenue via Bundled Care",
-      description: "Differentiate your offerings with bundled healthcare benefits. Boost ARPU through prescription monetization and wellness add-ons.",
+      label: "Brokers & Aggregators",
+      title: "Own the Full Health Wallet",
+      description: "Turn ₹1,500 insurance commission into ₹3,000+ recurring revenue. Add PPMC, OPD, preventive, emergency without building anything. Win RFPs, reduce churn, expand wallet share.",
       challenges: [
-        "No differentiation in competitive market",
-        "Flat ARPU growth",
-        "Limited value-added services",
-        "Client retention challenges"
+        "Commission capped at ₹500-2,000, then nothing",
+        "Rising CAC, flat LTV",
+        "HR renews on experience—cashless failure = lost account",
+        "No new revenue from existing customers"
+      ],  
+      benefits: [
+        "Revenue per customer doubles in 12 months",
+        "Full-stack health platform under your brand",
+        "Win RFPs with unmatched benefits",
+        "30-40% revenue growth without new headcount"
+      ],
+      proof: "LTV increased 3-5x with healthcare wallet expansion",
+      cta: "Expand Revenue"
+    },
+    {
+      id: "digital-health",
+      icon: Smartphone,
+      label: "Digital Health Platforms",
+      title: "Go Full-Stack in 14 Days",
+      description: "Turn single-service apps into full-stack health platforms. True connected care: prescriptions → diagnostics → reports → follow-ups. Revenue per customer jumps 2-3x.",
+      challenges: [
+        "Single-service models have thin margins (10-15%)",
+        "High CAC, low repeat",
+        "Can't scale to Tier 2/3—gaps push users away",
+        "Connected care is marketing, not reality"
       ],
       benefits: [
-        "Bundled care benefit packages",
-        "Prescription monetization opportunities",
-        "Nationwide service coverage",
-        "White-label client portals"
+        "Launch diagnostics, teleconsult, pharmacy, home care via one API",
+        "Reports auto-flow back for true care continuity",
+        "Revenue per customer increases 73% (₹800→₹1,380)",
+        "Churn drops 30-50%, LTV/CAC >3"
       ],
-      proof: "ARPU up 15% with bundled healthcare",
-      cta: "Expand Portfolio"
+      proof: "Full-stack platforms see 2-3x revenue per customer",
+      cta: "Build Full-Stack Health"
+    },
+    {
+      id: "providers",
+      icon: Building,
+      label: "Providers",
+      title: "Fill Capacity, Modernize Operations",
+      description: "40-50% utilization? Join Labstack to access steady B2B demand. Increase utilization to 60-70%, double revenue, improve margins 15-25%. Payment in 15 days, not 90.",
+      challenges: [
+        "40-50% capacity utilization, fixed costs crushing margins",
+        "Can't tap digital/B2B demand without tech",
+        "60-90 day reconciliation cycles",
+        "Price wars eroding margins"
+      ],
+      benefits: [
+        "Steady B2B demand fills idle capacity",
+        "Utilization increases to 60-70%",
+        "Revenue doubles, margins improve 15-25%",
+        "Payment in 15 days, logistics handled"
+      ],
+      proof: "Labs doubled revenue with improved utilization",
+      cta: "Join Provider Network"
     }
   ];
 
@@ -118,10 +118,10 @@ const WhoWeServe = () => {
       <div className="container mx-auto px-6">
         <div className="max-w-4xl mx-auto text-center mb-12 sm:mb-16">
           <h2 className="mobile-section-title font-heading font-bold mb-6">
-            Who We <span className="text-gradient">Serve</span>
+            Built for Every Player in <span className="text-gradient">Healthcare</span>
           </h2>
           <p className="mobile-subheading text-muted-foreground">
-            Healthcare companies of all sizes trust Labstack to power their growth
+            From insurers and healthtech to providers and disease management platforms—infrastructure that scales with your ambition
           </p>
         </div>
 

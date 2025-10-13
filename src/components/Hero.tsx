@@ -21,34 +21,34 @@ const Hero = () => {
             {/* Callout Badge */}
             <div className="inline-flex items-center space-x-2 bg-primary/10 border border-primary/20 px-4 py-2 rounded-full mb-6 mobile-touch-target">
               <div className="w-2 h-2 bg-primary rounded-full animate-pulse"></div>
-              <span className="text-primary font-medium text-sm uppercase tracking-wider">Healthcare Infrastructure Platform</span>
+              <span className="text-primary font-medium text-sm uppercase tracking-wider">The Growth Engine for Healthcare</span>
             </div>
 
             {/* Main Headline */}
             <h1 className="mobile-hero-title font-heading font-bold mb-6 leading-tight text-center">
-              <span className="text-gradient">Launch care services</span>
+              <span className="text-gradient">Healthcare that runs on code,</span>
               <br />
-              in days, not months
+              not coordination
             </h1>
 
             {/* Sub-headline */}
             <p className="mobile-subheading text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed text-center">
-              Labstack gives you instant access to diagnostics, consultations, pharmacy, and home care across <span className="text-foreground font-semibold">9,000+ pincodes</span>. One API, one Console, one Network — the fastest way to scale healthcare in India.
+              The operating system for healthcare delivery. Access verified labs, doctors, pharmacies, and home care across <span className="text-foreground font-semibold">9,000+ pincodes</span>. One integration. Predictable delivery. Nationwide scale.
             </p>
 
             {/* Value Props */}
             <div className="flex flex-col sm:flex-row sm:flex-wrap justify-center gap-3 sm:gap-4 mb-12 text-sm lg:text-base">
               <div className="flex items-center justify-center space-x-2 bg-card/50 backdrop-blur-sm px-4 py-3 rounded-full border border-border/50 mobile-touch-target">
                 <div className="w-2 h-2 bg-success rounded-full"></div>
-                <span className="text-center">Coverage from Tier-1 to Tier-3 cities</span>
+                <span className="text-center">Launch in 14 days, not 12 months</span>
               </div>
               <div className="flex items-center justify-center space-x-2 bg-card/50 backdrop-blur-sm px-4 py-3 rounded-full border border-border/50 mobile-touch-target">
                 <div className="w-2 h-2 bg-primary rounded-full"></div>
-                <span className="text-center">Home visits & centre visits, built-in</span>
+                <span className="text-center">98% on-time delivery, &lt;2% rejection</span>
               </div>
               <div className="flex items-center justify-center space-x-2 bg-card/50 backdrop-blur-sm px-4 py-3 rounded-full border border-border/50 mobile-touch-target">
                 <div className="w-2 h-2 bg-secondary rounded-full"></div>
-                <span className="text-center">Structured, actionable data</span>
+                <span className="text-center">AI-powered quality & intelligence</span>
               </div>
             </div>
 

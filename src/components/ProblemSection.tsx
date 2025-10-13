@@ -4,38 +4,38 @@ const ProblemSection = () => {
   const problems = [
     {
       icon: Clock,
-      title: "12–18 months wasted",
-      description: "Building infra instead of innovating",
+      title: "Rebuilding the same plumbing",
+      description: "Every healthtech spends 12-18 months onboarding labs, verifying doctors, integrating pharmacies",
       color: "text-warning"
     },
     {
       icon: Users,
-      title: "Chaos managing vendors",
-      description: "Multiple providers, inconsistent experience",
+      title: "Manual coordination at scale",
+      description: "Ops teams reconcile invoices on Excel, chase reports, manage SLAs across fragmented vendors",
       color: "text-destructive"
     },
     {
       icon: Lock,
-      title: "Provider lock-in",
-      description: "Stuck with a single vendor's limitations",
+      title: "Growth stalls at metros",
+      description: "Network quality breaks beyond Tier 1. Expansion becomes impossible without burning capital",
       color: "text-secondary"
     },
     {
       icon: AlertTriangle,
-      title: "Broken integrations",
-      description: "Compliance debt and technical overhead",
+      title: "Patients lost between services",
+      description: "Prescriptions don't flow to diagnostics. Reports don't return. Follow-ups never happen",
       color: "text-warning"
     },
     {
       icon: TrendingDown,
-      title: "Inconsistent quality",
-      description: "Delayed reports, poor patient experience",
+      title: "No real integration",
+      description: "Legacy systems can't talk to each other. Digital and offline worlds stitched together manually",
       color: "text-destructive"
     },
     {
       icon: DollarSign,
-      title: "Cost overruns",
-      description: "Poor ROI on infrastructure investments",
+      title: "Innovation slows, costs rise",
+      description: "Founders build operations, not products. CAC rises. LTV stays flat. Investors lose patience",
       color: "text-primary"
     }
   ];
@@ -45,11 +45,11 @@ const ProblemSection = () => {
       <div className="container mx-auto mobile-safe-padding">
         <div className="max-w-4xl mx-auto text-center mb-12 sm:mb-16">
           <h2 className="mobile-section-title font-heading font-bold mb-6">
-            Why Healthcare Infrastructure <span className="text-gradient">Fails</span>
+            The <span className="text-gradient">Invisible Struggle</span> Behind Every Innovation
           </h2>
           <p className="mobile-subheading text-muted-foreground max-w-3xl mx-auto">
-            Healthcare companies waste months building basic infrastructure instead of focusing on what matters — 
-            delivering exceptional patient care and growing their business.
+            Digital health is unbundling. But behind every innovation lies the same problem: everyone is rebuilding 
+            the same infrastructure. Healthcare doesn't lack creativity—it lacks connected infrastructure.
           </p>
         </div>
 
@@ -83,7 +83,7 @@ const ProblemSection = () => {
           <div className="inline-flex items-center space-x-3 bg-destructive/10 border border-destructive/20 px-4 sm:px-6 py-3 rounded-full mobile-touch-target">
             <AlertTriangle className="w-5 h-5 text-destructive flex-shrink-0" />
             <span className="text-destructive font-medium text-sm sm:text-base">
-              Result: Delayed launches, higher costs, frustrated patients
+              The result: Innovation slows. Growth stalls. Expansion beyond metros becomes impossible.
             </span>
           </div>
         </div>
