@@ -17,7 +17,7 @@ const Diagnostics = () => {
                 Diagnostics, <span className="text-gradient">Delivered Nationwide.</span>
               </h1>
               <p className="text-lg lg:text-xl text-muted-foreground mb-8">
-                Pathology, radiology, cardiac, genetic, allergy, and microbiome — the widest test menu in India. Labstack connects you to a large, growing diagnostics network optimised for customer experience. From at-home collections to center visits, we cover 9,000+ pincodes and 2,600+ zones, with quality frameworks that ensure trust at every step.
+                Complete diagnostics network — pathology, radiology, cardiac, genetic, allergy. 9,000+ pincodes coverage with quality frameworks built in.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link to="/book-demo">

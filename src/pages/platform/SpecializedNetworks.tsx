@@ -28,7 +28,7 @@ const SpecializedNetworks = () => {
                 Switch On <span className="text-gradient">Specialised Care.</span> Instantly.
               </h1>
               <p className="text-lg lg:text-xl text-muted-foreground mb-8">
-                Ambulance, vision, dental, mental health, physiotherapy, audiometry, injection at home and home care — activated via one API and one Console. Beyond diagnostics, consults, and pharmacy lies the long tail of healthcare services that patients need but few platforms offer. Labstack brings these specialized networks online so you don't have to build or manage them yourself.
+                Ambulance, vision, dental, mental health, physiotherapy, and home care — all via one API and console. Specialized networks you don't have to build.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link to="/book-demo">

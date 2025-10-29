@@ -17,7 +17,7 @@ const Integrations = () => {
                 Integrate Once. <span className="text-gradient">Deploy Everywhere.</span>
               </h1>
               <p className="text-lg lg:text-xl text-muted-foreground mb-8">
-                Labstack plugs into your systems through APIs, widgets, and console — no vendor lock-in. From diagnostics and pharmacy to consults and home care, our integration layer ensures you can launch healthcare services with minimal engineering effort.
+                One API for diagnostics, pharmacy, consults, and specialized care. Vendor-agnostic integration with minimal engineering effort.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link to="/book-demo">

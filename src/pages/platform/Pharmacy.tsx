@@ -17,7 +17,7 @@ const Pharmacy = () => {
                 Pharmacy. <span className="text-gradient">Integrated, Nationwide.</span>
               </h1>
               <p className="text-lg lg:text-xl text-muted-foreground mb-8">
-                Home delivery, store pickup, and fraud prevention powered by a multi-channel pharmacy network. Labstack makes pharmacy fulfilment seamless. From e-pharmacies to local chains and dark stores, our platform connects you to verified pharmacy partners across the country. With single-console tracking, cashless delivery, and 60-minute fulfilment in major metros, we ensure fast, compliant, and fraud-free access to medicines.
+                Nationwide pharmacy network with 60-min delivery in metros, fraud prevention, and SKU-level controls. Home delivery or store pickup.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link to="/book-demo">

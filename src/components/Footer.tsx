@@ -25,9 +25,9 @@ const Footer = () => {
       { name: "Providers", href: "/who-we-serve/providers" }
     ],
     providers: [
-      { name: "Hospitals & Labs", href: "/join-network/providers" },
+      { name: "Hospitals & Labs", href: "/join-network/hospitals-labs" },
       { name: "Nurses & Phlebotomists", href: "/join-network/field-staff" },
-      { name: "Join Network", href: "/join-network/providers" }
+      { name: "Providers", href: "/join-network/providers" }
     ],
     resources: [
       { name: "Blog", href: "#blog" },
@@ -39,7 +39,6 @@ const Footer = () => {
     company: [
       { name: "About Us", href: "/about" },
       { name: "Careers", href: "/careers" },
-      { name: "Press & Media", href: "#press" },
       { name: "Contact", href: "/contact" },
       { name: "Book Demo", href: "/book-demo" },
       { name: "Start Building", href: "/start-building" }

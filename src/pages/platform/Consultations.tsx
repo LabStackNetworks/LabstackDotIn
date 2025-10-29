@@ -17,7 +17,7 @@ const Consultations = () => {
                 Consultations <span className="text-gradient">Without Complexity.</span>
               </h1>
               <p className="text-lg lg:text-xl text-muted-foreground mb-8">
-                Tele-consults, in-clinic visits, and EMR integration powered by a nationwide doctor network and proprietary software. Labstack enables you to launch doctor consultations instantly — online or offline. From premium specialists to mass-market networks, our platform connects you with verified doctors across India. The entire journey is powered by Labstack's teleconsultation SaaS, EMR, and digital prescription tools, so you never depend on external software.
+                Pan-India doctor network with proprietary teleconsultation SaaS, EMR, and e-prescriptions. Launch online and offline consultations instantly.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link to="/book-demo">
