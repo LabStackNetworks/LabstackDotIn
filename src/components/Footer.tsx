@@ -1,4 +1,5 @@
 import { Linkedin, Twitter, Facebook, Mail, Phone, MapPin } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   const navigation = {
@@ -11,17 +12,17 @@ const Footer = () => {
       { name: "Integrations", href: "#integrations" }
     ],
     solutions: [
-      { name: "Healthcare Infrastructure", href: "#infra" },
-      { name: "Digital Platform", href: "#digital" },
-      { name: "API Solutions", href: "#api" },
-      { name: "Coverage Expansion", href: "#coverage" }
+      { name: "Healthcare Infrastructure", href: "/solutions/healthcare-infrastructure" },
+      { name: "Digital Platform", href: "/solutions/digital-platform" },
+      { name: "API Solutions", href: "/solutions/api-solutions" },
+      { name: "Coverage Expansion", href: "/solutions/coverage-expansion" }
     ],
     whoWeServe: [
-      { name: "HealthTech Startups", href: "#startups" },
-      { name: "Disease Management", href: "#disease-mgmt" },
-      { name: "Corporate Wellness", href: "#corporate" },
-      { name: "Insurers & TPAs", href: "#insurers" },
-      { name: "Insurance Brokers", href: "#brokers" }
+      { name: "Insurers & TPAs", href: "/who-we-serve/insurers-tpas" },
+      { name: "Brokers & Aggregators", href: "/who-we-serve/brokers-aggregators" },
+      { name: "Disease Management", href: "/who-we-serve/disease-management" },
+      { name: "Digital Health Platforms", href: "/who-we-serve/digital-health-platforms" },
+      { name: "Providers", href: "/who-we-serve/providers" }
     ],
     providers: [
       { name: "Hospitals & Labs", href: "#hospitals" },
@@ -40,7 +41,9 @@ const Footer = () => {
       { name: "About Us", href: "#about" },
       { name: "Careers", href: "#careers" },
       { name: "Press & Media", href: "#press" },
-      { name: "Contact", href: "#contact" }
+      { name: "Contact", href: "/contact" },
+      { name: "Book Demo", href: "/book-demo" },
+      { name: "Start Building", href: "/start-building" }
     ]
   };
 
@@ -187,14 +190,23 @@ const Footer = () => {
                 <div>
                   <h3 className="font-heading font-semibold text-foreground mb-4">Company</h3>
                   <ul className="space-y-3">
-                    {navigation.company.map((item) => (
+                     {navigation.company.map((item) => (
                       <li key={item.name}>
-                        <a
-                          href={item.href}
-                          className="text-sm text-muted-foreground hover:text-foreground transition-smooth"
-                        >
-                          {item.name}
-                        </a>
+                        {item.href.startsWith('/') ? (
+                          <Link
+                            to={item.href}
+                            className="text-sm text-muted-foreground hover:text-foreground transition-smooth"
+                          >
+                            {item.name}
+                          </Link>
+                        ) : (
+                          <a
+                            href={item.href}
+                            className="text-sm text-muted-foreground hover:text-foreground transition-smooth"
+                          >
+                            {item.name}
+                          </a>
+                        )}
                       </li>
                     ))}
                   </ul>

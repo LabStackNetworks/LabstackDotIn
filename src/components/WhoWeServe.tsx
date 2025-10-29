@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Rocket, Heart, Building, Shield, Users, Smartphone } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 const WhoWeServe = () => {
   const [activePersona, setActivePersona] = useState(0);
@@ -25,7 +26,8 @@ const WhoWeServe = () => {
         "Preventive care built-in"
       ],
       proof: "Conversion >75% with fast PPMC",
-      cta: "Transform OPD"
+      cta: "Transform OPD",
+      link: "/who-we-serve/insurers-tpas"
     },
     {
       id: "disease-management",
@@ -46,7 +48,8 @@ const WhoWeServe = () => {
         "Churn: 35% → <15%"
       ],
       proof: "LTV improved 2.5-3x",
-      cta: "Scale Care"
+      cta: "Scale Care",
+      link: "/who-we-serve/disease-management"
     },
     {
       id: "brokers",
@@ -67,7 +70,8 @@ const WhoWeServe = () => {
         "+30-40% without headcount"
       ],
       proof: "LTV increased 3-5x",
-      cta: "Expand Revenue"
+      cta: "Expand Revenue",
+      link: "/who-we-serve/brokers-aggregators"
     },
     {
       id: "digital-health",
@@ -88,7 +92,8 @@ const WhoWeServe = () => {
         "Churn -30-50%"
       ],
       proof: "Revenue per customer 2-3x",
-      cta: "Go Full-Stack"
+      cta: "Go Full-Stack",
+      link: "/who-we-serve/digital-health-platforms"
     },
     {
       id: "providers",
@@ -109,7 +114,8 @@ const WhoWeServe = () => {
         "15-day payments"
       ],
       proof: "Labs doubled revenue",
-      cta: "Join Network"
+      cta: "Join Network",
+      link: "/who-we-serve/providers"
     }
   ];
 
@@ -213,9 +219,11 @@ const WhoWeServe = () => {
                       </div>
                     </div>
 
-                    <Button size="lg" className="btn-gradient w-full sm:w-auto">
-                      {persona.cta}
-                    </Button>
+                    <Link to={persona.link}>
+                      <Button size="lg" className="btn-gradient w-full sm:w-auto">
+                        {persona.cta}
+                      </Button>
+                    </Link>
                   </div>
 
                   {/* Visual */}

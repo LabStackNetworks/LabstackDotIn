@@ -1,6 +1,8 @@
 import { useState, useRef, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X, ChevronDown, Building2, Users, Stethoscope, FileText, Info } from "lucide-react";
+import { Link } from "react-router-dom";
+import ThemeToggle from "./ThemeToggle";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -75,9 +77,10 @@ const Header = () => {
           {
             title: "Platform Solutions",
             items: [
-              { label: "Healthcare Infrastructure", href: "#healthcare-infrastructure", description: "Complete healthcare backbone" },
-              { label: "Digital Platform", href: "#digital-platform", description: "End-to-end digital solutions" },
-              { label: "API Solutions", href: "#api-solutions", description: "Developer-first integrations" }
+              { label: "Healthcare Infrastructure", href: "/solutions/healthcare-infrastructure", description: "Complete healthcare backbone" },
+              { label: "Digital Platform", href: "/solutions/digital-platform", description: "End-to-end digital solutions" },
+              { label: "API Solutions", href: "/solutions/api-solutions", description: "Developer-first integrations" },
+              { label: "Coverage Expansion", href: "/solutions/coverage-expansion", description: "Scale to new markets" }
             ]
           }
         ]
@@ -98,18 +101,16 @@ const Header = () => {
           {
             title: "Technology Partners",
             items: [
-              { label: "HealthTech Startups", href: "#healthtech-startups", description: "Emerging health companies" },
-              { label: "Disease Management Platforms", href: "#disease-management", description: "Chronic care solutions" },
-              { label: "Corporate Wellness", href: "#corporate-wellness", description: "Employee health programs" }
+              { label: "Insurers & TPAs", href: "/who-we-serve/insurers-tpas", description: "Insurance companies" },
+              { label: "Brokers & Aggregators", href: "/who-we-serve/brokers-aggregators", description: "Insurance intermediaries" },
+              { label: "Disease Management", href: "/who-we-serve/disease-management", description: "Chronic care platforms" }
             ]
           },
           {
             title: "Healthcare Partners",
             items: [
-              { label: "Insurers & TPAs", href: "#insurers-tpas", description: "Insurance companies" },
-              { label: "Insurance Brokers", href: "#insurance-brokers", description: "Insurance intermediaries" },
-              { label: "Hospitals, Labs & Clinics", href: "#hospitals-labs-clinics", description: "Healthcare facilities" },
-              { label: "Nurses & Phlebotomists", href: "#nurses-phlebotomists", description: "Healthcare professionals" }
+              { label: "Digital Health Platforms", href: "/who-we-serve/digital-health-platforms", description: "Health tech companies" },
+              { label: "Providers", href: "/who-we-serve/providers", description: "Labs, clinics & professionals" }
             ]
           }
         ]
@@ -161,7 +162,7 @@ const Header = () => {
             title: "Company Info",
             items: [
               { label: "About Us", href: "#about-us", description: "Our mission & vision" },
-              { label: "Contact", href: "#contact", description: "Get in touch with us" }
+              { label: "Contact", href: "/contact", description: "Get in touch with us" }
             ]
           },
           {
@@ -267,12 +268,15 @@ const Header = () => {
 
           {/* CTA Buttons */}
           <div className="hidden lg:flex items-center space-x-4">
+            <ThemeToggle />
             <Button variant="ghost" size="sm" className="text-muted-foreground hover:text-foreground mobile-touch-target font-body">
               Login
             </Button>
-            <Button size="sm" className="btn-gradient mobile-touch-target font-body font-medium">
-              Book a Demo
-            </Button>
+            <Link to="/book-demo">
+              <Button size="sm" className="btn-gradient mobile-touch-target font-body font-medium">
+                Book a Demo
+              </Button>
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}

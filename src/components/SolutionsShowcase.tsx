@@ -1,5 +1,6 @@
 import { Stethoscope, Smartphone, Code, Globe } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 const SolutionsShowcase = () => {
   const solutions = [
@@ -16,6 +17,7 @@ const SolutionsShowcase = () => {
       ],
       proof: "Cut launch time from 12 months to 6 weeks",
       cta: "Explore Platform",
+      link: "/solutions/healthcare-infrastructure",
       gradient: "from-primary to-primary/60"
     },
     {
@@ -31,6 +33,7 @@ const SolutionsShowcase = () => {
       ],
       proof: "NPS jumped 25 points with digital flows",
       cta: "Start Building",
+      link: "/solutions/digital-platform",
       gradient: "from-secondary to-secondary/60"
     },
     {
@@ -46,6 +49,7 @@ const SolutionsShowcase = () => {
       ],
       proof: "Prescription monetization grew ARPU by 15%",
       cta: "Explore API Hub",
+      link: "/solutions/api-solutions",
       gradient: "from-primary to-secondary"
     },
     {
@@ -61,6 +65,7 @@ const SolutionsShowcase = () => {
       ],
       proof: "20% conversion boost after geographic expansion",
       cta: "Expand Coverage",
+      link: "/solutions/coverage-expansion",
       gradient: "from-secondary to-primary"
     }
   ];
@@ -130,9 +135,11 @@ const SolutionsShowcase = () => {
                     </div>
 
                     {/* CTA */}
-                    <Button size="sm" className="w-full btn-gradient text-sm">
-                      {solution.cta}
-                    </Button>
+                    <Link to={solution.link}>
+                      <Button size="sm" className="w-full btn-gradient text-sm">
+                        {solution.cta}
+                      </Button>
+                    </Link>
                   </div>
                 </div>
               );
@@ -152,9 +159,11 @@ const SolutionsShowcase = () => {
           <p className="text-muted-foreground mb-6">
             Need a custom solution? Our team can help architect the perfect healthcare infrastructure for your specific needs.
           </p>
-          <Button size="lg" variant="outline" className="btn-outline-gradient">
-            Discuss Custom Solutions
-          </Button>
+          <Link to="/custom-solutions">
+            <Button size="lg" variant="outline" className="btn-outline-gradient">
+              Discuss Custom Solutions
+            </Button>
+          </Link>
         </div>
       </div>
     </section>

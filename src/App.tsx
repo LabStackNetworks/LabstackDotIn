@@ -9,6 +9,7 @@ import NotFound from "./pages/NotFound";
 import BookDemo from "./pages/BookDemo";
 import StartBuilding from "./pages/StartBuilding";
 import CustomSolutions from "./pages/CustomSolutions";
+import Contact from "./pages/Contact";
 import HealthcareInfrastructure from "./pages/solutions/HealthcareInfrastructure";
 import DigitalPlatform from "./pages/solutions/DigitalPlatform";
 import APISolutions from "./pages/solutions/APISolutions";
@@ -33,6 +34,7 @@ const App = () => (
             <Route path="/book-demo" element={<BookDemo />} />
             <Route path="/start-building" element={<StartBuilding />} />
             <Route path="/custom-solutions" element={<CustomSolutions />} />
+            <Route path="/contact" element={<Contact />} />
             <Route path="/solutions/healthcare-infrastructure" element={<HealthcareInfrastructure />} />
             <Route path="/solutions/digital-platform" element={<DigitalPlatform />} />
             <Route path="/solutions/api-solutions" element={<APISolutions />} />
