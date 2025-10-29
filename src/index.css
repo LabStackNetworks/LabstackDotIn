@@ -33,6 +33,19 @@ All colors MUST be HSL. Inspired by Stripe/Linear/Notion aesthetics with healthc
     --input: 214.3 31.8% 91.4%;
     --ring: 200 90% 50%;
     --radius: 0.75rem;
+    
+    /* Gradient System for Light Mode */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--secondary)));
+    --gradient-subtle: linear-gradient(135deg, hsl(var(--primary) / 0.1), hsl(var(--secondary) / 0.1));
+    --gradient-hero: linear-gradient(135deg, hsl(0 0% 98%), hsl(210 40% 98%));
+    --gradient-card: linear-gradient(135deg, hsl(var(--card)), hsl(0 0% 98%));
+    
+    /* Shadow System for Light Mode */
+    --glow-primary: 0 0 40px hsl(var(--primary) / 0.2);
+    --glow-secondary: 0 0 40px hsl(var(--secondary) / 0.2);
+    --shadow-elegant: 0 10px 30px -10px hsl(222.2 84% 4.9% / 0.2);
+    --shadow-card: 0 4px 20px -4px hsl(222.2 84% 4.9% / 0.15);
+    
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
     --sidebar-primary: 240 5.9% 10%;

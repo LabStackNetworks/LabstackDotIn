@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Play } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   const trustedLogos = [
@@ -54,14 +55,18 @@ const Hero = () => {
 
             {/* CTAs */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
-              <Button size="lg" className="btn-gradient mobile-btn-lg mobile-tap-highlight">
-                Book a Demo
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
-              <Button size="lg" variant="outline" className="btn-outline-gradient mobile-btn-lg mobile-tap-highlight">
-                <Play className="mr-2 h-5 w-5" />
-                Start Building
-              </Button>
+              <Link to="/book-demo">
+                <Button size="lg" className="btn-gradient mobile-btn-lg mobile-tap-highlight">
+                  Book a Demo
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Button>
+              </Link>
+              <Link to="/start-building">
+                <Button size="lg" variant="outline" className="btn-outline-gradient mobile-btn-lg mobile-tap-highlight">
+                  <Play className="mr-2 h-5 w-5" />
+                  Start Building
+                </Button>
+              </Link>
             </div>
 
             {/* Trusted By Section */}
