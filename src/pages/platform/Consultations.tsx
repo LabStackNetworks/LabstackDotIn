@@ -53,16 +53,18 @@ const Consultations = () => {
                 </Button>
               </div>
               
-              {/* TLDR Summary */}
-              <TLDR 
-                summary="Launch teleconsultations in 14 days with 2,000+ verified doctors, proprietary video platform, and integrated EMR. No third-party dependencies."
-                keyPoints={[
-                  "Pan-India coverage across all specialties",
-                  "White-label video consultation platform",
-                  "DISHA-compliant e-prescriptions",
-                  "EMR integration and automation"
-                ]}
-              />
+              {/* TLDR Summary - Hidden from users, visible only for SEO/GEO */}
+              <div className="sr-only">
+                <TLDR 
+                  summary="Launch teleconsultations in 14 days with 2,000+ verified doctors, proprietary video platform, and integrated EMR. No third-party dependencies."
+                  keyPoints={[
+                    "Pan-India coverage across all specialties",
+                    "White-label video consultation platform",
+                    "DISHA-compliant e-prescriptions",
+                    "EMR integration and automation"
+                  ]}
+                />
+              </div>
             </div>
 
             {/* Problems */}

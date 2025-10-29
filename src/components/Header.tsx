@@ -289,9 +289,11 @@ const Header = () => {
           {/* CTA Buttons */}
           <div className="hidden lg:flex items-center space-x-4">
             <ThemeToggle />
-            <Button variant="ghost" size="sm" className="text-muted-foreground hover:text-foreground mobile-touch-target font-body">
-              Login
-            </Button>
+            <Link to="/login">
+              <Button variant="ghost" size="sm" className="text-muted-foreground hover:text-foreground mobile-touch-target font-body">
+                Login
+              </Button>
+            </Link>
             <Link to="/book-demo">
               <Button size="sm" className="btn-gradient mobile-touch-target font-body font-medium">
                 Book a Demo
@@ -353,9 +355,11 @@ const Header = () => {
                 </div>
               ))}
               <div className="px-4 pt-4 space-y-3 border-t border-border/50">
-                <Button variant="ghost" size="sm" className="w-full justify-center mobile-btn mobile-tap-highlight font-body">
-                  Login
-                </Button>
+                <Link to="/login" onClick={() => setIsMenuOpen(false)}>
+                  <Button variant="ghost" size="sm" className="w-full justify-center mobile-btn mobile-tap-highlight font-body">
+                    Login
+                  </Button>
+                </Link>
                 <Link to="/book-demo" onClick={() => setIsMenuOpen(false)}>
                   <Button size="sm" className="w-full btn-gradient mobile-btn mobile-tap-highlight font-body font-medium">
                     Book a Demo

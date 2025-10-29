@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { MapPin, TrendingUp, CheckCircle, Activity } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 const ProofOfScale = () => {
   const [isMapExpanded, setIsMapExpanded] = useState(false);
@@ -248,9 +249,11 @@ const ProofOfScale = () => {
 
         {/* Bottom CTA */}
         <div className="text-center mt-16">
-          <Button size="lg" className="btn-gradient mobile-btn-lg mobile-tap-highlight">
-            Explore Our Network
-          </Button>
+          <Link to="/solutions/coverage-expansion">
+            <Button size="lg" className="btn-gradient mobile-btn-lg mobile-tap-highlight">
+              Explore Our Network
+            </Button>
+          </Link>
         </div>
       </div>
     </section>

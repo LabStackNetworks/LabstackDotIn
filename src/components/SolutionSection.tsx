@@ -212,7 +212,7 @@ const SolutionSection = () => {
                 </h3>
                 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  {/* Benefit Cards */}
+                  {/* Benefit Cards - Now 4 boxes */}
                   <div className="bg-gradient-to-br from-card to-muted/20 rounded-xl p-6 border border-border card-hover">
                     <div className="flex items-start space-x-4">
                       <div className="bg-success/20 rounded-full p-3 flex-shrink-0">
@@ -239,29 +239,17 @@ const SolutionSection = () => {
 
                   <div className="bg-gradient-to-br from-card to-muted/20 rounded-xl p-6 border border-border card-hover">
                     <div className="flex items-start space-x-4">
-                      <div className="bg-secondary/20 rounded-full p-3 flex-shrink-0">
-                        <CreditCard className="h-6 w-6 text-secondary" />
+                      <div className="bg-primary/20 rounded-full p-3 flex-shrink-0">
+                        <Brain className="h-6 w-6 text-primary" />
                       </div>
                       <div>
-                        <h4 className="font-bold mb-2">Clean Financials</h4>
-                        <p className="text-sm text-muted-foreground">Automated billing and reconciliation</p>
+                        <h4 className="font-bold mb-2">Raw Values</h4>
+                        <p className="text-sm text-muted-foreground">Harmonise values for each service, interoperable data across services</p>
                       </div>
                     </div>
                   </div>
 
                   <div className="bg-gradient-to-br from-card to-muted/20 rounded-xl p-6 border border-border card-hover">
-                    <div className="flex items-start space-x-4">
-                      <div className="bg-primary/20 rounded-full p-3 flex-shrink-0">
-                        <Network className="h-6 w-6 text-primary" />
-                      </div>
-                      <div>
-                        <h4 className="font-bold mb-2">Connected Health Records</h4>
-                        <p className="text-sm text-muted-foreground">Interoperable data across every touchpoint</p>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="bg-gradient-to-br from-card to-muted/20 rounded-xl p-6 border border-border card-hover md:col-span-2">
                     <div className="flex items-start space-x-4">
                       <div className="bg-success/20 rounded-full p-3 flex-shrink-0">
                         <Stethoscope className="h-6 w-6 text-success" />
@@ -312,7 +300,7 @@ const SolutionSection = () => {
                   </div>
                   
                   <div className="grid gap-3 grid-cols-2 md:grid-cols-4 mb-6">
-                    <div className="text-center p-3 rounded transition-all animate-step-0 border bg-card/50">
+                    <div className="text-center p-3 rounded transition-all duration-1000 delay-[0ms] opacity-0 animate-fade-in border bg-card/50">
                       <div className="flex flex-col items-center">
                         <div className="rounded-full p-2 mb-2 bg-primary/30 text-primary">
                           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -323,7 +311,7 @@ const SolutionSection = () => {
                         <span className="text-sm font-bold font-heading">Plan</span>
                       </div>
                     </div>
-                    <div className="text-center p-3 rounded transition-all animate-step-1 border bg-card/50">
+                    <div className="text-center p-3 rounded transition-all duration-1000 delay-[400ms] opacity-0 animate-fade-in border bg-card/50">
                       <div className="flex flex-col items-center">
                         <div className="rounded-full p-2 mb-2 bg-primary/30 text-primary">
                           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -334,7 +322,7 @@ const SolutionSection = () => {
                         <span className="text-sm font-bold font-heading">Integrate</span>
                       </div>
                     </div>
-                    <div className="text-center p-3 rounded transition-all animate-step-2 border bg-card/50">
+                    <div className="text-center p-3 rounded transition-all duration-1000 delay-[800ms] opacity-0 animate-fade-in border bg-card/50">
                       <div className="flex flex-col items-center">
                         <div className="rounded-full p-2 mb-2 bg-primary/30 text-primary">
                           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -346,7 +334,7 @@ const SolutionSection = () => {
                         <span className="text-sm font-bold font-heading">Go Live</span>
                       </div>
                     </div>
-                    <div className="text-center p-3 rounded transition-all animate-step-3 border bg-card/50">
+                    <div className="text-center p-3 rounded transition-all duration-1000 delay-[1200ms] opacity-0 animate-fade-in border bg-card/50">
                       <div className="flex flex-col items-center">
                         <div className="rounded-full p-2 mb-2 bg-secondary/30 text-secondary">
                           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">

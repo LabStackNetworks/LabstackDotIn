@@ -53,16 +53,18 @@ const Pharmacy = () => {
                 </Button>
               </div>
               
-              {/* TLDR Summary */}
-              <TLDR 
-                summary="Launch pharmacy delivery in 48 hours with 20,000+ pincode coverage, prescription verification, and SKU-level fraud controls. 60-minute delivery in metros."
-                keyPoints={[
-                  "E-pharmacies, local chains, and dark stores",
-                  "Automated prescription verification",
-                  "Real-time inventory and substitution",
-                  "Transparent pricing and reconciliation"
-                ]}
-              />
+              {/* TLDR Summary - Hidden from users, visible only for SEO/GEO */}
+              <div className="sr-only">
+                <TLDR 
+                  summary="Launch pharmacy delivery in 14 days with 20,000+ pincode coverage, prescription verification, and SKU-level fraud controls. 60-minute delivery in metros."
+                  keyPoints={[
+                    "E-pharmacies, local chains, and dark stores",
+                    "Automated prescription verification",
+                    "Real-time inventory and substitution",
+                    "Transparent pricing and reconciliation"
+                  ]}
+                />
+              </div>
             </div>
 
             {/* Problems */}
