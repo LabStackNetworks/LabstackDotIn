@@ -7,7 +7,7 @@ export const generateOrganizationSchema = () => ({
   "alternateName": "Labstack Healthcare",
   "url": "https://labstack.in",
   "logo": "https://labstack.in/lovable-uploads/97d6ae42-ba64-4793-a727-6945e3a2b8bc.png",
-  "description": "Healthcare Growth Operating System. Launch diagnostics, consultations, pharmacy, and home care in 48 hours.",
+  "description": "Healthcare Growth Operating System. Launch diagnostics, consultations, pharmacy, and home care in 14 days.",
   "address": {
     "@type": "PostalAddress",
     "addressLocality": "Bangalore",

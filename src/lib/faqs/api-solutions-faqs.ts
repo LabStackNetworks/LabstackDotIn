@@ -10,7 +10,7 @@ export const apiSolutionsFAQs = [
   },
   {
     question: "How long does API integration take?",
-    answer: "Developers can integrate in 2-4 hours using our SDKs and sandbox environment. Production deployment takes 24-48 hours including security review and testing."
+    answer: "Developers can integrate in 2-4 hours using our SDKs and sandbox environment. Production deployment takes 1-2 weeks including security review and testing."
   },
   {
     question: "Do you provide SDKs?",

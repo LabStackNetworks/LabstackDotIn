@@ -2,9 +2,15 @@ import { Building2, TrendingUp, DollarSign, Zap, ArrowRight } from "lucide-react
 import { Button } from "@/components/ui/button";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import FAQ from "@/components/FAQ";
+import SEOHead from "@/components/SEOHead";
 import { Link } from "react-router-dom";
+import { generateFAQSchema } from "@/lib/structured-data";
+import { providersFAQs } from "@/lib/faqs/providers-faqs";
 
 const Providers = () => {
+  const structuredData = generateFAQSchema(providersFAQs);
+
   const providerChallenges = [
     "40-50% utilization with fixed costs crushing margins",
     "Can't tap digital/B2B demand without tech platform",
@@ -23,6 +29,13 @@ const Providers = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEOHead 
+        title="Partner Network for Healthcare Providers"
+        description="Join India's healthcare network. Fill capacity from 40% to 60-70%. Earn predictably with 15-day payments. Serve B2B demand from insurers and corporates."
+        keywords="healthcare provider network, diagnostic lab partnership, pharmacy network, doctor network, healthcare B2B demand"
+        canonical="https://labstack.in/who-we-serve/providers"
+        structuredData={structuredData}
+      />
       <Header />
       <main className="pt-20">
         <section className="py-20 lg:py-32">
@@ -102,6 +115,13 @@ const Providers = () => {
                 </div>
               </div>
             </div>
+          </div>
+        </section>
+
+        {/* FAQ Section */}
+        <section className="py-20 bg-background">
+          <div className="container mx-auto px-6">
+            <FAQ items={providersFAQs} />
           </div>
         </section>
       </main>

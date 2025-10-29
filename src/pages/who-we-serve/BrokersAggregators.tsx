@@ -2,9 +2,15 @@ import { TrendingUp, Repeat, DollarSign, ArrowRight, CheckCircle, Target } from 
 import { Button } from "@/components/ui/button";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import FAQ from "@/components/FAQ";
+import SEOHead from "@/components/SEOHead";
 import { Link } from "react-router-dom";
+import { generateFAQSchema } from "@/lib/structured-data";
+import { brokersAggregatorsFAQs } from "@/lib/faqs/brokers-aggregators-faqs";
 
 const BrokersAggregators = () => {
+  const structuredData = generateFAQSchema(brokersAggregatorsFAQs);
+
   const challenges = [
     "Policies look the same — OPD benefits under-monetized",
     "Execution breaks outside metros — Tier-2/3 uncovered",
@@ -28,6 +34,13 @@ const BrokersAggregators = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEOHead 
+        title="Healthcare Solutions for Insurance Brokers & Aggregators"
+        description="Differentiate policies with OPD benefits. Grow ARPU by 15% through prescription monetization. Nationwide fulfillment across 9,000+ pincodes."
+        keywords="insurance broker solutions, OPD insurance, health insurance aggregator, policy differentiation, ARPU growth, insurance benefits"
+        canonical="https://labstack.in/who-we-serve/brokers-aggregators"
+        structuredData={structuredData}
+      />
       <Header />
       <main className="pt-20">
         <section className="py-20 lg:py-32">
@@ -184,6 +197,13 @@ const BrokersAggregators = () => {
                 </p>
               </div>
             </div>
+          </div>
+        </section>
+
+        {/* FAQ Section */}
+        <section className="py-20 bg-background">
+          <div className="container mx-auto px-6">
+            <FAQ items={brokersAggregatorsFAQs} />
           </div>
         </section>
       </main>

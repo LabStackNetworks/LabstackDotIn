@@ -2,17 +2,22 @@ import { Code, Zap, Shield, TrendingUp, ArrowRight, CheckCircle, FileCode } from
 import { Button } from "@/components/ui/button";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import FAQ from "@/components/FAQ";
 import SEOHead from "@/components/SEOHead";
 import CTAButtons from "@/components/CTAButtons";
 import { Link } from "react-router-dom";
-import { generateProductSchema } from "@/lib/structured-data";
+import { generateProductSchema, generateFAQSchema } from "@/lib/structured-data";
+import { apiSolutionsFAQs } from "@/lib/faqs/api-solutions-faqs";
 
 const APISolutions = () => {
-  const structuredData = generateProductSchema({
+  const productSchema = generateProductSchema({
     name: "Labstack Healthcare API Solutions",
     description: "Developer-first healthcare APIs for diagnostics, pharmacy, consultations. Modern RESTful APIs with webhooks, SDKs, and comprehensive documentation.",
     url: "https://labstack.in/solutions/api-solutions"
   });
+
+  const faqSchema = generateFAQSchema(apiSolutionsFAQs);
+  const structuredData = [productSchema, faqSchema];
 
   const apiFeatures = [
     {
@@ -178,6 +183,13 @@ const APISolutions = () => {
                 </p>
               </div>
             </div>
+          </div>
+        </section>
+
+        {/* FAQ Section */}
+        <section className="py-20 bg-background">
+          <div className="container mx-auto px-6">
+            <FAQ items={apiSolutionsFAQs} />
           </div>
         </section>
       </main>

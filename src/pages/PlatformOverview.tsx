@@ -57,7 +57,7 @@ const PlatformOverview = () => {
   ];
 
   const customerQuotes = [
-    "Labstack enabled us to launch new healthcare services in 48 hours instead of 12 months.",
+    "Labstack enabled us to launch new healthcare services in 14 days instead of 12 months.",
     "Their infra helped us improve conversions by 20% with better coverage.",
     "Prescription monetisation through Labstack improved ARPU by 15%."
   ];
@@ -66,7 +66,7 @@ const PlatformOverview = () => {
     <div className="min-h-screen bg-background">
       <SEOHead 
         title="Platform Overview - Healthcare Operating System"
-        description="One API for diagnostics, consultations, pharmacy, and home care. Launch in 48 hours across 9,000+ pincodes. Healthcare infrastructure built for scale."
+        description="One API for diagnostics, consultations, pharmacy, and home care. Launch in 14 days across 9,000+ pincodes. Healthcare infrastructure built for scale."
         keywords="healthcare platform, healthcare API, diagnostics platform, telemedicine API, pharmacy API, healthcare integrations"
         canonical="https://labstack.in/platform-overview"
         structuredData={structuredData}
@@ -87,7 +87,7 @@ const PlatformOverview = () => {
               </h1>
 
               <p className="text-lg lg:text-xl text-muted-foreground mb-8">
-                Launch diagnostics, consultations, pharmacy, and home care in 48 hours. One API. One integration. Built-in networks, compliance, and intelligence.
+                Launch diagnostics, consultations, pharmacy, and home care in 14 days. One API. One integration. Built-in networks, compliance, and intelligence.
               </p>
 
               <CTAButtons 
@@ -264,7 +264,7 @@ const PlatformOverview = () => {
             {/* Final CTA */}
             <div className="max-w-4xl mx-auto text-center">
               <h2 className="text-3xl font-heading font-bold mb-6">
-                Launch in 48 hours. Scale to 9,000+ pincodes.
+                Launch in 14 days. Scale to 9,000+ pincodes.
               </h2>
               <CTAButtons 
                 primaryText="Book a Demo"

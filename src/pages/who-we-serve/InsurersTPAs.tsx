@@ -2,9 +2,15 @@ import { Shield, DollarSign, Clock, CheckCircle, ArrowRight, TrendingUp, Users }
 import { Button } from "@/components/ui/button";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import FAQ from "@/components/FAQ";
+import SEOHead from "@/components/SEOHead";
 import { Link } from "react-router-dom";
+import { generateFAQSchema } from "@/lib/structured-data";
+import { insurersTPAsFAQs } from "@/lib/faqs/insurers-tpas-faqs";
 
 const InsurersTPAs = () => {
+  const structuredData = generateFAQSchema(insurersTPAsFAQs);
+
   const problems = [
     "OPD claims face leakage and misuse",
     "Fragmented networks = poor member NPS and complaints",
@@ -28,6 +34,13 @@ const InsurersTPAs = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEOHead 
+        title="Healthcare Solutions for Insurers & TPAs"
+        description="SLA-backed OPD services with fraud controls, automated reconciliation, and 99%+ fulfillment rates. Reduce claims leakage by 12% and improve member NPS."
+        keywords="health insurance OPD, TPA healthcare services, claims management, healthcare fraud prevention, member experience, cashless OPD"
+        canonical="https://labstack.in/who-we-serve/insurers-tpas"
+        structuredData={structuredData}
+      />
       <Header />
       <main className="pt-20">
         <section className="py-20 lg:py-32">
@@ -178,6 +191,13 @@ const InsurersTPAs = () => {
                 </p>
               </div>
             </div>
+          </div>
+        </section>
+
+        {/* FAQ Section */}
+        <section className="py-20 bg-background">
+          <div className="container mx-auto px-6">
+            <FAQ items={insurersTPAsFAQs} />
           </div>
         </section>
       </main>

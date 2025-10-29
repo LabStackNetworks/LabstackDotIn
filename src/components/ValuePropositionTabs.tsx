@@ -12,7 +12,7 @@ const ValuePropositionTabs = () => {
       title: "Deploy in Days with Ready APIs",
       description: "Stop spending 12-18 months building healthcare infrastructure. Our pre-built APIs and networks let you launch nationwide healthcare services in days, not months.",
       features: [
-        "48-hour go-live capability",
+        "14-day go-live capability",
         "Pre-integrated provider networks", 
         "Production-ready APIs",
         "Automated compliance frameworks"

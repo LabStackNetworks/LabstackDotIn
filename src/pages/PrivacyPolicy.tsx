@@ -79,15 +79,19 @@ const PrivacyPolicy = () => {
                 <li>Compliance with healthcare data security standards</li>
               </ul>
 
-              <h2 className="text-2xl font-heading font-bold mt-8 mb-4">Your Rights and Choices</h2>
-              <p className="text-muted-foreground mb-4">You have certain rights regarding your personal information:</p>
+              <h2 className="text-2xl font-heading font-bold mt-8 mb-4">Legal Framework and Compliance</h2>
+              <p className="text-muted-foreground mb-4">
+                Labstack complies with Indian data protection regulations including:
+              </p>
               <ul className="list-disc pl-6 space-y-2 text-muted-foreground mb-4">
-                <li><strong>Access:</strong> You can request access to your personal information</li>
-                <li><strong>Correction:</strong> You can request correction of inaccurate information</li>
-                <li><strong>Deletion:</strong> You can request deletion of your information (subject to legal requirements)</li>
-                <li><strong>Portability:</strong> You can request a copy of your data in a portable format</li>
-                <li><strong>Opt-out:</strong> You can opt-out of certain communications and data processing</li>
+                <li><strong>Information Technology Act, 2000</strong> and IT (Reasonable Security Practices) Rules, 2011</li>
+                <li><strong>DISHA framework</strong> for digital health data security and privacy</li>
+                <li><strong>Telemedicine Practice Guidelines, 2020</strong> for patient data handling</li>
+                <li>Healthcare provider regulations for medical records and patient confidentiality</li>
               </ul>
+
+              <h2 className="text-2xl font-heading font-bold mt-8 mb-4">Your Rights and Choices</h2>
+              <p className="text-muted-foreground mb-4">Under Indian law, you have the right to access, correct, delete your data, withdraw consent, opt-out of marketing, and file complaints regarding data misuse.</p>
 
               <h2 className="text-2xl font-heading font-bold mt-8 mb-4">Contact Us</h2>
               <p className="text-muted-foreground mb-4">

@@ -10,7 +10,7 @@ export const platformOverviewFAQs = [
   },
   {
     question: "How quickly can I launch healthcare services?",
-    answer: "You can launch in 48 hours. Our platform provides instant access to verified provider networks, automated operations, and complete infrastructure."
+    answer: "You can launch in 14 days. Our platform provides instant access to verified provider networks, automated operations, and complete infrastructure."
   },
   {
     question: "Do I need to sign contracts with individual providers?",

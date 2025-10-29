@@ -2,17 +2,22 @@ import { MapPin, Clock, Microscope, Pill, Home, ArrowRight, CheckCircle, Users, 
 import { Button } from "@/components/ui/button";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import FAQ from "@/components/FAQ";
 import SEOHead from "@/components/SEOHead";
 import CTAButtons from "@/components/CTAButtons";
 import { Link } from "react-router-dom";
-import { generateProductSchema } from "@/lib/structured-data";
+import { generateProductSchema, generateFAQSchema } from "@/lib/structured-data";
+import { healthcareInfrastructureFAQs } from "@/lib/faqs/healthcare-infrastructure-faqs";
 
 const HealthcareInfrastructure = () => {
-  const structuredData = generateProductSchema({
+  const productSchema = generateProductSchema({
     name: "Labstack Healthcare Infrastructure Platform",
     description: "Complete healthcare infrastructure platform. Launch diagnostics, consultations, pharmacy, and home care services across 9,000+ pincodes in India.",
     url: "https://labstack.in/solutions/healthcare-infrastructure"
   });
+
+  const faqSchema = generateFAQSchema(healthcareInfrastructureFAQs);
+  const structuredData = [productSchema, faqSchema];
 
   const services = [
     {
@@ -226,6 +231,13 @@ const HealthcareInfrastructure = () => {
                 </p>
               </div>
             </div>
+          </div>
+        </section>
+
+        {/* FAQ Section */}
+        <section className="py-20 bg-background">
+          <div className="container mx-auto px-6">
+            <FAQ items={healthcareInfrastructureFAQs} />
           </div>
         </section>
       </main>

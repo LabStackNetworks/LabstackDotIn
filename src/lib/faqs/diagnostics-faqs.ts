@@ -11,7 +11,7 @@ export const diagnosticsFAQs = [
   },
   {
     question: "How long does it take to integrate Labstack diagnostics?",
-    answer: "Integration takes 48 hours on average. Our API-first approach and comprehensive documentation enable rapid deployment with minimal engineering effort."
+    answer: "Integration takes 14 days on average. Our API-first approach and comprehensive documentation enable rapid deployment with minimal engineering effort."
   },
   {
     question: "What types of tests are supported?",
@@ -43,7 +43,7 @@ export const diagnosticsFAQs = [
   },
   {
     question: "What is your TAT (Turnaround Time) guarantee?",
-    answer: "Standard pathology tests: 24-48 hours. Radiology: Same day to 48 hours. Genetic tests: 7-14 days. We provide SLA-backed guarantees with real-time tracking and automated escalations for delays."
+    answer: "Standard pathology tests: 24-72 hours. Radiology: Same day to 72 hours. Genetic tests: 7-14 days. We provide SLA-backed guarantees with real-time tracking and automated escalations for delays."
   },
   
   // For Digital Health Platforms
@@ -67,7 +67,7 @@ export const diagnosticsFAQs = [
   },
   {
     question: "What if I need specialized or rare tests?",
-    answer: "Our network includes reference labs for specialized testing. If a test is not available in our network, we'll onboard the required lab within 48 hours to fulfill the order."
+    answer: "Our network includes reference labs for specialized testing. If a test is not available in our network, we'll onboard the required lab within 2 weeks to fulfill the order."
   },
   
   // Pricing & Commercial

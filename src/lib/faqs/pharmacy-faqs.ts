@@ -11,7 +11,7 @@ export const pharmacyFAQs = [
   },
   {
     question: "How quickly can I launch pharmacy services?",
-    answer: "You can launch pharmacy in 48 hours with our ready API integration, verified pharmacy network, and automated fulfillment system."
+    answer: "You can launch pharmacy in 14 days with our ready API integration, verified pharmacy network, and automated fulfillment system."
   },
   {
     question: "What types of medications can be delivered?",
@@ -77,7 +77,7 @@ export const pharmacyFAQs = [
   // Delivery & Logistics
   {
     question: "What is the average delivery time?",
-    answer: "Metro cities: 60-90 minutes. Tier-2 cities: 3-6 hours. Tier-3 cities: Same day. Remote areas: 24-48 hours. Real-time tracking provided for all orders."
+    answer: "Metro cities: 60-90 minutes. Tier-2 cities: 3-6 hours. Tier-3 cities: Same day. Remote areas: 1-2 days. Real-time tracking provided for all orders."
   },
   {
     question: "How do you maintain cold chain for sensitive medicines?",

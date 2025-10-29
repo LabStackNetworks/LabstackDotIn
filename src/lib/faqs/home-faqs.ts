@@ -6,11 +6,11 @@
 export const homeFAQs = [
   {
     question: "What is Labstack?",
-    answer: "Labstack is a healthcare growth operating system that enables companies to launch diagnostics, consultations, pharmacy, and home care services across 9,000+ pincodes in India in just 48 hours through a single API."
+    answer: "Labstack is a healthcare growth operating system that enables companies to launch diagnostics, consultations, pharmacy, and home care services across 9,000+ pincodes in India in just 14 days through a single API."
   },
   {
     question: "How quickly can I launch healthcare services with Labstack?",
-    answer: "You can launch healthcare services in 48 hours. Our platform provides instant access to verified provider networks, automated operations, and complete infrastructure."
+    answer: "You can launch healthcare services in 14 days. Our platform provides instant access to verified provider networks, automated operations, and complete infrastructure."
   },
   {
     question: "Which services does Labstack support?",
@@ -54,7 +54,7 @@ export const homeFAQs = [
   },
   {
     question: "How quickly are diagnostic reports delivered?",
-    answer: "Reports are delivered digitally with raw values (not PDFs). Turnaround time: routine blood tests in 6-12 hours, advanced tests in 24-48 hours. 100% reports verified before delivery. Real-time tracking available."
+    answer: "Reports are delivered digitally with raw values (not PDFs). Turnaround time: routine blood tests in 6-12 hours, advanced tests in 24-72 hours. 100% reports verified before delivery. Real-time tracking available."
   },
   {
     question: "Can patients book in-clinic doctor consultations through Labstack?",

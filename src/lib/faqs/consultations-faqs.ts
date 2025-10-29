@@ -11,7 +11,7 @@ export const consultationsFAQs = [
   },
   {
     question: "How quickly can I launch consultation services?",
-    answer: "You can launch in 48 hours. We provide ready APIs, verified doctor network, teleconsultation platform, and complete integration support."
+    answer: "You can launch in 14 days. We provide ready APIs, verified doctor network, teleconsultation platform, and complete integration support."
   },
   {
     question: "Which specialties are covered?",

@@ -2,17 +2,22 @@ import { Smartphone, Activity, FileText, ArrowRight, TrendingUp, Users, CheckCir
 import { Button } from "@/components/ui/button";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import FAQ from "@/components/FAQ";
 import SEOHead from "@/components/SEOHead";
 import CTAButtons from "@/components/CTAButtons";
 import { Link } from "react-router-dom";
-import { generateProductSchema } from "@/lib/structured-data";
+import { generateProductSchema, generateFAQSchema } from "@/lib/structured-data";
+import { digitalPlatformFAQs } from "@/lib/faqs/digital-platform-faqs";
 
 const DigitalPlatform = () => {
-  const structuredData = generateProductSchema({
+  const productSchema = generateProductSchema({
     name: "Labstack Digital Platform",
     description: "White-label patient experience platform with structured health data, digital results, and cross-service continuity. No more PDFs.",
     url: "https://labstack.in/solutions/digital-platform"
   });
+
+  const faqSchema = generateFAQSchema(digitalPlatformFAQs);
+  const structuredData = [productSchema, faqSchema];
 
   const capabilities = [
     {
@@ -174,6 +179,13 @@ const DigitalPlatform = () => {
                 </p>
               </div>
             </div>
+          </div>
+        </section>
+
+        {/* FAQ Section */}
+        <section className="py-20 bg-background">
+          <div className="container mx-auto px-6">
+            <FAQ items={digitalPlatformFAQs} />
           </div>
         </section>
       </main>

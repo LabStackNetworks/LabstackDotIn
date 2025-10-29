@@ -6,7 +6,7 @@
 export const digitalHealthPlatformsFAQs = [
   {
     question: "How long does it take to integrate Labstack into our platform?",
-    answer: "Developers can integrate in 2-4 hours using our SDKs and sandbox. Production deployment takes 24-48 hours including testing. Full white-label customization adds 1-2 weeks. Much faster than building in-house."
+    answer: "Developers can integrate in 2-4 hours using our SDKs and sandbox. Production deployment takes 1-2 weeks including testing. Full white-label customization adds 2-3 weeks. Much faster than building in-house."
   },
   {
     question: "Do you provide embeddable widgets or just APIs?",

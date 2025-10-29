@@ -2,9 +2,15 @@ import { Activity, Users, TrendingUp, ArrowRight, CheckCircle, Heart } from "luc
 import { Button } from "@/components/ui/button";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import FAQ from "@/components/FAQ";
+import SEOHead from "@/components/SEOHead";
 import { Link } from "react-router-dom";
+import { generateFAQSchema } from "@/lib/structured-data";
+import { diseaseManagementFAQs } from "@/lib/faqs/disease-management-faqs";
 
 const DiseaseManagement = () => {
+  const structuredData = generateFAQSchema(diseaseManagementFAQs);
+
   const careGaps = [
     "Patients drop off between test → consult → meds → follow-up",
     "Reports stuck in PDFs, useless for long-term clinical insight",
@@ -28,6 +34,13 @@ const DiseaseManagement = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEOHead 
+        title="Disease Management Program Solutions"
+        description="Protocol-driven care pathways with structured health data, automated follow-ups, and 90%+ test completion rates. Close care loops for chronic disease management."
+        keywords="disease management programs, chronic care management, diabetes care programs, care pathways, health monitoring, patient adherence"
+        canonical="https://labstack.in/who-we-serve/disease-management"
+        structuredData={structuredData}
+      />
       <Header />
       <main className="pt-20">
         <section className="py-20 lg:py-32">
@@ -130,6 +143,13 @@ const DiseaseManagement = () => {
                 </p>
               </div>
             </div>
+          </div>
+        </section>
+
+        {/* FAQ Section */}
+        <section className="py-20 bg-background">
+          <div className="container mx-auto px-6">
+            <FAQ items={diseaseManagementFAQs} />
           </div>
         </section>
       </main>

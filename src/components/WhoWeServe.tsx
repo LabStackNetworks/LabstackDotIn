@@ -21,7 +21,7 @@ const WhoWeServe = () => {
       ],
       benefits: [
         "Fraud drops to <5%",
-        "PPMC in 48 hours",
+        "PPMC in 14 days",
         "Processing <₹100 per claim",
         "Preventive care built-in"
       ],

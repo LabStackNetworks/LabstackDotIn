@@ -50,6 +50,6 @@ export const insurersTPAsFAQs = [
   },
   {
     question: "How quickly can we launch OPD benefits for our members?",
-    answer: "48 hours for basic integration. 2 weeks for custom eligibility rules, branding, and member communication templates. 4 weeks for complex enterprise integrations with legacy systems."
+    answer: "14 days for basic integration. 2-3 weeks for custom eligibility rules, branding, and member communication templates. 4-6 weeks for complex enterprise integrations with legacy systems."
   }
 ];

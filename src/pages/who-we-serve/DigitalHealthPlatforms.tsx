@@ -2,9 +2,15 @@ import { Smartphone, TrendingUp, Repeat, ArrowRight, CheckCircle, Zap } from "lu
 import { Button } from "@/components/ui/button";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import FAQ from "@/components/FAQ";
+import SEOHead from "@/components/SEOHead";
 import { Link } from "react-router-dom";
+import { generateFAQSchema } from "@/lib/structured-data";
+import { digitalHealthPlatformsFAQs } from "@/lib/faqs/digital-health-platforms-faqs";
 
 const DigitalHealthPlatforms = () => {
+  const structuredData = generateFAQSchema(digitalHealthPlatformsFAQs);
+
   const currentIssues = [
     "12-18 months lost signing contracts with labs, pharmacies, doctors",
     "No standard SLAs or integrations; ops break city by city",
@@ -21,6 +27,13 @@ const DigitalHealthPlatforms = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEOHead 
+        title="Healthcare Platform Solutions for Digital Health Startups"
+        description="Scale nationwide in 14 days with one API. 9,000+ pincodes, 30K+ orders/month capacity, 99.5% uptime. Launch diagnostics, pharmacy, and consultations instantly."
+        keywords="digital health platform, healthtech infrastructure, healthcare API integration, telemedicine platform, health startup solutions"
+        canonical="https://labstack.in/who-we-serve/digital-health-platforms"
+        structuredData={structuredData}
+      />
       <Header />
       <main className="pt-20">
         <section className="py-20 lg:py-32">
@@ -36,7 +49,7 @@ const DigitalHealthPlatforms = () => {
               </h1>
 
               <p className="text-lg lg:text-xl text-muted-foreground mb-8">
-                One API. Nationwide coverage. Launch in 48 hours instead of 12-18 months.
+                One API. Nationwide coverage. Launch in 14 days instead of 12-18 months.
               </p>
 
               <Link to="/start-building">
@@ -78,7 +91,7 @@ const DigitalHealthPlatforms = () => {
               <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
                 <div>
                   <Zap className="w-8 h-8 text-warning mx-auto mb-3" />
-                  <div className="text-3xl font-heading font-bold text-gradient mb-2">48hrs</div>
+                  <div className="text-3xl font-heading font-bold text-gradient mb-2">14 Days</div>
                   <p className="text-sm text-muted-foreground">Go-Live Time</p>
                 </div>
                 <div>
@@ -104,6 +117,13 @@ const DigitalHealthPlatforms = () => {
                 </p>
               </div>
             </div>
+          </div>
+        </section>
+
+        {/* FAQ Section */}
+        <section className="py-20 bg-background">
+          <div className="container mx-auto px-6">
+            <FAQ items={digitalHealthPlatformsFAQs} />
           </div>
         </section>
       </main>
