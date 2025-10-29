@@ -69,11 +69,11 @@ const ValuePropositionTabs = () => {
       id: "business-model",
       icon: TrendingUp,
       label: "Business Model",
-      title: "Pure B2B, No Exclusivity",
-      description: "We're infrastructure, not competition. Build your brand while we handle the backend. No lock-ins, no competing interests.",
+      title: "Transaction-Based Pricing",
+      description: "Pay only for what you use. No upfront costs, no hidden fees. Scale economics that grow with your business.",
       features: [
-        "Non-competitive infrastructure",
-        "Transparent pricing model",
+        "Usage-based pricing model",
+        "Transparent per-transaction costs",
         "No vendor lock-in",
         "White-label capabilities"
       ],

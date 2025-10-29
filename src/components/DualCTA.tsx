@@ -1,5 +1,6 @@
 import { ArrowRight, Users } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 const DualCTA = () => {
   return (
@@ -43,10 +44,12 @@ const DualCTA = () => {
                 </div>
               </div>
 
-              <Button size="lg" className="w-full btn-gradient text-lg py-3 h-auto shadow-elegant">
-                Book a Demo
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
+              <Link to="/book-demo" className="w-full">
+                <Button size="lg" className="w-full btn-gradient text-lg py-3 h-auto shadow-elegant">
+                  Book a Demo
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Button>
+              </Link>
 
               <div className="mt-6 text-center">
                 <p className="text-xs text-muted-foreground/60">
@@ -93,10 +96,12 @@ const DualCTA = () => {
                 </div>
               </div>
 
-              <Button size="lg" variant="outline" className="w-full btn-outline-gradient text-lg py-3 h-auto">
-                <Users className="mr-2 h-5 w-5" />
-                Join the Network
-              </Button>
+              <Link to="/who-we-serve/providers" className="w-full">
+                <Button size="lg" variant="outline" className="w-full btn-outline-gradient text-lg py-3 h-auto">
+                  <Users className="mr-2 h-5 w-5" />
+                  Join the Network
+                </Button>
+              </Link>
 
               <div className="mt-6 text-center">
                 <p className="text-xs text-muted-foreground/60">
