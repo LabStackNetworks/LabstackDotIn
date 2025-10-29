@@ -303,13 +303,17 @@ const Header = () => {
             </Link>
           </div>
 
-          {/* Mobile Menu Button */}
-          <button
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="lg:hidden p-3 text-muted-foreground hover:text-foreground transition-smooth mobile-touch-target mobile-tap-highlight"
-          >
-            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
+          {/* Mobile Actions: Theme + Menu */}
+          <div className="lg:hidden flex items-center gap-1">
+            <ThemeToggle />
+            <button
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              className="p-3 text-muted-foreground hover:text-foreground transition-smooth mobile-touch-target mobile-tap-highlight"
+              aria-label="Toggle menu"
+            >
+              {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
+          </div>
         </div>
 
         {/* Mobile Menu */}

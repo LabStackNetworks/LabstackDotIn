@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 
 const InsurersTPAs = () => {
   const problems = [
-    "OPD claims riddled with leakage and misuse (12%+ fraud)",
+    "OPD claims face leakage and misuse",
     "Fragmented networks = poor member NPS and complaints",
     "Weak controls on SKUs, no standard escalation playbooks",
     "Manual reconciliation drains ops resources"
@@ -14,7 +14,7 @@ const InsurersTPAs = () => {
 
   const solutions = [
     "API-first rails: eligibility → booking → tracking → reconciliation",
-    "SKU-level controls + audit trails reduce fraud significantly",
+    "SKU-level controls + audit trails reduce misuse and leakage",
     "SLA frameworks with real-time escalations and CSAT monitoring",
     "Automated reconciliation and unified billing across services"
   ];
@@ -40,11 +40,11 @@ const InsurersTPAs = () => {
               </div>
 
               <h1 className="text-4xl lg:text-6xl font-heading font-bold mb-6">
-                Fraud-Controlled OPD, <span className="text-gradient">SLA-Backed Fulfillment</span>
+                SLA-Backed OPD with <span className="text-gradient">Built-in Controls</span>
               </h1>
 
               <p className="text-lg lg:text-xl text-muted-foreground mb-8">
-                Cut claim leakage and deliver diagnostics, consults, and pharmacy at scale — with audit trails and fraud detection built in.
+                Deliver diagnostics, consults, and pharmacy at scale — with audit trails and operational controls built in.
               </p>
 
               <Link to="/book-demo">
@@ -91,7 +91,7 @@ const InsurersTPAs = () => {
             {/* Member Journey Flow */}
             <div className="max-w-5xl mx-auto mb-20">
               <h2 className="text-3xl font-heading font-bold text-center mb-12">
-                Member Journey with Fraud Controls
+                Member Journey with Operational Controls
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
                 {memberJourney.map((item, index) => (
@@ -119,9 +119,9 @@ const InsurersTPAs = () => {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div className="bg-card/50 p-6 rounded-xl">
                   <Shield className="w-8 h-8 text-primary mb-4" />
-                  <h3 className="font-heading font-bold mb-2">SKU-Level Fraud Controls</h3>
+                  <h3 className="font-heading font-bold mb-2">SKU-Level Controls & Audit Trails</h3>
                   <p className="text-sm text-muted-foreground">
-                    Control inclusions/exclusions at SKU level. Automated audit trails capture every transaction for compliance and fraud detection.
+                    Control inclusions/exclusions at SKU level. Automated audit trails capture every transaction for compliance and reporting.
                   </p>
                 </div>
                 <div className="bg-card/50 p-6 rounded-xl">
@@ -155,8 +155,8 @@ const InsurersTPAs = () => {
                 <div>
                   <DollarSign className="w-8 h-8 text-success mx-auto mb-3" />
                   <div className="text-3xl font-heading font-bold text-gradient mb-2">12%</div>
-                  <p className="text-sm text-muted-foreground">Leakage Reduction</p>
-                  <p className="text-xs text-muted-foreground mt-2">Through fraud controls and audit trails</p>
+                  <p className="text-sm text-muted-foreground">Operational Leakage Reduction</p>
+                  <p className="text-xs text-muted-foreground mt-2">Through SKU-level rules and audit trails</p>
                 </div>
                 <div>
                   <Clock className="w-8 h-8 text-primary mx-auto mb-3" />

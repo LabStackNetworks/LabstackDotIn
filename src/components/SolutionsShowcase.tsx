@@ -135,10 +135,10 @@ const SolutionsShowcase = () => {
                       </div>
                     </div>
 
-                    {/* CTA */}
-                    <Button size="sm" className="w-full btn-gradient text-sm pointer-events-none">
+                    {/* CTA (visual only, entire card navigates) */}
+                    <div role="button" aria-hidden className="w-full btn-gradient text-sm text-center rounded-md py-2 select-none">
                       {solution.cta}
-                    </Button>
+                    </div>
                   </div>
                 </Link>
               );
