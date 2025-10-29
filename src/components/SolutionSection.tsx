@@ -300,7 +300,7 @@ const SolutionSection = () => {
                   </div>
                   
                   <div className="grid gap-3 grid-cols-2 md:grid-cols-4 mb-6">
-                    <div className="text-center p-3 rounded transition-all duration-1000 delay-[0ms] opacity-0 animate-fade-in border bg-card/50">
+                    <div className="text-center p-3 rounded border bg-card/50 animate-[highlight_2s_ease-in-out_0s_1]">
                       <div className="flex flex-col items-center">
                         <div className="rounded-full p-2 mb-2 bg-primary/30 text-primary">
                           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -311,7 +311,7 @@ const SolutionSection = () => {
                         <span className="text-sm font-bold font-heading">Plan</span>
                       </div>
                     </div>
-                    <div className="text-center p-3 rounded transition-all duration-1000 delay-[400ms] opacity-0 animate-fade-in border bg-card/50">
+                    <div className="text-center p-3 rounded border bg-card/50 animate-[highlight_2s_ease-in-out_0.5s_1]">
                       <div className="flex flex-col items-center">
                         <div className="rounded-full p-2 mb-2 bg-primary/30 text-primary">
                           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -322,7 +322,7 @@ const SolutionSection = () => {
                         <span className="text-sm font-bold font-heading">Integrate</span>
                       </div>
                     </div>
-                    <div className="text-center p-3 rounded transition-all duration-1000 delay-[800ms] opacity-0 animate-fade-in border bg-card/50">
+                    <div className="text-center p-3 rounded border bg-card/50 animate-[highlight_2s_ease-in-out_1s_1]">
                       <div className="flex flex-col items-center">
                         <div className="rounded-full p-2 mb-2 bg-primary/30 text-primary">
                           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -334,7 +334,7 @@ const SolutionSection = () => {
                         <span className="text-sm font-bold font-heading">Go Live</span>
                       </div>
                     </div>
-                    <div className="text-center p-3 rounded transition-all duration-1000 delay-[1200ms] opacity-0 animate-fade-in border bg-card/50">
+                    <div className="text-center p-3 rounded border bg-card/50 animate-[highlight_2s_ease-in-out_1.5s_1]">
                       <div className="flex flex-col items-center">
                         <div className="rounded-full p-2 mb-2 bg-secondary/30 text-secondary">
                           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
