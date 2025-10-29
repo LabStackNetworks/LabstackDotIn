@@ -30,11 +30,11 @@ const Footer = () => {
       { name: "Join Network", href: "/join-network/providers" }
     ],
     resources: [
-      { name: "Blog", href: "#blog" },
-      { name: "Case Studies", href: "#cases" },
-      { name: "Whitepapers", href: "#whitepapers" },
-      { name: "API Documentation", href: "#docs" },
-      { name: "Support", href: "#support" }
+      { name: "Blog", href: "/resources/blog" },
+      { name: "Case Studies", href: "/resources/case-studies" },
+      { name: "Whitepapers", href: "/resources/whitepapers" },
+      { name: "API Documentation", href: "/resources/api-documentation" },
+      { name: "Support", href: "/contact" }
     ],
     company: [
       { name: "About Us", href: "/about" },
@@ -192,12 +192,12 @@ const Footer = () => {
                   <ul className="space-y-3">
                     {navigation.resources.map((item) => (
                       <li key={item.name}>
-                        <a
-                          href={item.href}
+                        <Link
+                          to={item.href}
                           className="text-sm text-muted-foreground hover:text-foreground transition-smooth"
                         >
                           {item.name}
-                        </a>
+                        </Link>
                       </li>
                     ))}
                   </ul>

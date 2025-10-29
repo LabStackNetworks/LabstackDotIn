@@ -131,10 +131,10 @@ const Header = () => {
           {
             title: "Content & Insights",
             items: [
-              { label: "Blog / Knowledge Hub", href: "#blog", description: "Healthcare insights & trends" },
-              { label: "Case Studies", href: "#case-studies", description: "Success stories" },
-              { label: "Whitepapers & Reports", href: "#whitepapers", description: "Industry research" },
-              { label: "API Documentation", href: "#api-docs", description: "Technical documentation" }
+              { label: "Blog / Knowledge Hub", href: "/resources/blog", description: "Healthcare insights & trends" },
+              { label: "Case Studies", href: "/resources/case-studies", description: "Success stories" },
+              { label: "Whitepapers & Reports", href: "/resources/whitepapers", description: "Industry research" },
+              { label: "API Documentation", href: "/resources/api-documentation", description: "Technical documentation" }
             ]
           }
         ]
