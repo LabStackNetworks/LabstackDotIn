@@ -124,46 +124,64 @@ const SolutionSection = () => {
                 Healthcare Infrastructure <span className="text-gradient">Made Simple</span>
               </h2>
               
-              <p className="text-lg lg:text-xl text-muted-foreground max-w-3xl mx-auto">
-                Three core layers working together to power your healthcare delivery platform
+              <p className="text-lg lg:text-xl text-muted-foreground max-w-3xl mx-auto mb-4">
+                Labstack gives you a full healthcare delivery stack — through APIs, a self-serve console, and ready widgets.
+              </p>
+              <p className="text-base lg:text-lg text-muted-foreground max-w-2xl mx-auto">
+                Plug it into your product, launch care anywhere.
               </p>
             </div>
 
             {/* Main Feature Container */}
             <div className="bg-card rounded-xl shadow-lg border border-border p-8 mb-10 transition-all duration-300 hover:shadow-xl">
-              {/* Three Core Cards */}
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
-                {/* Provider Network Card */}
-                <div className="bg-gradient-to-br from-card to-muted/20 rounded-xl p-6 shadow-md hover:shadow-lg transition-all duration-300 border border-border h-full cursor-pointer group">
-                  <div className="flex flex-col items-center text-center">
-                    <div className="bg-muted rounded-full p-4 mb-4 group-hover:scale-110 transition-transform duration-300">
-                      <Network className="h-10 w-10 text-primary" />
+              {/* What Developers Get Section */}
+              <div className="mb-10">
+                <h3 className="text-2xl font-heading font-bold text-center mb-8">
+                  What developers get to <span className="text-gradient">build with</span>
+                </h3>
+                
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                  {/* APIs Card */}
+                  <div className="bg-gradient-to-br from-card to-muted/20 rounded-xl p-6 shadow-md hover:shadow-lg transition-all duration-300 border border-border h-full cursor-pointer group">
+                    <div className="flex flex-col items-center text-center">
+                      <div className="bg-muted rounded-full p-4 mb-4 group-hover:scale-110 transition-transform duration-300">
+                        <Code className="h-10 w-10 text-primary" />
+                      </div>
+                      <h4 className="text-lg font-bold mb-2 group-hover:text-gradient transition-colors duration-300">APIs</h4>
+                      <p className="text-sm text-muted-foreground">Program bookings, prescriptions, home visits, and payments</p>
                     </div>
-                    <h3 className="text-lg font-bold mb-2 group-hover:text-gradient transition-colors duration-300">Provider Network</h3>
-                    <p className="text-sm text-muted-foreground">1000+ verified labs, doctors, pharmacies, and home care services across all tiers</p>
+                  </div>
+
+                  {/* Widgets Card */}
+                  <div className="bg-gradient-to-br from-card to-muted/20 rounded-xl p-6 shadow-md hover:shadow-lg transition-all duration-300 border border-border h-full cursor-pointer group">
+                    <div className="flex flex-col items-center text-center">
+                      <div className="bg-muted rounded-full p-4 mb-4 group-hover:scale-110 transition-transform duration-300">
+                        <Smartphone className="h-10 w-10 text-secondary" />
+                      </div>
+                      <h4 className="text-lg font-bold mb-2 group-hover:text-gradient transition-colors duration-300">Widgets</h4>
+                      <p className="text-sm text-muted-foreground">Care journeys that drop right into your UI</p>
+                    </div>
+                  </div>
+
+                  {/* Console Card */}
+                  <div className="bg-gradient-to-br from-card to-muted/20 rounded-xl p-6 shadow-md hover:shadow-lg transition-all duration-300 border border-border h-full cursor-pointer group">
+                    <div className="flex flex-col items-center text-center">
+                      <div className="bg-muted rounded-full p-4 mb-4 group-hover:scale-110 transition-transform duration-300">
+                        <Brain className="h-10 w-10 text-primary" />
+                      </div>
+                      <h4 className="text-lg font-bold mb-2 group-hover:text-gradient transition-colors duration-300">Console</h4>
+                      <p className="text-sm text-muted-foreground">Run operations with zero new headcount</p>
+                    </div>
                   </div>
                 </div>
 
-                {/* Operations & Automation Card */}
-                <div className="bg-gradient-to-br from-card to-muted/20 rounded-xl p-6 shadow-md hover:shadow-lg transition-all duration-300 border border-border h-full cursor-pointer group">
-                  <div className="flex flex-col items-center text-center">
-                    <div className="bg-muted rounded-full p-4 mb-4 group-hover:scale-110 transition-transform duration-300">
-                      <Zap className="h-10 w-10 text-secondary" />
-                    </div>
-                    <h3 className="text-lg font-bold mb-2 group-hover:text-gradient transition-colors duration-300">Operations & Automation</h3>
-                    <p className="text-sm text-muted-foreground">SLA-backed routing, fulfillment, escalations, and real-time tracking with intelligent workflows</p>
-                  </div>
-                </div>
-
-                {/* Financial Layer Card */}
-                <div className="bg-gradient-to-br from-card to-muted/20 rounded-xl p-6 shadow-md hover:shadow-lg transition-all duration-300 border border-border h-full cursor-pointer group">
-                  <div className="flex flex-col items-center text-center">
-                    <div className="bg-muted rounded-full p-4 mb-4 group-hover:scale-110 transition-transform duration-300">
-                      <CreditCard className="h-10 w-10 text-primary" />
-                    </div>
-                    <h3 className="text-lg font-bold mb-2 group-hover:text-gradient transition-colors duration-300">Financial Layer</h3>
-                    <p className="text-sm text-muted-foreground">Transparent pricing, automated reconciliation, billing, and analytics with full financial visibility</p>
-                  </div>
+                {/* Pain Elimination Banner */}
+                <div className="bg-gradient-to-r from-destructive/10 to-success/10 border border-border rounded-xl p-6 text-center">
+                  <p className="text-lg font-semibold">
+                    <span className="text-destructive line-through mr-2">No stitching.</span>
+                    <span className="text-destructive line-through mr-2">No local setups.</span>
+                    <span className="text-destructive line-through">No chasing providers.</span>
+                  </p>
                 </div>
               </div>
 
@@ -190,97 +208,70 @@ const SolutionSection = () => {
                 </div>
               </div>
 
-              {/* Implementation Process */}
-              <div className="bg-gradient-to-r from-muted/30 to-muted/50 rounded-lg p-4 sm:p-6 mb-10 shadow-md">
-                <div className="max-w-3xl mx-auto">
-                  <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-3 gap-2">
-                    <div className="flex items-center">
-                      <h3 className="text-lg sm:text-xl font-bold">Implementation Project</h3>
-                    </div>
-                    <div className="flex items-center">
-                      <span className="text-xs sm:text-sm text-muted-foreground mr-2">Iterative Development</span>
-                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-4 w-4 sm:h-5 sm:w-5 text-muted-foreground animate-spin">
-                        <path d="M21 12a9 9 0 0 0-9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"></path>
-                        <path d="M3 3v5h5"></path>
-                        <path d="M3 12a9 9 0 0 0 9 9 9.75 9.75 0 0 0 6.74-2.74L21 16"></path>
-                        <path d="M16 16h5v5"></path>
-                      </svg>
-                    </div>
-                  </div>
-                  <p className="text-sm sm:text-base text-muted-foreground mb-4">Working iteratively with healthcare teams to tailor solutions to their specific operational needs</p>
-                  
-                  <div className="relative mb-2">
-                    <div className="w-full bg-muted rounded-full h-3">
-                      <div className="bg-primary h-3 rounded-full animate-progress"></div>
-                    </div>
-                  </div>
-                  
-                  <div className="grid gap-1 sm:gap-2 mt-4 grid-cols-2 sm:grid-cols-4">
-                    <div className="text-center p-2 rounded transition-all animate-step-0 border">
-                      <div className="flex flex-col items-center">
-                        <div className="rounded-full p-1 mb-1 bg-primary/30 text-primary">
-                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-3 w-3 sm:h-4 sm:w-4">
-                            <path d="M21.801 10A10 10 0 1 1 17 3.335"></path>
-                            <path d="m9 11 3 3L22 4"></path>
-                          </svg>
-                        </div>
-                        <span className="text-xs font-medium font-heading">Planning</span>
+              {/* What Instantly Turns On */}
+              <div className="mb-10">
+                <h3 className="text-2xl font-heading font-bold text-center mb-8">
+                  What instantly <span className="text-gradient">turns on</span>
+                </h3>
+                
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  {/* Benefit Cards */}
+                  <div className="bg-gradient-to-br from-card to-muted/20 rounded-xl p-6 border border-border card-hover">
+                    <div className="flex items-start space-x-4">
+                      <div className="bg-success/20 rounded-full p-3 flex-shrink-0">
+                        <Globe className="h-6 w-6 text-success" />
                       </div>
-                    </div>
-                    <div className="text-center p-2 rounded transition-all animate-step-1 border">
-                      <div className="flex flex-col items-center">
-                        <div className="rounded-full p-1 mb-1 bg-primary/30 text-primary">
-                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-3 w-3 sm:h-4 sm:w-4">
-                            <polyline points="16 18 22 12 16 6"></polyline>
-                            <polyline points="8 6 2 12 8 18"></polyline>
-                          </svg>
-                        </div>
-                        <span className="text-xs font-medium font-heading">Development</span>
-                      </div>
-                    </div>
-                    <div className="text-center p-2 rounded transition-all animate-step-2 border">
-                      <div className="flex flex-col items-center">
-                        <div className="rounded-full p-1 mb-1 bg-primary/30 text-primary">
-                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-3 w-3 sm:h-4 sm:w-4">
-                            <path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"></path>
-                            <path d="m3.3 7 8.7 5 8.7-5"></path>
-                            <path d="M12 22V12"></path>
-                          </svg>
-                        </div>
-                        <span className="text-xs font-medium font-heading">Testing</span>
-                      </div>
-                    </div>
-                    <div className="text-center p-2 rounded transition-all animate-step-3 border">
-                      <div className="flex flex-col items-center">
-                        <div className="rounded-full p-1 mb-1 bg-secondary/30 text-secondary">
-                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-3 w-3 sm:h-4 sm:w-4">
-                            <path d="M21 12a9 9 0 0 0-9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"></path>
-                            <path d="M3 3v5h5"></path>
-                            <path d="M3 12a9 9 0 0 0 9 9 9.75 9.75 0 0 0 6.74-2.74L21 16"></path>
-                            <path d="M16 16h5v5"></path>
-                          </svg>
-                        </div>
-                        <span className="text-xs font-medium font-heading">Review</span>
+                      <div>
+                        <h4 className="font-bold mb-2">Nationwide Coverage</h4>
+                        <p className="text-sm text-muted-foreground">Diagnostics, doctors, pharmacy, home care</p>
                       </div>
                     </div>
                   </div>
-                  
-                  <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mt-6 gap-2">
-                    <div className="flex items-center">
-                      <div className="bg-success/20 rounded-full p-1 mr-2 shrink-0">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-4 w-4 text-success">
-                          <path d="M21.801 10A10 10 0 1 1 17 3.335"></path>
-                          <path d="m9 11 3 3L22 4"></path>
-                        </svg>
+
+                  <div className="bg-gradient-to-br from-card to-muted/20 rounded-xl p-6 border border-border card-hover">
+                    <div className="flex items-start space-x-4">
+                      <div className="bg-primary/20 rounded-full p-3 flex-shrink-0">
+                        <Zap className="h-6 w-6 text-primary" />
                       </div>
-                      <span className="text-xs sm:text-sm text-muted-foreground">AI-powered optimization at every stage</span>
+                      <div>
+                        <h4 className="font-bold mb-2">Predictable Operations</h4>
+                        <p className="text-sm text-muted-foreground">SLA routing, compliance, real-time tracking</p>
+                      </div>
                     </div>
-                    <div className="text-xs sm:text-sm text-muted-foreground flex items-center mt-2 sm:mt-0">
-                      <span className="mr-2">Continuous improvement</span>
-                      <div className="flex space-x-1">
-                        <span className="inline-block w-2 h-2 bg-muted-foreground/60 rounded-full animate-pulse"></span>
-                        <span className="inline-block w-2 h-2 bg-muted-foreground/80 rounded-full animate-pulse" style={{ animationDelay: '200ms' }}></span>
-                        <span className="inline-block w-2 h-2 bg-muted-foreground rounded-full animate-pulse" style={{ animationDelay: '400ms' }}></span>
+                  </div>
+
+                  <div className="bg-gradient-to-br from-card to-muted/20 rounded-xl p-6 border border-border card-hover">
+                    <div className="flex items-start space-x-4">
+                      <div className="bg-secondary/20 rounded-full p-3 flex-shrink-0">
+                        <CreditCard className="h-6 w-6 text-secondary" />
+                      </div>
+                      <div>
+                        <h4 className="font-bold mb-2">Clean Financials</h4>
+                        <p className="text-sm text-muted-foreground">Automated billing and reconciliation</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="bg-gradient-to-br from-card to-muted/20 rounded-xl p-6 border border-border card-hover">
+                    <div className="flex items-start space-x-4">
+                      <div className="bg-primary/20 rounded-full p-3 flex-shrink-0">
+                        <Network className="h-6 w-6 text-primary" />
+                      </div>
+                      <div>
+                        <h4 className="font-bold mb-2">Connected Health Records</h4>
+                        <p className="text-sm text-muted-foreground">Interoperable data across every touchpoint</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="bg-gradient-to-br from-card to-muted/20 rounded-xl p-6 border border-border card-hover md:col-span-2">
+                    <div className="flex items-start space-x-4">
+                      <div className="bg-success/20 rounded-full p-3 flex-shrink-0">
+                        <Stethoscope className="h-6 w-6 text-success" />
+                      </div>
+                      <div>
+                        <h4 className="font-bold mb-2">Full Brand Control</h4>
+                        <p className="text-sm text-muted-foreground">Your experience, powered quietly by us</p>
                       </div>
                     </div>
                   </div>
@@ -310,26 +301,91 @@ const SolutionSection = () => {
                 </div>
               </div>
 
-              {/* Final Launch Section */}
-              <div className="bg-gradient-to-r from-muted/20 via-card to-muted/20 rounded-lg p-8 max-w-xl mx-auto text-center shadow-md hover:shadow-lg transition-all duration-300">
-                <div className="relative inline-block mb-4">
-                  <div className="absolute inset-0 bg-primary/10 rounded-full animate-pulse"></div>
-                  <div className="relative bg-card rounded-full p-4 border border-border shadow-md">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-10 w-10 text-primary">
-                      <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"></path>
-                      <path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"></path>
-                      <path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"></path>
-                      <path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"></path>
-                    </svg>
+              {/* How It Ramps */}
+              <div className="bg-gradient-to-r from-muted/30 to-muted/50 rounded-lg p-6 sm:p-8 mb-10 shadow-md">
+                <div className="max-w-3xl mx-auto">
+                  <h3 className="text-2xl font-heading font-bold text-center mb-6">
+                    How it <span className="text-gradient">ramps</span>
+                  </h3>
+                  
+                  <div className="relative mb-6">
+                    <div className="w-full bg-muted rounded-full h-3">
+                      <div className="bg-primary h-3 rounded-full animate-progress"></div>
+                    </div>
+                  </div>
+                  
+                  <div className="grid gap-3 grid-cols-2 md:grid-cols-4 mb-6">
+                    <div className="text-center p-3 rounded transition-all animate-step-0 border bg-card/50">
+                      <div className="flex flex-col items-center">
+                        <div className="rounded-full p-2 mb-2 bg-primary/30 text-primary">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                            <path d="M21.801 10A10 10 0 1 1 17 3.335"></path>
+                            <path d="m9 11 3 3L22 4"></path>
+                          </svg>
+                        </div>
+                        <span className="text-sm font-bold font-heading">Plan</span>
+                      </div>
+                    </div>
+                    <div className="text-center p-3 rounded transition-all animate-step-1 border bg-card/50">
+                      <div className="flex flex-col items-center">
+                        <div className="rounded-full p-2 mb-2 bg-primary/30 text-primary">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                            <polyline points="16 18 22 12 16 6"></polyline>
+                            <polyline points="8 6 2 12 8 18"></polyline>
+                          </svg>
+                        </div>
+                        <span className="text-sm font-bold font-heading">Integrate</span>
+                      </div>
+                    </div>
+                    <div className="text-center p-3 rounded transition-all animate-step-2 border bg-card/50">
+                      <div className="flex flex-col items-center">
+                        <div className="rounded-full p-2 mb-2 bg-primary/30 text-primary">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                            <path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"></path>
+                            <path d="m3.3 7 8.7 5 8.7-5"></path>
+                            <path d="M12 22V12"></path>
+                          </svg>
+                        </div>
+                        <span className="text-sm font-bold font-heading">Go Live</span>
+                      </div>
+                    </div>
+                    <div className="text-center p-3 rounded transition-all animate-step-3 border bg-card/50">
+                      <div className="flex flex-col items-center">
+                        <div className="rounded-full p-2 mb-2 bg-secondary/30 text-secondary">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                            <path d="M21 12a9 9 0 0 0-9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"></path>
+                            <path d="M3 3v5h5"></path>
+                            <path d="M3 12a9 9 0 0 0 9 9 9.75 9.75 0 0 0 6.74-2.74L21 16"></path>
+                            <path d="M16 16h5v5"></path>
+                          </svg>
+                        </div>
+                        <span className="text-sm font-bold font-heading">Optimize</span>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-center justify-center">
+                    <div className="bg-success/20 rounded-full p-2 mr-3">
+                      <Brain className="h-5 w-5 text-success" />
+                    </div>
+                    <p className="text-sm text-muted-foreground">
+                      The system keeps improving itself through signals and AI routing
+                    </p>
                   </div>
                 </div>
-                <h3 className="text-xl font-bold mb-2">Launch Ready</h3>
-                <p className="text-muted-foreground">Ready to scale healthcare delivery and serve patients nationwide</p>
-                <div className="flex justify-center mt-4 space-x-2">
-                  <span className="inline-block w-3 h-3 rounded-full bg-primary/60 animate-pulse"></span>
-                  <span className="inline-block w-3 h-3 rounded-full bg-primary/80 animate-pulse" style={{ animationDelay: '200ms' }}></span>
-                  <span className="inline-block w-3 h-3 rounded-full bg-primary animate-pulse" style={{ animationDelay: '400ms' }}></span>
-                </div>
+              </div>
+
+              {/* The Idea - Final Message */}
+              <div className="bg-gradient-hero rounded-xl p-8 text-center">
+                <h3 className="text-2xl lg:text-3xl font-heading font-bold mb-4">
+                  The <span className="text-gradient">idea</span>
+                </h3>
+                <p className="text-lg text-foreground mb-2">
+                  You focus on products and growth.
+                </p>
+                <p className="text-lg font-semibold">
+                  Labstack handles care delivery — <span className="text-gradient">everywhere</span>.
+                </p>
               </div>
             </div>
           </div>
