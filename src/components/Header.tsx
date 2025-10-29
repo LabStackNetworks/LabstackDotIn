@@ -179,13 +179,14 @@ const Header = () => {
       <div className="container mx-auto mobile-safe-padding">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <div className="flex items-center space-x-3">
+          <Link to="/" className="flex items-center space-x-3">
             <img 
               src="/lovable-uploads/97d6ae42-ba64-4793-a727-6945e3a2b8bc.png" 
-              alt="Labstack Logo" 
+              alt="Labstack - Healthcare Growth Operating System" 
               className="h-8 w-auto"
+              loading="eager"
             />
-          </div>
+          </Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center space-x-8">

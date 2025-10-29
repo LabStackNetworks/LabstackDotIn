@@ -7,10 +7,17 @@ import WhoWeServe from "@/components/WhoWeServe";
 import ProofOfScale from "@/components/ProofOfScale";
 import DualCTA from "@/components/DualCTA";
 import Footer from "@/components/Footer";
+import SEOHead from "@/components/SEOHead";
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-background text-foreground">
+      <SEOHead 
+        title="The Growth Engine for Healthcare"
+        description="Launch diagnostics, consultations, pharmacy, and home care in 48 hours. One API for 9,000+ pincodes. Healthcare infrastructure that scales like software."
+        keywords="healthcare API, diagnostics API, telemedicine platform, healthcare infrastructure India, digital health platform, healthcare delivery system, medical API integration"
+        canonical="https://labstack.in"
+      />
       <Header />
       <main className="pt-16 lg:pt-20">
         <Hero />

@@ -1,12 +1,19 @@
-import { Target, Users, Zap, Shield, ArrowRight } from "lucide-react";
+import { Target, Users, Zap, Shield, ArrowRight, Network } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import SEOHead from "@/components/SEOHead";
 
 const About = () => {
   return (
     <div className="min-h-screen bg-background">
+      <SEOHead 
+        title="About Us - Operating System for Healthcare Delivery"
+        description="Making healthcare run on code, not coordination. Labstack is the growth engine for healthcare, providing infrastructure that scales like software."
+        keywords="healthcare infrastructure company, healthcare technology platform, digital health India, healthcare API provider"
+        canonical="https://labstack.in/about"
+      />
       <Header />
       <main className="pt-20">
         <section className="py-20 lg:py-32">
@@ -14,13 +21,13 @@ const About = () => {
             {/* Hero */}
             <div className="max-w-4xl mx-auto text-center mb-20">
               <h1 className="text-4xl lg:text-6xl font-heading font-bold mb-6">
-                Think UPI <span className="text-gradient">for Healthcare</span>
+                The Operating System for <span className="text-gradient">Healthcare Delivery</span>
               </h1>
               <p className="text-lg lg:text-xl text-muted-foreground mb-4">
-                We're building the rails for healthcare in India — a unified infrastructure that lets any organisation launch care services in days, not months.
+                Making healthcare run on code, not coordination.
               </p>
               <p className="text-xl font-semibold text-foreground">
-                If payments had UPI, healthcare now has Labstack.
+                The growth engine for healthcare.
               </p>
             </div>
 
@@ -96,21 +103,32 @@ const About = () => {
             </div>
 
             {/* Values */}
-            <div className="max-w-5xl mx-auto mb-20">
-              <h2 className="text-3xl font-heading font-bold text-center mb-12">Our Values</h2>
+            <div className="max-w-5xl mx-auto mb-20 bg-gradient-hero rounded-3xl p-8 lg:p-12 border border-border/50">
+              <h2 className="text-3xl font-heading font-bold text-center mb-4">Our Values</h2>
+              <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
+                These principles guide every decision we make and every product we build.
+              </p>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                {[
-                  { icon: Target, title: "Customer First", desc: "Every decision begins with: is it better for our customers and their patients?" },
-                  { icon: Zap, title: "Innovation", desc: "We push the boundaries of healthcare technology so our partners don't have to" },
-                  { icon: Shield, title: "Trust & Reliability", desc: "In healthcare, downtime is not an option. We build systems that run, 24/7" },
-                  { icon: Users, title: "Accessibility", desc: "Healthcare must reach everyone, everywhere in India — Tier-1 to Tier-3" }
-                ].map((value, i) => (
-                  <div key={i} className="bg-card-gradient p-6 rounded-xl border border-border/20">
-                    <value.icon className="w-10 h-10 text-primary mb-4" />
-                    <h3 className="font-heading font-bold text-lg mb-2">{value.title}</h3>
-                    <p className="text-sm text-muted-foreground">{value.desc}</p>
-                  </div>
-                ))}
+                <div className="bg-card p-6 rounded-xl border border-border/20">
+                  <Target className="w-10 h-10 text-primary mb-4" />
+                  <h3 className="font-heading font-bold text-lg mb-2">Partner Growth First</h3>
+                  <p className="text-sm text-muted-foreground">Our success is measured by partner revenue and reach. Your growth is our growth.</p>
+                </div>
+                <div className="bg-card p-6 rounded-xl border border-border/20">
+                  <Network className="w-10 h-10 text-primary mb-4" />
+                  <h3 className="font-heading font-bold text-lg mb-2">Depth Over Aggregation</h3>
+                  <p className="text-sm text-muted-foreground">Real scale comes from deep integration between data, people, and systems.</p>
+                </div>
+                <div className="bg-card p-6 rounded-xl border border-border/20">
+                  <Shield className="w-10 h-10 text-primary mb-4" />
+                  <h3 className="font-heading font-bold text-lg mb-2">Predictability Builds Trust</h3>
+                  <p className="text-sm text-muted-foreground">Reliability is mandatory: measured, auditable, repeatable.</p>
+                </div>
+                <div className="bg-card p-6 rounded-xl border border-border/20">
+                  <Zap className="w-10 h-10 text-primary mb-4" />
+                  <h3 className="font-heading font-bold text-lg mb-2">Experience at Scale</h3>
+                  <p className="text-sm text-muted-foreground">Growth is only sustainable if every interaction improves patient experience and outcomes.</p>
+                </div>
               </div>
             </div>
 

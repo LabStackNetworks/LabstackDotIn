@@ -3,6 +3,8 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import CTAButtons from "@/components/CTAButtons";
+import SEOHead from "@/components/SEOHead";
 
 const PlatformOverview = () => {
   const platformLayers = [
@@ -48,6 +50,12 @@ const PlatformOverview = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEOHead 
+        title="Platform Overview - Healthcare Operating System"
+        description="One API for diagnostics, consultations, pharmacy, and home care. Launch in 48 hours across 9,000+ pincodes. Healthcare infrastructure built for scale."
+        keywords="healthcare platform, healthcare API, diagnostics platform, telemedicine API, pharmacy API, healthcare integrations"
+        canonical="https://labstack.in/platform-overview"
+      />
       <Header />
       <main className="pt-20">
         {/* Hero Section */}
@@ -64,22 +72,15 @@ const PlatformOverview = () => {
               </h1>
 
               <p className="text-lg lg:text-xl text-muted-foreground mb-8">
-                The fastest way to launch diagnostics, consultations, pharmacy, and home care at scale. Labstack provides the healthcare infrastructure layer for businesses. We simplify the hardest part of building healthcare — networks, operations, compliance, and intelligence — so you can focus on growth and innovation.
+                Launch diagnostics, consultations, pharmacy, and home care in 48 hours. One API. One integration. Built-in networks, compliance, and intelligence.
               </p>
 
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link to="/book-demo">
-                  <Button size="lg" className="btn-gradient">
-                    Book a Demo
-                    <ArrowRight className="ml-2 h-5 w-5" />
-                  </Button>
-                </Link>
-                <Link to="/start-building">
-                  <Button size="lg" variant="outline">
-                    Explore Solutions
-                  </Button>
-                </Link>
-              </div>
+              <CTAButtons 
+                primaryText="Book a Demo"
+                secondaryText="Start Building"
+                secondaryLink="/start-building"
+                className="justify-center"
+              />
             </div>
 
             {/* Why Labstack Platform */}
@@ -87,7 +88,7 @@ const PlatformOverview = () => {
               <div className="text-center mb-12">
                 <h2 className="text-3xl font-heading font-bold mb-6">Why Labstack Platform</h2>
                 <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-                  Healthcare infrastructure is complex, fragmented, and slow to build. Labstack brings everything together under one platform: networks, automation, billing, and intelligence — accessible in days, not months.
+                  The operating system for healthcare delivery. Networks, automation, billing, and intelligence — unified in one platform.
                 </p>
               </div>
               
@@ -105,7 +106,7 @@ const PlatformOverview = () => {
             <div className="max-w-6xl mx-auto mb-20">
               <h2 className="text-3xl font-heading font-bold text-center mb-4">Platform Layers</h2>
               <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
-                Core infrastructure components that power healthcare delivery at scale
+                Five layers that make healthcare scalable and measurable
               </p>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 {platformLayers.map((layer, index) => (
@@ -138,7 +139,7 @@ const PlatformOverview = () => {
             <div className="max-w-5xl mx-auto mb-20 bg-gradient-hero rounded-3xl p-8 lg:p-12 border border-border/50">
               <h2 className="text-3xl font-heading font-bold mb-6">Connect once. Deploy everywhere.</h2>
               <p className="text-lg text-muted-foreground mb-8">
-                Labstack works across your systems without vendor lock-in. Integrate via APIs, widgets, or the Console — whichever fits your workflow.
+                Vendor-agnostic APIs and white-label widgets. No lock-in. Sandbox to production in days.
               </p>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
                 <div className="flex items-start space-x-3">
@@ -182,7 +183,7 @@ const PlatformOverview = () => {
             <div className="max-w-5xl mx-auto mb-20">
               <h2 className="text-3xl font-heading font-bold text-center mb-6">Built-in Trust & Compliance</h2>
               <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
-                Healthcare demands trust. Labstack is designed with compliance, uptime, and reliability at the core.
+                ABDM-ready. 99.5% uptime. Audit trails. Continuous monitoring.
               </p>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 <div className="text-center p-6 bg-card-gradient rounded-xl border border-border/20">
@@ -248,21 +249,14 @@ const PlatformOverview = () => {
             {/* Final CTA */}
             <div className="max-w-4xl mx-auto text-center">
               <h2 className="text-3xl font-heading font-bold mb-6">
-                Stop wasting 12–18 months building networks. Start delivering care in days.
+                Launch in 48 hours. Scale to 9,000+ pincodes.
               </h2>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link to="/book-demo">
-                  <Button size="lg" className="btn-gradient">
-                    Book a Demo
-                    <ArrowRight className="ml-2 h-5 w-5" />
-                  </Button>
-                </Link>
-                <Link to="/join-network/providers">
-                  <Button size="lg" variant="outline">
-                    Join the Network
-                  </Button>
-                </Link>
-              </div>
+              <CTAButtons 
+                primaryText="Book a Demo"
+                secondaryText="Join Network"
+                secondaryLink="/join-network/providers"
+                className="justify-center"
+              />
             </div>
           </div>
         </section>

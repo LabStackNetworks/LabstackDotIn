@@ -1,11 +1,18 @@
-import { Code, Heart, Zap, Users, ArrowRight, Mail } from "lucide-react";
+import { Code, Heart, Zap, Users, ArrowRight, Mail, Target, Shield, Network } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
+import SEOHead from "@/components/SEOHead";
 
 const Careers = () => {
   return (
     <div className="min-h-screen bg-background">
+      <SEOHead 
+        title="Careers - Build Healthcare Infrastructure"
+        description="Join Labstack in building the world's most dependable infrastructure for delivering care. Open roles in engineering, healthcare, operations, and product."
+        keywords="healthcare jobs India, health tech careers, healthcare engineering jobs, digital health careers Bangalore"
+        canonical="https://labstack.in/careers"
+      />
       <Header />
       <main className="pt-20">
         <section className="py-20 lg:py-32">
@@ -22,37 +29,40 @@ const Careers = () => {
 
             {/* Why Labstack */}
             <div className="max-w-5xl mx-auto mb-20">
-              <h2 className="text-3xl font-heading font-bold text-center mb-12">Why Labstack</h2>
+              <h2 className="text-3xl font-heading font-bold text-center mb-4">Why Labstack</h2>
+              <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
+                Join us in building the world's most dependable infrastructure for delivering care.
+              </p>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div className="bg-card-gradient p-8 rounded-2xl border border-border/20">
+                  <Target className="w-10 h-10 text-primary mb-4" />
+                  <h3 className="text-xl font-heading font-bold mb-3">Partner Growth First</h3>
+                  <p className="text-muted-foreground">
+                    We measure success by the revenue and reach we create for partners. Build products that directly impact healthcare businesses.
+                  </p>
+                </div>
+
+                <div className="bg-card-gradient p-8 rounded-2xl border border-border/20">
+                  <Network className="w-10 h-10 text-primary mb-4" />
+                  <h3 className="text-xl font-heading font-bold mb-3">Depth Over Aggregation</h3>
+                  <p className="text-muted-foreground">
+                    Solve the hard problems. Real scale comes from deep integration between data, people, and systems.
+                  </p>
+                </div>
+
+                <div className="bg-card-gradient p-8 rounded-2xl border border-border/20">
+                  <Shield className="w-10 h-10 text-primary mb-4" />
+                  <h3 className="text-xl font-heading font-bold mb-3">Predictability Builds Trust</h3>
+                  <p className="text-muted-foreground">
+                    Build systems that are measured, auditable, and repeatable. Reliability is mandatory in healthcare.
+                  </p>
+                </div>
+
+                <div className="bg-card-gradient p-8 rounded-2xl border border-border/20">
                   <Zap className="w-10 h-10 text-primary mb-4" />
-                  <h3 className="text-xl font-heading font-bold mb-3">Massive Impact</h3>
+                  <h3 className="text-xl font-heading font-bold mb-3">Experience at Scale</h3>
                   <p className="text-muted-foreground">
-                    Your work enables healthcare for millions. Every API call, every SLA improvement, every quality check — it all matters.
-                  </p>
-                </div>
-
-                <div className="bg-card-gradient p-8 rounded-2xl border border-border/20">
-                  <Code className="w-10 h-10 text-primary mb-4" />
-                  <h3 className="text-xl font-heading font-bold mb-3">Hard Problems</h3>
-                  <p className="text-muted-foreground">
-                    Healthcare infrastructure is complex. You'll solve real challenges at the intersection of tech, operations, and healthcare delivery.
-                  </p>
-                </div>
-
-                <div className="bg-card-gradient p-8 rounded-2xl border border-border/20">
-                  <Users className="w-10 h-10 text-primary mb-4" />
-                  <h3 className="text-xl font-heading font-bold mb-3">Great Team</h3>
-                  <p className="text-muted-foreground">
-                    Work with healthcare veterans, product builders, and engineers who care deeply about getting healthcare right.
-                  </p>
-                </div>
-
-                <div className="bg-card-gradient p-8 rounded-2xl border border-border/20">
-                  <Heart className="w-10 h-10 text-primary mb-4" />
-                  <h3 className="text-xl font-heading font-bold mb-3">Mission-Driven</h3>
-                  <p className="text-muted-foreground">
-                    We're not building a "cool app." We're building infrastructure that makes healthcare accessible across all of India.
+                    Growth is only sustainable if every interaction improves patient experience and outcomes.
                   </p>
                 </div>
               </div>
