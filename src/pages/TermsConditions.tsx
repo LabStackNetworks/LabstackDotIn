@@ -51,22 +51,51 @@ const TermsConditions = () => {
                 Labstack provides infrastructure services and is not directly responsible for the medical services provided by healthcare providers in our network. Our liability is limited to the fees paid for services in the preceding 12 months.
               </p>
 
-              <h2 className="text-2xl font-heading font-bold mt-8 mb-4">8. Data Protection</h2>
+              <h2 className="text-2xl font-heading font-bold mt-8 mb-4">8. Data Protection and Indian Regulations</h2>
               <p className="text-muted-foreground mb-4">
-                Use of personal and health data is governed by our Privacy Policy. We implement appropriate security measures and comply with applicable data protection regulations.
+                Use of personal and health data is governed by our Privacy Policy and complies with applicable Indian regulations including:
+              </p>
+              <ul className="list-disc pl-6 space-y-2 text-muted-foreground mb-4">
+                <li><strong>Information Technology Act, 2000 (IT Act)</strong> and Information Technology (Reasonable Security Practices and Procedures and Sensitive Personal Data or Information) Rules, 2011</li>
+                <li><strong>Digital Information Security in Healthcare Act (DISHA)</strong> framework for protection of digital health data</li>
+                <li><strong>Telemedicine Practice Guidelines, 2020</strong> issued by the Medical Council of India and NITI Aayog for teleconsultation services</li>
+                <li><strong>Indian Medical Council (Professional Conduct, Etiquette and Ethics) Regulations, 2002</strong></li>
+                <li><strong>Drugs and Cosmetics Act, 1940</strong> and related rules for pharmacy services</li>
+              </ul>
+              <p className="text-muted-foreground mb-4">
+                We implement encryption at rest and in transit, access controls, audit logs, and regular security audits to protect sensitive personal and health information.
               </p>
 
-              <h2 className="text-2xl font-heading font-bold mt-8 mb-4">9. Termination</h2>
+              <h2 className="text-2xl font-heading font-bold mt-8 mb-4">9. Telemedicine and Healthcare Service Compliance</h2>
+              <p className="text-muted-foreground mb-4">
+                Teleconsultation services provided through our platform comply with Telemedicine Practice Guidelines issued by the Board of Governors superseding the Medical Council of India. This includes:
+              </p>
+              <ul className="list-disc pl-6 space-y-2 text-muted-foreground mb-4">
+                <li>Registered Medical Practitioners (RMP) with valid licenses</li>
+                <li>Informed consent procedures for telemedicine consultations</li>
+                <li>Proper documentation and maintenance of electronic medical records</li>
+                <li>Prescription guidelines and limitations for teleconsultations</li>
+                <li>Patient identification and verification protocols</li>
+              </ul>
+
+              <h2 className="text-2xl font-heading font-bold mt-8 mb-4">10. Termination</h2>
               <p className="text-muted-foreground mb-4">
                 Either party may terminate the service agreement with 30 days written notice. Labstack reserves the right to immediately suspend or terminate accounts that violate these terms.
               </p>
 
-              <h2 className="text-2xl font-heading font-bold mt-8 mb-4">10. Governing Law</h2>
+              <h2 className="text-2xl font-heading font-bold mt-8 mb-4">11. Governing Law and Regulatory Compliance</h2>
               <p className="text-muted-foreground mb-4">
-                These Terms and Conditions are governed by the laws of India. Any disputes shall be subject to the exclusive jurisdiction of courts in Bangalore, Karnataka.
+                These Terms and Conditions are governed by the laws of India. Any disputes shall be subject to the exclusive jurisdiction of courts in Bangalore, Karnataka. Users agree to comply with all applicable Indian healthcare regulations, including but not limited to:
               </p>
+              <ul className="list-disc pl-6 space-y-2 text-muted-foreground mb-4">
+                <li>Clinical Establishments (Registration and Regulation) Act, 2010</li>
+                <li>Pre-Conception and Pre-Natal Diagnostic Techniques (PCPNDT) Act, 1994</li>
+                <li>Pharmacy Act, 1948 and Drugs and Cosmetics Act, 1940</li>
+                <li>Indian Medical Council Act, 1956 and regulations thereunder</li>
+                <li>Consumer Protection Act, 2019 for healthcare services</li>
+              </ul>
 
-              <h2 className="text-2xl font-heading font-bold mt-8 mb-4">11. Changes to Terms</h2>
+              <h2 className="text-2xl font-heading font-bold mt-8 mb-4">12. Changes to Terms</h2>
               <p className="text-muted-foreground mb-4">
                 Labstack reserves the right to modify these terms at any time. Material changes will be communicated to users with reasonable advance notice.
               </p>

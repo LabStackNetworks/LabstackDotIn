@@ -74,12 +74,21 @@ const PartnerTerms = () => {
                 Partners must maintain compliance with all applicable healthcare regulations, including but not limited to ABDM readiness, licensing requirements, and professional standards.
               </p>
 
-              <h2 className="text-2xl font-heading font-bold mt-8 mb-4">10. Suspension and Termination</h2>
+              <h2 className="text-2xl font-heading font-bold mt-8 mb-4">10. Misconduct / Individual Liability; Cooperation; Limited Labstack Responsibility</h2>
+              <div className="text-muted-foreground mb-4 space-y-3">
+                <p><strong>(a) Individual Practitioner Liability:</strong> If any healthcare professional (including but not limited to doctors, nurses, medical practitioners, phlebotomists, pharmacists, or field staff) engaged by Labstack commits any act, omission, misbehaviour, professional misconduct, or criminal conduct in connection with the Services, such practitioner shall be primarily and personally liable for his/her acts or omissions and for any claims, fines, penalties, or damages arising directly from such acts or omissions.</p>
+                
+                <p><strong>(b) Notification and Cooperation:</strong> Labstack shall promptly notify the Partner and affected customers upon becoming aware of any such allegation or incident. Labstack shall suspend the practitioner from providing Services pending investigation (where appropriate) and shall, subject to applicable law and privacy obligations, cooperate with Partners, customers, and any regulatory or law-enforcement authorities, including providing records, personnel information, and other documentation reasonably required for the investigation.</p>
+                
+                <p><strong>(c) Labstack's Continuing Obligations:</strong> Notwithstanding the foregoing, Labstack shall remain liable to Partners for losses caused by Labstack's own negligence, willful misconduct, or failure to perform required background checks, credential verifications, and quality monitoring as set out in this Agreement. This does not diminish the primary liability of individual practitioners for their own acts or omissions.</p>
+              </div>
+
+              <h2 className="text-2xl font-heading font-bold mt-8 mb-4">11. Suspension and Termination</h2>
               <p className="text-muted-foreground mb-4">
                 Labstack may suspend or terminate partnerships for violations of terms, quality issues, regulatory non-compliance, or fraudulent activities. Partners may exit with 30 days written notice.
               </p>
 
-              <h2 className="text-2xl font-heading font-bold mt-8 mb-4">11. Dispute Resolution</h2>
+              <h2 className="text-2xl font-heading font-bold mt-8 mb-4">12. Dispute Resolution</h2>
               <p className="text-muted-foreground mb-4">
                 Disputes will be resolved through good faith negotiation. If unresolved, disputes are subject to arbitration in Bangalore, Karnataka under Indian law.
               </p>
