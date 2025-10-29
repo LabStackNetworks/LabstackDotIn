@@ -6,6 +6,7 @@ interface SEOHeadProps {
   keywords?: string;
   ogImage?: string;
   canonical?: string;
+  structuredData?: object | object[];
 }
 
 const SEOHead = ({ 
@@ -13,7 +14,8 @@ const SEOHead = ({
   description, 
   keywords = "healthcare infrastructure, healthcare API, diagnostics API, telemedicine platform, healthcare delivery system, digital health platform India",
   ogImage = "/lovable-uploads/97d6ae42-ba64-4793-a727-6945e3a2b8bc.png",
-  canonical
+  canonical,
+  structuredData
 }: SEOHeadProps) => {
   useEffect(() => {
     // Update title
@@ -59,7 +61,19 @@ const SEOHead = ({
       }
       linkElement.href = canonical;
     }
-  }, [title, description, keywords, ogImage, canonical]);
+    
+    // Structured Data (JSON-LD)
+    if (structuredData) {
+      const script = document.createElement('script');
+      script.type = 'application/ld+json';
+      script.text = JSON.stringify(Array.isArray(structuredData) ? structuredData : [structuredData]);
+      document.head.appendChild(script);
+      
+      return () => {
+        document.head.removeChild(script);
+      };
+    }
+  }, [title, description, keywords, ogImage, canonical, structuredData]);
 
   return null;
 };

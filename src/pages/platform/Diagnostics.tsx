@@ -1,12 +1,28 @@
 import { TestTube, MapPin, CheckCircle, ArrowRight, Shield, Clock, FileCheck } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import SEOHead from "@/components/SEOHead";
+import CTAButtons from "@/components/CTAButtons";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import { generateProductSchema } from "@/lib/structured-data";
 
 const Diagnostics = () => {
+  const structuredData = generateProductSchema({
+    name: "Labstack Diagnostics Network",
+    description: "Complete diagnostics network across 9,000+ pincodes. Pathology, radiology, cardiac, genetic testing with quality frameworks built in.",
+    url: "https://labstack.in/platform/diagnostics"
+  });
+
   return (
     <div className="min-h-screen bg-background">
+      <SEOHead 
+        title="Diagnostics Network Platform"
+        description="Complete diagnostics network across 9,000+ pincodes. Pathology, radiology, cardiac, genetic testing with quality frameworks built in."
+        keywords="diagnostics network India, pathology services, radiology network, home sample collection, diagnostic testing API, lab network"
+        canonical="https://labstack.in/platform/diagnostics"
+        structuredData={structuredData}
+      />
       <Header />
       <main className="pt-20">
         {/* Hero */}

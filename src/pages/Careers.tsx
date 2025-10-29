@@ -4,7 +4,11 @@ import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import SEOHead from "@/components/SEOHead";
 
+import { generateOrganizationSchema } from "@/lib/structured-data";
+
 const Careers = () => {
+  const structuredData = generateOrganizationSchema();
+
   return (
     <div className="min-h-screen bg-background">
       <SEOHead 
@@ -12,6 +16,7 @@ const Careers = () => {
         description="Join Labstack in building the world's most dependable infrastructure for delivering care. Open roles in engineering, healthcare, operations, and product."
         keywords="healthcare jobs India, health tech careers, healthcare engineering jobs, digital health careers Bangalore"
         canonical="https://labstack.in/careers"
+        structuredData={structuredData}
       />
       <Header />
       <main className="pt-20">

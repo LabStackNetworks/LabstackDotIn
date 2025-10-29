@@ -2,6 +2,8 @@ import { Puzzle, Users, Target, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import SEOHead from "@/components/SEOHead";
+import CTAButtons from "@/components/CTAButtons";
 import { Link } from "react-router-dom";
 
 const CustomSolutions = () => {
@@ -28,6 +30,12 @@ const CustomSolutions = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEOHead 
+        title="Custom Healthcare Solutions"
+        description="Custom healthcare infrastructure tailored for your needs. Specialized care programs, enterprise platforms, and geographic expansion support."
+        keywords="custom healthcare solutions, healthcare infrastructure development, disease management platform, enterprise healthcare platform"
+        canonical="https://labstack.in/custom-solutions"
+      />
       <Header />
       <main className="pt-20">
         <section className="py-20 lg:py-32">

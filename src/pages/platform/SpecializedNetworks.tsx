@@ -1,10 +1,18 @@
 import { Ambulance, Eye, Smile, Brain, Activity, Syringe, Heart, ArrowRight, CheckCircle } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import SEOHead from "@/components/SEOHead";
+import CTAButtons from "@/components/CTAButtons";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import { generateProductSchema } from "@/lib/structured-data";
 
 const SpecializedNetworks = () => {
+  const structuredData = generateProductSchema({
+    name: "Specialized Healthcare Networks",
+    description: "Ambulance, vision, dental, mental health, physiotherapy, home care. One API for specialized healthcare services.",
+    url: "https://labstack.in/platform/specialized-networks"
+  });
   const services = [
     { icon: Ambulance, name: "Ambulance Services", description: "Emergency and non-emergency transport" },
     { icon: Eye, name: "Vision Care", description: "Eye tests, glasses, and treatments" },
@@ -18,6 +26,13 @@ const SpecializedNetworks = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEOHead 
+        title="Specialized Healthcare Networks"
+        description="Ambulance, vision, dental, mental health, physiotherapy, home care. One API for specialized healthcare services."
+        keywords="specialized healthcare networks, ambulance services, mental health network, dental care network, home healthcare services"
+        canonical="https://labstack.in/platform/specialized-networks"
+        structuredData={structuredData}
+      />
       <Header />
       <main className="pt-20">
         {/* Hero */}

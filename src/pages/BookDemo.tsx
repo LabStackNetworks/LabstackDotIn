@@ -6,6 +6,7 @@ import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import SEOHead from "@/components/SEOHead";
 import { useToast } from "@/hooks/use-toast";
 
 const BookDemo = () => {
@@ -38,6 +39,12 @@ const BookDemo = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEOHead 
+        title="Book a Demo"
+        description="See Labstack's healthcare infrastructure platform in action. Schedule a personalized demo to discuss your specific needs and integration options."
+        keywords="healthcare platform demo, labstack demo, healthcare API demo, diagnostics platform demonstration"
+        canonical="https://labstack.in/book-demo"
+      />
       <Header />
       <main className="pt-20">
         <section className="py-12 lg:py-20">

@@ -5,8 +5,18 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import CTAButtons from "@/components/CTAButtons";
 import SEOHead from "@/components/SEOHead";
+import { generateOrganizationSchema, generateProductSchema } from "@/lib/structured-data";
 
 const PlatformOverview = () => {
+  const structuredData = [
+    generateOrganizationSchema(),
+    generateProductSchema({
+      name: "Labstack Healthcare Platform",
+      description: "Complete healthcare operating system. Launch diagnostics, consultations, pharmacy, and specialized networks in days, not months.",
+      url: "https://labstack.in/platform-overview"
+    })
+  ];
+
   const platformLayers = [
     {
       icon: Network,
@@ -55,6 +65,7 @@ const PlatformOverview = () => {
         description="One API for diagnostics, consultations, pharmacy, and home care. Launch in 48 hours across 9,000+ pincodes. Healthcare infrastructure built for scale."
         keywords="healthcare platform, healthcare API, diagnostics platform, telemedicine API, pharmacy API, healthcare integrations"
         canonical="https://labstack.in/platform-overview"
+        structuredData={structuredData}
       />
       <Header />
       <main className="pt-20">

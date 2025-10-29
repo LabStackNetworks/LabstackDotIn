@@ -2,9 +2,17 @@ import { Globe, MapPin, TrendingUp, ArrowRight, CheckCircle, Target } from "luci
 import { Button } from "@/components/ui/button";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import SEOHead from "@/components/SEOHead";
+import CTAButtons from "@/components/CTAButtons";
 import { Link } from "react-router-dom";
+import { generateProductSchema } from "@/lib/structured-data";
 
 const CoverageExpansion = () => {
+  const structuredData = generateProductSchema({
+    name: "Coverage Expansion Solutions",
+    description: "Expand healthcare services to Tier-2/3 markets instantly. Quality-assured providers with local market expertise.",
+    url: "https://labstack.in/solutions/coverage-expansion"
+  });
   const expansionBenefits = [
     {
       title: "No Capex or Ops Hiring",
@@ -32,6 +40,13 @@ const CoverageExpansion = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEOHead 
+        title="Coverage Expansion Solutions"
+        description="Expand healthcare services to Tier-2/3 markets instantly. Quality-assured providers with local market expertise."
+        keywords="healthcare market expansion, tier 2 tier 3 healthcare, geographic expansion healthcare, healthcare coverage India"
+        canonical="https://labstack.in/solutions/coverage-expansion"
+        structuredData={structuredData}
+      />
       <Header />
       <main className="pt-20">
         <section className="py-20 lg:py-32">

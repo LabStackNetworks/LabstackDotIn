@@ -4,15 +4,19 @@ import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import SEOHead from "@/components/SEOHead";
+import { generateOrganizationSchema } from "@/lib/structured-data";
 
 const About = () => {
+  const structuredData = generateOrganizationSchema();
+
   return (
     <div className="min-h-screen bg-background">
       <SEOHead 
-        title="About Us - Operating System for Healthcare Delivery"
-        description="Making healthcare run on code, not coordination. Labstack is the growth engine for healthcare, providing infrastructure that scales like software."
-        keywords="healthcare infrastructure company, healthcare technology platform, digital health India, healthcare API provider"
+        title="About Labstack"
+        description="Building the world's most dependable infrastructure for delivering care. Partner growth first, depth over aggregation, predictability builds trust."
+        keywords="about labstack, healthcare infrastructure company, healthcare technology Bangalore, health tech India"
         canonical="https://labstack.in/about"
+        structuredData={structuredData}
       />
       <Header />
       <main className="pt-20">

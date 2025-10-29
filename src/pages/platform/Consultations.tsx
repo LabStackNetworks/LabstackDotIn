@@ -1,12 +1,28 @@
 import { Video, Users, FileText, ArrowRight, CheckCircle, Stethoscope } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import SEOHead from "@/components/SEOHead";
+import CTAButtons from "@/components/CTAButtons";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import { generateProductSchema } from "@/lib/structured-data";
 
 const Consultations = () => {
+  const structuredData = generateProductSchema({
+    name: "Labstack Consultations Platform",
+    description: "Pan-India doctor network with proprietary teleconsultation SaaS, EMR, and e-prescriptions. Launch online and offline consultations instantly.",
+    url: "https://labstack.in/platform/consultations"
+  });
+
   return (
     <div className="min-h-screen bg-background">
+      <SEOHead 
+        title="Consultations Platform"
+        description="Pan-India doctor network with proprietary teleconsultation SaaS, EMR, and e-prescriptions. Launch online and offline consultations instantly."
+        keywords="telemedicine platform, doctor consultation network, teleconsultation software, EMR system, e-prescription platform, online doctor consultation"
+        canonical="https://labstack.in/platform/consultations"
+        structuredData={structuredData}
+      />
       <Header />
       <main className="pt-20">
         {/* Hero */}

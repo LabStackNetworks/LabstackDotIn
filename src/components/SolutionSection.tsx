@@ -265,8 +265,8 @@ const SolutionSection = () => {
                   </div>
 
                   <div className="bg-gradient-to-br from-card to-muted/20 rounded-xl p-6 border border-border card-hover md:col-span-2">
-                    <div className="flex items-start space-x-4">
-                      <div className="bg-success/20 rounded-full p-3 flex-shrink-0">
+                    <div className="flex flex-col items-center justify-center text-center space-y-3">
+                      <div className="bg-success/20 rounded-full p-3">
                         <Stethoscope className="h-6 w-6 text-success" />
                       </div>
                       <div>

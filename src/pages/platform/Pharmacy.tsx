@@ -1,12 +1,28 @@
 import { Pill, Home, ShoppingCart, ArrowRight, CheckCircle, Shield, Clock } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import SEOHead from "@/components/SEOHead";
+import CTAButtons from "@/components/CTAButtons";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import { generateProductSchema } from "@/lib/structured-data";
 
 const Pharmacy = () => {
+  const structuredData = generateProductSchema({
+    name: "Labstack Pharmacy Network",
+    description: "Nationwide pharmacy network with 60-min delivery in metros, fraud prevention, and SKU-level controls. Home delivery or store pickup.",
+    url: "https://labstack.in/platform/pharmacy"
+  });
+
   return (
     <div className="min-h-screen bg-background">
+      <SEOHead 
+        title="Pharmacy Network Platform"
+        description="Nationwide pharmacy network with 60-min delivery in metros, fraud prevention, and SKU-level controls. Home delivery or store pickup."
+        keywords="pharmacy delivery network, online pharmacy India, medicine delivery API, pharmacy management system, prescription fulfilment"
+        canonical="https://labstack.in/platform/pharmacy"
+        structuredData={structuredData}
+      />
       <Header />
       <main className="pt-20">
         {/* Hero */}

@@ -1,11 +1,18 @@
 import { Mail, Phone, MapPin, Clock } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import SEOHead from "@/components/SEOHead";
 import { Link } from "react-router-dom";
 
 const Contact = () => {
   return (
     <div className="min-h-screen bg-background">
+      <SEOHead 
+        title="Contact Us"
+        description="Get in touch with Labstack. Our team is ready to help you launch or scale your healthcare services. Response time within 4 hours."
+        keywords="contact labstack, healthcare platform support, labstack sales, healthcare infrastructure inquiry"
+        canonical="https://labstack.in/contact"
+      />
       <Header />
       <main className="pt-20">
         <section className="py-20 lg:py-32">

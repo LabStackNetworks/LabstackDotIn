@@ -1,12 +1,28 @@
 import { Code, Zap, Puzzle, Webhook, BookOpen, ArrowRight, CheckCircle } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import SEOHead from "@/components/SEOHead";
+import CTAButtons from "@/components/CTAButtons";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import { generateProductSchema } from "@/lib/structured-data";
 
 const Integrations = () => {
+  const structuredData = generateProductSchema({
+    name: "Healthcare API Integrations",
+    description: "One API for diagnostics, pharmacy, consultations, and specialized care. Vendor-agnostic integration platform.",
+    url: "https://labstack.in/platform/integrations"
+  });
+
   return (
     <div className="min-h-screen bg-background">
+      <SEOHead 
+        title="Healthcare API Integrations"
+        description="One API for diagnostics, pharmacy, consultations, and specialized care. Vendor-agnostic integration platform."
+        keywords="healthcare API integration, medical service integration, healthcare middleware, unified healthcare API"
+        canonical="https://labstack.in/platform/integrations"
+        structuredData={structuredData}
+      />
       <Header />
       <main className="pt-20">
         {/* Hero */}

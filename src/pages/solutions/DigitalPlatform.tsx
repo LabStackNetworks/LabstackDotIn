@@ -2,9 +2,18 @@ import { Smartphone, Activity, FileText, ArrowRight, TrendingUp, Users, CheckCir
 import { Button } from "@/components/ui/button";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import SEOHead from "@/components/SEOHead";
+import CTAButtons from "@/components/CTAButtons";
 import { Link } from "react-router-dom";
+import { generateProductSchema } from "@/lib/structured-data";
 
 const DigitalPlatform = () => {
+  const structuredData = generateProductSchema({
+    name: "Labstack Digital Platform",
+    description: "White-label patient experience platform with structured health data, digital results, and cross-service continuity. No more PDFs.",
+    url: "https://labstack.in/solutions/digital-platform"
+  });
+
   const capabilities = [
     {
       title: "White-Label Patient Flows",
@@ -33,6 +42,13 @@ const DigitalPlatform = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEOHead 
+        title="Digital Platform Solutions"
+        description="White-label patient experience platform with structured health data, digital results, and cross-service continuity. No more PDFs."
+        keywords="white-label health platform, patient engagement platform, digital health records, structured health data, patient experience platform"
+        canonical="https://labstack.in/solutions/digital-platform"
+        structuredData={structuredData}
+      />
       <Header />
       <main className="pt-20">
         <section className="py-20 lg:py-32">

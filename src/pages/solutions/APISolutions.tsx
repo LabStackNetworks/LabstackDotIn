@@ -2,9 +2,18 @@ import { Code, Zap, Shield, TrendingUp, ArrowRight, CheckCircle, FileCode } from
 import { Button } from "@/components/ui/button";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import SEOHead from "@/components/SEOHead";
+import CTAButtons from "@/components/CTAButtons";
 import { Link } from "react-router-dom";
+import { generateProductSchema } from "@/lib/structured-data";
 
 const APISolutions = () => {
+  const structuredData = generateProductSchema({
+    name: "Labstack Healthcare API Solutions",
+    description: "Developer-first healthcare APIs for diagnostics, pharmacy, consultations. Modern RESTful APIs with webhooks, SDKs, and comprehensive documentation.",
+    url: "https://labstack.in/solutions/api-solutions"
+  });
+
   const apiFeatures = [
     {
       title: "RESTful Healthcare APIs",
@@ -32,6 +41,13 @@ const APISolutions = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEOHead 
+        title="Healthcare API Solutions"
+        description="Developer-first healthcare APIs for diagnostics, pharmacy, consultations. Modern RESTful APIs with webhooks, SDKs, and comprehensive documentation."
+        keywords="healthcare API, medical API integration, diagnostics API, pharmacy API, telemedicine API, healthcare developer tools"
+        canonical="https://labstack.in/solutions/api-solutions"
+        structuredData={structuredData}
+      />
       <Header />
       <main className="pt-20">
         <section className="py-20 lg:py-32">
