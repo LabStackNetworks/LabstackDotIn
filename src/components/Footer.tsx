@@ -4,12 +4,12 @@ import { Link } from "react-router-dom";
 const Footer = () => {
   const navigation = {
     platform: [
-      { name: "Overview", href: "#platform" },
-      { name: "Diagnostics", href: "#diagnostics" },
-      { name: "Consultations", href: "#consultations" },
-      { name: "Pharmacy", href: "#pharmacy" },
-      { name: "Specialized Networks", href: "#specialized" },
-      { name: "Integrations", href: "#integrations" }
+      { name: "Overview", href: "/platform-overview" },
+      { name: "Diagnostics", href: "/platform/diagnostics" },
+      { name: "Consultations", href: "/platform/consultations" },
+      { name: "Pharmacy", href: "/platform/pharmacy" },
+      { name: "Specialized Networks", href: "/platform/specialized-networks" },
+      { name: "Integrations", href: "/platform/integrations" }
     ],
     solutions: [
       { name: "Healthcare Infrastructure", href: "/solutions/healthcare-infrastructure" },
@@ -25,10 +25,9 @@ const Footer = () => {
       { name: "Providers", href: "/who-we-serve/providers" }
     ],
     providers: [
-      { name: "Hospitals & Labs", href: "#hospitals" },
-      { name: "Clinics", href: "#clinics" },
-      { name: "Nurses & Phlebotomists", href: "#nurses" },
-      { name: "Join Network", href: "#join" }
+      { name: "Hospitals & Labs", href: "/join-network/providers" },
+      { name: "Nurses & Phlebotomists", href: "/join-network/field-staff" },
+      { name: "Join Network", href: "/join-network/providers" }
     ],
     resources: [
       { name: "Blog", href: "#blog" },
@@ -38,8 +37,8 @@ const Footer = () => {
       { name: "Support", href: "#support" }
     ],
     company: [
-      { name: "About Us", href: "#about" },
-      { name: "Careers", href: "#careers" },
+      { name: "About Us", href: "/about" },
+      { name: "Careers", href: "/careers" },
       { name: "Press & Media", href: "#press" },
       { name: "Contact", href: "/contact" },
       { name: "Book Demo", href: "/book-demo" },
@@ -112,12 +111,12 @@ const Footer = () => {
                   <ul className="space-y-3">
                     {navigation.platform.map((item) => (
                       <li key={item.name}>
-                        <a
-                          href={item.href}
+                        <Link
+                          to={item.href}
                           className="text-sm text-muted-foreground hover:text-foreground transition-smooth"
                         >
                           {item.name}
-                        </a>
+                        </Link>
                       </li>
                     ))}
                   </ul>
@@ -178,12 +177,12 @@ const Footer = () => {
                   <ul className="space-y-3">
                     {navigation.providers.map((item) => (
                       <li key={item.name}>
-                        <a
-                          href={item.href}
+                        <Link
+                          to={item.href}
                           className="text-sm text-muted-foreground hover:text-foreground transition-smooth"
                         >
                           {item.name}
-                        </a>
+                        </Link>
                       </li>
                     ))}
                   </ul>
@@ -238,9 +237,9 @@ const Footer = () => {
         <div className="border-t border-border/50 py-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="flex flex-wrap items-center space-x-6 text-sm text-muted-foreground">
-              <a href="#privacy" className="hover:text-foreground transition-smooth">Privacy Policy</a>
-              <a href="#terms" className="hover:text-foreground transition-smooth">Terms of Service</a>
-              <a href="#partner-terms" className="hover:text-foreground transition-smooth">Partner Terms</a>
+              <Link to="/privacy-policy" className="hover:text-foreground transition-smooth">Privacy Policy</Link>
+              <Link to="/terms-conditions" className="hover:text-foreground transition-smooth">Terms of Service</Link>
+              <Link to="/partner-terms" className="hover:text-foreground transition-smooth">Partner Terms</Link>
             </div>
             
             <div className="text-sm text-muted-foreground text-center md:text-right">

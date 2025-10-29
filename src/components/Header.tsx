@@ -47,16 +47,16 @@ const Header = () => {
             title: "Core Services",
             items: [
               { label: "Overview", href: "/platform-overview", description: "Platform introduction" },
-              { label: "Diagnostics", href: "#diagnostics", description: "Lab tests & imaging" },
-              { label: "Consultations", href: "#consultations", description: "Virtual & in-person" },
-              { label: "Pharmacy", href: "#pharmacy", description: "Medicine delivery" }
+              { label: "Diagnostics", href: "/platform/diagnostics", description: "Lab tests & imaging" },
+              { label: "Consultations", href: "/platform/consultations", description: "Virtual & in-person" },
+              { label: "Pharmacy", href: "/platform/pharmacy", description: "Medicine delivery" }
             ]
           },
           {
             title: "Advanced Features",
             items: [
-              { label: "Specialized Networks", href: "#specialized-networks", description: "Expert care networks" },
-              { label: "Integrations", href: "#integrations", description: "Third-party connections" }
+              { label: "Specialized Networks", href: "/platform/specialized-networks", description: "Expert care networks" },
+              { label: "Integrations", href: "/platform/integrations", description: "Third-party connections" }
             ]
           }
         ]
@@ -169,9 +169,10 @@ const Header = () => {
             title: "Legal & Utilities",
             items: [
               { label: "API Docs", href: "#api-docs", description: "Technical documentation" },
-              { label: "Privacy Policy", href: "#privacy", description: "Data protection policy" },
-              { label: "Terms of Service", href: "#terms", description: "Service terms" },
-              { label: "Partner Terms", href: "#partner-terms", description: "Partnership conditions" }
+              { label: "Privacy Policy", href: "/privacy-policy", description: "Data protection policy" },
+              { label: "Terms of Service", href: "/terms-conditions", description: "Service terms" },
+              { label: "Partner Terms", href: "/partner-terms", description: "Partnership conditions" },
+              { label: "Careers", href: "/careers", description: "Join our team" }
             ]
           }
         ]
@@ -318,23 +319,49 @@ const Header = () => {
 
         {/* Mobile Menu */}
         {isMenuOpen && (
-          <div className="lg:hidden py-4 border-t border-border/50 mobile-safe-bottom">
-            <nav className="flex flex-col space-y-2">
+          <div className="lg:hidden py-4 border-t border-border/50 mobile-safe-bottom max-h-[70vh] overflow-y-auto">
+            <nav className="flex flex-col space-y-4">
               {navItems.map((item) => (
-                <a
-                  key={item.label}
-                  href={item.href}
-                  className="text-muted-foreground hover:text-foreground transition-smooth mobile-nav-item mobile-tap-highlight font-body"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  {item.label}
-                </a>
+                <div key={item.label}>
+                  <div className="px-4 py-2">
+                    <h3 className="font-heading font-semibold text-foreground mb-2">{item.label}</h3>
+                    {item.hasDropdown && item.dropdown && (
+                      <div className="space-y-2 pl-2">
+                        {item.dropdown.sections.map((section) => (
+                          <div key={section.title} className="space-y-1">
+                            {section.items.map((subItem) => (
+                              subItem.href.startsWith('/') ? (
+                                <Link
+                                  key={subItem.label}
+                                  to={subItem.href}
+                                  className="block py-2 px-3 text-sm text-muted-foreground hover:text-foreground hover:bg-accent/50 rounded-lg transition-smooth mobile-tap-highlight"
+                                  onClick={() => setIsMenuOpen(false)}
+                                >
+                                  {subItem.label}
+                                </Link>
+                              ) : (
+                                <a
+                                  key={subItem.label}
+                                  href={subItem.href}
+                                  className="block py-2 px-3 text-sm text-muted-foreground hover:text-foreground hover:bg-accent/50 rounded-lg transition-smooth mobile-tap-highlight"
+                                  onClick={() => setIsMenuOpen(false)}
+                                >
+                                  {subItem.label}
+                                </a>
+                              )
+                            ))}
+                          </div>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                </div>
               ))}
-              <div className="pt-4 space-y-3">
+              <div className="px-4 pt-4 space-y-3 border-t border-border/50">
                 <Button variant="ghost" size="sm" className="w-full justify-center mobile-btn mobile-tap-highlight font-body">
                   Login
                 </Button>
-                <Link to="/book-demo">
+                <Link to="/book-demo" onClick={() => setIsMenuOpen(false)}>
                   <Button size="sm" className="w-full btn-gradient mobile-btn mobile-tap-highlight font-body font-medium">
                     Book a Demo
                   </Button>

@@ -30,6 +30,10 @@ const DigitalHealthPlatforms = lazy(() => import("./pages/who-we-serve/DigitalHe
 const Providers = lazy(() => import("./pages/who-we-serve/Providers"));
 const ProvidersJoin = lazy(() => import("./pages/join/ProvidersJoin"));
 const FieldStaffJoin = lazy(() => import("./pages/join/FieldStaffJoin"));
+const PrivacyPolicy = lazy(() => import("./pages/PrivacyPolicy"));
+const TermsConditions = lazy(() => import("./pages/TermsConditions"));
+const PartnerTerms = lazy(() => import("./pages/PartnerTerms"));
+const Careers = lazy(() => import("./pages/Careers"));
 
 const queryClient = new QueryClient();
 
@@ -72,6 +76,10 @@ const App = () => (
               <Route path="/who-we-serve/providers" element={<Providers />} />
               <Route path="/join-network/providers" element={<ProvidersJoin />} />
               <Route path="/join-network/field-staff" element={<FieldStaffJoin />} />
+              <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+              <Route path="/terms-conditions" element={<TermsConditions />} />
+              <Route path="/partner-terms" element={<PartnerTerms />} />
+              <Route path="/careers" element={<Careers />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </Suspense>
