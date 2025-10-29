@@ -53,10 +53,10 @@ const Pharmacy = () => {
               <h2 className="text-3xl font-heading font-bold text-center mb-12">Why Pharmacy is Broken Today</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {[
-                  "Low fulfilment rates — high order drop-offs and stock-outs",
-                  "Fragmented vendors — hard to manage multiple pharmacies",
-                  "Fraud & misuse — weak controls on prescription drugs",
-                  "No unified tracking — difficult to reconcile orders across partners"
+                  "Low fulfilment rates: high order drop-offs and stock-outs",
+                  "Fragmented vendors: hard to manage multiple pharmacies",
+                  "Fraud & misuse: weak controls on prescription drugs",
+                  "No unified tracking: difficult to reconcile orders across partners"
                 ].map((problem, i) => (
                   <div key={i} className="flex items-start space-x-3 p-6 bg-card-gradient rounded-xl border border-destructive/20">
                     <div className="w-2 h-2 bg-destructive rounded-full mt-2 flex-shrink-0"></div>
@@ -71,7 +71,7 @@ const Pharmacy = () => {
 
             {/* Labstack Advantage */}
             <div className="max-w-6xl mx-auto mb-20">
-              <h2 className="text-3xl font-heading font-bold text-center mb-12">The Labstack Advantage — Pharmacy</h2>
+              <h2 className="text-3xl font-heading font-bold text-center mb-12">The Labstack Advantage: Pharmacy</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <div className="bg-card-gradient p-8 rounded-2xl border border-border/20">
                   <Pill className="w-12 h-12 text-primary mb-4" />

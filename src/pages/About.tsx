@@ -61,7 +61,7 @@ const About = () => {
             <div className="max-w-4xl mx-auto mb-20 bg-gradient-hero rounded-3xl p-8 lg:p-12 border border-border/50">
               <h2 className="text-3xl font-heading font-bold mb-6">What We're Building</h2>
               <p className="text-muted-foreground mb-6 leading-relaxed">
-                A nationwide, API-powered healthcare infrastructure — diagnostics, consultations, pharmacy, home care, and specialised services stitched together with standardised operations, billing, and quality controls.
+                A nationwide, API-powered healthcare infrastructure: diagnostics, consultations, pharmacy, home care, and specialised services stitched together with standardised operations, billing, and quality controls.
               </p>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div className="flex items-center space-x-2">
@@ -78,7 +78,7 @@ const About = () => {
                 </div>
                 <div className="flex items-center space-x-2">
                   <div className="w-2 h-2 bg-primary rounded-full"></div>
-                  <span className="text-sm">Pure B2B, non-conflict — your brand, your customer</span>
+                  <span className="text-sm">Pure B2B, non-conflict model. Your brand, your customer</span>
                 </div>
               </div>
             </div>

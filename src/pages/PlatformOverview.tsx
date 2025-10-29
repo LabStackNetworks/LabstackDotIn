@@ -45,11 +45,11 @@ const PlatformOverview = () => {
   ];
 
   const whyLabstack = [
-    "Widest Provider Network — 1000+ verified labs, doctors, pharmacies, and wellness providers",
-    "Seamless Operations — Automated routing, SLAs, escalations, and fulfilment",
-    "Financial Clarity — Transparent pricing, reconciliation, and revenue analytics",
-    "AI Intelligence — Smart care protocols, predictive scoring, and clinical insights",
-    "Pure B2B — Non-conflict model. No exclusivity. No lock-in"
+    "Widest Provider Network: 1000+ verified labs, doctors, pharmacies, and wellness providers",
+    "Seamless Operations: Automated routing, SLAs, escalations, and fulfilment",
+    "Financial Clarity: Transparent pricing, reconciliation, and revenue analytics",
+    "AI Intelligence: Smart care protocols, predictive scoring, and clinical insights",
+    "Pure B2B: Non-conflict model. No exclusivity. No lock-in"
   ];
 
   const customerQuotes = [
@@ -99,7 +99,7 @@ const PlatformOverview = () => {
               <div className="text-center mb-12">
                 <h2 className="text-3xl font-heading font-bold mb-6">Why Labstack Platform</h2>
                 <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-                  The operating system for healthcare delivery. Networks, automation, billing, and intelligence — unified in one platform.
+                  The operating system for healthcare delivery. Networks, automation, billing, and intelligence unified in one platform.
                 </p>
               </div>
               

@@ -55,9 +55,9 @@ const Integrations = () => {
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 {[
-                  "Legacy systems — EMRs, billing, and provider portals don't talk to each other",
-                  "Engineering drag — months wasted building custom integrations",
-                  "API chaos — every provider has its own schema, making scale impossible"
+                  "Legacy systems: EMRs, billing, and provider portals don't talk to each other",
+                  "Engineering drag: months wasted building custom integrations",
+                  "API chaos: every provider has its own schema, making scale impossible"
                 ].map((problem, i) => (
                   <div key={i} className="flex items-start space-x-3 p-6 bg-card-gradient rounded-xl border border-destructive/20">
                     <div className="w-2 h-2 bg-destructive rounded-full mt-2 flex-shrink-0"></div>
@@ -132,7 +132,7 @@ const Integrations = () => {
                 Everything Developers Need, Out of the Box
               </h2>
               <p className="text-lg text-muted-foreground mb-8">
-                Our documentation is written for speed — so your team spends days, not months, going live.
+                Our documentation is written for speed, so your team spends days, not months, going live.
               </p>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
                 {[

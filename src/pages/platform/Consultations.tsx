@@ -53,10 +53,10 @@ const Consultations = () => {
               <h2 className="text-3xl font-heading font-bold text-center mb-12">Why Consultations Are Broken Today</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {[
-                  "Fragmented doctor networks — hard to find, onboard, and scale",
-                  "No standard workflows — inconsistent tele-consults and in-person journeys",
-                  "Third-party dependency — relying on external video software without control",
-                  "Low integration — prescriptions, EMR, and pharmacy workflows don't sync"
+                  "Fragmented doctor networks: hard to find, onboard, and scale",
+                  "No standard workflows: inconsistent tele-consults and in-person journeys",
+                  "Third-party dependency: relying on external video software without control",
+                  "Low integration: prescriptions, EMR, and pharmacy workflows don't sync"
                 ].map((problem, i) => (
                   <div key={i} className="flex items-start space-x-3 p-6 bg-card-gradient rounded-xl border border-destructive/20">
                     <div className="w-2 h-2 bg-destructive rounded-full mt-2 flex-shrink-0"></div>
@@ -71,7 +71,7 @@ const Consultations = () => {
 
             {/* Labstack Advantage */}
             <div className="max-w-6xl mx-auto mb-20">
-              <h2 className="text-3xl font-heading font-bold text-center mb-12">The Labstack Advantage — Consultations</h2>
+              <h2 className="text-3xl font-heading font-bold text-center mb-12">The Labstack Advantage: Consultations</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div className="bg-card-gradient p-8 rounded-2xl border border-border/20">
                   <Users className="w-12 h-12 text-primary mb-4" />
@@ -84,7 +84,7 @@ const Consultations = () => {
                   <Video className="w-12 h-12 text-primary mb-4" />
                   <h3 className="text-xl font-heading font-bold mb-4">Teleconsultation SaaS</h3>
                   <p className="text-muted-foreground mb-4">Proprietary video platform</p>
-                  <p className="text-sm text-muted-foreground">No dependency on Zoom/Meet — complete control of the experience</p>
+                  <p className="text-sm text-muted-foreground">No dependency on Zoom/Meet. Complete control of the experience</p>
                 </div>
 
                 <div className="bg-card-gradient p-8 rounded-2xl border border-border/20">

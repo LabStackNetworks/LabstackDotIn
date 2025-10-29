@@ -43,7 +43,7 @@ const SpecializedNetworks = () => {
                 Switch On <span className="text-gradient">Specialised Care.</span> Instantly.
               </h1>
               <p className="text-lg lg:text-xl text-muted-foreground mb-8">
-                Ambulance, vision, dental, mental health, physiotherapy, and home care — all via one API and console. Specialized networks you don't have to build.
+                Ambulance, vision, dental, mental health, physiotherapy, and home care. All via one API and console. Specialized networks you don't have to build.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link to="/book-demo">
@@ -87,10 +87,10 @@ const SpecializedNetworks = () => {
               </p>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {[
-                  "Vendor sprawl — different contracts, billing, and portals for each service type",
-                  "No common SLAs — ambulances operate differently than physiotherapists",
-                  "Coverage gaps — uneven quality and availability across cities",
-                  "Reconciliation chaos — manual effort to close financial loops"
+                  "Vendor sprawl: different contracts, billing, and portals for each service type",
+                  "No common SLAs: ambulances operate differently than physiotherapists",
+                  "Coverage gaps: uneven quality and availability across cities",
+                  "Reconciliation chaos: manual effort to close financial loops"
                 ].map((problem, i) => (
                   <div key={i} className="flex items-start space-x-3 p-6 bg-card-gradient rounded-xl border border-destructive/20">
                     <div className="w-2 h-2 bg-destructive rounded-full mt-2 flex-shrink-0"></div>
@@ -109,7 +109,7 @@ const SpecializedNetworks = () => {
                 <div className="bg-gradient-hero rounded-2xl p-8 border border-border/50">
                   <h3 className="text-xl font-heading font-bold mb-4">Network aggregation</h3>
                   <p className="text-muted-foreground mb-4">
-                    One platform to tap ambulance fleets, dental clinics, physio networks, mental health providers — all verified and onboarded.
+                    One platform to tap ambulance fleets, dental clinics, physio networks, mental health providers. All verified and onboarded.
                   </p>
                 </div>
 
@@ -144,7 +144,7 @@ const SpecializedNetworks = () => {
                 <div className="bg-gradient-hero rounded-2xl p-8 border border-border/50">
                   <h3 className="text-xl font-heading font-bold mb-4">Single view of ops</h3>
                   <p className="text-muted-foreground mb-4">
-                    Bookings, status, exceptions — everything in one Console.
+                    Bookings, status, exceptions. Everything in one Console.
                   </p>
                 </div>
               </div>
@@ -222,7 +222,7 @@ const SpecializedNetworks = () => {
             <div className="max-w-4xl mx-auto mb-20 text-center">
               <div className="bg-gradient-hero p-8 rounded-2xl border border-border/50">
                 <p className="text-lg text-muted-foreground italic">
-                  "We stood up ambulance and home-care services across multiple cities in weeks — and everything runs through the same dashboards and SLAs we use for labs."
+                  "We stood up ambulance and home-care services across multiple cities in weeks. Everything runs through the same dashboards and SLAs we use for labs."
                 </p>
               </div>
             </div>

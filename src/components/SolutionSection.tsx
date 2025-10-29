@@ -125,10 +125,7 @@ const SolutionSection = () => {
               </h2>
               
               <p className="text-lg lg:text-xl text-muted-foreground max-w-3xl mx-auto mb-4">
-                Labstack gives you a full healthcare delivery stack — through APIs, a self-serve console, and ready widgets.
-              </p>
-              <p className="text-base lg:text-lg text-muted-foreground max-w-2xl mx-auto">
-                Plug it into your product, launch care anywhere.
+                Labstack gives you a full healthcare delivery stack. Plug it into your product, launch care anywhere.
               </p>
             </div>
 
@@ -384,7 +381,7 @@ const SolutionSection = () => {
                   You focus on products and growth.
                 </p>
                 <p className="text-lg font-semibold">
-                  Labstack handles care delivery — <span className="text-gradient">everywhere</span>.
+                  Labstack handles care delivery <span className="text-gradient">everywhere</span>.
                 </p>
               </div>
             </div>

@@ -67,8 +67,8 @@ const Footer = () => {
                 />
               </div>
               <p className="text-muted-foreground text-sm leading-relaxed mb-8">
-                Healthcare infrastructure platform enabling companies to launch care services 
-                across India in days, not months. One API, one console, one network.
+                The growth engine for healthcare. Launch diagnostics, consultations, pharmacy, 
+                and home care services across 9,000+ pincodes. One API, one platform.
               </p>
               
               <div className="space-y-3 mb-8">

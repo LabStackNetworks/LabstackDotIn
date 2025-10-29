@@ -33,7 +33,7 @@ const Diagnostics = () => {
                 Diagnostics, <span className="text-gradient">Delivered Nationwide.</span>
               </h1>
               <p className="text-lg lg:text-xl text-muted-foreground mb-8">
-                Complete diagnostics network — pathology, radiology, cardiac, genetic, allergy. 9,000+ pincodes coverage with quality frameworks built in.
+                Complete diagnostics network with pathology, radiology, cardiac, genetic, and allergy testing. 9,000+ pincodes coverage with quality frameworks built in.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link to="/book-demo">
@@ -53,10 +53,10 @@ const Diagnostics = () => {
               <h2 className="text-3xl font-heading font-bold text-center mb-12">Why Diagnostics is Broken Today</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {[
-                  "Opaque systems — No visibility into pricing, availability, or turnaround times",
-                  "Fragmented providers — Data silos and inconsistent service quality",
-                  "Dark providers — Outdated or no technology, no integration",
-                  "Poor customer experience — Missed collections, long waits, inaccurate reports"
+                  "Opaque systems: No visibility into pricing, availability, or turnaround times",
+                  "Fragmented providers: Data silos and inconsistent service quality",
+                  "Dark providers: Outdated or no technology, no integration",
+                  "Poor customer experience: Missed collections, long waits, inaccurate reports"
                 ].map((problem, i) => (
                   <div key={i} className="flex items-start space-x-3 p-6 bg-card-gradient rounded-xl border border-destructive/20">
                     <div className="w-2 h-2 bg-destructive rounded-full mt-2 flex-shrink-0"></div>
@@ -71,7 +71,7 @@ const Diagnostics = () => {
 
             {/* Labstack Advantage */}
             <div className="max-w-6xl mx-auto mb-20">
-              <h2 className="text-3xl font-heading font-bold text-center mb-12">The Labstack Advantage — Diagnostics</h2>
+              <h2 className="text-3xl font-heading font-bold text-center mb-12">The Labstack Advantage: Diagnostics</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <div className="bg-card-gradient p-8 rounded-2xl border border-border/20">
                   <TestTube className="w-12 h-12 text-primary mb-4" />
@@ -115,7 +115,7 @@ const Diagnostics = () => {
 
             {/* Quality Frameworks */}
             <div className="max-w-5xl mx-auto mb-20 bg-gradient-hero rounded-3xl p-8 lg:p-12 border border-border/50">
-              <h2 className="text-3xl font-heading font-bold mb-6">Quality isn't optional — it's built in.</h2>
+              <h2 className="text-3xl font-heading font-bold mb-6">Quality isn't optional. It's built in.</h2>
               <p className="text-lg text-muted-foreground mb-8">
                 Labstack actively enforces diagnostic quality through automated frameworks.
               </p>
@@ -200,7 +200,7 @@ const Diagnostics = () => {
             <div className="max-w-4xl mx-auto mb-20 text-center">
               <div className="bg-card-gradient p-8 rounded-2xl border border-border/20">
                 <p className="text-lg text-muted-foreground italic mb-4">
-                  "Labstack helped us expand diagnostics coverage into Tier-2 & Tier-3 cities in under a month — something that would've taken 12–18 months on our own."
+                  "Labstack helped us expand diagnostics coverage into Tier-2 & Tier-3 cities in under a month. Something that would've taken 12–18 months on our own."
                 </p>
               </div>
             </div>
