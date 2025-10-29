@@ -128,12 +128,21 @@ const Footer = () => {
                   <ul className="space-y-3">
                     {navigation.solutions.map((item) => (
                       <li key={item.name}>
-                        <a
-                          href={item.href}
-                          className="text-sm text-muted-foreground hover:text-foreground transition-smooth"
-                        >
-                          {item.name}
-                        </a>
+                        {item.href.startsWith('/') ? (
+                          <Link
+                            to={item.href}
+                            className="text-sm text-muted-foreground hover:text-foreground transition-smooth"
+                          >
+                            {item.name}
+                          </Link>
+                        ) : (
+                          <a
+                            href={item.href}
+                            className="text-sm text-muted-foreground hover:text-foreground transition-smooth"
+                          >
+                            {item.name}
+                          </a>
+                        )}
                       </li>
                     ))}
                   </ul>
@@ -144,12 +153,21 @@ const Footer = () => {
                   <ul className="space-y-3">
                     {navigation.whoWeServe.map((item) => (
                       <li key={item.name}>
-                        <a
-                          href={item.href}
-                          className="text-sm text-muted-foreground hover:text-foreground transition-smooth"
-                        >
-                          {item.name}
-                        </a>
+                        {item.href.startsWith('/') ? (
+                          <Link
+                            to={item.href}
+                            className="text-sm text-muted-foreground hover:text-foreground transition-smooth"
+                          >
+                            {item.name}
+                          </Link>
+                        ) : (
+                          <a
+                            href={item.href}
+                            className="text-sm text-muted-foreground hover:text-foreground transition-smooth"
+                          >
+                            {item.name}
+                          </a>
+                        )}
                       </li>
                     ))}
                   </ul>

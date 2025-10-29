@@ -220,12 +220,21 @@ const Header = () => {
                           <h3 className="text-xl font-heading font-bold mb-2">{item.dropdown.featured.title}</h3>
                           <p className="text-white/80 text-sm font-body leading-relaxed mb-6">{item.dropdown.featured.description}</p>
                         </div>
-                        <a 
-                          href={item.dropdown.featured.href}
-                          className="relative z-10 inline-flex items-center text-sm font-medium text-white hover:text-white/80 transition-colors"
-                        >
-                          Learn more →
-                        </a>
+                        {item.dropdown.featured.href.startsWith('/') ? (
+                          <Link 
+                            to={item.dropdown.featured.href}
+                            className="relative z-10 inline-flex items-center text-sm font-medium text-white hover:text-white/80 transition-colors"
+                          >
+                            Learn more →
+                          </Link>
+                        ) : (
+                          <a 
+                            href={item.dropdown.featured.href}
+                            className="relative z-10 inline-flex items-center text-sm font-medium text-white hover:text-white/80 transition-colors"
+                          >
+                            Learn more →
+                          </a>
+                        )}
                         {/* Decorative Elements */}
                         <div className="absolute -right-8 -bottom-8 w-24 h-24 bg-white/10 rounded-full"></div>
                         <div className="absolute -right-4 -top-4 w-16 h-16 bg-white/5 rounded-full"></div>
@@ -240,19 +249,34 @@ const Header = () => {
                                 {section.title}
                               </h4>
                               <div className="space-y-3 flex-1">
-                                {section.items.map((subItem, idx) => (
-                                  <a 
-                                    key={subItem.label}
-                                    href={subItem.href}
-                                    className="group block p-3 rounded-xl hover:bg-accent/50 transition-all duration-200 hover:scale-102"
-                                  >
-                                    <div className="text-sm font-medium font-body text-foreground group-hover:text-primary transition-colors">
-                                      {subItem.label}
-                                    </div>
-                                    <div className="text-xs text-muted-foreground mt-1 font-body">
-                                      {subItem.description}
-                                    </div>
-                                  </a>
+                                {section.items.map((subItem) => (
+                                  subItem.href.startsWith('/') ? (
+                                    <Link 
+                                      key={subItem.label}
+                                      to={subItem.href}
+                                      className="group block p-3 rounded-xl hover:bg-accent/50 transition-all duration-200 hover:scale-102"
+                                    >
+                                      <div className="text-sm font-medium font-body text-foreground group-hover:text-primary transition-colors">
+                                        {subItem.label}
+                                      </div>
+                                      <div className="text-xs text-muted-foreground mt-1 font-body">
+                                        {subItem.description}
+                                      </div>
+                                    </Link>
+                                  ) : (
+                                    <a 
+                                      key={subItem.label}
+                                      href={subItem.href}
+                                      className="group block p-3 rounded-xl hover:bg-accent/50 transition-all duration-200 hover:scale-102"
+                                    >
+                                      <div className="text-sm font-medium font-body text-foreground group-hover:text-primary transition-colors">
+                                        {subItem.label}
+                                      </div>
+                                      <div className="text-xs text-muted-foreground mt-1 font-body">
+                                        {subItem.description}
+                                      </div>
+                                    </a>
+                                  )
                                 ))}
                               </div>
                             </div>
@@ -306,9 +330,11 @@ const Header = () => {
                 <Button variant="ghost" size="sm" className="w-full justify-center mobile-btn mobile-tap-highlight font-body">
                   Login
                 </Button>
-                <Button size="sm" className="w-full btn-gradient mobile-btn mobile-tap-highlight font-body font-medium">
-                  Book a Demo
-                </Button>
+                <Link to="/book-demo">
+                  <Button size="sm" className="w-full btn-gradient mobile-btn mobile-tap-highlight font-body font-medium">
+                    Book a Demo
+                  </Button>
+                </Link>
               </div>
             </nav>
           </div>

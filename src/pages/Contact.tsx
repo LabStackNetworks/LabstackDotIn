@@ -1,6 +1,7 @@
 import { Mail, Phone, MapPin, Clock } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { Link } from "react-router-dom";
 
 const Contact = () => {
   return (
@@ -91,18 +92,18 @@ const Contact = () => {
                   <div className="card-gradient rounded-2xl p-8">
                     <h3 className="text-xl font-heading font-bold mb-4">Looking for something specific?</h3>
                     <div className="space-y-3">
-                      <a href="/book-demo" className="block p-3 rounded-lg bg-muted/50 hover:bg-primary/10 transition-colors">
+                      <Link to="/book-demo" className="block p-3 rounded-lg bg-muted/50 hover:bg-primary/10 transition-colors">
                         <span className="font-medium">Book a Demo →</span>
                         <p className="text-sm text-muted-foreground mt-1">See the platform in action</p>
-                      </a>
-                      <a href="/start-building" className="block p-3 rounded-lg bg-muted/50 hover:bg-primary/10 transition-colors">
+                      </Link>
+                      <Link to="/start-building" className="block p-3 rounded-lg bg-muted/50 hover:bg-primary/10 transition-colors">
                         <span className="font-medium">Start Building →</span>
                         <p className="text-sm text-muted-foreground mt-1">Get API access and start integrating</p>
-                      </a>
-                      <a href="/custom-solutions" className="block p-3 rounded-lg bg-muted/50 hover:bg-primary/10 transition-colors">
+                      </Link>
+                      <Link to="/custom-solutions" className="block p-3 rounded-lg bg-muted/50 hover:bg-primary/10 transition-colors">
                         <span className="font-medium">Custom Solutions →</span>
                         <p className="text-sm text-muted-foreground mt-1">Discuss your specific needs</p>
-                      </a>
+                      </Link>
                     </div>
                   </div>
                 </div>

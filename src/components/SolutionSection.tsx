@@ -1,5 +1,6 @@
 import { Network, Zap, CreditCard, Brain, Stethoscope, Smartphone, Code, Globe } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 const SolutionSection = () => {
   const infrastructureLayers = [
@@ -433,9 +434,11 @@ const SolutionSection = () => {
               Our team can help architect tailored healthcare infrastructure for your unique needs.
             </p>
           </div>
-          <Button size="lg" variant="outline" className="btn-outline-gradient text-lg px-8 py-3 h-auto shadow-elegant hover:shadow-glow transform transition-all duration-300 hover:scale-105">
-            Discuss Custom Solutions
-          </Button>
+          <Link to="/custom-solutions">
+            <Button size="lg" variant="outline" className="btn-outline-gradient text-lg px-8 py-3 h-auto shadow-elegant hover:shadow-glow transform transition-all duration-300 hover:scale-105">
+              Discuss Custom Solutions
+            </Button>
+          </Link>
         </div>
       </div>
     </section>

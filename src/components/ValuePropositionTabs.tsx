@@ -60,7 +60,7 @@ const ValuePropositionTabs = () => {
         "RESTful APIs with real-time data",
         "Structured health data formats",
         "Comprehensive webhook support",
-        "Enterprise-grade security"
+        "Comprehensive SDKs"
       ],
       stat: "One API for everything",
       color: "from-orange-500 to-red-600"
