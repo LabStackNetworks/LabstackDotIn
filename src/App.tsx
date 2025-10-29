@@ -39,8 +39,7 @@ const PartnerTerms = lazy(() => import("./pages/PartnerTerms"));
 const Careers = lazy(() => import("./pages/Careers"));
 const Login = lazy(() => import("./pages/Login"));
 const Blog = lazy(() => import("./pages/resources/Blog"));
-const CaseStudies = lazy(() => import("./pages/resources/CaseStudies"));
-const Whitepapers = lazy(() => import("./pages/resources/Whitepapers"));
+const ResearchHub = lazy(() => import("./pages/resources/ResearchHub"));
 const APIDocumentation = lazy(() => import("./pages/resources/APIDocumentation"));
 
 const queryClient = new QueryClient();
@@ -84,10 +83,9 @@ const App = () => (
               <Route path="/partner-terms" element={<PartnerTerms />} />
               <Route path="/careers" element={<Careers />} />
               <Route path="/login" element={<Login />} />
-              <Route path="/resources/blog" element={<Blog />} />
-              <Route path="/resources/case-studies" element={<CaseStudies />} />
-              <Route path="/resources/whitepapers" element={<Whitepapers />} />
-              <Route path="/resources/api-documentation" element={<APIDocumentation />} />
+          <Route path="/resources/blog" element={<Blog />} />
+          <Route path="/resources/research-hub" element={<ResearchHub />} />
+          <Route path="/resources/api-documentation" element={<APIDocumentation />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </Suspense>

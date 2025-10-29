@@ -96,7 +96,9 @@ const APIDocumentation = () => {
                 Comprehensive technical documentation, SDKs, code examples, and integration guides for healthcare APIs.
               </p>
 
-              <TLDR summary="Complete REST API docs with SDKs (JS, Python, PHP, Java), sandbox environment, webhooks, Postman collections, and interactive guides. 99.9% uptime SLA. Free sandbox testing." />
+              <div className="sr-only">
+                <TLDR summary="Complete REST API docs with SDKs (JS, Python, PHP, Java), sandbox environment, webhooks, Postman collections, and interactive guides. 99.9% uptime SLA. Free sandbox testing." />
+              </div>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
                 <Link to="/start-building">

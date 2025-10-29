@@ -71,7 +71,9 @@ const Blog = () => {
                 In-depth guides, industry trends, technical tutorials, and regulatory updates for healthcare technology leaders.
               </p>
 
-              <TLDR summary="Comprehensive healthcare content covering API integration, Tier-2/3 expansion, regulatory compliance (IT Act 2000, DISHA, Telemedicine Guidelines), case studies, and market insights. Published 2-3x weekly." />
+              <div className="sr-only">
+                <TLDR summary="Comprehensive healthcare content covering API integration, Tier-2/3 expansion, regulatory compliance (IT Act 2000, DISHA, Telemedicine Guidelines), case studies, and market insights. Published 2-3x weekly." />
+              </div>
             </div>
 
             {/* Featured Articles */}
@@ -145,8 +147,6 @@ const Blog = () => {
               </div>
             </div>
 
-            {/* FAQ Section */}
-            <FAQ items={blogFAQs} />
           </div>
         </section>
       </main>

@@ -190,16 +190,10 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://labstack.in/resources/case-studies</loc>
+    <loc>https://labstack.in/resources/research-hub</loc>
     <lastmod>2024-01-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://labstack.in/resources/whitepapers</loc>
-    <lastmod>2024-01-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://labstack.in/resources/api-documentation</loc>
