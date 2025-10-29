@@ -88,9 +88,10 @@ const SolutionsShowcase = () => {
             {solutions.map((solution, index) => {
               const IconComponent = solution.icon;
               return (
-                <div 
+                <Link 
                   key={index}
-                  className="flex-shrink-0 w-80 lg:w-96 card-gradient rounded-2xl p-8 lg:p-10 card-hover group relative overflow-hidden"
+                  to={solution.link}
+                  className="flex-shrink-0 w-80 lg:w-96 card-gradient rounded-2xl p-8 lg:p-10 card-hover group relative overflow-hidden block cursor-pointer"
                 >
                   {/* Background Gradient */}
                   <div className={`absolute inset-0 bg-gradient-to-br ${solution.gradient} opacity-5 group-hover:opacity-10 transition-smooth`}></div>
@@ -135,13 +136,11 @@ const SolutionsShowcase = () => {
                     </div>
 
                     {/* CTA */}
-                    <Link to={solution.link}>
-                      <Button size="sm" className="w-full btn-gradient text-sm">
-                        {solution.cta}
-                      </Button>
-                    </Link>
+                    <Button size="sm" className="w-full btn-gradient text-sm pointer-events-none">
+                      {solution.cta}
+                    </Button>
                   </div>
-                </div>
+                </Link>
               );
             })}
           </div>

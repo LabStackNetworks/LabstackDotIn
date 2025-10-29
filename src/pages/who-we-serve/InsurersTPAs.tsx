@@ -1,4 +1,4 @@
-import { Shield, DollarSign, Clock, CheckCircle, ArrowRight } from "lucide-react";
+import { Shield, DollarSign, Clock, CheckCircle, ArrowRight, TrendingUp, Users } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -6,17 +6,24 @@ import { Link } from "react-router-dom";
 
 const InsurersTPAs = () => {
   const problems = [
-    "OPD bleeds money due to fraud & abuse (15-20% losses)",
-    "₹200-400 processing cost on ₹500-2,000 claims",
-    "PPMC delays kill sales (5-10 days = 8-12% conversion loss/day)",
-    "No preventive care infrastructure"
+    "OPD claims riddled with leakage and misuse (12%+ fraud)",
+    "Fragmented networks = poor member NPS and complaints",
+    "Weak controls on SKUs, no standard escalation playbooks",
+    "Manual reconciliation drains ops resources"
   ];
 
   const solutions = [
-    "Cashless OPD across 9,000+ pincodes with real-time fraud detection",
-    "PPMC completed in <48 hours",
-    "Processing cost reduced to <₹100",
-    "Preventive programs with data for underwriting"
+    "API-first rails: eligibility → booking → tracking → reconciliation",
+    "SKU-level controls + audit trails reduce fraud significantly",
+    "SLA frameworks with real-time escalations and CSAT monitoring",
+    "Automated reconciliation and unified billing across services"
+  ];
+
+  const memberJourney = [
+    { step: "Check Eligibility", desc: "Member verifies coverage and books consult/test" },
+    { step: "Consult/Tele", desc: "Doctor consultation with e-Rx issued" },
+    { step: "Pharmacy Fulfillment", desc: "Medicine delivery with SKU-level fraud rules" },
+    { step: "Auto Reconciliation", desc: "Fraud detection, reporting, and billing automated" }
   ];
 
   return (
@@ -25,6 +32,7 @@ const InsurersTPAs = () => {
       <main className="pt-20">
         <section className="py-20 lg:py-32">
           <div className="container mx-auto px-6">
+            {/* Hero */}
             <div className="max-w-4xl mx-auto text-center mb-16">
               <div className="inline-flex items-center space-x-2 bg-primary/10 border border-primary/20 px-3 py-1 rounded-full mb-6">
                 <div className="w-2 h-2 bg-primary rounded-full animate-pulse"></div>
@@ -32,16 +40,16 @@ const InsurersTPAs = () => {
               </div>
 
               <h1 className="text-4xl lg:text-6xl font-heading font-bold mb-6">
-                Turn OPD from Cost Center to <span className="text-gradient">Revenue Engine</span>
+                Fraud-Controlled OPD, <span className="text-gradient">SLA-Backed Fulfillment</span>
               </h1>
 
               <p className="text-lg lg:text-xl text-muted-foreground mb-8">
-                Cashless OPD, instant PPMC, fraud prevention, and preventive care that drives profitable growth.
+                Cut claim leakage and deliver diagnostics, consults, and pharmacy at scale — with audit trails and fraud detection built in.
               </p>
 
               <Link to="/book-demo">
                 <Button size="lg" className="btn-gradient">
-                  Schedule Strategy Call
+                  Transform Member Experience
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
               </Link>
@@ -52,7 +60,7 @@ const InsurersTPAs = () => {
               <div className="bg-destructive/10 border border-destructive/20 rounded-2xl p-8">
                 <h3 className="text-xl font-heading font-bold mb-6 flex items-center">
                   <Shield className="w-6 h-6 mr-2 text-destructive" />
-                  What's Breaking
+                  Current Challenges
                 </h3>
                 <ul className="space-y-3">
                   {problems.map((problem, index) => (
@@ -67,7 +75,7 @@ const InsurersTPAs = () => {
               <div className="bg-success/10 border border-success/20 rounded-2xl p-8">
                 <h3 className="text-xl font-heading font-bold mb-6 flex items-center">
                   <CheckCircle className="w-6 h-6 mr-2 text-success" />
-                  Labstack Fix
+                  Labstack Solution
                 </h3>
                 <ul className="space-y-3">
                   {solutions.map((solution, index) => (
@@ -80,25 +88,94 @@ const InsurersTPAs = () => {
               </div>
             </div>
 
-            {/* Metrics */}
+            {/* Member Journey Flow */}
+            <div className="max-w-5xl mx-auto mb-20">
+              <h2 className="text-3xl font-heading font-bold text-center mb-12">
+                Member Journey with Fraud Controls
+              </h2>
+              <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+                {memberJourney.map((item, index) => (
+                  <div key={index} className="relative">
+                    <div className="bg-card-gradient p-6 rounded-xl border border-border/20 text-center card-hover">
+                      <div className="w-12 h-12 mx-auto mb-4 rounded-full bg-primary/20 flex items-center justify-center text-primary font-bold text-lg">
+                        {index + 1}
+                      </div>
+                      <h3 className="font-heading font-bold mb-2">{item.step}</h3>
+                      <p className="text-sm text-muted-foreground">{item.desc}</p>
+                    </div>
+                    {index < memberJourney.length - 1 && (
+                      <div className="hidden md:block absolute top-1/2 -right-3 w-6 h-0.5 bg-border"></div>
+                    )}
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Key Benefits */}
+            <div className="max-w-5xl mx-auto bg-gradient-hero rounded-3xl p-8 lg:p-12 border border-border/50 mb-20">
+              <h2 className="text-3xl font-heading font-bold text-center mb-12">
+                Why Insurers Choose Labstack
+              </h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div className="bg-card/50 p-6 rounded-xl">
+                  <Shield className="w-8 h-8 text-primary mb-4" />
+                  <h3 className="font-heading font-bold mb-2">SKU-Level Fraud Controls</h3>
+                  <p className="text-sm text-muted-foreground">
+                    Control inclusions/exclusions at SKU level. Automated audit trails capture every transaction for compliance and fraud detection.
+                  </p>
+                </div>
+                <div className="bg-card/50 p-6 rounded-xl">
+                  <Clock className="w-8 h-8 text-secondary mb-4" />
+                  <h3 className="font-heading font-bold mb-2">SLA-Backed Operations</h3>
+                  <p className="text-sm text-muted-foreground">
+                    99%+ fulfillment rate with real-time escalations. No more member complaints about delayed services or missed appointments.
+                  </p>
+                </div>
+                <div className="bg-card/50 p-6 rounded-xl">
+                  <TrendingUp className="w-8 h-8 text-success mb-4" />
+                  <h3 className="font-heading font-bold mb-2">Member NPS Improvement</h3>
+                  <p className="text-sm text-muted-foreground">
+                    Seamless member experience across diagnostics, consults, and pharmacy leads to measurable NPS improvements.
+                  </p>
+                </div>
+                <div className="bg-card/50 p-6 rounded-xl">
+                  <DollarSign className="w-8 h-8 text-warning mb-4" />
+                  <h3 className="font-heading font-bold mb-2">Reduced Leakage</h3>
+                  <p className="text-sm text-muted-foreground">
+                    12% leakage reduction reported by partners through automated fraud detection and audit trails.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Target Outcomes Metrics */}
             <div className="max-w-5xl mx-auto bg-gradient-hero rounded-3xl p-8 lg:p-12 border border-border/50">
               <h3 className="text-2xl font-heading font-bold text-center mb-8">Target Outcomes</h3>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
                 <div>
                   <DollarSign className="w-8 h-8 text-success mx-auto mb-3" />
-                  <div className="text-3xl font-heading font-bold text-gradient mb-2">&lt;5%</div>
-                  <p className="text-sm text-muted-foreground">OPD Fraud Rate</p>
+                  <div className="text-3xl font-heading font-bold text-gradient mb-2">12%</div>
+                  <p className="text-sm text-muted-foreground">Leakage Reduction</p>
+                  <p className="text-xs text-muted-foreground mt-2">Through fraud controls and audit trails</p>
                 </div>
                 <div>
                   <Clock className="w-8 h-8 text-primary mx-auto mb-3" />
-                  <div className="text-3xl font-heading font-bold text-gradient mb-2">&lt;48hrs</div>
-                  <p className="text-sm text-muted-foreground">PPMC Turnaround</p>
+                  <div className="text-3xl font-heading font-bold text-gradient mb-2">99%+</div>
+                  <p className="text-sm text-muted-foreground">SLA Adherence</p>
+                  <p className="text-xs text-muted-foreground mt-2">Real-time escalations and monitoring</p>
                 </div>
                 <div>
-                  <CheckCircle className="w-8 h-8 text-secondary mx-auto mb-3" />
-                  <div className="text-3xl font-heading font-bold text-gradient mb-2">&gt;75%</div>
-                  <p className="text-sm text-muted-foreground">Policy Conversion Rate</p>
+                  <Users className="w-8 h-8 text-secondary mx-auto mb-3" />
+                  <div className="text-3xl font-heading font-bold text-gradient mb-2">+25</div>
+                  <p className="text-sm text-muted-foreground">NPS Point Gain</p>
+                  <p className="text-xs text-muted-foreground mt-2">Improved member experience</p>
                 </div>
+              </div>
+
+              <div className="mt-12 bg-success/10 border border-success/20 rounded-xl p-6 text-center">
+                <p className="text-success font-medium italic">
+                  "Leakage dropped, NPS improved once OPD ran on Labstack infra instead of fragmented vendors."
+                </p>
               </div>
             </div>
           </div>

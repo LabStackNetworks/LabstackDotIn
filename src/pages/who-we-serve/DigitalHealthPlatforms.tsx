@@ -1,4 +1,4 @@
-import { Smartphone, TrendingUp, Repeat, ArrowRight } from "lucide-react";
+import { Smartphone, TrendingUp, Repeat, ArrowRight, CheckCircle, Zap } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -6,17 +6,17 @@ import { Link } from "react-router-dom";
 
 const DigitalHealthPlatforms = () => {
   const currentIssues = [
-    "Single-service models bleed (pharmacy 10-15%, doctor booking ₹50-150)",
-    "Can't scale to tier-2/3, gaps push users away",
-    "'Connected care' is marketing - prescriptions → patient chases lab → report never returns",
-    "High CAC, low repeat, stagnant revenue"
+    "12-18 months lost signing contracts with labs, pharmacies, doctors",
+    "No standard SLAs or integrations; ops break city by city",
+    "Engineers pulled into compliance and APIs instead of growth",
+    "Investors pressing for nationwide coverage yesterday"
   ];
 
   const withLabstack = [
-    "Go full-stack in 14 days via single API",
-    "True connected care: doctor prescribes → sample collected → report flows back → follow-up booked",
-    "Revenue per customer 2-3x (e.g., pharmacy ₹800 + diagnostics ₹400 + consults ₹180 = ₹1,380)",
-    "Churn reduced by 30-50%"
+    "48-hour launch — infra ready across diagnostics, pharmacy, consults",
+    "One API • One Console • One Network for your entire ops",
+    "Nationwide coverage: 9,000+ pincodes, 30,000+ orders/month capacity",
+    "Pure B2B model — your customers remain yours, no competition"
   ];
 
   return (
@@ -32,11 +32,11 @@ const DigitalHealthPlatforms = () => {
               </div>
 
               <h1 className="text-4xl lg:text-6xl font-heading font-bold mb-6">
-                From Single Service to <span className="text-gradient">Full-Stack Health</span>
+                Scale Healthcare <span className="text-gradient">Nationwide in Days</span>
               </h1>
 
               <p className="text-lg lg:text-xl text-muted-foreground mb-8">
-                One API. Nationwide coverage. True connected care that finally closes the loop.
+                One API. Nationwide coverage. Launch in 48 hours instead of 12-18 months.
               </p>
 
               <Link to="/start-building">
@@ -47,7 +47,6 @@ const DigitalHealthPlatforms = () => {
               </Link>
             </div>
 
-            {/* Problem vs Solution */}
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto mb-16">
               <div>
                 <h3 className="text-xl font-heading font-bold mb-6">What's Breaking</h3>
@@ -74,25 +73,35 @@ const DigitalHealthPlatforms = () => {
               </div>
             </div>
 
-            {/* Revenue Growth */}
             <div className="max-w-5xl mx-auto bg-gradient-hero rounded-3xl p-8 lg:p-12 border border-border/50">
-              <h3 className="text-2xl font-heading font-bold text-center mb-8">Revenue Impact</h3>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+              <h3 className="text-2xl font-heading font-bold text-center mb-8">Platform Impact</h3>
+              <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
+                <div>
+                  <Zap className="w-8 h-8 text-warning mx-auto mb-3" />
+                  <div className="text-3xl font-heading font-bold text-gradient mb-2">48hrs</div>
+                  <p className="text-sm text-muted-foreground">Go-Live Time</p>
+                </div>
                 <div>
                   <TrendingUp className="w-8 h-8 text-success mx-auto mb-3" />
-                  <div className="text-3xl font-heading font-bold text-gradient mb-2">2-3x</div>
-                  <p className="text-sm text-muted-foreground">Revenue Per Customer (12 months)</p>
+                  <div className="text-3xl font-heading font-bold text-gradient mb-2">30K+</div>
+                  <p className="text-sm text-muted-foreground">Orders/Month</p>
                 </div>
                 <div>
                   <Repeat className="w-8 h-8 text-primary mx-auto mb-3" />
-                  <div className="text-3xl font-heading font-bold text-gradient mb-2">-30-50%</div>
-                  <p className="text-sm text-muted-foreground">Churn Reduction</p>
+                  <div className="text-3xl font-heading font-bold text-gradient mb-2">99.5%</div>
+                  <p className="text-sm text-muted-foreground">API Uptime</p>
                 </div>
                 <div>
-                  <Smartphone className="w-8 h-8 text-secondary mx-auto mb-3" />
-                  <div className="text-3xl font-heading font-bold text-gradient mb-2">&gt;3</div>
-                  <p className="text-sm text-muted-foreground">LTV/CAC Ratio</p>
+                  <CheckCircle className="w-8 h-8 text-secondary mx-auto mb-3" />
+                  <div className="text-3xl font-heading font-bold text-gradient mb-2">9K+</div>
+                  <p className="text-sm text-muted-foreground">Pincodes</p>
                 </div>
+              </div>
+
+              <div className="mt-12 bg-success/10 border border-success/20 rounded-xl p-6 text-center">
+                <p className="text-success font-medium italic">
+                  "We scaled nationwide in days with Labstack, saving a year of build. Conversions rose 20% once Tier-2/3 opened."
+                </p>
               </div>
             </div>
           </div>

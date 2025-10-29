@@ -1,4 +1,4 @@
-import { Activity, Users, TrendingUp, ArrowRight } from "lucide-react";
+import { Activity, Users, TrendingUp, ArrowRight, CheckCircle, Heart } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -6,19 +6,24 @@ import { Link } from "react-router-dom";
 
 const DiseaseManagement = () => {
   const careGaps = [
-    "Diagnostics: Limited network, metro-only, inconsistent experience",
-    "Specialists: No coverage, patients skip or self-search",
-    "Home care: Daily insulin, wound care, physio missing",
-    "Pharmacy: Limited network, no local fulfillment",
-    "Emergency: No SOS support, trust collapses"
+    "Patients drop off between test → consult → meds → follow-up",
+    "Reports stuck in PDFs, useless for long-term clinical insight",
+    "Manual nudges don't scale; low adherence, poor outcomes",
+    "Limited network coverage prevents continuous care delivery"
   ];
 
   const labstackFix = [
-    "Diagnostics in 24hrs, reports auto-flow to platform",
-    "Specialist consults available anywhere",
-    "Nursing & home care across 9,000 pincodes",
-    "Meds delivered with tracking",
-    "Ambulances dispatched on-demand"
+    "Protocol-driven pathways — tests, consults, pharmacy linked by API",
+    "Raw digital values — structured, longitudinal data for care decisions",
+    "Follow-up automation for adherence and protocol compliance",
+    "Nationwide coverage ensures care continuity across geographies"
+  ];
+
+  const workflowExample = [
+    { step: "Book HbA1c", desc: "Home test scheduled automatically" },
+    { step: "Flag Values", desc: "Abnormal results trigger consult" },
+    { step: "E-Rx to Pharmacy", desc: "Medications delivered same day" },
+    { step: "Automated Follow-Up", desc: "Reminders for repeat tests & lifestyle checks" }
   ];
 
   return (
@@ -34,11 +39,11 @@ const DiseaseManagement = () => {
               </div>
 
               <h1 className="text-4xl lg:text-6xl font-heading font-bold mb-6">
-                Close Every Gap in the <span className="text-gradient">Care Loop</span>
+                Make Continuous Care <span className="text-gradient">Actually Continuous</span>
               </h1>
 
               <p className="text-lg lg:text-xl text-muted-foreground mb-8">
-                End-to-end infrastructure for diabetes, cardiac, cancer care. 95%+ test completion drives proven outcomes.
+                Deliver diagnostics, consults, pharmacy, and follow-ups as one pathway — not a maze of disconnected vendors.
               </p>
 
               <Link to="/book-demo">
@@ -76,6 +81,28 @@ const DiseaseManagement = () => {
               </div>
             </div>
 
+            {/* Workflow Example */}
+            <div className="max-w-5xl mx-auto mb-20">
+              <h2 className="text-3xl font-heading font-bold text-center mb-4">
+                Diabetes Care Pathway Example
+              </h2>
+              <p className="text-center text-muted-foreground mb-12">Protocol-driven care from diagnosis to ongoing management</p>
+              <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+                {workflowExample.map((item, index) => (
+                  <div key={index} className="relative">
+                    <div className="bg-gradient-hero rounded-xl p-6 border border-border/50 text-center card-hover">
+                      <Heart className="w-8 h-8 text-success mx-auto mb-3" />
+                      <h3 className="font-heading font-bold mb-2">{item.step}</h3>
+                      <p className="text-sm text-muted-foreground">{item.desc}</p>
+                    </div>
+                    {index < workflowExample.length - 1 && (
+                      <div className="hidden md:block absolute top-1/2 -right-3 w-6 h-0.5 bg-border"></div>
+                    )}
+                  </div>
+                ))}
+              </div>
+            </div>
+
             {/* Impact Metrics */}
             <div className="max-w-5xl mx-auto bg-gradient-hero rounded-3xl p-8 lg:p-12 border border-border/50">
               <h3 className="text-2xl font-heading font-bold text-center mb-8">Program Impact</h3>
@@ -95,6 +122,12 @@ const DiseaseManagement = () => {
                   <div className="text-3xl font-heading font-bold text-gradient mb-2">2.5-3x</div>
                   <p className="text-sm text-muted-foreground">LTV Increase</p>
                 </div>
+              </div>
+
+              <div className="mt-12 bg-success/10 border border-success/20 rounded-xl p-6 text-center">
+                <p className="text-success font-medium italic">
+                  "Raw values and follow-up automation kept patients on protocol. Drop-offs reduced sharply."
+                </p>
               </div>
             </div>
           </div>
