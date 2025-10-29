@@ -14,6 +14,11 @@ const CustomSolutions = lazy(() => import("./pages/CustomSolutions"));
 const Contact = lazy(() => import("./pages/Contact"));
 const About = lazy(() => import("./pages/About"));
 const PlatformOverview = lazy(() => import("./pages/PlatformOverview"));
+const Diagnostics = lazy(() => import("./pages/platform/Diagnostics"));
+const Consultations = lazy(() => import("./pages/platform/Consultations"));
+const Pharmacy = lazy(() => import("./pages/platform/Pharmacy"));
+const SpecializedNetworks = lazy(() => import("./pages/platform/SpecializedNetworks"));
+const Integrations = lazy(() => import("./pages/platform/Integrations"));
 const HealthcareInfrastructure = lazy(() => import("./pages/solutions/HealthcareInfrastructure"));
 const DigitalPlatform = lazy(() => import("./pages/solutions/DigitalPlatform"));
 const APISolutions = lazy(() => import("./pages/solutions/APISolutions"));
@@ -46,6 +51,11 @@ const App = () => (
             <Routes>
               <Route path="/" element={<Index />} />
               <Route path="/platform-overview" element={<PlatformOverview />} />
+              <Route path="/platform/diagnostics" element={<Diagnostics />} />
+              <Route path="/platform/consultations" element={<Consultations />} />
+              <Route path="/platform/pharmacy" element={<Pharmacy />} />
+              <Route path="/platform/specialized-networks" element={<SpecializedNetworks />} />
+              <Route path="/platform/integrations" element={<Integrations />} />
               <Route path="/about" element={<About />} />
               <Route path="/book-demo" element={<BookDemo />} />
               <Route path="/start-building" element={<StartBuilding />} />
