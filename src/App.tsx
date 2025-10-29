@@ -12,6 +12,8 @@ const BookDemo = lazy(() => import("./pages/BookDemo"));
 const StartBuilding = lazy(() => import("./pages/StartBuilding"));
 const CustomSolutions = lazy(() => import("./pages/CustomSolutions"));
 const Contact = lazy(() => import("./pages/Contact"));
+const About = lazy(() => import("./pages/About"));
+const PlatformOverview = lazy(() => import("./pages/PlatformOverview"));
 const HealthcareInfrastructure = lazy(() => import("./pages/solutions/HealthcareInfrastructure"));
 const DigitalPlatform = lazy(() => import("./pages/solutions/DigitalPlatform"));
 const APISolutions = lazy(() => import("./pages/solutions/APISolutions"));
@@ -32,10 +34,19 @@ const App = () => (
       <TooltipProvider>
         <Toaster />
         <Sonner />
-        <BrowserRouter>
-          <Suspense fallback={<div className="container mx-auto px-6 py-20 text-center text-muted-foreground">Loading…</div>}>
+        <BrowserRouter future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>
+          <Suspense fallback={
+            <div className="min-h-screen bg-background flex items-center justify-center">
+              <div className="text-center">
+                <div className="inline-block w-12 h-12 border-4 border-primary border-t-transparent rounded-full animate-spin mb-4"></div>
+                <p className="text-muted-foreground">Loading...</p>
+              </div>
+            </div>
+          }>
             <Routes>
               <Route path="/" element={<Index />} />
+              <Route path="/platform-overview" element={<PlatformOverview />} />
+              <Route path="/about" element={<About />} />
               <Route path="/book-demo" element={<BookDemo />} />
               <Route path="/start-building" element={<StartBuilding />} />
               <Route path="/custom-solutions" element={<CustomSolutions />} />

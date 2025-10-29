@@ -39,14 +39,14 @@ const Header = () => {
         featured: {
           title: "Complete Healthcare Platform",
           description: "End-to-end healthcare infrastructure and services",
-          href: "#platform-overview",
+          href: "/platform-overview",
           icon: Building2
         },
         sections: [
           {
             title: "Core Services",
             items: [
-              { label: "Overview", href: "#platform-overview", description: "Platform introduction" },
+              { label: "Overview", href: "/platform-overview", description: "Platform introduction" },
               { label: "Diagnostics", href: "#diagnostics", description: "Lab tests & imaging" },
               { label: "Consultations", href: "#consultations", description: "Virtual & in-person" },
               { label: "Pharmacy", href: "#pharmacy", description: "Medicine delivery" }
@@ -154,14 +154,14 @@ const Header = () => {
         featured: {
           title: "About Labstack",
           description: "Mission-driven healthcare technology company",
-          href: "#about-us",
+          href: "/about",
           icon: Info
         },
         sections: [
           {
             title: "Company Info",
             items: [
-              { label: "About Us", href: "#about-us", description: "Our mission & vision" },
+              { label: "About Us", href: "/about", description: "Our mission & vision" },
               { label: "Contact", href: "/contact", description: "Get in touch with us" }
             ]
           },
