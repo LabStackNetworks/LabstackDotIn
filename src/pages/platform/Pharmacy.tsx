@@ -3,16 +3,22 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import CTAButtons from "@/components/CTAButtons";
+import FAQ from "@/components/FAQ";
+import TLDR from "@/components/design-system/TLDR";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { generateProductSchema } from "@/lib/structured-data";
+import { generateProductSchema, generateFAQSchema } from "@/lib/structured-data";
+import { pharmacyFAQs } from "@/lib/faqs/pharmacy-faqs";
 
 const Pharmacy = () => {
-  const structuredData = generateProductSchema({
-    name: "Labstack Pharmacy Network",
-    description: "Nationwide pharmacy network with 60-min delivery in metros, fraud prevention, and SKU-level controls. Home delivery or store pickup.",
-    url: "https://labstack.in/platform/pharmacy"
-  });
+  const structuredData = [
+    generateProductSchema({
+      name: "Labstack Pharmacy Network",
+      description: "Nationwide pharmacy network with 60-min delivery in metros, fraud prevention, and SKU-level controls. Home delivery or store pickup.",
+      url: "https://labstack.in/platform/pharmacy"
+    }),
+    generateFAQSchema(pharmacyFAQs)
+  ];
 
   return (
     <div className="min-h-screen bg-background">
@@ -35,7 +41,7 @@ const Pharmacy = () => {
               <p className="text-lg lg:text-xl text-muted-foreground mb-8">
                 Nationwide pharmacy network with 60-min delivery in metros, fraud prevention, and SKU-level controls. Home delivery or store pickup.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
                 <Link to="/book-demo">
                   <Button size="lg" className="btn-gradient">
                     Book a Demo
@@ -46,6 +52,17 @@ const Pharmacy = () => {
                   Explore Pharmacy Network
                 </Button>
               </div>
+              
+              {/* TLDR Summary */}
+              <TLDR 
+                summary="Launch pharmacy delivery in 48 hours with 20,000+ pincode coverage, prescription verification, and SKU-level fraud controls. 60-minute delivery in metros."
+                keyPoints={[
+                  "E-pharmacies, local chains, and dark stores",
+                  "Automated prescription verification",
+                  "Real-time inventory and substitution",
+                  "Transparent pricing and reconciliation"
+                ]}
+              />
             </div>
 
             {/* Problems */}
@@ -187,9 +204,14 @@ const Pharmacy = () => {
             <div className="max-w-4xl mx-auto mb-20 text-center">
               <div className="bg-card-gradient p-8 rounded-2xl border border-border/20">
                 <p className="text-lg text-muted-foreground italic">
-                  "Labstack enabled us to offer medicine delivery in under an hour across top metros while keeping complete control over SKU compliance and reconciliation."
+                  "Labstack's pharmacy network helped us scale medicine delivery from metros to Tier-3 cities in 2 months. Their fraud prevention saved us from major losses."
                 </p>
               </div>
+            </div>
+
+            {/* FAQ Section */}
+            <div className="mb-20">
+              <FAQ items={pharmacyFAQs} title="Pharmacy FAQ" />
             </div>
 
             {/* Final CTA */}

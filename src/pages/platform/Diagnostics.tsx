@@ -4,45 +4,20 @@ import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import CTAButtons from "@/components/CTAButtons";
 import FAQ from "@/components/FAQ";
+import TLDR from "@/components/design-system/TLDR";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { generateProductSchema, generateFAQSchema } from "@/lib/structured-data";
+import { diagnosticsFAQs } from "@/lib/faqs/diagnostics-faqs";
 
 const Diagnostics = () => {
-  const faqItems = [
-    {
-      question: "What is the coverage area for diagnostics services?",
-      answer: "We cover 9,000+ pincodes for home sample collection and 2,600+ pincodes for center visits across India, including Tier-1, Tier-2, and Tier-3 cities."
-    },
-    {
-      question: "How long does it take to integrate Labstack diagnostics?",
-      answer: "Integration takes 48 hours on average. Our API-first approach and comprehensive documentation enable rapid deployment."
-    },
-    {
-      question: "What types of tests are supported?",
-      answer: "We support pathology, radiology, cardiac tests, genetic testing, microbiome analysis, and food allergy panels (IgG/IgE) through our verified lab network."
-    },
-    {
-      question: "How do you ensure diagnostic quality?",
-      answer: "We enforce 100% report verification before delivery, implement phlebo blacklisting by pincode, use CSAT-based lab selection, and provide digital raw values with smart reporting."
-    },
-    {
-      question: "Can I white-label the diagnostics experience?",
-      answer: "Yes, diagnostics services are fully white-labelable. Your brand, your experience, powered by our infrastructure."
-    },
-    {
-      question: "What is the report delivery time?",
-      answer: "Delivery times vary by test type. Standard pathology tests are delivered within 24-48 hours. Complex genetic or specialized tests may take longer based on lab processing times."
-    }
-  ];
-
   const structuredData = [
     generateProductSchema({
       name: "Labstack Diagnostics Network",
       description: "Complete diagnostics network across 9,000+ pincodes. Pathology, radiology, cardiac, genetic testing with quality frameworks built in.",
       url: "https://labstack.in/platform/diagnostics"
     }),
-    generateFAQSchema(faqItems)
+    generateFAQSchema(diagnosticsFAQs)
   ];
 
   return (
@@ -238,7 +213,7 @@ const Diagnostics = () => {
 
             {/* FAQ Section */}
             <div className="mb-20">
-              <FAQ items={faqItems} />
+              <FAQ items={diagnosticsFAQs} title="Diagnostics FAQ" />
             </div>
 
             {/* Final CTA */}

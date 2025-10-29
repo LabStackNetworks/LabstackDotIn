@@ -5,7 +5,10 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import CTAButtons from "@/components/CTAButtons";
 import SEOHead from "@/components/SEOHead";
-import { generateOrganizationSchema, generateProductSchema } from "@/lib/structured-data";
+import FAQ from "@/components/FAQ";
+import TLDR from "@/components/design-system/TLDR";
+import { generateOrganizationSchema, generateProductSchema, generateFAQSchema } from "@/lib/structured-data";
+import { platformOverviewFAQs } from "@/lib/faqs/platform-overview-faqs";
 
 const PlatformOverview = () => {
   const structuredData = [
@@ -14,7 +17,8 @@ const PlatformOverview = () => {
       name: "Labstack Healthcare Platform",
       description: "Complete healthcare operating system. Launch diagnostics, consultations, pharmacy, and specialized networks in days, not months.",
       url: "https://labstack.in/platform-overview"
-    })
+    }),
+    generateFAQSchema(platformOverviewFAQs)
   ];
 
   const platformLayers = [

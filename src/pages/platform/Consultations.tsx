@@ -3,16 +3,22 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import CTAButtons from "@/components/CTAButtons";
+import FAQ from "@/components/FAQ";
+import TLDR from "@/components/design-system/TLDR";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { generateProductSchema } from "@/lib/structured-data";
+import { generateProductSchema, generateFAQSchema } from "@/lib/structured-data";
+import { consultationsFAQs } from "@/lib/faqs/consultations-faqs";
 
 const Consultations = () => {
-  const structuredData = generateProductSchema({
-    name: "Labstack Consultations Platform",
-    description: "Pan-India doctor network with proprietary teleconsultation SaaS, EMR, and e-prescriptions. Launch online and offline consultations instantly.",
-    url: "https://labstack.in/platform/consultations"
-  });
+  const structuredData = [
+    generateProductSchema({
+      name: "Labstack Consultations Platform",
+      description: "Pan-India doctor network with proprietary teleconsultation SaaS, EMR, and e-prescriptions. Launch online and offline consultations instantly.",
+      url: "https://labstack.in/platform/consultations"
+    }),
+    generateFAQSchema(consultationsFAQs)
+  ];
 
   return (
     <div className="min-h-screen bg-background">
@@ -35,7 +41,7 @@ const Consultations = () => {
               <p className="text-lg lg:text-xl text-muted-foreground mb-8">
                 Pan-India doctor network with proprietary teleconsultation SaaS, EMR, and e-prescriptions. Launch online and offline consultations instantly.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
                 <Link to="/book-demo">
                   <Button size="lg" className="btn-gradient">
                     Book a Demo
@@ -46,6 +52,17 @@ const Consultations = () => {
                   Explore Doctors Network
                 </Button>
               </div>
+              
+              {/* TLDR Summary */}
+              <TLDR 
+                summary="Launch teleconsultations in 48 hours with 2,000+ verified doctors, proprietary video platform, and integrated EMR. No third-party dependencies."
+                keyPoints={[
+                  "Pan-India coverage across all specialties",
+                  "White-label video consultation platform",
+                  "DISHA-compliant e-prescriptions",
+                  "EMR integration and automation"
+                ]}
+              />
             </div>
 
             {/* Problems */}
@@ -174,6 +191,11 @@ const Consultations = () => {
                   "With Labstack's consultation network, we enabled both tele-consults and in-clinic visits nationwide within weeks. The SaaS stack gave us complete control of workflows with no external dependency."
                 </p>
               </div>
+            </div>
+
+            {/* FAQ Section */}
+            <div className="mb-20">
+              <FAQ items={consultationsFAQs} title="Consultations FAQ" />
             </div>
 
             {/* Final CTA */}
