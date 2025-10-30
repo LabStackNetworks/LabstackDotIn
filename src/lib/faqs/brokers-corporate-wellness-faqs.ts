@@ -1,55 +1,104 @@
 /**
  * FAQ Data for Brokers & Corporate Wellness
- * Focus on policy differentiation, ARPU growth, revenue models
+ * Deep dive into corporate wellness deployment, engagement strategies, ROI metrics
  */
 
 export const brokersCorporateWellnessFAQs = [
+  // Corporate Wellness Program Setup
+  {
+    question: "How quickly can I launch wellness programs for corporate clients across India?",
+    answer: "14 days for basic wellness rollout (diagnostics, teleconsults, pharmacy) covering employees across metros (Mumbai, Delhi, Bangalore, Pune, Hyderabad, Chennai) and tier-2 cities (Indore, Jaipur, Coimbatore, Kochi, Nagpur, Chandigarh). 3-4 weeks for customized programs with white-label branding, custom benefits design, and integration with client's HRMS. Works for corporates from 100 to 100,000+ employees across 50+ office locations nationwide."
+  },
+  {
+    question: "What wellness services can I offer to differentiate from competitor brokers?",
+    answer: "Comprehensive suite: (1) Preventive diagnostics—annual health checks, home sample collection across 9,000+ pincodes, (2) Unlimited teleconsultations—GP and 25+ specialties 24/7, (3) Medicine delivery—cashless pharmacy in 18,000+ pincodes, (4) Mental health support—therapy sessions, stress management, (5) Nutrition coaching—personalized diet plans, (6) Fitness programs—step challenges, yoga classes, (7) Health risk assessments with personalized reports, (8) On-site health camps at corporate offices across all major cities. Package these as Bronze/Silver/Gold tiers to match different corporate budgets and employee demographics."
+  },
+  {
+    question: "How do wellness programs improve my client retention as a broker?",
+    answer: "Wellness creates stickiness: (1) 35% higher policy renewal rates—employees actively using wellness services resist policy changes, (2) Quarterly engagement touchpoints—health camps, wellness campaigns keep your brand visible, (3) Data-driven renewal conversations—show claims reduction (15-20%), improved employee health metrics, utilization reports demonstrating value, (4) HR advocacy—wellness solves HR problems (absenteeism, productivity, engagement) making you indispensable beyond just insurance, (5) Referrals—satisfied corporate clients recommend you to peer companies. Wellness transforms you from price-competing broker to value-adding partner."
+  },
+  {
+    question: "What is typical employee engagement rate in corporate wellness programs?",
+    answer: "Industry benchmarks: 40-50% for wellness programs without healthcare access, 70-85% for integrated programs with tangible benefits (diagnostics, consultations, pharmacy). Key drivers: (1) Free doctor consultations—70-80% employees use within first 3 months, (2) Annual health checkups at home—60-70% completion if convenient booking, (3) Medicine delivery—35-40% recurring users for chronic medications, (4) Mental health—25-30% utilization if confidential and stigma-free. Engagement varies by industry: IT/services companies (75-80%), manufacturing (50-60%), retail/hospitality (40-50%). Age factor: 25-40 age group most engaged (80%+), 40-55 age (60%), 55+ age (40%)."
+  },
+  {
+    question: "Can I organize health camps at corporate offices across multiple cities?",
+    answer: "Yes, end-to-end health camp management across India: (1) Pre-camp: Employee communication, slot booking, logistics coordination, (2) On-site execution: Phlebotomists for sample collection, basic diagnostics (BP, BMI, blood sugar), doctor consultations, health education sessions, (3) Post-camp: Digital reports within 48 hours, abnormal value follow-ups, specialist referrals if needed. Coverage: All metros (Mumbai, Delhi NCR, Bangalore, Pune, Hyderabad, Chennai, Kolkata) and 100+ tier-2 cities (Indore, Jaipur, Chandigarh, Coimbatore, Kochi, Nagpur, Visakhapatnam, Lucknow, Bhubaneswar, Ahmedabad, Vadodara). Camps from 50 to 5,000+ employees. Popular at IT parks in Bangalore (Whitefield, Electronic City), Pune (Hinjewadi, Magarpatta), Hyderabad (HITEC City, Gachibowli), NCR (Cyber City Gurgaon, Noida Sector 62-144), Mumbai (BKC, Powai)."
+  },
+  
+  // Revenue Models & Pricing
   {
     question: "How can OPD benefits help me sell more insurance policies?",
-    answer: "OPD benefits differentiate your policies from competitors, increase perceived value without major premium hikes, appeal to younger demographics, and create recurring engagement touchpoints throughout the policy year."
+    answer: "OPD as differentiator in competitive bids: (1) Value perception—employees value OPD more than higher sum insured they'll never use, (2) Younger demographics—millennials/Gen-Z prioritize preventive care over hospitalization, (3) Premium justification—10-15% premium increase easier to sell when bundled with daily-use OPD vs just insurance, (4) Corporate wellness RFPs—increasingly require OPD/wellness in tender documents, (5) Broker fee uplift—charge 2-3% higher commission on OPD+insurance bundles. Real example: Broker in Mumbai won ₹2.5 Cr AUM corporate account by offering OPD benefits while competitors quoted lower premiums without OPD—CFO chose value over price."
   },
   {
     question: "What is the typical ARPU increase from adding OPD services?",
-    answer: "Partners see ~15% ARPU uplift by bundling OPD (diagnostics + consultations + pharmacy). Additional revenue from preventive care packages and wellness services. Recurring revenue stream beyond one-time commission."
+    answer: "Revenue impact: (1) Direct ARPU uplift: 15-25% increase by bundling OPD—example: ₹6,000 PMPM base insurance + ₹1,200 PMPM OPD = ₹7,200 total (20% increase), (2) Commission structure: Earn 10-15% margin on OPD services beyond insurance commission, (3) Recurring revenue: OPD generates monthly utilization revenue vs one-time insurance commission, (4) Upsell opportunities: Cross-sell preventive packages, specialty consults, wellness coaching—additional ₹500-1,000 PMPY revenue, (5) Multi-year value: Improved retention (35% higher renewal) compounds ARPU over client lifetime. Typical broker serving 50 corporate accounts (25,000 lives total): ₹15-20 lakhs additional annual revenue from OPD margins + commissions."
   },
   {
     question: "Can I customize OPD benefits for different policy tiers?",
-    answer: "Yes, fully customizable. Bronze tier: limited tests + telemedicine. Silver: more tests + pharmacy. Gold: unlimited consults + premium diagnostics. Configure limits, inclusions, and pricing per tier."
+    answer: "Fully flexible tier design: (1) Bronze tier (₹800-1,200 PMPM OPD): 2 diagnostic tests/year, 4 teleconsults/year, ₹500 pharmacy limit/month, no home collection, (2) Silver tier (₹1,200-1,800 PMPM OPD): 4 diagnostic tests, unlimited teleconsults, ₹1,000 pharmacy limit, home collection included, 1 annual preventive checkup, (3) Gold tier (₹1,800-2,500 PMPM OPD): Unlimited diagnostics, unlimited consultations including specialists, ₹2,000 pharmacy limit, home collection, mental health sessions, nutrition coaching, 2 preventive checkups. Customize by: Sum insured bands, employee designation (CXO vs junior staff), family vs individual coverage, geography (metro vs tier-2/3). Configure limits, inclusions, and pricing per tier via admin portal."
   },
   {
-    question: "How does reconciliation work when serving multiple client companies?",
-    answer: "Separate client IDs, isolated billing per customer, SKU-level tracking, automated invoicing per client, API-based reconciliation, and consolidated reporting. No manual sorting of multi-client transactions."
+    question: "How does reconciliation work when serving multiple corporate clients?",
+    answer: "Multi-client billing automation: (1) Separate corporate IDs—each client gets unique identifier, (2) Isolated billing—monthly invoices per client with SKU-level breakup (diagnostics, consultations, pharmacy), (3) Employee-level tracking—see which employee used what service for audit trail, (4) Consolidated reporting—single dashboard showing all clients, drill down into each, (5) Flexible billing cycles—monthly, quarterly, or annual as per client preference, (6) API integration—push invoices to your accounting system (Tally, QuickBooks, Zoho Books), (7) Copay handling—if employees pay portion, automatically deducted before corporate billing. No manual Excel reconciliation across 10-50 corporate clients."
   },
   {
     question: "Do I compete with Labstack for end customers?",
-    answer: "No, pure B2B model. We never interact with your customers. Your brand, your relationships, your revenue. We operate invisibly as infrastructure. Non-compete guaranteed in contracts."
+    answer: "Pure B2B partnership, zero channel conflict: (1) Labstack never sells directly to your corporate clients—we are infrastructure only, (2) Your brand on everything—member app, communications, reports, customer support, (3) Your client relationships—you own commercial terms, contracts, negotiations, (4) Your revenue—you set pricing, capture margin, control billing, (5) Non-compete guaranteed in partnership agreement—we will not approach your clients, (6) Co-branding prohibited—we remain invisible to end users. Common concern but unfounded—we enable your business, not compete with it. Similar to how insurance companies don't compete with brokers despite powering policies."
   },
+  
+  // Geographic Coverage & Operations
   {
     question: "Can I offer OPD benefits in Tier-2/3 cities where my clients operate?",
-    answer: "Yes, 9,000+ pincodes covered including Tier-2 and Tier-3. Enables you to serve corporate clients, government schemes, and regional insurers with nationwide presence. Consistent quality across geographies."
+    answer: "9,000+ pincodes covered including extensive tier-2/3 presence: (1) Diagnostics: Home collection in 9,000+ pincodes, lab centers in 2,600+ locations including tier-2 cities (Indore, Jaipur, Lucknow, Coimbatore, Kochi, Nagpur, Visakhapatnam, Bhubaneswar, Chandigarh, Ludhiana, Vadodara, Rajkot, Nashik, Aurangabad, Mysore, Mangalore) and tier-3 cities (Guntur, Vijayawada, Ranchi, Raipur, Dehradun, Gorakhpur, Muzaffarpur, Siliguri, Guwahati), (2) Consultations: Teleconsult 24/7 anywhere with internet, in-person clinics in 600+ cities, (3) Pharmacy: Medicine delivery to 18,000+ pincodes covering remote areas in UP, Bihar, Rajasthan, MP, Maharashtra, Tamil Nadu, Kerala. Same quality standards and SLA across all geographies—no difference between metro and tier-3 experience. Enables you to serve clients with multi-location operations (manufacturing plants, retail chains, bank branches, government offices) without worrying about local vendor management."
   },
+  {
+    question: "How do you handle corporate clients with remote or rural workforces?",
+    answer: "Solutions for dispersed workforces: (1) Home-based services—diagnostics, consultations, pharmacy delivered to employees' homes even in rural pincodes, (2) Teleconsult-first approach—80% of medical needs addressable via video/phone, reduces dependency on local hospitals, (3) Nearby town coverage—if employee in village, directed to nearest tier-3 town (10-20 km radius) for services, (4) Mobile health camps—periodic camps at factory/site locations for bulk screening and consultations, (5) Offline enrollment—physical forms, call center support for employees without smartphones/internet. Works for: Plantation workers (tea estates in Assam), manufacturing plants (Gujarat, Tamil Nadu, Maharashtra), mining sites (Odisha, Jharkhand, Chhattisgarh), FMCG distributors (nationwide), bank branch employees (rural branches), government employees (district offices). Example: Enabled OPD benefits for 15,000 employees of manufacturing company across 80 factory locations in 12 states."
+  },
+  {
+    question: "Can I organize vaccination camps for corporates across multiple office locations?",
+    answer: "Corporate vaccination programs: (1) Flu vaccination camps—annual drives at office premises, trained nurses, cold chain logistics, 500-5,000 employees/day capacity, (2) COVID vaccination/boosters—coordinate with local health authorities, documentation, post-vaccination monitoring, (3) Hepatitis B, Typhoid for field staff—customized per industry (healthcare workers, waste management, field sales), (4) On-site vs off-site—camps at corporate offices in major cities or vouchers for employees to get vaccinated at nearby clinics, (5) Pre-travel vaccinations for employees on international assignments. Logistics: Vaccine procurement with cold chain, certified nurses, adverse event management, digital vaccination certificates, employer reporting. Available across metros and tier-2 cities. Popular at: IT parks (Bangalore, Pune, Hyderabad, Chennai), corporate offices (Mumbai BKC, Delhi NCR), pharma companies, hospitals, BPOs, manufacturing plants. Pricing: ₹300-800 per dose depending on vaccine type and volume."
+  },
+  
+  // Client Success & Support
   {
     question: "How do I price OPD bundles for my customers?",
-    answer: "We provide cost prices, you add your markup. Transparent pricing, volume discounts available, no hidden fees. You control customer-facing pricing and package design. Pricing flexibility for competitive positioning."
+    answer: "Pricing flexibility: (1) Cost-plus model—we provide wholesale rates (e.g., ₹800 PMPM for Silver tier), you add 15-25% margin and sell at ₹1,000-1,200 PMPM, (2) Transparent pricing—SKU-level rate cards available, no hidden fees, (3) Volume discounts—100-500 lives (standard rates), 500-2,000 lives (5% discount), 2,000-5,000 lives (8% discount), 5,000+ lives (10-15% discount, negotiable), (4) Geographic variations—metro rates vs tier-2/3 rates reflect local costs, (5) Customization impact—more inclusions = higher cost, more restrictions = lower cost. Typical corporate OPD pricing: ₹800-1,200 PMPM (basic), ₹1,200-1,800 PMPM (standard), ₹1,800-2,500 PMPM (premium). You control customer-facing pricing and package design for competitive positioning—some brokers target volume with thin margins, others premium positioning with high margins."
   },
   {
-    question: "What happens if a customer experiences service failure?",
-    answer: "SLA-backed guarantees: missed appointments trigger alternate provider assignment, delayed reports escalated automatically, refunds processed if unresolved. We handle complaints and resolutions, protecting your reputation."
+    question: "What happens if a corporate client's employee experiences service failure?",
+    answer: "SLA-backed guarantees protecting your reputation: (1) Failed home collection—alternate phlebotomist sent within 2 hours or center visit arranged, (2) Delayed diagnostic reports—automatic escalation at 24-hour mark, expedited processing, compensation if delay impacts patient, (3) Doctor unavailable—backup doctor assigned within 15 minutes for teleconsult, (4) Medicine delivery failure—re-dispatch immediately, alternate pharmacy if needed, (5) Wrong reports—re-testing at no cost, corrected reports within 24 hours. Complaint handling: Employee complains to you → You log in partner portal and raise ticket → We investigate within 2 hours → Resolution within 24 hours → Employee notified of resolution. Escalation matrix: Partner success manager (0-24 hours) → Operations head (24-48 hours) → CXO level (48+ hours). We handle complaints end-to-end to protect your client relationships. Quality issues result in provider blacklisting and SLA credits to your account."
   },
   {
-    question: "Can I integrate OPD services into my existing policy platform?",
-    answer: "Yes, API-first design. Integrate booking, eligibility checks, and tracking into your portal. White-label widgets available. Webhooks for real-time status updates. Seamless customer experience on your platform."
+    question: "Can I integrate OPD services into my existing broker platform or member app?",
+    answer: "API-first integration: (1) Headless APIs—integrate booking, eligibility checks, order tracking into your existing broker platform/portal, (2) White-label widgets—embeddable booking flows if you don't want to build UI, (3) Webhooks—real-time notifications for order status, reports ready, claims updates, (4) SSO integration—single sign-on so employees don't need separate login, (5) Custom branding—your logo, colors, fonts across all touchpoints, (6) Mobile SDKs—if you have iOS/Android apps for members. Integration timeline: 1-2 weeks for basic API integration, 3-4 weeks for full white-label customization. Technical requirements: REST API knowledge, webhook handling, basic frontend for displaying booking confirmations. We provide: Sandbox environment, API documentation, Postman collections, integration support, developer office hours."
   },
   {
-    question: "How does prescription monetization work?",
-    answer: "When doctors issue e-prescriptions during consultations, automatic handoff to pharmacy network. Medication delivered to patient. You earn margin on pharmacy fulfillment. Seamless patient experience, additional revenue for you."
+    question: "What marketing support do you provide to help me sell wellness programs?",
+    answer: "Sales enablement: (1) Pitch decks—customizable presentations highlighting wellness ROI, case studies, competitive differentiation, (2) Proposal templates—RFP responses, SOW documents for wellness programs, (3) ROI calculators—tools to show corporate clients financial impact of wellness investment, (4) Collateral—one-pagers, brochures, employee communication templates, (5) Demo videos—screen recordings showing member experience, (6) Webinars—joint webinars with your corporate prospects on wellness trends, (7) Co-marketing—feature your success stories on our blog/social media, (8) Training—quarterly training sessions for your sales team on wellness program design, objection handling, pricing strategies. White-label support: All materials can be rebranded as your own with no Labstack mention."
+  },
+  
+  // Advanced Features
+  {
+    question: "How does prescription monetization work for additional revenue?",
+    answer: "Pharmacy revenue model: (1) Doctor issues e-prescription during teleconsult, (2) Auto-redirect employee to pharmacy section in app, (3) Medicines added to cart with prices shown (MRP or discounted), (4) You earn 8-12% margin on medicine sales, (5) Same-day delivery across 18,000+ pincodes, (6) Cashless if included in OPD benefit or copay charged to employee. Revenue example: 1,000 employees, 30% use teleconsult monthly, 50% of consultations result in prescriptions, average prescription value ₹600 → 150 prescriptions/month × ₹600 × 10% margin = ₹9,000 monthly pharmacy revenue. Annualized: ₹1.08 lakhs additional revenue per 1,000 employees. Scales significantly for large corporate clients (5,000-10,000 employees). No effort required—automatic handoff from consultation to pharmacy."
   },
   {
-    question: "What support do you provide during client onboarding?",
-    answer: "Dedicated account manager, integration assistance, marketing collateral for OPD benefits, training for your sales teams, co-branded launch materials, and ongoing operational support. White-glove service for large clients."
+    question: "Can I offer standalone wellness packages separate from insurance policies?",
+    answer: "Non-insurance wellness products: (1) Annual preventive health checkups—50+ test panels, ₹1,500-3,000 per employee, home collection, digital reports, (2) Executive health assessments—comprehensive packages for CXO/senior leadership, ₹5,000-15,000 per person including advanced imaging (MRI, CT, ECHO), (3) Chronic disease management programs—diabetes care, hypertension management, ₹8,000-12,000 per patient annually, (4) Mental health subscriptions—unlimited therapy sessions, ₹12,000-18,000 per employee annually, (5) Nutrition coaching programs—personalized diet plans, ₹6,000-10,000 per participant for 6 months, (6) Fitness challenges—step challenges, yoga classes, gamification with prizes, ₹500-1,000 per employee for 3-month program. Ideal for: Corporate wellness RFPs (separate from insurance), government tenders, individual consumers, startups wanting wellness without insurance. Diversify revenue beyond insurance brokerage commission which is under pricing pressure."
   },
   {
-    question: "Can I offer standalone wellness packages separate from insurance?",
-    answer: "Yes, preventive health packages, annual checkups, wellness coaching, fitness programs, mental health support—all bookable separately. Diversify revenue beyond insurance brokerage. Ideal for corporate wellness RFPs."
+    question: "What data and analytics do I get to demonstrate ROI to corporate clients?",
+    answer: "Comprehensive reporting: (1) Utilization dashboards—services consumed (diagnostics, consults, pharmacy) by employee demographics (age, gender, department, location), (2) Health outcomes—aggregated health risk scores, improvement trends in blood pressure, blood sugar, BMI, cholesterol over time, (3) Claims impact—comparison of healthcare claims 6 months pre-wellness vs post-wellness, quantify reduction in preventable hospitalizations, (4) Engagement metrics—enrollment rate, active users %, services per member per month, NPS scores, (5) Cost-benefit analysis—wellness program cost vs healthcare savings + productivity gains, ROI calculation, (6) Benchmark comparisons—how client's utilization compares to peer companies in same industry/size. Export capabilities: Excel, PDF, PowerPoint-ready charts for quarterly business reviews with corporate HR/CFOs. Custom reports available for enterprise clients. Real-time dashboards accessible 24/7 via partner portal. Use these insights for renewal conversations to justify premium and demonstrate tangible value delivered beyond insurance."
+  },
+  {
+    question: "What support do you provide during corporate client onboarding?",
+    answer: "White-glove onboarding: (1) Account manager—dedicated single point of contact throughout onboarding and ongoing, (2) Implementation kickoff call—understand client requirements, benefits design, timeline, success criteria, (3) Technical integration—API setup if integrating with client's HRMS/benefits portal, (4) Employee enrollment—bulk uploads, individual registration links, on-site enrollment drives if needed, (5) Communication templates—email announcements, posters, WhatsApp broadcasts, intranet content for launching wellness program, (6) Training sessions—virtual training for client's HR team on admin portal, reporting, issue resolution, (7) Soft launch testing—pilot with 50-100 employees, gather feedback, refine workflows before full rollout, (8) Go-live support—dedicated support team available during launch week for any issues, (9) Post-launch check-in—weekly calls for first month, monthly business reviews thereafter. Timeline: 2 weeks (simple rollout) to 6 weeks (complex HRMS integration, multi-location, 5,000+ employees). Success rate: >95% successful rollouts, <5% require extended timelines due to client-side constraints."
+  },
+  {
+    question: "Can I white-label wellness services and present them as my own product?",
+    answer: "Complete white-labeling: (1) Branding—your company logo, name, colors across member app, website, emails, reports, (2) Domain—custom domain for wellness portal (e.g., wellness.yourcompany.com vs labstack.in), (3) Communications—all SMS, emails, WhatsApp messages sent from your brand name, (4) Customer support—phone/email support provided by your team (we provide backend ops console) or our team posing as your support, (5) Legal terms—T&Cs under your entity, privacy policy, grievance redressal, (6) Invoicing—bills issued by your company to corporate clients, we invoice you separately at wholesale rates. Labstack completely invisible to end users. Common for: Established brokers wanting to launch wellness as proprietary product, healthtech companies white-labeling infrastructure, insurance companies offering wellness under their brand, TPAs adding services. Additional cost: ₹2-5 lakhs one-time setup for full white-label + ₹50,000-100,000 monthly platform fee depending on volume. ROI: Ability to charge premium pricing (20-30% higher) vs reselling branded service."
   }
 ];
