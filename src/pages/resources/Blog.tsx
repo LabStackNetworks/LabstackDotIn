@@ -78,20 +78,84 @@ const Blog = () => {
       link: "digital-health-scale"
     },
     {
-      title: "Joining Healthcare Networks: A Provider's Guide",
-      excerpt: "How doctors, labs, and hospitals grow practice volume by 40% through digital health network partnerships.",
-      category: "Providers",
-      readTime: "8 min read",
-      date: "Jan 19, 2025",
-      link: "providers-network"
+      title: "Predictive Analytics in Disease Management",
+      excerpt: "How AI identifies high-risk members 6-12 months before complications, reducing hospitalizations by 45%.",
+      category: "Disease Management",
+      readTime: "9 min read",
+      date: "Feb 25, 2025",
+      link: "disease-management-predictive-analytics"
     },
     {
-      title: "Digital Tools for Healthcare Providers",
-      excerpt: "Learn how digital tools help providers manage appointments, reduce no-shows by 60%, and improve patient satisfaction.",
+      title: "Member Retention Through Digital Health Benefits",
+      excerpt: "How insurers reduce churn by 35% and increase lifetime value by ₹45,000-60,000 per member through digital health.",
+      category: "Insurers",
+      readTime: "12 min read",
+      date: "Mar 15, 2025",
+      link: "insurers-member-retention"
+    },
+    {
+      title: "Multi-Employer Platform Management at Scale",
+      excerpt: "How brokers serve 100+ corporate clients efficiently, reducing costs by 60% while improving retention.",
+      category: "Brokers",
+      readTime: "10 min read",
+      date: "Apr 20, 2025",
+      link: "brokers-multi-employer-platform"
+    },
+    {
+      title: "Digital Transformation for Healthcare Providers",
+      excerpt: "How doctors, labs, and hospitals increase patient volume by 40% and reduce no-shows by 60% through digital tools.",
       category: "Providers",
-      readTime: "7 min read",
-      date: "Jan 23, 2025",
-      link: "providers-tech"
+      readTime: "11 min read",
+      date: "May 14, 2025",
+      link: "providers-digital-transformation"
+    },
+    {
+      title: "Claims Processing Automation: From 7 Days to 2 Hours",
+      excerpt: "AI-powered automation reduces processing time by 95%, cuts costs by ₹200-300 per claim, and improves satisfaction.",
+      category: "Insurers",
+      readTime: "11 min read",
+      date: "Jun 10, 2025",
+      link: "insurers-claims-automation"
+    },
+    {
+      title: "Wellness ROI: Measuring Beyond Healthcare Costs",
+      excerpt: "Corporate wellness programs deliver 3:1 ROI through productivity gains, reduced absenteeism, and improved retention.",
+      category: "Brokers",
+      readTime: "11 min read",
+      date: "Jul 18, 2025",
+      link: "brokers-wellness-roi"
+    },
+    {
+      title: "Behavioral Design for 70% Disease Management Enrollment",
+      excerpt: "Proven strategies to achieve 70%+ enrollment and 50%+ active engagement through behavioral science.",
+      category: "Disease Management",
+      readTime: "10 min read",
+      date: "Aug 12, 2025",
+      link: "disease-management-behavioral-design"
+    },
+    {
+      title: "White-Label vs Build: Launch Healthcare Apps in 14 Days",
+      excerpt: "How digital health platforms launch branded apps in 14 days vs 12-18 months building from scratch.",
+      category: "Digital Health",
+      readTime: "10 min read",
+      date: "Sep 8, 2025",
+      link: "digital-health-whitelabel-launch"
+    },
+    {
+      title: "Healthcare Network Partnerships: Provider Growth Strategy",
+      excerpt: "How joining digital health networks increases provider revenue by 40% through insurance and aggregator visibility.",
+      category: "Providers",
+      readTime: "10 min read",
+      date: "Sep 22, 2025",
+      link: "providers-network-partnerships"
+    },
+    {
+      title: "ABDM Integration & Healthcare Compliance in 2025",
+      excerpt: "Complete guide to ABDM, DISHA, IT Act 2000, and telemedicine compliance for digital health platforms.",
+      category: "Digital Health",
+      readTime: "12 min read",
+      date: "Oct 15, 2025",
+      link: "digital-health-compliance-abdm"
     }
   ];
 
