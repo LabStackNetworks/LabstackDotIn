@@ -39,7 +39,7 @@ const ProvidersOverview = () => {
   const platformFeatures = [
     {
       title: "AI-Powered Patient Engagement",
-      description: "WhatsApp & voice AI agents handle bookings, reminders, report explanations, and follow-ups in multiple Indian languages—reducing no-shows and manual work."
+      description: "WhatsApp & voice AI agents handle bookings, reminders, report explanations, and follow-ups in multiple Indian languages reducing no-shows and manual work."
     },
     {
       title: "Smart Appointment & Order Management",
@@ -47,7 +47,7 @@ const ProvidersOverview = () => {
     },
     {
       title: "Care Program Builder",
-      description: "Convert episodic care into structured programs—diabetes, hypertension, maternity. Track adherence and send personalized nudges to improve outcomes."
+      description: "Convert episodic care into structured programs - diabetes, hypertension, maternity. Track adherence and send personalized nudges to improve outcomes."
     },
     {
       title: "Complete Patient CRM",
@@ -59,16 +59,16 @@ const ProvidersOverview = () => {
     },
     {
       title: "Growth & Marketing Engine",
-      description: "Digital presence tools, local SEO, patient acquisition campaigns, and referral tracking—all built-in to help you grow without a sales team."
+      description: "Digital presence tools, local SEO, patient acquisition campaigns, and referral tracking all built-in to help you grow without a sales team."
     }
   ];
 
   const benefits = [
-    "Steady B2B demand from insurers, corporates, and digital health platforms—no sales team needed",
+    "Steady B2B demand from insurers, corporates, and digital health platforms - no sales team needed",
     "AI-native operating system that powers your daily workflows, not just transactions",
     "30-day payment terms with automated reconciliation",
     "99.5% platform uptime with 24/7 technical support",
-    "Non-exclusive partnership—maintain your independence and other relationships"
+    "Non-exclusive partnership - maintain your independence and other relationships"
   ];
 
   return (
@@ -86,7 +86,7 @@ const ProvidersOverview = () => {
             </h1>
             <p className="text-xl text-muted-foreground leading-relaxed">
               Access verified B2B demand from insurers, corporates, and digital health platforms. 
-              Powered by AI-native technology that runs your operations—not just transactions.
+              Powered by AI-native technology that runs your operations, not just transactions.
             </p>
           </div>
 
@@ -153,7 +153,7 @@ const ProvidersOverview = () => {
               The Technology Platform You Get
             </h2>
             <p className="text-center text-muted-foreground mb-12 max-w-3xl mx-auto">
-              We're not just a demand aggregator. We're building the operating system for Indian healthcare providers—
+              We're not just a demand aggregator. We're building the operating system for Indian healthcare providers.
               AI-native tools that handle engagement, workflows, and growth so you can focus on care.
             </p>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">

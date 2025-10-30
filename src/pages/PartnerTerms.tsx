@@ -8,89 +8,91 @@ const PartnerTerms = () => {
       <main className="pt-20">
         <section className="py-20">
           <div className="container mx-auto px-6 max-w-4xl">
-            <h1 className="text-4xl lg:text-5xl font-heading font-bold mb-8">Partner Terms & Conditions</h1>
+            <h1 className="text-4xl lg:text-5xl font-heading font-bold mb-8">Labstack Partner Terms & Conditions</h1>
             
             <div className="prose prose-neutral dark:prose-invert max-w-none">
+              <p className="text-muted-foreground mb-2">
+                <strong>Effective Date:</strong> 01st August 2025
+              </p>
               <p className="text-muted-foreground mb-6">
-                These Partner Terms govern the relationship between Labstack Networks Private Limited ("Labstack") and healthcare service providers ("Partners") who join the Labstack network.
+                <strong>Last Updated:</strong> 01st August 2025
+              </p>
+              <p className="text-muted-foreground mb-6">
+                These Terms & Conditions ("Terms") govern your engagement as an independent gig partner ("You", "Partner") on the Labstack platform ("Labstack", "We", "Our", "Us"). By signing up and accepting gigs via the Labstack platform, you agree to the following:
               </p>
 
-              <h2 className="text-2xl font-heading font-bold mt-8 mb-4">1. Partnership Agreement</h2>
-              <p className="text-muted-foreground mb-4">
-                By joining the Labstack network, Partners agree to provide healthcare services according to established quality standards, SLAs, and operational guidelines.
-              </p>
-
-              <h2 className="text-2xl font-heading font-bold mt-8 mb-4">2. Partner Eligibility</h2>
-              <p className="text-muted-foreground mb-4">Partners must:</p>
+              <h2 className="text-2xl font-heading font-bold mt-8 mb-4">1. Independent Contractor Relationship</h2>
               <ul className="list-disc pl-6 space-y-2 text-muted-foreground mb-4">
-                <li>Hold valid licenses and certifications required for their services</li>
-                <li>Maintain professional liability insurance</li>
-                <li>Meet Labstack's quality and service standards</li>
-                <li>Comply with all applicable healthcare regulations</li>
-                <li>Pass verification and credential checks</li>
+                <li>You acknowledge that you are an independent contractor and not an employee of Labstack.</li>
+                <li>Labstack does not provide employment benefits, PF, ESI, health insurance, or any statutory benefits.</li>
+                <li>You are free to work with other organizations, provided it does not affect your commitments on Labstack gigs.</li>
               </ul>
 
-              <h2 className="text-2xl font-heading font-bold mt-8 mb-4">3. Service Standards</h2>
-              <p className="text-muted-foreground mb-4">Partners agree to:</p>
+              <h2 className="text-2xl font-heading font-bold mt-8 mb-4">2. Engagement and Services</h2>
               <ul className="list-disc pl-6 space-y-2 text-muted-foreground mb-4">
-                <li>Adhere to specified service level agreements (SLAs)</li>
-                <li>Maintain consistent quality of service delivery</li>
-                <li>Respond to bookings and orders within specified timeframes</li>
-                <li>Provide accurate and timely service updates</li>
-                <li>Follow prescribed protocols and workflows</li>
+                <li>You agree to provide professional healthcare-related services (such as sample collection, nursing assistance, etc.) as per industry standards and applicable laws.</li>
+                <li>You must maintain accuracy, hygiene, and ethical conduct while performing services.</li>
+                <li>Labstack only acts as a technology platform connecting clients with gig partners. We do not supervise or control how you perform your services.</li>
               </ul>
 
-              <h2 className="text-2xl font-heading font-bold mt-8 mb-4">4. Quality Monitoring</h2>
-              <p className="text-muted-foreground mb-4">
-                Labstack implements continuous quality monitoring including customer feedback (CSAT), service fulfillment rates, and quality audits. Partners with consistently poor performance may be suspended or removed from the network.
-              </p>
-
-              <h2 className="text-2xl font-heading font-bold mt-8 mb-4">5. Payment and Billing</h2>
-              <p className="text-muted-foreground mb-4">Payment terms include:</p>
+              <h2 className="text-2xl font-heading font-bold mt-8 mb-4">3. Background Verification & Compliance</h2>
               <ul className="list-disc pl-6 space-y-2 text-muted-foreground mb-4">
-                <li>Transparent, pre-agreed pricing for services</li>
-                <li>Automated reconciliation and invoicing</li>
-                <li>Payment cycles as specified in commercial agreements</li>
-                <li>All payments subject to service verification and quality checks</li>
+                <li>You agree to provide valid ID proof, qualification certificates, and police verification when requested.</li>
+                <li>You must comply with all applicable laws, medical guidelines, and safety protocols.</li>
+                <li>Labstack reserves the right to suspend or terminate your access for non-compliance or unethical practices.</li>
               </ul>
 
-              <h2 className="text-2xl font-heading font-bold mt-8 mb-4">6. Data and Privacy</h2>
+              <h2 className="text-2xl font-heading font-bold mt-8 mb-4">4. Payments and Taxes</h2>
+              <ul className="list-disc pl-6 space-y-2 text-muted-foreground mb-4">
+                <li>Payments will be made to your registered bank account or UPI ID after successful completion of gigs, subject to Labstack's payment cycle.</li>
+                <li>You are responsible for any applicable taxes, including income tax, GST (if applicable), or any government dues.</li>
+                <li>Labstack may deduct applicable platform service fees before crediting your payout.</li>
+              </ul>
+
+              <h2 className="text-2xl font-heading font-bold mt-8 mb-4">5. Cancellation & No-Show</h2>
+              <ul className="list-disc pl-6 space-y-2 text-muted-foreground mb-4">
+                <li>If you accept a gig, you must attend on time. Cancellations or no-shows may lead to penalties or removal from the platform.</li>
+                <li>Labstack reserves the right to deduct charges for cancellations or delays as per the cancellation policy.</li>
+              </ul>
+
+              <h2 className="text-2xl font-heading font-bold mt-8 mb-4">6. Limitation of Liability</h2>
+              <p className="text-muted-foreground mb-2">Labstack is not responsible for:</p>
+              <ul className="list-disc pl-6 space-y-2 text-muted-foreground mb-4">
+                <li>Any medical negligence or errors caused by you.</li>
+                <li>Any loss, damage, or injury to the customer during the service.</li>
+                <li>Any disputes between you and the customer.</li>
+              </ul>
               <p className="text-muted-foreground mb-4">
-                Partners must comply with all data protection and patient privacy regulations. Patient data shared through the platform must be handled securely and used only for authorized purposes.
+                Labstack only provides a technology platform and does not guarantee minimum earnings or availability of gigs.
               </p>
 
-              <h2 className="text-2xl font-heading font-bold mt-8 mb-4">7. Non-Exclusivity</h2>
+              <h2 className="text-2xl font-heading font-bold mt-8 mb-4">7. Confidentiality & Data Privacy</h2>
+              <ul className="list-disc pl-6 space-y-2 text-muted-foreground mb-4">
+                <li>You must not share patient information, medical reports, or any confidential data with unauthorized persons.</li>
+                <li>You agree to comply with Labstack's privacy policy and applicable data protection laws.</li>
+              </ul>
+
+              <h2 className="text-2xl font-heading font-bold mt-8 mb-4">8. Termination</h2>
+              <ul className="list-disc pl-6 space-y-2 text-muted-foreground mb-4">
+                <li>Labstack may terminate or suspend your account at any time for violation of these terms, misconduct, or poor service quality.</li>
+                <li>You may deactivate your account by sending a written request to Labstack.</li>
+              </ul>
+
+              <h2 className="text-2xl font-heading font-bold mt-8 mb-4">9. Indemnification</h2>
               <p className="text-muted-foreground mb-4">
-                This is a non-exclusive partnership. Partners are free to work with other platforms and maintain their independent operations. Labstack operates as a B2B infrastructure provider only.
+                You agree to indemnify and hold harmless Labstack from any claims, damages, or legal actions arising from your services, negligence, or breach of these terms.
               </p>
 
-              <h2 className="text-2xl font-heading font-bold mt-8 mb-4">8. Technology and Integration</h2>
-              <p className="text-muted-foreground mb-4">
-                Partners agree to use Labstack's platform, APIs, and tools as specified. Technical support and training will be provided during onboarding.
-              </p>
+              <h2 className="text-2xl font-heading font-bold mt-8 mb-4">10. Governing Law & Dispute Resolution</h2>
+              <ul className="list-disc pl-6 space-y-2 text-muted-foreground mb-4">
+                <li>These Terms are governed by the laws of India.</li>
+                <li>Any disputes shall be resolved through binding arbitration in Bangalore, Karnataka, as per the Arbitration and Conciliation Act, 1996.</li>
+                <li>Courts in Bangalore, Karnataka shall have exclusive jurisdiction.</li>
+              </ul>
 
-              <h2 className="text-2xl font-heading font-bold mt-8 mb-4">9. Compliance and Regulations</h2>
+              <h2 className="text-2xl font-heading font-bold mt-8 mb-4">11. Acceptance</h2>
               <p className="text-muted-foreground mb-4">
-                Partners must maintain compliance with all applicable healthcare regulations, including but not limited to ABDM readiness, licensing requirements, and professional standards.
-              </p>
-
-              <h2 className="text-2xl font-heading font-bold mt-8 mb-4">10. Misconduct / Individual Liability; Cooperation; Limited Labstack Responsibility</h2>
-              <div className="text-muted-foreground mb-4 space-y-3">
-                <p><strong>(a) Individual Practitioner Liability:</strong> If any healthcare professional (including but not limited to doctors, nurses, medical practitioners, phlebotomists, pharmacists, or field staff) engaged by Labstack commits any act, omission, misbehaviour, professional misconduct, or criminal conduct in connection with the Services, such practitioner shall be primarily and personally liable for his/her acts or omissions and for any claims, fines, penalties, or damages arising directly from such acts or omissions.</p>
-                
-                <p><strong>(b) Notification and Cooperation:</strong> Labstack shall promptly notify the Partner and affected customers upon becoming aware of any such allegation or incident. Labstack shall suspend the practitioner from providing Services pending investigation (where appropriate) and shall, subject to applicable law and privacy obligations, cooperate with Partners, customers, and any regulatory or law-enforcement authorities, including providing records, personnel information, and other documentation reasonably required for the investigation.</p>
-                
-                <p><strong>(c) Labstack's Continuing Obligations:</strong> Notwithstanding the foregoing, Labstack shall remain liable to Partners for losses caused by Labstack's own negligence, willful misconduct, or failure to perform required background checks, credential verifications, and quality monitoring as set out in this Agreement. This does not diminish the primary liability of individual practitioners for their own acts or omissions.</p>
-              </div>
-
-              <h2 className="text-2xl font-heading font-bold mt-8 mb-4">11. Suspension and Termination</h2>
-              <p className="text-muted-foreground mb-4">
-                Labstack may suspend or terminate partnerships for violations of terms, quality issues, regulatory non-compliance, or fraudulent activities. Partners may exit with 30 days written notice.
-              </p>
-
-              <h2 className="text-2xl font-heading font-bold mt-8 mb-4">12. Dispute Resolution</h2>
-              <p className="text-muted-foreground mb-4">
-                Disputes will be resolved through good faith negotiation. If unresolved, disputes are subject to arbitration in Bangalore, Karnataka under Indian law.
+                By signing up on the Labstack platform, you confirm that you have read, understood, and agree to these Terms & Conditions.
               </p>
 
               <h2 className="text-2xl font-heading font-bold mt-8 mb-4">Partner Support</h2>
@@ -100,10 +102,6 @@ const PartnerTerms = () => {
               <p className="text-muted-foreground mb-2">Email: contact@labstack.in</p>
               <p className="text-muted-foreground mb-2">Phone: +91-8047359194</p>
               <p className="text-muted-foreground mb-8">Address: 4263, Tower 4, 26th Floor, Phoenix One Bangalore West, Dr. Rajkumar Road, Rajajinagar - 560010, Bangalore North, Karnataka, India</p>
-
-              <p className="text-sm text-muted-foreground mt-8">
-                <strong>Last Updated:</strong> January 2024
-              </p>
             </div>
           </div>
         </section>

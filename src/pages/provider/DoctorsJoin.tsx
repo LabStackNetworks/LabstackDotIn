@@ -21,11 +21,11 @@ const DoctorsJoin = () => {
   ];
 
   const labstackBenefits = [
-    "Steady B2B patient demand from insurers, corporates, and digital platforms—no marketing needed",
+    "Steady B2B patient demand from insurers, corporates, and digital platforms - no marketing needed",
     "AI-native platform: WhatsApp/voice AI handles bookings, reminders, follow-ups automatically",
     "Integrated EMR, e-prescription, teleconsultation, and smart scheduling in one place",
     "Guaranteed 100% on-time payments with transparent invoicing and bi-weekly settlements",
-    "No exclusivity—maintain your independent practice and other platform relationships"
+    "No exclusivity - maintain your independent practice and other platform relationships"
   ];
 
   const outcomes = [
@@ -192,7 +192,7 @@ const DoctorsJoin = () => {
                   <CheckCircle className="w-6 h-6 text-success flex-shrink-0 mt-1" />
                   <div>
                     <h3 className="font-heading font-bold mb-2">AI Patient Engagement</h3>
-                    <p className="text-sm text-muted-foreground">WhatsApp & voice AI agents handle appointment bookings, reminders, report explanations, and follow-ups in multiple languages—automatically.</p>
+                    <p className="text-sm text-muted-foreground">WhatsApp & voice AI agents handle appointment bookings, reminders, report explanations, and follow-ups in multiple languages automatically.</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-4">
@@ -213,14 +213,14 @@ const DoctorsJoin = () => {
                   <CheckCircle className="w-6 h-6 text-success flex-shrink-0 mt-1" />
                   <div>
                     <h3 className="font-heading font-bold mb-2">Complete Patient CRM</h3>
-                    <p className="text-sm text-muted-foreground">Full patient timeline—consultations, tests, prescriptions, and health trends. Enable personalized care and better retention.</p>
+                    <p className="text-sm text-muted-foreground">Full patient timeline - consultations, tests, prescriptions, and health trends. Enable personalized care and better retention.</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-4">
                   <CheckCircle className="w-6 h-6 text-success flex-shrink-0 mt-1" />
                   <div>
                     <h3 className="font-heading font-bold mb-2">Integrated EMR & E-Prescription</h3>
-                    <p className="text-sm text-muted-foreground">Digital records, prescription writing with drug database, lab ordering, and pharmacy integration—all in one seamless interface.</p>
+                    <p className="text-sm text-muted-foreground">Digital records, prescription writing with drug database, lab ordering, and pharmacy integration all in one seamless interface.</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-4">

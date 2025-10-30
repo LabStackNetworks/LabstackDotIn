@@ -21,11 +21,11 @@ const NutritionistsHealthCoaches = () => {
   ];
 
   const labstackBenefits = [
-    "Steady B2B client demand from corporate wellness, insurance programs—no marketing needed",
+    "Steady B2B client demand from corporate wellness, insurance programs - no marketing needed",
     "AI-native platform: WhatsApp/voice AI handles bookings, reminders, progress check-ins automatically",
     "Complete client management: progress tracking, meal planning, and video consultation in one place",
     "Guaranteed timely payments with automated bi-weekly settlements and transparent invoicing",
-    "No exclusivity—run individual sessions, group coaching, workshops, and maintain other relationships"
+    "No exclusivity - run individual sessions, group coaching, workshops, and maintain other relationships"
   ];
 
   const outcomes = [
@@ -153,7 +153,7 @@ const NutritionistsHealthCoaches = () => {
 
               <div className="mt-12 bg-success/10 border border-success/20 rounded-xl p-6 text-center">
                 <p className="text-success font-medium italic">
-                  "Labstack connected me to corporate wellness programs across India. My client base grew 5x, and I now run group sessions alongside individual coaching—all through one platform."
+                  "Labstack connected me to corporate wellness programs across India. My client base grew 5x, and I now run group sessions alongside individual coaching all through one platform."
                 </p>
                 <p className="text-sm text-muted-foreground mt-2">— Priya Menon, Certified Nutritionist, Bangalore</p>
               </div>
@@ -277,14 +277,14 @@ const NutritionistsHealthCoaches = () => {
                 The AI-Native Platform You Get
               </h2>
               <p className="text-center text-muted-foreground mb-12 max-w-3xl mx-auto">
-                Beyond basic tools—your complete operating system for client engagement, care delivery, and practice growth.
+                Beyond basic tools. Your complete operating system for client engagement, care delivery, and practice growth.
               </p>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="flex items-start space-x-4">
                   <CheckCircle className="w-6 h-6 text-success flex-shrink-0 mt-1" />
                   <div>
                     <h3 className="font-heading font-bold mb-2">AI Client Engagement</h3>
-                    <p className="text-sm text-muted-foreground">WhatsApp & voice AI agents handle session bookings, progress check-ins, meal plan reminders, and follow-ups—automatically reducing drop-offs.</p>
+                    <p className="text-sm text-muted-foreground">WhatsApp & voice AI agents handle session bookings, progress check-ins, meal plan reminders, and follow-ups automatically reducing drop-offs.</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-4">
@@ -298,14 +298,14 @@ const NutritionistsHealthCoaches = () => {
                   <CheckCircle className="w-6 h-6 text-success flex-shrink-0 mt-1" />
                   <div>
                     <h3 className="font-heading font-bold mb-2">Wellness Program Builder</h3>
-                    <p className="text-sm text-muted-foreground">Create structured programs—weight management, diabetes nutrition, sports nutrition. Track adherence and send personalized nudges.</p>
+                    <p className="text-sm text-muted-foreground">Create structured programs - weight management, diabetes nutrition, sports nutrition. Track adherence and send personalized nudges.</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-4">
                   <CheckCircle className="w-6 h-6 text-success flex-shrink-0 mt-1" />
                   <div>
                     <h3 className="font-heading font-bold mb-2">Complete Client CRM</h3>
-                    <p className="text-sm text-muted-foreground">Full client timeline—sessions, meal plans, progress tracking, health markers. Enable personalized coaching and better retention.</p>
+                    <p className="text-sm text-muted-foreground">Full client timeline - sessions, meal plans, progress tracking, health markers. Enable personalized coaching and better retention.</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-4">

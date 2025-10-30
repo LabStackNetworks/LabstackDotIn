@@ -66,14 +66,14 @@ const HospitalsLabsJoin = () => {
             <div className="max-w-6xl mx-auto mb-20">
               <h2 className="text-3xl font-heading font-bold text-center mb-4">The Technology Platform You Get</h2>
               <p className="text-center text-muted-foreground mb-12 max-w-3xl mx-auto">
-                Beyond demand aggregation—we're your operating system. AI-native tools for engagement, workflows, and growth.
+                Beyond demand aggregation. We're your operating system. AI-native tools for engagement, workflows, and growth.
               </p>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="flex items-start space-x-3 p-6 bg-card-gradient rounded-xl border border-border/20">
                   <CheckCircle className="w-6 h-6 text-primary flex-shrink-0 mt-0.5" />
                   <div>
                     <h3 className="font-heading font-bold mb-2">AI-Powered Patient Engagement</h3>
-                    <p className="text-sm text-muted-foreground">WhatsApp & voice AI agents automate bookings, report explanations, reminders, and follow-ups in local languages—reducing no-shows by 40%.</p>
+                    <p className="text-sm text-muted-foreground">WhatsApp & voice AI agents automate bookings, report explanations, reminders, and follow-ups in local languages reducing no-shows by 40%.</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-3 p-6 bg-card-gradient rounded-xl border border-border/20">
@@ -101,7 +101,7 @@ const HospitalsLabsJoin = () => {
                   <CheckCircle className="w-6 h-6 text-primary flex-shrink-0 mt-0.5" />
                   <div>
                     <h3 className="font-heading font-bold mb-2">Deep System Integrations</h3>
-                    <p className="text-sm text-muted-foreground">Seamless LIS/HIS integration with autonomous AI agents. Your existing systems work smarter—not harder.</p>
+                    <p className="text-sm text-muted-foreground">Seamless LIS/HIS integration with autonomous AI agents. Your existing systems work smarter, not harder.</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-3 p-6 bg-card-gradient rounded-xl border border-border/20">

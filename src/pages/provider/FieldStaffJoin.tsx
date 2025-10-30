@@ -8,6 +8,8 @@ import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, For
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
+import { Checkbox } from "@/components/ui/checkbox";
+import { Link } from "react-router-dom";
 import { useToast } from "@/hooks/use-toast";
 
 const schema = z.object({
@@ -20,6 +22,9 @@ const schema = z.object({
   availability: z.string().min(2, "Please share availability"),
   certifications: z.string().optional(),
   message: z.string().optional(),
+  agreeToTerms: z.boolean().refine((val) => val === true, {
+    message: "You must agree to the Partner Terms & Conditions",
+  }),
 });
 
 type FormValues = z.infer<typeof schema>;
@@ -36,6 +41,7 @@ const FieldStaffJoin = () => {
     availability: "",
     certifications: "",
     message: "",
+    agreeToTerms: false,
   }});
 
   useEffect(() => { document.title = "Join the Network – Phlebotomists & Nurses | Labstack"; }, []);
@@ -43,7 +49,7 @@ const FieldStaffJoin = () => {
   const onSubmit = (values: FormValues) => {
     console.log("Field Staff Join Submission", values);
     toast({ title: "Application received", description: "Our team will reach out within 2 business days." });
-    form.reset({ ...values, fullName: "", city: "", experienceYears: "", email: "", phone: "", availability: "", certifications: "", message: "" });
+    form.reset({ ...values, fullName: "", city: "", experienceYears: "", email: "", phone: "", availability: "", certifications: "", message: "", agreeToTerms: false });
   };
 
   return (
@@ -157,6 +163,23 @@ const FieldStaffJoin = () => {
                       <Textarea placeholder="Anything else we should know?" rows={4} {...field} />
                     </FormControl>
                     <FormMessage />
+                  </FormItem>
+                )} />
+
+                <FormField name="agreeToTerms" control={form.control} render={({ field }) => (
+                  <FormItem className="flex flex-row items-start space-x-3 space-y-0 p-4 bg-card rounded-lg border border-border/50">
+                    <FormControl>
+                      <Checkbox checked={field.value} onCheckedChange={field.onChange} />
+                    </FormControl>
+                    <div className="space-y-1 leading-none">
+                      <FormLabel className="text-sm font-normal">
+                        I have read and agree to the{" "}
+                        <Link to="/partner-terms" target="_blank" className="text-primary hover:underline">
+                          Labstack Partner Terms & Conditions
+                        </Link>
+                      </FormLabel>
+                      <FormMessage />
+                    </div>
                   </FormItem>
                 )} />
 

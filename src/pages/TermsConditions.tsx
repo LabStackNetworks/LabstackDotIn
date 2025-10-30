@@ -89,9 +89,9 @@ const TermsConditions = () => {
                 <li>Labstack is not responsible for the quality, accuracy, or timeliness of services provided by third parties.</li>
                 <li>Users must review and agree to third-party terms when using their services.</li>
               </ul>
-              <p className="text-muted-foreground mb-4">
-                Labstack does not provide medical advice—all consultations and lab reports are managed by licensed professionals.
-              </p>
+                <p className="text-muted-foreground mb-4">
+                  Labstack does not provide medical advice. All consultations and lab reports are managed by licensed professionals.
+                </p>
 
               <h2 className="text-2xl font-heading font-bold mt-8 mb-4">8. Service Availability & Downtime</h2>
               <p className="text-muted-foreground mb-4">While we strive for 99.9% uptime, Labstack does not guarantee uninterrupted service.</p>

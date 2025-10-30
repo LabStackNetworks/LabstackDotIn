@@ -168,7 +168,7 @@ const HealthcareInfrastructure = () => {
                       <strong className="text-foreground">One API • One Console</strong> for your entire ops, billing, and tracking
                     </li>
                     <li className="text-sm text-muted-foreground">
-                      <strong className="text-foreground">No capex</strong> — operational costs only, pay-as-you-grow
+                      <strong className="text-foreground">No capex</strong> - operational costs only, pay-as-you-grow
                     </li>
                   </ul>
                 </div>
@@ -184,7 +184,7 @@ const HealthcareInfrastructure = () => {
                 Quality Frameworks Built In
               </h2>
               <p className="text-center text-muted-foreground mb-8">
-                Quality isn't optional — it's automated across our network
+                Quality is not optional. It's automated across our network
               </p>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {qualityFrameworks.map((framework, index) => (
@@ -227,7 +227,7 @@ const HealthcareInfrastructure = () => {
 
               <div className="mt-12 bg-success/10 border border-success/20 rounded-xl p-6 text-center">
                 <p className="text-success font-medium italic">
-                  "Labstack helped us expand coverage into Tier-2 & Tier-3 cities in under a month — something that would've taken 12-18 months on our own."
+                  "Labstack helped us expand coverage into Tier-2 & Tier-3 cities in under a month. Something that would have taken 12-18 months on our own."
                 </p>
               </div>
             </div>

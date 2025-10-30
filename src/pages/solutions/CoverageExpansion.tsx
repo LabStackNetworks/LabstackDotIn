@@ -161,7 +161,7 @@ const CoverageExpansion = () => {
                       </li>
                       <li className="text-sm text-muted-foreground flex items-start space-x-2">
                         <span className="text-success mt-1">✓</span>
-                        <span>Zero capex — operational costs only</span>
+                        <span>Zero capex - operational costs only</span>
                       </li>
                       <li className="text-sm text-muted-foreground flex items-start space-x-2">
                         <span className="text-success mt-1">✓</span>
