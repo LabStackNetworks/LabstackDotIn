@@ -49,6 +49,9 @@ const Blog = lazy(() => import("./pages/resources/Blog"));
 const ResearchHub = lazy(() => import("./pages/resources/ResearchHub"));
 const APIDocumentation = lazy(() => import("./pages/resources/APIDocumentation"));
 const CustomSolutions = lazy(() => import("./pages/CustomSolutions"));
+const ScalingToTier2Tier3 = lazy(() => import("./pages/resources/blog/ScalingToTier2Tier3"));
+const ReducingClaimsLeakage = lazy(() => import("./pages/resources/blog/ReducingClaimsLeakage"));
+const APIFirstHealthcare = lazy(() => import("./pages/resources/blog/APIFirstHealthcare"));
 
 const queryClient = new QueryClient();
 
@@ -99,6 +102,9 @@ const App = () => (
               <Route path="/careers" element={<Careers />} />
               <Route path="/login" element={<Login />} />
               <Route path="/resources/blog" element={<Blog />} />
+              <Route path="/resources/blog/scaling-to-tier-2-tier-3-cities" element={<ScalingToTier2Tier3 />} />
+              <Route path="/resources/blog/reducing-opd-claims-leakage" element={<ReducingClaimsLeakage />} />
+              <Route path="/resources/blog/api-first-healthcare-build-vs-buy" element={<APIFirstHealthcare />} />
           <Route path="/resources/research-hub" element={<ResearchHub />} />
           <Route path="/resources/api-documentation" element={<APIDocumentation />} />
               <Route path="/custom-solutions" element={<CustomSolutions />} />

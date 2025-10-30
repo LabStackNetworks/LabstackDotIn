@@ -81,26 +81,28 @@ const Blog = () => {
               <h2 className="text-3xl font-heading font-bold text-center mb-12">Featured Articles</h2>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 {featuredArticles.map((article, index) => (
-                  <div key={index} className="bg-card-gradient rounded-2xl border border-border/20 overflow-hidden card-hover">
-                    <div className="p-6">
-                      <div className="inline-block bg-primary/10 text-primary px-3 py-1 rounded-full text-xs font-medium mb-4">
-                        {article.category}
-                      </div>
-                      <h3 className="font-heading font-bold text-xl mb-3">{article.title}</h3>
-                      <p className="text-muted-foreground text-sm mb-4">{article.excerpt}</p>
-                      <div className="flex items-center justify-between text-xs text-muted-foreground">
-                        <div className="flex items-center space-x-4">
-                          <span className="flex items-center"><Calendar className="w-3 h-3 mr-1" />{article.date}</span>
-                          <span className="flex items-center"><BookOpen className="w-3 h-3 mr-1" />{article.readTime}</span>
+                  <Link key={index} to={`/resources/blog/${index === 0 ? 'scaling-to-tier-2-tier-3-cities' : index === 1 ? 'reducing-opd-claims-leakage' : 'api-first-healthcare-build-vs-buy'}`}>
+                    <div className="bg-card-gradient rounded-2xl border border-border/20 overflow-hidden card-hover">
+                      <div className="p-6">
+                        <div className="inline-block bg-primary/10 text-primary px-3 py-1 rounded-full text-xs font-medium mb-4">
+                          {article.category}
+                        </div>
+                        <h3 className="font-heading font-bold text-xl mb-3">{article.title}</h3>
+                        <p className="text-muted-foreground text-sm mb-4">{article.excerpt}</p>
+                        <div className="flex items-center justify-between text-xs text-muted-foreground">
+                          <div className="flex items-center space-x-4">
+                            <span className="flex items-center"><Calendar className="w-3 h-3 mr-1" />{article.date}</span>
+                            <span className="flex items-center"><BookOpen className="w-3 h-3 mr-1" />{article.readTime}</span>
+                          </div>
                         </div>
                       </div>
+                      <div className="px-6 pb-6">
+                        <Button variant="ghost" size="sm" className="w-full">
+                          Read Article <ArrowRight className="ml-2 h-4 w-4" />
+                        </Button>
+                      </div>
                     </div>
-                    <div className="px-6 pb-6">
-                      <Button variant="ghost" size="sm" className="w-full">
-                        Read Article <ArrowRight className="ml-2 h-4 w-4" />
-                      </Button>
-                    </div>
-                  </div>
+                  </Link>
                 ))}
               </div>
             </div>
