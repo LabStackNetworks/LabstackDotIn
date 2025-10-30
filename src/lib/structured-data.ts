@@ -16,7 +16,7 @@ export const generateOrganizationSchema = () => ({
   "contactPoint": {
     "@type": "ContactPoint",
     "contactType": "Sales",
-    "email": "hello@labstack.in"
+    "email": "contact@labstack.in"
   },
   "sameAs": [
     "https://www.linkedin.com/company/labstack"

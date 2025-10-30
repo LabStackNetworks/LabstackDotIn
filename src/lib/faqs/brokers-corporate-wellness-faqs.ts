@@ -1,9 +1,9 @@
 /**
- * FAQ Data for Brokers & Aggregators
+ * FAQ Data for Brokers & Corporate Wellness
  * Focus on policy differentiation, ARPU growth, revenue models
  */
 
-export const brokersAggregatorsFAQs = [
+export const brokersCorporateWellnessFAQs = [
   {
     question: "How can OPD benefits help me sell more insurance policies?",
     answer: "OPD benefits differentiate your policies from competitors, increase perceived value without major premium hikes, appeal to younger demographics, and create recurring engagement touchpoints throughout the policy year."

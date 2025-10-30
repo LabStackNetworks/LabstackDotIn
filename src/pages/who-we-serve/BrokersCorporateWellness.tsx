@@ -6,10 +6,10 @@ import FAQ from "@/components/FAQ";
 import SEOHead from "@/components/SEOHead";
 import { Link } from "react-router-dom";
 import { generateFAQSchema } from "@/lib/structured-data";
-import { brokersAggregatorsFAQs } from "@/lib/faqs/brokers-aggregators-faqs";
+import { brokersCorporateWellnessFAQs } from "@/lib/faqs/brokers-corporate-wellness-faqs";
 
-const BrokersAggregators = () => {
-  const structuredData = generateFAQSchema(brokersAggregatorsFAQs);
+const BrokersCorporateWellness = () => {
+  const structuredData = generateFAQSchema(brokersCorporateWellnessFAQs);
 
   const challenges = [
     "Policies look the same — OPD benefits under-monetized",
@@ -35,10 +35,10 @@ const BrokersAggregators = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead 
-        title="Healthcare Solutions for Insurance Brokers & Aggregators"
+        title="Healthcare Solutions for Insurance Brokers & Corporate Wellness"
         description="Differentiate policies with OPD benefits. Grow ARPU by 15% through prescription monetization. Nationwide fulfillment across 9,000+ pincodes."
-        keywords="insurance broker solutions, OPD insurance, health insurance aggregator, policy differentiation, ARPU growth, insurance benefits"
-        canonical="https://labstack.in/who-we-serve/brokers-aggregators"
+        keywords="insurance broker solutions, OPD insurance, corporate wellness programs, policy differentiation, ARPU growth, insurance benefits"
+        canonical="https://labstack.in/who-we-serve/brokers-corporate-wellness"
         structuredData={structuredData}
       />
       <Header />
@@ -49,7 +49,7 @@ const BrokersAggregators = () => {
             <div className="max-w-4xl mx-auto text-center mb-16">
               <div className="inline-flex items-center space-x-2 bg-secondary/10 border border-secondary/20 px-3 py-1 rounded-full mb-6">
                 <div className="w-2 h-2 bg-secondary rounded-full animate-pulse"></div>
-                <span className="text-secondary font-medium text-sm">FOR BROKERS & AGGREGATORS</span>
+                <span className="text-secondary font-medium text-sm">FOR BROKERS & CORPORATE WELLNESS</span>
               </div>
 
               <h1 className="text-4xl lg:text-6xl font-heading font-bold mb-6">
@@ -203,7 +203,7 @@ const BrokersAggregators = () => {
         {/* FAQ Section */}
         <section className="py-20 bg-background">
           <div className="container mx-auto px-6">
-            <FAQ items={brokersAggregatorsFAQs} />
+            <FAQ items={brokersCorporateWellnessFAQs} />
           </div>
         </section>
       </main>
@@ -212,4 +212,4 @@ const BrokersAggregators = () => {
   );
 };
 
-export default BrokersAggregators;
+export default BrokersCorporateWellness;
