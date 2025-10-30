@@ -1,4 +1,4 @@
-import { Activity, Users, TrendingUp, ArrowRight, CheckCircle, Heart } from "lucide-react";
+import { Heart, Activity, TrendingUp, ArrowRight, CheckCircle, Zap } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -10,27 +10,6 @@ import { diseaseManagementFAQs } from "@/lib/faqs/disease-management-faqs";
 
 const DiseaseManagement = () => {
   const structuredData = generateFAQSchema(diseaseManagementFAQs);
-
-  const careGaps = [
-    "Patients drop off between test → consult → meds → follow-up",
-    "Reports stuck in PDFs, useless for long-term clinical insight",
-    "Manual nudges don't scale; low adherence, poor outcomes",
-    "Limited network coverage prevents continuous care delivery"
-  ];
-
-  const labstackFix = [
-    "Protocol-driven pathways — tests, consults, pharmacy linked by API",
-    "Raw digital values — structured, longitudinal data for care decisions",
-    "Follow-up automation for adherence and protocol compliance",
-    "Nationwide coverage ensures care continuity across geographies"
-  ];
-
-  const workflowExample = [
-    { step: "Book HbA1c", desc: "Home test scheduled automatically" },
-    { step: "Flag Values", desc: "Abnormal results trigger consult" },
-    { step: "E-Rx to Pharmacy", desc: "Medications delivered same day" },
-    { step: "Automated Follow-Up", desc: "Reminders for repeat tests & lifestyle checks" }
-  ];
 
   return (
     <div className="min-h-screen bg-background">
@@ -45,6 +24,7 @@ const DiseaseManagement = () => {
       <main className="pt-20">
         <section className="py-20 lg:py-32">
           <div className="container mx-auto px-6">
+            {/* Hero */}
             <div className="max-w-4xl mx-auto text-center mb-16">
               <div className="inline-flex items-center space-x-2 bg-success/10 border border-success/20 px-3 py-1 rounded-full mb-6">
                 <div className="w-2 h-2 bg-success rounded-full animate-pulse"></div>
@@ -52,45 +32,50 @@ const DiseaseManagement = () => {
               </div>
 
               <h1 className="text-4xl lg:text-6xl font-heading font-bold mb-6">
-                Continuous Care. <span className="text-gradient">Zero Vendor Maze.</span>
+                Close Care Loops. <span className="text-gradient">Zero Vendor Maze.</span>
               </h1>
 
-              <p className="text-lg lg:text-xl text-muted-foreground mb-8">
-                Launch protocol-driven care programs in days. One platform connects tests, consults, pharmacy, and follow-ups—no fragmented vendor management.
+              <p className="text-xl text-muted-foreground mb-8">
+                Protocol-driven pathways in days. 90%+ completion rates. Structured data.
               </p>
 
               <Link to="/book-demo">
                 <Button size="lg" className="btn-gradient">
-                  See Full Care Journey
-                  <ArrowRight className="ml-2 h-5 w-5" />
+                  See Full Care Journey <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
               </Link>
             </div>
 
-            {/* Care Gaps vs Solutions */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto mb-16">
-              <div className="bg-card-gradient p-8 rounded-2xl border border-border/20">
-                <h3 className="text-xl font-heading font-bold mb-6">Where Care Loops Break</h3>
-                <ul className="space-y-3">
-                  {careGaps.map((gap, index) => (
-                    <li key={index} className="text-sm text-muted-foreground flex items-start space-x-2">
-                      <span className="text-destructive mt-1 flex-shrink-0">✗</span>
-                      <span>{gap}</span>
-                    </li>
-                  ))}
-                </ul>
+            {/* Problem → Solution */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto mb-20">
+              <div className="space-y-4">
+                <h3 className="text-2xl font-heading font-bold mb-6">Where Care Loops Break</h3>
+                {[
+                  "Patients drop off: test → consult → meds",
+                  "Reports stuck in PDFs, no clinical insight",
+                  "Manual nudges don't scale",
+                  "Limited network prevents continuity"
+                ].map((problem, i) => (
+                  <div key={i} className="flex items-start space-x-3 p-4 bg-destructive/5 border border-destructive/10 rounded-xl">
+                    <span className="text-destructive mt-1">✗</span>
+                    <span className="text-sm">{problem}</span>
+                  </div>
+                ))}
               </div>
 
-              <div className="bg-card-gradient p-8 rounded-2xl border border-border/20">
-                <h3 className="text-xl font-heading font-bold mb-6">Labstack Closes Gaps</h3>
-                <ul className="space-y-3">
-                  {labstackFix.map((fix, index) => (
-                    <li key={index} className="text-sm text-muted-foreground flex items-start space-x-2">
-                      <span className="text-success mt-1 flex-shrink-0">✓</span>
-                      <span>{fix}</span>
-                    </li>
-                  ))}
-                </ul>
+              <div className="space-y-4">
+                <h3 className="text-2xl font-heading font-bold mb-6">Labstack Closes Gaps</h3>
+                {[
+                  "Protocol pathways—tests, consults, pharmacy linked",
+                  "Raw digital values—longitudinal structured data",
+                  "Automated follow-ups for adherence",
+                  "Nationwide coverage ensures continuity"
+                ].map((solution, i) => (
+                  <div key={i} className="flex items-start space-x-3 p-4 bg-success/5 border border-success/10 rounded-xl">
+                    <CheckCircle className="w-5 h-5 text-success mt-1 flex-shrink-0" />
+                    <span className="text-sm">{solution}</span>
+                  </div>
+                ))}
               </div>
             </div>
 
@@ -101,14 +86,19 @@ const DiseaseManagement = () => {
               </h2>
               <p className="text-center text-muted-foreground mb-12">Protocol-driven care from diagnosis to ongoing management</p>
               <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-                {workflowExample.map((item, index) => (
-                  <div key={index} className="relative">
-                    <div className="bg-gradient-hero rounded-xl p-6 border border-border/50 text-center card-hover">
+                {[
+                  { step: "Book HbA1c", desc: "Home test scheduled" },
+                  { step: "Flag Values", desc: "Abnormal → consult" },
+                  { step: "E-Rx to Pharmacy", desc: "Meds delivered same day" },
+                  { step: "Auto Follow-Up", desc: "Repeat tests + lifestyle" }
+                ].map((item, i) => (
+                  <div key={i} className="relative">
+                    <div className="bg-gradient-hero rounded-xl p-6 border border-border/50 text-center">
                       <Heart className="w-8 h-8 text-success mx-auto mb-3" />
                       <h3 className="font-heading font-bold mb-2">{item.step}</h3>
                       <p className="text-sm text-muted-foreground">{item.desc}</p>
                     </div>
-                    {index < workflowExample.length - 1 && (
+                    {i < 3 && (
                       <div className="hidden md:block absolute top-1/2 -right-3 w-6 h-0.5 bg-border"></div>
                     )}
                   </div>
@@ -116,63 +106,60 @@ const DiseaseManagement = () => {
               </div>
             </div>
 
-            {/* Technology Platform with Business Impact */}
+            {/* Platform Features */}
             <div className="max-w-6xl mx-auto mb-20">
-              <h2 className="text-3xl font-heading font-bold text-center mb-4">
-                Speed Without Fragmentation: Close Care Loops From Day One
+              <h2 className="text-3xl font-heading font-bold text-center mb-12">
+                Close Care Loops From Day One
               </h2>
-              <p className="text-center text-muted-foreground mb-12 max-w-3xl mx-auto">
-                Launch protocol-driven care programs in days with one unified platform. Achieve 90%+ test completion rates, structured longitudinal data, and automated adherence—without coordinating multiple vendors.
-              </p>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div className="bg-card-gradient p-6 rounded-xl border border-border/20">
-                  <div className="flex items-start justify-between mb-3">
-                    <h3 className="font-heading font-bold">Protocol-Driven Care Pathways</h3>
-                    <span className="text-xs bg-success/10 text-success px-2 py-1 rounded-full">90%+ completion</span>
+                {[
+                  {
+                    title: "Protocol Pathways",
+                    badge: "90%+ completion",
+                    desc: "Pre-built workflows: diabetes, hypertension, PCOS, cardiac.",
+                    color: "success"
+                  },
+                  {
+                    title: "Structured Data",
+                    badge: "Longitudinal",
+                    desc: "Raw digital values for trend analysis, clinical decisions.",
+                    color: "primary"
+                  },
+                  {
+                    title: "Adherence Engine",
+                    badge: "Smart nudges",
+                    desc: "AI-driven reminders for tests, meds, appointments.",
+                    color: "success"
+                  },
+                  {
+                    title: "White-Label Journeys",
+                    badge: "Your brand",
+                    desc: "Customize enrollment, comms, tracking under your brand.",
+                    color: "secondary"
+                  },
+                  {
+                    title: "Care Program Builder",
+                    badge: "Customizable",
+                    desc: "Design programs—configure tests, consults, protocols.",
+                    color: "primary"
+                  },
+                  {
+                    title: "Unified Analytics",
+                    badge: "Full visibility",
+                    desc: "Track completion, adherence, outcomes, ROI.",
+                    color: "success"
+                  }
+                ].map((feature, i) => (
+                  <div key={i} className="bg-card-gradient p-6 rounded-xl border border-border/20">
+                    <div className="flex items-start justify-between mb-3">
+                      <h3 className="font-heading font-bold text-sm">{feature.title}</h3>
+                      <span className={`text-xs bg-${feature.color}/10 text-${feature.color} px-2 py-1 rounded-full whitespace-nowrap`}>
+                        {feature.badge}
+                      </span>
+                    </div>
+                    <p className="text-sm text-muted-foreground">{feature.desc}</p>
                   </div>
-                  <p className="text-sm text-muted-foreground mb-3">Pre-built workflows for diabetes, hypertension, PCOS, cardiac care. Tests → consults → pharmacy → follow-ups connected by API, not manual handoffs.</p>
-                  <p className="text-xs text-success font-medium">Impact: 90%+ test completion rates, no patient drop-off</p>
-                </div>
-                <div className="bg-card-gradient p-6 rounded-xl border border-border/20">
-                  <div className="flex items-start justify-between mb-3">
-                    <h3 className="font-heading font-bold">Structured Health Data</h3>
-                    <span className="text-xs bg-primary/10 text-primary px-2 py-1 rounded-full">Longitudinal</span>
-                  </div>
-                  <p className="text-sm text-muted-foreground mb-3">Raw digital values, not PDFs. Longitudinal data for trend analysis, clinical decisions, and personalized care adjustments over time.</p>
-                  <p className="text-xs text-primary font-medium">Impact: Actionable data for better clinical outcomes</p>
-                </div>
-                <div className="bg-card-gradient p-6 rounded-xl border border-border/20">
-                  <div className="flex items-start justify-between mb-3">
-                    <h3 className="font-heading font-bold">Automated Adherence Engine</h3>
-                    <span className="text-xs bg-success/10 text-success px-2 py-1 rounded-full">Smart nudges</span>
-                  </div>
-                  <p className="text-sm text-muted-foreground mb-3">AI-driven reminders for tests, medications, and appointments. Automated escalations for abnormal values or protocol deviations.</p>
-                  <p className="text-xs text-success font-medium">Impact: Scale patient adherence without manual outreach</p>
-                </div>
-                <div className="bg-card-gradient p-6 rounded-xl border border-border/20">
-                  <div className="flex items-start justify-between mb-3">
-                    <h3 className="font-heading font-bold">White-Label Patient Journeys</h3>
-                    <span className="text-xs bg-secondary/10 text-secondary px-2 py-1 rounded-full">Your brand</span>
-                  </div>
-                  <p className="text-sm text-muted-foreground mb-3">Customize enrollment, care communications, progress tracking, and engagement under your brand. We handle service delivery behind the scenes.</p>
-                  <p className="text-xs text-secondary font-medium">Impact: Build your branded care programs instantly</p>
-                </div>
-                <div className="bg-card-gradient p-6 rounded-xl border border-border/20">
-                  <div className="flex items-start justify-between mb-3">
-                    <h3 className="font-heading font-bold">Care Program Builder</h3>
-                    <span className="text-xs bg-primary/10 text-primary px-2 py-1 rounded-full">Customizable</span>
-                  </div>
-                  <p className="text-sm text-muted-foreground mb-3">Design chronic care programs—configure test frequency, specialist consults, medication protocols, and lifestyle interventions for any condition.</p>
-                  <p className="text-xs text-primary font-medium">Impact: Launch custom care programs without vendor negotiation</p>
-                </div>
-                <div className="bg-card-gradient p-6 rounded-xl border border-border/20">
-                  <div className="flex items-start justify-between mb-3">
-                    <h3 className="font-heading font-bold">Unified Operations & Analytics</h3>
-                    <span className="text-xs bg-success/10 text-success px-2 py-1 rounded-full">Full visibility</span>
-                  </div>
-                  <p className="text-sm text-muted-foreground mb-3">Track completion rates, patient adherence, clinical outcomes, and ROI. We handle fulfillment, quality control, and SLA management.</p>
-                  <p className="text-xs text-success font-medium">Impact: Measure clinical and business outcomes in real-time</p>
-                </div>
+                ))}
               </div>
             </div>
           </div>
