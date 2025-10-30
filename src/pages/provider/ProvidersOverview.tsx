@@ -11,21 +11,21 @@ const ProvidersOverview = () => {
       title: "Hospitals & Labs",
       description: "Expand your reach beyond geographical boundaries. Connect with digital health platforms, insurers, and corporate wellness programs.",
       benefits: ["Increased patient volume", "Digital integration", "Automated billing"],
-      href: "/provider/hospitals-labs"
+      href: "/provider/hospitals-labs/apply"
     },
     {
       icon: Stethoscope,
       title: "Doctors",
       description: "Join India's largest healthcare network. Offer teleconsultations and in-clinic visits to patients across the country.",
       benefits: ["Flexible scheduling", "Secure platform", "Fair compensation"],
-      href: "/provider/doctors"
+      href: "/provider/doctors/apply"
     },
     {
       icon: Heart,
       title: "Nutritionists & Health Coaches",
       description: "Scale your practice nationwide. Provide virtual consultations and personalized care plans to a wider patient base.",
       benefits: ["National reach", "EMR integration", "Professional growth"],
-      href: "/provider/nutritionists-health-coaches"
+      href: "/provider/nutritionists-health-coaches/apply"
     },
     {
       icon: Syringe,

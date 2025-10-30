@@ -73,7 +73,7 @@ const NutritionistsHealthCoaches = () => {
                 insurance preventive care clients, and digital health platforms across India.
               </p>
 
-              <Link to="/contact">
+              <Link to="/provider/nutritionists-health-coaches/apply">
                 <Button size="lg" className="btn-gradient">
                   Apply to Join Wellness Network
                   <ArrowRight className="ml-2 h-5 w-5" />
@@ -330,7 +330,7 @@ const NutritionistsHealthCoaches = () => {
               <p className="text-muted-foreground mb-8">
                 Join thousands of nutritionists and health coaches transforming lives across India through Labstack's trusted network.
               </p>
-              <Link to="/contact">
+              <Link to="/provider/nutritionists-health-coaches/apply">
                 <Button size="lg" className="btn-gradient">
                   Apply to Join Today
                   <ArrowRight className="ml-2 h-5 w-5" />

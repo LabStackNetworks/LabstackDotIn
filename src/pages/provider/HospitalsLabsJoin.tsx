@@ -39,7 +39,7 @@ const HospitalsLabsJoin = () => {
                 Partner with Labstack to access enterprise clients, increase utilization, and grow revenue with guaranteed payment terms.
               </p>
 
-              <Link to="/contact">
+              <Link to="/provider/hospitals-labs/apply">
                 <Button size="lg" className="btn-gradient">
                   Partner With Us
                   <ArrowRight className="ml-2 h-5 w-5" />
@@ -111,7 +111,7 @@ const HospitalsLabsJoin = () => {
               <p className="text-lg text-muted-foreground mb-8">
                 Join 500+ hospitals and labs already partnering with Labstack
               </p>
-              <Link to="/contact">
+              <Link to="/provider/hospitals-labs/apply">
                 <Button size="lg" className="btn-gradient">
                   Apply to Join Network
                   <ArrowRight className="ml-2 h-5 w-5" />

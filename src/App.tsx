@@ -32,8 +32,11 @@ const DigitalHealthPlatforms = lazy(() => import("./pages/who-we-serve/DigitalHe
 const Providers = lazy(() => import("./pages/who-we-serve/Providers"));
 const ProvidersOverview = lazy(() => import("./pages/provider/ProvidersOverview"));
 const HospitalsLabsJoin = lazy(() => import("./pages/provider/HospitalsLabsJoin"));
+const HospitalsLabsForm = lazy(() => import("./pages/provider/HospitalsLabsForm"));
 const DoctorsJoin = lazy(() => import("./pages/provider/DoctorsJoin"));
+const DoctorsForm = lazy(() => import("./pages/provider/DoctorsForm"));
 const NutritionistsHealthCoaches = lazy(() => import("./pages/provider/NutritionistsHealthCoaches"));
+const NutritionistsForm = lazy(() => import("./pages/provider/NutritionistsForm"));
 const FieldStaffJoin = lazy(() => import("./pages/provider/FieldStaffJoin"));
 const PrivacyPolicy = lazy(() => import("./pages/PrivacyPolicy"));
 const TermsConditions = lazy(() => import("./pages/TermsConditions"));
@@ -79,8 +82,11 @@ const App = () => (
               <Route path="/who-we-serve/providers" element={<Providers />} />
               <Route path="/provider" element={<ProvidersOverview />} />
               <Route path="/provider/hospitals-labs" element={<HospitalsLabsJoin />} />
+              <Route path="/provider/hospitals-labs/apply" element={<HospitalsLabsForm />} />
               <Route path="/provider/doctors" element={<DoctorsJoin />} />
+              <Route path="/provider/doctors/apply" element={<DoctorsForm />} />
               <Route path="/provider/nutritionists-health-coaches" element={<NutritionistsHealthCoaches />} />
+              <Route path="/provider/nutritionists-health-coaches/apply" element={<NutritionistsForm />} />
               <Route path="/provider/field-staff" element={<FieldStaffJoin />} />
               <Route path="/privacy-policy" element={<PrivacyPolicy />} />
               <Route path="/terms-conditions" element={<TermsConditions />} />

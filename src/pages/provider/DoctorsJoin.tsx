@@ -73,7 +73,7 @@ const DoctorsJoin = () => {
                 and digital health platforms while maintaining your independent practice.
               </p>
 
-              <Link to="/contact">
+               <Link to="/provider/doctors/apply">
                 <Button size="lg" className="btn-gradient">
                   Apply to Join Medical Network
                   <ArrowRight className="ml-2 h-5 w-5" />
@@ -238,7 +238,7 @@ const DoctorsJoin = () => {
               <p className="text-muted-foreground mb-8">
                 Join thousands of doctors serving patients across India through Labstack's trusted medical network.
               </p>
-              <Link to="/contact">
+              <Link to="/provider/doctors/apply">
                 <Button size="lg" className="btn-gradient">
                   Apply to Join Today
                   <ArrowRight className="ml-2 h-5 w-5" />
