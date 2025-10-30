@@ -49,9 +49,23 @@ const Blog = lazy(() => import("./pages/resources/Blog"));
 const ResearchHub = lazy(() => import("./pages/resources/ResearchHub"));
 const APIDocumentation = lazy(() => import("./pages/resources/APIDocumentation"));
 const CustomSolutions = lazy(() => import("./pages/CustomSolutions"));
+const InsurerCaseStudy = lazy(() => import("./pages/resources/case-studies/InsurerCaseStudy"));
+const BrokerCaseStudy = lazy(() => import("./pages/resources/case-studies/BrokerCaseStudy"));
+const DiseaseManagementCaseStudy = lazy(() => import("./pages/resources/case-studies/DiseaseManagementCaseStudy"));
+const DigitalHealthCaseStudy = lazy(() => import("./pages/resources/case-studies/DigitalHealthCaseStudy"));
 const ScalingToTier2Tier3 = lazy(() => import("./pages/resources/blog/ScalingToTier2Tier3"));
 const ReducingClaimsLeakage = lazy(() => import("./pages/resources/blog/ReducingClaimsLeakage"));
 const APIFirstHealthcare = lazy(() => import("./pages/resources/blog/APIFirstHealthcare"));
+const InsurersDigitalTransformation = lazy(() => import("./pages/resources/blog/InsurersDigitalTransformation"));
+const InsurersClaimsFraud = lazy(() => import("./pages/resources/blog/InsurersClaimsFraud"));
+const BrokersEngagement = lazy(() => import("./pages/resources/blog/BrokersEngagement"));
+const BrokersTech = lazy(() => import("./pages/resources/blog/BrokersTech"));
+const DiseaseManagementChronic = lazy(() => import("./pages/resources/blog/DiseaseManagementChronic"));
+const DiseaseManagementEngagement = lazy(() => import("./pages/resources/blog/DiseaseManagementEngagement"));
+const DigitalHealthAPI = lazy(() => import("./pages/resources/blog/DigitalHealthAPI"));
+const DigitalHealthScale = lazy(() => import("./pages/resources/blog/DigitalHealthScale"));
+const ProvidersNetwork = lazy(() => import("./pages/resources/blog/ProvidersNetwork"));
+const ProvidersTech = lazy(() => import("./pages/resources/blog/ProvidersTech"));
 
 const queryClient = new QueryClient();
 
@@ -105,8 +119,22 @@ const App = () => (
               <Route path="/resources/blog/scaling-to-tier-2-tier-3-cities" element={<ScalingToTier2Tier3 />} />
               <Route path="/resources/blog/reducing-opd-claims-leakage" element={<ReducingClaimsLeakage />} />
               <Route path="/resources/blog/api-first-healthcare-build-vs-buy" element={<APIFirstHealthcare />} />
-          <Route path="/resources/research-hub" element={<ResearchHub />} />
-          <Route path="/resources/api-documentation" element={<APIDocumentation />} />
+              <Route path="/resources/blog/insurers-digital-transformation" element={<InsurersDigitalTransformation />} />
+              <Route path="/resources/blog/insurers-claims-fraud" element={<InsurersClaimsFraud />} />
+              <Route path="/resources/blog/brokers-engagement" element={<BrokersEngagement />} />
+              <Route path="/resources/blog/brokers-tech" element={<BrokersTech />} />
+              <Route path="/resources/blog/disease-management-chronic" element={<DiseaseManagementChronic />} />
+              <Route path="/resources/blog/disease-management-engagement" element={<DiseaseManagementEngagement />} />
+              <Route path="/resources/blog/digital-health-api" element={<DigitalHealthAPI />} />
+              <Route path="/resources/blog/digital-health-scale" element={<DigitalHealthScale />} />
+              <Route path="/resources/blog/providers-network" element={<ProvidersNetwork />} />
+              <Route path="/resources/blog/providers-tech" element={<ProvidersTech />} />
+              <Route path="/resources/research-hub" element={<ResearchHub />} />
+              <Route path="/resources/case-studies/insurer" element={<InsurerCaseStudy />} />
+              <Route path="/resources/case-studies/broker" element={<BrokerCaseStudy />} />
+              <Route path="/resources/case-studies/disease-management" element={<DiseaseManagementCaseStudy />} />
+              <Route path="/resources/case-studies/digital-health" element={<DigitalHealthCaseStudy />} />
+              <Route path="/resources/api-documentation" element={<APIDocumentation />} />
               <Route path="/custom-solutions" element={<CustomSolutions />} />
               <Route path="*" element={<NotFound />} />
             </Routes>

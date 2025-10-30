@@ -16,40 +16,56 @@ const ResearchHub = () => {
 
   const featuredCases = [
     {
-      company: "Major Health Insurer",
+      company: "Regional Health Insurer",
       industry: "Insurance / TPA",
-      challenge: "18% OPD claims leakage with poor member NPS",
-      solution: "SKU-level controls, automated fraud detection, and SLA-backed fulfillment",
+      challenge: "Manual claims processing limiting growth",
+      solution: "Automated claims platform with AI fraud detection",
       results: [
-        { metric: "12%", label: "Leakage Reduction" },
-        { metric: "25 pts", label: "NPS Gain" },
-        { metric: "99%+", label: "SLA Adherence" }
+        { metric: "60%", label: "Processing Time Cut" },
+        { metric: "4x", label: "Volume Increase" },
+        { metric: "₹2.1 Cr", label: "Fraud Prevention" }
       ],
-      icon: Building2
+      icon: Building2,
+      link: "/resources/case-studies/insurer"
     },
     {
-      company: "Digital Health Startup",
-      industry: "Healthtech Platform",
-      challenge: "12-18 month build timeline blocking nationwide launch",
-      solution: "API-first integration with white-label platform",
+      company: "Insurance Brokerage",
+      industry: "Brokerage",
+      challenge: "Price commoditization and client churn",
+      solution: "Integrated wellness platform for differentiation",
       results: [
-        { metric: "14 Days", label: "Go-Live Time" },
-        { metric: "20%", label: "Conversion Boost" },
-        { metric: "9K+", label: "Pincodes Live" }
+        { metric: "3.2x", label: "Revenue Growth" },
+        { metric: "35%", label: "Higher Retention" },
+        { metric: "92%", label: "Renewal Rate" }
       ],
-      icon: Target
+      icon: Award,
+      link: "/resources/case-studies/broker"
     },
     {
-      company: "Disease Management Platform",
-      industry: "Chronic Care",
-      challenge: "Patient drop-offs between test → consult → meds",
-      solution: "Protocol-driven pathways with automated follow-ups",
+      company: "Corporate Tech Company",
+      industry: "Disease Management",
+      challenge: "High diabetes hospitalization costs",
+      solution: "Comprehensive diabetes management program",
       results: [
-        { metric: ">90%", label: "Completion Rate" },
-        { metric: "<20%", label: "Patient Churn" },
-        { metric: "2.5-3x", label: "LTV Increase" }
+        { metric: "52%", label: "Hospitalization Cut" },
+        { metric: "78%", label: "Engagement Rate" },
+        { metric: "₹1.2 Cr", label: "Annual Savings" }
       ],
-      icon: Users
+      icon: Users,
+      link: "/resources/case-studies/disease-management"
+    },
+    {
+      company: "Digital Health Platform",
+      industry: "Telemedicine",
+      challenge: "18-month build timeline blocking launch",
+      solution: "API-first infrastructure for rapid market entry",
+      results: [
+        { metric: "14 Days", label: "Time to Launch" },
+        { metric: "100K", label: "Users in 6 Months" },
+        { metric: "300+", label: "Cities Covered" }
+      ],
+      icon: Target,
+      link: "/resources/case-studies/digital-health"
     }
   ];
 
@@ -93,7 +109,8 @@ const ResearchHub = () => {
               </p>
               <div className="space-y-8">
                 {featuredCases.map((caseStudy, index) => (
-                  <div key={index} className="bg-card-gradient rounded-2xl border border-border/20 overflow-hidden card-hover">
+                  <Link key={index} to={caseStudy.link}>
+                    <div className="bg-card-gradient rounded-2xl border border-border/20 overflow-hidden card-hover">
                     <div className="p-8">
                       <div className="flex items-start justify-between mb-6">
                         <div className="flex-1">

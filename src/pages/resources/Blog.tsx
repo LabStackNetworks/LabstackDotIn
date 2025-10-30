@@ -14,25 +14,84 @@ const Blog = () => {
 
   const featuredArticles = [
     {
-      title: "Scaling Healthcare to Tier-2/3 Cities: A Practical Guide",
-      excerpt: "How to expand diagnostic and telemedicine services to 200+ Tier-2 and Tier-3 cities with quality control and profitability.",
-      category: "Market Expansion",
+      title: "Digital Transformation for Health Insurers: A 2025 Roadmap",
+      excerpt: "How leading insurers are reducing claim processing time by 60% and scaling to tier-2/3 cities with digital infrastructure.",
+      category: "Insurers",
       readTime: "8 min read",
-      date: "Dec 15, 2024"
+      date: "Jan 15, 2025",
+      link: "insurers-digital-transformation"
     },
     {
-      title: "Reducing OPD Claims Leakage by 12%: Insurer Case Study",
-      excerpt: "SKU-level controls, audit trails, and fraud detection reduced claims leakage from 18% to 6% for a major TPA.",
-      category: "Insurance",
-      readTime: "6 min read",
-      date: "Dec 12, 2024"
-    },
-    {
-      title: "API-First Healthcare: Why Build vs Buy Is No Longer a Question",
-      excerpt: "Analysis of 12-18 month build timelines vs 14-day API integration. Real cost comparisons and ROI calculations.",
-      category: "Technology",
+      title: "Reducing Claims Fraud: AI-Powered Detection",
+      excerpt: "Learn how AI and data analytics help insurers detect fraud, saving ₹800-1200 per suspicious claim and reducing fraud rates by 40%.",
+      category: "Insurers",
       readTime: "10 min read",
-      date: "Dec 10, 2024"
+      date: "Jan 20, 2025",
+      link: "insurers-claims-fraud"
+    },
+    {
+      title: "Employee Wellness Programs That Drive ROI",
+      excerpt: "How brokers use digital wellness platforms to increase retention by 35%, reduce claims by 20%, and differentiate in competitive markets.",
+      category: "Brokers",
+      readTime: "9 min read",
+      date: "Jan 18, 2025",
+      link: "brokers-engagement"
+    },
+    {
+      title: "Technology Stack for Modern Insurance Brokers",
+      excerpt: "How tech-enabled brokers are serving 3x more clients with 40% lower operational costs through automation.",
+      category: "Brokers",
+      readTime: "11 min read",
+      date: "Jan 22, 2025",
+      link: "brokers-tech"
+    },
+    {
+      title: "Chronic Disease Management at Scale",
+      excerpt: "Discover how disease management programs reduce hospitalizations by 45% and lower treatment costs by ₹8,000-12,000 per patient annually.",
+      category: "Disease Management",
+      readTime: "12 min read",
+      date: "Jan 25, 2025",
+      link: "disease-management-chronic"
+    },
+    {
+      title: "Patient Engagement: Getting to 70%+ Participation",
+      excerpt: "Proven strategies to achieve 70%+ enrollment and 50%+ active engagement in disease management programs through behavioral design.",
+      category: "Disease Management",
+      readTime: "11 min read",
+      date: "Jan 28, 2025",
+      link: "disease-management-engagement"
+    },
+    {
+      title: "API-First Healthcare Infrastructure",
+      excerpt: "Build faster with healthcare APIs. Launch diagnostics, consultations, and pharmacy in 14 days instead of 14 months.",
+      category: "Digital Health",
+      readTime: "9 min read",
+      date: "Jan 12, 2025",
+      link: "digital-health-api"
+    },
+    {
+      title: "Scaling to Tier 2/3 Cities",
+      excerpt: "Expand beyond metros with infrastructure that works in 600+ cities. Learn how platforms scale profitably to tier 2/3 markets.",
+      category: "Digital Health",
+      readTime: "7 min read",
+      date: "Jan 16, 2025",
+      link: "digital-health-scale"
+    },
+    {
+      title: "Joining Healthcare Networks: A Provider's Guide",
+      excerpt: "How doctors, labs, and hospitals grow practice volume by 40% through digital health network partnerships.",
+      category: "Providers",
+      readTime: "8 min read",
+      date: "Jan 19, 2025",
+      link: "providers-network"
+    },
+    {
+      title: "Digital Tools for Healthcare Providers",
+      excerpt: "Learn how digital tools help providers manage appointments, reduce no-shows by 60%, and improve patient satisfaction.",
+      category: "Providers",
+      readTime: "7 min read",
+      date: "Jan 23, 2025",
+      link: "providers-tech"
     }
   ];
 
@@ -71,17 +130,17 @@ const Blog = () => {
 
             {/* Featured Articles */}
             <div className="max-w-6xl mx-auto mb-20">
-              <h2 className="text-3xl font-heading font-bold text-center mb-12">Featured Articles</h2>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <h2 className="text-3xl font-heading font-bold text-center mb-12">Latest Articles</h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {featuredArticles.map((article, index) => (
-                  <Link key={index} to={`/resources/blog/${index === 0 ? 'scaling-to-tier-2-tier-3-cities' : index === 1 ? 'reducing-opd-claims-leakage' : 'api-first-healthcare-build-vs-buy'}`}>
-                    <div className="bg-card-gradient rounded-2xl border border-border/20 overflow-hidden card-hover">
+                  <Link key={index} to={`/resources/blog/${article.link}`}>
+                    <div className="bg-card-gradient rounded-2xl border border-border/20 overflow-hidden card-hover h-full">
                       <div className="p-6">
                         <div className="inline-block bg-primary/10 text-primary px-3 py-1 rounded-full text-xs font-medium mb-4">
                           {article.category}
                         </div>
-                        <h3 className="font-heading font-bold text-xl mb-3">{article.title}</h3>
-                        <p className="text-muted-foreground text-sm mb-4">{article.excerpt}</p>
+                        <h3 className="font-heading font-bold text-lg mb-3 line-clamp-2">{article.title}</h3>
+                        <p className="text-muted-foreground text-sm mb-4 line-clamp-3">{article.excerpt}</p>
                         <div className="flex items-center justify-between text-xs text-muted-foreground">
                           <div className="flex items-center space-x-4">
                             <span className="flex items-center"><Calendar className="w-3 h-3 mr-1" />{article.date}</span>
