@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { useForm } from "react-hook-form";
@@ -7,6 +8,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import { Checkbox } from "@/components/ui/checkbox";
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/hooks/use-toast";
 
@@ -23,6 +25,12 @@ const schema = z.object({
   consultationTypes: z.string().trim().min(5, "Please specify consultation types").max(200),
   availability: z.string().trim().min(5, "Please share your availability").max(300),
   message: z.string().trim().max(1000).optional(),
+  agreeToTerms: z.boolean().refine((val) => val === true, {
+    message: "You must agree to the Terms of Service",
+  }),
+  agreeToPrivacy: z.boolean().refine((val) => val === true, {
+    message: "You must agree to the Privacy Policy",
+  }),
 });
 
 type FormValues = z.infer<typeof schema>;
@@ -44,6 +52,8 @@ const DoctorsForm = () => {
       consultationTypes: "",
       availability: "",
       message: "",
+      agreeToTerms: false,
+      agreeToPrivacy: false,
     }
   });
 
@@ -211,6 +221,42 @@ const DoctorsForm = () => {
                     <FormMessage />
                   </FormItem>
                 )} />
+
+                <div className="space-y-4 pt-4 border-t border-border/20">
+                  <FormField name="agreeToTerms" control={form.control} render={({ field }) => (
+                    <FormItem className="flex flex-row items-start space-x-3 space-y-0">
+                      <FormControl>
+                        <Checkbox checked={field.value} onCheckedChange={field.onChange} />
+                      </FormControl>
+                      <div className="space-y-1 leading-none">
+                        <FormLabel className="text-sm font-normal">
+                          I agree to the{" "}
+                          <Link to="/terms-conditions" className="text-primary hover:underline" target="_blank">
+                            Terms of Service
+                          </Link>
+                        </FormLabel>
+                        <FormMessage />
+                      </div>
+                    </FormItem>
+                  )} />
+
+                  <FormField name="agreeToPrivacy" control={form.control} render={({ field }) => (
+                    <FormItem className="flex flex-row items-start space-x-3 space-y-0">
+                      <FormControl>
+                        <Checkbox checked={field.value} onCheckedChange={field.onChange} />
+                      </FormControl>
+                      <div className="space-y-1 leading-none">
+                        <FormLabel className="text-sm font-normal">
+                          I agree to the{" "}
+                          <Link to="/privacy-policy" className="text-primary hover:underline" target="_blank">
+                            Privacy Policy
+                          </Link>
+                        </FormLabel>
+                        <FormMessage />
+                      </div>
+                    </FormItem>
+                  )} />
+                </div>
 
                 <Button type="submit" size="lg" className="w-full btn-gradient">
                   Submit Application

@@ -22,8 +22,14 @@ const schema = z.object({
   availability: z.string().min(2, "Please share availability"),
   certifications: z.string().optional(),
   message: z.string().optional(),
-  agreeToTerms: z.boolean().refine((val) => val === true, {
+  agreeToPartnerTerms: z.boolean().refine((val) => val === true, {
     message: "You must agree to the Partner Terms & Conditions",
+  }),
+  agreeToTerms: z.boolean().refine((val) => val === true, {
+    message: "You must agree to the Terms of Service",
+  }),
+  agreeToPrivacy: z.boolean().refine((val) => val === true, {
+    message: "You must agree to the Privacy Policy",
   }),
 });
 
@@ -41,7 +47,9 @@ const FieldStaffJoin = () => {
     availability: "",
     certifications: "",
     message: "",
+    agreeToPartnerTerms: false,
     agreeToTerms: false,
+    agreeToPrivacy: false,
   }});
 
   useEffect(() => { document.title = "Join the Network – Phlebotomists & Nurses | Labstack"; }, []);
@@ -166,22 +174,58 @@ const FieldStaffJoin = () => {
                   </FormItem>
                 )} />
 
-                <FormField name="agreeToTerms" control={form.control} render={({ field }) => (
-                  <FormItem className="flex flex-row items-start space-x-3 space-y-0 p-4 bg-card rounded-lg border border-border/50">
-                    <FormControl>
-                      <Checkbox checked={field.value} onCheckedChange={field.onChange} />
-                    </FormControl>
-                    <div className="space-y-1 leading-none">
-                      <FormLabel className="text-sm font-normal">
-                        I have read and agree to the{" "}
-                        <Link to="/partner-terms" target="_blank" className="text-primary hover:underline">
-                          Labstack Partner Terms & Conditions
-                        </Link>
-                      </FormLabel>
-                      <FormMessage />
-                    </div>
-                  </FormItem>
-                )} />
+                <div className="space-y-4 pt-4 border-t border-border/20">
+                  <FormField name="agreeToPartnerTerms" control={form.control} render={({ field }) => (
+                    <FormItem className="flex flex-row items-start space-x-3 space-y-0">
+                      <FormControl>
+                        <Checkbox checked={field.value} onCheckedChange={field.onChange} />
+                      </FormControl>
+                      <div className="space-y-1 leading-none">
+                        <FormLabel className="text-sm font-normal">
+                          I have read and agree to the{" "}
+                          <Link to="/partner-terms" target="_blank" className="text-primary hover:underline">
+                            Labstack Partner Terms & Conditions
+                          </Link>
+                        </FormLabel>
+                        <FormMessage />
+                      </div>
+                    </FormItem>
+                  )} />
+
+                  <FormField name="agreeToTerms" control={form.control} render={({ field }) => (
+                    <FormItem className="flex flex-row items-start space-x-3 space-y-0">
+                      <FormControl>
+                        <Checkbox checked={field.value} onCheckedChange={field.onChange} />
+                      </FormControl>
+                      <div className="space-y-1 leading-none">
+                        <FormLabel className="text-sm font-normal">
+                          I agree to the{" "}
+                          <Link to="/terms-conditions" className="text-primary hover:underline" target="_blank">
+                            Terms of Service
+                          </Link>
+                        </FormLabel>
+                        <FormMessage />
+                      </div>
+                    </FormItem>
+                  )} />
+
+                  <FormField name="agreeToPrivacy" control={form.control} render={({ field }) => (
+                    <FormItem className="flex flex-row items-start space-x-3 space-y-0">
+                      <FormControl>
+                        <Checkbox checked={field.value} onCheckedChange={field.onChange} />
+                      </FormControl>
+                      <div className="space-y-1 leading-none">
+                        <FormLabel className="text-sm font-normal">
+                          I agree to the{" "}
+                          <Link to="/privacy-policy" className="text-primary hover:underline" target="_blank">
+                            Privacy Policy
+                          </Link>
+                        </FormLabel>
+                        <FormMessage />
+                      </div>
+                    </FormItem>
+                  )} />
+                </div>
 
                 <div className="flex items-center justify-between gap-3">
                   <p className="text-xs text-muted-foreground">We never share your details. By submitting, you agree to be contacted about onboarding.</p>
