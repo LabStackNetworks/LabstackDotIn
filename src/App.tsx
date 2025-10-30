@@ -31,6 +31,7 @@ const DiseaseManagement = lazy(() => import("./pages/who-we-serve/DiseaseManagem
 const DigitalHealthPlatforms = lazy(() => import("./pages/who-we-serve/DigitalHealthPlatforms"));
 const Providers = lazy(() => import("./pages/who-we-serve/Providers"));
 const ProvidersOverview = lazy(() => import("./pages/provider/ProvidersOverview"));
+const ProviderJoinForm = lazy(() => import("./pages/provider/ProviderJoinForm"));
 const HospitalsLabsJoin = lazy(() => import("./pages/provider/HospitalsLabsJoin"));
 const HospitalsLabsForm = lazy(() => import("./pages/provider/HospitalsLabsForm"));
 const DoctorsJoin = lazy(() => import("./pages/provider/DoctorsJoin"));
@@ -81,6 +82,7 @@ const App = () => (
               <Route path="/who-we-serve/digital-health-platforms" element={<DigitalHealthPlatforms />} />
               <Route path="/who-we-serve/providers" element={<Providers />} />
               <Route path="/provider" element={<ProvidersOverview />} />
+              <Route path="/provider/join-network" element={<ProviderJoinForm />} />
               <Route path="/provider/hospitals-labs" element={<HospitalsLabsJoin />} />
               <Route path="/provider/hospitals-labs/apply" element={<HospitalsLabsForm />} />
               <Route path="/provider/doctors" element={<DoctorsJoin />} />

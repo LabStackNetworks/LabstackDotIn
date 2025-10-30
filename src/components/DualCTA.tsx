@@ -96,7 +96,7 @@ const DualCTA = () => {
                 </div>
               </div>
 
-              <Link to="/who-we-serve/providers" className="w-full">
+              <Link to="/provider/join-network" className="w-full">
                 <Button size="lg" variant="outline" className="w-full btn-outline-gradient text-lg py-3 h-auto">
                   <Users className="mr-2 h-5 w-5" />
                   Join the Network
