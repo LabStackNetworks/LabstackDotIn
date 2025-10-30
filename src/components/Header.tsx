@@ -94,13 +94,14 @@ const Header = () => {
         featured: {
           title: "Healthcare Ecosystem",
           description: "Serving startups, enterprises, and healthcare providers",
-          href: "#ecosystem",
+          href: "/who-we-serve",
           icon: Stethoscope
         },
         sections: [
           {
             title: "Technology Partners",
             items: [
+              { label: "Healthcare Ecosystem", href: "/who-we-serve", description: "Platform overview" },
               { label: "Insurers & TPAs", href: "/who-we-serve/insurers-tpas", description: "Insurance companies" },
               { label: "Brokers & Corporate Wellness", href: "/who-we-serve/brokers-corporate-wellness", description: "Insurance & wellness programs" },
               { label: "Disease Management", href: "/who-we-serve/disease-management", description: "Chronic care platforms" },
@@ -116,7 +117,7 @@ const Header = () => {
       hasDropdown: true,
       dropdown: {
         featured: {
-          title: "Join Our Network",
+          title: "Provider Network",
           description: "Grow your practice with India's largest healthcare network",
           href: "/provider",
           icon: Users
@@ -126,11 +127,11 @@ const Header = () => {
             title: "Healthcare Professionals",
             items: [
               { label: "Overview", href: "/provider", description: "Provider network benefits" },
-              { label: "Join Network", href: "/provider/join-network", description: "Apply to join our network" },
               { label: "Hospitals & Labs", href: "/provider/hospitals-labs", description: "Diagnostic centers & hospitals" },
               { label: "Doctors", href: "/provider/doctors", description: "Medical practitioners" },
               { label: "Nutritionists & Health Coaches", href: "/provider/nutritionists-health-coaches", description: "Wellness professionals" },
-              { label: "Nurses & Phlebotomists", href: "/provider/field-staff", description: "Field healthcare staff" }
+              { label: "Nurses & Phlebotomists", href: "/provider/field-staff", description: "Field healthcare staff" },
+              { label: "Join Network", href: "/provider/join-network", description: "Apply to join our network" }
             ]
           }
         ]

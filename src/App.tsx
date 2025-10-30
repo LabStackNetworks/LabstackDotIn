@@ -25,6 +25,7 @@ const HealthcareInfrastructure = lazy(() => import("./pages/solutions/Healthcare
 const DigitalPlatform = lazy(() => import("./pages/solutions/DigitalPlatform"));
 const APISolutions = lazy(() => import("./pages/solutions/APISolutions"));
 const CoverageExpansion = lazy(() => import("./pages/solutions/CoverageExpansion"));
+const WhoWeServeOverview = lazy(() => import("./pages/who-we-serve/WhoWeServeOverview"));
 const InsurersTPAs = lazy(() => import("./pages/who-we-serve/InsurersTPAs"));
 const BrokersCorporateWellness = lazy(() => import("./pages/who-we-serve/BrokersCorporateWellness"));
 const DiseaseManagement = lazy(() => import("./pages/who-we-serve/DiseaseManagement"));
@@ -76,6 +77,7 @@ const App = () => (
               <Route path="/solutions/digital-platform" element={<DigitalPlatform />} />
               <Route path="/solutions/api-solutions" element={<APISolutions />} />
               <Route path="/solutions/coverage-expansion" element={<CoverageExpansion />} />
+              <Route path="/who-we-serve" element={<WhoWeServeOverview />} />
               <Route path="/who-we-serve/insurers-tpas" element={<InsurersTPAs />} />
               <Route path="/who-we-serve/brokers-corporate-wellness" element={<BrokersCorporateWellness />} />
               <Route path="/who-we-serve/disease-management" element={<DiseaseManagement />} />

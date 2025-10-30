@@ -18,6 +18,7 @@ const Footer = () => {
       { name: "Coverage Expansion", href: "/solutions/coverage-expansion" }
     ],
     whoWeServe: [
+      { name: "Healthcare Ecosystem", href: "/who-we-serve" },
       { name: "Insurers & TPAs", href: "/who-we-serve/insurers-tpas" },
       { name: "Brokers & Corporate Wellness", href: "/who-we-serve/brokers-corporate-wellness" },
       { name: "Disease Management", href: "/who-we-serve/disease-management" },
@@ -25,11 +26,11 @@ const Footer = () => {
     ],
     providers: [
       { name: "Overview", href: "/provider" },
-      { name: "Join Network", href: "/provider/join-network" },
       { name: "Hospitals & Labs", href: "/provider/hospitals-labs" },
       { name: "Doctors", href: "/provider/doctors" },
       { name: "Nutritionists & Health Coaches", href: "/provider/nutritionists-health-coaches" },
-      { name: "Nurses & Phlebotomists", href: "/provider/field-staff" }
+      { name: "Nurses & Phlebotomists", href: "/provider/field-staff" },
+      { name: "Join Network", href: "/provider/join-network" }
     ],
     resources: [
       { name: "Blog", href: "/resources/blog" },
