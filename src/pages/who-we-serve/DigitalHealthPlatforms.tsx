@@ -45,11 +45,11 @@ const DigitalHealthPlatforms = () => {
               </div>
 
               <h1 className="text-4xl lg:text-6xl font-heading font-bold mb-6">
-                Scale Healthcare <span className="text-gradient">Nationwide in Days</span>
+                Nationwide Healthcare. <span className="text-gradient">Zero Build Time.</span>
               </h1>
 
               <p className="text-lg lg:text-xl text-muted-foreground mb-8">
-                One API. Nationwide coverage. Launch in 14 days instead of 12-18 months.
+                Launch in 14 days with plug-and-play healthcare infrastructure. One API for diagnostics, consults, pharmacy—no vendor contracts, no ops headcount.
               </p>
 
               <Link to="/start-building">
@@ -86,35 +86,39 @@ const DigitalHealthPlatforms = () => {
               </div>
             </div>
 
-            <div className="max-w-5xl mx-auto bg-gradient-hero rounded-3xl p-8 lg:p-12 border border-border/50">
-              <h3 className="text-2xl font-heading font-bold text-center mb-8">Platform Impact</h3>
-              <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
-                <div>
-                  <Zap className="w-8 h-8 text-warning mx-auto mb-3" />
-                  <div className="text-3xl font-heading font-bold text-gradient mb-2">14 Days</div>
-                  <p className="text-sm text-muted-foreground">Go-Live Time</p>
+            {/* Platform Features */}
+            <div className="max-w-6xl mx-auto mb-16">
+              <h2 className="text-3xl font-heading font-bold text-center mb-4">
+                The Growth Engine for Your Health Business
+              </h2>
+              <p className="text-center text-muted-foreground mb-12 max-w-3xl mx-auto">
+                Not just network access—the complete B2B platform to launch, customize, and scale your healthcare offering without building infrastructure.
+              </p>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div className="bg-card-gradient p-6 rounded-xl border border-border/20">
+                  <h3 className="font-heading font-bold mb-3">48-Hour Integration</h3>
+                  <p className="text-sm text-muted-foreground">One API for diagnostics, pharmacy, consults, and chronic care. Pre-built SDKs, webhooks, and documentation. Launch nationwide in days, not quarters.</p>
                 </div>
-                <div>
-                  <TrendingUp className="w-8 h-8 text-success mx-auto mb-3" />
-                  <div className="text-3xl font-heading font-bold text-gradient mb-2">30K+</div>
-                  <p className="text-sm text-muted-foreground">Orders/Month</p>
+                <div className="bg-card-gradient p-6 rounded-xl border border-border/20">
+                  <h3 className="font-heading font-bold mb-3">White-Label Your Experience</h3>
+                  <p className="text-sm text-muted-foreground">Customize booking flows, care journeys, notifications across your app and web. Your customers see your brand—we're the invisible infrastructure.</p>
                 </div>
-                <div>
-                  <Repeat className="w-8 h-8 text-primary mx-auto mb-3" />
-                  <div className="text-3xl font-heading font-bold text-gradient mb-2">99.5%</div>
-                  <p className="text-sm text-muted-foreground">API Uptime</p>
+                <div className="bg-card-gradient p-6 rounded-xl border border-border/20">
+                  <h3 className="font-heading font-bold mb-3">Build Your Health Products</h3>
+                  <p className="text-sm text-muted-foreground">Create custom packages, subscriptions, and care programs—diabetes management, women's health, preventive care. Configure services, pricing, and protocols.</p>
                 </div>
-                <div>
-                  <CheckCircle className="w-8 h-8 text-secondary mx-auto mb-3" />
-                  <div className="text-3xl font-heading font-bold text-gradient mb-2">9K+</div>
-                  <p className="text-sm text-muted-foreground">Pincodes</p>
+                <div className="bg-card-gradient p-6 rounded-xl border border-border/20">
+                  <h3 className="font-heading font-bold mb-3">Network Selection & Config</h3>
+                  <p className="text-sm text-muted-foreground">Choose standard or premium provider networks by region. Set quality tiers, service coverage, and fulfillment SLAs that match your brand promise.</p>
                 </div>
-              </div>
-
-              <div className="mt-12 bg-success/10 border border-success/20 rounded-xl p-6 text-center">
-                <p className="text-success font-medium italic">
-                  "We scaled nationwide in days with Labstack, saving a year of build. Conversions rose 20% once Tier-2/3 opened."
-                </p>
+                <div className="bg-card-gradient p-6 rounded-xl border border-border/20">
+                  <h3 className="font-heading font-bold mb-3">Operations on Autopilot</h3>
+                  <p className="text-sm text-muted-foreground">We handle provider coordination, quality control, SLA management, escalations, and reconciliation. You focus on product and growth.</p>
+                </div>
+                <div className="bg-card-gradient p-6 rounded-xl border border-border/20">
+                  <h3 className="font-heading font-bold mb-3">Monetization & Analytics</h3>
+                  <p className="text-sm text-muted-foreground">Revenue optimization tools, cross-sell opportunities, engagement funnels, and performance insights to grow profitably and retain users.</p>
+                </div>
               </div>
             </div>
           </div>

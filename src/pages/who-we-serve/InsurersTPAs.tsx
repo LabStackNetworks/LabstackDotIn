@@ -53,11 +53,11 @@ const InsurersTPAs = () => {
               </div>
 
               <h1 className="text-4xl lg:text-6xl font-heading font-bold mb-6">
-                SLA-Backed OPD with <span className="text-gradient">Built-in Controls</span>
+                Healthcare at Scale. <span className="text-gradient">Zero Setup.</span>
               </h1>
 
               <p className="text-lg lg:text-xl text-muted-foreground mb-8">
-                Deliver diagnostics, consults, and pharmacy at scale — with audit trails and operational controls built in.
+                Launch OPD services in days, not months. Plug-and-play healthcare infrastructure with built-in controls, white-label journeys, and automated operations.
               </p>
 
               <Link to="/book-demo">
@@ -124,39 +124,38 @@ const InsurersTPAs = () => {
               </div>
             </div>
 
-            {/* Key Benefits */}
-            <div className="max-w-5xl mx-auto bg-gradient-hero rounded-3xl p-8 lg:p-12 border border-border/50 mb-20">
-              <h2 className="text-3xl font-heading font-bold text-center mb-12">
-                Why Insurers Choose Labstack
+            {/* Platform Features */}
+            <div className="max-w-6xl mx-auto mb-20">
+              <h2 className="text-3xl font-heading font-bold text-center mb-4">
+                The B2B Healthcare Platform You Get
               </h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div className="bg-card/50 p-6 rounded-xl">
-                  <Shield className="w-8 h-8 text-primary mb-4" />
-                  <h3 className="font-heading font-bold mb-2">SKU-Level Controls & Audit Trails</h3>
-                  <p className="text-sm text-muted-foreground">
-                    Control inclusions/exclusions at SKU level. Automated audit trails capture every transaction for compliance and reporting.
-                  </p>
+              <p className="text-center text-muted-foreground mb-12 max-w-3xl mx-auto">
+                Not just an API—the complete growth engine that powers your health offering. Launch, customize, and scale without building infrastructure.
+              </p>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div className="bg-card-gradient p-6 rounded-xl border border-border/20">
+                  <h3 className="font-heading font-bold mb-3">Plug-and-Play Health Services</h3>
+                  <p className="text-sm text-muted-foreground">Ready diagnostics, consults, pharmacy, and chronic care services. Activate nationwide coverage in days—no network building required.</p>
                 </div>
-                <div className="bg-card/50 p-6 rounded-xl">
-                  <Clock className="w-8 h-8 text-secondary mb-4" />
-                  <h3 className="font-heading font-bold mb-2">SLA-Backed Operations</h3>
-                  <p className="text-sm text-muted-foreground">
-                    99%+ fulfillment rate with real-time escalations. No more member complaints about delayed services or missed appointments.
-                  </p>
+                <div className="bg-card-gradient p-6 rounded-xl border border-border/20">
+                  <h3 className="font-heading font-bold mb-3">White-Label Member Journeys</h3>
+                  <p className="text-sm text-muted-foreground">Customizable booking flows, care communications, and engagement across app, web, and WhatsApp under your brand. We stay behind the curtain.</p>
                 </div>
-                <div className="bg-card/50 p-6 rounded-xl">
-                  <TrendingUp className="w-8 h-8 text-success mb-4" />
-                  <h3 className="font-heading font-bold mb-2">Member NPS Improvement</h3>
-                  <p className="text-sm text-muted-foreground">
-                    Seamless member experience across diagnostics, consults, and pharmacy leads to measurable NPS improvements.
-                  </p>
+                <div className="bg-card-gradient p-6 rounded-xl border border-border/20">
+                  <h3 className="font-heading font-bold mb-3">Network Configuration</h3>
+                  <p className="text-sm text-muted-foreground">Choose standard, premium, or specialty networks by region. Configure eligibility, SKU controls, and pricing to match your benefit design.</p>
                 </div>
-                <div className="bg-card/50 p-6 rounded-xl">
-                  <IndianRupee className="w-8 h-8 text-warning mb-4" />
-                  <h3 className="font-heading font-bold mb-2">Reduced Leakage</h3>
-                  <p className="text-sm text-muted-foreground">
-                    12% leakage reduction reported by partners through automated fraud detection and audit trails.
-                  </p>
+                <div className="bg-card-gradient p-6 rounded-xl border border-border/20">
+                  <h3 className="font-heading font-bold mb-3">Care Programs Builder</h3>
+                  <p className="text-sm text-muted-foreground">Create custom health packages—diabetes care, preventive health, maternity. Build subscription models and chronic care programs under your brand.</p>
+                </div>
+                <div className="bg-card-gradient p-6 rounded-xl border border-border/20">
+                  <h3 className="font-heading font-bold mb-3">Unified SLA Operations</h3>
+                  <p className="text-sm text-muted-foreground">We manage fulfillment, tracking, escalations, and member experience. 99%+ SLA adherence across all geographies with real-time monitoring.</p>
+                </div>
+                <div className="bg-card-gradient p-6 rounded-xl border border-border/20">
+                  <h3 className="font-heading font-bold mb-3">Growth & Analytics Engine</h3>
+                  <p className="text-sm text-muted-foreground">Revenue optimization, cross-sell opportunities, engagement funnels, and performance insights to grow your health business profitably.</p>
                 </div>
               </div>
             </div>

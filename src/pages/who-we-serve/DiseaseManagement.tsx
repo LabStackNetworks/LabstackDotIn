@@ -52,11 +52,11 @@ const DiseaseManagement = () => {
               </div>
 
               <h1 className="text-4xl lg:text-6xl font-heading font-bold mb-6">
-                Make Continuous Care <span className="text-gradient">Actually Continuous</span>
+                Continuous Care. <span className="text-gradient">Zero Vendor Maze.</span>
               </h1>
 
               <p className="text-lg lg:text-xl text-muted-foreground mb-8">
-                Deliver diagnostics, consults, pharmacy, and follow-ups as one pathway — not a maze of disconnected vendors.
+                Launch protocol-driven care programs in days. One platform connects tests, consults, pharmacy, and follow-ups—no fragmented vendor management.
               </p>
 
               <Link to="/book-demo">
@@ -116,31 +116,39 @@ const DiseaseManagement = () => {
               </div>
             </div>
 
-            {/* Impact Metrics */}
-            <div className="max-w-5xl mx-auto bg-gradient-hero rounded-3xl p-8 lg:p-12 border border-border/50">
-              <h3 className="text-2xl font-heading font-bold text-center mb-8">Program Impact</h3>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-                <div>
-                  <Activity className="w-8 h-8 text-success mx-auto mb-3" />
-                  <div className="text-3xl font-heading font-bold text-gradient mb-2">&gt;90%</div>
-                  <p className="text-sm text-muted-foreground">Test Completion Rate</p>
+            {/* Platform Features */}
+            <div className="max-w-6xl mx-auto mb-20">
+              <h2 className="text-3xl font-heading font-bold text-center mb-4">
+                The Care Delivery Platform You Get
+              </h2>
+              <p className="text-center text-muted-foreground mb-12 max-w-3xl mx-auto">
+                Build branded chronic care programs without managing fragmented vendors. Launch nationwide in days with protocol-driven pathways built-in.
+              </p>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div className="bg-card-gradient p-6 rounded-xl border border-border/20">
+                  <h3 className="font-heading font-bold mb-3">Protocol-Driven Care Pathways</h3>
+                  <p className="text-sm text-muted-foreground">Pre-built workflows for diabetes, hypertension, PCOS, cardiac care. Tests → consults → pharmacy → follow-ups linked by API, not manual coordination.</p>
                 </div>
-                <div>
-                  <Users className="w-8 h-8 text-primary mx-auto mb-3" />
-                  <div className="text-3xl font-heading font-bold text-gradient mb-2">&lt;20%</div>
-                  <p className="text-sm text-muted-foreground">Patient Churn</p>
+                <div className="bg-card-gradient p-6 rounded-xl border border-border/20">
+                  <h3 className="font-heading font-bold mb-3">White-Label Patient Journeys</h3>
+                  <p className="text-sm text-muted-foreground">Customize enrollment, care communications, progress tracking, and engagement under your brand. We power the delivery behind the scenes.</p>
                 </div>
-                <div>
-                  <TrendingUp className="w-8 h-8 text-secondary mx-auto mb-3" />
-                  <div className="text-3xl font-heading font-bold text-gradient mb-2">2.5-3x</div>
-                  <p className="text-sm text-muted-foreground">LTV Increase</p>
+                <div className="bg-card-gradient p-6 rounded-xl border border-border/20">
+                  <h3 className="font-heading font-bold mb-3">Care Program Builder</h3>
+                  <p className="text-sm text-muted-foreground">Design custom chronic care programs—configure test frequency, specialist consults, medication protocols, and lifestyle interventions.</p>
                 </div>
-              </div>
-
-              <div className="mt-12 bg-success/10 border border-success/20 rounded-xl p-6 text-center">
-                <p className="text-success font-medium italic">
-                  "Raw values and follow-up automation kept patients on protocol. Drop-offs reduced sharply."
-                </p>
+                <div className="bg-card-gradient p-6 rounded-xl border border-border/20">
+                  <h3 className="font-heading font-bold mb-3">Structured Health Data</h3>
+                  <p className="text-sm text-muted-foreground">Raw digital values, not PDFs. Longitudinal data for clinical decisions, trend analysis, and personalized care adjustments over time.</p>
+                </div>
+                <div className="bg-card-gradient p-6 rounded-xl border border-border/20">
+                  <h3 className="font-heading font-bold mb-3">Automated Adherence & Follow-Ups</h3>
+                  <p className="text-sm text-muted-foreground">AI-driven reminders for tests, medications, and appointments. Automated escalations for abnormal values or protocol deviations.</p>
+                </div>
+                <div className="bg-card-gradient p-6 rounded-xl border border-border/20">
+                  <h3 className="font-heading font-bold mb-3">Unified Operations & Analytics</h3>
+                  <p className="text-sm text-muted-foreground">Track completion rates, patient adherence, clinical outcomes, and program ROI. We handle fulfillment, quality, and SLA management.</p>
+                </div>
               </div>
             </div>
           </div>

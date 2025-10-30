@@ -53,11 +53,11 @@ const BrokersCorporateWellness = () => {
               </div>
 
               <h1 className="text-4xl lg:text-6xl font-heading font-bold mb-6">
-                Differentiate Policies. <span className="text-gradient">Grow ARPU.</span>
+                Healthcare Revenue. <span className="text-gradient">Zero Infrastructure.</span>
               </h1>
 
               <p className="text-lg lg:text-xl text-muted-foreground mb-8">
-                Bundle OPD and wellness benefits that increase ARPU by ~15% — with nationwide fulfillment you can trust.
+                Launch white-label OPD and wellness offerings in days. Build your healthcare business on plug-and-play infrastructure—we stay behind the curtain.
               </p>
 
               <Link to="/book-demo">
@@ -118,48 +118,38 @@ const BrokersCorporateWellness = () => {
               </div>
             </div>
 
-            {/* Revenue Model Breakdown */}
-            <div className="max-w-5xl mx-auto bg-gradient-hero rounded-3xl p-8 lg:p-12 border border-border/50 mb-20">
-              <h2 className="text-3xl font-heading font-bold text-center mb-12">
-                Unlock Recurring Healthcare Revenue
+            {/* Platform Features */}
+            <div className="max-w-6xl mx-auto mb-20">
+              <h2 className="text-3xl font-heading font-bold text-center mb-4">
+                Build Your Healthcare Business on Our Platform
               </h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
-                <div className="bg-card/50 p-6 rounded-xl">
-                  <Target className="w-8 h-8 text-primary mb-4" />
-                  <h3 className="font-heading font-bold mb-2">Beyond Commission</h3>
-                  <p className="text-sm text-muted-foreground">
-                    Traditional insurance commission stops after policy sale. OPD services create recurring touchpoints and revenue throughout the policy year.
-                  </p>
+              <p className="text-center text-muted-foreground mb-12 max-w-3xl mx-auto">
+                Launch branded health offerings without building network or operations. We power your success behind the scenes.
+              </p>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div className="bg-card-gradient p-6 rounded-xl border border-border/20">
+                  <h3 className="font-heading font-bold mb-3">Plug-and-Play Health Services</h3>
+                  <p className="text-sm text-muted-foreground">Activate diagnostics, OPD consults, pharmacy, preventive care, and wellness programs across 9,000+ pincodes instantly—no network contracts needed.</p>
                 </div>
-                <div className="bg-card/50 p-6 rounded-xl">
-                  <CheckCircle className="w-8 h-8 text-success mb-4" />
-                  <h3 className="font-heading font-bold mb-2">Full-Stack Health Platform</h3>
-                  <p className="text-sm text-muted-foreground">
-                    Offer PPMC, OPD, preventive care, and emergency services under your brand — differentiating your policies from competitors.
-                  </p>
+                <div className="bg-card-gradient p-6 rounded-xl border border-border/20">
+                  <h3 className="font-heading font-bold mb-3">White-Label Customer Journeys</h3>
+                  <p className="text-sm text-muted-foreground">Design your branded experience—booking flows, care plans, communications. Your customers see your brand. We handle the delivery.</p>
                 </div>
-              </div>
-
-              <h3 className="text-2xl font-heading font-bold text-center mb-8">Annual Revenue Per Customer</h3>
-              <div className="grid grid-cols-1 md:grid-cols-4 gap-6 text-center">
-                <div>
-                  <IndianRupee className="w-8 h-8 text-primary mx-auto mb-3" />
-                  <div className="text-2xl font-heading font-bold mb-2">₹50k</div>
-                  <p className="text-xs text-muted-foreground">Insurance Commission</p>
+                <div className="bg-card-gradient p-6 rounded-xl border border-border/20">
+                  <h3 className="font-heading font-bold mb-3">Custom Health Packages</h3>
+                  <p className="text-sm text-muted-foreground">Build your own offerings—corporate wellness, preventive care subscriptions, family health plans. Configure pricing, services, and care protocols.</p>
                 </div>
-                <div>
-                  <TrendingUp className="w-8 h-8 text-secondary mx-auto mb-3" />
-                  <div className="text-2xl font-heading font-bold mb-2">₹22k</div>
-                  <p className="text-xs text-muted-foreground">OPD Services</p>
+                <div className="bg-card-gradient p-6 rounded-xl border border-border/20">
+                  <h3 className="font-heading font-bold mb-3">Network Selection & Config</h3>
+                  <p className="text-sm text-muted-foreground">Choose standard or premium provider networks by region. Configure eligibility rules, coverage tiers, and service inclusion/exclusion.</p>
                 </div>
-                <div>
-                  <Repeat className="w-8 h-8 text-success mx-auto mb-3" />
-                  <div className="text-2xl font-heading font-bold mb-2">₹35k</div>
-                  <p className="text-xs text-muted-foreground">Preventive Care</p>
+                <div className="bg-card-gradient p-6 rounded-xl border border-border/20">
+                  <h3 className="font-heading font-bold mb-3">Operations Handled End-to-End</h3>
+                  <p className="text-sm text-muted-foreground">Fulfillment, SLA management, quality control, and customer support—fully managed. You focus on distribution and growth.</p>
                 </div>
-                <div className="bg-primary/10 rounded-xl p-4">
-                  <div className="text-3xl font-heading font-bold text-gradient mb-2">₹1.07L</div>
-                  <p className="text-xs text-muted-foreground font-medium">Total Annual Revenue</p>
+                <div className="bg-card-gradient p-6 rounded-xl border border-border/20">
+                  <h3 className="font-heading font-bold mb-3">Monetization & Growth Tools</h3>
+                  <p className="text-sm text-muted-foreground">Revenue optimization, cross-sell opportunities, engagement analytics, and retention insights to maximize ARPU and LTV.</p>
                 </div>
               </div>
             </div>
