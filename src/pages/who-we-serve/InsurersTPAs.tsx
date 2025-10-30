@@ -124,38 +124,62 @@ const InsurersTPAs = () => {
               </div>
             </div>
 
-            {/* Platform Features */}
+            {/* Technology Platform with Business Impact */}
             <div className="max-w-6xl mx-auto mb-20">
               <h2 className="text-3xl font-heading font-bold text-center mb-4">
-                The B2B Healthcare Platform You Get
+                Speed Without Setup: The Platform Behind Your Success
               </h2>
               <p className="text-center text-muted-foreground mb-12 max-w-3xl mx-auto">
-                Not just an API—the complete growth engine that powers your health offering. Launch, customize, and scale without building infrastructure.
+                Launch OPD services in days with plug-and-play infrastructure. Cut claims leakage by 12%, improve NPS by 25+ points, maintain 99%+ SLA adherence—without building or managing the network.
               </p>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <div className="bg-card-gradient p-6 rounded-xl border border-border/20">
-                  <h3 className="font-heading font-bold mb-3">Plug-and-Play Health Services</h3>
-                  <p className="text-sm text-muted-foreground">Ready diagnostics, consults, pharmacy, and chronic care services. Activate nationwide coverage in days—no network building required.</p>
+                  <div className="flex items-start justify-between mb-3">
+                    <h3 className="font-heading font-bold">Plug-and-Play Health Services</h3>
+                    <span className="text-xs bg-success/10 text-success px-2 py-1 rounded-full">Days to launch</span>
+                  </div>
+                  <p className="text-sm text-muted-foreground mb-3">Activate diagnostics, doctor consults, pharmacy, and chronic care across India instantly. No vendor contracts or network building.</p>
+                  <p className="text-xs text-success font-medium">Impact: Zero setup time, nationwide coverage from day one</p>
                 </div>
                 <div className="bg-card-gradient p-6 rounded-xl border border-border/20">
-                  <h3 className="font-heading font-bold mb-3">White-Label Member Journeys</h3>
-                  <p className="text-sm text-muted-foreground">Customizable booking flows, care communications, and engagement across app, web, and WhatsApp under your brand. We stay behind the curtain.</p>
+                  <div className="flex items-start justify-between mb-3">
+                    <h3 className="font-heading font-bold">White-Label Member Journeys</h3>
+                    <span className="text-xs bg-primary/10 text-primary px-2 py-1 rounded-full">Your brand</span>
+                  </div>
+                  <p className="text-sm text-muted-foreground mb-3">Customize booking flows, care communications, and engagement across app, web, and WhatsApp. We power it behind the scenes.</p>
+                  <p className="text-xs text-primary font-medium">Impact: +25 NPS point gain through seamless member experience</p>
                 </div>
                 <div className="bg-card-gradient p-6 rounded-xl border border-border/20">
-                  <h3 className="font-heading font-bold mb-3">Network Configuration</h3>
-                  <p className="text-sm text-muted-foreground">Choose standard, premium, or specialty networks by region. Configure eligibility, SKU controls, and pricing to match your benefit design.</p>
+                  <div className="flex items-start justify-between mb-3">
+                    <h3 className="font-heading font-bold">SKU Controls & Fraud Prevention</h3>
+                    <span className="text-xs bg-success/10 text-success px-2 py-1 rounded-full">12% savings</span>
+                  </div>
+                  <p className="text-sm text-muted-foreground mb-3">SKU-level controls, audit trails, and real-time eligibility checks built into every transaction. Prevent misuse before it happens.</p>
+                  <p className="text-xs text-success font-medium">Impact: 12% reduction in claims leakage and operational waste</p>
                 </div>
                 <div className="bg-card-gradient p-6 rounded-xl border border-border/20">
-                  <h3 className="font-heading font-bold mb-3">Care Programs Builder</h3>
-                  <p className="text-sm text-muted-foreground">Create custom health packages—diabetes care, preventive health, maternity. Build subscription models and chronic care programs under your brand.</p>
+                  <div className="flex items-start justify-between mb-3">
+                    <h3 className="font-heading font-bold">Network Configuration</h3>
+                    <span className="text-xs bg-secondary/10 text-secondary px-2 py-1 rounded-full">Flexible</span>
+                  </div>
+                  <p className="text-sm text-muted-foreground mb-3">Choose standard, premium, or specialty networks by region. Configure eligibility rules, SKU controls, and pricing to match your benefit design.</p>
+                  <p className="text-xs text-secondary font-medium">Impact: Tailored quality without fragmented vendor management</p>
                 </div>
                 <div className="bg-card-gradient p-6 rounded-xl border border-border/20">
-                  <h3 className="font-heading font-bold mb-3">Unified SLA Operations</h3>
-                  <p className="text-sm text-muted-foreground">We manage fulfillment, tracking, escalations, and member experience. 99%+ SLA adherence across all geographies with real-time monitoring.</p>
+                  <div className="flex items-start justify-between mb-3">
+                    <h3 className="font-heading font-bold">Unified SLA Operations</h3>
+                    <span className="text-xs bg-primary/10 text-primary px-2 py-1 rounded-full">99%+ uptime</span>
+                  </div>
+                  <p className="text-sm text-muted-foreground mb-3">Automated fulfillment, tracking, escalations, and reconciliation. Real-time monitoring with SLA frameworks built in.</p>
+                  <p className="text-xs text-primary font-medium">Impact: 99%+ SLA adherence with zero manual intervention</p>
                 </div>
                 <div className="bg-card-gradient p-6 rounded-xl border border-border/20">
-                  <h3 className="font-heading font-bold mb-3">Growth & Analytics Engine</h3>
-                  <p className="text-sm text-muted-foreground">Revenue optimization, cross-sell opportunities, engagement funnels, and performance insights to grow your health business profitably.</p>
+                  <div className="flex items-start justify-between mb-3">
+                    <h3 className="font-heading font-bold">Automated Reconciliation</h3>
+                    <span className="text-xs bg-success/10 text-success px-2 py-1 rounded-full">Zero ops drain</span>
+                  </div>
+                  <p className="text-sm text-muted-foreground mb-3">Single unified billing across all services. Fraud detection, reporting, and reconciliation handled automatically with full audit trails.</p>
+                  <p className="text-xs text-success font-medium">Impact: Free up ops resources from manual reconciliation</p>
                 </div>
               </div>
             </div>

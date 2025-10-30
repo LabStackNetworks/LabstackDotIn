@@ -118,38 +118,62 @@ const BrokersCorporateWellness = () => {
               </div>
             </div>
 
-            {/* Platform Features */}
+            {/* Technology Platform with Business Impact */}
             <div className="max-w-6xl mx-auto mb-20">
               <h2 className="text-3xl font-heading font-bold text-center mb-4">
-                Build Your Healthcare Business on Our Platform
+                Speed Without Infrastructure: Grow Revenue From Day One
               </h2>
               <p className="text-center text-muted-foreground mb-12 max-w-3xl mx-auto">
-                Launch branded health offerings without building network or operations. We power your success behind the scenes.
+                Launch white-label health offerings in days with plug-and-play infrastructure. Lift ARPU by ~15%, cover 9,000+ pincodes including Tier-2/3 cities, and monetize prescription flows—all without building the network.
               </p>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <div className="bg-card-gradient p-6 rounded-xl border border-border/20">
-                  <h3 className="font-heading font-bold mb-3">Plug-and-Play Health Services</h3>
-                  <p className="text-sm text-muted-foreground">Activate diagnostics, OPD consults, pharmacy, preventive care, and wellness programs across 9,000+ pincodes instantly—no network contracts needed.</p>
+                  <div className="flex items-start justify-between mb-3">
+                    <h3 className="font-heading font-bold">Nationwide Coverage Instantly</h3>
+                    <span className="text-xs bg-success/10 text-success px-2 py-1 rounded-full">9K+ pincodes</span>
+                  </div>
+                  <p className="text-sm text-muted-foreground mb-3">Activate diagnostics, OPD consults, pharmacy, and wellness programs across Tier-1 to Tier-3 cities instantly. No vendor contracts or regional gaps.</p>
+                  <p className="text-xs text-success font-medium">Impact: Cover Tier-2/3 cities without execution breaks</p>
                 </div>
                 <div className="bg-card-gradient p-6 rounded-xl border border-border/20">
-                  <h3 className="font-heading font-bold mb-3">White-Label Customer Journeys</h3>
-                  <p className="text-sm text-muted-foreground">Design your branded experience—booking flows, care plans, communications. Your customers see your brand. We handle the delivery.</p>
+                  <div className="flex items-start justify-between mb-3">
+                    <h3 className="font-heading font-bold">OPD Bundling for Differentiation</h3>
+                    <span className="text-xs bg-primary/10 text-primary px-2 py-1 rounded-full">~15% ARPU lift</span>
+                  </div>
+                  <p className="text-sm text-muted-foreground mb-3">Bundle diagnostics, consultations, and pharmacy benefits into policies. Create differentiated offerings that stand out in the market.</p>
+                  <p className="text-xs text-primary font-medium">Impact: Lift ARPU by ~15% through OPD monetization</p>
                 </div>
                 <div className="bg-card-gradient p-6 rounded-xl border border-border/20">
-                  <h3 className="font-heading font-bold mb-3">Custom Health Packages</h3>
-                  <p className="text-sm text-muted-foreground">Build your own offerings—corporate wellness, preventive care subscriptions, family health plans. Configure pricing, services, and care protocols.</p>
+                  <div className="flex items-start justify-between mb-3">
+                    <h3 className="font-heading font-bold">White-Label Your Brand</h3>
+                    <span className="text-xs bg-secondary/10 text-secondary px-2 py-1 rounded-full">Pure B2B</span>
+                  </div>
+                  <p className="text-sm text-muted-foreground mb-3">Customize booking flows, care communications, and member engagement under your brand. Your clients remain yours—we stay invisible.</p>
+                  <p className="text-xs text-secondary font-medium">Impact: Your client, your brand, no competition from us</p>
                 </div>
                 <div className="bg-card-gradient p-6 rounded-xl border border-border/20">
-                  <h3 className="font-heading font-bold mb-3">Network Selection & Config</h3>
-                  <p className="text-sm text-muted-foreground">Choose standard or premium provider networks by region. Configure eligibility rules, coverage tiers, and service inclusion/exclusion.</p>
+                  <div className="flex items-start justify-between mb-3">
+                    <h3 className="font-heading font-bold">Custom Health Packages</h3>
+                    <span className="text-xs bg-success/10 text-success px-2 py-1 rounded-full">Flexible</span>
+                  </div>
+                  <p className="text-sm text-muted-foreground mb-3">Build corporate wellness bundles, preventive care subscriptions, family health plans. Configure pricing, services, and eligibility rules.</p>
+                  <p className="text-xs text-success font-medium">Impact: Create differentiated policy offerings quickly</p>
                 </div>
                 <div className="bg-card-gradient p-6 rounded-xl border border-border/20">
-                  <h3 className="font-heading font-bold mb-3">Operations Handled End-to-End</h3>
-                  <p className="text-sm text-muted-foreground">Fulfillment, SLA management, quality control, and customer support—fully managed. You focus on distribution and growth.</p>
+                  <div className="flex items-start justify-between mb-3">
+                    <h3 className="font-heading font-bold">Unified Operations & Billing</h3>
+                    <span className="text-xs bg-primary/10 text-primary px-2 py-1 rounded-full">Single invoice</span>
+                  </div>
+                  <p className="text-sm text-muted-foreground mb-3">We handle fulfillment, SLA management, quality control, and reconciliation. One invoice for all services across all cities.</p>
+                  <p className="text-xs text-primary font-medium">Impact: Eliminate multi-city vendor reconciliation headaches</p>
                 </div>
                 <div className="bg-card-gradient p-6 rounded-xl border border-border/20">
-                  <h3 className="font-heading font-bold mb-3">Monetization & Growth Tools</h3>
-                  <p className="text-sm text-muted-foreground">Revenue optimization, cross-sell opportunities, engagement analytics, and retention insights to maximize ARPU and LTV.</p>
+                  <div className="flex items-start justify-between mb-3">
+                    <h3 className="font-heading font-bold">Prescription Monetization Built-In</h3>
+                    <span className="text-xs bg-success/10 text-success px-2 py-1 rounded-full">Revenue+</span>
+                  </div>
+                  <p className="text-sm text-muted-foreground mb-3">Pharmacy fulfillment integrated with consults. Capture prescription revenue while delivering better member care and adherence.</p>
+                  <p className="text-xs text-success font-medium">Impact: New revenue stream from pharmacy within policies</p>
                 </div>
               </div>
             </div>

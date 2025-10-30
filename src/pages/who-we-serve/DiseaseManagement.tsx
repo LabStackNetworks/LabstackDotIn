@@ -116,38 +116,62 @@ const DiseaseManagement = () => {
               </div>
             </div>
 
-            {/* Platform Features */}
+            {/* Technology Platform with Business Impact */}
             <div className="max-w-6xl mx-auto mb-20">
               <h2 className="text-3xl font-heading font-bold text-center mb-4">
-                The Care Delivery Platform You Get
+                Speed Without Fragmentation: Close Care Loops From Day One
               </h2>
               <p className="text-center text-muted-foreground mb-12 max-w-3xl mx-auto">
-                Build branded chronic care programs without managing fragmented vendors. Launch nationwide in days with protocol-driven pathways built-in.
+                Launch protocol-driven care programs in days with one unified platform. Achieve 90%+ test completion rates, structured longitudinal data, and automated adherence—without coordinating multiple vendors.
               </p>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <div className="bg-card-gradient p-6 rounded-xl border border-border/20">
-                  <h3 className="font-heading font-bold mb-3">Protocol-Driven Care Pathways</h3>
-                  <p className="text-sm text-muted-foreground">Pre-built workflows for diabetes, hypertension, PCOS, cardiac care. Tests → consults → pharmacy → follow-ups linked by API, not manual coordination.</p>
+                  <div className="flex items-start justify-between mb-3">
+                    <h3 className="font-heading font-bold">Protocol-Driven Care Pathways</h3>
+                    <span className="text-xs bg-success/10 text-success px-2 py-1 rounded-full">90%+ completion</span>
+                  </div>
+                  <p className="text-sm text-muted-foreground mb-3">Pre-built workflows for diabetes, hypertension, PCOS, cardiac care. Tests → consults → pharmacy → follow-ups connected by API, not manual handoffs.</p>
+                  <p className="text-xs text-success font-medium">Impact: 90%+ test completion rates, no patient drop-off</p>
                 </div>
                 <div className="bg-card-gradient p-6 rounded-xl border border-border/20">
-                  <h3 className="font-heading font-bold mb-3">White-Label Patient Journeys</h3>
-                  <p className="text-sm text-muted-foreground">Customize enrollment, care communications, progress tracking, and engagement under your brand. We power the delivery behind the scenes.</p>
+                  <div className="flex items-start justify-between mb-3">
+                    <h3 className="font-heading font-bold">Structured Health Data</h3>
+                    <span className="text-xs bg-primary/10 text-primary px-2 py-1 rounded-full">Longitudinal</span>
+                  </div>
+                  <p className="text-sm text-muted-foreground mb-3">Raw digital values, not PDFs. Longitudinal data for trend analysis, clinical decisions, and personalized care adjustments over time.</p>
+                  <p className="text-xs text-primary font-medium">Impact: Actionable data for better clinical outcomes</p>
                 </div>
                 <div className="bg-card-gradient p-6 rounded-xl border border-border/20">
-                  <h3 className="font-heading font-bold mb-3">Care Program Builder</h3>
-                  <p className="text-sm text-muted-foreground">Design custom chronic care programs—configure test frequency, specialist consults, medication protocols, and lifestyle interventions.</p>
+                  <div className="flex items-start justify-between mb-3">
+                    <h3 className="font-heading font-bold">Automated Adherence Engine</h3>
+                    <span className="text-xs bg-success/10 text-success px-2 py-1 rounded-full">Smart nudges</span>
+                  </div>
+                  <p className="text-sm text-muted-foreground mb-3">AI-driven reminders for tests, medications, and appointments. Automated escalations for abnormal values or protocol deviations.</p>
+                  <p className="text-xs text-success font-medium">Impact: Scale patient adherence without manual outreach</p>
                 </div>
                 <div className="bg-card-gradient p-6 rounded-xl border border-border/20">
-                  <h3 className="font-heading font-bold mb-3">Structured Health Data</h3>
-                  <p className="text-sm text-muted-foreground">Raw digital values, not PDFs. Longitudinal data for clinical decisions, trend analysis, and personalized care adjustments over time.</p>
+                  <div className="flex items-start justify-between mb-3">
+                    <h3 className="font-heading font-bold">White-Label Patient Journeys</h3>
+                    <span className="text-xs bg-secondary/10 text-secondary px-2 py-1 rounded-full">Your brand</span>
+                  </div>
+                  <p className="text-sm text-muted-foreground mb-3">Customize enrollment, care communications, progress tracking, and engagement under your brand. We handle service delivery behind the scenes.</p>
+                  <p className="text-xs text-secondary font-medium">Impact: Build your branded care programs instantly</p>
                 </div>
                 <div className="bg-card-gradient p-6 rounded-xl border border-border/20">
-                  <h3 className="font-heading font-bold mb-3">Automated Adherence & Follow-Ups</h3>
-                  <p className="text-sm text-muted-foreground">AI-driven reminders for tests, medications, and appointments. Automated escalations for abnormal values or protocol deviations.</p>
+                  <div className="flex items-start justify-between mb-3">
+                    <h3 className="font-heading font-bold">Care Program Builder</h3>
+                    <span className="text-xs bg-primary/10 text-primary px-2 py-1 rounded-full">Customizable</span>
+                  </div>
+                  <p className="text-sm text-muted-foreground mb-3">Design chronic care programs—configure test frequency, specialist consults, medication protocols, and lifestyle interventions for any condition.</p>
+                  <p className="text-xs text-primary font-medium">Impact: Launch custom care programs without vendor negotiation</p>
                 </div>
                 <div className="bg-card-gradient p-6 rounded-xl border border-border/20">
-                  <h3 className="font-heading font-bold mb-3">Unified Operations & Analytics</h3>
-                  <p className="text-sm text-muted-foreground">Track completion rates, patient adherence, clinical outcomes, and program ROI. We handle fulfillment, quality, and SLA management.</p>
+                  <div className="flex items-start justify-between mb-3">
+                    <h3 className="font-heading font-bold">Unified Operations & Analytics</h3>
+                    <span className="text-xs bg-success/10 text-success px-2 py-1 rounded-full">Full visibility</span>
+                  </div>
+                  <p className="text-sm text-muted-foreground mb-3">Track completion rates, patient adherence, clinical outcomes, and ROI. We handle fulfillment, quality control, and SLA management.</p>
+                  <p className="text-xs text-success font-medium">Impact: Measure clinical and business outcomes in real-time</p>
                 </div>
               </div>
             </div>

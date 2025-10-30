@@ -86,38 +86,62 @@ const DigitalHealthPlatforms = () => {
               </div>
             </div>
 
-            {/* Platform Features */}
+            {/* Technology Platform with Business Impact */}
             <div className="max-w-6xl mx-auto mb-16">
               <h2 className="text-3xl font-heading font-bold text-center mb-4">
-                The Growth Engine for Your Health Business
+                Speed Without Building: Scale From Idea to Nationwide in 14 Days
               </h2>
               <p className="text-center text-muted-foreground mb-12 max-w-3xl mx-auto">
-                Not just network access—the complete B2B platform to launch, customize, and scale your healthcare offering without building infrastructure.
+                Launch with plug-and-play infrastructure in 48 hours. Cover 9,000+ pincodes with 30K+ orders/month capacity and 99.5% uptime—without hiring ops teams or signing vendor contracts.
               </p>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <div className="bg-card-gradient p-6 rounded-xl border border-border/20">
-                  <h3 className="font-heading font-bold mb-3">48-Hour Integration</h3>
-                  <p className="text-sm text-muted-foreground">One API for diagnostics, pharmacy, consults, and chronic care. Pre-built SDKs, webhooks, and documentation. Launch nationwide in days, not quarters.</p>
+                  <div className="flex items-start justify-between mb-3">
+                    <h3 className="font-heading font-bold">48-Hour Integration</h3>
+                    <span className="text-xs bg-success/10 text-success px-2 py-1 rounded-full">14-day launch</span>
+                  </div>
+                  <p className="text-sm text-muted-foreground mb-3">One API for diagnostics, pharmacy, consults, chronic care. Pre-built SDKs, webhooks, and documentation. Launch nationwide in days, not 12-18 months.</p>
+                  <p className="text-xs text-success font-medium">Impact: Go from idea to live in 14 days vs 12-18 months</p>
                 </div>
                 <div className="bg-card-gradient p-6 rounded-xl border border-border/20">
-                  <h3 className="font-heading font-bold mb-3">White-Label Your Experience</h3>
-                  <p className="text-sm text-muted-foreground">Customize booking flows, care journeys, notifications across your app and web. Your customers see your brand—we're the invisible infrastructure.</p>
+                  <div className="flex items-start justify-between mb-3">
+                    <h3 className="font-heading font-bold">Nationwide from Day One</h3>
+                    <span className="text-xs bg-primary/10 text-primary px-2 py-1 rounded-full">9K+ pincodes</span>
+                  </div>
+                  <p className="text-sm text-muted-foreground mb-3">Launch across 9,000+ pincodes instantly. 30K+ orders/month capacity with 99.5% uptime. No city-by-city vendor contracts or regional breakdowns.</p>
+                  <p className="text-xs text-primary font-medium">Impact: Meet investor expectations for nationwide coverage</p>
                 </div>
                 <div className="bg-card-gradient p-6 rounded-xl border border-border/20">
-                  <h3 className="font-heading font-bold mb-3">Build Your Health Products</h3>
-                  <p className="text-sm text-muted-foreground">Create custom packages, subscriptions, and care programs—diabetes management, women's health, preventive care. Configure services, pricing, and protocols.</p>
+                  <div className="flex items-start justify-between mb-3">
+                    <h3 className="font-heading font-bold">White-Label Your Brand</h3>
+                    <span className="text-xs bg-secondary/10 text-secondary px-2 py-1 rounded-full">Pure B2B</span>
+                  </div>
+                  <p className="text-sm text-muted-foreground mb-3">Customize booking flows, care journeys, and notifications across your app and web. Your users see your brand—we stay invisible.</p>
+                  <p className="text-xs text-secondary font-medium">Impact: Your customers remain yours, no B2C competition</p>
                 </div>
                 <div className="bg-card-gradient p-6 rounded-xl border border-border/20">
-                  <h3 className="font-heading font-bold mb-3">Network Selection & Config</h3>
-                  <p className="text-sm text-muted-foreground">Choose standard or premium provider networks by region. Set quality tiers, service coverage, and fulfillment SLAs that match your brand promise.</p>
+                  <div className="flex items-start justify-between mb-3">
+                    <h3 className="font-heading font-bold">Build Custom Health Products</h3>
+                    <span className="text-xs bg-success/10 text-success px-2 py-1 rounded-full">Flexible</span>
+                  </div>
+                  <p className="text-sm text-muted-foreground mb-3">Create packages, subscriptions, care programs—diabetes care, women's health, preventive health. Configure services, pricing, and protocols.</p>
+                  <p className="text-xs text-success font-medium">Impact: Launch differentiated health products without ops complexity</p>
                 </div>
                 <div className="bg-card-gradient p-6 rounded-xl border border-border/20">
-                  <h3 className="font-heading font-bold mb-3">Operations on Autopilot</h3>
-                  <p className="text-sm text-muted-foreground">We handle provider coordination, quality control, SLA management, escalations, and reconciliation. You focus on product and growth.</p>
+                  <div className="flex items-start justify-between mb-3">
+                    <h3 className="font-heading font-bold">Operations on Autopilot</h3>
+                    <span className="text-xs bg-primary/10 text-primary px-2 py-1 rounded-full">Zero ops team</span>
+                  </div>
+                  <p className="text-sm text-muted-foreground mb-3">Provider coordination, quality control, SLA management, escalations, reconciliation—fully automated. Engineers focus on product, not healthcare ops.</p>
+                  <p className="text-xs text-primary font-medium">Impact: Free engineering from compliance and vendor management</p>
                 </div>
                 <div className="bg-card-gradient p-6 rounded-xl border border-border/20">
-                  <h3 className="font-heading font-bold mb-3">Monetization & Analytics</h3>
-                  <p className="text-sm text-muted-foreground">Revenue optimization tools, cross-sell opportunities, engagement funnels, and performance insights to grow profitably and retain users.</p>
+                  <div className="flex items-start justify-between mb-3">
+                    <h3 className="font-heading font-bold">Growth & Monetization Tools</h3>
+                    <span className="text-xs bg-success/10 text-success px-2 py-1 rounded-full">Built-in</span>
+                  </div>
+                  <p className="text-sm text-muted-foreground mb-3">Revenue optimization, cross-sell opportunities, engagement funnels, retention analytics. Grow profitably with data-driven insights.</p>
+                  <p className="text-xs text-success font-medium">Impact: Scale revenue without scaling ops headcount</p>
                 </div>
               </div>
             </div>
