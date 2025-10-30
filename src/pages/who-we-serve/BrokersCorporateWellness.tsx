@@ -1,4 +1,4 @@
-import { TrendingUp, Repeat, DollarSign, ArrowRight, CheckCircle, Target } from "lucide-react";
+import { TrendingUp, Repeat, IndianRupee, ArrowRight, CheckCircle, Target } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -143,7 +143,7 @@ const BrokersCorporateWellness = () => {
               <h3 className="text-2xl font-heading font-bold text-center mb-8">Annual Revenue Per Customer</h3>
               <div className="grid grid-cols-1 md:grid-cols-4 gap-6 text-center">
                 <div>
-                  <DollarSign className="w-8 h-8 text-primary mx-auto mb-3" />
+                  <IndianRupee className="w-8 h-8 text-primary mx-auto mb-3" />
                   <div className="text-2xl font-heading font-bold mb-2">₹50k</div>
                   <p className="text-xs text-muted-foreground">Insurance Commission</p>
                 </div>

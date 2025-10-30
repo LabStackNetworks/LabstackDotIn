@@ -1,4 +1,4 @@
-import { Building2, TrendingUp, DollarSign, Zap, ArrowRight } from "lucide-react";
+import { Building2, TrendingUp, IndianRupee, Zap, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -24,14 +24,14 @@ const Providers = () => {
     "Utilization jumps from 40% → 60-70%",
     "Revenue doubles, margins increase 15-25%",
     "Logistics & reconciliation handled",
-    "Payment in 15 days"
+    "Payment in 30 days"
   ];
 
   return (
     <div className="min-h-screen bg-background">
       <SEOHead 
         title="Partner Network for Healthcare Providers"
-        description="Join India's healthcare network. Fill capacity from 40% to 60-70%. Earn predictably with 15-day payments. Serve B2B demand from insurers and corporates."
+        description="Join India's healthcare network. Fill capacity from 40% to 60-70%. Earn predictably with 30-day payments. Serve B2B demand from insurers and corporates."
         keywords="healthcare provider network, diagnostic lab partnership, pharmacy network, doctor network, healthcare B2B demand"
         canonical="https://labstack.in/who-we-serve/providers"
         structuredData={structuredData}
@@ -51,7 +51,7 @@ const Providers = () => {
               </h1>
 
               <p className="text-lg lg:text-xl text-muted-foreground mb-8">
-                Join India's healthcare network. Steady B2B demand takes utilization from 40% → 60-70%. 15-day payments.
+                Join India's healthcare network. Steady B2B demand takes utilization from 40% → 60-70%. 30-day payments.
               </p>
 
               <Link to="/provider/join-network">
@@ -104,13 +104,13 @@ const Providers = () => {
                   <p className="text-sm text-muted-foreground">Revenue Growth</p>
                 </div>
                 <div>
-                  <DollarSign className="w-8 h-8 text-secondary mx-auto mb-3" />
+                  <IndianRupee className="w-8 h-8 text-secondary mx-auto mb-3" />
                   <div className="text-3xl font-heading font-bold text-gradient mb-2">15-25%</div>
                   <p className="text-sm text-muted-foreground">Margin Increase</p>
                 </div>
                 <div>
                   <Building2 className="w-8 h-8 text-warning mx-auto mb-3" />
-                  <div className="text-3xl font-heading font-bold text-gradient mb-2">15 days</div>
+                  <div className="text-3xl font-heading font-bold text-gradient mb-2">30 days</div>
                   <p className="text-sm text-muted-foreground">Payment Terms</p>
                 </div>
               </div>

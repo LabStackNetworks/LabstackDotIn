@@ -1,4 +1,4 @@
-import { Shield, DollarSign, Clock, CheckCircle, ArrowRight, TrendingUp, Users } from "lucide-react";
+import { Shield, IndianRupee, Clock, CheckCircle, ArrowRight, TrendingUp, Users } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -152,7 +152,7 @@ const InsurersTPAs = () => {
                   </p>
                 </div>
                 <div className="bg-card/50 p-6 rounded-xl">
-                  <DollarSign className="w-8 h-8 text-warning mb-4" />
+                  <IndianRupee className="w-8 h-8 text-warning mb-4" />
                   <h3 className="font-heading font-bold mb-2">Reduced Leakage</h3>
                   <p className="text-sm text-muted-foreground">
                     12% leakage reduction reported by partners through automated fraud detection and audit trails.
@@ -166,7 +166,7 @@ const InsurersTPAs = () => {
               <h3 className="text-2xl font-heading font-bold text-center mb-8">Target Outcomes</h3>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
                 <div>
-                  <DollarSign className="w-8 h-8 text-success mx-auto mb-3" />
+                  <IndianRupee className="w-8 h-8 text-success mx-auto mb-3" />
                   <div className="text-3xl font-heading font-bold text-gradient mb-2">12%</div>
                   <p className="text-sm text-muted-foreground">Operational Leakage Reduction</p>
                   <p className="text-xs text-muted-foreground mt-2">Through SKU-level rules and audit trails</p>

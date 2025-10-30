@@ -126,6 +126,7 @@ const Header = () => {
             title: "Healthcare Professionals",
             items: [
               { label: "Overview", href: "/provider", description: "Provider network benefits" },
+              { label: "Join Network", href: "/provider/join-network", description: "Apply to join our network" },
               { label: "Hospitals & Labs", href: "/provider/hospitals-labs", description: "Diagnostic centers & hospitals" },
               { label: "Doctors", href: "/provider/doctors", description: "Medical practitioners" },
               { label: "Nutritionists & Health Coaches", href: "/provider/nutritionists-health-coaches", description: "Wellness professionals" },

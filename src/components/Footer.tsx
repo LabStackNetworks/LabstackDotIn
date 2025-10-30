@@ -25,6 +25,7 @@ const Footer = () => {
     ],
     providers: [
       { name: "Overview", href: "/provider" },
+      { name: "Join Network", href: "/provider/join-network" },
       { name: "Hospitals & Labs", href: "/provider/hospitals-labs" },
       { name: "Doctors", href: "/provider/doctors" },
       { name: "Nutritionists & Health Coaches", href: "/provider/nutritionists-health-coaches" },

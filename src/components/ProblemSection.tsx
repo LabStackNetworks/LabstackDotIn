@@ -1,4 +1,4 @@
-import { Clock, Users, Lock, AlertTriangle, TrendingDown, DollarSign } from "lucide-react";
+import { Clock, Users, Lock, AlertTriangle, TrendingDown, IndianRupee } from "lucide-react";
 
 const ProblemSection = () => {
   const problems = [
@@ -33,7 +33,7 @@ const ProblemSection = () => {
       color: "text-destructive"
     },
     {
-      icon: DollarSign,
+      icon: IndianRupee,
       title: "High CAC, flat LTV",
       description: "Building ops instead of products",
       color: "text-primary"

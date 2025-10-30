@@ -100,7 +100,7 @@ const WhoWeServe = () => {
       icon: Building,
       label: "Providers",
       title: "Fill Capacity, Double Revenue",
-      description: "40% → 60-70% utilization. Margins +15-25%. Payment in 15 days.",
+      description: "40% → 60-70% utilization. Margins +15-25%. Payment in 30 days.",
       challenges: [
         "40-50% utilization",
         "No digital demand access",
