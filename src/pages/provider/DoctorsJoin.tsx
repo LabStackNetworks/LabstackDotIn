@@ -155,7 +155,7 @@ const DoctorsJoin = () => {
                 <p className="text-success font-medium italic">
                   "Joining Labstack tripled my patient consultations from corporate and insurance channels. The integrated platform makes teleconsultations seamless, and payments are always on time."
                 </p>
-                <p className="text-sm text-muted-foreground mt-2">— Dr. Sharma, Cardiologist, Mumbai</p>
+                <p className="text-sm text-muted-foreground mt-2">— Established Cardiologist, Metro City</p>
               </div>
             </div>
 

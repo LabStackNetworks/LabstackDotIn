@@ -3,7 +3,7 @@
   <!-- Homepage -->
   <url>
     <loc>https://labstack.in/</loc>
-    <lastmod>2024-01-15</lastmod>
+    <lastmod>2025-01-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -11,95 +11,107 @@
   <!-- Platform Pages -->
   <url>
     <loc>https://labstack.in/platform-overview</loc>
-    <lastmod>2024-01-15</lastmod>
+    <lastmod>2025-01-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://labstack.in/platform/diagnostics</loc>
-    <lastmod>2024-01-15</lastmod>
+    <lastmod>2025-01-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://labstack.in/platform/consultations</loc>
-    <lastmod>2024-01-15</lastmod>
+    <lastmod>2025-01-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://labstack.in/platform/pharmacy</loc>
-    <lastmod>2024-01-15</lastmod>
+    <lastmod>2025-01-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://labstack.in/platform/specialized-networks</loc>
-    <lastmod>2024-01-15</lastmod>
+    <lastmod>2025-01-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://labstack.in/platform/integrations</loc>
-    <lastmod>2024-01-15</lastmod>
+    <lastmod>2025-01-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   
   <!-- Solutions Pages -->
   <url>
+    <loc>https://labstack.in/solutions</loc>
+    <lastmod>2025-01-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://labstack.in/solutions/healthcare-infrastructure</loc>
-    <lastmod>2024-01-15</lastmod>
+    <lastmod>2025-01-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://labstack.in/solutions/digital-platform</loc>
-    <lastmod>2024-01-15</lastmod>
+    <lastmod>2025-01-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://labstack.in/solutions/api-solutions</loc>
-    <lastmod>2024-01-15</lastmod>
+    <lastmod>2025-01-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://labstack.in/solutions/coverage-expansion</loc>
-    <lastmod>2024-01-15</lastmod>
+    <lastmod>2025-01-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   
   <!-- Who We Serve Pages -->
   <url>
-    <loc>https://labstack.in/who-we-serve/insurers-tpas</loc>
-    <lastmod>2024-01-15</lastmod>
+    <loc>https://labstack.in/who-we-serve</loc>
+    <lastmod>2025-01-30</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://labstack.in/who-we-serve/insurers-tpas</loc>
+    <lastmod>2025-01-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://labstack.in/who-we-serve/brokers-corporate-wellness</loc>
-    <lastmod>2025-01-15</lastmod>
+    <lastmod>2025-01-30</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://labstack.in/who-we-serve/disease-management</loc>
-    <lastmod>2024-01-15</lastmod>
+    <lastmod>2025-01-30</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://labstack.in/who-we-serve/digital-health-platforms</loc>
-    <lastmod>2024-01-15</lastmod>
+    <lastmod>2025-01-30</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://labstack.in/who-we-serve/providers</loc>
-    <lastmod>2024-01-15</lastmod>
+    <lastmod>2025-01-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -107,55 +119,37 @@
   <!-- Provider Network Pages -->
   <url>
     <loc>https://labstack.in/provider</loc>
-    <lastmod>2025-01-15</lastmod>
+    <lastmod>2025-01-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://labstack.in/provider/join-network</loc>
-    <lastmod>2025-01-15</lastmod>
+    <lastmod>2025-01-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://labstack.in/provider/hospitals-labs</loc>
-    <lastmod>2025-01-15</lastmod>
+    <lastmod>2025-01-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://labstack.in/provider/hospitals-labs/apply</loc>
-    <lastmod>2025-01-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://labstack.in/provider/doctors</loc>
-    <lastmod>2025-01-15</lastmod>
+    <lastmod>2025-01-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://labstack.in/provider/doctors/apply</loc>
-    <lastmod>2025-01-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://labstack.in/provider/nutritionists-health-coaches</loc>
-    <lastmod>2025-01-15</lastmod>
+    <lastmod>2025-01-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://labstack.in/provider/nutritionists-health-coaches/apply</loc>
-    <lastmod>2025-01-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://labstack.in/provider/field-staff</loc>
-    <lastmod>2025-01-15</lastmod>
+    <lastmod>2025-01-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -163,57 +157,51 @@
   <!-- Company Pages -->
   <url>
     <loc>https://labstack.in/about</loc>
-    <lastmod>2024-01-15</lastmod>
+    <lastmod>2025-01-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://labstack.in/careers</loc>
-    <lastmod>2024-01-15</lastmod>
+    <lastmod>2025-01-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://labstack.in/contact</loc>
-    <lastmod>2024-01-15</lastmod>
+    <lastmod>2025-01-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://labstack.in/book-demo</loc>
-    <lastmod>2024-01-15</lastmod>
+    <lastmod>2025-01-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://labstack.in/start-building</loc>
-    <lastmod>2024-01-15</lastmod>
+    <lastmod>2025-01-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://labstack.in/custom-solutions</loc>
-    <lastmod>2024-01-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
   </url>
   
   <!-- Legal Pages -->
   <url>
     <loc>https://labstack.in/privacy-policy</loc>
-    <lastmod>2024-01-15</lastmod>
+    <lastmod>2025-01-30</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://labstack.in/terms-conditions</loc>
-    <lastmod>2024-01-15</lastmod>
+    <lastmod>2025-01-30</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://labstack.in/partner-terms</loc>
-    <lastmod>2024-01-15</lastmod>
+    <lastmod>2025-01-30</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
@@ -221,19 +209,19 @@
   <!-- Resources Pages -->
   <url>
     <loc>https://labstack.in/resources/blog</loc>
-    <lastmod>2024-01-15</lastmod>
+    <lastmod>2025-01-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://labstack.in/resources/research-hub</loc>
-    <lastmod>2024-01-15</lastmod>
+    <lastmod>2025-01-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://labstack.in/resources/api-documentation</loc>
-    <lastmod>2024-01-15</lastmod>
+    <lastmod>2025-01-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>

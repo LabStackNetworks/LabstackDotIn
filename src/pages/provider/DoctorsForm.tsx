@@ -96,7 +96,7 @@ const DoctorsForm = () => {
                     <FormItem>
                       <FormLabel>Full Name *</FormLabel>
                       <FormControl>
-                        <Input placeholder="Dr. John Doe" {...field} />
+                        <Input placeholder="Your full name" {...field} />
                       </FormControl>
                       <FormMessage />
                     </FormItem>

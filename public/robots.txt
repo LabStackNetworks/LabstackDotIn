@@ -1,8 +1,8 @@
-# Allow all crawlers including AI engines
+# Allow all web crawlers and AI engines for maximum discoverability
 User-agent: *
 Allow: /
 
-# AI Crawlers
+# AI & Generative Engine Crawlers
 User-agent: GPTBot
 Allow: /
 
@@ -21,12 +21,18 @@ Allow: /
 User-agent: PerplexityBot
 Allow: /
 
-# Disallow admin and private paths (if any exist in future)
-Disallow: /admin/
-Disallow: /api/private/
+User-agent: Bingbot
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+# Disallow form submission pages (avoid duplicate indexing)
+Disallow: /*/apply
+Disallow: /login
 
 # Sitemap location
 Sitemap: https://labstack.in/sitemap.xml
 
-# Crawl delay (optional - helps with server load)
+# Crawl delay (helps with server load)
 Crawl-delay: 1

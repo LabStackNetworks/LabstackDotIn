@@ -182,7 +182,7 @@ const order = await client.diagnostics.createOrder({
   tests: ['CBC', 'LIPID_PROFILE'],
   collectionType: 'home',
   patientDetails: {
-    name: 'John Doe',
+    name: 'Patient Name',
     age: 35,
     gender: 'male'
   }

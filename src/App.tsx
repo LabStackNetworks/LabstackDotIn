@@ -12,7 +12,6 @@ const Index = lazy(() => import("./pages/Index"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 const BookDemo = lazy(() => import("./pages/BookDemo"));
 const StartBuilding = lazy(() => import("./pages/StartBuilding"));
-const CustomSolutions = lazy(() => import("./pages/CustomSolutions"));
 const Contact = lazy(() => import("./pages/Contact"));
 const About = lazy(() => import("./pages/About"));
 const PlatformOverview = lazy(() => import("./pages/PlatformOverview"));
@@ -72,7 +71,6 @@ const App = () => (
               <Route path="/about" element={<About />} />
               <Route path="/book-demo" element={<BookDemo />} />
               <Route path="/start-building" element={<StartBuilding />} />
-              <Route path="/custom-solutions" element={<CustomSolutions />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/solutions" element={<SolutionsOverview />} />
               <Route path="/solutions/healthcare-infrastructure" element={<HealthcareInfrastructure />} />

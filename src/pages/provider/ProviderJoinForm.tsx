@@ -151,7 +151,7 @@ const ProviderJoinForm = () => {
                     <FormItem className="md:col-span-2">
                       <FormLabel>Organization / Your Name *</FormLabel>
                       <FormControl>
-                        <Input placeholder="e.g., Apollo Diagnostics or Dr. John Doe" {...field} />
+                        <Input placeholder="e.g., City Diagnostics or your full name" {...field} />
                       </FormControl>
                       <FormDescription>Enter your organization name or your full name if individual practitioner</FormDescription>
                       <FormMessage />

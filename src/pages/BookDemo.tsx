@@ -124,7 +124,7 @@ const BookDemo = () => {
                         id="name"
                         type="text"
                         required
-                        placeholder="John Doe"
+                        placeholder="Your full name"
                         value={formData.name}
                         onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                         className="mt-2"
@@ -137,7 +137,7 @@ const BookDemo = () => {
                         id="email"
                         type="email"
                         required
-                        placeholder="john@company.com"
+                        placeholder="your.email@company.com"
                         value={formData.email}
                         onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                         className="mt-2"
