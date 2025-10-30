@@ -70,13 +70,14 @@ const Header = () => {
         featured: {
           title: "Healthcare Solutions",
           description: "Comprehensive solutions for modern healthcare delivery",
-          href: "#solutions-overview",
+          href: "/solutions",
           icon: Users
         },
         sections: [
           {
             title: "Platform Solutions",
             items: [
+              { label: "Solutions Overview", href: "/solutions", description: "Explore all solutions" },
               { label: "Healthcare Infrastructure", href: "/solutions/healthcare-infrastructure", description: "Complete healthcare backbone" },
               { label: "Digital Platform", href: "/solutions/digital-platform", description: "End-to-end digital solutions" },
               { label: "API Solutions", href: "/solutions/api-solutions", description: "Developer-first integrations" },

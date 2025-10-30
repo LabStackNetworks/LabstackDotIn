@@ -12,6 +12,7 @@ const Footer = () => {
       { name: "Integrations", href: "/platform/integrations" }
     ],
     solutions: [
+      { name: "Solutions Overview", href: "/solutions" },
       { name: "Healthcare Infrastructure", href: "/solutions/healthcare-infrastructure" },
       { name: "Digital Platform", href: "/solutions/digital-platform" },
       { name: "API Solutions", href: "/solutions/api-solutions" },
