@@ -48,6 +48,7 @@ const Login = lazy(() => import("./pages/Login"));
 const Blog = lazy(() => import("./pages/resources/Blog"));
 const ResearchHub = lazy(() => import("./pages/resources/ResearchHub"));
 const APIDocumentation = lazy(() => import("./pages/resources/APIDocumentation"));
+const CustomSolutions = lazy(() => import("./pages/CustomSolutions"));
 
 const queryClient = new QueryClient();
 
@@ -97,9 +98,10 @@ const App = () => (
               <Route path="/partner-terms" element={<PartnerTerms />} />
               <Route path="/careers" element={<Careers />} />
               <Route path="/login" element={<Login />} />
-          <Route path="/resources/blog" element={<Blog />} />
+              <Route path="/resources/blog" element={<Blog />} />
           <Route path="/resources/research-hub" element={<ResearchHub />} />
           <Route path="/resources/api-documentation" element={<APIDocumentation />} />
+              <Route path="/custom-solutions" element={<CustomSolutions />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </Suspense>
