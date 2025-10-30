@@ -21,11 +21,11 @@ const NutritionistsHealthCoaches = () => {
   ];
 
   const labstackBenefits = [
-    "Access corporate wellness programs, insurance preventive care, and digital health platform clients",
-    "Client management system, progress tracking, meal planning tools, and video consultation platform",
+    "Steady B2B client demand from corporate wellness, insurance programs—no marketing needed",
+    "AI-native platform: WhatsApp/voice AI handles bookings, reminders, progress check-ins automatically",
+    "Complete client management: progress tracking, meal planning, and video consultation in one place",
     "Guaranteed timely payments with automated bi-weekly settlements and transparent invoicing",
-    "No exclusivity—maintain your independent practice and other platform work",
-    "Support for individual sessions, group coaching, workshops, and corporate wellness camps"
+    "No exclusivity—run individual sessions, group coaching, workshops, and maintain other relationships"
   ];
 
   const outcomes = [
@@ -65,12 +65,12 @@ const NutritionistsHealthCoaches = () => {
               </div>
 
               <h1 className="text-4xl lg:text-6xl font-heading font-bold mb-6">
-                Grow Your Practice. <span className="text-gradient">Transform More Lives.</span>
+                More Clients. <span className="text-gradient">Zero Marketing.</span>
               </h1>
 
               <p className="text-lg lg:text-xl text-muted-foreground mb-8">
-                Join India's largest wellness network for nutritionists and health coaches. Access corporate wellness programs, 
-                insurance preventive care clients, and digital health platforms across India.
+                Access steady B2B client flow from corporate wellness, insurance programs, and digital health platforms. 
+                Get the AI-native platform that handles engagement, scheduling, and client management.
               </p>
 
               <Link to="/provider/nutritionists-health-coaches/apply">
@@ -273,50 +273,53 @@ const NutritionistsHealthCoaches = () => {
 
             {/* Technology Platform */}
             <div className="max-w-5xl mx-auto mb-20">
-              <h2 className="text-3xl font-heading font-bold text-center mb-12">
-                Platform Features
+              <h2 className="text-3xl font-heading font-bold text-center mb-4">
+                The AI-Native Platform You Get
               </h2>
+              <p className="text-center text-muted-foreground mb-12 max-w-3xl mx-auto">
+                Beyond basic tools—your complete operating system for client engagement, care delivery, and practice growth.
+              </p>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="flex items-start space-x-4">
                   <CheckCircle className="w-6 h-6 text-success flex-shrink-0 mt-1" />
                   <div>
-                    <h3 className="font-heading font-bold mb-2">Client Management System</h3>
-                    <p className="text-sm text-muted-foreground">Track client profiles, health history, goals, progress, and session notes in one place</p>
+                    <h3 className="font-heading font-bold mb-2">AI Client Engagement</h3>
+                    <p className="text-sm text-muted-foreground">WhatsApp & voice AI agents handle session bookings, progress check-ins, meal plan reminders, and follow-ups—automatically reducing drop-offs.</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-4">
                   <CheckCircle className="w-6 h-6 text-success flex-shrink-0 mt-1" />
                   <div>
-                    <h3 className="font-heading font-bold mb-2">Video Consultation Platform</h3>
-                    <p className="text-sm text-muted-foreground">Secure HD video sessions with screen sharing and session recording capabilities</p>
+                    <h3 className="font-heading font-bold mb-2">Smart Scheduling & Calendar Sync</h3>
+                    <p className="text-sm text-muted-foreground">Manage individual sessions, group workshops, and corporate camps in one dashboard. Real-time booking, automated confirmations.</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-4">
                   <CheckCircle className="w-6 h-6 text-success flex-shrink-0 mt-1" />
                   <div>
-                    <h3 className="font-heading font-bold mb-2">Meal Planning Tools</h3>
-                    <p className="text-sm text-muted-foreground">Create customized meal plans, recipes, and nutrition guides for clients</p>
+                    <h3 className="font-heading font-bold mb-2">Wellness Program Builder</h3>
+                    <p className="text-sm text-muted-foreground">Create structured programs—weight management, diabetes nutrition, sports nutrition. Track adherence and send personalized nudges.</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-4">
                   <CheckCircle className="w-6 h-6 text-success flex-shrink-0 mt-1" />
                   <div>
-                    <h3 className="font-heading font-bold mb-2">Progress Tracking Dashboard</h3>
-                    <p className="text-sm text-muted-foreground">Monitor client weight, measurements, health markers, and goal achievement</p>
+                    <h3 className="font-heading font-bold mb-2">Complete Client CRM</h3>
+                    <p className="text-sm text-muted-foreground">Full client timeline—sessions, meal plans, progress tracking, health markers. Enable personalized coaching and better retention.</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-4">
                   <CheckCircle className="w-6 h-6 text-success flex-shrink-0 mt-1" />
                   <div>
-                    <h3 className="font-heading font-bold mb-2">Group Session Support</h3>
-                    <p className="text-sm text-muted-foreground">Host group coaching sessions, workshops, and webinars with multiple participants</p>
+                    <h3 className="font-heading font-bold mb-2">Meal Planning & Recipe Tools</h3>
+                    <p className="text-sm text-muted-foreground">Create customized meal plans, recipes, and nutrition guides. Share directly with clients via app or WhatsApp.</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-4">
                   <CheckCircle className="w-6 h-6 text-success flex-shrink-0 mt-1" />
                   <div>
-                    <h3 className="font-heading font-bold mb-2">Revenue & Analytics</h3>
-                    <p className="text-sm text-muted-foreground">Real-time earnings tracking, session analytics, and transparent payment history</p>
+                    <h3 className="font-heading font-bold mb-2">HD Video Consultation</h3>
+                    <p className="text-sm text-muted-foreground">Secure video platform for 1-on-1 and group sessions with screen sharing, recording, and multi-participant support.</p>
                   </div>
                 </div>
               </div>

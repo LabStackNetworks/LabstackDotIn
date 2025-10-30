@@ -13,9 +13,9 @@ const HospitalsLabsJoin = () => {
   ];
 
   const outcomes = [
-    { metric: "40%+", label: "Revenue Growth", sublabel: "Within first year" },
-    { metric: "25%", label: "Higher Margins", sublabel: "vs. Traditional channels" },
-    { metric: "Net-15", label: "Payment Terms", sublabel: "Guaranteed settlements" }
+    { metric: "60-70%", label: "Utilization Rate", sublabel: "From 40% baseline" },
+    { metric: "2x", label: "Revenue Growth", sublabel: "Via B2B demand channels" },
+    { metric: "30 days", label: "Payment Terms", sublabel: "Guaranteed settlements" }
   ];
 
   return (
@@ -32,11 +32,12 @@ const HospitalsLabsJoin = () => {
               </div>
 
               <h1 className="text-4xl lg:text-6xl font-heading font-bold mb-6">
-                Join India's Leading <span className="text-gradient">Healthcare Network</span>
+                Fill Capacity. <span className="text-gradient">No Sales Team Needed.</span>
               </h1>
 
               <p className="text-lg lg:text-xl text-muted-foreground mb-8">
-                Partner with Labstack to access enterprise clients, increase utilization, and grow revenue with guaranteed payment terms.
+                Access steady B2B demand from insurers, corporates, and digital health platforms. 
+                Get the AI-native platform that runs your operations and grows your business.
               </p>
 
               <Link to="/provider/hospitals-labs/apply">
@@ -61,25 +62,55 @@ const HospitalsLabsJoin = () => {
               </div>
             </div>
 
-            {/* What You Get */}
-            <div className="max-w-5xl mx-auto mb-20">
-              <h2 className="text-3xl font-heading font-bold text-center mb-12">What You Get as a Partner</h2>
+            {/* Technology Platform */}
+            <div className="max-w-6xl mx-auto mb-20">
+              <h2 className="text-3xl font-heading font-bold text-center mb-4">The Technology Platform You Get</h2>
+              <p className="text-center text-muted-foreground mb-12 max-w-3xl mx-auto">
+                Beyond demand aggregation—we're your operating system. AI-native tools for engagement, workflows, and growth.
+              </p>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                {[
-                  "Access to pan-India enterprise clients",
-                  "Standardized booking and reporting systems",
-                  "Quality certification and enhanced reputation",
-                  "Marketing support and visibility",
-                  "Operational training and onboarding",
-                  "Guaranteed payment terms (Net-15)",
-                  "Real-time performance dashboards",
-                  "Dedicated partner success manager"
-                ].map((item, i) => (
-                  <div key={i} className="flex items-start space-x-3 p-4 bg-card-gradient rounded-xl border border-border/20">
-                    <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                    <span className="text-muted-foreground">{item}</span>
+                <div className="flex items-start space-x-3 p-6 bg-card-gradient rounded-xl border border-border/20">
+                  <CheckCircle className="w-6 h-6 text-primary flex-shrink-0 mt-0.5" />
+                  <div>
+                    <h3 className="font-heading font-bold mb-2">AI-Powered Patient Engagement</h3>
+                    <p className="text-sm text-muted-foreground">WhatsApp & voice AI agents automate bookings, report explanations, reminders, and follow-ups in local languages—reducing no-shows by 40%.</p>
                   </div>
-                ))}
+                </div>
+                <div className="flex items-start space-x-3 p-6 bg-card-gradient rounded-xl border border-border/20">
+                  <CheckCircle className="w-6 h-6 text-primary flex-shrink-0 mt-0.5" />
+                  <div>
+                    <h3 className="font-heading font-bold mb-2">Unified Order & Appointment Management</h3>
+                    <p className="text-sm text-muted-foreground">Manage home collections, walk-ins, and corporate bookings in one dashboard. Real-time slots, calendar sync, automated confirmations.</p>
+                  </div>
+                </div>
+                <div className="flex items-start space-x-3 p-6 bg-card-gradient rounded-xl border border-border/20">
+                  <CheckCircle className="w-6 h-6 text-primary flex-shrink-0 mt-0.5" />
+                  <div>
+                    <h3 className="font-heading font-bold mb-2">At-Home Care Coordination</h3>
+                    <p className="text-sm text-muted-foreground">Plug-and-play access to phlebotomists, nurses, ECG techs across 9,000+ pincodes. Extend your services beyond your lab seamlessly.</p>
+                  </div>
+                </div>
+                <div className="flex items-start space-x-3 p-6 bg-card-gradient rounded-xl border border-border/20">
+                  <CheckCircle className="w-6 h-6 text-primary flex-shrink-0 mt-0.5" />
+                  <div>
+                    <h3 className="font-heading font-bold mb-2">Complete Patient CRM</h3>
+                    <p className="text-sm text-muted-foreground">Full patient history, test trends, health insights, and automated follow-ups. Turn episodic tests into long-term relationships.</p>
+                  </div>
+                </div>
+                <div className="flex items-start space-x-3 p-6 bg-card-gradient rounded-xl border border-border/20">
+                  <CheckCircle className="w-6 h-6 text-primary flex-shrink-0 mt-0.5" />
+                  <div>
+                    <h3 className="font-heading font-bold mb-2">Deep System Integrations</h3>
+                    <p className="text-sm text-muted-foreground">Seamless LIS/HIS integration with autonomous AI agents. Your existing systems work smarter—not harder.</p>
+                  </div>
+                </div>
+                <div className="flex items-start space-x-3 p-6 bg-card-gradient rounded-xl border border-border/20">
+                  <CheckCircle className="w-6 h-6 text-primary flex-shrink-0 mt-0.5" />
+                  <div>
+                    <h3 className="font-heading font-bold mb-2">Growth & Marketing Engine</h3>
+                    <p className="text-sm text-muted-foreground">Digital presence, local SEO, patient acquisition campaigns, referral tracking. Grow without hiring a sales team.</p>
+                  </div>
+                </div>
               </div>
             </div>
 

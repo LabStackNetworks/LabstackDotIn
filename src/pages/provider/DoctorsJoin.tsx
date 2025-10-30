@@ -21,11 +21,11 @@ const DoctorsJoin = () => {
   ];
 
   const labstackBenefits = [
-    "Access verified patients from insurers, corporate programs, and digital health platforms across India",
-    "Integrated EMR, e-prescription, teleconsultation, and scheduling—all in one seamless platform",
+    "Steady B2B patient demand from insurers, corporates, and digital platforms—no marketing needed",
+    "AI-native platform: WhatsApp/voice AI handles bookings, reminders, follow-ups automatically",
+    "Integrated EMR, e-prescription, teleconsultation, and smart scheduling in one place",
     "Guaranteed 100% on-time payments with transparent invoicing and bi-weekly settlements",
-    "No exclusivity required—maintain your practice and work with multiple platforms",
-    "24/7 technical and medical support with dedicated account management"
+    "No exclusivity—maintain your independent practice and other platform relationships"
   ];
 
   const outcomes = [
@@ -65,12 +65,12 @@ const DoctorsJoin = () => {
               </div>
 
               <h1 className="text-4xl lg:text-6xl font-heading font-bold mb-6">
-                Expand Your Practice. <span className="text-gradient">Treat More Patients.</span>
+                More Patients. <span className="text-gradient">Zero Marketing.</span>
               </h1>
 
               <p className="text-lg lg:text-xl text-muted-foreground mb-8">
-                Join India's largest medical network. Access verified patients from insurers, corporate wellness programs, 
-                and digital health platforms while maintaining your independent practice.
+                Access verified B2B demand from insurers, corporates, and digital health platforms. 
+                Get the AI-native platform that handles engagement, scheduling, and patient management.
               </p>
 
                <Link to="/provider/doctors/apply">
@@ -181,50 +181,53 @@ const DoctorsJoin = () => {
 
             {/* Technology Platform */}
             <div className="max-w-5xl mx-auto bg-gradient-hero rounded-3xl p-8 lg:p-12 border border-border/50 mb-20">
-              <h2 className="text-3xl font-heading font-bold text-center mb-12">
-                Medical Technology Platform
+              <h2 className="text-3xl font-heading font-bold text-center mb-4">
+                The AI-Native Platform You Get
               </h2>
+              <p className="text-center text-muted-foreground mb-12 max-w-3xl mx-auto">
+                Not just an EMR—your complete operating system for patient engagement, care delivery, and practice growth.
+              </p>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="flex items-start space-x-4">
                   <CheckCircle className="w-6 h-6 text-success flex-shrink-0 mt-1" />
                   <div>
-                    <h3 className="font-heading font-bold mb-2">Integrated EMR System</h3>
-                    <p className="text-sm text-muted-foreground">Complete electronic medical records with patient history, clinical notes, vitals tracking, and treatment documentation</p>
+                    <h3 className="font-heading font-bold mb-2">AI Patient Engagement</h3>
+                    <p className="text-sm text-muted-foreground">WhatsApp & voice AI agents handle appointment bookings, reminders, report explanations, and follow-ups in multiple languages—automatically.</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-4">
                   <CheckCircle className="w-6 h-6 text-success flex-shrink-0 mt-1" />
                   <div>
-                    <h3 className="font-heading font-bold mb-2">E-Prescription Platform</h3>
-                    <p className="text-sm text-muted-foreground">Digital prescription writing with drug database, dosage calculator, pharmacy integration, and medication tracking</p>
+                    <h3 className="font-heading font-bold mb-2">Smart Scheduling & Calendar Sync</h3>
+                    <p className="text-sm text-muted-foreground">Unified view of clinic visits and teleconsults. Real-time slot management, automated confirmations, and 40% reduction in no-shows.</p>
+                  </div>
+                </div>
+                <div className="flex items-start space-x-4">
+                  <CheckCircle className="w-6 h-6 text-success flex-shrink-0 mt-1" />
+                  <div>
+                    <h3 className="font-heading font-bold mb-2">Care Program Builder</h3>
+                    <p className="text-sm text-muted-foreground">Create structured programs for diabetes, hypertension, and chronic conditions. Track adherence and send personalized nudges to improve outcomes.</p>
+                  </div>
+                </div>
+                <div className="flex items-start space-x-4">
+                  <CheckCircle className="w-6 h-6 text-success flex-shrink-0 mt-1" />
+                  <div>
+                    <h3 className="font-heading font-bold mb-2">Complete Patient CRM</h3>
+                    <p className="text-sm text-muted-foreground">Full patient timeline—consultations, tests, prescriptions, and health trends. Enable personalized care and better retention.</p>
+                  </div>
+                </div>
+                <div className="flex items-start space-x-4">
+                  <CheckCircle className="w-6 h-6 text-success flex-shrink-0 mt-1" />
+                  <div>
+                    <h3 className="font-heading font-bold mb-2">Integrated EMR & E-Prescription</h3>
+                    <p className="text-sm text-muted-foreground">Digital records, prescription writing with drug database, lab ordering, and pharmacy integration—all in one seamless interface.</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-4">
                   <CheckCircle className="w-6 h-6 text-success flex-shrink-0 mt-1" />
                   <div>
                     <h3 className="font-heading font-bold mb-2">HD Video Consultation</h3>
-                    <p className="text-sm text-muted-foreground">Secure teleconsultation platform with screen sharing, medical image viewing, and consultation recording</p>
-                  </div>
-                </div>
-                <div className="flex items-start space-x-4">
-                  <CheckCircle className="w-6 h-6 text-success flex-shrink-0 mt-1" />
-                  <div>
-                    <h3 className="font-heading font-bold mb-2">Lab Integration</h3>
-                    <p className="text-sm text-muted-foreground">Direct test ordering, result viewing, trend analysis, and automatic report sharing with patients</p>
-                  </div>
-                </div>
-                <div className="flex items-start space-x-4">
-                  <CheckCircle className="w-6 h-6 text-success flex-shrink-0 mt-1" />
-                  <div>
-                    <h3 className="font-heading font-bold mb-2">Smart Scheduling</h3>
-                    <p className="text-sm text-muted-foreground">Automated appointment booking, patient reminders, calendar sync, and waitlist management</p>
-                  </div>
-                </div>
-                <div className="flex items-start space-x-4">
-                  <CheckCircle className="w-6 h-6 text-success flex-shrink-0 mt-1" />
-                  <div>
-                    <h3 className="font-heading font-bold mb-2">Revenue Dashboard</h3>
-                    <p className="text-sm text-muted-foreground">Real-time earnings tracking, consultation analytics, transparent invoicing, and payment history</p>
+                    <p className="text-sm text-muted-foreground">Secure teleconsultation with screen sharing, medical image viewing, and consultation recording for quality assurance.</p>
                   </div>
                 </div>
               </div>

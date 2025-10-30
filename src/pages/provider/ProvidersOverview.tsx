@@ -36,13 +36,39 @@ const ProvidersOverview = () => {
     }
   ];
 
+  const platformFeatures = [
+    {
+      title: "AI-Powered Patient Engagement",
+      description: "WhatsApp & voice AI agents handle bookings, reminders, report explanations, and follow-ups in multiple Indian languages—reducing no-shows and manual work."
+    },
+    {
+      title: "Smart Appointment & Order Management",
+      description: "Unified dashboard for clinic visits, home collections, and teleconsults. Real-time slot management, calendar sync, and automated patient reminders."
+    },
+    {
+      title: "Care Program Builder",
+      description: "Convert episodic care into structured programs—diabetes, hypertension, maternity. Track adherence and send personalized nudges to improve outcomes."
+    },
+    {
+      title: "Complete Patient CRM",
+      description: "Full patient timeline across tests, consults, messages, and outcomes. Enable personalized care, better retention, and higher lifetime value."
+    },
+    {
+      title: "At-Home Care Coordination",
+      description: "Plug-and-play access to phlebotomists, nurses, ECG technicians, and first responders. Extend care beyond your clinic seamlessly."
+    },
+    {
+      title: "Growth & Marketing Engine",
+      description: "Digital presence tools, local SEO, patient acquisition campaigns, and referral tracking—all built-in to help you grow without a sales team."
+    }
+  ];
+
   const benefits = [
-    "Access to 30,000+ monthly orders from verified healthcare platforms",
-    "SLA-backed operations with 99.5% uptime guarantee",
-    "Transparent pricing and automated reconciliation",
-    "24/7 technical and operational support",
-    "Quality monitoring and performance feedback",
-    "Non-exclusive partnership - maintain your independence"
+    "Steady B2B demand from insurers, corporates, and digital health platforms—no sales team needed",
+    "AI-native operating system that powers your daily workflows, not just transactions",
+    "30-day payment terms with automated reconciliation",
+    "99.5% platform uptime with 24/7 technical support",
+    "Non-exclusive partnership—maintain your independence and other relationships"
   ];
 
   return (
@@ -56,11 +82,11 @@ const ProvidersOverview = () => {
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto text-center mb-16">
             <h1 className="text-4xl lg:text-6xl font-heading font-bold mb-6">
-              Join India's Largest <span className="text-gradient">Healthcare Network</span>
+              Steady Demand. <span className="text-gradient">Zero Sales Effort.</span>
             </h1>
             <p className="text-xl text-muted-foreground leading-relaxed">
-              Connect with digital health platforms, insurers, and patients across 9,000+ pincodes. 
-              Grow your practice with SLA-backed operations and transparent pricing.
+              Access verified B2B demand from insurers, corporates, and digital health platforms. 
+              Powered by AI-native technology that runs your operations—not just transactions.
             </p>
           </div>
 
@@ -121,12 +147,33 @@ const ProvidersOverview = () => {
             </div>
           </div>
 
+          {/* Platform Features - What You Get */}
+          <div className="max-w-6xl mx-auto mb-16">
+            <h2 className="text-3xl lg:text-4xl font-heading font-bold text-center mb-4">
+              The Technology Platform You Get
+            </h2>
+            <p className="text-center text-muted-foreground mb-12 max-w-3xl mx-auto">
+              We're not just a demand aggregator. We're building the operating system for Indian healthcare providers—
+              AI-native tools that handle engagement, workflows, and growth so you can focus on care.
+            </p>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {platformFeatures.map((feature, index) => (
+                <Card key={index} className="group hover:shadow-neural transition-all duration-300">
+                  <CardContent className="p-6">
+                    <h3 className="font-heading font-bold mb-3 text-lg">{feature.title}</h3>
+                    <p className="text-sm text-muted-foreground leading-relaxed">{feature.description}</p>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+
           {/* Benefits Section */}
           <div className="max-w-4xl mx-auto mb-16">
             <h2 className="text-3xl lg:text-4xl font-heading font-bold text-center mb-12">
-              Why Join Labstack
+              Why Partner With Labstack
             </h2>
-            <div className="grid md:grid-cols-2 gap-4">
+            <div className="grid md:grid-cols-1 gap-4">
               {benefits.map((benefit, index) => (
                 <div key={index} className="flex items-start gap-3 p-4 rounded-lg bg-card/50">
                   <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
