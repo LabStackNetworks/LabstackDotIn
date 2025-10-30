@@ -54,7 +54,7 @@ const Providers = () => {
                 Join India's healthcare network. Steady B2B demand takes utilization from 40% → 60-70%. 15-day payments.
               </p>
 
-              <Link to="/join-network/providers">
+              <Link to="/provider/join-network">
                 <Button size="lg" className="btn-gradient">
                   Join the Network
                   <ArrowRight className="ml-2 h-5 w-5" />
