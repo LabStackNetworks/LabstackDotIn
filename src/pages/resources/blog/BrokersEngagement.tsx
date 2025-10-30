@@ -229,6 +229,40 @@ const BrokersEngagement = () => {
           </p>
         </div>
 
+        {/* FAQ Section */}
+        <div className="mt-16 mb-12">
+          <h2 className="text-3xl font-bold mb-8 text-center">Frequently Asked Questions</h2>
+          <div className="space-y-4">
+            {[
+              {
+                question: "Which cities and corporate hubs benefit most from wellness programs?",
+                answer: "Wellness programs see highest engagement in metro IT/corporate hubs: Bangalore (Whitefield, Electronic City, Manyata Tech Park), Pune (Hinjewadi, Magarpatta), Hyderabad (HITEC City, Gachibowli), NCR (Cyber City Gurgaon, Sector 62-144 Noida), Mumbai (BKC, Powai, Andheri), Chennai (OMR, Guindy). These locations have young workforce (25-40 age), high health awareness, and smartphone penetration—ideal for digital wellness platforms."
+              },
+              {
+                question: "How quickly can I see ROI from wellness programs?",
+                answer: "Initial engagement metrics (platform adoption, consultations conducted) visible within 4-6 weeks. Measurable health outcomes (biometric improvements, preventive screenings completed) show results in 3-4 months. Claims impact (reduction in preventable hospitalizations) becomes clear at 6-9 months. Full financial ROI with premium savings typically achieved by 12-month renewal."
+              },
+              {
+                question: "What wellness features drive highest employee engagement?",
+                answer: "Top engagement drivers: Free doctor consultations (70% adoption), health risk assessments with personalized reports (60% completion), home diagnostic tests (40% utilization), pharmacy delivery for chronic medications (35% usage), mental health counseling (25% utilization), and fitness challenges with rewards (50% participation). Engagement varies by demographics—younger employees prefer app-based, older employees prefer human touchpoints."
+              },
+              {
+                question: "Can wellness programs work for manufacturing or non-IT corporates?",
+                answer: "Yes, but requires different approach. Manufacturing hubs (Pune industrial belt, Chennai Sriperumbudur, NCR Manesar/Bawal, Bangalore Peenya, Gujarat Sanand/Vapi) need on-site health camps, bilingual content, and offline engagement methods. Blue-collar workforce responds better to tangible benefits (free health checks, on-site doctor visits, subsidized medicines) vs. app-based wellness content. Success cases exist across industries—auto, pharma, logistics, retail."
+              },
+              {
+                question: "How do I convince corporate HR teams to invest in wellness?",
+                answer: "Present data-driven business case: (1) Claim ratio reduction of 15-20% translates to premium savings at renewal, (2) Absenteeism reduction improves productivity (quantify in ₹ terms), (3) Employee satisfaction scores increase by 25-30 points, (4) Employer branding advantage in talent acquisition, (5) Compliance with corporate health policies. Offer pilot with 1-2 departments, measure baseline vs. post-implementation metrics, then scale."
+              }
+            ].map((faq, index) => (
+              <details key={index} className="bg-card-gradient rounded-xl border border-border/20 p-6">
+                <summary className="font-semibold cursor-pointer text-lg">{faq.question}</summary>
+                <p className="mt-3 text-muted-foreground">{faq.answer}</p>
+              </details>
+            ))}
+          </div>
+        </div>
+
         <div className="mt-12 p-8 bg-primary/5 rounded-lg border border-primary/20">
           <h3 className="text-2xl font-bold mb-4">Launch Wellness for Your Corporate Clients</h3>
           <p className="text-muted-foreground mb-6">

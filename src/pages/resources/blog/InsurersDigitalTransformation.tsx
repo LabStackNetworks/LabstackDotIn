@@ -178,6 +178,40 @@ const InsurersDigitalTransformation = () => {
           </p>
         </div>
 
+        {/* FAQ Section */}
+        <div className="mt-16 mb-12">
+          <h2 className="text-3xl font-bold mb-8 text-center">Frequently Asked Questions</h2>
+          <div className="space-y-4">
+            {[
+              {
+                question: "How long does digital transformation take for insurers?",
+                answer: "A phased implementation typically takes 2-4 months. Phase 1 (foundation) takes 2 weeks, Phase 2 (automation) takes 2 weeks, Phase 3 (optimization) takes 1 month, and Phase 4 (innovation) is ongoing. Quick wins like automated claim processing and member self-service can go live within 30 days."
+              },
+              {
+                question: "What cities can I expand to with digital infrastructure?",
+                answer: "Our platform covers 9,000+ pincodes across metros (Mumbai, Delhi, Bangalore, Hyderabad, Chennai, Pune), tier-2 cities (Indore, Jaipur, Lucknow, Coimbatore, Kochi, Nagpur, Visakhapatnam), and tier-3 cities (Guntur, Mysore, Ranchi, Raipur, Dehradun, Vadodara). Network expansion happens in parallel with technology rollout."
+              },
+              {
+                question: "Can I integrate with my existing TPA and policy administration systems?",
+                answer: "Yes, our platform provides REST APIs and webhooks that integrate with major TPA systems, policy administration platforms, and core insurance systems. Standard integrations available for top 10 TPAs in India. Custom integrations completed within 2-3 weeks."
+              },
+              {
+                question: "How do you ensure data security and regulatory compliance?",
+                answer: "We maintain ISO 27001 certification, HIPAA equivalent controls, IRDAI compliance, and encrypted data handling. All provider and member data is stored in India with role-based access controls. Regular security audits and penetration testing performed quarterly."
+              },
+              {
+                question: "What is the ROI timeline for digital transformation?",
+                answer: "Most insurers see positive ROI within 6-9 months. Immediate gains come from reduced claim processing costs (40-60% reduction). Medium-term gains from network expansion enable premium growth. Long-term gains from improved retention (25% higher renewals) and fraud reduction (15-20% savings) compound over time."
+              }
+            ].map((faq, index) => (
+              <details key={index} className="bg-card-gradient rounded-xl border border-border/20 p-6">
+                <summary className="font-semibold cursor-pointer text-lg">{faq.question}</summary>
+                <p className="mt-3 text-muted-foreground">{faq.answer}</p>
+              </details>
+            ))}
+          </div>
+        </div>
+
         <div className="mt-12 p-8 bg-primary/5 rounded-lg border border-primary/20">
           <h3 className="text-2xl font-bold mb-4">Ready to Transform Your Insurance Operations?</h3>
           <p className="text-muted-foreground mb-6">

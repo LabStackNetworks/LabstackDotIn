@@ -1,6 +1,7 @@
 /**
  * FAQ Data for Pharmacy Page
  * Organized by persona: Insurers, Digital Health Platforms, Providers
+ * Covers delivery, specialized medicines, compliance, and geo coverage
  */
 
 export const pharmacyFAQs = [
@@ -91,14 +92,50 @@ export const pharmacyFAQs = [
   // Pricing & Commercial
   {
     question: "How does pricing work?",
-    answer: "Transparent pricing with no hidden markups. You get negotiated pharmacy rates + small platform fee. Volume discounts available. Patients see MRP always."
+    answer: "Transparent pricing with MRP-based or negotiated rates. Volume discounts available for insurers and corporates. No hidden markup—what you see is what you pay. Pricing is consistent across metros (Mumbai, Delhi, Bangalore, Chennai) and tier-2 cities (Indore, Jaipur, Coimbatore, Nagpur)."
   },
   {
     question: "Are there delivery charges?",
-    answer: "Free delivery for orders above ₹500. Below ₹500, delivery charges of ₹40-60 apply based on distance. Express delivery (30-min) available at ₹99 extra in select cities."
+    answer: "Free delivery for orders above ₹500. Orders below ₹500 may have nominal delivery charges (₹30-50) depending on location and urgency. Express delivery (2-3 hours) available in major city centers like Bandra (Mumbai), Koramangala (Bangalore), Connaught Place (Delhi), and T Nagar (Chennai) at ₹50-100 extra."
   },
   {
-    question: "How does reconciliation work?",
-    answer: "Automated daily reconciliation with SKU-level tracking, prescription mapping, and digital invoices. API integration for real-time settlement and audit trails."
+    question: "How does reconciliation work for B2B partners?",
+    answer: "Automated invoice generation with SKU-level breakup, prescription mapping, and delivery confirmation. Monthly statements with complete audit trail for easy reconciliation."
+  },
+  
+  // Specialized Medicines & Therapies
+  {
+    question: "Do you stock GLP-1 medicines like Mounjaro, Wegovy, and Ozempic?",
+    answer: "Yes, we stock weight management and diabetes medications including Mounjaro (tirzepatide), Wegovy (semaglutide), Ozempic (semaglutide), Rybelsus (oral semaglutide), and Saxenda (liraglutide). These require valid prescriptions from endocrinologists or diabetologists. Available with cold chain delivery across Mumbai, Delhi NCR, Bangalore, Hyderabad, Pune, Chennai, and tier-2 cities. Prescription verification is mandatory as per Schedule H1 drug regulations."
+  },
+  {
+    question: "Can you deliver influenza vaccines and other immunizations?",
+    answer: "Yes, we deliver influenza vaccines (Vaxigrip, Influvac), pneumococcal vaccines (Prevenar, Pneumovax), HPV vaccines (Gardasil), and other immunizations with proper cold chain maintenance (2-8°C). Available across major cities including Mumbai (Andheri, Bandra, Powai), Bangalore (Whitefield, Indiranagar), Delhi NCR (Gurgaon, Noida), Hyderabad (Madhapur, Gachibowli), Pune (Koregaon Park, Hinjewadi), and tier-2 cities. Delivery within 4-6 hours with temperature monitoring."
+  },
+  {
+    question: "Do you provide at-home vaccination and injection services?",
+    answer: "Yes, we coordinate with certified nurses and healthcare workers for at-home administration of vaccines, insulin injections, B12 shots, vitamin D injections, and other intramuscular/subcutaneous medications. Service available in metros (Mumbai, Delhi, Bangalore, Chennai, Pune, Hyderabad) and select tier-2 cities (Indore, Jaipur, Chandigarh, Lucknow, Coimbatore). Trained nurses carry proper equipment, maintain cold chain, and provide post-injection monitoring."
+  },
+  {
+    question: "Can I get vaccination at corporate health camps?",
+    answer: "Yes, we organize corporate flu vaccination camps and preventive immunization drives at company premises. Services include vaccine procurement with cold chain logistics, trained nurses for administration, documentation, adverse event monitoring, and digital vaccination certificates. Popular at IT parks in Bangalore (Whitefield, Electronic City, Manyata Tech Park), Pune (Hinjewadi SEZ, Magarpatta), Hyderabad (HITEC City, Gachibowli), NCR (Cyber City Gurgaon, Sector 62 Noida), and Mumbai (BKC, Powai, Andheri)."
+  },
+  {
+    question: "Do you deliver specialty medicines for rare diseases?",
+    answer: "Yes, we source and deliver specialty medications for rare diseases, oncology, autoimmune conditions, and orphan drugs. This includes immunosuppressants, biologics, targeted cancer therapies, and enzyme replacement therapies. Lead time: 3-7 days for import medications. Available through our specialty pharmacy network with patient assistance program coordination and insurance claim support."
+  },
+  
+  // Geographic Coverage & Delivery
+  {
+    question: "Which cities and areas do you cover for pharmacy delivery?",
+    answer: "We cover 18,000+ pincodes across India including metros: Mumbai (all suburbs - Andheri, Borivali, Thane, Navi Mumbai), Delhi NCR (Delhi, Gurgaon, Noida, Faridabad, Ghaziabad), Bangalore (Whitefield, Electronic City, Jayanagar, Indiranagar, HSR Layout), Chennai (T Nagar, Velachery, OMR), Hyderabad (Banjara Hills, Jubilee Hills, Gachibowli, Secunderabad), Pune (Koregaon Park, Hinjewadi, Viman Nagar), Kolkata (Salt Lake, New Town, Rajarhat). Tier-2 cities: Indore, Jaipur, Lucknow, Coimbatore, Kochi, Nagpur, Visakhapatnam, Bhubaneswar, Chandigarh, Vadodara. Tier-3 cities: Mysore, Mangalore, Ranchi, Raipur, Dehradun, Nashik, Rajkot, Guntur, Vijayawada."
+  },
+  {
+    question: "How fast is delivery in different cities?",
+    answer: "Metro cities (Mumbai, Delhi, Bangalore, Hyderabad, Chennai, Pune, Kolkata): Standard delivery 6-24 hours, Express delivery 2-4 hours in central areas. Tier-2 cities (Indore, Jaipur, Lucknow, Coimbatore, Nagpur): 12-24 hours standard. Tier-3 cities and remote areas: 24-48 hours. Emergency medications can be expedited in metros and tier-2 cities with 2-hour guaranteed delivery."
+  },
+  {
+    question: "Can you deliver to rural or remote areas?",
+    answer: "Yes, we cover remote pincodes across states including rural areas in Uttar Pradesh (Gorakhpur, Varanasi, Kanpur districts), Bihar (Patna, Muzaffarpur), Madhya Pradesh (Jabalpur, Gwalior, Indore outskirts), Rajasthan (Udaipur, Ajmer, Jodhpur districts), Maharashtra (Nashik, Aurangabad, Solapur), Tamil Nadu (Madurai, Salem, Tiruchirappalli districts), and Kerala (Malappuram, Kannur, Palakkad). Delivery within 48-72 hours depending on logistics. Prescription validation and cold chain maintained for all deliveries."
   }
 ];

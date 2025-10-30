@@ -263,6 +263,40 @@ const BrokersTech = () => {
           </p>
         </div>
 
+        {/* FAQ Section */}
+        <div className="mt-16 mb-12">
+          <h2 className="text-3xl font-bold mb-8 text-center">Frequently Asked Questions</h2>
+          <div className="space-y-4">
+            {[
+              {
+                question: "Which markets are best suited for tech-enabled brokerage expansion?",
+                answer: "Highest opportunity in metros (Mumbai, Delhi NCR, Bangalore, Pune, Hyderabad, Chennai) and emerging tier-2 cities (Indore, Jaipur, Ahmedabad, Coimbatore, Kochi, Chandigarh, Visakhapatnam, Bhubaneswar). These markets have critical mass of mid-sized corporates (500-5000 employees), high digital adoption, and willingness to pay for superior service. Tech platforms enable you to serve tier-2/3 cities remotely without physical presence."
+              },
+              {
+                question: "How long does it take to migrate existing clients to a new platform?",
+                answer: "Pilot phase with 2-3 anchor clients: 2-4 weeks. Full migration of 50 corporate accounts: 2-3 months including data migration, employee onboarding, and training. Phased rollout recommended—start with tech-savvy clients, demonstrate ROI, then expand. Critical to maintain parallel systems for 1 month during transition to avoid disruption."
+              },
+              {
+                question: "What if my clients are not tech-savvy or prefer human touchpoints?",
+                answer: "Technology augments human service, doesn't replace it. Use platform for backend automation (policy issuance, claims tracking, reporting) while maintaining personal relationship management. Members can choose their channel—phone, email, WhatsApp, or app. Over time, 60-70% naturally shift to self-service for routine tasks, freeing your team for high-value advisory work."
+              },
+              {
+                question: "Can I integrate brokerage platform with my existing tools?",
+                answer: "Most modern platforms provide API access for integration with CRMs (Salesforce, Zoho), accounting software (Tally, QuickBooks), communication tools (WhatsApp Business, Email marketing), and insurer portals. Integration typically takes 1-2 weeks post-platform setup. Check for pre-built connectors vs. custom API development needs."
+              },
+              {
+                question: "What happens to my data if I switch platforms later?",
+                answer: "Ensure contract includes data portability clause—all client data, policy information, claims history exportable in standard formats (CSV, JSON). Reputable vendors provide data migration support. Avoid platforms with proprietary lock-in or limited export capabilities. Ask for data ownership terms upfront before commitment."
+              }
+            ].map((faq, index) => (
+              <details key={index} className="bg-card-gradient rounded-xl border border-border/20 p-6">
+                <summary className="font-semibold cursor-pointer text-lg">{faq.question}</summary>
+                <p className="mt-3 text-muted-foreground">{faq.answer}</p>
+              </details>
+            ))}
+          </div>
+        </div>
+
         <div className="mt-12 p-8 bg-primary/5 rounded-lg border border-primary/20">
           <h3 className="text-2xl font-bold mb-4">Transform Your Brokerage with Technology</h3>
           <p className="text-muted-foreground mb-6">

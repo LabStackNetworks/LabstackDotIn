@@ -224,6 +224,40 @@ const InsurersClaimsFraud = () => {
           </p>
         </div>
 
+        {/* FAQ Section */}
+        <div className="mt-16 mb-12">
+          <h2 className="text-3xl font-bold mb-8 text-center">Frequently Asked Questions</h2>
+          <div className="space-y-4">
+            {[
+              {
+                question: "How accurate is AI-powered fraud detection compared to manual audits?",
+                answer: "AI systems achieve 85-92% accuracy in flagging suspicious claims, compared to 30-40% detection rates with random manual audits. Machine learning models analyze 100% of claims in real-time, while human auditors can review only 2-3% of total claims. The AI learns from every investigation outcome, continuously improving accuracy."
+              },
+              {
+                question: "Which cities and regions see the highest fraud rates in India?",
+                answer: "Fraud patterns vary by region. Metro cities (Mumbai, Delhi, Bangalore, Hyderabad) see sophisticated fraud like phantom billing and upcoding. Tier-2 cities (Indore, Nagpur, Lucknow, Coimbatore) show higher rates of unbundling and overutilization. Tier-3 cities and rural areas (Ranchi, Raipur, Gorakhpur, Muzaffarpur) have more member-side fraud like card sharing and false claims. Geographic analysis helps customize detection models."
+              },
+              {
+                question: "Can AI detect collusion between hospitals and patients?",
+                answer: "Yes, network analysis algorithms identify collusion patterns by mapping relationships between providers, members, agents, and referrals. The system flags unusual patterns like: multiple members from same address admitted to same hospital, coordinated claim timing, and systematic billing anomalies across patient groups. Works across all major cities including Mumbai (Andheri, Borivali), Bangalore (Whitefield, Electronic City), Delhi (Rohini, Dwarka), and tier-2/3 cities."
+              },
+              {
+                question: "How long does it take to implement fraud detection systems?",
+                answer: "Phased implementation: Data foundation (2 weeks), Rules engine (2 weeks), AI models (2 months), Full optimization (ongoing). Quick wins like duplicate claim detection and basic upcoding rules can go live within 30 days. Complete ML-powered fraud detection with network analysis typically takes 3-4 months from start to full production."
+              },
+              {
+                question: "What happens when the AI flags a legitimate claim as fraudulent?",
+                answer: "False positives are reviewed by human investigators before any claim is rejected. High-risk scores (>80) trigger mandatory investigation but don't automatically deny claims. The system provides detailed reasoning for each flag, allowing auditors to quickly validate or override. False positive rates typically decrease from 15-20% in month 1 to under 5% by month 6 as models learn."
+              }
+            ].map((faq, index) => (
+              <details key={index} className="bg-card-gradient rounded-xl border border-border/20 p-6">
+                <summary className="font-semibold cursor-pointer text-lg">{faq.question}</summary>
+                <p className="mt-3 text-muted-foreground">{faq.answer}</p>
+              </details>
+            ))}
+          </div>
+        </div>
+
         <div className="mt-12 p-8 bg-primary/5 rounded-lg border border-primary/20">
           <h3 className="text-2xl font-bold mb-4">Reduce Claims Fraud by 40% in 90 Days</h3>
           <p className="text-muted-foreground mb-6">
