@@ -97,12 +97,12 @@ const PartnerTerms = () => {
               <p className="text-muted-foreground mb-4">
                 For partnership-related queries, contact:
               </p>
-              <p className="text-muted-foreground mb-2">Email: partners@labstack.in</p>
-              <p className="text-muted-foreground mb-2">Phone: +91 80 4040 2030</p>
-              <p className="text-muted-foreground mb-8">Address: Bangalore, India</p>
+              <p className="text-muted-foreground mb-2">Email: contact@labstack.in</p>
+              <p className="text-muted-foreground mb-2">Phone: +91-8047359194</p>
+              <p className="text-muted-foreground mb-8">Address: 4263, Tower 4, 26th Floor, Phoenix One Bangalore West, Dr. Rajkumar Road, Rajajinagar - 560010, Bangalore North, Karnataka, India</p>
 
               <p className="text-sm text-muted-foreground mt-8">
-                Last updated: October 2024
+                <strong>Last Updated:</strong> January 2024
               </p>
             </div>
           </div>

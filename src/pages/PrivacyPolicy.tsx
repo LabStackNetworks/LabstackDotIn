@@ -79,30 +79,55 @@ const PrivacyPolicy = () => {
                 <li>Compliance with healthcare data security standards</li>
               </ul>
 
-              <h2 className="text-2xl font-heading font-bold mt-8 mb-4">Legal Framework and Compliance</h2>
-              <p className="text-muted-foreground mb-4">
-                Labstack complies with Indian data protection regulations including:
-              </p>
+              <h2 className="text-2xl font-heading font-bold mt-8 mb-4">Your Rights and Choices</h2>
+              <p className="text-muted-foreground mb-4">You have certain rights regarding your personal information:</p>
               <ul className="list-disc pl-6 space-y-2 text-muted-foreground mb-4">
-                <li><strong>Information Technology Act, 2000</strong> and IT (Reasonable Security Practices) Rules, 2011</li>
-                <li><strong>DISHA framework</strong> for digital health data security and privacy</li>
-                <li><strong>Telemedicine Practice Guidelines, 2020</strong> for patient data handling</li>
-                <li>Healthcare provider regulations for medical records and patient confidentiality</li>
+                <li><strong>Access:</strong> You can request access to your personal information</li>
+                <li><strong>Correction:</strong> You can request correction of inaccurate information</li>
+                <li><strong>Deletion:</strong> You can request deletion of your information (subject to legal requirements)</li>
+                <li><strong>Portability:</strong> You can request a copy of your data in a portable format</li>
+                <li><strong>Opt-out:</strong> You can opt-out of certain communications and data processing</li>
               </ul>
 
-              <h2 className="text-2xl font-heading font-bold mt-8 mb-4">Your Rights and Choices</h2>
-              <p className="text-muted-foreground mb-4">Under Indian law, you have the right to access, correct, delete your data, withdraw consent, opt-out of marketing, and file complaints regarding data misuse.</p>
+              <h2 className="text-2xl font-heading font-bold mt-8 mb-4">Healthcare Data Protection</h2>
+              <p className="text-muted-foreground mb-4">
+                As a healthcare platform, we are committed to protecting health information in accordance with applicable healthcare privacy laws. We maintain appropriate safeguards for protected health information and ensure that our network partners also comply with relevant privacy requirements.
+              </p>
+
+              <h2 className="text-2xl font-heading font-bold mt-8 mb-4">Cookies and Tracking Technologies</h2>
+              <p className="text-muted-foreground mb-4">
+                We use cookies and similar tracking technologies to enhance your experience on our platform. You can control cookie preferences through your browser settings, though some functionality may be limited if you disable certain cookies.
+              </p>
+
+              <h2 className="text-2xl font-heading font-bold mt-8 mb-4">International Data Transfers</h2>
+              <p className="text-muted-foreground mb-4">
+                Your information may be processed and stored in countries other than your country of residence. We ensure appropriate safeguards are in place for international data transfers in accordance with applicable laws.
+              </p>
+
+              <h2 className="text-2xl font-heading font-bold mt-8 mb-4">Children's Privacy</h2>
+              <p className="text-muted-foreground mb-4">
+                Our services are not designed for children under 18. We do not knowingly collect personal information from children under 18 without parental consent. If you believe we have collected such information, please contact us immediately.
+              </p>
+
+              <h2 className="text-2xl font-heading font-bold mt-8 mb-4">Changes to This Policy</h2>
+              <p className="text-muted-foreground mb-4">
+                We may update this Privacy Policy from time to time. We will notify you of material changes by posting the updated policy on our platform and updating the effective date. Your continued use of our services after such changes constitutes acceptance of the updated policy.
+              </p>
 
               <h2 className="text-2xl font-heading font-bold mt-8 mb-4">Contact Us</h2>
               <p className="text-muted-foreground mb-4">
-                If you have questions or concerns about this Privacy Policy or our data practices, please contact us at:
+                If you have questions about this Privacy Policy or our data practices, please contact us at:
               </p>
+              <p className="text-muted-foreground mb-2"><strong>Labstack Networks Private Limited</strong></p>
               <p className="text-muted-foreground mb-2">Email: contact@labstack.in</p>
               <p className="text-muted-foreground mb-2">Phone: +91-8047359194</p>
               <p className="text-muted-foreground mb-8">Address: 4263, Tower 4, 26th Floor, Phoenix One Bangalore West, Dr. Rajkumar Road, Rajajinagar - 560010, Bangalore North, Karnataka, India</p>
 
               <p className="text-sm text-muted-foreground mt-8">
-                Last updated: January 2024
+                <strong>Last Updated:</strong> January 2024
+              </p>
+              <p className="text-sm text-muted-foreground">
+                <strong>Effective Date:</strong> January 2024
               </p>
             </div>
           </div>

@@ -8,108 +8,137 @@ const TermsConditions = () => {
       <main className="pt-20">
         <section className="py-20">
           <div className="container mx-auto px-6 max-w-4xl">
-            <h1 className="text-4xl lg:text-5xl font-heading font-bold mb-8">Terms & Conditions</h1>
+            <h1 className="text-4xl lg:text-5xl font-heading font-bold mb-8">Terms of Service</h1>
             
             <div className="prose prose-neutral dark:prose-invert max-w-none">
-              <h2 className="text-2xl font-heading font-bold mt-8 mb-4">1. Acceptance of Terms</h2>
-              <p className="text-muted-foreground mb-4">
-                By accessing or using the Labstack platform and services, you agree to be bound by these Terms and Conditions. If you do not agree to these terms, please do not use our services.
+              <p className="text-muted-foreground mb-8">
+                <strong>Effective Date:</strong> March 13, 2025
               </p>
 
-              <h2 className="text-2xl font-heading font-bold mt-8 mb-4">2. Service Description</h2>
-              <p className="text-muted-foreground mb-4">
-                Labstack provides a healthcare infrastructure platform that connects businesses with healthcare service providers including diagnostic labs, pharmacies, doctors, and specialized care networks across India.
+              <p className="text-muted-foreground mb-8">
+                Welcome to Labstack! These Terms of Service ("Terms") govern your access to and use of our platform, APIs, and services. By using Labstack, you agree to comply with these Terms. If you do not agree, please do not use our services.
               </p>
 
-              <h2 className="text-2xl font-heading font-bold mt-8 mb-4">3. User Responsibilities</h2>
-              <p className="text-muted-foreground mb-4">Users of the Labstack platform agree to:</p>
-              <ul className="list-disc pl-6 space-y-2 text-muted-foreground mb-4">
-                <li>Provide accurate and complete information</li>
-                <li>Maintain the confidentiality of account credentials</li>
-                <li>Use the platform only for lawful purposes</li>
-                <li>Comply with all applicable healthcare regulations</li>
-                <li>Not interfere with or disrupt the platform's operation</li>
-              </ul>
-
-              <h2 className="text-2xl font-heading font-bold mt-8 mb-4">4. Service Availability</h2>
+              <h2 className="text-2xl font-heading font-bold mt-8 mb-4">1. Introduction</h2>
               <p className="text-muted-foreground mb-4">
-                While we strive for 99.5% uptime, Labstack does not guarantee uninterrupted access to the platform. We reserve the right to modify, suspend, or discontinue services with reasonable notice.
-              </p>
-
-              <h2 className="text-2xl font-heading font-bold mt-8 mb-4">5. Payment Terms</h2>
-              <p className="text-muted-foreground mb-4">
-                Payment terms are established in separate commercial agreements. All fees are exclusive of applicable taxes. Late payments may result in service suspension.
-              </p>
-
-              <h2 className="text-2xl font-heading font-bold mt-8 mb-4">6. Intellectual Property</h2>
-              <p className="text-muted-foreground mb-4">
-                All content, features, and functionality of the Labstack platform are owned by Labstack Networks Private Limited and are protected by intellectual property laws.
-              </p>
-
-              <h2 className="text-2xl font-heading font-bold mt-8 mb-4">7. Limitation of Liability</h2>
-              <p className="text-muted-foreground mb-4">
-                Labstack provides infrastructure services and is not directly responsible for the medical services provided by healthcare providers in our network. Our liability is limited to the fees paid for services in the preceding 12 months.
-              </p>
-
-              <h2 className="text-2xl font-heading font-bold mt-8 mb-4">8. Data Protection and Indian Regulations</h2>
-              <p className="text-muted-foreground mb-4">
-                Use of personal and health data is governed by our Privacy Policy and complies with applicable Indian regulations including:
+                Labstack provides an API-first infrastructure for healthcare services, including diagnostics, doctor consultations, pharmacy, and healthcare data management. These Terms apply to all users, including:
               </p>
               <ul className="list-disc pl-6 space-y-2 text-muted-foreground mb-4">
-                <li><strong>Information Technology Act, 2000 (IT Act)</strong> and Information Technology (Reasonable Security Practices and Procedures and Sensitive Personal Data or Information) Rules, 2011</li>
-                <li><strong>Digital Information Security in Healthcare Act (DISHA)</strong> framework for protection of digital health data</li>
-                <li><strong>Telemedicine Practice Guidelines, 2020</strong> issued by the Medical Council of India and NITI Aayog for teleconsultation services</li>
-                <li><strong>Indian Medical Council (Professional Conduct, Etiquette and Ethics) Regulations, 2002</strong></li>
-                <li><strong>Drugs and Cosmetics Act, 1940</strong> and related rules for pharmacy services</li>
+                <li>Healthcare providers, insurers, and wellness platforms integrating our APIs.</li>
+                <li>Developers and businesses using our services.</li>
+                <li>Patients and individuals accessing services through our network.</li>
+              </ul>
+
+              <h2 className="text-2xl font-heading font-bold mt-8 mb-4">2. Use of Services</h2>
+              <p className="text-muted-foreground mb-4">By using Labstack, you agree to:</p>
+              <ul className="list-disc pl-6 space-y-2 text-muted-foreground mb-4">
+                <li>Use the services legally and in compliance with Indian laws, including the Digital Personal Data Protection Act, 2023 and Information Technology Act, 2000.</li>
+                <li>Provide accurate information when registering or using the platform.</li>
+                <li>Not misuse the platform, such as engaging in unauthorized API access, data scraping, or fraudulent activities.</li>
               </ul>
               <p className="text-muted-foreground mb-4">
-                We implement encryption at rest and in transit, access controls, audit logs, and regular security audits to protect sensitive personal and health information.
+                Labstack reserves the right to suspend or terminate accounts violating these Terms.
               </p>
 
-              <h2 className="text-2xl font-heading font-bold mt-8 mb-4">9. Telemedicine and Healthcare Service Compliance</h2>
+              <h2 className="text-2xl font-heading font-bold mt-8 mb-4">3. Registration & Account Security</h2>
+              <p className="text-muted-foreground mb-4">To access Labstack's services, you may need to create an account. You agree to:</p>
+              <ul className="list-disc pl-6 space-y-2 text-muted-foreground mb-4">
+                <li>Maintain the confidentiality of your login credentials.</li>
+                <li>Notify us immediately of any unauthorized use of your account.</li>
+              </ul>
+
+              <h2 className="text-2xl font-heading font-bold mt-8 mb-4">4. API Usage & Licensing</h2>
+              <p className="text-muted-foreground mb-4">Labstack provides APIs and SDKs for seamless healthcare integrations.</p>
+              <ul className="list-disc pl-6 space-y-2 text-muted-foreground mb-4">
+                <li>Users are granted a limited, non-exclusive, non-transferable license to use our APIs.</li>
+                <li>API access must comply with rate limits and fair use policies.</li>
+                <li>Users must not reverse engineer, modify, or misuse our APIs.</li>
+              </ul>
               <p className="text-muted-foreground mb-4">
-                Teleconsultation services provided through our platform comply with Telemedicine Practice Guidelines issued by the Board of Governors superseding the Medical Council of India. This includes:
+                Labstack reserves the right to restrict access to APIs if misuse is detected.
+              </p>
+
+              <h2 className="text-2xl font-heading font-bold mt-8 mb-4">5. Payment & Billing</h2>
+              <p className="text-muted-foreground mb-4">Some Labstack services may require subscription fees or transaction-based pricing.</p>
+              <ul className="list-disc pl-6 space-y-2 text-muted-foreground mb-4">
+                <li>Payments must be made as per the agreed terms and non-payment may result in service suspension.</li>
+                <li>All payments are non-refundable, except where required by law.</li>
+              </ul>
+              <p className="text-muted-foreground mb-4">
+                For billing inquiries, contact contact@labstack.in.
+              </p>
+
+              <h2 className="text-2xl font-heading font-bold mt-8 mb-4">6. Data Privacy & Compliance</h2>
+              <p className="text-muted-foreground mb-4">
+                Labstack follows strict data protection laws under the Digital Personal Data Protection Act, 2023.
               </p>
               <ul className="list-disc pl-6 space-y-2 text-muted-foreground mb-4">
-                <li>Registered Medical Practitioners (RMP) with valid licenses</li>
-                <li>Informed consent procedures for telemedicine consultations</li>
-                <li>Proper documentation and maintenance of electronic medical records</li>
-                <li>Prescription guidelines and limitations for teleconsultations</li>
-                <li>Patient identification and verification protocols</li>
+                <li>User data is securely stored and processed with encryption and compliance measures.</li>
+                <li>Labstack does not sell user data to third parties.</li>
+                <li>Users must comply with all regulatory requirements when handling patient data.</li>
               </ul>
-
-              <h2 className="text-2xl font-heading font-bold mt-8 mb-4">10. Termination</h2>
               <p className="text-muted-foreground mb-4">
-                Either party may terminate the service agreement with 30 days written notice. Labstack reserves the right to immediately suspend or terminate accounts that violate these terms.
+                For details, refer to our Privacy Policy.
               </p>
 
-              <h2 className="text-2xl font-heading font-bold mt-8 mb-4">11. Governing Law and Regulatory Compliance</h2>
+              <h2 className="text-2xl font-heading font-bold mt-8 mb-4">7. Third-Party Services & Liability</h2>
               <p className="text-muted-foreground mb-4">
-                These Terms and Conditions are governed by the laws of India. Any disputes shall be subject to the exclusive jurisdiction of courts in Bangalore, Karnataka. Users agree to comply with all applicable Indian healthcare regulations, including but not limited to:
+                Labstack integrates with third-party healthcare providers, labs, and pharmacies.
               </p>
               <ul className="list-disc pl-6 space-y-2 text-muted-foreground mb-4">
-                <li>Clinical Establishments (Registration and Regulation) Act, 2010</li>
-                <li>Pre-Conception and Pre-Natal Diagnostic Techniques (PCPNDT) Act, 1994</li>
-                <li>Pharmacy Act, 1948 and Drugs and Cosmetics Act, 1940</li>
-                <li>Indian Medical Council Act, 1956 and regulations thereunder</li>
-                <li>Consumer Protection Act, 2019 for healthcare services</li>
+                <li>Labstack is not responsible for the quality, accuracy, or timeliness of services provided by third parties.</li>
+                <li>Users must review and agree to third-party terms when using their services.</li>
+              </ul>
+              <p className="text-muted-foreground mb-4">
+                Labstack does not provide medical advice—all consultations and lab reports are managed by licensed professionals.
+              </p>
+
+              <h2 className="text-2xl font-heading font-bold mt-8 mb-4">8. Service Availability & Downtime</h2>
+              <p className="text-muted-foreground mb-4">While we strive for 99.9% uptime, Labstack does not guarantee uninterrupted service.</p>
+              <ul className="list-disc pl-6 space-y-2 text-muted-foreground mb-4">
+                <li>Scheduled maintenance may cause temporary downtime.</li>
+                <li>Unexpected technical issues may impact service availability.</li>
+                <li>Labstack is not liable for losses due to service interruptions.</li>
               </ul>
 
-              <h2 className="text-2xl font-heading font-bold mt-8 mb-4">12. Changes to Terms</h2>
+              <h2 className="text-2xl font-heading font-bold mt-8 mb-4">9. Limitation of Liability</h2>
+              <p className="text-muted-foreground mb-4">To the fullest extent permitted by law:</p>
+              <ul className="list-disc pl-6 space-y-2 text-muted-foreground mb-4">
+                <li>Labstack is not liable for indirect, incidental, or consequential damages, including lost profits or business interruptions.</li>
+                <li>Our total liability is limited to the amount paid by the user for that transaction.</li>
+              </ul>
+
+              <h2 className="text-2xl font-heading font-bold mt-8 mb-4">10. Termination of Services</h2>
+              <p className="text-muted-foreground mb-4">Labstack reserves the right to terminate or suspend accounts if:</p>
+              <ul className="list-disc pl-6 space-y-2 text-muted-foreground mb-4">
+                <li>Users violate these Terms or engage in unauthorized activities.</li>
+                <li>Continued usage poses a security or legal risk.</li>
+                <li>The service is discontinued or modified.</li>
+              </ul>
               <p className="text-muted-foreground mb-4">
-                Labstack reserves the right to modify these terms at any time. Material changes will be communicated to users with reasonable advance notice.
+                Users may terminate their account anytime by contacting contact@labstack.in.
               </p>
 
-              <h2 className="text-2xl font-heading font-bold mt-8 mb-4">Contact Information</h2>
+              <h2 className="text-2xl font-heading font-bold mt-8 mb-4">11. Governing Law & Dispute Resolution</h2>
+              <p className="text-muted-foreground mb-4">These Terms are governed by Indian laws, and any disputes will be resolved under:</p>
+              <ul className="list-disc pl-6 space-y-2 text-muted-foreground mb-4">
+                <li>Arbitration as per the Arbitration and Conciliation Act, 1996.</li>
+                <li>Jurisdiction of Bangalore, Karnataka courts.</li>
+              </ul>
+
+              <h2 className="text-2xl font-heading font-bold mt-8 mb-4">12. Changes to These Terms</h2>
               <p className="text-muted-foreground mb-4">
-                For questions about these Terms and Conditions, please contact:
+                Labstack may update these Terms periodically. Users will be notified of significant changes via email or platform notifications.
               </p>
-              <p className="text-muted-foreground mb-2">Email: legal@labstack.in</p>
-              <p className="text-muted-foreground mb-2">Phone: +91 80 4040 2030</p>
-              <p className="text-muted-foreground mb-8">Address: Bangalore, India</p>
+
+              <h2 className="text-2xl font-heading font-bold mt-8 mb-4">13. Contact Us</h2>
+              <p className="text-muted-foreground mb-4">For any concerns, reach out to us at:</p>
+              <p className="text-muted-foreground mb-2">Email: contact@labstack.in</p>
+              <p className="text-muted-foreground mb-2">Phone: +91-8047359194</p>
+              <p className="text-muted-foreground mb-8">Address: 4263, Tower 4, 26th Floor, Phoenix One Bangalore West, Dr. Rajkumar Road, Rajajinagar - 560010, Bangalore North, Karnataka, India</p>
 
               <p className="text-sm text-muted-foreground mt-8">
-                Last updated: October 2024
+                <strong>Last Updated:</strong> March 2025
               </p>
             </div>
           </div>
