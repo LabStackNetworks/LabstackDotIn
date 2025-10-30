@@ -19,15 +19,16 @@ const Footer = () => {
     ],
     whoWeServe: [
       { name: "Insurers & TPAs", href: "/who-we-serve/insurers-tpas" },
-      { name: "Brokers & Aggregators", href: "/who-we-serve/brokers-aggregators" },
+      { name: "Brokers & Corporate Wellness", href: "/who-we-serve/brokers-corporate-wellness" },
       { name: "Disease Management", href: "/who-we-serve/disease-management" },
       { name: "Digital Health Platforms", href: "/who-we-serve/digital-health-platforms" },
       { name: "Providers", href: "/who-we-serve/providers" }
     ],
     providers: [
       { name: "Hospitals & Labs", href: "/join-network/hospitals-labs" },
-      { name: "Nurses & Phlebotomists", href: "/join-network/field-staff" },
-      { name: "Join Network", href: "/join-network/providers" }
+      { name: "Doctors", href: "/join-network/doctors" },
+      { name: "Nutritionists & Health Coaches", href: "/join-network/nutritionists-health-coaches" },
+      { name: "Nurses & Phlebotomists", href: "/join-network/field-staff" }
     ],
     resources: [
       { name: "Blog", href: "/resources/blog" },

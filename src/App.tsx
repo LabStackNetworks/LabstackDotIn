@@ -26,7 +26,9 @@ const DigitalPlatform = lazy(() => import("./pages/solutions/DigitalPlatform"));
 const APISolutions = lazy(() => import("./pages/solutions/APISolutions"));
 const CoverageExpansion = lazy(() => import("./pages/solutions/CoverageExpansion"));
 const InsurersTPAs = lazy(() => import("./pages/who-we-serve/InsurersTPAs"));
-const BrokersAggregators = lazy(() => import("./pages/who-we-serve/BrokersAggregators"));
+const BrokersCorporateWellness = lazy(() => import("./pages/who-we-serve/BrokersCorporateWellness"));
+const DoctorsJoin = lazy(() => import("./pages/join/DoctorsJoin"));
+const NutritionistsHealthCoaches = lazy(() => import("./pages/join/NutritionistsHealthCoaches"));
 const DiseaseManagement = lazy(() => import("./pages/who-we-serve/DiseaseManagement"));
 const DigitalHealthPlatforms = lazy(() => import("./pages/who-we-serve/DigitalHealthPlatforms"));
 const Providers = lazy(() => import("./pages/who-we-serve/Providers"));
@@ -71,13 +73,15 @@ const App = () => (
               <Route path="/solutions/api-solutions" element={<APISolutions />} />
               <Route path="/solutions/coverage-expansion" element={<CoverageExpansion />} />
               <Route path="/who-we-serve/insurers-tpas" element={<InsurersTPAs />} />
-              <Route path="/who-we-serve/brokers-aggregators" element={<BrokersAggregators />} />
+              <Route path="/who-we-serve/brokers-corporate-wellness" element={<BrokersCorporateWellness />} />
               <Route path="/who-we-serve/disease-management" element={<DiseaseManagement />} />
               <Route path="/who-we-serve/digital-health-platforms" element={<DigitalHealthPlatforms />} />
               <Route path="/who-we-serve/providers" element={<Providers />} />
               <Route path="/join-network/providers" element={<ProvidersJoin />} />
               <Route path="/join-network/field-staff" element={<FieldStaffJoin />} />
               <Route path="/join-network/hospitals-labs" element={<HospitalsLabsJoin />} />
+              <Route path="/join-network/doctors" element={<DoctorsJoin />} />
+              <Route path="/join-network/nutritionists-health-coaches" element={<NutritionistsHealthCoaches />} />
               <Route path="/privacy-policy" element={<PrivacyPolicy />} />
               <Route path="/terms-conditions" element={<TermsConditions />} />
               <Route path="/partner-terms" element={<PartnerTerms />} />

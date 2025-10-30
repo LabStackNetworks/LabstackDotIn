@@ -102,7 +102,7 @@ const Header = () => {
             title: "Technology Partners",
             items: [
               { label: "Insurers & TPAs", href: "/who-we-serve/insurers-tpas", description: "Insurance companies" },
-              { label: "Brokers & Aggregators", href: "/who-we-serve/brokers-aggregators", description: "Insurance intermediaries" },
+              { label: "Brokers & Corporate Wellness", href: "/who-we-serve/brokers-corporate-wellness", description: "Insurance & wellness programs" },
               { label: "Disease Management", href: "/who-we-serve/disease-management", description: "Chronic care platforms" }
             ]
           },

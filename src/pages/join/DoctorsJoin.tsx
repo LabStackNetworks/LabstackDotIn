@@ -1,4 +1,4 @@
-import { Stethoscope, Heart, Users, TrendingUp, Clock, Shield, CheckCircle, ArrowRight } from "lucide-react";
+import { Stethoscope, Users, TrendingUp, Clock, Shield, CheckCircle, ArrowRight, Award } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -7,61 +7,63 @@ import SEOHead from "@/components/SEOHead";
 import TLDR from "@/components/design-system/TLDR";
 import { Link } from "react-router-dom";
 import { generateFAQSchema } from "@/lib/structured-data";
-import { doctorsNutritionistsCoachesFAQs } from "@/lib/faqs/doctors-nutritionists-coaches-faqs";
-const DoctorsNutritionistsCoaches = () => {
-  const structuredData = generateFAQSchema(doctorsNutritionistsCoachesFAQs);
+import { doctorsFAQs } from "@/lib/faqs/doctors-faqs";
+
+const DoctorsJoin = () => {
+  const structuredData = generateFAQSchema(doctorsFAQs);
 
   const challenges = [
-    "Limited patient reach beyond your immediate area",
-    "No-shows and cancellations impact revenue",
+    "Limited patient reach beyond your immediate catchment area",
+    "No-shows and last-minute cancellations affecting revenue",
     "Managing multiple platforms and technologies is complex",
-    "Payment delays and reconciliation issues",
-    "Difficulty accessing corporate and insurance patients"
+    "Payment delays and reconciliation issues with aggregators",
+    "Difficulty accessing corporate wellness and insurance patients"
   ];
 
   const labstackBenefits = [
-    "Access to verified patients from insurers, corporate programs, and digital health platforms across India",
-    "Integrated EMR, e-prescription, teleconsultation platform, and scheduling—all in one place",
-    "Guaranteed timely payments with transparent invoicing and automated settlements",
-    "No exclusivity required—maintain your practice and work with other platforms",
-    "24/7 technical support and dedicated account management"
+    "Access verified patients from insurers, corporate programs, and digital health platforms across India",
+    "Integrated EMR, e-prescription, teleconsultation, and scheduling—all in one seamless platform",
+    "Guaranteed 100% on-time payments with transparent invoicing and bi-weekly settlements",
+    "No exclusivity required—maintain your practice and work with multiple platforms",
+    "24/7 technical and medical support with dedicated account management"
   ];
 
   const outcomes = [
-    { icon: Users, value: "3-5x", label: "Patient Volume Increase", desc: "Access digital health ecosystem" },
-    { icon: TrendingUp, value: "40%", label: "Revenue Growth", desc: "Via corporate and OPD programs" },
+    { icon: Users, value: "3-5x", label: "Patient Volume", desc: "Access to digital health ecosystem" },
+    { icon: TrendingUp, value: "40%", label: "Revenue Growth", desc: "Via corporate & OPD programs" },
     { icon: Clock, value: "100%", label: "On-Time Payments", desc: "Bi-weekly automated settlements" },
-    { icon: Shield, value: "99.9%", label: "Platform Uptime", desc: "Reliable technology stack" }
+    { icon: Shield, value: "99.9%", label: "Platform Uptime", desc: "Reliable, secure technology" }
   ];
 
   const howItWorks = [
-    { step: "Apply Online", desc: "Submit credentials and registration details for verification" },
-    { step: "Get Verified", desc: "5-7 day credential check and compliance onboarding" },
-    { step: "Set Schedule", desc: "Choose availability, fees, and consultation types" },
-    { step: "See Patients", desc: "Verified patients from digital ecosystem routed to you" },
-    { step: "Get Paid", desc: "Automated settlements every two weeks" }
+    { step: "Apply Online", desc: "Submit MCI registration and credentials" },
+    { step: "Verification", desc: "5-7 day credential and compliance check" },
+    { step: "Onboarding", desc: "Platform training and profile setup" },
+    { step: "Set Schedule", desc: "Choose availability and consultation fees" },
+    { step: "See Patients", desc: "Verified patients routed to you" },
+    { step: "Get Paid", desc: "Automated bi-weekly settlements" }
   ];
 
   return (
     <div className="min-h-screen bg-background">
       <SEOHead 
-        title="Join Labstack as a Doctor, Nutritionist or Health Coach in India"
-        description="Grow your practice with Labstack. Access verified patients from insurance, corporate wellness, and digital health platforms across India. Integrated EMR, teleconsultation tools, and guaranteed timely payments."
-        keywords="doctor jobs, nutritionist opportunities, health coach network, teleconsultation platform, medical practice growth, healthcare provider network, doctor registration"
-        canonical="https://labstack.in/join/doctors-nutritionists-coaches"
+        title="Join Labstack as a Doctor - Grow Your Medical Practice in India"
+        description="Expand your medical practice with Labstack. Access verified patients from insurance, corporate wellness, and digital health platforms. Integrated EMR, teleconsultation tools, and guaranteed on-time payments."
+        keywords="doctor jobs India, medical practice growth, teleconsultation platform, doctor registration, healthcare provider network, medical practice expansion"
+        canonical="https://labstack.in/join-network/doctors"
         structuredData={structuredData}
       />
       <Header />
       <main className="pt-20">
         {/* TLDR Section */}
         <TLDR
-          summary="Join Labstack's healthcare network to access verified patients from insurers, corporate wellness programs, and digital health platforms. Get integrated EMR, teleconsultation tools, 100% on-time payments, and 24/7 support—all with no exclusivity required."
+          summary="Join Labstack's medical network to access verified patients from insurers, corporate wellness programs, and digital health platforms across India. Get integrated EMR, teleconsultation tools, 100% on-time payments, and professional support—all with no exclusivity required."
           keyPoints={[
-            "Access verified patients from insurers, corporate wellness programs, and digital health platforms",
-            "Integrated technology: EMR, e-prescriptions, teleconsultation, scheduling—all in one platform",
-            "100% on-time payments with transparent invoicing and bi-weekly settlements",
-            "No exclusivity required—maintain your independent practice",
-            "24/7 support and compliance assistance included"
+            "Access to verified patients from insurance OPD, corporate wellness, and digital health platforms",
+            "Integrated EMR, e-prescriptions, teleconsultation, and scheduling in one platform",
+            "100% on-time payments with bi-weekly settlements and transparent invoicing",
+            "No exclusivity—maintain your independent practice and hospital affiliations",
+            "24/7 technical support and dedicated medical account management"
           ]}
         />
 
@@ -71,21 +73,21 @@ const DoctorsNutritionistsCoaches = () => {
             <div className="max-w-4xl mx-auto text-center mb-16">
               <div className="inline-flex items-center space-x-2 bg-secondary/10 border border-secondary/20 px-3 py-1 rounded-full mb-6">
                 <div className="w-2 h-2 bg-secondary rounded-full animate-pulse"></div>
-                <span className="text-secondary font-medium text-sm">FOR HEALTHCARE PROFESSIONALS</span>
+                <span className="text-secondary font-medium text-sm">FOR DOCTORS & MEDICAL SPECIALISTS</span>
               </div>
 
               <h1 className="text-4xl lg:text-6xl font-heading font-bold mb-6">
-                Grow Your Practice. <span className="text-gradient">See More Patients.</span>
+                Expand Your Practice. <span className="text-gradient">Treat More Patients.</span>
               </h1>
 
               <p className="text-lg lg:text-xl text-muted-foreground mb-8">
-                Join India's largest healthcare network for doctors, nutritionists, and health coaches. 
-                Access verified patients from insurers, corporate wellness programs, and digital health platforms across India.
+                Join India's largest medical network. Access verified patients from insurers, corporate wellness programs, 
+                and digital health platforms while maintaining your independent practice.
               </p>
 
               <Link to="/contact">
                 <Button size="lg" className="btn-gradient">
-                  Apply to Join Network
+                  Apply to Join Medical Network
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
               </Link>
@@ -119,32 +121,32 @@ const DoctorsNutritionistsCoaches = () => {
             </div>
 
             {/* How It Works */}
-            <div className="max-w-5xl mx-auto mb-20">
+            <div className="max-w-6xl mx-auto mb-20">
               <h2 className="text-3xl font-heading font-bold text-center mb-12">
                 How It Works
               </h2>
-              <div className="grid grid-cols-1 md:grid-cols-5 gap-6">
+              <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6 gap-6">
                 {howItWorks.map((item, index) => (
                   <div key={index} className="relative">
                     <div className="bg-card-gradient p-6 rounded-xl border border-border/20 text-center card-hover">
                       <div className="w-12 h-12 mx-auto mb-4 rounded-full bg-secondary/20 flex items-center justify-center text-secondary font-bold text-lg">
                         {index + 1}
                       </div>
-                      <h3 className="font-heading font-bold mb-2">{item.step}</h3>
-                      <p className="text-sm text-muted-foreground">{item.desc}</p>
+                      <h3 className="font-heading font-bold mb-2 text-sm">{item.step}</h3>
+                      <p className="text-xs text-muted-foreground">{item.desc}</p>
                     </div>
                     {index < howItWorks.length - 1 && (
-                      <div className="hidden md:block absolute top-1/2 -right-3 w-6 h-0.5 bg-border"></div>
+                      <div className="hidden lg:block absolute top-1/2 -right-3 w-6 h-0.5 bg-border"></div>
                     )}
                   </div>
                 ))}
               </div>
             </div>
 
-            {/* Outcomes */}
+            {/* Professional Outcomes */}
             <div className="max-w-5xl mx-auto bg-gradient-hero rounded-3xl p-8 lg:p-12 border border-border/50 mb-20">
               <h2 className="text-3xl font-heading font-bold text-center mb-12">
-                Professional Outcomes
+                Professional Growth Outcomes
               </h2>
               
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -163,88 +165,78 @@ const DoctorsNutritionistsCoaches = () => {
 
               <div className="mt-12 bg-success/10 border border-success/20 rounded-xl p-6 text-center">
                 <p className="text-success font-medium italic">
-                  "Joining Labstack tripled my patient consultations and eliminated payment delays. The integrated EMR and teleconsultation platform make my work seamless."
+                  "Joining Labstack tripled my patient consultations from corporate and insurance channels. The integrated platform makes teleconsultations seamless, and payments are always on time."
                 </p>
-                <p className="text-sm text-muted-foreground mt-2">— Partner Doctor, Bangalore</p>
+                <p className="text-sm text-muted-foreground mt-2">— Dr. Sharma, Cardiologist, Mumbai</p>
               </div>
             </div>
 
-            {/* Who Can Join */}
+            {/* Specialties Welcome */}
             <div className="max-w-5xl mx-auto mb-20">
               <h2 className="text-3xl font-heading font-bold text-center mb-12">
-                Who Can Join
+                All Medical Specialties Welcome
               </h2>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div className="bg-card-gradient p-8 rounded-2xl border border-border/20 card-hover">
-                  <Stethoscope className="w-12 h-12 text-primary mb-4" />
-                  <h3 className="text-xl font-heading font-bold mb-3">Doctors</h3>
-                  <p className="text-muted-foreground text-sm">
-                    General practitioners and specialists across all specialties. Provide teleconsultations, in-clinic appointments, and preventive care.
-                  </p>
-                </div>
-                <div className="bg-card-gradient p-8 rounded-2xl border border-border/20 card-hover">
-                  <Heart className="w-12 h-12 text-secondary mb-4" />
-                  <h3 className="text-xl font-heading font-bold mb-3">Nutritionists & Dietitians</h3>
-                  <p className="text-muted-foreground text-sm">
-                    Certified nutritionists and dietitians. Offer diet counseling, meal planning, and wellness coaching for chronic conditions and preventive health.
-                  </p>
-                </div>
-                <div className="bg-card-gradient p-8 rounded-2xl border border-border/20 card-hover">
-                  <Users className="w-12 h-12 text-success mb-4" />
-                  <h3 className="text-xl font-heading font-bold mb-3">Health Coaches</h3>
-                  <p className="text-muted-foreground text-sm">
-                    Certified health and wellness coaches. Provide lifestyle modification support, fitness guidance, stress management, and preventive health education.
-                  </p>
-                </div>
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                {[
+                  "General Practice", "Internal Medicine", "Pediatrics", "Gynecology",
+                  "Cardiology", "Dermatology", "Psychiatry", "Endocrinology",
+                  "Orthopedics", "ENT", "Ophthalmology", "Pulmonology",
+                  "Gastroenterology", "Nephrology", "Neurology", "Oncology"
+                ].map((specialty, index) => (
+                  <div key={index} className="bg-card-gradient p-4 rounded-xl border border-border/20 text-center card-hover">
+                    <Award className="w-6 h-6 text-primary mx-auto mb-2" />
+                    <p className="text-sm font-medium">{specialty}</p>
+                  </div>
+                ))}
               </div>
             </div>
 
             {/* Technology Platform */}
             <div className="max-w-5xl mx-auto bg-gradient-hero rounded-3xl p-8 lg:p-12 border border-border/50 mb-20">
               <h2 className="text-3xl font-heading font-bold text-center mb-12">
-                Technology Platform Included
+                Medical Technology Platform
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="flex items-start space-x-4">
                   <CheckCircle className="w-6 h-6 text-success flex-shrink-0 mt-1" />
                   <div>
-                    <h3 className="font-heading font-bold mb-2">Integrated EMR</h3>
-                    <p className="text-sm text-muted-foreground">Electronic medical records with patient history, clinical notes, and treatment tracking</p>
+                    <h3 className="font-heading font-bold mb-2">Integrated EMR System</h3>
+                    <p className="text-sm text-muted-foreground">Complete electronic medical records with patient history, clinical notes, vitals tracking, and treatment documentation</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-4">
                   <CheckCircle className="w-6 h-6 text-success flex-shrink-0 mt-1" />
                   <div>
-                    <h3 className="font-heading font-bold mb-2">E-Prescription Tools</h3>
-                    <p className="text-sm text-muted-foreground">Digital prescription writing with pharmacy integration and medication tracking</p>
+                    <h3 className="font-heading font-bold mb-2">E-Prescription Platform</h3>
+                    <p className="text-sm text-muted-foreground">Digital prescription writing with drug database, dosage calculator, pharmacy integration, and medication tracking</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-4">
                   <CheckCircle className="w-6 h-6 text-success flex-shrink-0 mt-1" />
                   <div>
-                    <h3 className="font-heading font-bold mb-2">Teleconsultation Platform</h3>
-                    <p className="text-sm text-muted-foreground">Secure video conferencing with screen sharing and digital consultation tools</p>
-                  </div>
-                </div>
-                <div className="flex items-start space-x-4">
-                  <CheckCircle className="w-6 h-6 text-success flex-shrink-0 mt-1" />
-                  <div>
-                    <h3 className="font-heading font-bold mb-2">Scheduling & Reminders</h3>
-                    <p className="text-sm text-muted-foreground">Automated appointment booking, patient reminders, and calendar management</p>
+                    <h3 className="font-heading font-bold mb-2">HD Video Consultation</h3>
+                    <p className="text-sm text-muted-foreground">Secure teleconsultation platform with screen sharing, medical image viewing, and consultation recording</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-4">
                   <CheckCircle className="w-6 h-6 text-success flex-shrink-0 mt-1" />
                   <div>
                     <h3 className="font-heading font-bold mb-2">Lab Integration</h3>
-                    <p className="text-sm text-muted-foreground">Direct lab test ordering and result viewing within the platform</p>
+                    <p className="text-sm text-muted-foreground">Direct test ordering, result viewing, trend analysis, and automatic report sharing with patients</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-4">
                   <CheckCircle className="w-6 h-6 text-success flex-shrink-0 mt-1" />
                   <div>
-                    <h3 className="font-heading font-bold mb-2">Payment Dashboard</h3>
-                    <p className="text-sm text-muted-foreground">Real-time earnings tracking, transparent invoicing, and automated settlements</p>
+                    <h3 className="font-heading font-bold mb-2">Smart Scheduling</h3>
+                    <p className="text-sm text-muted-foreground">Automated appointment booking, patient reminders, calendar sync, and waitlist management</p>
+                  </div>
+                </div>
+                <div className="flex items-start space-x-4">
+                  <CheckCircle className="w-6 h-6 text-success flex-shrink-0 mt-1" />
+                  <div>
+                    <h3 className="font-heading font-bold mb-2">Revenue Dashboard</h3>
+                    <p className="text-sm text-muted-foreground">Real-time earnings tracking, consultation analytics, transparent invoicing, and payment history</p>
                   </div>
                 </div>
               </div>
@@ -253,10 +245,10 @@ const DoctorsNutritionistsCoaches = () => {
             {/* CTA Section */}
             <div className="max-w-3xl mx-auto text-center bg-primary/5 rounded-2xl p-12 border border-primary/20">
               <h2 className="text-3xl font-heading font-bold mb-4">
-                Ready to Grow Your Practice?
+                Ready to Expand Your Medical Practice?
               </h2>
               <p className="text-muted-foreground mb-8">
-                Join thousands of healthcare professionals serving patients across India through Labstack's trusted network.
+                Join thousands of doctors serving patients across India through Labstack's trusted medical network.
               </p>
               <Link to="/contact">
                 <Button size="lg" className="btn-gradient">
@@ -271,7 +263,7 @@ const DoctorsNutritionistsCoaches = () => {
         {/* FAQ Section */}
         <section className="py-20 bg-background">
           <div className="container mx-auto px-6">
-            <FAQ items={doctorsNutritionistsCoachesFAQs} />
+            <FAQ items={doctorsFAQs} />
           </div>
         </section>
       </main>
@@ -280,4 +272,4 @@ const DoctorsNutritionistsCoaches = () => {
   );
 };
 
-export default DoctorsNutritionistsCoaches;
+export default DoctorsJoin;
