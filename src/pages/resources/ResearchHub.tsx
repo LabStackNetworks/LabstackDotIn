@@ -1,4 +1,4 @@
-import { FileText, Download, TrendingUp, Shield, Globe, ArrowRight, BookOpen, Target, Users, Building2, Award } from "lucide-react";
+import { FileText, TrendingUp, Shield, Globe, ArrowRight, BookOpen, Target, Users, Building2, Award } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -13,36 +13,6 @@ const ResearchHub = () => {
   // Combine FAQs from both sections
   const combinedFAQs = [...caseStudiesFAQs, ...whitepapersFAQs];
   const structuredData = generateFAQSchema(combinedFAQs);
-
-  const featuredReports = [
-    {
-      title: "The State of Healthcare Infrastructure in India 2024",
-      description: "Comprehensive market analysis covering 9,000+ pincodes, provider density, pricing dynamics, and growth opportunities in Tier-2/3 markets.",
-      pages: "45 pages",
-      published: "Q4 2024",
-      category: "Market Research",
-      icon: TrendingUp,
-      type: "whitepaper"
-    },
-    {
-      title: "Healthcare Regulatory Compliance Framework",
-      description: "Complete guide to IT Act 2000, DISHA, Telemedicine Practice Guidelines 2020, ABDM integration, and data protection requirements.",
-      pages: "32 pages",
-      published: "Q4 2024",
-      category: "Compliance",
-      icon: Shield,
-      type: "whitepaper"
-    },
-    {
-      title: "Scaling to Tier-2 & Tier-3 Cities: Playbook",
-      description: "Step-by-step expansion guide for Jaipur, Lucknow, Indore, Chandigarh, and 200+ cities. Provider onboarding, pricing strategies, and operational best practices.",
-      pages: "28 pages",
-      published: "Q3 2024",
-      category: "Geographic Expansion",
-      icon: Globe,
-      type: "whitepaper"
-    }
-  ];
 
   const featuredCases = [
     {
@@ -80,29 +50,6 @@ const ResearchHub = () => {
         { metric: "2.5-3x", label: "LTV Increase" }
       ],
       icon: Users
-    }
-  ];
-
-  const recentPublications = [
-    {
-      title: "OPD Benefit Economics: ROI Analysis for Insurers",
-      type: "Whitepaper",
-      description: "Cost-benefit analysis of OPD benefits with real data from 12 insurance partners. Leakage control, member satisfaction, and premium impact."
-    },
-    {
-      title: "API-First Architecture for Healthcare Platforms",
-      type: "Technical Report",
-      description: "Architecture patterns, scalability strategies, and best practices for building healthcare platforms on API-first foundations."
-    },
-    {
-      title: "Telemedicine Adoption Trends Q3 2024",
-      type: "Quarterly Report",
-      description: "Analysis of consultation volumes, specialties, pricing, geographic patterns, and patient satisfaction across 30,000+ consultations."
-    },
-    {
-      title: "Build vs Buy: Healthcare Infrastructure ROI Model",
-      type: "Financial Analysis",
-      description: "12-18 month build costs vs API integration. Real data from 25 companies showing time-to-market and total cost of ownership."
     }
   ];
 
@@ -189,54 +136,20 @@ const ResearchHub = () => {
               <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
                 Market analysis, regulatory frameworks, and strategic playbooks for healthcare technology leaders
               </p>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                {featuredReports.map((report, index) => (
-                  <div key={index} className="bg-card-gradient rounded-2xl border border-border/20 overflow-hidden card-hover">
-                    <div className="bg-gradient-primary p-6 text-white">
-                      <report.icon className="w-10 h-10 mb-4" />
-                      <div className="inline-block bg-white/20 text-white px-3 py-1 rounded-full text-xs font-medium mb-4">
-                        {report.category}
-                      </div>
-                      <h3 className="font-heading font-bold text-xl mb-2">{report.title}</h3>
-                    </div>
-                    <div className="p-6">
-                      <p className="text-muted-foreground text-sm mb-4">{report.description}</p>
-                      <div className="flex items-center justify-between text-xs text-muted-foreground mb-4">
-                        <span>{report.pages}</span>
-                        <span>{report.published}</span>
-                      </div>
-                      <Button variant="outline" className="w-full">
-                        <Download className="mr-2 h-4 w-4" /> Download PDF
-                      </Button>
-                    </div>
-                  </div>
-                ))}
+              <div className="bg-gradient-hero rounded-2xl border border-border/50 p-12 text-center">
+                <FileText className="w-16 h-16 mx-auto mb-6 text-muted-foreground/50" />
+                <h3 className="text-xl font-heading font-bold mb-4">Research Reports Coming Soon</h3>
+                <p className="text-muted-foreground max-w-md mx-auto mb-6">
+                  Have valuable healthcare insights or data to share? We'd love to feature your contributions.
+                </p>
+                <Link to="/contact">
+                  <Button variant="outline">
+                    Contribute Research <ArrowRight className="ml-2 h-4 w-4" />
+                  </Button>
+                </Link>
               </div>
             </div>
 
-            {/* Recent Publications */}
-            <div className="max-w-4xl mx-auto mb-20">
-              <h2 className="text-3xl font-heading font-bold text-center mb-12">Recent Publications</h2>
-              <div className="space-y-4">
-                {recentPublications.map((pub, index) => (
-                  <div key={index} className="bg-gradient-hero rounded-xl p-6 border border-border/50 card-hover">
-                    <div className="flex items-start justify-between">
-                      <div className="flex-1">
-                        <div className="flex items-center space-x-3 mb-2">
-                          <FileText className="w-5 h-5 text-primary" />
-                          <span className="text-xs font-medium text-primary">{pub.type}</span>
-                        </div>
-                        <h3 className="font-heading font-bold text-lg mb-2">{pub.title}</h3>
-                        <p className="text-sm text-muted-foreground">{pub.description}</p>
-                      </div>
-                      <Button variant="ghost" size="sm" className="ml-4">
-                        <Download className="h-4 w-4" />
-                      </Button>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
 
             {/* Research Categories */}
             <div className="max-w-4xl mx-auto bg-gradient-hero rounded-3xl p-8 lg:p-12 border border-border/50 mb-20">

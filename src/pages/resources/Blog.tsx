@@ -1,4 +1,4 @@
-import { BookOpen, TrendingUp, Code, FileText, ArrowRight, Calendar, User } from "lucide-react";
+import { BookOpen, ArrowRight, Calendar } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -34,13 +34,6 @@ const Blog = () => {
       readTime: "10 min read",
       date: "Dec 10, 2024"
     }
-  ];
-
-  const categories = [
-    { name: "Healthcare Technology", count: 45, icon: Code },
-    { name: "Regulatory Compliance", count: 32, icon: FileText },
-    { name: "Market Expansion", count: 28, icon: TrendingUp },
-    { name: "Customer Success", count: 24, icon: User }
   ];
 
   return (
@@ -103,29 +96,6 @@ const Blog = () => {
                       </div>
                     </div>
                   </Link>
-                ))}
-              </div>
-            </div>
-
-            {/* Content Categories */}
-            <div className="max-w-4xl mx-auto mb-20">
-              <h2 className="text-3xl font-heading font-bold text-center mb-12">Browse by Category</h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                {categories.map((category, index) => (
-                  <div key={index} className="bg-gradient-hero rounded-xl p-6 border border-border/50 card-hover cursor-pointer">
-                    <div className="flex items-center justify-between">
-                      <div className="flex items-center space-x-4">
-                        <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center">
-                          <category.icon className="w-6 h-6 text-primary" />
-                        </div>
-                        <div>
-                          <h3 className="font-heading font-bold">{category.name}</h3>
-                          <p className="text-sm text-muted-foreground">{category.count} articles</p>
-                        </div>
-                      </div>
-                      <ArrowRight className="w-5 h-5 text-muted-foreground" />
-                    </div>
-                  </div>
                 ))}
               </div>
             </div>
