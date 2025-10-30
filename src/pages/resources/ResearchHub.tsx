@@ -111,38 +111,39 @@ const ResearchHub = () => {
                 {featuredCases.map((caseStudy, index) => (
                   <Link key={index} to={caseStudy.link}>
                     <div className="bg-card-gradient rounded-2xl border border-border/20 overflow-hidden card-hover">
-                    <div className="p-8">
-                      <div className="flex items-start justify-between mb-6">
-                        <div className="flex-1">
-                          <div className="inline-block bg-success/10 text-success px-3 py-1 rounded-full text-xs font-medium mb-4">
-                            {caseStudy.industry}
+                      <div className="p-8">
+                        <div className="flex items-start justify-between mb-6">
+                          <div className="flex-1">
+                            <div className="inline-block bg-success/10 text-success px-3 py-1 rounded-full text-xs font-medium mb-4">
+                              {caseStudy.industry}
+                            </div>
+                            <h3 className="font-heading font-bold text-2xl mb-2">{caseStudy.company}</h3>
                           </div>
-                          <h3 className="font-heading font-bold text-2xl mb-2">{caseStudy.company}</h3>
+                          <caseStudy.icon className="w-12 h-12 text-success" />
                         </div>
-                        <caseStudy.icon className="w-12 h-12 text-success" />
-                      </div>
 
-                      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-                        <div>
-                          <h4 className="text-sm font-semibold text-muted-foreground uppercase tracking-wide mb-2">Challenge</h4>
-                          <p className="text-foreground">{caseStudy.challenge}</p>
-                        </div>
-                        <div>
-                          <h4 className="text-sm font-semibold text-muted-foreground uppercase tracking-wide mb-2">Solution</h4>
-                          <p className="text-foreground">{caseStudy.solution}</p>
-                        </div>
-                      </div>
-
-                      <div className="grid grid-cols-3 gap-6 pt-6 border-t border-border/20">
-                        {caseStudy.results.map((result, idx) => (
-                          <div key={idx} className="text-center">
-                            <div className="text-3xl font-heading font-bold text-gradient mb-1">{result.metric}</div>
-                            <div className="text-sm text-muted-foreground">{result.label}</div>
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                          <div>
+                            <h4 className="text-sm font-semibold text-muted-foreground uppercase tracking-wide mb-2">Challenge</h4>
+                            <p className="text-foreground">{caseStudy.challenge}</p>
                           </div>
-                        ))}
+                          <div>
+                            <h4 className="text-sm font-semibold text-muted-foreground uppercase tracking-wide mb-2">Solution</h4>
+                            <p className="text-foreground">{caseStudy.solution}</p>
+                          </div>
+                        </div>
+
+                        <div className="grid grid-cols-3 gap-6 pt-6 border-t border-border/20">
+                          {caseStudy.results.map((result, idx) => (
+                            <div key={idx} className="text-center">
+                              <div className="text-3xl font-heading font-bold text-gradient mb-1">{result.metric}</div>
+                              <div className="text-sm text-muted-foreground">{result.label}</div>
+                            </div>
+                          ))}
+                        </div>
                       </div>
                     </div>
-                  </div>
+                  </Link>
                 ))}
               </div>
             </div>
