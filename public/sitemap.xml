@@ -104,36 +104,36 @@
     <priority>0.7</priority>
   </url>
   
-  <!-- Join Network Pages -->
+  <!-- Provider Network Pages -->
   <url>
-    <loc>https://labstack.in/join-network/providers</loc>
-    <lastmod>2024-01-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://labstack.in/join-network/field-staff</loc>
-    <lastmod>2024-01-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://labstack.in/join-network/hospitals-labs</loc>
+    <loc>https://labstack.in/provider</loc>
     <lastmod>2025-01-15</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://labstack.in/join-network/doctors</loc>
+    <loc>https://labstack.in/provider/hospitals-labs</loc>
     <lastmod>2025-01-15</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://labstack.in/join-network/nutritionists-health-coaches</loc>
+    <loc>https://labstack.in/provider/doctors</loc>
     <lastmod>2025-01-15</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://labstack.in/provider/nutritionists-health-coaches</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://labstack.in/provider/field-staff</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   
   <!-- Company Pages -->

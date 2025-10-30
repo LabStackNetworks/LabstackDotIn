@@ -50,23 +50,11 @@ const NutritionistsHealthCoaches = () => {
         title="Join Labstack as a Nutritionist or Health Coach in India"
         description="Grow your nutrition and wellness practice with Labstack. Access corporate wellness programs, insurance clients, and digital health platforms. Get client management tools, progress tracking, and guaranteed payments."
         keywords="nutritionist jobs India, health coach opportunities, wellness coaching platform, nutrition practice growth, corporate wellness programs"
-        canonical="https://labstack.in/join-network/nutritionists-health-coaches"
+        canonical="https://labstack.in/provider/nutritionists-health-coaches"
         structuredData={structuredData}
       />
       <Header />
       <main className="pt-20">
-        {/* TLDR Section */}
-        <TLDR
-          summary="Join Labstack's wellness network to access corporate wellness programs, insurance preventive care clients, and digital health platforms. Get client management tools, progress tracking, video consultation platform, and guaranteed timely payments—with no exclusivity required."
-          keyPoints={[
-            "Access corporate wellness, insurance preventive care, and digital health platform clients",
-            "Client management system with progress tracking, meal planning, and video consultation tools",
-            "100% on-time payments with bi-weekly settlements and transparent invoicing",
-            "Offer individual consultations, group coaching, workshops, and corporate camps",
-            "No exclusivity—maintain your independent practice and offline sessions"
-          ]}
-        />
-
         <section className="py-20 lg:py-32">
           <div className="container mx-auto px-6">
             {/* Hero */}

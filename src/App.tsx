@@ -27,14 +27,14 @@ const APISolutions = lazy(() => import("./pages/solutions/APISolutions"));
 const CoverageExpansion = lazy(() => import("./pages/solutions/CoverageExpansion"));
 const InsurersTPAs = lazy(() => import("./pages/who-we-serve/InsurersTPAs"));
 const BrokersCorporateWellness = lazy(() => import("./pages/who-we-serve/BrokersCorporateWellness"));
-const DoctorsJoin = lazy(() => import("./pages/join/DoctorsJoin"));
-const NutritionistsHealthCoaches = lazy(() => import("./pages/join/NutritionistsHealthCoaches"));
 const DiseaseManagement = lazy(() => import("./pages/who-we-serve/DiseaseManagement"));
 const DigitalHealthPlatforms = lazy(() => import("./pages/who-we-serve/DigitalHealthPlatforms"));
 const Providers = lazy(() => import("./pages/who-we-serve/Providers"));
-const ProvidersJoin = lazy(() => import("./pages/join/ProvidersJoin"));
-const FieldStaffJoin = lazy(() => import("./pages/join/FieldStaffJoin"));
-const HospitalsLabsJoin = lazy(() => import("./pages/join/HospitalsLabsJoin"));
+const ProvidersOverview = lazy(() => import("./pages/provider/ProvidersOverview"));
+const HospitalsLabsJoin = lazy(() => import("./pages/provider/HospitalsLabsJoin"));
+const DoctorsJoin = lazy(() => import("./pages/provider/DoctorsJoin"));
+const NutritionistsHealthCoaches = lazy(() => import("./pages/provider/NutritionistsHealthCoaches"));
+const FieldStaffJoin = lazy(() => import("./pages/provider/FieldStaffJoin"));
 const PrivacyPolicy = lazy(() => import("./pages/PrivacyPolicy"));
 const TermsConditions = lazy(() => import("./pages/TermsConditions"));
 const PartnerTerms = lazy(() => import("./pages/PartnerTerms"));
@@ -77,11 +77,11 @@ const App = () => (
               <Route path="/who-we-serve/disease-management" element={<DiseaseManagement />} />
               <Route path="/who-we-serve/digital-health-platforms" element={<DigitalHealthPlatforms />} />
               <Route path="/who-we-serve/providers" element={<Providers />} />
-              <Route path="/join-network/providers" element={<ProvidersJoin />} />
-              <Route path="/join-network/field-staff" element={<FieldStaffJoin />} />
-              <Route path="/join-network/hospitals-labs" element={<HospitalsLabsJoin />} />
-              <Route path="/join-network/doctors" element={<DoctorsJoin />} />
-              <Route path="/join-network/nutritionists-health-coaches" element={<NutritionistsHealthCoaches />} />
+              <Route path="/provider" element={<ProvidersOverview />} />
+              <Route path="/provider/hospitals-labs" element={<HospitalsLabsJoin />} />
+              <Route path="/provider/doctors" element={<DoctorsJoin />} />
+              <Route path="/provider/nutritionists-health-coaches" element={<NutritionistsHealthCoaches />} />
+              <Route path="/provider/field-staff" element={<FieldStaffJoin />} />
               <Route path="/privacy-policy" element={<PrivacyPolicy />} />
               <Route path="/terms-conditions" element={<TermsConditions />} />
               <Route path="/partner-terms" element={<PartnerTerms />} />

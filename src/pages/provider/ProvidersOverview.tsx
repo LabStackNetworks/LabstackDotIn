@@ -1,0 +1,166 @@
+import PageTemplate from "@/components/PageTemplate";
+import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
+import { Building2, Stethoscope, Syringe, Heart, ArrowRight, CheckCircle2 } from "lucide-react";
+import { Card, CardContent } from "@/components/ui/card";
+
+const ProvidersOverview = () => {
+  const providerTypes = [
+    {
+      icon: Building2,
+      title: "Hospitals & Labs",
+      description: "Expand your reach beyond geographical boundaries. Connect with digital health platforms, insurers, and corporate wellness programs.",
+      benefits: ["Increased patient volume", "Digital integration", "Automated billing"],
+      href: "/provider/hospitals-labs"
+    },
+    {
+      icon: Stethoscope,
+      title: "Doctors",
+      description: "Join India's largest healthcare network. Offer teleconsultations and in-clinic visits to patients across the country.",
+      benefits: ["Flexible scheduling", "Secure platform", "Fair compensation"],
+      href: "/provider/doctors"
+    },
+    {
+      icon: Heart,
+      title: "Nutritionists & Health Coaches",
+      description: "Scale your practice nationwide. Provide virtual consultations and personalized care plans to a wider patient base.",
+      benefits: ["National reach", "EMR integration", "Professional growth"],
+      href: "/provider/nutritionists-health-coaches"
+    },
+    {
+      icon: Syringe,
+      title: "Nurses & Phlebotomists",
+      description: "Access consistent assignments across 9,000+ pincodes. Get reliable earnings with SLA-backed workflows.",
+      benefits: ["Regular work", "Timely payments", "Professional support"],
+      href: "/provider/field-staff"
+    }
+  ];
+
+  const benefits = [
+    "Access to 30,000+ monthly orders from verified healthcare platforms",
+    "SLA-backed operations with 99.5% uptime guarantee",
+    "Transparent pricing and automated reconciliation",
+    "24/7 technical and operational support",
+    "Quality monitoring and performance feedback",
+    "Non-exclusive partnership - maintain your independence"
+  ];
+
+  return (
+    <PageTemplate
+      title="Join Labstack Provider Network | Healthcare Professionals"
+      description="Join India's largest healthcare infrastructure network. Connect with digital health platforms, insurers, and patients across 9,000+ pincodes. SLA-backed operations, transparent pricing, and automated workflows."
+      keywords="healthcare providers, doctor network, diagnostic labs, hospital network, telemedicine providers, healthcare professionals India"
+      canonical="https://labstack.in/provider"
+    >
+      <section className="py-20 bg-gradient-to-br from-background via-background to-accent/5">
+        <div className="container mx-auto px-6">
+          <div className="max-w-4xl mx-auto text-center mb-16">
+            <h1 className="text-4xl lg:text-6xl font-heading font-bold mb-6">
+              Join India's Largest <span className="text-gradient">Healthcare Network</span>
+            </h1>
+            <p className="text-xl text-muted-foreground leading-relaxed">
+              Connect with digital health platforms, insurers, and patients across 9,000+ pincodes. 
+              Grow your practice with SLA-backed operations and transparent pricing.
+            </p>
+          </div>
+
+          {/* Stats */}
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 mb-20 max-w-5xl mx-auto">
+            <div className="text-center">
+              <div className="text-4xl font-bold text-primary mb-2">30,000+</div>
+              <div className="text-sm text-muted-foreground">Monthly Orders</div>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl font-bold text-primary mb-2">9,000+</div>
+              <div className="text-sm text-muted-foreground">Pincodes Covered</div>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl font-bold text-primary mb-2">99.5%</div>
+              <div className="text-sm text-muted-foreground">Platform Uptime</div>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl font-bold text-primary mb-2">1000+</div>
+              <div className="text-sm text-muted-foreground">Active Partners</div>
+            </div>
+          </div>
+
+          {/* Provider Types */}
+          <div className="max-w-6xl mx-auto mb-20">
+            <h2 className="text-3xl lg:text-4xl font-heading font-bold text-center mb-12">
+              Who Can Join
+            </h2>
+            <div className="grid md:grid-cols-2 gap-6">
+              {providerTypes.map((provider, index) => (
+                <Card key={index} className="group hover:shadow-neural transition-all duration-300 hover:-translate-y-1">
+                  <CardContent className="p-6">
+                    <div className="flex items-start gap-4 mb-4">
+                      <div className="w-12 h-12 rounded-xl bg-gradient-primary flex items-center justify-center flex-shrink-0">
+                        <provider.icon className="w-6 h-6 text-white" />
+                      </div>
+                      <div className="flex-1">
+                        <h3 className="text-xl font-heading font-bold mb-2">{provider.title}</h3>
+                        <p className="text-sm text-muted-foreground mb-4">{provider.description}</p>
+                        <ul className="space-y-2 mb-4">
+                          {provider.benefits.map((benefit, i) => (
+                            <li key={i} className="text-sm flex items-center gap-2">
+                              <CheckCircle2 className="w-4 h-4 text-primary flex-shrink-0" />
+                              <span>{benefit}</span>
+                            </li>
+                          ))}
+                        </ul>
+                        <Link to={provider.href}>
+                          <Button variant="ghost" size="sm" className="group-hover:text-primary">
+                            Learn More <ArrowRight className="ml-2 w-4 h-4" />
+                          </Button>
+                        </Link>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+
+          {/* Benefits Section */}
+          <div className="max-w-4xl mx-auto mb-16">
+            <h2 className="text-3xl lg:text-4xl font-heading font-bold text-center mb-12">
+              Why Join Labstack
+            </h2>
+            <div className="grid md:grid-cols-2 gap-4">
+              {benefits.map((benefit, index) => (
+                <div key={index} className="flex items-start gap-3 p-4 rounded-lg bg-card/50">
+                  <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                  <p className="text-muted-foreground">{benefit}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* CTA Section */}
+          <div className="max-w-3xl mx-auto text-center bg-gradient-primary rounded-2xl p-12">
+            <h2 className="text-3xl font-heading font-bold text-white mb-4">
+              Ready to Grow Your Practice?
+            </h2>
+            <p className="text-white/90 mb-8 text-lg">
+              Join thousands of healthcare professionals serving patients nationwide through Labstack's infrastructure.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link to="/contact">
+                <Button size="lg" variant="secondary" className="min-w-[200px]">
+                  Apply to Join
+                </Button>
+              </Link>
+              <Link to="/book-demo">
+                <Button size="lg" variant="outline" className="min-w-[200px] bg-white/10 text-white border-white/20 hover:bg-white/20">
+                  Schedule a Call
+                </Button>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+    </PageTemplate>
+  );
+};
+
+export default ProvidersOverview;

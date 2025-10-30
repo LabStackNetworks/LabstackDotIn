@@ -103,14 +103,33 @@ const Header = () => {
             items: [
               { label: "Insurers & TPAs", href: "/who-we-serve/insurers-tpas", description: "Insurance companies" },
               { label: "Brokers & Corporate Wellness", href: "/who-we-serve/brokers-corporate-wellness", description: "Insurance & wellness programs" },
-              { label: "Disease Management", href: "/who-we-serve/disease-management", description: "Chronic care platforms" }
+              { label: "Disease Management", href: "/who-we-serve/disease-management", description: "Chronic care platforms" },
+              { label: "Digital Health Platforms", href: "/who-we-serve/digital-health-platforms", description: "Health tech companies" }
             ]
-          },
+          }
+        ]
+      }
+    },
+    { 
+      label: "Providers", 
+      href: "#providers",
+      hasDropdown: true,
+      dropdown: {
+        featured: {
+          title: "Join Our Network",
+          description: "Grow your practice with India's largest healthcare network",
+          href: "/provider",
+          icon: Users
+        },
+        sections: [
           {
-            title: "Healthcare Partners",
+            title: "Healthcare Professionals",
             items: [
-              { label: "Digital Health Platforms", href: "/who-we-serve/digital-health-platforms", description: "Health tech companies" },
-              { label: "Providers", href: "/who-we-serve/providers", description: "Labs, clinics & professionals" }
+              { label: "Overview", href: "/provider", description: "Provider network benefits" },
+              { label: "Hospitals & Labs", href: "/provider/hospitals-labs", description: "Diagnostic centers & hospitals" },
+              { label: "Doctors", href: "/provider/doctors", description: "Medical practitioners" },
+              { label: "Nutritionists & Health Coaches", href: "/provider/nutritionists-health-coaches", description: "Wellness professionals" },
+              { label: "Nurses & Phlebotomists", href: "/provider/field-staff", description: "Field healthcare staff" }
             ]
           }
         ]

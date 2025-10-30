@@ -50,23 +50,11 @@ const DoctorsJoin = () => {
         title="Join Labstack as a Doctor - Grow Your Medical Practice in India"
         description="Expand your medical practice with Labstack. Access verified patients from insurance, corporate wellness, and digital health platforms. Integrated EMR, teleconsultation tools, and guaranteed on-time payments."
         keywords="doctor jobs India, medical practice growth, teleconsultation platform, doctor registration, healthcare provider network, medical practice expansion"
-        canonical="https://labstack.in/join-network/doctors"
+        canonical="https://labstack.in/provider/doctors"
         structuredData={structuredData}
       />
       <Header />
       <main className="pt-20">
-        {/* TLDR Section */}
-        <TLDR
-          summary="Join Labstack's medical network to access verified patients from insurers, corporate wellness programs, and digital health platforms across India. Get integrated EMR, teleconsultation tools, 100% on-time payments, and professional support—all with no exclusivity required."
-          keyPoints={[
-            "Access to verified patients from insurance OPD, corporate wellness, and digital health platforms",
-            "Integrated EMR, e-prescriptions, teleconsultation, and scheduling in one platform",
-            "100% on-time payments with bi-weekly settlements and transparent invoicing",
-            "No exclusivity—maintain your independent practice and hospital affiliations",
-            "24/7 technical support and dedicated medical account management"
-          ]}
-        />
-
         <section className="py-20 lg:py-32">
           <div className="container mx-auto px-6">
             {/* Hero */}

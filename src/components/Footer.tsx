@@ -21,14 +21,14 @@ const Footer = () => {
       { name: "Insurers & TPAs", href: "/who-we-serve/insurers-tpas" },
       { name: "Brokers & Corporate Wellness", href: "/who-we-serve/brokers-corporate-wellness" },
       { name: "Disease Management", href: "/who-we-serve/disease-management" },
-      { name: "Digital Health Platforms", href: "/who-we-serve/digital-health-platforms" },
-      { name: "Providers", href: "/who-we-serve/providers" }
+      { name: "Digital Health Platforms", href: "/who-we-serve/digital-health-platforms" }
     ],
     providers: [
-      { name: "Hospitals & Labs", href: "/join-network/hospitals-labs" },
-      { name: "Doctors", href: "/join-network/doctors" },
-      { name: "Nutritionists & Health Coaches", href: "/join-network/nutritionists-health-coaches" },
-      { name: "Nurses & Phlebotomists", href: "/join-network/field-staff" }
+      { name: "Overview", href: "/provider" },
+      { name: "Hospitals & Labs", href: "/provider/hospitals-labs" },
+      { name: "Doctors", href: "/provider/doctors" },
+      { name: "Nutritionists & Health Coaches", href: "/provider/nutritionists-health-coaches" },
+      { name: "Nurses & Phlebotomists", href: "/provider/field-staff" }
     ],
     resources: [
       { name: "Blog", href: "/resources/blog" },
