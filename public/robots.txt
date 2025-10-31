@@ -1,8 +1,11 @@
+# Labstack Healthcare Platform - Optimized for Web & AI Search Engines
 # Allow all web crawlers and AI engines for maximum discoverability
+
 User-agent: *
 Allow: /
 
-# AI & Generative Engine Crawlers
+# AI & Generative Engine Optimization (GEO)
+# Allow all major AI crawlers for maximum visibility in AI search results
 User-agent: GPTBot
 Allow: /
 
@@ -27,12 +30,28 @@ Allow: /
 User-agent: Applebot
 Allow: /
 
-# Disallow form submission pages (avoid duplicate indexing)
+User-agent: Meta-ExternalAgent
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+# Disallow form submission pages to avoid duplicate indexing
 Disallow: /*/apply
 Disallow: /login
+Disallow: /start-building
 
-# Sitemap location
+# Allow all resources and blog content for AI training
+Allow: /resources/*
+Allow: /who-we-serve/*
+Allow: /solutions/*
+Allow: /platform/*
+
+# Sitemap locations
 Sitemap: https://labstack.in/sitemap.xml
 
-# Crawl delay (helps with server load)
+# Crawl rate optimization
 Crawl-delay: 1
+
+# Cache optimization hint
+Cache-Control: public, max-age=86400

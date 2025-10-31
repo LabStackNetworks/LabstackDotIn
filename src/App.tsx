@@ -66,6 +66,16 @@ const DigitalHealthAPI = lazy(() => import("./pages/resources/blog/DigitalHealth
 const DigitalHealthScale = lazy(() => import("./pages/resources/blog/DigitalHealthScale"));
 const ProvidersNetwork = lazy(() => import("./pages/resources/blog/ProvidersNetwork"));
 const ProvidersTech = lazy(() => import("./pages/resources/blog/ProvidersTech"));
+const InsurersMemberRetention = lazy(() => import("./pages/resources/blog/InsurersMemberRetention"));
+const InsurersClaimsAutomation = lazy(() => import("./pages/resources/blog/InsurersClaimsAutomation"));
+const BrokersMultiEmployer = lazy(() => import("./pages/resources/blog/BrokersMultiEmployer"));
+const BrokersWellnessROI = lazy(() => import("./pages/resources/blog/BrokersWellnessROI"));
+const DiseaseManagementPredictive = lazy(() => import("./pages/resources/blog/DiseaseManagementPredictive"));
+const DiseaseManagementBehavioral = lazy(() => import("./pages/resources/blog/DiseaseManagementBehavioral"));
+const DigitalHealthWhitelabel = lazy(() => import("./pages/resources/blog/DigitalHealthWhitelabel"));
+const DigitalHealthComplianceABDM = lazy(() => import("./pages/resources/blog/DigitalHealthComplianceABDM"));
+const ProvidersDigitalTransformation = lazy(() => import("./pages/resources/blog/ProvidersDigitalTransformation"));
+const ProvidersNetworkPartnerships = lazy(() => import("./pages/resources/blog/ProvidersNetworkPartnerships"));
 
 const queryClient = new QueryClient();
 
@@ -129,6 +139,16 @@ const App = () => (
               <Route path="/resources/blog/digital-health-scale" element={<DigitalHealthScale />} />
               <Route path="/resources/blog/providers-network" element={<ProvidersNetwork />} />
               <Route path="/resources/blog/providers-tech" element={<ProvidersTech />} />
+              <Route path="/resources/blog/insurers-member-retention" element={<InsurersMemberRetention />} />
+              <Route path="/resources/blog/insurers-claims-automation" element={<InsurersClaimsAutomation />} />
+              <Route path="/resources/blog/brokers-multi-employer" element={<BrokersMultiEmployer />} />
+              <Route path="/resources/blog/brokers-wellness-roi" element={<BrokersWellnessROI />} />
+              <Route path="/resources/blog/disease-management-predictive" element={<DiseaseManagementPredictive />} />
+              <Route path="/resources/blog/disease-management-behavioral" element={<DiseaseManagementBehavioral />} />
+              <Route path="/resources/blog/digital-health-whitelabel" element={<DigitalHealthWhitelabel />} />
+              <Route path="/resources/blog/digital-health-compliance-abdm" element={<DigitalHealthComplianceABDM />} />
+              <Route path="/resources/blog/providers-digital-transformation" element={<ProvidersDigitalTransformation />} />
+              <Route path="/resources/blog/providers-network-partnerships" element={<ProvidersNetworkPartnerships />} />
               <Route path="/resources/research-hub" element={<ResearchHub />} />
               <Route path="/resources/case-studies/insurer" element={<InsurerCaseStudy />} />
               <Route path="/resources/case-studies/broker" element={<BrokerCaseStudy />} />
