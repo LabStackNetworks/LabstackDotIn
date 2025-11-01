@@ -106,9 +106,11 @@ const APIDocumentation = () => {
                     Start Building <ArrowRight className="ml-2 h-5 w-5" />
                   </Button>
                 </Link>
-                <Button size="lg" variant="outline">
-                  <Book className="mr-2 h-5 w-5" /> View API Docs
-                </Button>
+                <Link to="/resources/api-documentation-coming-soon">
+                  <Button size="lg" variant="outline">
+                    <Book className="mr-2 h-5 w-5" /> View API Docs
+                  </Button>
+                </Link>
               </div>
             </div>
 

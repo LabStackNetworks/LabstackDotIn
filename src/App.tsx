@@ -46,8 +46,10 @@ const PartnerTerms = lazy(() => import("./pages/PartnerTerms"));
 const Careers = lazy(() => import("./pages/Careers"));
 const Login = lazy(() => import("./pages/Login"));
 const Blog = lazy(() => import("./pages/resources/Blog"));
+const BlogWithCategories = lazy(() => import("./pages/resources/BlogWithCategories"));
 const ResearchHub = lazy(() => import("./pages/resources/ResearchHub"));
 const APIDocumentation = lazy(() => import("./pages/resources/APIDocumentation"));
+const APIDocumentationComingSoon = lazy(() => import("./pages/resources/APIDocumentationComingSoon"));
 const CustomSolutions = lazy(() => import("./pages/CustomSolutions"));
 const InsurerCaseStudy = lazy(() => import("./pages/resources/case-studies/InsurerCaseStudy"));
 const BrokerCaseStudy = lazy(() => import("./pages/resources/case-studies/BrokerCaseStudy"));
@@ -125,7 +127,10 @@ const App = () => (
               <Route path="/partner-terms" element={<PartnerTerms />} />
               <Route path="/careers" element={<Careers />} />
               <Route path="/login" element={<Login />} />
-              <Route path="/resources/blog" element={<Blog />} />
+              <Route path="/resources/blog" element={<BlogWithCategories />} />
+              <Route path="/resources/api-documentation" element={<APIDocumentation />} />
+              <Route path="/resources/api-documentation-coming-soon" element={<APIDocumentationComingSoon />} />
+              <Route path="/resources/research-hub" element={<ResearchHub />} />
               <Route path="/resources/blog/scaling-to-tier-2-tier-3-cities" element={<ScalingToTier2Tier3 />} />
               <Route path="/resources/blog/reducing-opd-claims-leakage" element={<ReducingClaimsLeakage />} />
               <Route path="/resources/blog/api-first-healthcare-build-vs-buy" element={<APIFirstHealthcare />} />

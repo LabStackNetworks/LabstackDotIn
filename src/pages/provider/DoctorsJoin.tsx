@@ -100,15 +100,15 @@ const DoctorsJoin = () => {
                 <ul className="space-y-3">
                   <li className="flex items-start space-x-2 text-muted-foreground">
                     <span className="text-success mt-1">✓</span>
-                    <span className="text-sm">Nationwide coverage—serve patients across 600+ cities from metros to Tier-3, no geographic limits</span>
+                    <span className="text-sm">Nationwide coverage across 600+ cities from metros to Tier-3, no geographic limits</span>
                   </li>
                   <li className="flex items-start space-x-2 text-muted-foreground">
                     <span className="text-success mt-1">✓</span>
-                    <span className="text-sm">3-5x patient volume increase from B2B channels—insurers, corporates, digital platforms deliver steady demand</span>
+                    <span className="text-sm">3-5x patient volume increase from B2B channels: insurers, corporates, digital platforms deliver steady demand</span>
                   </li>
                   <li className="flex items-start space-x-2 text-muted-foreground">
                     <span className="text-success mt-1">✓</span>
-                    <span className="text-sm">Order advanced diagnostics—genetic tests, gut microbiome, neurotransmitter panels, cardiac risk markers for precision medicine</span>
+                    <span className="text-sm">Order advanced diagnostics: genetic tests, gut microbiome, neurotransmitter panels, cardiac risk markers for precision medicine</span>
                   </li>
                   <li className="flex items-start space-x-2 text-muted-foreground">
                     <span className="text-success mt-1">✓</span>
@@ -116,7 +116,7 @@ const DoctorsJoin = () => {
                   </li>
                   <li className="flex items-start space-x-2 text-muted-foreground">
                     <span className="text-success mt-1">✓</span>
-                    <span className="text-sm">Guaranteed 100% on-time payments with bi-weekly settlements—no payment delays, transparent invoicing</span>
+                    <span className="text-sm">Guaranteed 100% on-time payments with bi-weekly settlements: no payment delays, transparent invoicing</span>
                   </li>
                 </ul>
               </div>
@@ -180,7 +180,7 @@ const DoctorsJoin = () => {
 
               <div className="mt-12 bg-success/10 border border-success/20 rounded-xl p-6 text-center">
                 <p className="text-success font-medium italic">
-                  "Labstack gave me nationwide reach—I now serve patients from Mumbai to Ranchi. Ordering specialized cardiac markers and genetic tests helps me deliver precision cardiology. Revenue tripled in 6 months."
+                  "Labstack gave me nationwide reach. I now serve patients from Mumbai to Ranchi. Ordering specialized cardiac markers and genetic tests helps me deliver precision cardiology. Revenue tripled in 6 months."
                 </p>
                 <p className="text-sm text-muted-foreground mt-2">— Dr. Arjun Mehta, Cardiologist, Pune</p>
               </div>
@@ -212,7 +212,7 @@ const DoctorsJoin = () => {
                 The AI-Native Platform You Get
               </h2>
               <p className="text-center text-muted-foreground mb-12 max-w-3xl mx-auto">
-                Not just an EMR—your complete operating system for patient engagement, care delivery, and practice growth.
+                Not just an EMR your complete operating system for patient engagement, care delivery, and practice growth.
               </p>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="flex items-start space-x-4">

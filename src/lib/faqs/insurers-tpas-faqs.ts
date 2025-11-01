@@ -4,10 +4,14 @@
  */
 
 export const insurersTPAsFAQs = [
-  // PPMC (Pre-Policy Medical Check) - Critical for Underwriting
+  // PPMC (Pre-Policy Medical Check-Up) for Insurance Underwriting
   {
-    question: "How does PPMC (Pre-Policy Medical Check) work at home?",
-    answer: "PPMC at home includes phlebotomist visit for blood sample collection, basic vitals recording (BP, height, weight, BMI), and medical history questionnaire completion. Reports delivered within 24-48 hours with digital raw values. Available across 9,000+ pincodes including metros (Mumbai, Delhi NCR, Bangalore, Pune, Hyderabad) and tier-2/3 cities (Indore, Jaipur, Coimbatore, Lucknow, Nagpur, Raipur, Ranchi). Scheduling window: 6 AM - 8 PM. SLA: Sample collection within 24 hours of booking, reports within 48 hours of sample collection."
+    question: "What is PPMC and why do insurers require it?",
+    answer: "PPMC (Pre-Policy Medical Check-Up) is a health assessment done before issuing health, general, or life insurance. Insurers use it to evaluate applicant health, identify pre-existing conditions, and determine policy terms, premiums, or exclusions."
+  },
+  {
+    question: "How fast can PPMC be completed for policy issuance?",
+    answer: "Complete PPMC in under 48 hours: home sample collection within 24 hours, reports in 24-48 hours, doctor MER (if needed) within 24 hours of results. Fast turnaround prevents policy delays and improves conversion."
   },
   {
     question: "What is the difference between PPMC at center vs PPMC at home?",
@@ -26,10 +30,18 @@ export const insurersTPAsFAQs = [
     answer: "Abnormal values trigger automated flags with severity scoring. Critical findings (very high blood sugar, abnormal ECG) escalated to underwriting team within 2 hours. System recommends repeat tests or specialist consultation. Members can be redirected to confirmatory testing at no extra cost if initial results are borderline. Digital workflow allows underwriter to request specific additional tests, member gets notified via SMS/email, and supplementary tests completed within 3-5 days. All data flows back to underwriting system automatically."
   },
   
-  // Digital MER vs Physical MER
+  // MER (Medical Examination Report) - Digital vs Physical
   {
-    question: "What is digital MER and how is it different from physical MER?",
-    answer: "Digital MER (Medical Examination Report) contains structured, machine-readable health data: numerical test values (glucose: 95 mg/dL), vitals (BP: 120/80 mmHg), and coded medical history (ICD-10 codes for conditions). Enables automated underwriting rules, trend analysis, and instant eligibility decisions. Physical MER is PDF-based doctor's examination report with handwritten notes, subjective observations, and unstructured data. Digital MER integrates with underwriting systems via API for instant risk scoring. Physical MER requires manual data entry and subjective interpretation. Both formats available—digital MER preferred for scalability."
+    question: "What is MER and how is it done during PPMC?",
+    answer: "MER (Medical Examination Report) is a comprehensive clinical exam by a registered doctor as part of PPMC. Includes vitals, physical exam, medical history, and clinical opinion on insurability. MER can be done digitally via video or physically through home visit."
+  },
+  {
+    question: "What is Digital MER and how does it work?",
+    answer: "Digital MER is a video consultation where a doctor conducts the medical examination remotely. Patient shares vitals (BP, weight, height), medical history, and answers clinical questions. Doctor completes MER form digitally. No home visit needed, completed in 30-45 minutes."
+  },
+  {
+    question: "What is Physical MER and when is it required?",
+    answer: "Physical MER is an in-person medical exam at applicant's home or clinic. Required for high-sum-insured policies (over 50L), applicants with complex medical histories, or when insurers mandate physical examination. Doctor visits, conducts thorough exam, completes MER form."
   },
   {
     question: "Can digital MER integrate with my underwriting system?",
