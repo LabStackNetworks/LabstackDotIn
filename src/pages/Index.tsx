@@ -9,8 +9,10 @@ import DualCTA from "@/components/DualCTA";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import FAQ from "@/components/FAQ";
+import TLDR from "@/components/design-system/TLDR";
 import { generateOrganizationSchema, generateWebSiteSchema, generateFAQSchema } from "@/lib/structured-data";
 import { homeFAQs } from "@/lib/faqs/home-faqs";
+import { PAGE_SEO } from "@/lib/seo-config";
 
 const Index = () => {
   const faqItems = homeFAQs;
@@ -32,6 +34,13 @@ const Index = () => {
       />
       <Header />
       <main className="pt-16 lg:pt-20">
+        {/* Hidden TLDR for SEO/GEO - Not visible to users but optimized for AI engines */}
+        <div className="sr-only" aria-hidden="true">
+          <TLDR 
+            summary={PAGE_SEO.home.tldr}
+            keyPoints={PAGE_SEO.home.keyPoints}
+          />
+        </div>
         <Hero />
         <ProblemSection />
         <SolutionSection />

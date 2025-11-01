@@ -12,7 +12,7 @@ const WhoWeServe = () => {
       icon: Shield,
       label: "Insurers & TPAs",
       title: "OPD with Built-in Fraud Controls",
-      description: "Launch in 24hrs. Fraud <5%. PPMC <48hrs. Processing cost <₹100.",
+      description: "Launch in 24hrs. Fraud <1%. PPMC <48hrs. Processing cost <₹100.",
       challenges: [
         "15-20% fraud in claims",
         "₹200-400 processing on ₹500 claims",
@@ -20,7 +20,7 @@ const WhoWeServe = () => {
         "No preventive infrastructure"
       ],
       benefits: [
-        "Fraud drops to <5%",
+        "Fraud drops to <1%",
         "PPMC in 14 days",
         "Processing <₹100 per claim",
         "Preventive care built-in"

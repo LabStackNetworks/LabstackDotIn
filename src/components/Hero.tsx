@@ -42,7 +42,7 @@ const Hero = () => {
             <div className="flex flex-col sm:flex-row sm:flex-wrap justify-center gap-3 sm:gap-4 mb-12 text-sm lg:text-base">
               <div className="flex items-center justify-center space-x-2 bg-card/50 backdrop-blur-sm px-4 py-3 rounded-full border border-border/50 mobile-touch-target">
                 <div className="w-2 h-2 bg-success rounded-full"></div>
-                <span className="text-center">Launch in 14 days, not 12 months</span>
+                <span className="text-center">Launch in 14 days vs 12-18 months</span>
               </div>
               <div className="flex items-center justify-center space-x-2 bg-card/50 backdrop-blur-sm px-4 py-3 rounded-full border border-border/50 mobile-touch-target">
                 <div className="w-2 h-2 bg-primary rounded-full"></div>

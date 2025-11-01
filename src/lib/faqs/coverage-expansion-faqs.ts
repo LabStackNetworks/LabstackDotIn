@@ -5,12 +5,12 @@
 
 export const coverageExpansionFAQs = [
   {
-    question: "Which Tier-2 cities does Labstack cover?",
-    answer: "50+ Tier-2 cities including Jaipur, Lucknow, Chandigarh, Indore, Bhopal, Coimbatore, Kochi, Nagpur, Visakhapatnam, Bhubaneswar, Jamshedpur, Guwahati, Dehradun, Ranchi, Amritsar, Mysore, Vijayawada, and more."
+    question: "Which cities beyond metros does Labstack cover for healthcare services?",
+    answer: "Comprehensive coverage across metros, 50+ Tier-2 cities (Jaipur, Lucknow, Chandigarh, Indore, Coimbatore, Kochi, Nagpur), and 200+ Tier-3 cities nationwide. Full metro-to-Tier-3 expansion supported."
   },
   {
-    question: "How many Tier-3 cities and towns are covered?",
-    answer: "200+ Tier-3 cities and growing. Includes district headquarters and industrial towns across all states. Coverage expanding based on demand patterns. Can prioritize specific regions for enterprise clients."
+    question: "How quickly can I expand from metros to Tier-2 and Tier-3 cities?",
+    answer: "Instant activation in existing network cities. For new cities: 2-4 weeks to onboard providers. Phased rollout supported—start metros, then Tier-2, then Tier-3."
   },
   {
     question: "How do you ensure service quality in smaller cities?",
@@ -25,8 +25,8 @@ export const coverageExpansionFAQs = [
     answer: "Yes, phased geographic rollout supported. Start with metros, add Tier-2 next quarter, then Tier-3. Control which cities are active via API. Validate unit economics before full expansion."
   },
   {
-    question: "How does pricing differ between metros and smaller cities?",
-    answer: "Pricing varies by geography reflecting local provider costs. Transparent rate cards per city tier. Generally, Tier-2/3 costs are 10-20% lower than metros. Volume discounts apply across all locations."
+    question: "How does pricing differ between metros and Tier-2/3 cities?",
+    answer: "Transparent rate cards per geography. Tier-2/3 costs typically 10-20% lower than metros reflecting local economics. Volume discounts apply nationwide."
   },
   {
     question: "What happens if no provider is available in a patient's pincode?",
@@ -45,8 +45,8 @@ export const coverageExpansionFAQs = [
     answer: "We cover 9,000+ pincodes including semi-rural areas. For truly remote locations, hub-and-spoke model: patient travels to nearest collection point or we arrange periodic health camps. Flexible solutions based on demand density."
   },
   {
-    question: "How do you compete with local players in Tier-2/3 cities?",
-    answer: "We partner with quality local players, bringing them national business and operational systems. Not competing—enabling. Local providers get steady B2B demand, we get geographic reach. Win-win."
+    question: "How do you compete with local players in smaller cities?",
+    answer: "We partner with quality local players, bringing them national B2B demand and operational systems. Enables geographic expansion from metro-to-Tier-3 through partnerships, not competition."
   },
   {
     question: "Can I get guaranteed capacity in specific high-demand cities?",
