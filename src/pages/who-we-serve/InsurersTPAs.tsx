@@ -7,6 +7,7 @@ import SEOHead from "@/components/SEOHead";
 import { Link } from "react-router-dom";
 import { generateFAQSchema } from "@/lib/structured-data";
 import { insurersTPAsFAQs } from "@/lib/faqs/insurers-tpas-faqs";
+import RelatedBlogs from "@/components/RelatedBlogs";
 
 const InsurersTPAs = () => {
   const structuredData = generateFAQSchema(insurersTPAsFAQs);
@@ -167,6 +168,10 @@ const InsurersTPAs = () => {
           </div>
         </section>
       </main>
+
+      {/* Related Resources */}
+      <RelatedBlogs category="Insurers" limit={3} />
+
       <Footer />
     </div>
   );

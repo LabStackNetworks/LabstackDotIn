@@ -206,7 +206,7 @@ const Diagnostics = () => {
             <div className="max-w-4xl mx-auto mb-20 text-center">
               <div className="bg-card-gradient p-8 rounded-2xl border border-border/20">
                 <p className="text-lg text-muted-foreground italic mb-4">
-                  "Labstack helped us expand diagnostics coverage into Tier-2 & Tier-3 cities in under a month. Something that would've taken 12–18 months on our own."
+                  "Labstack helped us expand diagnostics coverage into Tier-2 and Tier-3 cities in under a month. Something that would have taken 12-18 months on our own."
                 </p>
               </div>
             </div>

@@ -92,10 +92,40 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://labstack.in/who-we-serve/brokers-corporate-wellness</loc>
+    <loc>https://labstack.in/who-we-serve/insurers-tpas</loc>
     <lastmod>2025-01-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://labstack.in/resources/blog</loc>
+    <lastmod>2025-01-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://labstack.in/resources/api-documentation-coming-soon</loc>
+    <lastmod>2025-01-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://labstack.in/resources/case-studies/insurer</loc>
+    <lastmod>2025-01-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://labstack.in/resources/case-studies/broker</loc>
+    <lastmod>2025-01-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://labstack.in/resources/case-studies/digital-health</loc>
+    <lastmod>2025-01-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://labstack.in/who-we-serve/disease-management</loc>

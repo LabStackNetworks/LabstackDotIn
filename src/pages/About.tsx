@@ -44,7 +44,7 @@ const About = () => {
               <ul className="space-y-3 text-muted-foreground">
                 <li className="flex items-start space-x-2">
                   <span className="text-destructive mt-1">•</span>
-                  <span>Businesses lose 12–18 months just to get basic services live</span>
+                  Businesses lose 12-18 months just to get basic services live
                 </li>
                 <li className="flex items-start space-x-2">
                   <span className="text-destructive mt-1">•</span>

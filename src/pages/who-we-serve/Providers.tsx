@@ -7,6 +7,7 @@ import SEOHead from "@/components/SEOHead";
 import { Link } from "react-router-dom";
 import { generateFAQSchema } from "@/lib/structured-data";
 import { providersFAQs } from "@/lib/faqs/providers-faqs";
+import RelatedBlogs from "@/components/RelatedBlogs";
 
 const Providers = () => {
   const structuredData = generateFAQSchema(providersFAQs);
@@ -125,6 +126,10 @@ const Providers = () => {
           </div>
         </section>
       </main>
+
+      {/* Related Resources */}
+      <RelatedBlogs category="Providers" limit={3} />
+
       <Footer />
     </div>
   );
