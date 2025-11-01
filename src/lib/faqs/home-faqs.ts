@@ -108,8 +108,8 @@ export const homeFAQs = [
   
   // Insurance & Cashless
   {
-    question: "How do insurers reduce discharge delays for cashless claims?",
-    answer: "PPMC (Pre-Post Medical Checkup) completed within 24 hours at home or center with digital MER (Medical Examination Report) submitted directly to insurer portals, eliminating discharge delays."
+    question: "How do insurers reduce PPMC delays for cashless claims?",
+    answer: "PPMC (Pre-Post Medical Checkup) completed within 24 hours at home or center with digital MER (Medical Examination Report) submitted directly to insurer portals, eliminating PPMC processing delays."
   },
   {
     question: "Can PPMC be completed within 24 hours at home or center?",

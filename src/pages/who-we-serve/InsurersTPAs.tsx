@@ -32,11 +32,11 @@ const InsurersTPAs = () => {
               </div>
 
               <h1 className="text-4xl lg:text-6xl font-heading font-bold mb-6">
-                OPD at Scale. <span className="text-gradient">Zero Setup.</span>
+                Turn <span className="text-gradient">Claim Costs Into Revenue.</span>
               </h1>
 
               <p className="text-xl text-muted-foreground mb-8">
-                Launch in days. Cut leakage 12%. Boost NPS 25 points. 99%+ SLA adherence.
+                Convert OPD claims from expense centers to profit centers. Cut leakage 12%. Boost NPS 25 points. 99%+ SLA adherence.
               </p>
 
               <Link to="/book-demo">
@@ -49,11 +49,11 @@ const InsurersTPAs = () => {
             {/* Problem → Solution */}
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto mb-20">
               <div className="space-y-4">
-                <h3 className="text-2xl font-heading font-bold mb-6">Current Challenges</h3>
+                <h3 className="text-2xl font-heading font-bold mb-6">Current Reality</h3>
                 {[
-                  "OPD claims leakage and misuse",
+                  "OPD claims are pure cost centers",
+                  "12-15% leakage from fraud and misuse",
                   "Fragmented networks = poor NPS",
-                  "Weak SKU controls, no playbooks",
                   "Manual reconciliation drains ops"
                 ].map((problem, i) => (
                   <div key={i} className="flex items-start space-x-3 p-4 bg-destructive/5 border border-destructive/10 rounded-xl">
@@ -64,12 +64,12 @@ const InsurersTPAs = () => {
               </div>
 
               <div className="space-y-4">
-                <h3 className="text-2xl font-heading font-bold mb-6">Labstack Solution</h3>
+                <h3 className="text-2xl font-heading font-bold mb-6">Revenue Transformation</h3>
                 {[
-                  "API-first rails: eligibility → booking → reconciliation",
-                  "SKU-level controls + audit trails",
-                  "SLA frameworks with real-time escalations",
-                  "Automated reconciliation across services"
+                  "Convert claim costs into profit centers",
+                  "SKU-level controls eliminate 12% leakage",
+                  "Premium services drive additional revenue",
+                  "Automated ops reduce cost-to-serve by 40%"
                 ].map((solution, i) => (
                   <div key={i} className="flex items-start space-x-3 p-4 bg-success/5 border border-success/10 rounded-xl">
                     <CheckCircle className="w-5 h-5 text-success mt-1 flex-shrink-0" />
@@ -81,22 +81,22 @@ const InsurersTPAs = () => {
 
             {/* Impact Metrics */}
             <div className="max-w-5xl mx-auto bg-gradient-hero rounded-3xl p-8 lg:p-12 border border-border/50 mb-20">
-              <h3 className="text-2xl font-heading font-bold text-center mb-12">Target Outcomes</h3>
+              <h3 className="text-2xl font-heading font-bold text-center mb-12">Revenue Impact</h3>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
                 <div>
                   <IndianRupee className="w-10 h-10 text-success mx-auto mb-4" />
                   <div className="text-4xl font-heading font-bold text-gradient mb-2">12%</div>
-                  <p className="text-sm text-muted-foreground">Leakage Reduction</p>
+                  <p className="text-sm text-muted-foreground">Cost Savings From Leakage Control</p>
                 </div>
                 <div>
-                  <Users className="w-10 h-10 text-primary mx-auto mb-4" />
+                  <TrendingUp className="w-10 h-10 text-primary mx-auto mb-4" />
+                  <div className="text-4xl font-heading font-bold text-gradient mb-2">40%</div>
+                  <p className="text-sm text-muted-foreground">Lower Ops Cost Per Transaction</p>
+                </div>
+                <div>
+                  <Users className="w-10 h-10 text-secondary mx-auto mb-4" />
                   <div className="text-4xl font-heading font-bold text-gradient mb-2">+25</div>
-                  <p className="text-sm text-muted-foreground">NPS Point Gain</p>
-                </div>
-                <div>
-                  <Zap className="w-10 h-10 text-secondary mx-auto mb-4" />
-                  <div className="text-4xl font-heading font-bold text-gradient mb-2">99%+</div>
-                  <p className="text-sm text-muted-foreground">SLA Adherence</p>
+                  <p className="text-sm text-muted-foreground">NPS Gain Drives Retention</p>
                 </div>
               </div>
             </div>

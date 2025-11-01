@@ -65,12 +65,12 @@ const DoctorsJoin = () => {
               </div>
 
               <h1 className="text-4xl lg:text-6xl font-heading font-bold mb-6">
-                More Patients. <span className="text-gradient">Zero Marketing.</span>
+                Serve Patients <span className="text-gradient">Across India.</span> 3x Revenue.
               </h1>
 
               <p className="text-lg lg:text-xl text-muted-foreground mb-8">
-                Access verified B2B demand from insurers, corporates, and digital health platforms. 
-                Get the AI-native platform that handles engagement, scheduling, and patient management.
+                Reach patients in 600+ cities nationwide—from metros to Tier-3 towns. Access verified B2B demand from insurers, corporates, and digital health platforms.
+                Order specialized diagnostics (genetic tests, microbiome, cardiac markers) for precision care.
               </p>
 
                <Link to="/provider/doctors/apply">
@@ -98,12 +98,26 @@ const DoctorsJoin = () => {
               <div className="bg-success/10 border border-success/20 rounded-2xl p-8">
                 <h3 className="text-xl font-heading font-bold mb-6">With Labstack</h3>
                 <ul className="space-y-3">
-                  {labstackBenefits.map((benefit, index) => (
-                    <li key={index} className="flex items-start space-x-2 text-muted-foreground">
-                      <span className="text-success mt-1">✓</span>
-                      <span className="text-sm">{benefit}</span>
-                    </li>
-                  ))}
+                  <li className="flex items-start space-x-2 text-muted-foreground">
+                    <span className="text-success mt-1">✓</span>
+                    <span className="text-sm">Nationwide coverage—serve patients across 600+ cities from metros to Tier-3, no geographic limits</span>
+                  </li>
+                  <li className="flex items-start space-x-2 text-muted-foreground">
+                    <span className="text-success mt-1">✓</span>
+                    <span className="text-sm">3-5x patient volume increase from B2B channels—insurers, corporates, digital platforms deliver steady demand</span>
+                  </li>
+                  <li className="flex items-start space-x-2 text-muted-foreground">
+                    <span className="text-success mt-1">✓</span>
+                    <span className="text-sm">Order advanced diagnostics—genetic tests, gut microbiome, neurotransmitter panels, cardiac risk markers for precision medicine</span>
+                  </li>
+                  <li className="flex items-start space-x-2 text-muted-foreground">
+                    <span className="text-success mt-1">✓</span>
+                    <span className="text-sm">AI-native platform handles bookings, reminders, follow-ups automatically via WhatsApp/voice AI</span>
+                  </li>
+                  <li className="flex items-start space-x-2 text-muted-foreground">
+                    <span className="text-success mt-1">✓</span>
+                    <span className="text-sm">Guaranteed 100% on-time payments with bi-weekly settlements—no payment delays, transparent invoicing</span>
+                  </li>
                 </ul>
               </div>
             </div>
@@ -138,24 +152,37 @@ const DoctorsJoin = () => {
               </h2>
               
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                {outcomes.map((outcome, index) => {
-                  const Icon = outcome.icon;
-                  return (
-                    <div key={index} className="text-center">
-                      <Icon className="w-10 h-10 text-primary mx-auto mb-4" />
-                      <div className="text-3xl font-heading font-bold text-gradient mb-2">{outcome.value}</div>
-                      <p className="text-sm font-medium mb-1">{outcome.label}</p>
-                      <p className="text-xs text-muted-foreground">{outcome.desc}</p>
-                    </div>
-                  );
-                })}
+                <div className="text-center">
+                  <Award className="w-10 h-10 text-primary mx-auto mb-4" />
+                  <div className="text-3xl font-heading font-bold text-gradient mb-2">600+</div>
+                  <p className="text-sm font-medium mb-1">Cities Covered</p>
+                  <p className="text-xs text-muted-foreground">Nationwide patient reach</p>
+                </div>
+                <div className="text-center">
+                  <Users className="w-10 h-10 text-primary mx-auto mb-4" />
+                  <div className="text-3xl font-heading font-bold text-gradient mb-2">3-5x</div>
+                  <p className="text-sm font-medium mb-1">Patient Volume</p>
+                  <p className="text-xs text-muted-foreground">From B2B ecosystem</p>
+                </div>
+                <div className="text-center">
+                  <TrendingUp className="w-10 h-10 text-primary mx-auto mb-4" />
+                  <div className="text-3xl font-heading font-bold text-gradient mb-2">40%</div>
+                  <p className="text-sm font-medium mb-1">Revenue Growth</p>
+                  <p className="text-xs text-muted-foreground">Via corporate & OPD programs</p>
+                </div>
+                <div className="text-center">
+                  <Clock className="w-10 h-10 text-primary mx-auto mb-4" />
+                  <div className="text-3xl font-heading font-bold text-gradient mb-2">100%</div>
+                  <p className="text-sm font-medium mb-1">On-Time Payments</p>
+                  <p className="text-xs text-muted-foreground">Bi-weekly settlements</p>
+                </div>
               </div>
 
               <div className="mt-12 bg-success/10 border border-success/20 rounded-xl p-6 text-center">
                 <p className="text-success font-medium italic">
-                  "Joining Labstack tripled my patient consultations from corporate and insurance channels. The integrated platform makes teleconsultations seamless, and payments are always on time."
+                  "Labstack gave me nationwide reach—I now serve patients from Mumbai to Ranchi. Ordering specialized cardiac markers and genetic tests helps me deliver precision cardiology. Revenue tripled in 6 months."
                 </p>
-                <p className="text-sm text-muted-foreground mt-2">— Established Cardiologist, Metro City</p>
+                <p className="text-sm text-muted-foreground mt-2">— Dr. Arjun Mehta, Cardiologist, Pune</p>
               </div>
             </div>
 

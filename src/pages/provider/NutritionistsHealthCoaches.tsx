@@ -65,12 +65,12 @@ const NutritionistsHealthCoaches = () => {
               </div>
 
               <h1 className="text-4xl lg:text-6xl font-heading font-bold mb-6">
-                More Clients. <span className="text-gradient">Zero Marketing.</span>
+                Reach Clients <span className="text-gradient">Across India.</span> 4x Practice Growth.
               </h1>
 
               <p className="text-lg lg:text-xl text-muted-foreground mb-8">
-                Access steady B2B client flow from corporate wellness, insurance programs, and digital health platforms. 
-                Get the AI-native platform that handles engagement, scheduling, and client management.
+                Serve clients in 600+ cities nationwide—from metros to Tier-3 towns. Access steady B2B flow from corporate wellness, insurance programs, and digital health platforms.
+                Order specialized diagnostics (gut microbiome, genetic tests, metabolic panels) for precision nutrition.
               </p>
 
               <Link to="/provider/nutritionists-health-coaches/apply">
@@ -98,12 +98,26 @@ const NutritionistsHealthCoaches = () => {
               <div className="bg-success/10 border border-success/20 rounded-2xl p-8">
                 <h3 className="text-xl font-heading font-bold mb-6">With Labstack</h3>
                 <ul className="space-y-3">
-                  {labstackBenefits.map((benefit, index) => (
-                    <li key={index} className="flex items-start space-x-2 text-muted-foreground">
-                      <span className="text-success mt-1">✓</span>
-                      <span className="text-sm">{benefit}</span>
-                    </li>
-                  ))}
+                  <li className="flex items-start space-x-2 text-muted-foreground">
+                    <span className="text-success mt-1">✓</span>
+                    <span className="text-sm">Nationwide coverage—reach clients across 600+ cities from metros to Tier-3, no geographic boundaries</span>
+                  </li>
+                  <li className="flex items-start space-x-2 text-muted-foreground">
+                    <span className="text-success mt-1">✓</span>
+                    <span className="text-sm">4-6x client growth from B2B channels—corporate wellness, insurance programs deliver consistent demand</span>
+                  </li>
+                  <li className="flex items-start space-x-2 text-muted-foreground">
+                    <span className="text-success mt-1">✓</span>
+                    <span className="text-sm">Order specialized diagnostics—gut microbiome, food sensitivity tests, genetic nutrition panels, metabolic markers for precision guidance</span>
+                  </li>
+                  <li className="flex items-start space-x-2 text-muted-foreground">
+                    <span className="text-success mt-1">✓</span>
+                    <span className="text-sm">AI-native platform handles bookings, reminders, progress check-ins automatically via WhatsApp/voice AI</span>
+                  </li>
+                  <li className="flex items-start space-x-2 text-muted-foreground">
+                    <span className="text-success mt-1">✓</span>
+                    <span className="text-sm">Guaranteed timely payments with bi-weekly settlements—no payment delays, transparent invoicing</span>
+                  </li>
                 </ul>
               </div>
             </div>
@@ -138,22 +152,35 @@ const NutritionistsHealthCoaches = () => {
               </h2>
               
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                {outcomes.map((outcome, index) => {
-                  const Icon = outcome.icon;
-                  return (
-                    <div key={index} className="text-center">
-                      <Icon className="w-10 h-10 text-primary mx-auto mb-4" />
-                      <div className="text-3xl font-heading font-bold text-gradient mb-2">{outcome.value}</div>
-                      <p className="text-sm font-medium mb-1">{outcome.label}</p>
-                      <p className="text-xs text-muted-foreground">{outcome.desc}</p>
-                    </div>
-                  );
-                })}
+                <div className="text-center">
+                  <Award className="w-10 h-10 text-primary mx-auto mb-4" />
+                  <div className="text-3xl font-heading font-bold text-gradient mb-2">600+</div>
+                  <p className="text-sm font-medium mb-1">Cities Covered</p>
+                  <p className="text-xs text-muted-foreground">Nationwide client reach</p>
+                </div>
+                <div className="text-center">
+                  <Users className="w-10 h-10 text-primary mx-auto mb-4" />
+                  <div className="text-3xl font-heading font-bold text-gradient mb-2">4-6x</div>
+                  <p className="text-sm font-medium mb-1">Client Base Growth</p>
+                  <p className="text-xs text-muted-foreground">From B2B channels</p>
+                </div>
+                <div className="text-center">
+                  <TrendingUp className="w-10 h-10 text-primary mx-auto mb-4" />
+                  <div className="text-3xl font-heading font-bold text-gradient mb-2">50%</div>
+                  <p className="text-sm font-medium mb-1">Revenue Increase</p>
+                  <p className="text-xs text-muted-foreground">Consistent pipeline</p>
+                </div>
+                <div className="text-center">
+                  <Clock className="w-10 h-10 text-primary mx-auto mb-4" />
+                  <div className="text-3xl font-heading font-bold text-gradient mb-2">100%</div>
+                  <p className="text-sm font-medium mb-1">Payment Reliability</p>
+                  <p className="text-xs text-muted-foreground">Bi-weekly settlements</p>
+                </div>
               </div>
 
               <div className="mt-12 bg-success/10 border border-success/20 rounded-xl p-6 text-center">
                 <p className="text-success font-medium italic">
-                  "Labstack connected me to corporate wellness programs across India. My client base grew 5x, and I now run group sessions alongside individual coaching all through one platform."
+                  "Labstack connected me to corporate wellness programs from Bangalore to Bhopal. Ordering gut microbiome and genetic tests lets me provide precision nutrition. My client base grew 5x and revenue doubled."
                 </p>
                 <p className="text-sm text-muted-foreground mt-2">— Priya Menon, Certified Nutritionist, Bangalore</p>
               </div>
