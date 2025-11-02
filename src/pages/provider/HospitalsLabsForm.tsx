@@ -60,7 +60,28 @@ const HospitalsLabsForm = () => {
   }, []);
 
   const onSubmit = (values: FormValues) => {
-    console.log("Hospitals/Labs Application Submission", values);
+    // Prepare email content
+    const subject = "Hospital/Lab Partnership Application - Join Network";
+    const body = `
+New Hospital/Lab Application from ${window.location.href}
+
+Organization Type: ${values.orgType}
+Organization Name: ${values.orgName}
+City: ${values.city}
+State: ${values.state}
+Contact Name: ${values.contactName}
+Designation: ${values.designation}
+Email: ${values.email}
+Phone: ${values.phone}
+Services: ${values.services}
+Registration Number: ${values.registrationNo || 'N/A'}
+Message: ${values.message || 'N/A'}
+    `.trim();
+    
+    // Send email via mailto
+    const mailtoLink = `mailto:contact@labstack.in?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    window.location.href = mailtoLink;
+    
     toast({ 
       title: "Application received!", 
       description: "Our partnership team will review your application and reach out within 2 business days." 

@@ -62,7 +62,29 @@ const NutritionistsForm = () => {
   }, []);
 
   const onSubmit = (values: FormValues) => {
-    console.log("Nutritionist/Coach Application Submission", values);
+    // Prepare email content
+    const subject = "Nutritionist/Health Coach Application - Join Network";
+    const body = `
+New Nutritionist/Health Coach Application from ${window.location.href}
+
+Role: ${values.role}
+Full Name: ${values.fullName}
+Qualification: ${values.qualification}
+Certifications: ${values.certifications}
+Experience: ${values.experienceYears} years
+City: ${values.city}
+State: ${values.state}
+Email: ${values.email}
+Phone: ${values.phone}
+Specializations: ${values.specializations}
+Availability: ${values.availability}
+Message: ${values.message || 'N/A'}
+    `.trim();
+    
+    // Send email via mailto
+    const mailtoLink = `mailto:contact@labstack.in?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    window.location.href = mailtoLink;
+    
     toast({ 
       title: "Application received!", 
       description: "Our wellness network team will review your credentials and reach out within 2 business days." 

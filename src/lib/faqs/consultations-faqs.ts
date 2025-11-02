@@ -69,11 +69,11 @@ export const consultationsFAQs = [
   // Technology & Platform
   {
     question: "Do you provide your own video platform?",
-    answer: "Yes, proprietary HIPAA-compliant video platform with HD quality. No dependency on Zoom or Google Meet. Complete control over consultation experience with your branding."
+    answer: "Yes, proprietary secure video platform with HD quality compliant with DISHA guidelines and IT Act 2000. No dependency on Zoom or Google Meet. Complete control over consultation experience with your branding."
   },
   {
-    question: "Is EMR and e-prescription included?",
-    answer: "Yes, integrated EMR for medical history, examination notes, and digital e-prescriptions. DISHA Act compliant prescriptions can be fulfilled through our pharmacy network."
+    question: "Are digital medical records and e-prescription included?",
+    answer: "Yes, integrated digital medical record system for medical history, examination notes, and digital e-prescriptions. DISHA Act compliant prescriptions can be fulfilled through our pharmacy network."
   },
   {
     question: "Can consultations integrate with my existing app?",
@@ -117,7 +117,7 @@ export const consultationsFAQs = [
   },
   {
     question: "Can doctors see patient's previous consultation history?",
-    answer: "Yes, doctors access complete patient history: previous consultations, prescriptions, diagnostic reports, chronic conditions, allergies, ongoing medications via EMR."
+    answer: "Yes, doctors access complete patient history: previous consultations, prescriptions, diagnostic reports, chronic conditions, allergies, ongoing medications via digital medical records."
   },
   
   // For Providers & Clinics
@@ -131,7 +131,7 @@ export const consultationsFAQs = [
   },
   {
     question: "What support do doctors get?",
-    answer: "EMR training, technical support, patient documentation assistance, and legal protection. We handle scheduling, payment collection, and follow-ups."
+    answer: "Digital record system training, technical support, patient documentation assistance, and legal protection. We handle scheduling, payment collection, and follow-ups."
   },
   
   // Follow-ups & Care Continuity
@@ -155,7 +155,7 @@ export const consultationsFAQs = [
   },
   {
     question: "How is patient data protected?",
-    answer: "End-to-end encryption for all consultations. Data stored in HIPAA-compliant infrastructure with access controls, audit logs, and regular security audits."
+    answer: "End-to-end encryption for all consultations. Data stored in secure infrastructure compliant with IT Act 2000, DISHA guidelines, with access controls, audit logs, and regular security audits."
   },
   {
     question: "Do you handle medical emergencies during teleconsults?",

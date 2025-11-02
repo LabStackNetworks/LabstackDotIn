@@ -62,7 +62,29 @@ const DoctorsForm = () => {
   }, []);
 
   const onSubmit = (values: FormValues) => {
-    console.log("Doctor Application Submission", values);
+    // Prepare email content
+    const subject = "Doctor Application - Join Network";
+    const body = `
+New Doctor Application from ${window.location.href}
+
+Full Name: ${values.fullName}
+Email: ${values.email}
+Phone: ${values.phone}
+Registration Number: ${values.registrationNo}
+Specialty: ${values.specialty}
+Qualification: ${values.qualification}
+Experience: ${values.experienceYears} years
+City: ${values.city}
+State: ${values.state}
+Consultation Types: ${values.consultationTypes}
+Availability: ${values.availability}
+Message: ${values.message || 'N/A'}
+    `.trim();
+    
+    // Send email via mailto
+    const mailtoLink = `mailto:contact@labstack.in?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    window.location.href = mailtoLink;
+    
     toast({ 
       title: "Application received!", 
       description: "Our medical network team will review your credentials and reach out within 2 business days." 

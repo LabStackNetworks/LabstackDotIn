@@ -11,8 +11,8 @@ const WhoWeServe = () => {
       id: "insurers",
       icon: Shield,
       label: "Insurers & TPAs",
-      title: "OPD with Built-in Fraud Controls",
-      description: "Launch in 24hrs. Fraud <1%. PPMC <48hrs. Processing cost <₹100.",
+      title: "Turn Claim Costs Into Revenue.",
+      description: "Convert OPD claims from expense centers to profit centers. Cut leakage 12%. Boost NPS 25 points.",
       challenges: [
         "15-20% fraud in claims",
         "₹200-400 processing on ₹500 claims",

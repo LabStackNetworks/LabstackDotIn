@@ -85,7 +85,7 @@ export const diagnosticsFAQs = [
   },
   {
     question: "How are raw digital values different from PDF reports?",
-    answer: "Raw digital values are structured, machine-readable data (JSON/API format) that enable trend charts, longitudinal tracking, and clinical decision support. Unlike static PDFs, digital values allow comparison across time, integration with EMRs, automated flagging of abnormal results, and AI-powered health insights. Essential for chronic disease management, wellness programs, and data-driven care."
+    answer: "Raw digital values are structured, machine-readable data (JSON/API format) that enable trend charts, longitudinal tracking, and clinical decision support. Unlike static PDFs, digital values allow comparison across time, integration with health record systems, automated flagging of abnormal results, and AI-powered health insights. Essential for chronic disease management, wellness programs, and data-driven care."
   },
   {
     question: "Can I harmonize test results across different labs?",
@@ -129,7 +129,7 @@ export const diagnosticsFAQs = [
   // For Healthcare Providers
   {
     question: "Can I integrate diagnostics into my clinic workflow?",
-    answer: "Yes, we provide EMR integration, e-prescription uploads, and automatic test ordering. Results flow back into your system automatically with patient matching via HL7/FHIR standards. Integrations available with major EMRs like Practo Ray, Lybrate, HealthPlix, and custom clinic management systems."
+    answer: "Yes, we provide health record system integration, e-prescription uploads, and automatic test ordering. Results flow back into your system automatically with patient matching via HL7/FHIR standards. Integrations available with major Indian platforms like Practo Ray, Lybrate, HealthPlix, and custom clinic management systems."
   },
   {
     question: "What if I need specialized or rare tests?",

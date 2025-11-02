@@ -55,7 +55,26 @@ const FieldStaffJoin = () => {
   useEffect(() => { document.title = "Join the Network – Phlebotomists & Nurses | Labstack"; }, []);
 
   const onSubmit = (values: FormValues) => {
-    console.log("Field Staff Join Submission", values);
+    // Prepare email content
+    const subject = "Field Staff Application - Join Network";
+    const body = `
+New Field Staff Application from ${window.location.href}
+
+Role: ${values.role}
+Full Name: ${values.fullName}
+Email: ${values.email}
+Phone: ${values.phone}
+City: ${values.city}
+Experience: ${values.experienceYears} years
+Availability: ${values.availability}
+Certifications: ${values.certifications}
+Message: ${values.message}
+    `.trim();
+    
+    // Send email via mailto
+    const mailtoLink = `mailto:contact@labstack.in?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    window.location.href = mailtoLink;
+    
     toast({ title: "Application received", description: "Our team will reach out within 2 business days." });
     form.reset({ ...values, fullName: "", city: "", experienceYears: "", email: "", phone: "", availability: "", certifications: "", message: "", agreeToTerms: false });
   };

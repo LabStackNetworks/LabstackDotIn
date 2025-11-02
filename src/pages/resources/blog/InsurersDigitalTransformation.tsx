@@ -197,7 +197,7 @@ const InsurersDigitalTransformation = () => {
               },
               {
                 question: "How do you ensure data security and regulatory compliance?",
-                answer: "We maintain ISO 27001 certification, HIPAA equivalent controls, IRDAI compliance, and encrypted data handling. All provider and member data is stored in India with role-based access controls. Regular security audits and penetration testing performed quarterly."
+                answer: "We maintain ISO 27001 certification, IT Act 2000 compliance, DISHA guidelines adherence, IRDAI compliance, and encrypted data handling. All provider and member data is stored in India with role-based access controls. Regular security audits and penetration testing performed quarterly."
               },
               {
                 question: "What is the ROI timeline for digital transformation?",

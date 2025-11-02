@@ -106,8 +106,8 @@ export const apiSolutionsFAQs = [
     answer: "India-first, expanding globally: Bangladesh (Q4 2025), Sri Lanka (Q1 2026), Myanmar, Nepal (2026), UAE, Saudi Arabia (2026-2027). Early access program—design partners get priority access to new geographies."
   },
   {
-    question: "Can I integrate with EMR systems like Practo Ray, HealthPlix, or Epic?",
-    answer: "Yes. HL7/FHIR support for EMR integration. Bidirectional data sync—push care plans to Labstack, pull completed test results back into EMR. Custom connectors for popular platforms. Integration timeline: 2-3 weeks."
+    question: "Can I integrate with health record systems like Practo Ray, HealthPlix, or other Indian platforms?",
+    answer: "Yes. HL7/FHIR support for health record system integration. Bidirectional data sync—push care plans to Labstack, pull completed test results back into your system. Custom connectors for popular Indian platforms. Integration timeline: 2-3 weeks."
   },
   {
     question: "How do we handle pricing transparency for end users?",

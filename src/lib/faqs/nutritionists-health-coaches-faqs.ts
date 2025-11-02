@@ -21,7 +21,7 @@ export const nutritionistsHealthCoachesFAQs = [
   },
   {
     question: "What technology platform is provided?",
-    answer: "Video consultation platform, client management system, meal planning tools, progress tracking dashboards, client communication tools, digital resource library, and session recording (with consent). All tools are user-friendly and HIPAA-compliant."
+    answer: "Video consultation platform, client management system, meal planning tools, progress tracking dashboards, client communication tools, digital resource library, and session recording (with consent). All tools are user-friendly and compliant with data protection regulations."
   },
   {
     question: "Can I set my own rates and availability?",

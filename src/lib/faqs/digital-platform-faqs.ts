@@ -10,7 +10,7 @@ export const digitalPlatformFAQs = [
   },
   {
     question: "How are digital reports different from PDF reports?",
-    answer: "Raw digital values for every test parameter (not scanned images). Enables trend charts, health progression tracking, automated clinical alerts, and integration with EMRs. Structured data, not unstructured PDFs."
+    answer: "Raw digital values for every test parameter (not scanned images). Enables trend charts, health progression tracking, automated clinical alerts, and integration with health record systems. Structured data, not unstructured PDFs."
   },
   {
     question: "Can I customize the patient journey and booking flows?",

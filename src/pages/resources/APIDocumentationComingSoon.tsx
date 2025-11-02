@@ -13,7 +13,19 @@ const APIDocumentationComingSoon = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission
+    
+    // Prepare email content
+    const subject = "API Documentation Early Access Request";
+    const body = `
+New API Documentation Early Access Request from ${window.location.href}
+
+Email: ${email}
+    `.trim();
+    
+    // Send email via mailto
+    const mailtoLink = `mailto:contact@labstack.in?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    window.location.href = mailtoLink;
+    
     setSubmitted(true);
   };
 

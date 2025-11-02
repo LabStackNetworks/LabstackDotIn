@@ -21,13 +21,31 @@ const BookDemo = () => {
     message: ""
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    
+    // Prepare email content
+    const subject = "Demo Request - Book Demo Page";
+    const body = `
+New Demo Request from ${window.location.href}
+
+Name: ${formData.name}
+Email: ${formData.email}
+Company: ${formData.company}
+Phone: ${formData.phone}
+Company Size: ${formData.companySize}
+Use Case: ${formData.useCase}
+Message: ${formData.message}
+    `.trim();
+    
+    // Send email via mailto (opens user's email client)
+    const mailtoLink = `mailto:contact@labstack.in?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    window.location.href = mailtoLink;
+    
     toast({
       title: "Demo Request Received!",
       description: "Our team will reach out within 4 hours to schedule your personalized demo.",
     });
-    console.log("Form submitted:", formData);
   };
 
   const benefits = [

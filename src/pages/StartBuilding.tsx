@@ -19,13 +19,30 @@ const StartBuilding = () => {
     message: ""
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    
+    // Prepare email content
+    const subject = "API Access Request - Start Building Page";
+    const body = `
+New API Access Request from ${window.location.href}
+
+Name: ${formData.name}
+Email: ${formData.email}
+Company: ${formData.company}
+Phone: ${formData.phone}
+API Interest: ${formData.apiInterest}
+Technical Requirements: ${formData.message}
+    `.trim();
+    
+    // Send email via mailto
+    const mailtoLink = `mailto:contact@labstack.in?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    window.location.href = mailtoLink;
+    
     toast({
       title: "Request Received!",
       description: "We'll send your sandbox credentials and API documentation within 2 hours.",
     });
-    console.log("Form submitted:", formData);
   };
 
   const quickstartSteps = [

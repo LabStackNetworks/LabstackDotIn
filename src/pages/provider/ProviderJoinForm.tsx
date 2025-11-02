@@ -68,7 +68,26 @@ const ProviderJoinForm = () => {
   }, []);
 
   const onSubmit = (values: FormValues) => {
-    console.log("Provider Network Application Submission", values);
+    // Prepare email content
+    const subject = "Provider Network Application - Join Network";
+    const body = `
+New Provider Application from ${window.location.href}
+
+Provider Type: ${values.providerType}
+Organization/Name: ${values.orgName}
+City: ${values.city}
+State: ${values.state}
+Contact Name: ${values.contactName}
+Email: ${values.email}
+Phone: ${values.phone}
+Services: ${values.services}
+Message: ${values.message || 'N/A'}
+    `.trim();
+    
+    // Send email via mailto
+    const mailtoLink = `mailto:contact@labstack.in?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    window.location.href = mailtoLink;
+    
     toast({ 
       title: "Application received!", 
       description: "Our partnership team will review your application and reach out within 2 business days." 

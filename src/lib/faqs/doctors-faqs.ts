@@ -21,7 +21,7 @@ export const doctorsFAQs = [
   },
   {
     question: "What technology tools do you provide for doctors?",
-    answer: "We provide integrated EMR (Electronic Medical Records), e-prescription writing tools, teleconsultation platform with HD video conferencing, patient scheduling system, lab order integration, pharmacy integration, and digital prescription management. All tools are HIPAA-compliant and secure."
+    answer: "We provide integrated digital medical record system, e-prescription writing tools, teleconsultation platform with HD video conferencing, patient scheduling system, lab order integration, pharmacy integration, and digital prescription management. All tools are compliant with IT Act 2000, DISHA guidelines, and secure."
   },
   {
     question: "Can I set my own availability and consultation fees?",

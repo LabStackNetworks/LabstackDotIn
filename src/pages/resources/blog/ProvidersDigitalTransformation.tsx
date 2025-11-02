@@ -116,7 +116,7 @@ const ProvidersDigitalTransformation = () => {
               </p>
               <p className="text-sm font-semibold mb-2">Key Features:</p>
               <ul className="text-sm text-muted-foreground space-y-1 ml-4">
-                <li>• Secure video calling (HIPAA/DISHA compliant, encrypted)</li>
+                <li>• Secure video calling (DISHA compliant, encrypted)</li>
                 <li>• Digital prescriptions with e-signature and registration number</li>
                 <li>• Ability to review previous records, lab reports during consultation</li>
                 <li>• Integrated payment collection (consultation fees via UPI, cards)</li>
