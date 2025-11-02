@@ -4,6 +4,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FAQ from "@/components/FAQ";
 import SEOHead from "@/components/SEOHead";
+import RelatedBlogs from "@/components/RelatedBlogs";
 import { Link } from "react-router-dom";
 import { generateFAQSchema } from "@/lib/structured-data";
 import { diseaseManagementFAQs } from "@/lib/faqs/disease-management-faqs";
@@ -172,6 +173,10 @@ const DiseaseManagement = () => {
           </div>
         </section>
       </main>
+      
+      {/* Related Resources */}
+      <RelatedBlogs category="Disease Management" limit={3} />
+      
       <Footer />
     </div>
   );

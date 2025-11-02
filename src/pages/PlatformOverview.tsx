@@ -7,6 +7,7 @@ import CTAButtons from "@/components/CTAButtons";
 import SEOHead from "@/components/SEOHead";
 import FAQ from "@/components/FAQ";
 import TLDR from "@/components/design-system/TLDR";
+import RelatedBlogs from "@/components/RelatedBlogs";
 import { generateOrganizationSchema, generateProductSchema, generateFAQSchema } from "@/lib/structured-data";
 import { platformOverviewFAQs } from "@/lib/faqs/platform-overview-faqs";
 
@@ -276,6 +277,10 @@ const PlatformOverview = () => {
           </div>
         </section>
       </main>
+      
+      {/* Related Resources */}
+      <RelatedBlogs category="Digital Health" limit={3} />
+      
       <Footer />
     </div>
   );

@@ -5,6 +5,7 @@ import SEOHead from "@/components/SEOHead";
 import CTAButtons from "@/components/CTAButtons";
 import FAQ from "@/components/FAQ";
 import TLDR from "@/components/design-system/TLDR";
+import RelatedBlogs from "@/components/RelatedBlogs";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { generateProductSchema, generateFAQSchema } from "@/lib/structured-data";
@@ -222,6 +223,10 @@ const Consultations = () => {
           </div>
         </section>
       </main>
+      
+      {/* Related Resources */}
+      <RelatedBlogs category="Digital Health" limit={3} />
+      
       <Footer />
     </div>
   );

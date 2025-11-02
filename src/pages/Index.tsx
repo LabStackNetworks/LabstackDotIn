@@ -10,6 +10,7 @@ import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import FAQ from "@/components/FAQ";
 import TLDR from "@/components/design-system/TLDR";
+import RelatedBlogs from "@/components/RelatedBlogs";
 import { generateOrganizationSchema, generateWebSiteSchema, generateFAQSchema } from "@/lib/structured-data";
 import { homeFAQs } from "@/lib/faqs/home-faqs";
 import { PAGE_SEO } from "@/lib/seo-config";
@@ -54,6 +55,10 @@ const Index = () => {
         </section>
         <DualCTA />
       </main>
+      
+      {/* Related Resources - Mixed categories for home page */}
+      <RelatedBlogs category="Insurers" limit={3} />
+      
       <Footer />
     </div>
   );

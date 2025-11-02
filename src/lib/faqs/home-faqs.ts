@@ -106,14 +106,14 @@ export const homeFAQs = [
     answer: "Yes, thyroid profiles (TSH, T3, T4) with same-day results available across Kolkata including Salt Lake, New Town, Rajarhat, Park Street, and Howrah with morning sample collection and evening report delivery."
   },
   
-  // Insurance & Cashless
+  // Insurance & Pre-Policy Checks
   {
-    question: "How do insurers reduce PPMC delays for cashless claims?",
-    answer: "PPMC (Pre-Post Medical Checkup) completed within 24 hours at home or center with digital MER (Medical Examination Report) submitted directly to insurer portals, eliminating PPMC processing delays."
+    question: "Can insurers complete PPMC within 24 hours for policy issuance?",
+    answer: "Yes, Pre-Policy Medical Check Up completed within 24 hours at home or center with blood tests, ECG, and doctor consultation. Digital MER submitted directly to insurer portals for faster policy issuance."
   },
   {
-    question: "Can PPMC be completed within 24 hours at home or center?",
-    answer: "Yes, PPMC with blood tests, ECG, and doctor consultation completed within 24 hours. Home PPMC available in metros and Tier-2 cities. Center PPMC in 600+ cities nationwide."
+    question: "What is included in PPMC for insurance policy purchase?",
+    answer: "PPMC includes blood tests (CBC, lipids, glucose), ECG, vitals, and doctor examination. Available at home (metros/Tier-2) or centers (600+ cities). Digital and Physical MER both supported."
   },
   {
     question: "How do we enable cashless OPD for diagnostics and pharmacy?",

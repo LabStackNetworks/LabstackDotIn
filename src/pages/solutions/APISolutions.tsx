@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 import FAQ from "@/components/FAQ";
 import SEOHead from "@/components/SEOHead";
 import CTAButtons from "@/components/CTAButtons";
+import RelatedBlogs from "@/components/RelatedBlogs";
 import { Link } from "react-router-dom";
 import { generateProductSchema, generateFAQSchema } from "@/lib/structured-data";
 import { apiSolutionsFAQs } from "@/lib/faqs/api-solutions-faqs";
@@ -195,6 +196,10 @@ const APISolutions = () => {
           </div>
         </section>
       </main>
+      
+      {/* Related Resources */}
+      <RelatedBlogs category="Digital Health" limit={3} />
+      
       <Footer />
     </div>
   );
