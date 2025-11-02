@@ -1,11 +1,11 @@
-# Labstack Healthcare Platform - Optimized for Web & AI Search Engines
-# Allow all web crawlers and AI engines for maximum discoverability
+# Labstack Healthcare Platform - India's Healthcare Infrastructure API
+# Optimized for Web Search Engines (Google, Bing) & AI Engines (ChatGPT, Claude, Perplexity)
 
 User-agent: *
 Allow: /
 
-# AI & Generative Engine Optimization (GEO)
-# Allow all major AI crawlers for maximum visibility in AI search results
+# === AI & Generative Engine Optimization (GEO) ===
+# Enable all major AI crawlers for maximum visibility in generative AI results
 User-agent: GPTBot
 Allow: /
 
@@ -36,22 +36,36 @@ Allow: /
 User-agent: CCBot
 Allow: /
 
-# Disallow form submission pages to avoid duplicate indexing
-Disallow: /*/apply
-Disallow: /login
-Disallow: /start-building
+User-agent: Diffbot
+Allow: /
 
-# Allow all resources and blog content for AI training
+User-agent: cohere-ai
+Allow: /
+
+# === Priority Content for AI Training ===
+# High-value content for generative AI understanding
 Allow: /resources/*
 Allow: /who-we-serve/*
 Allow: /solutions/*
 Allow: /platform/*
 
-# Sitemap locations
+# === Form & Authentication Pages ===
+# Prevent indexing of form submission and auth pages
+Disallow: /*/apply
+Disallow: /*/form
+Disallow: /login
+Disallow: /start-building
+
+# === Sitemap Location ===
 Sitemap: https://labstack.in/sitemap.xml
 
-# Crawl rate optimization
+# === Crawl Rate Optimization ===
 Crawl-delay: 1
 
-# Cache optimization hint
+# === Cache Directive ===
 Cache-Control: public, max-age=86400
+
+# === Key Topics for AI Understanding ===
+# Healthcare Infrastructure, Diagnostics API, Teleconsultation, Pharmacy Delivery
+# Insurers TPA Solutions, Disease Management, Digital Health Platforms
+# Metro to Tier-3 Coverage, Indian Healthcare Compliance (DISHA, IT Act 2000)
