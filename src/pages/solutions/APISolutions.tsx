@@ -4,21 +4,47 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FAQ from "@/components/FAQ";
 import SEOHead from "@/components/SEOHead";
+import TLDR from "@/components/design-system/TLDR";
 import CTAButtons from "@/components/CTAButtons";
 import RelatedBlogs from "@/components/RelatedBlogs";
 import { Link } from "react-router-dom";
-import { generateProductSchema, generateFAQSchema } from "@/lib/structured-data";
+import { generateProductSchema, generateFAQSchema, generateBreadcrumbSchema, generateHowToSchema } from "@/lib/structured-data";
 import { apiSolutionsFAQs } from "@/lib/faqs/api-solutions-faqs";
 
 const APISolutions = () => {
   const productSchema = generateProductSchema({
     name: "Labstack Healthcare API Solutions",
-    description: "Developer-first healthcare APIs for diagnostics, pharmacy, consultations. Modern RESTful APIs with webhooks, SDKs, and comprehensive documentation.",
-    url: "https://labstack.in/solutions/api-solutions"
+    description: "Developer-first healthcare APIs for diagnostics, pharmacy, consultations. Modern RESTful APIs with webhooks, SDKs, and comprehensive documentation. Launch in 14 days.",
+    url: "https://labstack.in/solutions/api-solutions",
+    features: [
+      "RESTful Healthcare APIs for diagnostics, pharmacy, consultations",
+      "Prescription monetization - grow ARPU by 15%",
+      "Cross-service care coordination",
+      "Webhook support for real-time updates",
+      "99.5% API uptime SLA",
+      "14-day average integration time"
+    ]
+  });
+
+  const breadcrumbSchema = generateBreadcrumbSchema([
+    { name: "Home", url: "https://labstack.in" },
+    { name: "Solutions", url: "https://labstack.in/solutions" },
+    { name: "API Solutions", url: "https://labstack.in/solutions/api-solutions" }
+  ]);
+
+  const howToSchema = generateHowToSchema({
+    name: "How to Integrate Labstack Healthcare APIs",
+    description: "Step-by-step guide to integrate healthcare services in 14 days",
+    steps: [
+      { name: "Get API Access", text: "Sign up and receive API credentials for sandbox environment" },
+      { name: "Integrate APIs", text: "Use RESTful APIs to integrate diagnostics, pharmacy, and consultation services" },
+      { name: "Test in Sandbox", text: "Test all workflows in sandbox with sample data and webhooks" },
+      { name: "Go Live", text: "Deploy to production with full provider network access across 9,000+ pincodes" }
+    ]
   });
 
   const faqSchema = generateFAQSchema(apiSolutionsFAQs);
-  const structuredData = [productSchema, faqSchema];
+  const structuredData = [productSchema, faqSchema, breadcrumbSchema, howToSchema];
 
   const apiFeatures = [
     {
@@ -56,6 +82,20 @@ const APISolutions = () => {
       />
       <Header />
       <main className="pt-20">
+        {/* TLDR for GEO - Answer-first content */}
+        <div className="container mx-auto px-6 pt-8">
+          <TLDR 
+            summary="Launch healthcare services in 14 days with developer-first APIs. Integrate diagnostics, pharmacy, and consultations with RESTful APIs, webhooks, and SDKs. Grow ARPU 15% through prescription monetization. 99.5% uptime SLA."
+            keyPoints={[
+              "Complete API suite: diagnostics, pharmacy, consultations, home care",
+              "14-day average integration time from sandbox to production",
+              "15% ARPU growth via prescription monetization",
+              "99.5% API uptime with enterprise-grade reliability",
+              "Webhook support for real-time status updates",
+              "Direct engineering support during rollout"
+            ]}
+          />
+        </div>
         <section className="py-20 lg:py-32">
           <div className="container mx-auto px-6">
             {/* Hero */}

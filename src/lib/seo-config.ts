@@ -10,35 +10,52 @@
 
 /**
  * Base SEO configuration for the entire website
+ * GEO-Optimized for AI search engines with answer-first, factual content
  */
 export const BASE_SEO = {
   siteName: 'Labstack',
   siteUrl: 'https://labstack.in',
-  defaultTitle: 'Labstack - Healthcare Growth Operating System',
+  defaultTitle: 'Labstack - The Growth Engine for Healthcare | Launch in 14 Days',
   titleTemplate: '%s | Labstack',
-  description: 'Launch diagnostics, consultations, pharmacy, and home care in 14 days. One API for 9,000+ pincodes. Healthcare infrastructure that scales like software.',
+  description: "India's Healthcare Infrastructure API. Launch diagnostics, consultations, pharmacy, and home care in 14 days across 9,000+ pincodes. Zero upfront investment. 99%+ SLA adherence.",
   keywords: [
-    'healthcare API India',
-    'diagnostics API',
-    'telemedicine platform',
-    'pharmacy delivery API',
-    'healthcare infrastructure',
-    'digital health platform',
-    'white-label healthcare',
+    'healthcare infrastructure API India',
+    'diagnostics API India',
+    'telemedicine platform India',
+    'pharmacy delivery network',
     'healthcare delivery system',
-    'medical API integration',
+    'digital health platform India',
+    'health insurance OPD solutions',
+    'TPA claims automation',
+    'disease management programs',
+    'provider network management',
+    'ABDM compliance healthcare',
+    'DISHA Act healthcare India',
+    'IT Act 2000 healthcare compliance',
+    'white-label healthcare platform',
+    'medical API integration India',
     'healthcare technology platform',
-    'telehealth API',
+    'telehealth API India',
     'diagnostic services API',
     'online pharmacy integration',
-    'healthcare SaaS platform',
-    'healthtech infrastructure'
+    'healthcare SaaS platform India',
+    'healthtech infrastructure',
+    'pan-India healthcare coverage',
+    'tier 2 tier 3 healthcare',
+    '9000 pincode healthcare coverage'
   ],
   socialImage: '/lovable-uploads/97d6ae42-ba64-4793-a727-6945e3a2b8bc.png',
   twitterHandle: '@labstackin',
   author: 'Labstack Healthcare',
   locale: 'en_IN',
-  alternateLocales: ['en_US', 'en_GB']
+  alternateLocales: ['en_US', 'en_GB'],
+  // GEO-specific metadata for AI understanding
+  foundingYear: '2020',
+  headquarters: 'Bangalore, India',
+  coverage: '9,000+ pincodes across India',
+  complianceStandards: ['DISHA Act', 'IT Act 2000', 'ABDM'],
+  serviceLaunchTime: '14 days',
+  slaAdherence: '99%+'
 };
 
 /**

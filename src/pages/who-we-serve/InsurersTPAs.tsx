@@ -4,13 +4,32 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FAQ from "@/components/FAQ";
 import SEOHead from "@/components/SEOHead";
+import TLDR from "@/components/design-system/TLDR";
 import { Link } from "react-router-dom";
-import { generateFAQSchema } from "@/lib/structured-data";
+import { generateFAQSchema, generateBreadcrumbSchema, generateServiceSchema } from "@/lib/structured-data";
 import { insurersTPAsFAQs } from "@/lib/faqs/insurers-tpas-faqs";
 import RelatedBlogs from "@/components/RelatedBlogs";
+import { PAGE_SEO } from "@/lib/seo-config";
 
 const InsurersTPAs = () => {
-  const structuredData = generateFAQSchema(insurersTPAsFAQs);
+  const breadcrumbSchema = generateBreadcrumbSchema([
+    { name: "Home", url: "https://labstack.in" },
+    { name: "Who We Serve", url: "https://labstack.in/who-we-serve" },
+    { name: "Insurers & TPAs", url: "https://labstack.in/who-we-serve/insurers-tpas" }
+  ]);
+
+  const serviceSchema = generateServiceSchema({
+    name: "Healthcare Solutions for Insurers & TPAs",
+    description: "Turn OPD claims into profit centers. Reduce claims leakage by 12%, improve member NPS by 25 points, and achieve 99%+ SLA adherence with automated healthcare operations.",
+    url: "https://labstack.in/who-we-serve/insurers-tpas",
+    areaServed: "India"
+  });
+
+  const structuredData = [
+    generateFAQSchema(insurersTPAsFAQs),
+    breadcrumbSchema,
+    serviceSchema
+  ];
 
   return (
     <div className="min-h-screen bg-background">
@@ -23,6 +42,13 @@ const InsurersTPAs = () => {
       />
       <Header />
       <main className="pt-20">
+        {/* TLDR for GEO - Answer-first content */}
+        <div className="container mx-auto px-6 pt-8">
+          <TLDR 
+            summary={PAGE_SEO.insurers.tldr}
+            keyPoints={PAGE_SEO.insurers.keyPoints}
+          />
+        </div>
         <section className="py-20 lg:py-32">
           <div className="container mx-auto px-6">
             {/* Hero */}

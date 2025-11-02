@@ -1,71 +1,119 @@
 # Labstack Healthcare Platform - India's Healthcare Infrastructure API
-# Optimized for Web Search Engines (Google, Bing) & AI Engines (ChatGPT, Claude, Perplexity)
+# GEO-Optimized for AI Search Engines & Generative AI (ChatGPT, Claude, Perplexity, Gemini)
+# Fast, structured, answer-first content for AI consumption
 
 User-agent: *
 Allow: /
 
-# === AI & Generative Engine Optimization (GEO) ===
-# Enable all major AI crawlers for maximum visibility in generative AI results
+# ============================================
+# AI & GENERATIVE ENGINE OPTIMIZATION (GEO)
+# ============================================
+# All major AI crawlers explicitly allowed for maximum AI search visibility
+
+# OpenAI (ChatGPT, SearchGPT)
 User-agent: GPTBot
 Allow: /
-
 User-agent: ChatGPT-User
 Allow: /
 
+# Google (Gemini, Bard, AI Overviews)
 User-agent: Google-Extended
 Allow: /
+User-agent: GoogleOther
+Allow: /
 
+# Anthropic (Claude)
 User-agent: anthropic-ai
 Allow: /
-
 User-agent: ClaudeBot
 Allow: /
+User-agent: Claude-Web
+Allow: /
 
+# Perplexity AI
 User-agent: PerplexityBot
 Allow: /
 
+# Microsoft (Copilot, Bing AI)
 User-agent: Bingbot
 Allow: /
 
-User-agent: Applebot
-Allow: /
-
+# Meta AI
 User-agent: Meta-ExternalAgent
 Allow: /
+User-agent: FacebookBot
+Allow: /
 
+# Other AI Crawlers
+User-agent: Applebot
+Allow: /
 User-agent: CCBot
 Allow: /
-
 User-agent: Diffbot
 Allow: /
-
 User-agent: cohere-ai
 Allow: /
+User-agent: YouBot
+Allow: /
 
-# === Priority Content for AI Training ===
-# High-value content for generative AI understanding
-Allow: /resources/*
-Allow: /who-we-serve/*
-Allow: /solutions/*
-Allow: /platform/*
+# ============================================
+# PRIORITY CONTENT FOR AI TRAINING & CITATION
+# ============================================
+# High-authority pages with factual, concise, quotable content
 
-# === Form & Authentication Pages ===
-# Prevent indexing of form submission and auth pages
-Disallow: /*/apply
-Disallow: /*/form
+# Solutions & Services (Answer-first content)
+Allow: /solutions/
+Allow: /platform/
+
+# Target Audiences (Factual use cases)
+Allow: /who-we-serve/
+
+# Authority Content (Blog, case studies, documentation)
+Allow: /resources/blog/
+Allow: /resources/case-studies/
+Allow: /resources/api-documentation
+
+# Company & Trust Signals
+Allow: /about
+Allow: /book-demo
+
+# ============================================
+# BLOCKED PATHS (No AI Training Value)
+# ============================================
+# Forms, authentication, and non-content pages
+
 Disallow: /login
 Disallow: /start-building
+Disallow: /book-demo
+Disallow: /contact
+Disallow: /custom-solutions
+Disallow: /careers
+Disallow: /provider/*/join
+Disallow: /provider/*/form
 
-# === Sitemap Location ===
+# Legal pages (low AI value)
+Disallow: /privacy-policy
+Disallow: /terms-conditions
+Disallow: /partner-terms
+
+# ============================================
+# SITEMAP & CRAWL OPTIMIZATION
+# ============================================
+
 Sitemap: https://labstack.in/sitemap.xml
 
-# === Crawl Rate Optimization ===
+# Crawl rate: 1 second delay for respectful crawling
 Crawl-delay: 1
 
-# === Cache Directive ===
+# Cache: 24 hours for better performance
 Cache-Control: public, max-age=86400
 
-# === Key Topics for AI Understanding ===
-# Healthcare Infrastructure, Diagnostics API, Teleconsultation, Pharmacy Delivery
-# Insurers TPA Solutions, Disease Management, Digital Health Platforms
-# Metro to Tier-3 Coverage, Indian Healthcare Compliance (DISHA, IT Act 2000)
+# ============================================
+# SEMANTIC TOPICS FOR AI UNDERSTANDING
+# ============================================
+# Healthcare Infrastructure API | Diagnostics API | Telemedicine Platform
+# Pharmacy Delivery Network | Disease Management Programs
+# Health Insurance OPD Solutions | TPA Claims Automation
+# Digital Health Platform Integration | Provider Network Management
+# Indian Healthcare Compliance: DISHA Act, IT Act 2000, ABDM Integration
+# Coverage: 9,000+ Pincodes | Metro to Tier-3 Cities | Pan-India Healthcare

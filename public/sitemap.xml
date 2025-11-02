@@ -1,44 +1,130 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- GEO-Optimized Sitemap for AI Search Engines -->
+<!-- Priorities: 1.0 = Highest (answer-first pages), 0.8 = Medium (supporting content), 0.3 = Low (legal pages) -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <!-- Homepage -->
+  
+  <!-- HIGH PRIORITY: Homepage & Core Solutions (Answer-first content) -->
   <url>
     <loc>https://labstack.in/</loc>
     <lastmod>2025-02-02</lastmod>
-    <changefreq>weekly</changefreq>
+    <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   
-  <!-- Platform Pages -->
   <url>
     <loc>https://labstack.in/platform-overview</loc>
     <lastmod>2025-01-30</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <priority>1.0</priority>
   </url>
+  
   <url>
-    <loc>https://labstack.in/platform/diagnostics</loc>
+    <loc>https://labstack.in/solutions</loc>
     <lastmod>2025-01-30</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <priority>1.0</priority>
   </url>
+  
+  <url>
+    <loc>https://labstack.in/solutions/api-solutions</loc>
+    <lastmod>2025-01-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  
+  <url>
+    <loc>https://labstack.in/solutions/digital-platform</loc>
+    <lastmod>2025-01-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  
+  <url>
+    <loc>https://labstack.in/solutions/healthcare-infrastructure</loc>
+    <lastmod>2025-01-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  
+  <url>
+    <loc>https://labstack.in/solutions/coverage-expansion</loc>
+    <lastmod>2025-01-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  
+  <!-- HIGH PRIORITY: Target Audiences (Factual use cases with TLDR) -->
+  <url>
+    <loc>https://labstack.in/who-we-serve</loc>
+    <lastmod>2025-01-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <url>
+    <loc>https://labstack.in/who-we-serve/insurers-tpas</loc>
+    <lastmod>2025-02-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <url>
+    <loc>https://labstack.in/who-we-serve/brokers-corporate-wellness</loc>
+    <lastmod>2025-02-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <url>
+    <loc>https://labstack.in/who-we-serve/digital-health-platforms</loc>
+    <lastmod>2025-02-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <url>
+    <loc>https://labstack.in/who-we-serve/disease-management</loc>
+    <lastmod>2025-02-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <url>
+    <loc>https://labstack.in/who-we-serve/providers</loc>
+    <lastmod>2025-02-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <!-- HIGH PRIORITY: Platform Services (Detailed service information) -->
   <url>
     <loc>https://labstack.in/platform/consultations</loc>
     <lastmod>2025-01-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
+  
+  <url>
+    <loc>https://labstack.in/platform/diagnostics</loc>
+    <lastmod>2025-01-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
   <url>
     <loc>https://labstack.in/platform/pharmacy</loc>
     <lastmod>2025-01-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
+  
   <url>
     <loc>https://labstack.in/platform/specialized-networks</loc>
     <lastmod>2025-01-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
+  
   <url>
     <loc>https://labstack.in/platform/integrations</loc>
     <lastmod>2025-01-30</lastmod>
@@ -46,453 +132,295 @@
     <priority>0.8</priority>
   </url>
   
-  <!-- Solutions Pages -->
-  <url>
-    <loc>https://labstack.in/solutions</loc>
-    <lastmod>2025-01-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://labstack.in/solutions/healthcare-infrastructure</loc>
-    <lastmod>2025-01-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://labstack.in/solutions/digital-platform</loc>
-    <lastmod>2025-01-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://labstack.in/solutions/api-solutions</loc>
-    <lastmod>2025-01-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://labstack.in/solutions/coverage-expansion</loc>
-    <lastmod>2025-01-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  
-  <!-- Who We Serve Pages -->
-  <url>
-    <loc>https://labstack.in/who-we-serve</loc>
-    <lastmod>2025-01-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://labstack.in/who-we-serve/insurers-tpas</loc>
-    <lastmod>2025-02-02</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://labstack.in/who-we-serve/brokers-corporate-wellness</loc>
-    <lastmod>2025-02-02</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
+  <!-- MEDIUM PRIORITY: Blog Posts (Authority content with citations) -->
   <url>
     <loc>https://labstack.in/resources/blog</loc>
-    <lastmod>2025-01-30</lastmod>
+    <lastmod>2025-01-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
-  <url>
-    <loc>https://labstack.in/resources/api-documentation-coming-soon</loc>
-    <lastmod>2025-01-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://labstack.in/resources/case-studies/insurer</loc>
-    <lastmod>2025-01-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://labstack.in/resources/case-studies/broker</loc>
-    <lastmod>2025-01-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://labstack.in/resources/case-studies/digital-health</loc>
-    <lastmod>2025-01-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
+  
+  <!-- Insurers Blog Posts -->
   <url>
     <loc>https://labstack.in/resources/blog/insurers-digital-transformation</loc>
-    <lastmod>2025-01-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://labstack.in/resources/blog/insurers-claims-fraud</loc>
-    <lastmod>2025-01-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://labstack.in/resources/blog/insurers-member-retention</loc>
-    <lastmod>2025-01-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://labstack.in/resources/blog/brokers-engagement</loc>
-    <lastmod>2025-01-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://labstack.in/resources/blog/brokers-wellness-roi</loc>
-    <lastmod>2025-01-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://labstack.in/resources/blog/disease-management-chronic</loc>
-    <lastmod>2025-01-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://labstack.in/resources/blog/disease-management-engagement</loc>
-    <lastmod>2025-01-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://labstack.in/resources/blog/digital-health-api</loc>
-    <lastmod>2025-01-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://labstack.in/resources/blog/digital-health-whitelabel-launch</loc>
-    <lastmod>2025-01-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://labstack.in/resources/blog/providers-digital-transformation</loc>
-    <lastmod>2025-01-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://labstack.in/resources/blog/providers-network-partnerships</loc>
-    <lastmod>2025-01-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://labstack.in/who-we-serve/disease-management</loc>
-    <lastmod>2025-01-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://labstack.in/who-we-serve/digital-health-platforms</loc>
-    <lastmod>2025-01-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://labstack.in/who-we-serve/providers</loc>
-    <lastmod>2025-01-30</lastmod>
+    <lastmod>2025-02-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   
-  <!-- Provider Network Pages -->
+  <url>
+    <loc>https://labstack.in/resources/blog/insurers-claims-automation</loc>
+    <lastmod>2025-01-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://labstack.in/resources/blog/insurers-member-retention</loc>
+    <lastmod>2025-01-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://labstack.in/resources/blog/insurers-claims-fraud</loc>
+    <lastmod>2025-01-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://labstack.in/resources/blog/reducing-claims-leakage</loc>
+    <lastmod>2025-01-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Brokers Blog Posts -->
+  <url>
+    <loc>https://labstack.in/resources/blog/brokers-tech</loc>
+    <lastmod>2025-01-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://labstack.in/resources/blog/brokers-engagement</loc>
+    <lastmod>2025-01-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://labstack.in/resources/blog/brokers-wellness-roi</loc>
+    <lastmod>2025-01-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://labstack.in/resources/blog/brokers-multi-employer</loc>
+    <lastmod>2025-01-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Disease Management Blog Posts -->
+  <url>
+    <loc>https://labstack.in/resources/blog/disease-management-chronic</loc>
+    <lastmod>2025-01-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://labstack.in/resources/blog/disease-management-engagement</loc>
+    <lastmod>2025-01-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://labstack.in/resources/blog/disease-management-predictive</loc>
+    <lastmod>2025-01-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://labstack.in/resources/blog/disease-management-behavioral</loc>
+    <lastmod>2025-01-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Digital Health Blog Posts -->
+  <url>
+    <loc>https://labstack.in/resources/blog/digital-health-api</loc>
+    <lastmod>2025-01-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://labstack.in/resources/blog/digital-health-scale</loc>
+    <lastmod>2025-01-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://labstack.in/resources/blog/digital-health-whitelabel</loc>
+    <lastmod>2025-01-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://labstack.in/resources/blog/digital-health-compliance-abdm</loc>
+    <lastmod>2025-01-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://labstack.in/resources/blog/api-first-healthcare</loc>
+    <lastmod>2025-01-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Providers Blog Posts -->
+  <url>
+    <loc>https://labstack.in/resources/blog/providers-digital-transformation</loc>
+    <lastmod>2025-02-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://labstack.in/resources/blog/providers-network</loc>
+    <lastmod>2025-01-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://labstack.in/resources/blog/providers-tech</loc>
+    <lastmod>2025-01-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://labstack.in/resources/blog/providers-network-partnerships</loc>
+    <lastmod>2025-01-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://labstack.in/resources/blog/scaling-tier2-tier3</loc>
+    <lastmod>2025-01-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- MEDIUM PRIORITY: Case Studies (Proof & Citations) -->
+  <url>
+    <loc>https://labstack.in/resources/case-studies/insurer</loc>
+    <lastmod>2025-01-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://labstack.in/resources/case-studies/broker</loc>
+    <lastmod>2025-01-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://labstack.in/resources/case-studies/disease-management</loc>
+    <lastmod>2025-01-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://labstack.in/resources/case-studies/digital-health</loc>
+    <lastmod>2025-01-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- MEDIUM PRIORITY: Resources & Documentation -->
+  <url>
+    <loc>https://labstack.in/resources/api-documentation-coming-soon</loc>
+    <lastmod>2025-01-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <!-- MEDIUM PRIORITY: Provider Network (Trust signals) -->
   <url>
     <loc>https://labstack.in/provider</loc>
     <lastmod>2025-01-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
   </url>
-  <url>
-    <loc>https://labstack.in/provider/join-network</loc>
-    <lastmod>2025-01-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://labstack.in/provider/hospitals-labs</loc>
-    <lastmod>2025-01-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
+  
   <url>
     <loc>https://labstack.in/provider/doctors</loc>
     <lastmod>2025-01-30</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.6</priority>
   </url>
+  
   <url>
     <loc>https://labstack.in/provider/nutritionists-health-coaches</loc>
     <lastmod>2025-01-30</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.6</priority>
   </url>
+  
+  <url>
+    <loc>https://labstack.in/provider/hospitals-labs</loc>
+    <lastmod>2025-01-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
   <url>
     <loc>https://labstack.in/provider/field-staff</loc>
     <lastmod>2025-01-30</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.6</priority>
   </url>
   
-  <!-- Company Pages -->
+  <!-- MEDIUM PRIORITY: Company Pages (Trust & Authority) -->
   <url>
     <loc>https://labstack.in/about</loc>
     <lastmod>2025-01-30</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.6</priority>
   </url>
-  <url>
-    <loc>https://labstack.in/careers</loc>
-    <lastmod>2025-01-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
+  
   <url>
     <loc>https://labstack.in/contact</loc>
     <lastmod>2025-01-30</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://labstack.in/book-demo</loc>
-    <lastmod>2025-01-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://labstack.in/start-building</loc>
-    <lastmod>2025-01-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.5</priority>
   </url>
   
-  <!-- Legal Pages -->
+  <url>
+    <loc>https://labstack.in/careers</loc>
+    <lastmod>2025-01-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <!-- LOW PRIORITY: Legal Pages (Required but not SEO focus) -->
   <url>
     <loc>https://labstack.in/privacy-policy</loc>
-    <lastmod>2025-01-30</lastmod>
+    <lastmod>2025-01-14</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
+  
   <url>
     <loc>https://labstack.in/terms-conditions</loc>
-    <lastmod>2025-01-30</lastmod>
+    <lastmod>2025-01-14</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
+  
   <url>
     <loc>https://labstack.in/partner-terms</loc>
-    <lastmod>2025-01-30</lastmod>
+    <lastmod>2025-01-14</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   
-  <!-- Resources Pages -->
-  <url>
-    <loc>https://labstack.in/resources/blog</loc>
-    <lastmod>2025-01-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://labstack.in/resources/research-hub</loc>
-    <lastmod>2025-01-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://labstack.in/resources/api-documentation</loc>
-    <lastmod>2025-01-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  
-  <!-- Case Studies -->
-  <url>
-    <loc>https://labstack.in/resources/case-studies/insurer</loc>
-    <lastmod>2025-01-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://labstack.in/resources/case-studies/broker</loc>
-    <lastmod>2025-01-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://labstack.in/resources/case-studies/disease-management</loc>
-    <lastmod>2025-01-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://labstack.in/resources/case-studies/digital-health</loc>
-    <lastmod>2025-01-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  
-  <!-- Blog Posts -->
-  <url>
-    <loc>https://labstack.in/resources/blog/scaling-to-tier-2-tier-3-cities</loc>
-    <lastmod>2025-01-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://labstack.in/resources/blog/reducing-opd-claims-leakage</loc>
-    <lastmod>2025-01-22</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://labstack.in/resources/blog/api-first-healthcare-build-vs-buy</loc>
-    <lastmod>2025-03-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://labstack.in/resources/blog/insurers-digital-transformation</loc>
-    <lastmod>2025-05-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://labstack.in/resources/blog/insurers-claims-fraud</loc>
-    <lastmod>2025-09-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://labstack.in/resources/blog/insurers-member-retention</loc>
-    <lastmod>2025-03-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://labstack.in/resources/blog/insurers-claims-automation</loc>
-    <lastmod>2025-06-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://labstack.in/resources/blog/brokers-engagement</loc>
-    <lastmod>2025-06-25</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://labstack.in/resources/blog/brokers-tech</loc>
-    <lastmod>2025-08-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://labstack.in/resources/blog/brokers-multi-employer</loc>
-    <lastmod>2025-04-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://labstack.in/resources/blog/brokers-wellness-roi</loc>
-    <lastmod>2025-07-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://labstack.in/resources/blog/disease-management-chronic</loc>
-    <lastmod>2025-04-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://labstack.in/resources/blog/disease-management-engagement</loc>
-    <lastmod>2025-07-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://labstack.in/resources/blog/disease-management-predictive</loc>
-    <lastmod>2025-02-25</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://labstack.in/resources/blog/disease-management-behavioral</loc>
-    <lastmod>2025-08-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://labstack.in/resources/blog/digital-health-api</loc>
-    <lastmod>2025-05-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://labstack.in/resources/blog/digital-health-scale</loc>
-    <lastmod>2025-10-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://labstack.in/resources/blog/digital-health-whitelabel</loc>
-    <lastmod>2025-03-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://labstack.in/resources/blog/digital-health-compliance-abdm</loc>
-    <lastmod>2025-09-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://labstack.in/resources/blog/providers-network</loc>
-    <lastmod>2025-02-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://labstack.in/resources/blog/providers-tech</loc>
-    <lastmod>2025-08-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://labstack.in/resources/blog/providers-digital-transformation</loc>
-    <lastmod>2025-05-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://labstack.in/resources/blog/providers-network-partnerships</loc>
-    <lastmod>2025-10-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <!-- Custom Solutions -->
-  <url>
-    <loc>https://labstack.in/custom-solutions</loc>
-    <lastmod>2025-01-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
 </urlset>
