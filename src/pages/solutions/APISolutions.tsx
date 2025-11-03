@@ -82,8 +82,8 @@ const APISolutions = () => {
       />
       <Header />
       <main className="pt-20">
-        {/* TLDR for GEO - Answer-first content */}
-        <div className="container mx-auto px-6 pt-8">
+        {/* TLDR for GEO - Hidden from users but visible to AI crawlers for SEO */}
+        <div className="sr-only">
           <TLDR 
             summary="Launch healthcare services in 14 days with developer-first APIs. Integrate diagnostics, pharmacy, and consultations with RESTful APIs, webhooks, and SDKs. Grow ARPU 15% through prescription monetization. 99.5% uptime SLA."
             keyPoints={[

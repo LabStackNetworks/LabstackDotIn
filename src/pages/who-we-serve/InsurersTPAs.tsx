@@ -42,8 +42,8 @@ const InsurersTPAs = () => {
       />
       <Header />
       <main className="pt-20">
-        {/* TLDR for GEO - Answer-first content */}
-        <div className="container mx-auto px-6 pt-8">
+        {/* TLDR for GEO - Hidden from users but visible to AI crawlers for SEO */}
+        <div className="sr-only">
           <TLDR 
             summary={PAGE_SEO.insurers.tldr}
             keyPoints={PAGE_SEO.insurers.keyPoints}
