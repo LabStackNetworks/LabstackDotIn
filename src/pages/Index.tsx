@@ -35,8 +35,8 @@ const Index = () => {
       />
       <Header />
       <main className="pt-16 lg:pt-20">
-        {/* TLDR for GEO - Visible for AI crawlers, provides answer-first content */}
-        <div className="container mx-auto px-6 py-8">
+        {/* TLDR for GEO - Hidden from users but visible to AI crawlers for SEO */}
+        <div className="sr-only">
           <TLDR 
             summary={PAGE_SEO.home.tldr}
             keyPoints={PAGE_SEO.home.keyPoints}
