@@ -27,7 +27,7 @@ const DigitalHealthWhitelabel = () => {
           <div className="flex items-center gap-4 text-sm text-muted-foreground">
             <time dateTime="2025-09-08">September 8, 2025</time>
             <span>•</span>
-            <span>10 min read</span>
+            <span>8 min read</span>
           </div>
         </header>
 

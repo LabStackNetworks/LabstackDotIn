@@ -25,9 +25,9 @@ const BrokersTech = () => {
             How tech-enabled brokers are serving 3x more clients with 40% lower operational costs
           </p>
           <div className="flex items-center gap-4 text-sm text-muted-foreground">
-            <time dateTime="2025-01-22">January 22, 2025</time>
+            <time dateTime="2025-03-12">March 12, 2025</time>
             <span>•</span>
-            <span>11 min read</span>
+            <span>9 min read</span>
           </div>
         </header>
 

@@ -27,7 +27,7 @@ const DiseaseManagementBehavioral = () => {
           <div className="flex items-center gap-4 text-sm text-muted-foreground">
             <time dateTime="2025-08-12">August 12, 2025</time>
             <span>•</span>
-            <span>10 min read</span>
+            <span>8 min read</span>
           </div>
         </header>
 

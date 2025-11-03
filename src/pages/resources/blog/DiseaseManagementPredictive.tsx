@@ -25,9 +25,9 @@ const DiseaseManagementPredictive = () => {
             AI identifies high-risk members 6-12 months before complications, enabling proactive interventions that reduce hospitalizations by 45%
           </p>
           <div className="flex items-center gap-4 text-sm text-muted-foreground">
-            <time dateTime="2025-02-25">February 25, 2025</time>
+            <time dateTime="2025-06-14">June 14, 2025</time>
             <span>•</span>
-            <span>9 min read</span>
+            <span>7 min read</span>
           </div>
         </header>
 

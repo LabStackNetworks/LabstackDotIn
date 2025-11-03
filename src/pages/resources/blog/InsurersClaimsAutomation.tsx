@@ -27,7 +27,7 @@ const InsurersClaimsAutomation = () => {
           <div className="flex items-center gap-4 text-sm text-muted-foreground">
             <time dateTime="2025-06-10">June 10, 2025</time>
             <span>•</span>
-            <span>11 min read</span>
+            <span>9 min read</span>
           </div>
         </header>
 

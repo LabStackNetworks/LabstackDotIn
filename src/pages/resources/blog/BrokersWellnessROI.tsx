@@ -27,7 +27,7 @@ const BrokersWellnessROI = () => {
           <div className="flex items-center gap-4 text-sm text-muted-foreground">
             <time dateTime="2025-07-18">July 18, 2025</time>
             <span>•</span>
-            <span>11 min read</span>
+            <span>9 min read</span>
           </div>
         </header>
 

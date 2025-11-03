@@ -25,9 +25,9 @@ const DiseaseManagementEngagement = () => {
             Proven strategies to drive enrollment, maintain engagement, and achieve sustained behavior change in chronic disease programs
           </p>
           <div className="flex items-center gap-4 text-sm text-muted-foreground">
-            <time dateTime="2025-01-28">January 28, 2025</time>
+            <time dateTime="2025-05-20">May 20, 2025</time>
             <span>•</span>
-            <span>11 min read</span>
+            <span>9 min read</span>
           </div>
         </header>
 

@@ -25,9 +25,9 @@ const ProvidersNetwork = () => {
             How providers increase patient volumes and revenue through network partnerships
           </p>
           <div className="flex items-center gap-4 text-sm text-muted-foreground">
-            <time dateTime="2025-01-19">January 19, 2025</time>
+            <time dateTime="2025-02-22">February 22, 2025</time>
             <span>•</span>
-            <span>8 min read</span>
+            <span>6 min read</span>
           </div>
         </header>
 

@@ -25,9 +25,9 @@ const BrokersEngagement = () => {
             How top brokers are using wellness platforms to win corporate accounts and reduce claims by 20%
           </p>
           <div className="flex items-center gap-4 text-sm text-muted-foreground">
-            <time dateTime="2025-01-18">January 18, 2025</time>
+            <time dateTime="2025-02-15">February 15, 2025</time>
             <span>•</span>
-            <span>9 min read</span>
+            <span>7 min read</span>
           </div>
         </header>
 

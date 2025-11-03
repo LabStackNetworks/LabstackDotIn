@@ -22,9 +22,9 @@ const ScalingToTier2Tier3 = () => {
               Scaling Healthcare to <span className="text-gradient">Tier-2/3 Cities</span>: A Practical Guide
             </h1>
             <div className="flex items-center gap-6 text-sm text-muted-foreground mb-8">
-              <span>December 15, 2024</span>
+              <span>August 25, 2025</span>
               <span>•</span>
-              <span>8 min read</span>
+              <span>7 min read</span>
               <span>•</span>
               <span>By Healthcare Strategy Team</span>
             </div>

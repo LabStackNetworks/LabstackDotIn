@@ -21,9 +21,9 @@ const APIFirstHealthcare = () => {
               API-First Healthcare: Why <span className="text-gradient">Build vs Buy</span> Is No Longer a Question
             </h1>
             <div className="flex items-center gap-6 text-sm text-muted-foreground mb-8">
-              <span>December 10, 2024</span>
+              <span>January 10, 2025</span>
               <span>•</span>
-              <span>10 min read</span>
+              <span>8 min read</span>
               <span>•</span>
               <span>By Platform Engineering Team</span>
             </div>

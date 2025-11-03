@@ -25,9 +25,9 @@ const DigitalHealthAPI = () => {
             Launch healthcare services in 14 days, not 14 months, with plug-and-play APIs
           </p>
           <div className="flex items-center gap-4 text-sm text-muted-foreground">
-            <time dateTime="2025-01-12">January 12, 2025</time>
+            <time dateTime="2025-01-25">January 25, 2025</time>
             <span>•</span>
-            <span>9 min read</span>
+            <span>6 min read</span>
           </div>
         </header>
 

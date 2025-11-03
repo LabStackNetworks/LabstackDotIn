@@ -25,9 +25,9 @@ const ProvidersTech = () => {
             How technology reduces admin work by 50% and improves patient care
           </p>
           <div className="flex items-center gap-4 text-sm text-muted-foreground">
-            <time dateTime="2025-01-23">January 23, 2025</time>
+            <time dateTime="2025-05-05">May 5, 2025</time>
             <span>•</span>
-            <span>7 min read</span>
+            <span>6 min read</span>
           </div>
         </header>
 

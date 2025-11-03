@@ -27,7 +27,7 @@ const BrokersMultiEmployer = () => {
           <div className="flex items-center gap-4 text-sm text-muted-foreground">
             <time dateTime="2025-04-20">April 20, 2025</time>
             <span>•</span>
-            <span>10 min read</span>
+            <span>8 min read</span>
           </div>
         </header>
 

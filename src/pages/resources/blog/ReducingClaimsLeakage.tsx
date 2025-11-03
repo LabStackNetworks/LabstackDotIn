@@ -25,9 +25,9 @@ const ReducingClaimsLeakage = () => {
             How leading insurers cut OPD leakage by 12-15% with smart controls and real-time monitoring
           </p>
           <div className="flex items-center gap-4 text-sm text-muted-foreground">
-            <time dateTime="2025-03-15">March 15, 2025</time>
+            <time dateTime="2025-07-30">July 30, 2025</time>
             <span>•</span>
-            <span>9 min read</span>
+            <span>7 min read</span>
           </div>
         </header>
 

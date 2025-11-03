@@ -25,9 +25,9 @@ const InsurersClaimsFraud = () => {
             How insurers are using data analytics to prevent fraud and reduce claims leakage by ₹15-20 Cr annually
           </p>
           <div className="flex items-center gap-4 text-sm text-muted-foreground">
-            <time dateTime="2025-01-20">January 20, 2025</time>
+            <time dateTime="2025-03-28">March 28, 2025</time>
             <span>•</span>
-            <span>10 min read</span>
+            <span>8 min read</span>
           </div>
         </header>
 

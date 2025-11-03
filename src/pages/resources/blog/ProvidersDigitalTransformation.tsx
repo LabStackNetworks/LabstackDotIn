@@ -27,7 +27,7 @@ const ProvidersDigitalTransformation = () => {
           <div className="flex items-center gap-4 text-sm text-muted-foreground">
             <time dateTime="2025-05-14">May 14, 2025</time>
             <span>•</span>
-            <span>11 min read</span>
+            <span>9 min read</span>
           </div>
         </header>
 

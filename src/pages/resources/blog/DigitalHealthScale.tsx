@@ -25,9 +25,9 @@ const DigitalHealthScale = () => {
             Expand beyond metros with proven infrastructure and network coverage
           </p>
           <div className="flex items-center gap-4 text-sm text-muted-foreground">
-            <time dateTime="2025-01-16">January 16, 2025</time>
+            <time dateTime="2025-02-05">February 5, 2025</time>
             <span>•</span>
-            <span>7 min read</span>
+            <span>5 min read</span>
           </div>
         </header>
 

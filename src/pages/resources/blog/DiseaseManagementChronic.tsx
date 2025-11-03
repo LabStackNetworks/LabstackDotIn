@@ -25,9 +25,9 @@ const DiseaseManagementChronic = () => {
             How digital disease management programs are improving outcomes and reducing costs for diabetes, hypertension, and cardiac conditions
           </p>
           <div className="flex items-center gap-4 text-sm text-muted-foreground">
-            <time dateTime="2025-01-25">January 25, 2025</time>
+            <time dateTime="2025-04-08">April 8, 2025</time>
             <span>•</span>
-            <span>12 min read</span>
+            <span>10 min read</span>
           </div>
         </header>
 
