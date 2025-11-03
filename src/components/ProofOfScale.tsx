@@ -16,7 +16,7 @@ const ProofOfScale = () => {
     },
     {
       icon: MapPin,
-      value: "9,000+",
+      value: "10,000+",
       label: "pincodes covered", 
       description: "From metros to tier-3 cities",
       color: "text-secondary"
@@ -40,8 +40,8 @@ const ProofOfScale = () => {
   const coverageStats = [
     { region: "Metro Cities", coverage: "100%", color: "bg-primary" },
     { region: "Tier-1 Cities", coverage: "95%", color: "bg-secondary" },
-    { region: "Tier-2 Cities", coverage: "85%", color: "bg-success" },
-    { region: "Tier-3 Cities", coverage: "70%", color: "bg-warning" }
+    { region: "Tier-2 Cities", coverage: "80%", color: "bg-success" },
+    { region: "Tier-3 Cities", coverage: "60%", color: "bg-warning" }
   ];
 
   return (
@@ -88,101 +88,58 @@ const ProofOfScale = () => {
             {/* Map Visualization */}
             <div className="relative">
               <div className="bg-card-gradient rounded-2xl p-8 border border-border/50 overflow-hidden">
-                <div className="relative h-80 bg-muted/30 rounded-xl flex items-center justify-center mb-6">
-                  {/* India Map with Healthcare Hotspots */}
-                  <div className="relative w-full h-full flex items-center justify-center">
-                    <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-xl opacity-50"></div>
-                    
-                    {/* Major Healthcare Hotspots across India */}
-                    {/* Delhi/NCR */}
-                    <div className="absolute top-[25%] left-[40%] group">
-                      <div className="w-4 h-4 bg-primary rounded-full animate-pulse-subtle glow-primary cursor-pointer"></div>
-                      <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 bg-card text-xs px-2 py-1 rounded shadow-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
-                        Delhi NCR - 500+ Centers
+                <div className="relative h-80 bg-muted/30 rounded-xl overflow-hidden mb-6">
+                  {/* Google Maps Static Image with pins across India */}
+                  <img 
+                    src="https://maps.googleapis.com/maps/api/staticmap?center=22.5,78.9&zoom=5&size=640x640&maptype=roadmap&markers=color:red%7C28.6139,77.2090&markers=color:red%7C19.0760,72.8777&markers=color:red%7C13.0827,80.2707&markers=color:red%7C12.9716,77.5946&markers=color:red%7C22.5726,88.3639&markers=color:red%7C17.3850,78.4867&markers=color:red%7C18.5204,73.8567&markers=color:red%7C23.0225,72.5714&markers=color:red%7C26.9124,75.7873&markers=color:red%7C21.1458,79.0882&markers=color:red%7C15.2993,74.1240&markers=color:red%7C25.5941,85.1376&markers=color:red%7C11.0168,76.9558&markers=color:red%7C23.2599,77.4126&markers=color:red%7C30.7333,76.7794&markers=color:red%7C26.8467,80.9462&markers=color:red%7C22.7196,75.8577&markers=color:red%7C31.1048,77.1734&markers=color:red%7C10.8505,76.2711&markers=color:red%7C25.4358,81.8463&markers=color:blue%7C27.1767,78.0081&markers=color:blue%7C24.5854,73.7125&markers=color:blue%7C16.7050,74.2433&markers=color:blue%7C20.5937,78.9629&markers=color:blue%7C19.9975,73.7898&markers=color:blue%7C28.4595,77.0266&markers=color:blue%7C22.3072,73.1812&markers=color:blue%7C15.8281,74.4978&markers=color:blue%7C14.6819,77.5985&markers=color:blue%7C23.8103,91.2821&markers=color:green%7C24.7914,85.0002&markers=color:green%7C25.3176,82.9739&markers=color:green%7C29.9457,78.1642&markers=color:green%7C21.2514,81.6296&markers=color:green%7C23.3441,85.3096&markers=color:green%7C18.1124,83.3975&markers=color:green%7C14.4426,79.9865&markers=color:green%7C12.2958,76.6394&markers=color:green%7C27.5706,95.3174&markers=color:green%7C26.4499,87.2843&key=AIzaSyDummyKeyForVisualizationPurposes" 
+                    alt="India coverage map showing 10000+ pincodes"
+                    className="w-full h-full object-cover rounded-xl"
+                    loading="lazy"
+                    onError={(e) => {
+                      // Fallback to original visualization if Google Maps fails to load
+                      e.currentTarget.style.display = 'none';
+                      const fallback = e.currentTarget.nextElementSibling as HTMLElement;
+                      if (fallback) fallback.style.display = 'flex';
+                    }}
+                  />
+                  {/* Fallback visualization if Google Maps doesn't load */}
+                  <div className="absolute inset-0 hidden items-center justify-center">
+                    <div className="relative w-full h-full flex items-center justify-center">
+                      <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-xl opacity-50"></div>
+                      
+                      {/* Simplified pin visualization */}
+                      <div className="absolute top-[25%] left-[40%]">
+                        <div className="w-3 h-3 bg-primary rounded-full animate-pulse-subtle"></div>
+                      </div>
+                      <div className="absolute top-[45%] left-[20%]">
+                        <div className="w-3 h-3 bg-secondary rounded-full animate-pulse-subtle"></div>
+                      </div>
+                      <div className="absolute bottom-[25%] left-[30%]">
+                        <div className="w-3 h-3 bg-success rounded-full animate-pulse-subtle"></div>
+                      </div>
+                      <div className="absolute bottom-[20%] left-[35%]">
+                        <div className="w-3 h-3 bg-warning rounded-full animate-pulse-subtle"></div>
+                      </div>
+                      <div className="absolute top-[35%] right-[25%]">
+                        <div className="w-3 h-3 bg-primary rounded-full animate-pulse-subtle"></div>
+                      </div>
+                      
+                      <div className="text-center z-10">
+                        <MapPin className="w-12 h-12 text-primary mx-auto mb-2" />
+                        <div className="text-sm font-medium text-muted-foreground">
+                          10,000+ Pincodes Covered
+                        </div>
+                        <div className="text-xs text-muted-foreground/70 mt-1">
+                          Pan-India Healthcare Network
+                        </div>
                       </div>
                     </div>
-                    
-                    {/* Mumbai */}
-                    <div className="absolute top-[45%] left-[20%] group">
-                      <div className="w-4 h-4 bg-secondary rounded-full animate-pulse-subtle glow-secondary cursor-pointer"></div>
-                      <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 bg-card text-xs px-2 py-1 rounded shadow-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
-                        Mumbai - 400+ Centers
-                      </div>
-                    </div>
-                    
-                    {/* Bangalore */}
-                    <div className="absolute bottom-[25%] left-[30%] group">
-                      <div className="w-4 h-4 bg-success rounded-full animate-pulse-subtle cursor-pointer"></div>
-                      <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 bg-card text-xs px-2 py-1 rounded shadow-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
-                        Bangalore - 350+ Centers
-                      </div>
-                    </div>
-                    
-                    {/* Chennai */}
-                    <div className="absolute bottom-[20%] left-[35%] group">
-                      <div className="w-4 h-4 bg-warning rounded-full animate-pulse-subtle cursor-pointer"></div>
-                      <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 bg-card text-xs px-2 py-1 rounded shadow-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
-                        Chennai - 300+ Centers
-                      </div>
-                    </div>
-                    
-                    {/* Kolkata */}
-                    <div className="absolute top-[35%] right-[25%] group">
-                      <div className="w-4 h-4 bg-primary rounded-full animate-pulse-subtle cursor-pointer"></div>
-                      <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 bg-card text-xs px-2 py-1 rounded shadow-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
-                        Kolkata - 250+ Centers
-                      </div>
-                    </div>
-                    
-                    {/* Hyderabad */}
-                    <div className="absolute bottom-[35%] left-[45%] group">
-                      <div className="w-4 h-4 bg-secondary rounded-full animate-pulse-subtle cursor-pointer"></div>
-                      <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 bg-card text-xs px-2 py-1 rounded shadow-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
-                        Hyderabad - 200+ Centers
-                      </div>
-                    </div>
-                    
-                    {/* Pune */}
-                    <div className="absolute top-[50%] left-[25%] group">
-                      <div className="w-3 h-3 bg-success rounded-full animate-pulse-subtle cursor-pointer"></div>
-                      <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 bg-card text-xs px-2 py-1 rounded shadow-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
-                        Pune - 180+ Centers
-                      </div>
-                    </div>
-                    
-                    {/* Ahmedabad */}
-                    <div className="absolute top-[40%] left-[15%] group">
-                      <div className="w-3 h-3 bg-warning rounded-full animate-pulse-subtle cursor-pointer"></div>
-                      <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 bg-card text-xs px-2 py-1 rounded shadow-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
-                        Ahmedabad - 150+ Centers
-                      </div>
-                    </div>
-                    
-                    {/* Connecting lines animation */}
-                    <svg className="absolute inset-0 w-full h-full pointer-events-none opacity-30">
-                      <defs>
-                        <linearGradient id="connectionGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                          <stop offset="0%" stopColor="hsl(var(--primary))" />
-                          <stop offset="100%" stopColor="hsl(var(--secondary))" />
-                        </linearGradient>
-                      </defs>
-                      <path d="M 32% 25% Q 40% 35% 48% 45%" stroke="url(#connectionGradient)" strokeWidth="1" fill="none" strokeDasharray="5,5">
-                        <animate attributeName="stroke-dashoffset" values="0;10" dur="2s" repeatCount="indefinite"/>
-                      </path>
-                      <path d="M 20% 45% Q 35% 40% 48% 35%" stroke="url(#connectionGradient)" strokeWidth="1" fill="none" strokeDasharray="5,5">
-                        <animate attributeName="stroke-dashoffset" values="10;0" dur="2s" repeatCount="indefinite"/>
-                      </path>
-                    </svg>
-                    
-                    <div className="text-center z-10">
-                      <MapPin className="w-12 h-12 text-primary mx-auto mb-2" />
-                      <div className="text-sm font-medium text-muted-foreground">
-                        Healthcare Network Across India
-                      </div>
-                      <div className="text-xs text-muted-foreground/70 mt-1">
-                        2,600+ Active Service Centers
-                      </div>
-                    </div>
+                  </div>
+                  
+                  {/* Overlay badge showing pincode coverage */}
+                  <div className="absolute top-4 right-4 bg-primary/90 backdrop-blur-sm text-white px-4 py-2 rounded-lg shadow-lg">
+                    <div className="text-xs font-medium">Pincode Coverage</div>
+                    <div className="text-lg font-bold">10,000+</div>
                   </div>
                 </div>
                 
