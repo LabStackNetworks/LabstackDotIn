@@ -97,106 +97,51 @@ const ProofOfScale = () => {
                     loading="lazy"
                   />
                   
-                  {/* Red Pin Overlays - Major Cities */}
-                  {/* Delhi NCR */}
-                  <div className="absolute top-[28%] left-[42%]">
-                    <MapPin className="w-5 h-5 text-red-600 fill-red-600 drop-shadow-lg animate-pulse-subtle" />
-                  </div>
-                  
-                  {/* Mumbai */}
-                  <div className="absolute top-[52%] left-[22%]">
-                    <MapPin className="w-5 h-5 text-red-600 fill-red-600 drop-shadow-lg animate-pulse-subtle" />
-                  </div>
-                  
-                  {/* Bangalore */}
-                  <div className="absolute bottom-[22%] left-[28%]">
-                    <MapPin className="w-5 h-5 text-red-600 fill-red-600 drop-shadow-lg animate-pulse-subtle" />
-                  </div>
-                  
-                  {/* Chennai */}
-                  <div className="absolute bottom-[18%] left-[35%]">
-                    <MapPin className="w-5 h-5 text-red-600 fill-red-600 drop-shadow-lg animate-pulse-subtle" />
-                  </div>
-                  
-                  {/* Kolkata */}
-                  <div className="absolute top-[38%] right-[22%]">
-                    <MapPin className="w-5 h-5 text-red-600 fill-red-600 drop-shadow-lg animate-pulse-subtle" />
-                  </div>
-                  
-                  {/* Hyderabad */}
-                  <div className="absolute bottom-[35%] left-[32%]">
-                    <MapPin className="w-5 h-5 text-red-600 fill-red-600 drop-shadow-lg animate-pulse-subtle" />
-                  </div>
-                  
-                  {/* Pune */}
-                  <div className="absolute top-[54%] left-[26%]">
-                    <MapPin className="w-4 h-4 text-red-600 fill-red-600 drop-shadow-lg animate-pulse-subtle" />
-                  </div>
-                  
-                  {/* Ahmedabad */}
-                  <div className="absolute top-[44%] left-[18%]">
-                    <MapPin className="w-4 h-4 text-red-600 fill-red-600 drop-shadow-lg animate-pulse-subtle" />
-                  </div>
-                  
-                  {/* Jaipur */}
-                  <div className="absolute top-[36%] left-[28%]">
-                    <MapPin className="w-4 h-4 text-red-600 fill-red-600 drop-shadow-lg animate-pulse-subtle" />
-                  </div>
-                  
-                  {/* Lucknow */}
-                  <div className="absolute top-[32%] left-[36%]">
-                    <MapPin className="w-4 h-4 text-red-600 fill-red-600 drop-shadow-lg animate-pulse-subtle" />
-                  </div>
-                  
-                  {/* Chandigarh */}
-                  <div className="absolute top-[24%] left-[35%]">
-                    <MapPin className="w-4 h-4 text-red-600 fill-red-600 drop-shadow-lg animate-pulse-subtle" />
-                  </div>
-                  
-                  {/* Bhopal */}
-                  <div className="absolute top-[48%] left-[32%]">
-                    <MapPin className="w-4 h-4 text-red-600 fill-red-600 drop-shadow-lg animate-pulse-subtle" />
-                  </div>
-                  
-                  {/* Patna */}
-                  <div className="absolute top-[35%] left-[40%]">
-                    <MapPin className="w-4 h-4 text-red-600 fill-red-600 drop-shadow-lg animate-pulse-subtle" />
-                  </div>
-                  
-                  {/* Guwahati */}
-                  <div className="absolute top-[35%] right-[12%]">
-                    <MapPin className="w-4 h-4 text-red-600 fill-red-600 drop-shadow-lg animate-pulse-subtle" />
-                  </div>
-                  
-                  {/* Kochi */}
-                  <div className="absolute bottom-[12%] left-[24%]">
-                    <MapPin className="w-4 h-4 text-red-600 fill-red-600 drop-shadow-lg animate-pulse-subtle" />
-                  </div>
-                  
-                  {/* Indore */}
-                  <div className="absolute top-[46%] left-[27%]">
-                    <MapPin className="w-3 h-3 text-red-600 fill-red-600 drop-shadow-lg animate-pulse-subtle" />
-                  </div>
-                  
-                  {/* Nagpur */}
-                  <div className="absolute top-[50%] left-[33%]">
-                    <MapPin className="w-3 h-3 text-red-600 fill-red-600 drop-shadow-lg animate-pulse-subtle" />
-                  </div>
-                  
-                  {/* Surat */}
-                  <div className="absolute top-[50%] left-[20%]">
-                    <MapPin className="w-3 h-3 text-red-600 fill-red-600 drop-shadow-lg animate-pulse-subtle" />
-                  </div>
-                  
-                  {/* Visakhapatnam */}
-                  <div className="absolute top-[45%] right-[28%]">
-                    <MapPin className="w-3 h-3 text-red-600 fill-red-600 drop-shadow-lg animate-pulse-subtle" />
-                  </div>
-                  
-                  {/* Coimbatore */}
-                  <div className="absolute bottom-[25%] left-[29%]">
-                    <MapPin className="w-3 h-3 text-red-600 fill-red-600 drop-shadow-lg animate-pulse-subtle" />
-                  </div>
+                  {/* Dense Pin Coverage - Brand Colors (Purple & Blue) */}
+                  {/* Generate numerous pins across India */}
+                  {Array.from({ length: 120 }).map((_, index) => {
+                    // Distribute pins across India's geography
+                    // North: 15-35% vertical, 30-50% horizontal
+                    // South: 60-90% vertical, 20-40% horizontal
+                    // East: 30-60% vertical, 60-80% horizontal
+                    // West: 30-70% vertical, 10-30% horizontal
+                    // Central: 35-65% vertical, 30-45% horizontal
+                    
+                    const regions = [
+                      // North India
+                      { top: 15 + Math.random() * 20, left: 30 + Math.random() * 20 },
+                      // South India
+                      { top: 60 + Math.random() * 30, left: 20 + Math.random() * 20 },
+                      // East India
+                      { top: 30 + Math.random() * 30, left: 60 + Math.random() * 20 },
+                      // West India
+                      { top: 30 + Math.random() * 40, left: 10 + Math.random() * 20 },
+                      // Central India
+                      { top: 35 + Math.random() * 30, left: 30 + Math.random() * 15 },
+                    ];
+                    
+                    const region = regions[index % regions.length];
+                    const isPurple = index % 2 === 0;
+                    const size = index % 5 === 0 ? 'w-2.5 h-2.5' : 'w-2 h-2';
+                    
+                    return (
+                      <div 
+                        key={index}
+                        className="absolute"
+                        style={{ 
+                          top: `${region.top}%`, 
+                          left: `${region.left}%`,
+                          animationDelay: `${index * 0.03}s`
+                        }}
+                      >
+                        <div className={`${size} rounded-full ${
+                          isPurple 
+                            ? 'bg-purple-600 shadow-[0_0_8px_rgba(139,92,246,0.6)]' 
+                            : 'bg-cyan-500 shadow-[0_0_8px_rgba(14,165,233,0.6)]'
+                        } animate-pulse-subtle`} />
+                      </div>
+                    );
+                  })}
                 </div>
                 
                 <div className="bg-primary/10 border border-primary/20 rounded-xl p-4">
