@@ -207,7 +207,7 @@ const DigitalHealthCaseStudy = () => {
               <Link to="/book-demo">Book a Demo</Link>
             </Button>
             <Button asChild variant="outline" size="lg">
-              <Link to="/resources/api-documentation">View API Docs</Link>
+              <Link to="/resources/api-documentation-coming-soon">View API Docs</Link>
             </Button>
           </div>
         </div>

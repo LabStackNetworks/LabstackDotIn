@@ -155,7 +155,7 @@ const Header = () => {
             items: [
               { label: "Blog / Knowledge Hub", href: "/resources/blog", description: "Healthcare insights & trends" },
               { label: "Research & Case Studies", href: "/resources/research-hub", description: "Success stories & research" },
-              { label: "API Documentation", href: "/resources/api-documentation", description: "Technical documentation" }
+              { label: "API Documentation", href: "/resources/api-documentation-coming-soon", description: "Technical documentation" }
             ]
           }
         ]
@@ -183,7 +183,7 @@ const Header = () => {
           {
             title: "Legal & Utilities",
             items: [
-              { label: "API Docs", href: "#api-docs", description: "Technical documentation" },
+              { label: "API Docs", href: "/resources/api-documentation-coming-soon", description: "Technical documentation" },
               { label: "Privacy Policy", href: "/privacy-policy", description: "Data protection policy" },
               { label: "Terms of Service", href: "/terms-conditions", description: "Service terms" },
               { label: "Partner Terms", href: "/partner-terms", description: "Partnership conditions" },

@@ -363,7 +363,7 @@ const APIFirstHealthcare = () => {
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
               </Link>
-              <Link to="/resources/api-documentation">
+              <Link to="/resources/api-documentation-coming-soon">
                 <Button size="lg" variant="outline" className="btn-outline-gradient">
                   View API Docs
                 </Button>

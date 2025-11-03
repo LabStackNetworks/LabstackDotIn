@@ -187,7 +187,7 @@ const PlatformOverview = () => {
                   </div>
                 </div>
               </div>
-              <Link to="/platform/integrations">
+              <Link to="/resources/api-documentation-coming-soon">
                 <Button size="lg" className="btn-gradient">
                   Request API Access
                   <ArrowRight className="ml-2 h-5 w-5" />

@@ -42,7 +42,7 @@ const Integrations = () => {
                     <ArrowRight className="ml-2 h-5 w-5" />
                   </Button>
                 </Link>
-              <Link to="/contact">
+              <Link to="/resources/api-documentation-coming-soon">
                   <Button size="lg" variant="outline">
                     Request API Access
                   </Button>
@@ -168,7 +168,7 @@ const Integrations = () => {
                   </div>
                 ))}
               </div>
-              <Link to="/contact">
+              <Link to="/resources/api-documentation-coming-soon">
                 <Button size="lg" className="btn-gradient">
                   Request API Access
                   <ArrowRight className="ml-2 h-5 w-5" />
@@ -227,7 +227,7 @@ const Integrations = () => {
                 Launch healthcare services without integration nightmares.
               </h2>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link to="/contact">
+                <Link to="/resources/api-documentation-coming-soon">
                   <Button size="lg" className="btn-gradient">
                     Request API Access
                   </Button>
