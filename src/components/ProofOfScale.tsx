@@ -88,35 +88,114 @@ const ProofOfScale = () => {
             {/* Map Visualization */}
             <div className="relative">
               <div className="bg-card-gradient rounded-2xl p-8 border border-border/50 overflow-hidden">
-                <div className="relative h-80 bg-muted/30 rounded-xl overflow-hidden mb-6">
-                  {/* Google Maps Static Image of India */}
+                <div className="relative h-80 rounded-xl overflow-hidden mb-6">
+                  {/* India Map Background */}
                   <img 
-                    src="https://maps.googleapis.com/maps/api/staticmap?center=22.5,78.9&zoom=4&size=640x640&maptype=roadmap&style=feature:all|element:labels|visibility:off&style=feature:water|element:geometry|color:0x193341&style=feature:landscape|element:geometry|color:0xf5f5f5&style=feature:administrative.country|element:geometry.stroke|color:0x262626|weight:1&key=AIzaSyDummyKeyForVisualizationPurposes" 
+                    src="/india-map.png" 
                     alt="India map showing nationwide healthcare coverage"
                     className="w-full h-full object-cover rounded-xl"
                     loading="lazy"
-                    onError={(e) => {
-                      // Fallback to visualization if Google Maps fails to load
-                      e.currentTarget.style.display = 'none';
-                      const fallback = e.currentTarget.nextElementSibling as HTMLElement;
-                      if (fallback) fallback.style.display = 'flex';
-                    }}
                   />
-                  {/* Fallback visualization if Google Maps doesn't load */}
-                  <div className="absolute inset-0 hidden items-center justify-center">
-                    <div className="relative w-full h-full flex items-center justify-center">
-                      <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-xl opacity-50"></div>
-                      
-                      <div className="text-center z-10">
-                        <MapPin className="w-12 h-12 text-primary mx-auto mb-2" />
-                        <div className="text-sm font-medium text-muted-foreground">
-                          Pan-India Healthcare Network
-                        </div>
-                        <div className="text-xs text-muted-foreground/70 mt-1">
-                          Nationwide Coverage
-                        </div>
-                      </div>
-                    </div>
+                  
+                  {/* Red Pin Overlays - Major Cities */}
+                  {/* Delhi NCR */}
+                  <div className="absolute top-[28%] left-[42%]">
+                    <MapPin className="w-5 h-5 text-red-600 fill-red-600 drop-shadow-lg animate-pulse-subtle" />
+                  </div>
+                  
+                  {/* Mumbai */}
+                  <div className="absolute top-[52%] left-[22%]">
+                    <MapPin className="w-5 h-5 text-red-600 fill-red-600 drop-shadow-lg animate-pulse-subtle" />
+                  </div>
+                  
+                  {/* Bangalore */}
+                  <div className="absolute bottom-[22%] left-[28%]">
+                    <MapPin className="w-5 h-5 text-red-600 fill-red-600 drop-shadow-lg animate-pulse-subtle" />
+                  </div>
+                  
+                  {/* Chennai */}
+                  <div className="absolute bottom-[18%] left-[35%]">
+                    <MapPin className="w-5 h-5 text-red-600 fill-red-600 drop-shadow-lg animate-pulse-subtle" />
+                  </div>
+                  
+                  {/* Kolkata */}
+                  <div className="absolute top-[38%] right-[22%]">
+                    <MapPin className="w-5 h-5 text-red-600 fill-red-600 drop-shadow-lg animate-pulse-subtle" />
+                  </div>
+                  
+                  {/* Hyderabad */}
+                  <div className="absolute bottom-[35%] left-[32%]">
+                    <MapPin className="w-5 h-5 text-red-600 fill-red-600 drop-shadow-lg animate-pulse-subtle" />
+                  </div>
+                  
+                  {/* Pune */}
+                  <div className="absolute top-[54%] left-[26%]">
+                    <MapPin className="w-4 h-4 text-red-600 fill-red-600 drop-shadow-lg animate-pulse-subtle" />
+                  </div>
+                  
+                  {/* Ahmedabad */}
+                  <div className="absolute top-[44%] left-[18%]">
+                    <MapPin className="w-4 h-4 text-red-600 fill-red-600 drop-shadow-lg animate-pulse-subtle" />
+                  </div>
+                  
+                  {/* Jaipur */}
+                  <div className="absolute top-[36%] left-[28%]">
+                    <MapPin className="w-4 h-4 text-red-600 fill-red-600 drop-shadow-lg animate-pulse-subtle" />
+                  </div>
+                  
+                  {/* Lucknow */}
+                  <div className="absolute top-[32%] left-[36%]">
+                    <MapPin className="w-4 h-4 text-red-600 fill-red-600 drop-shadow-lg animate-pulse-subtle" />
+                  </div>
+                  
+                  {/* Chandigarh */}
+                  <div className="absolute top-[24%] left-[35%]">
+                    <MapPin className="w-4 h-4 text-red-600 fill-red-600 drop-shadow-lg animate-pulse-subtle" />
+                  </div>
+                  
+                  {/* Bhopal */}
+                  <div className="absolute top-[48%] left-[32%]">
+                    <MapPin className="w-4 h-4 text-red-600 fill-red-600 drop-shadow-lg animate-pulse-subtle" />
+                  </div>
+                  
+                  {/* Patna */}
+                  <div className="absolute top-[35%] left-[40%]">
+                    <MapPin className="w-4 h-4 text-red-600 fill-red-600 drop-shadow-lg animate-pulse-subtle" />
+                  </div>
+                  
+                  {/* Guwahati */}
+                  <div className="absolute top-[35%] right-[12%]">
+                    <MapPin className="w-4 h-4 text-red-600 fill-red-600 drop-shadow-lg animate-pulse-subtle" />
+                  </div>
+                  
+                  {/* Kochi */}
+                  <div className="absolute bottom-[12%] left-[24%]">
+                    <MapPin className="w-4 h-4 text-red-600 fill-red-600 drop-shadow-lg animate-pulse-subtle" />
+                  </div>
+                  
+                  {/* Indore */}
+                  <div className="absolute top-[46%] left-[27%]">
+                    <MapPin className="w-3 h-3 text-red-600 fill-red-600 drop-shadow-lg animate-pulse-subtle" />
+                  </div>
+                  
+                  {/* Nagpur */}
+                  <div className="absolute top-[50%] left-[33%]">
+                    <MapPin className="w-3 h-3 text-red-600 fill-red-600 drop-shadow-lg animate-pulse-subtle" />
+                  </div>
+                  
+                  {/* Surat */}
+                  <div className="absolute top-[50%] left-[20%]">
+                    <MapPin className="w-3 h-3 text-red-600 fill-red-600 drop-shadow-lg animate-pulse-subtle" />
+                  </div>
+                  
+                  {/* Visakhapatnam */}
+                  <div className="absolute top-[45%] right-[28%]">
+                    <MapPin className="w-3 h-3 text-red-600 fill-red-600 drop-shadow-lg animate-pulse-subtle" />
+                  </div>
+                  
+                  {/* Coimbatore */}
+                  <div className="absolute bottom-[25%] left-[29%]">
+                    <MapPin className="w-3 h-3 text-red-600 fill-red-600 drop-shadow-lg animate-pulse-subtle" />
                   </div>
                 </div>
                 
