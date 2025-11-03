@@ -89,14 +89,14 @@ const ProofOfScale = () => {
             <div className="relative">
               <div className="bg-card-gradient rounded-2xl p-8 border border-border/50 overflow-hidden">
                 <div className="relative h-80 bg-muted/30 rounded-xl overflow-hidden mb-6">
-                  {/* Google Maps Static Image with pins across India */}
+                  {/* Google Maps Static Image of India */}
                   <img 
-                    src="https://maps.googleapis.com/maps/api/staticmap?center=22.5,78.9&zoom=5&size=640x640&maptype=roadmap&markers=color:red%7C28.6139,77.2090&markers=color:red%7C19.0760,72.8777&markers=color:red%7C13.0827,80.2707&markers=color:red%7C12.9716,77.5946&markers=color:red%7C22.5726,88.3639&markers=color:red%7C17.3850,78.4867&markers=color:red%7C18.5204,73.8567&markers=color:red%7C23.0225,72.5714&markers=color:red%7C26.9124,75.7873&markers=color:red%7C21.1458,79.0882&markers=color:red%7C15.2993,74.1240&markers=color:red%7C25.5941,85.1376&markers=color:red%7C11.0168,76.9558&markers=color:red%7C23.2599,77.4126&markers=color:red%7C30.7333,76.7794&markers=color:red%7C26.8467,80.9462&markers=color:red%7C22.7196,75.8577&markers=color:red%7C31.1048,77.1734&markers=color:red%7C10.8505,76.2711&markers=color:red%7C25.4358,81.8463&markers=color:blue%7C27.1767,78.0081&markers=color:blue%7C24.5854,73.7125&markers=color:blue%7C16.7050,74.2433&markers=color:blue%7C20.5937,78.9629&markers=color:blue%7C19.9975,73.7898&markers=color:blue%7C28.4595,77.0266&markers=color:blue%7C22.3072,73.1812&markers=color:blue%7C15.8281,74.4978&markers=color:blue%7C14.6819,77.5985&markers=color:blue%7C23.8103,91.2821&markers=color:green%7C24.7914,85.0002&markers=color:green%7C25.3176,82.9739&markers=color:green%7C29.9457,78.1642&markers=color:green%7C21.2514,81.6296&markers=color:green%7C23.3441,85.3096&markers=color:green%7C18.1124,83.3975&markers=color:green%7C14.4426,79.9865&markers=color:green%7C12.2958,76.6394&markers=color:green%7C27.5706,95.3174&markers=color:green%7C26.4499,87.2843&key=AIzaSyDummyKeyForVisualizationPurposes" 
-                    alt="India coverage map showing 10000+ pincodes"
+                    src="https://maps.googleapis.com/maps/api/staticmap?center=22.5,78.9&zoom=4&size=640x640&maptype=roadmap&style=feature:all|element:labels|visibility:off&style=feature:water|element:geometry|color:0x193341&style=feature:landscape|element:geometry|color:0xf5f5f5&style=feature:administrative.country|element:geometry.stroke|color:0x262626|weight:1&key=AIzaSyDummyKeyForVisualizationPurposes" 
+                    alt="India map showing nationwide healthcare coverage"
                     className="w-full h-full object-cover rounded-xl"
                     loading="lazy"
                     onError={(e) => {
-                      // Fallback to original visualization if Google Maps fails to load
+                      // Fallback to visualization if Google Maps fails to load
                       e.currentTarget.style.display = 'none';
                       const fallback = e.currentTarget.nextElementSibling as HTMLElement;
                       if (fallback) fallback.style.display = 'flex';
@@ -107,39 +107,16 @@ const ProofOfScale = () => {
                     <div className="relative w-full h-full flex items-center justify-center">
                       <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-xl opacity-50"></div>
                       
-                      {/* Simplified pin visualization */}
-                      <div className="absolute top-[25%] left-[40%]">
-                        <div className="w-3 h-3 bg-primary rounded-full animate-pulse-subtle"></div>
-                      </div>
-                      <div className="absolute top-[45%] left-[20%]">
-                        <div className="w-3 h-3 bg-secondary rounded-full animate-pulse-subtle"></div>
-                      </div>
-                      <div className="absolute bottom-[25%] left-[30%]">
-                        <div className="w-3 h-3 bg-success rounded-full animate-pulse-subtle"></div>
-                      </div>
-                      <div className="absolute bottom-[20%] left-[35%]">
-                        <div className="w-3 h-3 bg-warning rounded-full animate-pulse-subtle"></div>
-                      </div>
-                      <div className="absolute top-[35%] right-[25%]">
-                        <div className="w-3 h-3 bg-primary rounded-full animate-pulse-subtle"></div>
-                      </div>
-                      
                       <div className="text-center z-10">
                         <MapPin className="w-12 h-12 text-primary mx-auto mb-2" />
                         <div className="text-sm font-medium text-muted-foreground">
-                          10,000+ Pincodes Covered
+                          Pan-India Healthcare Network
                         </div>
                         <div className="text-xs text-muted-foreground/70 mt-1">
-                          Pan-India Healthcare Network
+                          Nationwide Coverage
                         </div>
                       </div>
                     </div>
-                  </div>
-                  
-                  {/* Overlay badge showing pincode coverage */}
-                  <div className="absolute top-4 right-4 bg-primary/90 backdrop-blur-sm text-white px-4 py-2 rounded-lg shadow-lg">
-                    <div className="text-xs font-medium">Pincode Coverage</div>
-                    <div className="text-lg font-bold">10,000+</div>
                   </div>
                 </div>
                 
