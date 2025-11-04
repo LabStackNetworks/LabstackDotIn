@@ -133,8 +133,7 @@ const Hero = () => {
                   {[...trustedLogos, ...trustedLogos].map((logo, index) => (
                     <div 
                       key={index}
-                      className="flex-shrink-0 text-foreground/70 hover:text-foreground transition-smooth font-sora font-bold whitespace-nowrap"
-                      style={{ fontSize: '48px' }}
+                      className="flex-shrink-0 text-foreground/50 hover:text-foreground/80 transition-smooth font-sora font-bold whitespace-nowrap text-3xl"
                     >
                       {logo}
                     </div>
