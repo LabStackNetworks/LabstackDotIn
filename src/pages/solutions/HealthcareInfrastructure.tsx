@@ -405,32 +405,6 @@ const HealthcareInfrastructure = () => {
           </div>
         </section>
 
-        {/* Internal Links */}
-        <section className="py-20 bg-background">
-          <div className="container mx-auto px-6">
-            <div className="max-w-5xl mx-auto">
-              <h2 className="text-3xl font-heading font-bold mb-8 text-center">Related Solutions</h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                {[
-                  { title: "API Solutions", url: "/solutions/api-solutions", description: "Integrate infrastructure via API" },
-                  { title: "Coverage Expansion", url: "/solutions/coverage-expansion", description: "Expand to Tier-2/3 markets instantly" },
-                  { title: "Digital Health Platforms", url: "/who-we-serve/digital-health-platforms", description: "For healthtech companies" },
-                  { title: "Scaling to Tier-2/3", url: "/resources/blog/scaling-tier2-tier3", description: "How to expand nationwide" }
-                ].map((link, index) => (
-                  <Link key={index} to={link.url} className="bg-card-gradient p-6 rounded-xl border border-border/20 card-hover group">
-                    <h4 className="font-heading font-bold mb-2 group-hover:text-primary transition-colors">{link.title}</h4>
-                    <p className="text-sm text-muted-foreground">{link.description}</p>
-                    <div className="flex items-center text-primary font-medium mt-4">
-                      Learn more 
-                      <ArrowRight className="ml-1 w-4 h-4" />
-                    </div>
-                  </Link>
-                ))}
-              </div>
-            </div>
-          </div>
-        </section>
-
       </main>
 
       {/* Related Resources */}
