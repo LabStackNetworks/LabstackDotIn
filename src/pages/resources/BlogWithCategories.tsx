@@ -42,6 +42,22 @@ const BlogWithCategories = () => {
       link: "insurers-claims-fraud"
     },
     {
+      title: "InsureTech Revenue Growth: Healthcare as Revenue Engine",
+      excerpt: "How InsureTech platforms increase ARPU by 15-25% and improve retention by 40% through healthcare benefits.",
+      category: "InsureTech",
+      readTime: "10 min read",
+      date: "Jan 10, 2025",
+      link: "insuretech-revenue-growth"
+    },
+    {
+      title: "Product-Led Growth for InsureTech Through Healthcare",
+      excerpt: "How healthcare benefits drive viral growth, reduce CAC by 25%, and create network effects for digital insurance platforms.",
+      category: "InsureTech",
+      readTime: "11 min read",
+      date: "Jan 24, 2025",
+      link: "insuretech-product-led-growth"
+    },
+    {
       title: "Employee Wellness Programs That Drive ROI",
       excerpt: "How brokers use digital wellness platforms to increase retention by 35%, reduce claims by 20%, and differentiate in competitive markets.",
       category: "Brokers",

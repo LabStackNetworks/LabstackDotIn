@@ -159,7 +159,7 @@ const App = () => (
               <Route path="/resources/blog/digital-health-compliance-abdm" element={<DigitalHealthComplianceABDM />} />
               <Route path="/resources/blog/providers-digital-transformation" element={<ProvidersDigitalTransformation />} />
               <Route path="/resources/blog/providers-network-partnerships" element={<ProvidersNetworkPartnerships />} />
-              <Route path="/resources/blog/insuretech-revenue" element={<InsuretechRevenue />} />
+              <Route path="/resources/blog/insuretech-revenue-growth" element={<InsuretechRevenue />} />
               <Route path="/resources/blog/insuretech-product-led-growth" element={<InsuretechProductLedGrowth />} />
               <Route path="/resources/research-hub" element={<ResearchHub />} />
               <Route path="/resources/case-studies/insurer" element={<InsurerCaseStudy />} />

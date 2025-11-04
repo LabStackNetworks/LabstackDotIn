@@ -150,9 +150,42 @@ const ProofOfScale = () => {
             {/* Map Visualization */}
             <div className="relative">
               <div className="bg-card-gradient rounded-2xl p-8 border border-border/50 overflow-hidden">
-                <div className="relative h-80 bg-muted/30 rounded-xl flex items-center justify-center mb-6">
+                <div className="relative h-80 bg-muted/30 rounded-xl flex items-center justify-center mb-6 overflow-hidden group">
+                  {/* Zoom Controls */}
+                  <div className="absolute top-2 right-2 z-50 flex flex-col gap-1 bg-card/90 backdrop-blur-sm rounded-lg p-1 border border-border/50">
+                    <button 
+                      onClick={() => {
+                        const map = document.querySelector('.map-container');
+                        if (map) {
+                          const currentScale = parseFloat(map.getAttribute('data-scale') || '1');
+                          const newScale = Math.min(currentScale + 0.2, 2);
+                          map.setAttribute('data-scale', newScale.toString());
+                          (map as HTMLElement).style.transform = `scale(${newScale})`;
+                        }
+                      }}
+                      className="w-6 h-6 flex items-center justify-center hover:bg-primary/10 rounded text-foreground text-sm font-bold"
+                      title="Zoom In"
+                    >
+                      +
+                    </button>
+                    <button 
+                      onClick={() => {
+                        const map = document.querySelector('.map-container');
+                        if (map) {
+                          const currentScale = parseFloat(map.getAttribute('data-scale') || '1');
+                          const newScale = Math.max(currentScale - 0.2, 0.6);
+                          map.setAttribute('data-scale', newScale.toString());
+                          (map as HTMLElement).style.transform = `scale(${newScale})`;
+                        }
+                      }}
+                      className="w-6 h-6 flex items-center justify-center hover:bg-primary/10 rounded text-foreground text-sm font-bold"
+                      title="Zoom Out"
+                    >
+                      −
+                    </button>
+                  </div>
                   {/* India Map with 200+ Healthcare Points */}
-                  <div className="relative w-full h-full flex items-center justify-center">
+                  <div className="map-container relative w-full h-full flex items-center justify-center transition-transform duration-300" data-scale="1">
                     <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-xl opacity-50"></div>
                     
                     {/* Render 200+ cities with service indicators */}
