@@ -21,6 +21,12 @@ export default {
 			fontFamily: {
 				'heading': ['Space Grotesk', 'Inter', 'system-ui', 'sans-serif'],
 				'body': ['Inter', 'system-ui', 'sans-serif'],
+				'manrope': ['Manrope', 'sans-serif'],
+				'dm-sans': ['DM Sans', 'sans-serif'],
+				'work-sans': ['Work Sans', 'sans-serif'],
+				'outfit': ['Outfit', 'sans-serif'],
+				'lexend': ['Lexend', 'sans-serif'],
+				'jakarta': ['Plus Jakarta Sans', 'sans-serif'],
 			},
 			colors: {
 				border: 'hsl(var(--border))',

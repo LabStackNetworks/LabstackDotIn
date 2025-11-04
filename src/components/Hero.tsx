@@ -5,8 +5,47 @@ import CTAButtons from "@/components/CTAButtons";
 
 const Hero = () => {
   const trustedLogos = [
-    "Apollo", "Manipal", "Star Health", "Thyrocare", "Orange Health", 
-    "Plum", "Onsurity", "Fitterfly", "Twin Health", "Metropolis"
+    { name: "Plum Benefits", font: "font-manrope" },
+    { name: "Health Assure", font: "font-dm-sans" },
+    { name: "Star Health Insurance", font: "font-work-sans" },
+    { name: "Fitterfly", font: "font-outfit" },
+    { name: "Onsurity", font: "font-lexend" },
+    { name: "Twin Health", font: "font-jakarta" },
+    { name: "SugarFit", font: "font-manrope" },
+    { name: "Qua Nutrition", font: "font-dm-sans" },
+    { name: "Orange Health", font: "font-work-sans" },
+    { name: "Thyrocare", font: "font-outfit" },
+    { name: "Redcliffe Labs", font: "font-lexend" },
+    { name: "Metropolis Lab", font: "font-jakarta" },
+    { name: "PharmEasy", font: "font-manrope" },
+    { name: "TATA 1mg", font: "font-dm-sans" },
+    { name: "Vijaya Diagnostic", font: "font-work-sans" },
+    { name: "Manipal Hospitals", font: "font-outfit" },
+    { name: "Apollo Hospitals", font: "font-lexend" },
+    { name: "Apollo Clinic", font: "font-jakarta" },
+    { name: "Sakra World Hospital", font: "font-manrope" },
+    { name: "MySugar", font: "font-dm-sans" },
+    { name: "Zoconut", font: "font-work-sans" },
+    { name: "Aamya", font: "font-outfit" },
+    { name: "Alyve Health", font: "font-lexend" },
+    { name: "My BerryBox", font: "font-jakarta" },
+    { name: "Wockhardt Hospital", font: "font-manrope" },
+    { name: "Agilus", font: "font-dm-sans" },
+    { name: "Apollo Diagnostic", font: "font-work-sans" },
+    { name: "Neethi Lab", font: "font-outfit" },
+    { name: "Medicover Hospitals", font: "font-lexend" },
+    { name: "Lucid Medical Diagnostic", font: "font-jakarta" },
+    { name: "Aarthi Scans & Labs", font: "font-manrope" },
+    { name: "Neuberg Diagnostics", font: "font-dm-sans" },
+    { name: "The Gene Box", font: "font-work-sans" },
+    { name: "Dr. Bakshi Advance Diagnostics", font: "font-outfit" },
+    { name: "Lipomic Life Sciences", font: "font-lexend" },
+    { name: "Prima Diagnostics", font: "font-jakarta" },
+    { name: "Medray Diagnostics", font: "font-manrope" },
+    { name: "Healthians", font: "font-dm-sans" },
+    { name: "Bioline Lab", font: "font-work-sans" },
+    { name: "Narayana Health", font: "font-outfit" },
+    { name: "Sparsh Hospitals", font: "font-lexend" },
   ];
 
   return (
@@ -72,13 +111,13 @@ const Hero = () => {
               
               {/* Scrolling Logo Strip */}
               <div className="relative overflow-hidden mobile-no-scroll-x">
-                <div className="flex animate-scroll space-x-6 sm:space-x-8 lg:space-x-12">
+                <div className="flex animate-scroll space-x-8 sm:space-x-12 lg:space-x-16">
                   {[...trustedLogos, ...trustedLogos].map((logo, index) => (
                     <div 
                       key={index}
-                      className="flex-shrink-0 text-muted-foreground/60 hover:text-muted-foreground transition-smooth font-medium text-base sm:text-lg whitespace-nowrap"
+                      className={`flex-shrink-0 text-foreground/70 hover:text-foreground transition-smooth font-black text-xl sm:text-2xl lg:text-3xl whitespace-nowrap ${logo.font}`}
                     >
-                      {logo}
+                      {logo.name}
                     </div>
                   ))}
                 </div>
