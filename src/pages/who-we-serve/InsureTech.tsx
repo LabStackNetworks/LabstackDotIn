@@ -383,8 +383,36 @@ const InsureTech = () => {
           </div>
         </section>
 
-        {/* What Success Looks Like */}
+        {/* How It Works */}
         <section className="py-20 bg-gradient-hero border-y border-border/50">
+          <div className="container mx-auto px-6">
+            <div className="max-w-4xl mx-auto mb-12 text-center">
+              <h2 className="text-3xl font-heading font-bold mb-4">How It Works</h2>
+              <p className="text-lg text-muted-foreground">
+                Launch healthcare services in four simple steps
+              </p>
+            </div>
+            <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {[
+                { step: "1", title: "Choose Integration Mode", description: "API or console setup. SDK support for React, Node, Python. Pre-built webhooks." },
+                { step: "2", title: "Configure Services", description: "Set coverage limits, member eligibility rules, and white-label branding." },
+                { step: "3", title: "Launch Nationwide", description: "Go live across 9,000+ pincodes with all delivery modes active." },
+                { step: "4", title: "Monitor & Earn", description: "Track fulfillment, NPS, and revenue from dashboard." }
+              ].map((item, index) => (
+                <div key={index} className="bg-card-gradient p-6 rounded-xl border border-border/20">
+                  <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
+                    <span className="text-2xl font-bold text-primary">{item.step}</span>
+                  </div>
+                  <h4 className="font-heading font-bold mb-2">{item.title}</h4>
+                  <p className="text-sm text-muted-foreground">{item.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* What Success Looks Like */}
+        <section className="py-20 bg-background">
           <div className="container mx-auto px-6">
             <div className="max-w-5xl mx-auto">
               <h2 className="text-3xl font-heading font-bold text-center mb-12">What Success Looks Like</h2>
@@ -419,12 +447,12 @@ const InsureTech = () => {
           </div>
         </section>
 
-        {/* Example Impact */}
-        <section className="py-20 bg-background">
+        {/* Impact */}
+        <section className="py-20 bg-gradient-hero border-y border-border/50">
           <div className="container mx-auto px-6">
             <div className="max-w-4xl mx-auto">
-              <div className="bg-gradient-hero rounded-3xl p-8 lg:p-12 border border-border/50">
-                <h3 className="text-2xl font-heading font-bold mb-6 text-center">Example Impact</h3>
+              <div className="bg-card-gradient rounded-3xl p-8 lg:p-12 border border-border/50">
+                <h3 className="text-2xl font-heading font-bold mb-6 text-center">Impact</h3>
                 <div className="bg-card/50 backdrop-blur-sm rounded-xl p-6 border border-border/20">
                   <p className="text-muted-foreground mb-4">
                     A leading InsureTech expanded preventive checkups for a 5K-member enterprise across 5 cities.

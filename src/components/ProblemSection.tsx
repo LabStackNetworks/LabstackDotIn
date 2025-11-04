@@ -34,7 +34,7 @@ const ProblemSection = () => {
     },
     {
       icon: IndianRupee,
-      title: "High customer costs, flat value",
+      title: "High customer costs, flat LTV",
       description: "You're building operations instead of products",
       color: "text-primary"
     }
