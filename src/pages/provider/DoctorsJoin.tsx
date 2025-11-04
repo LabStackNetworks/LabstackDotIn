@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 import FAQ from "@/components/FAQ";
 import SEOHead from "@/components/SEOHead";
 import TLDR from "@/components/design-system/TLDR";
+import RelatedBlogs from "@/components/RelatedBlogs";
 import { Link } from "react-router-dom";
 import { generateFAQSchema } from "@/lib/structured-data";
 import { doctorsFAQs } from "@/lib/faqs/doctors-faqs";
@@ -55,6 +56,32 @@ const DoctorsJoin = () => {
       />
       <Header />
       <main className="pt-20">
+        {/* Hidden TL;DR for AI crawlers */}
+        <div className="sr-only" aria-hidden="true" style={{position: 'absolute', left: '-9999px'}}>
+          <TLDR 
+            summary="Join Labstack medical provider network. Access 3-5x patient volume from corporate wellness, insurance, and digital health platforms. Guaranteed on-time payments with integrated EMR and teleconsultation tools."
+            keyPoints={[
+              "Pan-India reach across 600+ cities",
+              "B2B patient demand from insurers and corporates",
+              "Integrated EMR, e-prescription, and teleconsult platform",
+              "100% on-time payments with bi-weekly settlements",
+              "No exclusivity - maintain independent practice"
+            ]}
+          />
+        </div>
+
+        {/* Definition Section */}
+        <section className="py-12 bg-gradient-hero border-b border-border/50">
+          <div className="container mx-auto px-6">
+            <div className="max-w-4xl mx-auto text-center">
+              <p className="text-lg text-muted-foreground">
+                Join India's largest medical provider network to access 3-5x patient volume from corporate wellness, insurance programs, and digital health platforms with integrated EMR tools and guaranteed payments.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Hero */}
         <section className="py-20 lg:py-32">
           <div className="container mx-auto px-6">
             {/* Hero */}
@@ -285,6 +312,10 @@ const DoctorsJoin = () => {
           </div>
         </section>
       </main>
+
+      {/* Related Resources */}
+      <RelatedBlogs category="Providers" limit={3} />
+
       <Footer />
     </div>
   );

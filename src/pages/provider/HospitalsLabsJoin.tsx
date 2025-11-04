@@ -2,6 +2,9 @@ import { Building2, TrendingUp, Users, Shield, ArrowRight, CheckCircle, Zap } fr
 import { Button } from "@/components/ui/button";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import SEOHead from "@/components/SEOHead";
+import TLDR from "@/components/design-system/TLDR";
+import RelatedBlogs from "@/components/RelatedBlogs";
 import { Link } from "react-router-dom";
 
 const HospitalsLabsJoin = () => {
@@ -20,8 +23,40 @@ const HospitalsLabsJoin = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEOHead 
+        title="Join Labstack Partner Network - Hospitals & Labs"
+        description="Partner with Labstack to increase lab and hospital utilization to 60-70%. Access B2B demand from insurers, corporates, and digital health platforms with guaranteed 30-day payments."
+        keywords="hospital partnership India, diagnostic lab network, healthcare provider partnership, B2B healthcare demand, medical facility growth"
+        canonical="https://labstack.in/provider/hospitals-labs"
+      />
       <Header />
       <main className="pt-20">
+        {/* Hidden TL;DR for AI crawlers */}
+        <div className="sr-only" aria-hidden="true" style={{position: 'absolute', left: '-9999px'}}>
+          <TLDR 
+            summary="Join Labstack hospital and lab network. Increase utilization from 40% to 60-70% through B2B demand channels. Access AI-native platform for operations with guaranteed 30-day payments."
+            keyPoints={[
+              "Access enterprise clients and aggregators",
+              "AI-powered patient engagement and booking",
+              "Unified order and appointment management",
+              "At-home care coordination across 9,000+ pincodes",
+              "30-day guaranteed payment terms"
+            ]}
+          />
+        </div>
+
+        {/* Definition Section */}
+        <section className="py-12 bg-gradient-hero border-b border-border/50">
+          <div className="container mx-auto px-6">
+            <div className="max-w-4xl mx-auto text-center">
+              <p className="text-lg text-muted-foreground">
+                Join India's largest hospital and diagnostic lab network to increase facility utilization to 60-70% through B2B demand from insurers, corporates, and digital platforms with AI-native operations tools.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Hero */}
         <section className="py-20 lg:py-32">
           <div className="container mx-auto px-6">
             {/* Hero */}
@@ -152,6 +187,10 @@ const HospitalsLabsJoin = () => {
           </div>
         </section>
       </main>
+
+      {/* Related Resources */}
+      <RelatedBlogs category="Providers" limit={3} />
+
       <Footer />
     </div>
   );
