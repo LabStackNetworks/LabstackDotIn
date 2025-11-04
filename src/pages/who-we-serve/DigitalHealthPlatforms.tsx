@@ -1,4 +1,4 @@
-import { Smartphone, Globe, Zap, ArrowRight, CheckCircle, Target, Shield, Code, Monitor, Tablet, Smartphone as Phone } from "lucide-react";
+import { Smartphone, Globe, Zap, ArrowRight, CheckCircle, Target, Shield, Code, Monitor, Tablet, Smartphone as Phone, TrendingUp, Users, IndianRupee } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -64,17 +64,6 @@ const DigitalHealthPlatforms = () => {
           />
         </div>
 
-        {/* Definition Section */}
-        <section className="py-12 bg-gradient-hero border-b border-border/50">
-          <div className="container mx-auto px-6">
-            <div className="max-w-4xl mx-auto text-center">
-              <p className="text-lg text-muted-foreground">
-                Complete healthcare fulfillment infrastructure that digital health platforms use to launch diagnostics, pharmacy, and consultation services nationwide without building ops teams.
-              </p>
-            </div>
-          </div>
-        </section>
-
         <section className="py-20 lg:py-32">
           <div className="container mx-auto px-6">
             {/* Hero */}
@@ -134,8 +123,110 @@ const DigitalHealthPlatforms = () => {
           </div>
         </section>
 
-        {/* How It Works */}
+        {/* Impact */}
         <section className="py-20 bg-background">
+          <div className="container mx-auto px-6">
+            <div className="max-w-5xl mx-auto bg-gradient-hero rounded-3xl p-8 lg:p-12 border border-border/50">
+              <h2 className="text-2xl font-heading font-bold text-center mb-12">Impact</h2>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                <div>
+                  <Zap className="w-10 h-10 text-primary mx-auto mb-4" />
+                  <div className="text-4xl font-heading font-bold text-gradient mb-2">14 Days</div>
+                  <p className="text-sm text-muted-foreground">Go-Live Time</p>
+                </div>
+                <div>
+                  <Globe className="w-10 h-10 text-success mx-auto mb-4" />
+                  <div className="text-4xl font-heading font-bold text-gradient mb-2">9K+</div>
+                  <p className="text-sm text-muted-foreground">Pincodes Live</p>
+                </div>
+                <div>
+                  <Target className="w-10 h-10 text-secondary mx-auto mb-4" />
+                  <div className="text-4xl font-heading font-bold text-gradient mb-2">30K+</div>
+                  <p className="text-sm text-muted-foreground">Orders/Month</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Services We Offer */}
+        <section className="py-20 bg-gradient-hero border-y border-border/50">
+          <div className="container mx-auto px-6">
+            <div className="max-w-5xl mx-auto">
+              <h2 className="text-3xl font-heading font-bold mb-12 text-center">Healthcare Services Portfolio</h2>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                {["Diagnostics", "Pharmacy", "Consultations", "Home Care", "Chronic Care", "Specialized Services"].map((service, index) => (
+                  <div key={index} className="bg-card-gradient p-4 rounded-xl border border-border/20 text-center">
+                    <CheckCircle className="w-6 h-6 text-success mx-auto mb-2" />
+                    <p className="text-sm font-medium">{service}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Speed Without Setup */}
+        <section className="py-20 bg-background">
+          <div className="container mx-auto px-6">
+            <div className="max-w-6xl mx-auto">
+              <h2 className="text-3xl font-heading font-bold text-center mb-12">Speed Without Setup</h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {[
+                  {
+                    title: "Plug-and-Play Services",
+                    badge: "Days to launch",
+                    desc: "Diagnostics, consults, pharmacy, chronic care available nationwide instantly.",
+                    color: "success"
+                  },
+                  {
+                    title: "White-Label Journeys",
+                    badge: "Your brand",
+                    desc: "Customize booking flows, care comms. We stay invisible.",
+                    color: "primary"
+                  },
+                  {
+                    title: "SKU-Level Controls",
+                    badge: "12% savings",
+                    desc: "Fraud prevention built into every transaction.",
+                    color: "success"
+                  },
+                  {
+                    title: "Network Configuration",
+                    badge: "Flexible",
+                    desc: "Standard, premium, specialty networks by region.",
+                    color: "secondary"
+                  },
+                  {
+                    title: "Unified SLA Operations",
+                    badge: "99%+ uptime",
+                    desc: "Auto fulfillment, tracking, escalations.",
+                    color: "primary"
+                  },
+                  {
+                    title: "Auto Reconciliation",
+                    badge: "Zero ops drain",
+                    desc: "Single billing. Fraud detection. Full audit trails.",
+                    color: "success"
+                  }
+                ].map((feature, i) => (
+                  <div key={i} className="bg-card-gradient p-6 rounded-xl border border-border/20">
+                    <div className="flex items-start justify-between mb-3">
+                      <h3 className="font-heading font-bold text-sm">{feature.title}</h3>
+                      <span className={`text-xs bg-${feature.color}/10 text-${feature.color} px-2 py-1 rounded-full whitespace-nowrap`}>
+                        {feature.badge}
+                      </span>
+                    </div>
+                    <p className="text-sm text-muted-foreground">{feature.desc}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* How It Works */}
+        <section className="py-20 bg-gradient-hero border-y border-border/50">
           <div className="container mx-auto px-6">
             <div className="max-w-4xl mx-auto mb-12 text-center">
               <h2 className="text-3xl font-heading font-bold mb-4">How It Works</h2>
@@ -163,55 +254,22 @@ const DigitalHealthPlatforms = () => {
         </section>
 
         {/* Delivery Modes */}
-        <section className="py-20 bg-gradient-hero border-y border-border/50">
+        <section className="py-20 bg-background">
           <div className="container mx-auto px-6">
             <div className="max-w-5xl mx-auto">
-              <h2 className="text-3xl font-heading font-bold mb-4 text-center">Integration & Deployment Modes</h2>
-              <p className="text-center text-muted-foreground mb-12">
-                Multiple deployment options for every product architecture
-              </p>
+              <h2 className="text-3xl font-heading font-bold mb-12 text-center">Delivery Modes & Coverage</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 {[
-                  {
-                    icon: Code,
-                    mode: "RESTful APIs",
-                    best: "Full programmatic control and custom workflows",
-                    setup: "48-hour integration",
-                    color: "primary"
-                  },
-                  {
-                    icon: Monitor,
-                    mode: "Console Access",
-                    best: "Ops teams managing fulfillment without engineering",
-                    setup: "Instant activation",
-                    color: "success"
-                  },
-                  {
-                    icon: Tablet,
-                    mode: "Embeddable Widgets",
-                    best: "Quick white-label booking inside your app",
-                    setup: "Same-day deployment",
-                    color: "secondary"
-                  },
-                  {
-                    icon: Phone,
-                    mode: "Mobile SDKs",
-                    best: "Native iOS/Android integration",
-                    setup: "1-week integration",
-                    color: "warning"
-                  }
+                  { icon: Code, mode: "RESTful APIs", color: "primary" },
+                  { icon: Monitor, mode: "Console Access", color: "success" },
+                  { icon: Tablet, mode: "Embeddable Widgets", color: "secondary" },
+                  { icon: Phone, mode: "Mobile SDKs", color: "warning" }
                 ].map((item, index) => {
                   const Icon = item.icon;
                   return (
-                    <div key={index} className="bg-card-gradient p-6 rounded-xl border border-border/20">
-                      <div className={`w-12 h-12 rounded-full bg-${item.color}/10 flex items-center justify-center mb-4`}>
-                        <Icon className={`w-6 h-6 text-${item.color}`} />
-                      </div>
-                      <h4 className="font-heading font-bold mb-2">{item.mode}</h4>
-                      <p className="text-xs text-muted-foreground mb-3">{item.best}</p>
-                      <div className="pt-3 border-t border-border/20">
-                        <p className="text-xs font-semibold text-primary">{item.setup}</p>
-                      </div>
+                    <div key={index} className="bg-card-gradient p-6 rounded-xl border border-border/20 text-center">
+                      <Icon className={`w-10 h-10 text-${item.color} mx-auto mb-3`} />
+                      <h4 className="font-heading font-bold">{item.mode}</h4>
                     </div>
                   );
                 })}
@@ -220,19 +278,27 @@ const DigitalHealthPlatforms = () => {
           </div>
         </section>
 
-        {/* Availability */}
-        <section className="py-20 bg-background">
+        {/* Nationwide Availability */}
+        <section className="py-20 bg-gradient-hero border-y border-border/50">
           <div className="container mx-auto px-6">
             <div className="max-w-5xl mx-auto text-center">
-              <h2 className="text-3xl font-heading font-bold mb-6">Nationwide Healthcare Infrastructure</h2>
-              <p className="text-lg text-muted-foreground mb-8">
-                Launch healthcare services across 9,000+ pincodes from metros to Tier-3 cities. Complete coverage for diagnostics, pharmacy, and consultations. 30K+ orders/month capacity with 99.5% uptime SLA.
-              </p>
+              <h2 className="text-3xl font-heading font-bold mb-6">Nationwide Availability</h2>
+              <p className="text-lg text-muted-foreground mb-8">Full healthcare service coverage across India</p>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                {["Diagnostics", "Pharmacy", "Consultations", "Home Care", "Chronic Care", "Specialized Services", "Health Camps", "All Services"].map((service, index) => (
+                {[
+                  { service: "Diagnostics", coverage: "9,000+ pincodes" },
+                  { service: "Center Visit", coverage: "2,600+ pincodes" },
+                  { service: "Pharmacy", coverage: "15,000+ pincodes" },
+                  { service: "Consultation", coverage: "Nationwide" },
+                  { service: "Home Care", coverage: "5,000+ pincodes" },
+                  { service: "Emergency", coverage: "Metros" },
+                  { service: "Health Camps", coverage: "Nationwide" },
+                  { service: "All Services", coverage: "Pan-India" }
+                ].map((item, index) => (
                   <div key={index} className="bg-card-gradient p-4 rounded-xl border border-border/20">
                     <CheckCircle className="w-6 h-6 text-success mx-auto mb-2" />
-                    <p className="text-sm font-medium">{service}</p>
+                    <p className="text-sm font-medium">{item.service}</p>
+                    <p className="text-xs text-muted-foreground mt-1">{item.coverage}</p>
                   </div>
                 ))}
               </div>
@@ -241,12 +307,12 @@ const DigitalHealthPlatforms = () => {
         </section>
 
         {/* Integration & Quality */}
-        <section className="py-20 bg-gradient-hero border-y border-border/50">
+        <section className="py-20 bg-background">
           <div className="container mx-auto px-6">
             <div className="max-w-6xl mx-auto">
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
                 <div>
-                  <h2 className="text-3xl font-heading font-bold mb-6">Developer Experience</h2>
+                  <h2 className="text-3xl font-heading font-bold mb-6">Integration Options</h2>
                   <ul className="space-y-3">
                     {[
                       "RESTful APIs with interactive documentation",
@@ -282,47 +348,15 @@ const DigitalHealthPlatforms = () => {
           </div>
         </section>
 
-        {/* Impact Metrics */}
-        <section className="py-20 bg-background">
-          <div className="container mx-auto px-6">
-            <div className="max-w-5xl mx-auto bg-gradient-hero rounded-3xl p-8 lg:p-12 border border-border/50">
-              <h3 className="text-2xl font-heading font-bold text-center mb-12">Scale From Idea to Nationwide</h3>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-                <div>
-                  <Zap className="w-10 h-10 text-primary mx-auto mb-4" />
-                  <div className="text-4xl font-heading font-bold text-gradient mb-2">14 Days</div>
-                  <p className="text-sm text-muted-foreground">Go-Live Time</p>
-                  <p className="text-xs text-muted-foreground mt-2">From integration to nationwide launch</p>
-                </div>
-                <div>
-                  <Globe className="w-10 h-10 text-success mx-auto mb-4" />
-                  <div className="text-4xl font-heading font-bold text-gradient mb-2">9K+</div>
-                  <p className="text-sm text-muted-foreground">Pincodes Live</p>
-                  <p className="text-xs text-muted-foreground mt-2">Metros to Tier-3 cities</p>
-                </div>
-                <div>
-                  <Target className="w-10 h-10 text-secondary mx-auto mb-4" />
-                  <div className="text-4xl font-heading font-bold text-gradient mb-2">30K+</div>
-                  <p className="text-sm text-muted-foreground">Orders/Month</p>
-                  <p className="text-xs text-muted-foreground mt-2">99.5% uptime capacity</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
         {/* FAQ Section */}
         <section className="py-20 bg-gradient-hero border-y border-border/50">
           <div className="container mx-auto px-6">
             <FAQ items={digitalHealthPlatformsFAQs} />
           </div>
         </section>
-
       </main>
 
-      {/* Related Resources */}
       <RelatedBlogs category="Digital Health" limit={3} />
-
       <Footer />
     </div>
   );

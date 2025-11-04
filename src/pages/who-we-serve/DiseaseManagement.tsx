@@ -1,4 +1,4 @@
-import { Heart, Activity, TrendingUp, ArrowRight, CheckCircle, Zap, Shield, Target, Home, Video, Truck, HeartPulse } from "lucide-react";
+import { Heart, Activity, TrendingUp, ArrowRight, CheckCircle, Zap, Shield, Target, Home, Video, Truck, HeartPulse, IndianRupee, Users } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -64,17 +64,6 @@ const DiseaseManagement = () => {
           />
         </div>
 
-        {/* Definition Section */}
-        <section className="py-12 bg-gradient-hero border-b border-border/50">
-          <div className="container mx-auto px-6">
-            <div className="max-w-4xl mx-auto text-center">
-              <p className="text-lg text-muted-foreground">
-                Protocol-driven care delivery platform that disease management programs use to close care loops with automated pathways for diagnostics, consultations, and pharmacy across India.
-              </p>
-            </div>
-          </div>
-        </section>
-
         <section className="py-20 lg:py-32">
           <div className="container mx-auto px-6">
             {/* Hero */}
@@ -134,8 +123,110 @@ const DiseaseManagement = () => {
           </div>
         </section>
 
-        {/* How It Works */}
+        {/* Impact */}
         <section className="py-20 bg-background">
+          <div className="container mx-auto px-6">
+            <div className="max-w-5xl mx-auto bg-gradient-hero rounded-3xl p-8 lg:p-12 border border-border/50">
+              <h2 className="text-2xl font-heading font-bold text-center mb-12">Impact</h2>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                <div>
+                  <TrendingUp className="w-10 h-10 text-success mx-auto mb-4" />
+                  <div className="text-4xl font-heading font-bold text-gradient mb-2">90%+</div>
+                  <p className="text-sm text-muted-foreground">Pathway Completion</p>
+                </div>
+                <div>
+                  <Heart className="w-10 h-10 text-primary mx-auto mb-4" />
+                  <div className="text-4xl font-heading font-bold text-gradient mb-2">Structured</div>
+                  <p className="text-sm text-muted-foreground">Health Data</p>
+                </div>
+                <div>
+                  <Zap className="w-10 h-10 text-secondary mx-auto mb-4" />
+                  <div className="text-4xl font-heading font-bold text-gradient mb-2">Auto</div>
+                  <p className="text-sm text-muted-foreground">Adherence Nudges</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Services We Offer */}
+        <section className="py-20 bg-gradient-hero border-y border-border/50">
+          <div className="container mx-auto px-6">
+            <div className="max-w-5xl mx-auto">
+              <h2 className="text-3xl font-heading font-bold mb-12 text-center">Disease Management Programs</h2>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                {["Diabetes Care", "Hypertension", "PCOS Management", "Cardiac Programs", "Chronic Care", "Lifestyle Programs"].map((service, index) => (
+                  <div key={index} className="bg-card-gradient p-4 rounded-xl border border-border/20 text-center">
+                    <CheckCircle className="w-6 h-6 text-success mx-auto mb-2" />
+                    <p className="text-sm font-medium">{service}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Speed Without Setup */}
+        <section className="py-20 bg-background">
+          <div className="container mx-auto px-6">
+            <div className="max-w-6xl mx-auto">
+              <h2 className="text-3xl font-heading font-bold text-center mb-12">Speed Without Setup</h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {[
+                  {
+                    title: "Plug-and-Play Services",
+                    badge: "Days to launch",
+                    desc: "Diagnostics, consults, pharmacy, chronic care available nationwide instantly.",
+                    color: "success"
+                  },
+                  {
+                    title: "White-Label Journeys",
+                    badge: "Your brand",
+                    desc: "Customize booking flows, care comms. We stay invisible.",
+                    color: "primary"
+                  },
+                  {
+                    title: "SKU-Level Controls",
+                    badge: "12% savings",
+                    desc: "Fraud prevention built into every transaction.",
+                    color: "success"
+                  },
+                  {
+                    title: "Network Configuration",
+                    badge: "Flexible",
+                    desc: "Standard, premium, specialty networks by region.",
+                    color: "secondary"
+                  },
+                  {
+                    title: "Unified SLA Operations",
+                    badge: "99%+ uptime",
+                    desc: "Auto fulfillment, tracking, escalations.",
+                    color: "primary"
+                  },
+                  {
+                    title: "Auto Reconciliation",
+                    badge: "Zero ops drain",
+                    desc: "Single billing. Fraud detection. Full audit trails.",
+                    color: "success"
+                  }
+                ].map((feature, i) => (
+                  <div key={i} className="bg-card-gradient p-6 rounded-xl border border-border/20">
+                    <div className="flex items-start justify-between mb-3">
+                      <h3 className="font-heading font-bold text-sm">{feature.title}</h3>
+                      <span className={`text-xs bg-${feature.color}/10 text-${feature.color} px-2 py-1 rounded-full whitespace-nowrap`}>
+                        {feature.badge}
+                      </span>
+                    </div>
+                    <p className="text-sm text-muted-foreground">{feature.desc}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* How It Works */}
+        <section className="py-20 bg-gradient-hero border-y border-border/50">
           <div className="container mx-auto px-6">
             <div className="max-w-4xl mx-auto mb-12 text-center">
               <h2 className="text-3xl font-heading font-bold mb-4">How It Works</h2>
@@ -163,53 +254,22 @@ const DiseaseManagement = () => {
         </section>
 
         {/* Care Delivery Modes */}
-        <section className="py-20 bg-gradient-hero border-y border-border/50">
+        <section className="py-20 bg-background">
           <div className="container mx-auto px-6">
             <div className="max-w-5xl mx-auto">
-              <h2 className="text-3xl font-heading font-bold mb-4 text-center">Care Delivery Modes</h2>
-              <p className="text-center text-muted-foreground mb-12">
-                Multiple fulfillment options for complete care coordination
-              </p>
+              <h2 className="text-3xl font-heading font-bold mb-12 text-center">Delivery Modes & Coverage</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 {[
-                  {
-                    icon: Home,
-                    mode: "Home Diagnostics",
-                    services: "Pathology, HbA1c, lipid panel, chronic markers",
-                    experience: "Home sample collection with protocol-specific tests",
-                    color: "primary"
-                  },
-                  {
-                    icon: Video,
-                    mode: "Teleconsultation",
-                    services: "GP and specialist consults with protocol workflows",
-                    experience: "Video consults with care pathway integration",
-                    color: "success"
-                  },
-                  {
-                    icon: Truck,
-                    mode: "Pharmacy Delivery",
-                    services: "Prescription fulfillment with adherence tracking",
-                    experience: "Medicine delivery with refill reminders",
-                    color: "secondary"
-                  },
-                  {
-                    icon: HeartPulse,
-                    mode: "Care Coordination",
-                    services: "Automated follow-ups, lifestyle coaching, monitoring",
-                    experience: "Smart nudges for adherence and milestone tracking",
-                    color: "warning"
-                  }
+                  { icon: Home, mode: "Home Diagnostics", color: "primary" },
+                  { icon: Video, mode: "Teleconsultation", color: "success" },
+                  { icon: Truck, mode: "Pharmacy Delivery", color: "secondary" },
+                  { icon: HeartPulse, mode: "Care Coordination", color: "warning" }
                 ].map((item, index) => {
                   const Icon = item.icon;
                   return (
-                    <div key={index} className="bg-card-gradient p-6 rounded-xl border border-border/20">
-                      <div className={`w-12 h-12 rounded-full bg-${item.color}/10 flex items-center justify-center mb-4`}>
-                        <Icon className={`w-6 h-6 text-${item.color}`} />
-                      </div>
-                      <h4 className="font-heading font-bold mb-2">{item.mode}</h4>
-                      <p className="text-xs text-muted-foreground mb-3">{item.services}</p>
-                      <p className="text-xs text-muted-foreground">{item.experience}</p>
+                    <div key={index} className="bg-card-gradient p-6 rounded-xl border border-border/20 text-center">
+                      <Icon className={`w-10 h-10 text-${item.color} mx-auto mb-3`} />
+                      <h4 className="font-heading font-bold">{item.mode}</h4>
                     </div>
                   );
                 })}
@@ -219,18 +279,26 @@ const DiseaseManagement = () => {
         </section>
 
         {/* Nationwide Care Delivery */}
-        <section className="py-20 bg-background">
+        <section className="py-20 bg-gradient-hero border-y border-border/50">
           <div className="container mx-auto px-6">
             <div className="max-w-5xl mx-auto text-center">
-              <h2 className="text-3xl font-heading font-bold mb-6">Nationwide Care Delivery</h2>
-              <p className="text-lg text-muted-foreground mb-8">
-                Launch disease management programs across 9,000+ pincodes from metros to Tier-3 cities. Complete care coordination with diagnostics, consultations, pharmacy. 90%+ pathway completion with adherence automation.
-              </p>
+              <h2 className="text-3xl font-heading font-bold mb-6">Nationwide Availability</h2>
+              <p className="text-lg text-muted-foreground mb-8">Full healthcare service coverage across India</p>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                {["Diabetes Care", "Hypertension", "PCOS Management", "Cardiac Programs", "Chronic Care", "Lifestyle Programs", "Preventive Care", "All Programs"].map((service, index) => (
+                {[
+                  { service: "Diagnostics", coverage: "9,000+ pincodes" },
+                  { service: "Center Visit", coverage: "2,600+ pincodes" },
+                  { service: "Pharmacy", coverage: "15,000+ pincodes" },
+                  { service: "Consultation", coverage: "Nationwide" },
+                  { service: "Home Care", coverage: "5,000+ pincodes" },
+                  { service: "Emergency", coverage: "Metros" },
+                  { service: "Health Camps", coverage: "Nationwide" },
+                  { service: "All Services", coverage: "Pan-India" }
+                ].map((item, index) => (
                   <div key={index} className="bg-card-gradient p-4 rounded-xl border border-border/20">
                     <CheckCircle className="w-6 h-6 text-success mx-auto mb-2" />
-                    <p className="text-sm font-medium">{service}</p>
+                    <p className="text-sm font-medium">{item.service}</p>
+                    <p className="text-xs text-muted-foreground mt-1">{item.coverage}</p>
                   </div>
                 ))}
               </div>
@@ -239,7 +307,7 @@ const DiseaseManagement = () => {
         </section>
 
         {/* Integration & Quality */}
-        <section className="py-20 bg-gradient-hero border-y border-border/50">
+        <section className="py-20 bg-background">
           <div className="container mx-auto px-6">
             <div className="max-w-6xl mx-auto">
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
@@ -280,131 +348,15 @@ const DiseaseManagement = () => {
           </div>
         </section>
 
-        {/* Workflow Example */}
-        <section className="py-20 bg-background">
-          <div className="container mx-auto px-6">
-            <div className="max-w-5xl mx-auto mb-20">
-              <h2 className="text-3xl font-heading font-bold text-center mb-4">
-                Diabetes Care Pathway Example
-              </h2>
-              <p className="text-center text-muted-foreground mb-12">Protocol-driven care from diagnosis to ongoing management</p>
-              <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-                {[
-                  { step: "Book HbA1c", desc: "Home test scheduled" },
-                  { step: "Flag Values", desc: "Abnormal → consult" },
-                  { step: "E-Rx to Pharmacy", desc: "Meds delivered same day" },
-                  { step: "Auto Follow-Up", desc: "Repeat tests + lifestyle" }
-                ].map((item, i) => (
-                  <div key={i} className="relative">
-                    <div className="bg-gradient-hero rounded-xl p-6 border border-border/50 text-center">
-                      <Heart className="w-8 h-8 text-success mx-auto mb-3" />
-                      <h3 className="font-heading font-bold mb-2">{item.step}</h3>
-                      <p className="text-sm text-muted-foreground">{item.desc}</p>
-                    </div>
-                    {i < 3 && (
-                      <div className="hidden md:block absolute top-1/2 -right-3 w-6 h-0.5 bg-border"></div>
-                    )}
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* Platform Features */}
-            <div className="max-w-6xl mx-auto mb-20">
-              <h2 className="text-3xl font-heading font-bold text-center mb-12">
-                Close Care Loops From Day One
-              </h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {[
-                  {
-                    title: "Protocol Pathways",
-                    badge: "90%+ completion",
-                    desc: "Pre-built workflows: diabetes, hypertension, PCOS, cardiac.",
-                    color: "success"
-                  },
-                  {
-                    title: "Structured Data",
-                    badge: "Longitudinal",
-                    desc: "Raw digital values for trend analysis, clinical decisions.",
-                    color: "primary"
-                  },
-                  {
-                    title: "Adherence Engine",
-                    badge: "Smart nudges",
-                    desc: "AI-driven reminders for tests, meds, appointments.",
-                    color: "success"
-                  },
-                  {
-                    title: "White-Label Journeys",
-                    badge: "Your brand",
-                    desc: "Customize enrollment, comms, tracking under your brand.",
-                    color: "secondary"
-                  },
-                  {
-                    title: "Care Program Builder",
-                    badge: "Customizable",
-                    desc: "Design programs to configure tests, consults, protocols.",
-                    color: "primary"
-                  },
-                  {
-                    title: "Unified Analytics",
-                    badge: "Full visibility",
-                    desc: "Track completion, adherence, outcomes, ROI.",
-                    color: "success"
-                  }
-                ].map((feature, i) => (
-                  <div key={i} className="bg-card-gradient p-6 rounded-xl border border-border/20">
-                    <div className="flex items-start justify-between mb-3">
-                      <h3 className="font-heading font-bold text-sm">{feature.title}</h3>
-                      <span className={`text-xs bg-${feature.color}/10 text-${feature.color} px-2 py-1 rounded-full whitespace-nowrap`}>
-                        {feature.badge}
-                      </span>
-                    </div>
-                    <p className="text-sm text-muted-foreground">{feature.desc}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* Impact Metrics */}
-            <div className="max-w-5xl mx-auto bg-gradient-hero rounded-3xl p-8 lg:p-12 border border-border/50">
-              <h3 className="text-2xl font-heading font-bold text-center mb-12">Program Outcomes</h3>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-                <div>
-                  <Target className="w-10 h-10 text-success mx-auto mb-4" />
-                  <div className="text-4xl font-heading font-bold text-gradient mb-2">90%+</div>
-                  <p className="text-sm text-muted-foreground">Pathway Completion</p>
-                  <p className="text-xs text-muted-foreground mt-2">With adherence automation</p>
-                </div>
-                <div>
-                  <Activity className="w-10 h-10 text-primary mx-auto mb-4" />
-                  <div className="text-4xl font-heading font-bold text-gradient mb-2">100%</div>
-                  <p className="text-sm text-muted-foreground">Structured Data</p>
-                  <p className="text-xs text-muted-foreground mt-2">Digital raw values</p>
-                </div>
-                <div>
-                  <Zap className="w-10 h-10 text-secondary mx-auto mb-4" />
-                  <div className="text-4xl font-heading font-bold text-gradient mb-2">9K+</div>
-                  <p className="text-sm text-muted-foreground">Pincodes</p>
-                  <p className="text-xs text-muted-foreground mt-2">Nationwide care delivery</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
         {/* FAQ Section */}
         <section className="py-20 bg-gradient-hero border-y border-border/50">
           <div className="container mx-auto px-6">
             <FAQ items={diseaseManagementFAQs} />
           </div>
         </section>
-
       </main>
 
-      {/* Related Resources */}
       <RelatedBlogs category="Disease Management" limit={3} />
-      
       <Footer />
     </div>
   );

@@ -173,9 +173,42 @@ const BrokersCorporateWellness = () => {
               <h2 className="text-3xl font-heading font-bold text-center mb-12">Speed Without Setup</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {[
-                  { title: "Plug-and-Play Services", badge: "Days to launch", desc: "All OPD services available instantly nationwide.", color: "success" },
-                  { title: "White-Label Platform", badge: "Your brand", desc: "Complete customization under your branding.", color: "primary" },
-                  { title: "Revenue Monetization", badge: "~15% uplift", desc: "Earn from prescription and service fulfillment.", color: "success" }
+                  {
+                    title: "Plug-and-Play Services",
+                    badge: "Days to launch",
+                    desc: "Diagnostics, consults, pharmacy, chronic care available nationwide instantly.",
+                    color: "success"
+                  },
+                  {
+                    title: "White-Label Journeys",
+                    badge: "Your brand",
+                    desc: "Customize booking flows, care comms. We stay invisible.",
+                    color: "primary"
+                  },
+                  {
+                    title: "SKU-Level Controls",
+                    badge: "12% savings",
+                    desc: "Fraud prevention built into every transaction.",
+                    color: "success"
+                  },
+                  {
+                    title: "Network Configuration",
+                    badge: "Flexible",
+                    desc: "Standard, premium, specialty networks by region.",
+                    color: "secondary"
+                  },
+                  {
+                    title: "Unified SLA Operations",
+                    badge: "99%+ uptime",
+                    desc: "Auto fulfillment, tracking, escalations.",
+                    color: "primary"
+                  },
+                  {
+                    title: "Auto Reconciliation",
+                    badge: "Zero ops drain",
+                    desc: "Single billing. Fraud detection. Full audit trails.",
+                    color: "success"
+                  }
                 ].map((feature, i) => (
                   <div key={i} className="bg-card-gradient p-6 rounded-xl border border-border/20">
                     <div className="flex items-start justify-between mb-3">

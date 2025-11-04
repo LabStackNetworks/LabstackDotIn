@@ -232,9 +232,27 @@ const InsureTech = () => {
                     color: "primary"
                   },
                   {
-                    title: "Revenue Streams",
-                    badge: "~15% uplift",
-                    desc: "Earn from every health service transaction your members use.",
+                    title: "SKU-Level Controls",
+                    badge: "12% savings",
+                    desc: "Fraud prevention built into every transaction.",
+                    color: "success"
+                  },
+                  {
+                    title: "Network Configuration",
+                    badge: "Flexible",
+                    desc: "Standard, premium, specialty networks by region.",
+                    color: "secondary"
+                  },
+                  {
+                    title: "Unified SLA Operations",
+                    badge: "99%+ uptime",
+                    desc: "Auto fulfillment, tracking, escalations.",
+                    color: "primary"
+                  },
+                  {
+                    title: "Auto Reconciliation",
+                    badge: "Zero ops drain",
+                    desc: "Single billing. Fraud detection. Full audit trails.",
                     color: "success"
                   }
                 ].map((feature, i) => (
