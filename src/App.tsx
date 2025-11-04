@@ -8,7 +8,14 @@
  * - React Router v6 for client-side routing
  * - Lazy loading for all page components (performance optimization)
  * - Suspense with custom loader for smooth transitions
+ * - Route transition loader to prevent blank screens
  * - Global providers: Theme, Query Client, Tooltips
+ * 
+ * Performance Features:
+ * - Code splitting via lazy imports
+ * - Route-based loading indicators
+ * - Optimized bundle sizes
+ * - Smooth page transitions
  * 
  * @module App
  * @version 1.0.0
@@ -24,6 +31,7 @@ import { ThemeProvider } from "@/components/ThemeProvider";
 import { Suspense, lazy } from "react";
 import Loader from "@/components/Loader";
 import ScrollToTop from "@/components/ScrollToTop";
+import RouteLoader from "@/components/RouteLoader";
 
 /**
  * Lazy-loaded Page Components
@@ -158,8 +166,9 @@ const queryClient = new QueryClient();
  * 4. BrowserRouter - Client-side routing
  * 
  * Features:
- * - Lazy loading for all routes
- * - Suspense with custom loader
+ * - Lazy loading for all routes (code splitting)
+ * - Suspense with custom loader (initial load)
+ * - Route transition loader (page navigation)
  * - Scroll to top on route change
  * - Toast notifications (dual system: Toaster + Sonner)
  * - Future-flagged router for React Router v7 compatibility
@@ -178,6 +187,9 @@ const App = () => (
         <BrowserRouter future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>
           {/* Scroll to top on route change */}
           <ScrollToTop />
+          
+          {/* Route transition loader */}
+          <RouteLoader />
           
           {/* Suspense boundary for lazy-loaded routes */}
           <Suspense fallback={<Loader />}>
