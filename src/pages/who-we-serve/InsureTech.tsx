@@ -230,60 +230,147 @@ const InsureTech = () => {
         <section className="py-20 bg-background">
           <div className="container mx-auto px-6">
             <div className="max-w-5xl mx-auto">
-              <h2 className="text-3xl font-heading font-bold mb-4 text-center">Scale Without Operational Drag</h2>
-              <p className="text-center text-muted-foreground mb-12">
-                Multiple delivery modes for every member need
+              <h2 className="text-3xl font-heading font-bold mb-4 text-center">How Members Access Services</h2>
+              <p className="text-center text-muted-foreground mb-12 max-w-3xl mx-auto">
+                Four delivery modes designed for member convenience across 9,000+ pincodes
               </p>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-                {[
-                  {
-                    icon: Home,
-                    mode: "Home Collection",
-                    services: "Diagnostics, pharmacy delivery, sample collection",
-                    color: "primary"
-                  },
-                  {
-                    icon: Video,
-                    mode: "Teleconsultation",
-                    services: "24/7 GP, specialist video/audio consults",
-                    color: "success"
-                  },
-                  {
-                    icon: Stethoscope,
-                    mode: "Center Visit",
-                    services: "Diagnostics, radiology, in-person specialist care",
-                    color: "secondary"
-                  },
-                  {
-                    icon: Users,
-                    mode: "Health Camps",
-                    services: "Employer worksites, community screenings",
-                    color: "warning"
-                  }
-                ].map((item, index) => {
-                  const Icon = item.icon;
-                  return (
-                    <div key={index} className="bg-card-gradient p-6 rounded-xl border border-border/20">
-                      <div className={`w-12 h-12 rounded-full bg-${item.color}/10 flex items-center justify-center mb-4`}>
-                        <Icon className={`w-6 h-6 text-${item.color}`} />
-                      </div>
-                      <h4 className="font-heading font-bold mb-2">{item.mode}</h4>
-                      <p className="text-xs text-muted-foreground">{item.services}</p>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+                {/* Home Collection */}
+                <div className="bg-card-gradient p-8 rounded-xl border border-border/20">
+                  <div className="flex items-center space-x-3 mb-4">
+                    <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
+                      <Home className="w-6 h-6 text-primary" />
                     </div>
-                  );
-                })}
+                    <h3 className="text-xl font-heading font-bold">Home Collection</h3>
+                  </div>
+                  <p className="text-sm text-muted-foreground mb-4">
+                    Sample collection at member's doorstep. Preferred for diagnostics and pharmacy delivery.
+                  </p>
+                  <div className="space-y-2">
+                    <div className="flex items-start space-x-2">
+                      <CheckCircle className="w-4 h-4 text-success mt-0.5 flex-shrink-0" />
+                      <span className="text-xs">6 AM to 9 PM booking slots</span>
+                    </div>
+                    <div className="flex items-start space-x-2">
+                      <CheckCircle className="w-4 h-4 text-success mt-0.5 flex-shrink-0" />
+                      <span className="text-xs">SOPs ensure &lt;2% rejection rate</span>
+                    </div>
+                    <div className="flex items-start space-x-2">
+                      <CheckCircle className="w-4 h-4 text-success mt-0.5 flex-shrink-0" />
+                      <span className="text-xs">Available in 9,000+ pincodes</span>
+                    </div>
+                    <div className="flex items-start space-x-2">
+                      <CheckCircle className="w-4 h-4 text-success mt-0.5 flex-shrink-0" />
+                      <span className="text-xs">Medicine delivery in 24-48 hours</span>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Teleconsultation */}
+                <div className="bg-card-gradient p-8 rounded-xl border border-border/20">
+                  <div className="flex items-center space-x-3 mb-4">
+                    <div className="w-12 h-12 rounded-full bg-success/10 flex items-center justify-center">
+                      <Video className="w-6 h-6 text-success" />
+                    </div>
+                    <h3 className="text-xl font-heading font-bold">Teleconsultation</h3>
+                  </div>
+                  <p className="text-sm text-muted-foreground mb-4">
+                    Video and audio consultations with general practitioners and specialists.
+                  </p>
+                  <div className="space-y-2">
+                    <div className="flex items-start space-x-2">
+                      <CheckCircle className="w-4 h-4 text-success mt-0.5 flex-shrink-0" />
+                      <span className="text-xs">24/7 GP availability</span>
+                    </div>
+                    <div className="flex items-start space-x-2">
+                      <CheckCircle className="w-4 h-4 text-success mt-0.5 flex-shrink-0" />
+                      <span className="text-xs">Specialist booking in 48 hours</span>
+                    </div>
+                    <div className="flex items-start space-x-2">
+                      <CheckCircle className="w-4 h-4 text-success mt-0.5 flex-shrink-0" />
+                      <span className="text-xs">Digital prescriptions included</span>
+                    </div>
+                    <div className="flex items-start space-x-2">
+                      <CheckCircle className="w-4 h-4 text-success mt-0.5 flex-shrink-0" />
+                      <span className="text-xs">Direct pharmacy fulfillment</span>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Center Visit */}
+                <div className="bg-card-gradient p-8 rounded-xl border border-border/20">
+                  <div className="flex items-center space-x-3 mb-4">
+                    <div className="w-12 h-12 rounded-full bg-secondary/10 flex items-center justify-center">
+                      <Stethoscope className="w-6 h-6 text-secondary" />
+                    </div>
+                    <h3 className="text-xl font-heading font-bold">Center Visit</h3>
+                  </div>
+                  <p className="text-sm text-muted-foreground mb-4">
+                    Walk-in and scheduled appointments at diagnostic centers and hospitals.
+                  </p>
+                  <div className="space-y-2">
+                    <div className="flex items-start space-x-2">
+                      <CheckCircle className="w-4 h-4 text-success mt-0.5 flex-shrink-0" />
+                      <span className="text-xs">NABL certified labs nationwide</span>
+                    </div>
+                    <div className="flex items-start space-x-2">
+                      <CheckCircle className="w-4 h-4 text-success mt-0.5 flex-shrink-0" />
+                      <span className="text-xs">AERB certified radiology centers</span>
+                    </div>
+                    <div className="flex items-start space-x-2">
+                      <CheckCircle className="w-4 h-4 text-success mt-0.5 flex-shrink-0" />
+                      <span className="text-xs">In-person specialist consultations</span>
+                    </div>
+                    <div className="flex items-start space-x-2">
+                      <CheckCircle className="w-4 h-4 text-success mt-0.5 flex-shrink-0" />
+                      <span className="text-xs">Reports in 24-48 hours</span>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Health Camps */}
+                <div className="bg-card-gradient p-8 rounded-xl border border-border/20">
+                  <div className="flex items-center space-x-3 mb-4">
+                    <div className="w-12 h-12 rounded-full bg-warning/10 flex items-center justify-center">
+                      <Users className="w-6 h-6 text-warning" />
+                    </div>
+                    <h3 className="text-xl font-heading font-bold">Health Camps</h3>
+                  </div>
+                  <p className="text-sm text-muted-foreground mb-4">
+                    On-site screening and checkups at employer worksites and community locations.
+                  </p>
+                  <div className="space-y-2">
+                    <div className="flex items-start space-x-2">
+                      <CheckCircle className="w-4 h-4 text-success mt-0.5 flex-shrink-0" />
+                      <span className="text-xs">Employer campus deployments</span>
+                    </div>
+                    <div className="flex items-start space-x-2">
+                      <CheckCircle className="w-4 h-4 text-success mt-0.5 flex-shrink-0" />
+                      <span className="text-xs">Food safety compliance testing</span>
+                    </div>
+                    <div className="flex items-start space-x-2">
+                      <CheckCircle className="w-4 h-4 text-success mt-0.5 flex-shrink-0" />
+                      <span className="text-xs">Cohort health screening programs</span>
+                    </div>
+                    <div className="flex items-start space-x-2">
+                      <CheckCircle className="w-4 h-4 text-success mt-0.5 flex-shrink-0" />
+                      <span className="text-xs">Digital reporting included</span>
+                    </div>
+                  </div>
+                </div>
               </div>
 
               <div className="bg-gradient-hero rounded-2xl p-8 border border-border/20">
-                <h3 className="font-heading font-bold mb-6 text-center">Platform Features</h3>
+                <h3 className="text-xl font-heading font-bold mb-6 text-center">Platform Integration Features</h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   {[
-                    "Single API and console for all services",
-                    "Home, center, and camp delivery across 9,000+ pincodes",
-                    "White-label notifications and member documents",
-                    "Real-time status tracking reduces support volume",
-                    "Data and consent workflows aligned to insurance claims",
-                    "Pure B2B model. Zero channel conflict. You control economics."
+                    "Single API endpoint for all delivery modes",
+                    "White-label member notifications (SMS, email, app)",
+                    "Real-time order tracking reduces support tickets by 40%",
+                    "Member consent workflows aligned to insurance claims",
+                    "Automated report delivery in member's preferred format",
+                    "Pure B2B pricing model with zero channel conflict"
                   ].map((feature, index) => (
                     <div key={index} className="flex items-start space-x-3">
                       <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
