@@ -55,7 +55,7 @@ const Consultations = () => {
             keyPoints={[
               "Pan-India doctor network across all specialties",
               "Delivery modes: teleconsult (video/audio), in-clinic visits",
-              "Proprietary video platform—no Zoom/Meet dependency",
+              "Proprietary video platform with no Zoom/Meet dependency",
               "Integrated EMR and DISHA-compliant e-prescriptions",
               "White-label consultation platform with your branding"
             ]}
@@ -224,7 +224,7 @@ const Consultations = () => {
                   <h2 className="text-3xl font-heading font-bold mb-6">Platform Features</h2>
                   <ul className="space-y-3">
                     {[
-                      "Proprietary video platform—no third-party dependency",
+                      "Proprietary video platform with no third-party dependency",
                       "Integrated EMR with patient history and records",
                       "DISHA-compliant e-prescription generation",
                       "Seamless pharmacy integration for prescription fulfillment"

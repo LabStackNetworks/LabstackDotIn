@@ -3,7 +3,6 @@ import { ArrowRight, CheckCircle, Calendar, Users, Zap } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
@@ -24,28 +23,36 @@ const BookDemo = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
-    // Prepare email content
-    const subject = "Demo Request - Book Demo Page";
-    const body = `
-New Demo Request from ${window.location.href}
-
-Name: ${formData.name}
-Email: ${formData.email}
-Company: ${formData.company}
-Phone: ${formData.phone}
-Company Size: ${formData.companySize}
-Use Case: ${formData.useCase}
-Message: ${formData.message}
-    `.trim();
+    const formElement = e.target as HTMLFormElement;
+    const formDataToSend = new FormData(formElement);
     
-    // Send email via mailto (opens user's email client)
-    const mailtoLink = `mailto:contact@labstack.in?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-    window.location.href = mailtoLink;
-    
-    toast({
-      title: "Demo Request Received!",
-      description: "Our team will reach out within 4 hours to schedule your personalized demo.",
-    });
+    try {
+      await fetch("https://formsubmit.co/contact@labstack.in", {
+        method: "POST",
+        body: formDataToSend,
+      });
+      
+      toast({
+        title: "Demo Request Received!",
+        description: "Our team will reach out within 4 hours to schedule your personalized demo.",
+      });
+      
+      setFormData({
+        name: "",
+        email: "",
+        company: "",
+        phone: "",
+        companySize: "",
+        useCase: "",
+        message: ""
+      });
+    } catch (error) {
+      toast({
+        title: "Error",
+        description: "Failed to submit form. Please try again.",
+        variant: "destructive"
+      });
+    }
   };
 
   const benefits = [
@@ -135,11 +142,15 @@ Message: ${formData.message}
                 </div>
 
                 <form onSubmit={handleSubmit} className="space-y-5">
+                  <input type="hidden" name="_subject" value="Demo Request - Book Demo Page" />
+                  <input type="hidden" name="_template" value="table" />
+                  
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                     <div>
                       <Label htmlFor="name" className="text-sm font-medium">Full Name *</Label>
                       <Input
                         id="name"
+                        name="name"
                         type="text"
                         required
                         placeholder="Your full name"
@@ -153,6 +164,7 @@ Message: ${formData.message}
                       <Label htmlFor="email" className="text-sm font-medium">Work Email *</Label>
                       <Input
                         id="email"
+                        name="email"
                         type="email"
                         required
                         placeholder="your.email@company.com"
@@ -168,6 +180,7 @@ Message: ${formData.message}
                       <Label htmlFor="company" className="text-sm font-medium">Company *</Label>
                       <Input
                         id="company"
+                        name="company"
                         type="text"
                         required
                         placeholder="Your Company"
@@ -181,6 +194,7 @@ Message: ${formData.message}
                       <Label htmlFor="phone" className="text-sm font-medium">Phone Number</Label>
                       <Input
                         id="phone"
+                        name="phone"
                         type="tel"
                         placeholder="+91 98765 43210"
                         value={formData.phone}
@@ -193,36 +207,38 @@ Message: ${formData.message}
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                     <div>
                       <Label htmlFor="companySize" className="text-sm font-medium">Company Size</Label>
-                      <Select value={formData.companySize} onValueChange={(value) => setFormData({ ...formData, companySize: value })}>
-                        <SelectTrigger className="mt-2">
-                          <SelectValue placeholder="Select size" />
-                        </SelectTrigger>
-                        <SelectContent>
-                          <SelectItem value="1-10">1-10 employees</SelectItem>
-                          <SelectItem value="11-50">11-50 employees</SelectItem>
-                          <SelectItem value="51-200">51-200 employees</SelectItem>
-                          <SelectItem value="201-500">201-500 employees</SelectItem>
-                          <SelectItem value="500+">500+ employees</SelectItem>
-                        </SelectContent>
-                      </Select>
+                      <select
+                        name="companySize"
+                        value={formData.companySize}
+                        onChange={(e) => setFormData({ ...formData, companySize: e.target.value })}
+                        className="mt-2 w-full px-3 py-2 border border-input bg-background rounded-md focus:outline-none focus:ring-2 focus:ring-ring text-sm"
+                      >
+                        <option value="">Select size</option>
+                        <option value="1-10">1-10 employees</option>
+                        <option value="11-50">11-50 employees</option>
+                        <option value="51-200">51-200 employees</option>
+                        <option value="201-500">201-500 employees</option>
+                        <option value="500+">500+ employees</option>
+                      </select>
                     </div>
 
                     <div>
                       <Label htmlFor="useCase" className="text-sm font-medium">Primary Use Case</Label>
-                      <Select value={formData.useCase} onValueChange={(value) => setFormData({ ...formData, useCase: value })}>
-                        <SelectTrigger className="mt-2">
-                          <SelectValue placeholder="Select use case" />
-                        </SelectTrigger>
-                        <SelectContent>
-                          <SelectItem value="diagnostics">Diagnostics Network</SelectItem>
-                          <SelectItem value="pharmacy">Pharmacy Services</SelectItem>
-                          <SelectItem value="telehealth">Telehealth Platform</SelectItem>
-                          <SelectItem value="insurance">Insurance/TPA</SelectItem>
-                          <SelectItem value="corporate">Corporate Wellness</SelectItem>
-                          <SelectItem value="disease-mgmt">Disease Management</SelectItem>
-                          <SelectItem value="other">Other</SelectItem>
-                        </SelectContent>
-                      </Select>
+                      <select
+                        name="useCase"
+                        value={formData.useCase}
+                        onChange={(e) => setFormData({ ...formData, useCase: e.target.value })}
+                        className="mt-2 w-full px-3 py-2 border border-input bg-background rounded-md focus:outline-none focus:ring-2 focus:ring-ring text-sm"
+                      >
+                        <option value="">Select use case</option>
+                        <option value="diagnostics">Diagnostics Network</option>
+                        <option value="pharmacy">Pharmacy Services</option>
+                        <option value="telehealth">Telehealth Platform</option>
+                        <option value="insurance">Insurance/TPA</option>
+                        <option value="corporate">Corporate Wellness</option>
+                        <option value="disease-mgmt">Disease Management</option>
+                        <option value="other">Other</option>
+                      </select>
                     </div>
                   </div>
 
@@ -230,6 +246,7 @@ Message: ${formData.message}
                     <Label htmlFor="message" className="text-sm font-medium">Tell us about your needs</Label>
                     <textarea
                       id="message"
+                      name="message"
                       rows={4}
                       placeholder="What healthcare services are you looking to launch or scale?"
                       value={formData.message}

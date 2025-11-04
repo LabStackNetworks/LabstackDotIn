@@ -36,7 +36,7 @@ const BrokersEngagement = () => {
             <p className="text-lg font-semibold mb-2">The Broker Opportunity</p>
             <p className="text-muted-foreground mb-0">
               Brokers who offer integrated wellness platforms alongside insurance see 35% higher client retention, 
-              40% faster account growth, and 15-20% reduction in claims ratio—directly improving renewal profitability.
+              40% faster account growth, and 15-20% reduction in claims ratio, directly improving renewal profitability.
             </p>
           </div>
 
@@ -45,7 +45,7 @@ const BrokersEngagement = () => {
             Why Wellness Matters Now More Than Ever
           </h2>
           <p>
-            The corporate health insurance market is commoditized. Price and network size are table stakes—every 
+            The corporate health insurance market is commoditized. Price and network size are table stakes, every 
             broker offers competitive premiums and wide provider access. Differentiation is increasingly difficult.
           </p>
           <p>
@@ -58,7 +58,7 @@ const BrokersEngagement = () => {
             <li><strong>Data visibility:</strong> Insights into health trends and program effectiveness</li>
           </ul>
           <p>
-            Traditional insurance alone does not solve these problems. Wellness programs do—but only if they 
+            Traditional insurance alone does not solve these problems. Wellness programs do, but only if they 
             drive genuine engagement and measurable outcomes.
           </p>
 
@@ -76,7 +76,7 @@ const BrokersEngagement = () => {
 
           <h3 className="text-xl font-semibold mt-6 mb-3">1. Integrated with Healthcare Access</h3>
           <p>
-            Wellness is not separate from care—it is the first step. Programs that integrate preventive care, 
+            Wellness is not separate from care, it is the first step. Programs that integrate preventive care, 
             consultations, diagnostics, and pharmacy see 4x higher engagement:
           </p>
           <ul className="space-y-2">
@@ -214,7 +214,7 @@ const BrokersEngagement = () => {
 
           <h2 className="text-2xl font-bold mt-8 mb-4">Competitive Differentiation</h2>
           <p>
-            In a crowded broker market, wellness programs are not optional—they are your competitive edge:
+            In a crowded broker market, wellness programs are not optional, they are your competitive edge:
           </p>
           <ul className="space-y-2">
             <li><strong>Against large brokers:</strong> Offer more personalized, tech-enabled wellness vs. generic programs</li>
@@ -236,7 +236,7 @@ const BrokersEngagement = () => {
             {[
               {
                 question: "Which cities and corporate hubs benefit most from wellness programs?",
-                answer: "Wellness programs see highest engagement in metro IT/corporate hubs: Bangalore (Whitefield, Electronic City, Manyata Tech Park), Pune (Hinjewadi, Magarpatta), Hyderabad (HITEC City, Gachibowli), NCR (Cyber City Gurgaon, Sector 62-144 Noida), Mumbai (BKC, Powai, Andheri), Chennai (OMR, Guindy). These locations have young workforce (25-40 age), high health awareness, and smartphone penetration—ideal for digital wellness platforms."
+                answer: "Wellness programs see highest engagement in metro IT/corporate hubs: Bangalore (Whitefield, Electronic City, Manyata Tech Park), Pune (Hinjewadi, Magarpatta), Hyderabad (HITEC City, Gachibowli), NCR (Cyber City Gurgaon, Sector 62-144 Noida), Mumbai (BKC, Powai, Andheri), Chennai (OMR, Guindy). These locations have young workforce (25-40 age), high health awareness, and smartphone penetration ideal for digital wellness platforms."
               },
               {
                 question: "How quickly can I see ROI from wellness programs?",
@@ -244,11 +244,11 @@ const BrokersEngagement = () => {
               },
               {
                 question: "What wellness features drive highest employee engagement?",
-                answer: "Top engagement drivers: Free doctor consultations (70% adoption), health risk assessments with personalized reports (60% completion), home diagnostic tests (40% utilization), pharmacy delivery for chronic medications (35% usage), mental health counseling (25% utilization), and fitness challenges with rewards (50% participation). Engagement varies by demographics—younger employees prefer app-based, older employees prefer human touchpoints."
+                answer: "Top engagement drivers: Free doctor consultations (70% adoption), health risk assessments with personalized reports (60% completion), home diagnostic tests (40% utilization), pharmacy delivery for chronic medications (35% usage), mental health counseling (25% utilization), and fitness challenges with rewards (50% participation). Engagement varies by demographics, younger employees prefer app-based, older employees prefer human touchpoints."
               },
               {
                 question: "Can wellness programs work for manufacturing or non-IT corporates?",
-                answer: "Yes, but requires different approach. Manufacturing hubs (Pune industrial belt, Chennai Sriperumbudur, NCR Manesar/Bawal, Bangalore Peenya, Gujarat Sanand/Vapi) need on-site health camps, bilingual content, and offline engagement methods. Blue-collar workforce responds better to tangible benefits (free health checks, on-site doctor visits, subsidized medicines) vs. app-based wellness content. Success cases exist across industries—auto, pharma, logistics, retail."
+                answer: "Yes, but requires different approach. Manufacturing hubs (Pune industrial belt, Chennai Sriperumbudur, NCR Manesar/Bawal, Bangalore Peenya, Gujarat Sanand/Vapi) need on-site health camps, bilingual content, and offline engagement methods. Blue-collar workforce responds better to tangible benefits (free health checks, on-site doctor visits, subsidized medicines) vs. app-based wellness content. Success cases exist across industries in auto, pharma, logistics, retail."
               },
               {
                 question: "How do I convince corporate HR teams to invest in wellness?",

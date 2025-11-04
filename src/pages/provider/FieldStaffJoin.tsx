@@ -54,29 +54,30 @@ const FieldStaffJoin = () => {
 
   useEffect(() => { document.title = "Join the Network – Phlebotomists & Nurses | Labstack"; }, []);
 
-  const onSubmit = (values: FormValues) => {
-    // Prepare email content
-    const subject = "Field Staff Application - Join Network";
-    const body = `
-New Field Staff Application from ${window.location.href}
-
-Role: ${values.role}
-Full Name: ${values.fullName}
-Email: ${values.email}
-Phone: ${values.phone}
-City: ${values.city}
-Experience: ${values.experienceYears} years
-Availability: ${values.availability}
-Certifications: ${values.certifications}
-Message: ${values.message}
-    `.trim();
+  const onSubmit = async (values: FormValues) => {
+    const formData = new FormData();
+    formData.append("_subject", "Field Staff Application - Join Network");
+    formData.append("Role", values.role);
+    formData.append("Full Name", values.fullName);
+    formData.append("Email", values.email);
+    formData.append("Phone", values.phone);
+    formData.append("City", values.city);
+    formData.append("Experience", `${values.experienceYears} years`);
+    formData.append("Availability", values.availability);
+    formData.append("Certifications", values.certifications || "N/A");
+    formData.append("Message", values.message || "N/A");
     
-    // Send email via mailto
-    const mailtoLink = `mailto:contact@labstack.in?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-    window.location.href = mailtoLink;
-    
-    toast({ title: "Application received", description: "Our team will reach out within 2 business days." });
-    form.reset({ ...values, fullName: "", city: "", experienceYears: "", email: "", phone: "", availability: "", certifications: "", message: "", agreeToTerms: false });
+    try {
+      await fetch("https://formsubmit.co/contact@labstack.in", {
+        method: "POST",
+        body: formData,
+      });
+      
+      toast({ title: "Application received", description: "Our team will reach out within 2 business days." });
+      form.reset();
+    } catch (error) {
+      toast({ title: "Error", description: "Failed to submit application. Please try again.", variant: "destructive" });
+    }
   };
 
   return (
@@ -167,7 +168,7 @@ Message: ${values.message}
                   <FormItem>
                     <FormLabel>Availability</FormLabel>
                     <FormControl>
-                      <Input placeholder="e.g., 6 days/week, 7am–3pm" {...field} />
+                      <Input placeholder="e.g., 6 days/week, 7am to 3pm" {...field} />
                     </FormControl>
                     <FormMessage />
                   </FormItem>

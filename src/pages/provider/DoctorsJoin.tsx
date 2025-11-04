@@ -96,7 +96,7 @@ const DoctorsJoin = () => {
               </h1>
 
               <p className="text-lg lg:text-xl text-muted-foreground mb-8">
-                Reach patients in 600+ cities nationwide—from metros to Tier-3 towns. Access verified B2B demand from insurers, corporates, and digital health platforms.
+                Reach patients in 600+ cities nationwide, from metros to Tier-3 towns. Access verified B2B demand from insurers, corporates, and digital health platforms.
                 Order specialized diagnostics (genetic tests, microbiome, cardiac markers) for precision care.
               </p>
 
@@ -209,7 +209,7 @@ const DoctorsJoin = () => {
                 <p className="text-success font-medium italic">
                   "Labstack gave me nationwide reach. I now serve patients from Mumbai to Ranchi. Ordering specialized cardiac markers and genetic tests helps me deliver precision cardiology. Revenue tripled in 6 months."
                 </p>
-                <p className="text-sm text-muted-foreground mt-2">— Dr. Arjun Mehta, Cardiologist, Pune</p>
+                <p className="text-sm text-muted-foreground mt-2">Dr. Arjun Mehta, Cardiologist, Pune</p>
               </div>
             </div>
 

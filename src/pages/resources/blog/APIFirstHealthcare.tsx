@@ -58,7 +58,7 @@ const APIFirstHealthcare = () => {
             <h2 className="text-3xl font-heading font-bold mt-12 mb-6">The Traditional Build Approach</h2>
             <p className="text-muted-foreground leading-relaxed mb-6">
               Five years ago, building healthcare infrastructure in-house was the default choice. Companies hired engineering teams, 
-              negotiated with individual providers, built booking systems, payment gateways, compliance frameworks—the full stack.
+              negotiated with individual providers, built booking systems, payment gateways, compliance frameworks, the full stack.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-6">
               The reality? Most companies underestimated the complexity and took 12-18 months just to launch MVP functionality. 
@@ -143,7 +143,7 @@ const APIFirstHealthcare = () => {
               <div className="card-gradient p-6 rounded-xl border-l-4 border-destructive">
                 <h3 className="text-xl font-heading font-bold mb-3 text-foreground">Regulatory Shifts</h3>
                 <p className="text-sm text-muted-foreground mb-3">
-                  Healthcare regulations change frequently. ABDM mandates, telemedicine guideline updates, data localization laws—each 
+                  Healthcare regulations change frequently. ABDM mandates, telemedicine guideline updates, data localization laws, each 
                   requires significant engineering investment. With APIs, these updates are handled by the platform provider.
                 </p>
               </div>
@@ -152,7 +152,7 @@ const APIFirstHealthcare = () => {
             <h2 className="text-3xl font-heading font-bold mt-12 mb-6">The API-First Alternative</h2>
             <p className="text-muted-foreground leading-relaxed mb-6">
               API-first healthcare platforms provide pre-built infrastructure accessible through REST APIs. Instead of building, 
-              you integrate—calling APIs for provider search, booking, payments, results delivery, and more.
+              you integrate, calling APIs for provider search, booking, payments, results delivery, and more.
             </p>
 
             <div className="card-gradient p-8 rounded-2xl mb-6">
@@ -169,14 +169,14 @@ const APIFirstHealthcare = () => {
                   <CheckCircle className="h-8 w-8 text-success mb-3" />
                   <h4 className="text-lg font-bold text-foreground mb-2">Complete Workflows</h4>
                   <p className="text-sm text-muted-foreground">
-                    Search, booking, payments, fulfillment, report delivery—all handled via simple API calls
+                    Search, booking, payments, fulfillment, report delivery, all handled via simple API calls
                   </p>
                 </div>
                 <div>
                   <CheckCircle className="h-8 w-8 text-success mb-3" />
                   <h4 className="text-lg font-bold text-foreground mb-2">Compliance Built-In</h4>
                   <p className="text-sm text-muted-foreground">
-                    IT Act 2000, DISHA, ABDM, Telemedicine Guidelines—all pre-implemented and audited
+                    IT Act 2000, DISHA, ABDM, Telemedicine Guidelines, all pre-implemented and audited
                   </p>
                 </div>
                 <div>
@@ -327,7 +327,7 @@ const APIFirstHealthcare = () => {
 
             <h2 className="text-3xl font-heading font-bold mt-12 mb-6">Conclusion</h2>
             <p className="text-muted-foreground leading-relaxed mb-6">
-              Build vs Buy is no longer a strategic question—it's a timeline question. Building custom healthcare infrastructure 
+              Build vs Buy is no longer a strategic question, it's a timeline question. Building custom healthcare infrastructure 
               made sense when APIs didn't exist. Today, choosing to build is choosing to:
             </p>
 

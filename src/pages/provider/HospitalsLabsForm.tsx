@@ -59,34 +59,35 @@ const HospitalsLabsForm = () => {
     document.title = "Partner Application – Hospitals & Labs | Labstack"; 
   }, []);
 
-  const onSubmit = (values: FormValues) => {
-    // Prepare email content
-    const subject = "Hospital/Lab Partnership Application - Join Network";
-    const body = `
-New Hospital/Lab Application from ${window.location.href}
-
-Organization Type: ${values.orgType}
-Organization Name: ${values.orgName}
-City: ${values.city}
-State: ${values.state}
-Contact Name: ${values.contactName}
-Designation: ${values.designation}
-Email: ${values.email}
-Phone: ${values.phone}
-Services: ${values.services}
-Registration Number: ${values.registrationNo || 'N/A'}
-Message: ${values.message || 'N/A'}
-    `.trim();
+  const onSubmit = async (values: FormValues) => {
+    const formData = new FormData();
+    formData.append("_subject", "Hospital/Lab Partnership Application - Join Network");
+    formData.append("Organization Type", values.orgType);
+    formData.append("Organization Name", values.orgName);
+    formData.append("City", values.city);
+    formData.append("State", values.state);
+    formData.append("Contact Name", values.contactName);
+    formData.append("Designation", values.designation);
+    formData.append("Email", values.email);
+    formData.append("Phone", values.phone);
+    formData.append("Services", values.services);
+    formData.append("Registration Number", values.registrationNo || "N/A");
+    formData.append("Message", values.message || "N/A");
     
-    // Send email via mailto
-    const mailtoLink = `mailto:contact@labstack.in?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-    window.location.href = mailtoLink;
-    
-    toast({ 
-      title: "Application received!", 
-      description: "Our partnership team will review your application and reach out within 2 business days." 
-    });
-    form.reset();
+    try {
+      await fetch("https://formsubmit.co/contact@labstack.in", {
+        method: "POST",
+        body: formData,
+      });
+      
+      toast({ 
+        title: "Application received!", 
+        description: "Our partnership team will review your application and reach out within 2 business days." 
+      });
+      form.reset();
+    } catch (error) {
+      toast({ title: "Error", description: "Failed to submit application. Please try again.", variant: "destructive" });
+    }
   };
 
   return (

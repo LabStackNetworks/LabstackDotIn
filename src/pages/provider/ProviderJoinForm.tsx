@@ -67,32 +67,33 @@ const ProviderJoinForm = () => {
     document.title = "Join Labstack Provider Network | Apply Now"; 
   }, []);
 
-  const onSubmit = (values: FormValues) => {
-    // Prepare email content
-    const subject = "Provider Network Application - Join Network";
-    const body = `
-New Provider Application from ${window.location.href}
-
-Provider Type: ${values.providerType}
-Organization/Name: ${values.orgName}
-City: ${values.city}
-State: ${values.state}
-Contact Name: ${values.contactName}
-Email: ${values.email}
-Phone: ${values.phone}
-Services: ${values.services}
-Message: ${values.message || 'N/A'}
-    `.trim();
+  const onSubmit = async (values: FormValues) => {
+    const formData = new FormData();
+    formData.append("_subject", "Provider Network Application - Join Network");
+    formData.append("Provider Type", values.providerType);
+    formData.append("Organization/Name", values.orgName);
+    formData.append("City", values.city);
+    formData.append("State", values.state);
+    formData.append("Contact Name", values.contactName);
+    formData.append("Email", values.email);
+    formData.append("Phone", values.phone);
+    formData.append("Services", values.services);
+    formData.append("Message", values.message || "N/A");
     
-    // Send email via mailto
-    const mailtoLink = `mailto:contact@labstack.in?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-    window.location.href = mailtoLink;
-    
-    toast({ 
-      title: "Application received!", 
-      description: "Our partnership team will review your application and reach out within 2 business days." 
-    });
-    form.reset();
+    try {
+      await fetch("https://formsubmit.co/contact@labstack.in", {
+        method: "POST",
+        body: formData,
+      });
+      
+      toast({ 
+        title: "Application received!", 
+        description: "Our partnership team will review your application and reach out within 2 business days." 
+      });
+      form.reset();
+    } catch (error) {
+      toast({ title: "Error", description: "Failed to submit application. Please try again.", variant: "destructive" });
+    }
   };
 
   return (

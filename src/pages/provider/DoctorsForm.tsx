@@ -61,35 +61,36 @@ const DoctorsForm = () => {
     document.title = "Doctor Application – Join Labstack Medical Network | Labstack"; 
   }, []);
 
-  const onSubmit = (values: FormValues) => {
-    // Prepare email content
-    const subject = "Doctor Application - Join Network";
-    const body = `
-New Doctor Application from ${window.location.href}
-
-Full Name: ${values.fullName}
-Email: ${values.email}
-Phone: ${values.phone}
-Registration Number: ${values.registrationNo}
-Specialty: ${values.specialty}
-Qualification: ${values.qualification}
-Experience: ${values.experienceYears} years
-City: ${values.city}
-State: ${values.state}
-Consultation Types: ${values.consultationTypes}
-Availability: ${values.availability}
-Message: ${values.message || 'N/A'}
-    `.trim();
+  const onSubmit = async (values: FormValues) => {
+    const formData = new FormData();
+    formData.append("_subject", "Doctor Application - Join Network");
+    formData.append("Full Name", values.fullName);
+    formData.append("Email", values.email);
+    formData.append("Phone", values.phone);
+    formData.append("Registration Number", values.registrationNo);
+    formData.append("Specialty", values.specialty);
+    formData.append("Qualification", values.qualification);
+    formData.append("Experience", `${values.experienceYears} years`);
+    formData.append("City", values.city);
+    formData.append("State", values.state);
+    formData.append("Consultation Types", values.consultationTypes);
+    formData.append("Availability", values.availability);
+    formData.append("Message", values.message || "N/A");
     
-    // Send email via mailto
-    const mailtoLink = `mailto:contact@labstack.in?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-    window.location.href = mailtoLink;
-    
-    toast({ 
-      title: "Application received!", 
-      description: "Our medical network team will review your credentials and reach out within 2 business days." 
-    });
-    form.reset();
+    try {
+      await fetch("https://formsubmit.co/contact@labstack.in", {
+        method: "POST",
+        body: formData,
+      });
+      
+      toast({ 
+        title: "Application received!", 
+        description: "Our medical network team will review your credentials and reach out within 2 business days." 
+      });
+      form.reset();
+    } catch (error) {
+      toast({ title: "Error", description: "Failed to submit application. Please try again.", variant: "destructive" });
+    }
   };
 
   return (

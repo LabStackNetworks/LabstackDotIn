@@ -96,7 +96,7 @@ const NutritionistsHealthCoaches = () => {
               </h1>
 
               <p className="text-lg lg:text-xl text-muted-foreground mb-8">
-                Serve clients in 600+ cities nationwide—from metros to Tier-3 towns. Access steady B2B flow from corporate wellness, insurance programs, and digital health platforms.
+                Serve clients in 600+ cities nationwide, from metros to Tier-3 towns. Access steady B2B flow from corporate wellness, insurance programs, and digital health platforms.
                 Order specialized diagnostics (gut microbiome, genetic tests, metabolic panels) for precision nutrition.
               </p>
 
@@ -127,15 +127,15 @@ const NutritionistsHealthCoaches = () => {
                 <ul className="space-y-3">
                   <li className="flex items-start space-x-2 text-muted-foreground">
                     <span className="text-success mt-1">✓</span>
-                    <span className="text-sm">Nationwide coverage—reach clients across 600+ cities from metros to Tier-3, no geographic boundaries</span>
+                    <span className="text-sm">Nationwide coverage to reach clients across 600+ cities from metros to Tier-3, no geographic boundaries</span>
                   </li>
                   <li className="flex items-start space-x-2 text-muted-foreground">
                     <span className="text-success mt-1">✓</span>
-                    <span className="text-sm">4-6x client growth from B2B channels—corporate wellness, insurance programs deliver consistent demand</span>
+                    <span className="text-sm">4-6x client growth from B2B channels with corporate wellness, insurance programs delivering consistent demand</span>
                   </li>
                   <li className="flex items-start space-x-2 text-muted-foreground">
                     <span className="text-success mt-1">✓</span>
-                    <span className="text-sm">Order specialized diagnostics—gut microbiome, food sensitivity tests, genetic nutrition panels, metabolic markers for precision guidance</span>
+                    <span className="text-sm">Order specialized diagnostics like gut microbiome, food sensitivity tests, genetic nutrition panels, metabolic markers for precision guidance</span>
                   </li>
                   <li className="flex items-start space-x-2 text-muted-foreground">
                     <span className="text-success mt-1">✓</span>
@@ -143,7 +143,7 @@ const NutritionistsHealthCoaches = () => {
                   </li>
                   <li className="flex items-start space-x-2 text-muted-foreground">
                     <span className="text-success mt-1">✓</span>
-                    <span className="text-sm">Guaranteed timely payments with bi-weekly settlements—no payment delays, transparent invoicing</span>
+                    <span className="text-sm">Guaranteed timely payments with bi-weekly settlements, no payment delays, transparent invoicing</span>
                   </li>
                 </ul>
               </div>
@@ -209,7 +209,7 @@ const NutritionistsHealthCoaches = () => {
                 <p className="text-success font-medium italic">
                   "Labstack connected me to corporate wellness programs from Bangalore to Bhopal. Ordering gut microbiome and genetic tests lets me provide precision nutrition. My client base grew 5x and revenue doubled."
                 </p>
-                <p className="text-sm text-muted-foreground mt-2">— Priya Menon, Certified Nutritionist, Bangalore</p>
+                <p className="text-sm text-muted-foreground mt-2">Priya Menon, Certified Nutritionist, Bangalore</p>
               </div>
             </div>
 
