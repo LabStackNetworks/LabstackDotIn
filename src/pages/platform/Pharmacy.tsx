@@ -1,4 +1,4 @@
-import { Pill, Home, ShoppingCart, ArrowRight, CheckCircle, Shield, Clock } from "lucide-react";
+import { Pill, Home, ShoppingCart, ArrowRight, CheckCircle, Shield, Clock, Truck, Store } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
@@ -97,8 +97,55 @@ const Pharmacy = () => {
                 Result: Unreliable delivery, compliance risks, and poor patient trust.
               </p>
             </div>
+          </div>
+        </section>
 
-            {/* Labstack Advantage */}
+        {/* Delivery Modes - Visual Cards */}
+        <section className="py-20 bg-gradient-hero border-y border-border/50">
+          <div className="container mx-auto px-6">
+            <div className="max-w-5xl mx-auto">
+              <h2 className="text-3xl font-heading font-bold mb-4 text-center">Pharmacy Delivery Modes</h2>
+              <p className="text-center text-muted-foreground mb-12">
+                Flexible fulfilment options for every healthcare need
+              </p>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div className="bg-card p-8 rounded-2xl border border-border/20 text-center">
+                  <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
+                    <Truck className="w-8 h-8 text-primary" />
+                  </div>
+                  <h3 className="text-xl font-heading font-bold mb-2">Home Delivery</h3>
+                  <p className="text-3xl font-bold text-gradient mb-2">20,000+</p>
+                  <p className="text-sm text-muted-foreground mb-4">Pincodes Covered</p>
+                  <p className="text-xs text-muted-foreground">60-minute delivery in 12 metros, nationwide coverage</p>
+                </div>
+                
+                <div className="bg-card p-8 rounded-2xl border border-border/20 text-center">
+                  <div className="w-16 h-16 rounded-full bg-success/10 flex items-center justify-center mx-auto mb-4">
+                    <Store className="w-8 h-8 text-success" />
+                  </div>
+                  <h3 className="text-xl font-heading font-bold mb-2">Store Pickup</h3>
+                  <p className="text-3xl font-bold text-gradient mb-2">Local</p>
+                  <p className="text-sm text-muted-foreground mb-4">Pharmacy Chains</p>
+                  <p className="text-xs text-muted-foreground">Pick up from nearby pharmacy stores</p>
+                </div>
+                
+                <div className="bg-card p-8 rounded-2xl border border-border/20 text-center">
+                  <div className="w-16 h-16 rounded-full bg-secondary/10 flex items-center justify-center mx-auto mb-4">
+                    <Pill className="w-8 h-8 text-secondary" />
+                  </div>
+                  <h3 className="text-xl font-heading font-bold mb-2">E-Pharmacy</h3>
+                  <p className="text-3xl font-bold text-gradient mb-2">Pan-India</p>
+                  <p className="text-sm text-muted-foreground mb-4">Digital Network</p>
+                  <p className="text-xs text-muted-foreground">Integrated e-pharmacies and dark stores</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Labstack Advantage */}
+        <section className="py-20 bg-background">
+          <div className="container mx-auto px-6">
             <div className="max-w-6xl mx-auto mb-20">
               <h2 className="text-3xl font-heading font-bold text-center mb-12">The Labstack Advantage: Pharmacy</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

@@ -147,7 +147,7 @@ const Consultations = () => {
           </div>
         </section>
 
-        {/* Delivery Modes */}
+        {/* Delivery Modes - Visual Cards */}
         <section className="py-20 bg-gradient-hero border-y border-border/50">
           <div className="container mx-auto px-6">
             <div className="max-w-5xl mx-auto">
@@ -155,41 +155,36 @@ const Consultations = () => {
               <p className="text-center text-muted-foreground mb-12">
                 Multiple consultation options for every patient need
               </p>
-              <div className="overflow-x-auto">
-                <table className="w-full bg-card rounded-xl border border-border/20">
-                  <thead>
-                    <tr className="border-b border-border/20">
-                      <th className="p-4 text-left font-heading">Mode</th>
-                      <th className="p-4 text-left font-heading">Experience</th>
-                      <th className="p-4 text-left font-heading">Coverage</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {[
-                      {
-                        mode: "Video Teleconsult",
-                        experience: "Proprietary video platform with EMR and e-prescription",
-                        coverage: "Pan-India"
-                      },
-                      {
-                        mode: "Audio Teleconsult",
-                        experience: "Phone/WhatsApp consult with digital prescription",
-                        coverage: "Pan-India"
-                      },
-                      {
-                        mode: "In-Clinic Visit",
-                        experience: "Book appointment, visit clinic with EMR integration",
-                        coverage: "Major cities"
-                      }
-                    ].map((item, index) => (
-                      <tr key={index} className="border-b border-border/10 last:border-0">
-                        <td className="p-4 font-semibold">{item.mode}</td>
-                        <td className="p-4 text-sm text-muted-foreground">{item.experience}</td>
-                        <td className="p-4 text-sm text-muted-foreground">{item.coverage}</td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div className="bg-card p-8 rounded-2xl border border-border/20 text-center">
+                  <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
+                    <Video className="w-8 h-8 text-primary" />
+                  </div>
+                  <h3 className="text-xl font-heading font-bold mb-2">Video Teleconsult</h3>
+                  <p className="text-3xl font-bold text-gradient mb-2">Pan-India</p>
+                  <p className="text-sm text-muted-foreground mb-4">Coverage</p>
+                  <p className="text-xs text-muted-foreground">Proprietary video platform with EMR and e-prescription</p>
+                </div>
+                
+                <div className="bg-card p-8 rounded-2xl border border-border/20 text-center">
+                  <div className="w-16 h-16 rounded-full bg-success/10 flex items-center justify-center mx-auto mb-4">
+                    <Users className="w-8 h-8 text-success" />
+                  </div>
+                  <h3 className="text-xl font-heading font-bold mb-2">Audio Teleconsult</h3>
+                  <p className="text-3xl font-bold text-gradient mb-2">Pan-India</p>
+                  <p className="text-sm text-muted-foreground mb-4">Coverage</p>
+                  <p className="text-xs text-muted-foreground">Phone/WhatsApp consult with digital prescription</p>
+                </div>
+                
+                <div className="bg-card p-8 rounded-2xl border border-border/20 text-center">
+                  <div className="w-16 h-16 rounded-full bg-secondary/10 flex items-center justify-center mx-auto mb-4">
+                    <Stethoscope className="w-8 h-8 text-secondary" />
+                  </div>
+                  <h3 className="text-xl font-heading font-bold mb-2">In-Clinic Visit</h3>
+                  <p className="text-3xl font-bold text-gradient mb-2">Major</p>
+                  <p className="text-sm text-muted-foreground mb-4">Cities Covered</p>
+                  <p className="text-xs text-muted-foreground">Book appointment, visit clinic with EMR integration</p>
+                </div>
               </div>
             </div>
           </div>
