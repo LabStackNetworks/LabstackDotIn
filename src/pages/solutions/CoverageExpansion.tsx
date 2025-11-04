@@ -4,57 +4,64 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FAQ from "@/components/FAQ";
 import SEOHead from "@/components/SEOHead";
-import CTAButtons from "@/components/CTAButtons";
+import TLDR from "@/components/design-system/TLDR";
 import RelatedBlogs from "@/components/RelatedBlogs";
 import { Link } from "react-router-dom";
-import { generateProductSchema, generateFAQSchema } from "@/lib/structured-data";
+import { generateProductSchema, generateFAQSchema, generateBreadcrumbSchema } from "@/lib/structured-data";
 import { coverageExpansionFAQs } from "@/lib/faqs/coverage-expansion-faqs";
 
 const CoverageExpansion = () => {
   const productSchema = generateProductSchema({
     name: "Coverage Expansion Solutions",
-    description: "Expand healthcare services to Tier-2/3 markets instantly. Quality-assured providers with local market expertise.",
+    description: "Healthcare coverage expansion to Tier-2/3 markets. Quality-assured providers with local operations.",
     url: "https://labstack.in/solutions/coverage-expansion"
   });
 
-  const faqSchema = generateFAQSchema(coverageExpansionFAQs);
-  const structuredData = [productSchema, faqSchema];
-  const expansionBenefits = [
-    {
-      title: "No Capex or Ops Hiring",
-      description: "Launch in new markets without building local operations or signing individual vendor contracts"
-    },
-    {
-      title: "No Ops Hiring",
-      description: "Our local teams handle provider relationships, quality monitoring, and on-ground execution"
-    },
-    {
-      title: "Quality-Assured Providers",
-      description: "Every provider verified with CSAT monitoring, geo-level blacklisting, and SLA enforcement"
-    },
-    {
-      title: "Consistent Experience",
-      description: "Same patient experience and service quality across metros, Tier-2, and Tier-3 cities"
-    }
-  ];
+  const breadcrumbSchema = generateBreadcrumbSchema([
+    { name: "Home", url: "https://labstack.in" },
+    { name: "Solutions", url: "https://labstack.in/solutions" },
+    { name: "Coverage Expansion", url: "https://labstack.in/solutions/coverage-expansion" }
+  ]);
 
-  const tierBreakdown = [
-    { tier: "Tier-1", cities: "Metros", coverage: "Complete" },
-    { tier: "Tier-2", cities: "50+ Cities", coverage: "Full Service" },
-    { tier: "Tier-3", cities: "200+ Cities", coverage: "Growing Fast" }
-  ];
+  const faqSchema = generateFAQSchema(coverageExpansionFAQs);
+  const structuredData = [productSchema, faqSchema, breadcrumbSchema];
 
   return (
     <div className="min-h-screen bg-background">
       <SEOHead 
-        title="Coverage Expansion Solutions"
-        description="Expand healthcare services to Tier-2/3 markets instantly. Quality-assured providers with local market expertise."
+        title="Geographic expansion for healthcare businesses | LabStack"
+        description="Healthcare coverage expansion with diagnostics, pharmacy, consultations to Tier-2/3 markets. API or console launch across 9,000+ pincodes nationwide."
         keywords="healthcare market expansion, tier 2 tier 3 healthcare, geographic expansion healthcare, healthcare coverage India"
         canonical="https://labstack.in/solutions/coverage-expansion"
         structuredData={structuredData}
       />
       <Header />
       <main className="pt-20">
+        {/* Hidden TL;DR for AI crawlers */}
+        <div className="sr-only" aria-hidden="true" style={{position: 'absolute', left: '-9999px'}}>
+          <TLDR 
+            summary="Healthcare coverage expansion platform for businesses to launch services in Tier-2/3 cities. API or console deployment across 9,000+ pincodes with quality-assured providers."
+            keyPoints={[
+              "Geographic expansion platform for healthcare businesses",
+              "Delivery modes: home visits, center visits, teleconsult, health camps",
+              "Nationwide coverage across 9,000+ pincodes from metros to Tier-3",
+              "Instant expansion via API or console integration",
+              "Quality-assured provider networks in all regions"
+            ]}
+          />
+        </div>
+
+        {/* Definition Section */}
+        <section className="py-12 bg-gradient-hero border-b border-border/50">
+          <div className="container mx-auto px-6">
+            <div className="max-w-4xl mx-auto text-center">
+              <p className="text-lg text-muted-foreground">
+                Healthcare coverage expansion platform that businesses use to launch services in new markets with API or console.
+              </p>
+            </div>
+          </div>
+        </section>
+
         <section className="py-20 lg:py-32">
           <div className="container mx-auto px-6">
             {/* Hero */}
@@ -69,7 +76,7 @@ const CoverageExpansion = () => {
               </h1>
 
               <p className="text-lg lg:text-xl text-muted-foreground mb-8">
-                Expand your healthcare services to untapped markets without building local operations. Quality-assured providers and consistent experiences across 9,000+ pincodes.
+                Expand healthcare services to untapped markets. 20% conversion boost with zero setup time.
               </p>
 
               <Link to="/book-demo">
@@ -80,105 +87,182 @@ const CoverageExpansion = () => {
               </Link>
             </div>
 
-            {/* Expansion Benefits */}
-            <div className="max-w-4xl mx-auto mb-20">
-              <h2 className="text-2xl font-heading font-bold text-center mb-12">
-                Geographic Expansion Without the Pain
-              </h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                {expansionBenefits.map((benefit, index) => (
-                  <div key={index} className="bg-card-gradient p-6 rounded-xl border border-border/20 card-hover">
-                    <CheckCircle className="w-8 h-8 text-success mb-4" />
-                    <h3 className="font-heading font-bold mb-2">{benefit.title}</h3>
-                    <p className="text-sm text-muted-foreground">{benefit.description}</p>
+            {/* Problem vs Solution */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto mb-20">
+              <div className="space-y-4">
+                <h3 className="text-2xl font-heading font-bold mb-6">Building Yourself</h3>
+                {[
+                  "6-12 months per new city signing vendors",
+                  "High capex for local teams and infrastructure",
+                  "Inconsistent quality across geographies",
+                  "Coverage gaps push customers to competitors"
+                ].map((problem, i) => (
+                  <div key={i} className="flex items-start space-x-3 p-4 bg-destructive/5 border border-destructive/10 rounded-xl">
+                    <span className="text-destructive mt-1">✗</span>
+                    <span className="text-sm">{problem}</span>
+                  </div>
+                ))}
+              </div>
+
+              <div className="space-y-4">
+                <h3 className="text-2xl font-heading font-bold mb-6">With Labstack</h3>
+                {[
+                  "Instant access via single API integration",
+                  "Zero capex - operational costs only",
+                  "Consistent experience with quality frameworks",
+                  "20% conversion boost with wider coverage"
+                ].map((solution, i) => (
+                  <div key={i} className="flex items-start space-x-3 p-4 bg-success/5 border border-success/10 rounded-xl">
+                    <CheckCircle className="w-5 h-5 text-success mt-1 flex-shrink-0" />
+                    <span className="text-sm">{solution}</span>
                   </div>
                 ))}
               </div>
             </div>
+          </div>
+        </section>
 
-            {/* Tier-wise Breakdown */}
-            <div className="max-w-5xl mx-auto mb-20 bg-gradient-hero rounded-3xl p-8 lg:p-12 border border-border/50">
-              <h2 className="text-3xl font-heading font-bold text-center mb-12">
-                Coverage Across All City Tiers
-              </h2>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                {tierBreakdown.map((tier, index) => (
-                  <div key={index} className="bg-card/50 rounded-2xl p-8 text-center card-hover">
-                    <Target className="w-10 h-10 text-primary mx-auto mb-4" />
-                    <h3 className="text-2xl font-heading font-bold mb-2">{tier.tier}</h3>
-                    <p className="text-muted-foreground mb-2">{tier.cities}</p>
-                    <div className="inline-block bg-success/10 border border-success/20 px-3 py-1 rounded-full">
-                      <span className="text-success text-sm font-medium">{tier.coverage}</span>
-                    </div>
-                  </div>
-                ))}
-              </div>
-              <p className="text-center text-muted-foreground mt-8">
-                One integration. Nationwide reach. No vendor sprawl.
+        {/* How It Works */}
+        <section className="py-20 bg-background">
+          <div className="container mx-auto px-6">
+            <div className="max-w-4xl mx-auto mb-12 text-center">
+              <h2 className="text-3xl font-heading font-bold mb-4">How It Works</h2>
+              <p className="text-lg text-muted-foreground">
+                Expand to new markets in four simple steps
               </p>
             </div>
-
-            {/* Market Entry Benefits */}
-            <div className="max-w-4xl mx-auto mb-20">
-              <h2 className="text-3xl font-heading font-bold text-center mb-12">
-                Why Geographic Expansion Matters
-              </h2>
-              <div className="bg-gradient-hero rounded-3xl p-8 lg:p-12 border border-border/50">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                  <div>
-                    <h3 className="text-xl font-heading font-bold mb-4 flex items-center">
-                      <span className="text-destructive mr-2">✗</span>
-                      Building Yourself
-                    </h3>
-                    <ul className="space-y-3">
-                      <li className="text-sm text-muted-foreground flex items-start space-x-2">
-                        <span className="text-destructive mt-1">•</span>
-                        <span>6-12 months per new city signing individual vendors</span>
-                      </li>
-                      <li className="text-sm text-muted-foreground flex items-start space-x-2">
-                        <span className="text-destructive mt-1">•</span>
-                        <span>High capex for local teams and infrastructure</span>
-                      </li>
-                      <li className="text-sm text-muted-foreground flex items-start space-x-2">
-                        <span className="text-destructive mt-1">•</span>
-                        <span>Inconsistent quality across geographies</span>
-                      </li>
-                      <li className="text-sm text-muted-foreground flex items-start space-x-2">
-                        <span className="text-destructive mt-1">•</span>
-                        <span>Gaps push customers away to competitors</span>
-                      </li>
-                    </ul>
+            <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {[
+                { step: "1", title: "Select Markets", description: "Choose target cities and service types from coverage map" },
+                { step: "2", title: "Configure Services", description: "Set pricing, eligibility, and service parameters" },
+                { step: "3", title: "Activate Networks", description: "Instantly activate verified provider networks in selected regions" },
+                { step: "4", title: "Monitor & Scale", description: "Track performance and expand to additional markets" }
+              ].map((item, index) => (
+                <div key={index} className="bg-card-gradient p-6 rounded-xl border border-border/20">
+                  <div className="w-12 h-12 rounded-full bg-success/10 flex items-center justify-center mb-4">
+                    <span className="text-2xl font-bold text-success">{item.step}</span>
                   </div>
+                  <h4 className="font-heading font-bold mb-2">{item.title}</h4>
+                  <p className="text-sm text-muted-foreground">{item.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
 
-                  <div>
-                    <h3 className="text-xl font-heading font-bold mb-4 flex items-center">
-                      <CheckCircle className="w-6 h-6 mr-2 text-success" />
-                      With Labstack
-                    </h3>
-                    <ul className="space-y-3">
-                      <li className="text-sm text-muted-foreground flex items-start space-x-2">
-                        <span className="text-success mt-1">✓</span>
-                        <span>Instant access to Tier-2/3 markets via single API</span>
-                      </li>
-                      <li className="text-sm text-muted-foreground flex items-start space-x-2">
-                        <span className="text-success mt-1">✓</span>
-                        <span>Zero capex - operational costs only</span>
-                      </li>
-                      <li className="text-sm text-muted-foreground flex items-start space-x-2">
-                        <span className="text-success mt-1">✓</span>
-                        <span>Consistent experience with quality frameworks</span>
-                      </li>
-                      <li className="text-sm text-muted-foreground flex items-start space-x-2">
-                        <span className="text-success mt-1">✓</span>
-                        <span>20% conversion boost with wider coverage</span>
-                      </li>
-                    </ul>
+        {/* Delivery Modes Table */}
+        <section className="py-20 bg-gradient-hero border-y border-border/50">
+          <div className="container mx-auto px-6">
+            <div className="max-w-5xl mx-auto">
+              <h2 className="text-3xl font-heading font-bold mb-4 text-center">Coverage by Tier</h2>
+              <p className="text-center text-muted-foreground mb-12">
+                Complete healthcare services across all city tiers
+              </p>
+              <div className="overflow-x-auto">
+                <table className="w-full bg-card rounded-xl border border-border/20">
+                  <thead>
+                    <tr className="border-b border-border/20">
+                      <th className="p-4 text-left font-heading">City Tier</th>
+                      <th className="p-4 text-left font-heading">Coverage</th>
+                      <th className="p-4 text-left font-heading">Services Available</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {[
+                      {
+                        tier: "Tier-1 (Metros)",
+                        coverage: "Complete coverage",
+                        services: "All services: diagnostics, pharmacy, consultations, home care, specialized"
+                      },
+                      {
+                        tier: "Tier-2 (50+ cities)",
+                        coverage: "Full service coverage",
+                        services: "Diagnostics, pharmacy, consultations, health camps"
+                      },
+                      {
+                        tier: "Tier-3 (200+ cities)",
+                        coverage: "Expanding rapidly",
+                        services: "Core services with home collection and teleconsult"
+                      }
+                    ].map((item, index) => (
+                      <tr key={index} className="border-b border-border/10 last:border-0">
+                        <td className="p-4 font-semibold">{item.tier}</td>
+                        <td className="p-4 text-sm text-muted-foreground">{item.coverage}</td>
+                        <td className="p-4 text-sm text-muted-foreground">{item.services}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Availability & Coverage */}
+        <section className="py-20 bg-background">
+          <div className="container mx-auto px-6">
+            <div className="max-w-5xl mx-auto text-center">
+              <h2 className="text-3xl font-heading font-bold mb-6">Nationwide Availability</h2>
+              <p className="text-lg text-muted-foreground mb-8">
+                Healthcare services across 9,000+ pincodes from metros to Tier-3 cities. Complete coverage for diagnostics, pharmacy, and consultations. Multi-region fulfillment with consistent service quality nationwide.
+              </p>
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                {["Mumbai", "Delhi NCR", "Bangalore", "Hyderabad", "Chennai", "Pune", "Kolkata", "Tier 2/3 Cities"].map((city, index) => (
+                  <div key={index} className="bg-card-gradient p-4 rounded-xl border border-border/20">
+                    <CheckCircle className="w-6 h-6 text-success mx-auto mb-2" />
+                    <p className="text-sm font-medium">{city}</p>
                   </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Integration & Operations */}
+        <section className="py-20 bg-gradient-hero border-y border-border/50">
+          <div className="container mx-auto px-6">
+            <div className="max-w-6xl mx-auto">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <div>
+                  <h2 className="text-3xl font-heading font-bold mb-6">Integration Options</h2>
+                  <ul className="space-y-3">
+                    {[
+                      "API integration for programmatic market expansion",
+                      "Console access for manual market activation",
+                      "Real-time coverage maps and availability data",
+                      "Webhook notifications for network updates"
+                    ].map((feature, index) => (
+                      <li key={index} className="flex items-start space-x-3">
+                        <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-1" />
+                        <span className="text-muted-foreground">{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <div>
+                  <h2 className="text-3xl font-heading font-bold mb-6">Quality Assurance</h2>
+                  <ul className="space-y-3">
+                    {[
+                      "All providers verified with compliance checks",
+                      "CSAT-based performance monitoring in all regions",
+                      "Automated escalation for SLA breaches",
+                      "Consistent quality frameworks across all tiers"
+                    ].map((framework, index) => (
+                      <li key={index} className="flex items-start space-x-3">
+                        <Target className="w-5 h-5 text-success flex-shrink-0 mt-1" />
+                        <span className="text-muted-foreground">{framework}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               </div>
             </div>
+          </div>
+        </section>
 
-            {/* Coverage Stats & Proof */}
+        {/* Impact Metrics */}
+        <section className="py-20 bg-background">
+          <div className="container mx-auto px-6">
             <div className="max-w-5xl mx-auto bg-gradient-hero rounded-3xl p-8 lg:p-12 border border-border/50">
               <h2 className="text-3xl font-heading font-bold text-center mb-12">
                 Network Scale & Impact
@@ -204,20 +288,40 @@ const CoverageExpansion = () => {
                   <p className="text-xs text-muted-foreground mt-2">After geographic expansion</p>
                 </div>
               </div>
-
-              <div className="mt-12 bg-success/10 border border-success/20 rounded-xl p-6 text-center">
-                <p className="text-success font-medium italic">
-                  "We scaled nationwide in days with Labstack, saving a year of build. Conversions rose 20% once Tier-2/3 opened."
-                </p>
-              </div>
             </div>
           </div>
         </section>
 
         {/* FAQ Section */}
-        <section className="py-20 bg-background">
+        <section className="py-20 bg-gradient-hero border-y border-border/50">
           <div className="container mx-auto px-6">
             <FAQ items={coverageExpansionFAQs} />
+          </div>
+        </section>
+
+        {/* Internal Links */}
+        <section className="py-20 bg-background">
+          <div className="container mx-auto px-6">
+            <div className="max-w-5xl mx-auto">
+              <h2 className="text-3xl font-heading font-bold mb-8 text-center">Related Resources</h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                {[
+                  { title: "Healthcare Infrastructure", url: "/solutions/healthcare-infrastructure", description: "Complete platform for healthcare delivery" },
+                  { title: "Digital Health Platforms", url: "/who-we-serve/digital-health-platforms", description: "Solutions for healthtech companies" },
+                  { title: "Diagnostics Network", url: "/platform/diagnostics", description: "9,000+ pincode coverage" },
+                  { title: "Scaling to Tier-2/3 Blog", url: "/resources/blog/scaling-to-tier2-tier3", description: "Geographic expansion strategies" }
+                ].map((link, index) => (
+                  <Link key={index} to={link.url} className="bg-card-gradient p-6 rounded-xl border border-border/20 card-hover group">
+                    <h4 className="font-heading font-bold mb-2 group-hover:text-primary transition-colors">{link.title}</h4>
+                    <p className="text-sm text-muted-foreground">{link.description}</p>
+                    <div className="flex items-center text-primary font-medium mt-4">
+                      Learn more 
+                      <ArrowRight className="ml-1 w-4 h-4" />
+                    </div>
+                  </Link>
+                ))}
+              </div>
+            </div>
           </div>
         </section>
       </main>

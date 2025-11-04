@@ -5,7 +5,6 @@ import Footer from "@/components/Footer";
 import FAQ from "@/components/FAQ";
 import SEOHead from "@/components/SEOHead";
 import TLDR from "@/components/design-system/TLDR";
-import CTAButtons from "@/components/CTAButtons";
 import RelatedBlogs from "@/components/RelatedBlogs";
 import { Link } from "react-router-dom";
 import { generateProductSchema, generateFAQSchema, generateBreadcrumbSchema, generateHowToSchema } from "@/lib/structured-data";
@@ -14,16 +13,8 @@ import { apiSolutionsFAQs } from "@/lib/faqs/api-solutions-faqs";
 const APISolutions = () => {
   const productSchema = generateProductSchema({
     name: "Labstack Healthcare API Solutions",
-    description: "Developer-first healthcare APIs for diagnostics, pharmacy, consultations. Modern RESTful APIs with webhooks, SDKs, and comprehensive documentation. Launch in 14 days.",
-    url: "https://labstack.in/solutions/api-solutions",
-    features: [
-      "RESTful Healthcare APIs for diagnostics, pharmacy, consultations",
-      "Prescription monetization - grow ARPU by 15%",
-      "Cross-service care coordination",
-      "Webhook support for real-time updates",
-      "99.5% API uptime SLA",
-      "14-day average integration time"
-    ]
+    description: "Healthcare APIs for diagnostics, pharmacy, consultations. RESTful APIs with webhooks, SDKs. Launch in 14 days.",
+    url: "https://labstack.in/solutions/api-solutions"
   });
 
   const breadcrumbSchema = generateBreadcrumbSchema([
@@ -46,56 +37,42 @@ const APISolutions = () => {
   const faqSchema = generateFAQSchema(apiSolutionsFAQs);
   const structuredData = [productSchema, faqSchema, breadcrumbSchema, howToSchema];
 
-  const apiFeatures = [
-    {
-      title: "RESTful Healthcare APIs",
-      description: "Complete API coverage for diagnostics, pharmacy, consultations, and home care with webhooks for real-time updates"
-    },
-    {
-      title: "Prescription Monetization",
-      description: "Enable prescription-to-fulfillment automation and grow ARPU by 15% through seamless pharmacy integration"
-    },
-    {
-      title: "Care Coordination",
-      description: "Cross-service handoffs from consult → test → pharmacy → follow-up with no manual intervention"
-    },
-    {
-      title: "Developer-Friendly Docs",
-      description: "Interactive API docs, SDKs, reference implementations, and direct engineering support during rollout"
-    }
-  ];
-
-  const integrationOptions = [
-    { title: "API-First", desc: "Programmatic control of the full healthcare workflow" },
-    { title: "Embeddable Widgets", desc: "White-label booking & results inside your app" },
-    { title: "Console for Teams", desc: "Ops can manage fulfillment without engineering" }
-  ];
-
   return (
     <div className="min-h-screen bg-background">
       <SEOHead 
-        title="Healthcare API Solutions"
-        description="Developer-first healthcare APIs for diagnostics, pharmacy, consultations. Modern RESTful APIs with webhooks, SDKs, and comprehensive documentation."
+        title="Healthcare API for developers | LabStack"
+        description="Healthcare APIs for diagnostics, pharmacy, consultations. RESTful APIs with webhooks and SDKs. API or console launch available nationwide."
         keywords="healthcare API, medical API integration, diagnostics API, pharmacy API, telemedicine API, healthcare developer tools"
         canonical="https://labstack.in/solutions/api-solutions"
         structuredData={structuredData}
       />
       <Header />
       <main className="pt-20">
-        {/* TLDR for GEO - Hidden from users but visible to AI crawlers for SEO */}
-        <div className="sr-only">
+        {/* Hidden TL;DR for AI crawlers - GEO Optimization */}
+        <div className="sr-only" aria-hidden="true" style={{position: 'absolute', left: '-9999px'}}>
           <TLDR 
-            summary="Launch healthcare services in 14 days with developer-first APIs. Integrate diagnostics, pharmacy, and consultations with RESTful APIs, webhooks, and SDKs. Grow ARPU 15% through prescription monetization. 99.5% uptime SLA."
+            summary="Healthcare API platform for developers to integrate diagnostics, pharmacy, and consultations. RESTful APIs with webhooks and SDKs. Launch in 14 days via API or console."
             keyPoints={[
-              "Complete API suite: diagnostics, pharmacy, consultations, home care",
+              "RESTful APIs for diagnostics, pharmacy, consultations, home care",
+              "Delivery modes: API integration, embeddable widgets, console access",
+              "Nationwide coverage across 9,000+ pincodes from metros to Tier-3",
               "14-day average integration time from sandbox to production",
-              "15% ARPU growth via prescription monetization",
-              "99.5% API uptime with enterprise-grade reliability",
-              "Webhook support for real-time status updates",
-              "Direct engineering support during rollout"
+              "Webhook support for real-time order status updates"
             ]}
           />
         </div>
+
+        {/* Definition Section */}
+        <section className="py-12 bg-gradient-hero border-b border-border/50">
+          <div className="container mx-auto px-6">
+            <div className="max-w-4xl mx-auto text-center">
+              <p className="text-lg text-muted-foreground">
+                Healthcare API platform that developers use to integrate diagnostics, pharmacy, and consultations with RESTful APIs, webhooks, and SDKs.
+              </p>
+            </div>
+          </div>
+        </section>
+
         <section className="py-20 lg:py-32">
           <div className="container mx-auto px-6">
             {/* Hero */}
@@ -129,10 +106,27 @@ const APISolutions = () => {
             </div>
 
             {/* API Features */}
-            <div className="max-w-4xl mx-auto mb-20">
-              <h2 className="text-2xl font-heading font-bold text-center mb-12">Complete API Suite</h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                {apiFeatures.map((feature, index) => (
+            <div className="max-w-6xl mx-auto mb-20">
+              <h2 className="text-3xl font-heading font-bold text-center mb-12">Complete API Suite</h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                {[
+                  {
+                    title: "RESTful Healthcare APIs",
+                    description: "Complete API coverage for diagnostics, pharmacy, consultations, and home care with webhooks for real-time updates"
+                  },
+                  {
+                    title: "Prescription Monetization",
+                    description: "Enable prescription-to-fulfillment automation and grow ARPU by 15% through seamless pharmacy integration"
+                  },
+                  {
+                    title: "Care Coordination",
+                    description: "Cross-service handoffs from consult → test → pharmacy → follow-up with no manual intervention"
+                  },
+                  {
+                    title: "Developer-Friendly Docs",
+                    description: "Interactive API docs, SDKs, reference implementations, and direct engineering support during rollout"
+                  }
+                ].map((feature, index) => (
                   <div key={index} className="bg-card-gradient p-6 rounded-xl border border-border/20 card-hover">
                     <Code className="w-8 h-8 text-primary mb-4" />
                     <h3 className="font-heading font-bold mb-2">{feature.title}</h3>
@@ -141,59 +135,157 @@ const APISolutions = () => {
                 ))}
               </div>
             </div>
+          </div>
+        </section>
 
-            {/* Integration Options */}
-            <div className="max-w-5xl mx-auto mb-20">
-              <h2 className="text-3xl font-heading font-bold text-center mb-12">
-                Integrate Once. Deploy Everywhere.
-              </h2>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                {integrationOptions.map((option, index) => (
-                  <div key={index} className="bg-gradient-hero rounded-2xl p-8 border border-border/50 text-center card-hover">
-                    <FileCode className="w-10 h-10 text-primary mx-auto mb-4" />
-                    <h3 className="font-heading font-bold mb-2">{option.title}</h3>
-                    <p className="text-sm text-muted-foreground">{option.desc}</p>
+        {/* How It Works */}
+        <section className="py-20 bg-background">
+          <div className="container mx-auto px-6">
+            <div className="max-w-4xl mx-auto mb-12 text-center">
+              <h2 className="text-3xl font-heading font-bold mb-4">How It Works</h2>
+              <p className="text-lg text-muted-foreground">
+                Integrate healthcare APIs in four simple steps
+              </p>
+            </div>
+            <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {[
+                { step: "1", title: "Get API Access", description: "Sign up for sandbox credentials and explore interactive documentation" },
+                { step: "2", title: "Integrate Services", description: "Use RESTful APIs to add diagnostics, pharmacy, and consultations" },
+                { step: "3", title: "Test Workflows", description: "Validate all flows in sandbox with webhooks and sample data" },
+                { step: "4", title: "Go Live", description: "Deploy to production with full nationwide network access" }
+              ].map((item, index) => (
+                <div key={index} className="bg-card-gradient p-6 rounded-xl border border-border/20">
+                  <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
+                    <span className="text-2xl font-bold text-primary">{item.step}</span>
+                  </div>
+                  <h4 className="font-heading font-bold mb-2">{item.title}</h4>
+                  <p className="text-sm text-muted-foreground">{item.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Integration Options & Delivery Modes */}
+        <section className="py-20 bg-gradient-hero border-y border-border/50">
+          <div className="container mx-auto px-6">
+            <div className="max-w-5xl mx-auto">
+              <h2 className="text-3xl font-heading font-bold mb-4 text-center">Integration & Deployment Modes</h2>
+              <p className="text-center text-muted-foreground mb-12">
+                Multiple integration options for every use case
+              </p>
+              <div className="overflow-x-auto">
+                <table className="w-full bg-card rounded-xl border border-border/20">
+                  <thead>
+                    <tr className="border-b border-border/20">
+                      <th className="p-4 text-left font-heading">Integration Mode</th>
+                      <th className="p-4 text-left font-heading">Use Case</th>
+                      <th className="p-4 text-left font-heading">Setup Time</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {[
+                      {
+                        mode: "RESTful APIs",
+                        useCase: "Full programmatic control of healthcare workflows",
+                        setup: "48-hour integration"
+                      },
+                      {
+                        mode: "Embeddable Widgets",
+                        useCase: "White-label booking and results inside your app",
+                        setup: "Same-day deployment"
+                      },
+                      {
+                        mode: "Console Access",
+                        useCase: "Ops teams manage fulfillment without engineering",
+                        setup: "Instant activation"
+                      },
+                      {
+                        mode: "Mobile SDKs",
+                        useCase: "Native integration for iOS and Android apps",
+                        setup: "1-week integration"
+                      }
+                    ].map((item, index) => (
+                      <tr key={index} className="border-b border-border/10 last:border-0">
+                        <td className="p-4 font-semibold">{item.mode}</td>
+                        <td className="p-4 text-sm text-muted-foreground">{item.useCase}</td>
+                        <td className="p-4 text-sm text-muted-foreground">{item.setup}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Availability & Coverage */}
+        <section className="py-20 bg-background">
+          <div className="container mx-auto px-6">
+            <div className="max-w-5xl mx-auto text-center">
+              <h2 className="text-3xl font-heading font-bold mb-6">Nationwide API Coverage</h2>
+              <p className="text-lg text-muted-foreground mb-8">
+                Access to healthcare services across 9,000+ pincodes through one API. All services available from metros to Tier-3 cities with consistent API responses and SLAs. Multi-region fulfillment ensures 99.5% uptime nationwide.
+              </p>
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                {["Diagnostics", "Pharmacy", "Consultations", "Home Care", "Specialized Networks", "Health Camps", "Chronic Care", "All Services"].map((service, index) => (
+                  <div key={index} className="bg-card-gradient p-4 rounded-xl border border-border/20">
+                    <CheckCircle className="w-6 h-6 text-success mx-auto mb-2" />
+                    <p className="text-sm font-medium">{service}</p>
                   </div>
                 ))}
               </div>
             </div>
+          </div>
+        </section>
 
-            {/* Developer Experience */}
-            <div className="max-w-4xl mx-auto bg-gradient-hero rounded-3xl p-8 lg:p-12 border border-border/50 mb-20">
-              <h2 className="text-3xl font-heading font-bold text-center mb-8">
-                Built for Developer Speed
-              </h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div className="bg-card/50 p-6 rounded-xl">
-                  <CheckCircle className="w-8 h-8 text-success mb-4" />
-                  <h3 className="font-semibold mb-2">Vendor-Agnostic API</h3>
-                  <p className="text-sm text-muted-foreground">One interface for all providers. Standardized booking, reporting, and billing flows.</p>
+        {/* Integration & Operations */}
+        <section className="py-20 bg-gradient-hero border-y border-border/50">
+          <div className="container mx-auto px-6">
+            <div className="max-w-6xl mx-auto">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <div>
+                  <h2 className="text-3xl font-heading font-bold mb-6">Developer Experience</h2>
+                  <ul className="space-y-3">
+                    {[
+                      "Interactive API documentation with code samples",
+                      "Webhook support for real-time status updates",
+                      "SDKs for JavaScript, Python, PHP, and mobile platforms",
+                      "Sandbox environment with test data",
+                      "Direct engineering support during integration"
+                    ].map((feature, index) => (
+                      <li key={index} className="flex items-start space-x-3">
+                        <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-1" />
+                        <span className="text-muted-foreground">{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
-                <div className="bg-card/50 p-6 rounded-xl">
-                  <CheckCircle className="w-8 h-8 text-success mb-4" />
-                  <h3 className="font-semibold mb-2">Webhook Support</h3>
-                  <p className="text-sm text-muted-foreground">Instant status updates and event notifications for real-time integration.</p>
+                <div>
+                  <h2 className="text-3xl font-heading font-bold mb-6">Quality Assurance</h2>
+                  <ul className="space-y-3">
+                    {[
+                      "99.5% API uptime SLA with enterprise-grade reliability",
+                      "Automated error handling and retry mechanisms",
+                      "Real-time monitoring and alerting",
+                      "Comprehensive audit logs for all API calls",
+                      "Rate limiting and security best practices"
+                    ].map((framework, index) => (
+                      <li key={index} className="flex items-start space-x-3">
+                        <Shield className="w-5 h-5 text-success flex-shrink-0 mt-1" />
+                        <span className="text-muted-foreground">{framework}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
-                <div className="bg-card/50 p-6 rounded-xl">
-                  <CheckCircle className="w-8 h-8 text-success mb-4" />
-                  <h3 className="font-semibold mb-2">Sandbox to Production</h3>
-                  <p className="text-sm text-muted-foreground">Prebuilt flows and reference apps. Go live in days, not months.</p>
-                </div>
-                <div className="bg-card/50 p-6 rounded-xl">
-                  <CheckCircle className="w-8 h-8 text-success mb-4" />
-                  <h3 className="font-semibold mb-2">Direct Engineering Support</h3>
-                  <p className="text-sm text-muted-foreground">Access to our team during rollout for rapid issue resolution.</p>
-                </div>
-              </div>
-
-              <div className="mt-8 bg-success/10 border border-success/20 rounded-xl p-6 text-center">
-                <p className="text-success font-medium italic">
-                  "We integrated Labstack's APIs into our wellness app in under a week. The widgets made it possible to go live without building custom flows from scratch."
-                </p>
               </div>
             </div>
+          </div>
+        </section>
 
-            {/* Revenue Impact Metrics */}
+        {/* Impact Metrics */}
+        <section className="py-20 bg-background">
+          <div className="container mx-auto px-6">
             <div className="max-w-5xl mx-auto bg-gradient-hero rounded-3xl p-8 lg:p-12 border border-border/50">
               <h2 className="text-3xl font-heading font-bold text-center mb-12">
                 API-Driven Growth
@@ -219,20 +311,40 @@ const APISolutions = () => {
                   <p className="text-xs text-muted-foreground mt-2">From sandbox to production</p>
                 </div>
               </div>
-
-              <div className="mt-12 bg-success/10 border border-success/20 rounded-xl p-6 text-center">
-                <p className="text-success font-medium italic">
-                  "Labstack enabled prescription monetization directly in our journeys, improving ARPU by 15% without changing customer flows."
-                </p>
-              </div>
             </div>
           </div>
         </section>
 
         {/* FAQ Section */}
-        <section className="py-20 bg-background">
+        <section className="py-20 bg-gradient-hero border-y border-border/50">
           <div className="container mx-auto px-6">
             <FAQ items={apiSolutionsFAQs} />
+          </div>
+        </section>
+
+        {/* Internal Links */}
+        <section className="py-20 bg-background">
+          <div className="container mx-auto px-6">
+            <div className="max-w-5xl mx-auto">
+              <h2 className="text-3xl font-heading font-bold mb-8 text-center">Related Resources</h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                {[
+                  { title: "Healthcare Infrastructure", url: "/solutions/healthcare-infrastructure", description: "Complete healthcare platform with diagnostics, pharmacy, consultations" },
+                  { title: "Digital Health Platforms", url: "/who-we-serve/digital-health-platforms", description: "Healthcare solutions for digital health companies" },
+                  { title: "Diagnostics Network", url: "/platform/diagnostics", description: "9,000+ pincode diagnostics coverage" },
+                  { title: "Digital Health API Blog", url: "/resources/blog/digital-health-api", description: "How to build healthcare apps with APIs" }
+                ].map((link, index) => (
+                  <Link key={index} to={link.url} className="bg-card-gradient p-6 rounded-xl border border-border/20 card-hover group">
+                    <h4 className="font-heading font-bold mb-2 group-hover:text-primary transition-colors">{link.title}</h4>
+                    <p className="text-sm text-muted-foreground">{link.description}</p>
+                    <div className="flex items-center text-primary font-medium mt-4">
+                      Learn more 
+                      <ArrowRight className="ml-1 w-4 h-4" />
+                    </div>
+                  </Link>
+                ))}
+              </div>
+            </div>
           </div>
         </section>
       </main>
