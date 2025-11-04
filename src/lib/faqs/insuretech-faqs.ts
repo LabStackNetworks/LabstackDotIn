@@ -11,7 +11,7 @@ export const insuretechFAQs = [
   },
   {
     question: "What healthcare services can we offer to our insurance members?",
-    answer: "Complete healthcare stack: (1) Diagnostics—3,000+ tests, home collection + center visits, pathology + radiology (MRI, CT, X-ray, USG), NABL-accredited labs, (2) Consultations—24/7 teleconsults, 25+ specialties, in-person doctor visits, second opinions, (3) Pharmacy—18,000+ pincodes delivery, chronic medication refills, prescription management, (4) Preventive care—annual health checkups, executive packages, cancer screenings, (5) Chronic care programs—diabetes, hypertension, PCOS management with longitudinal tracking, (6) Health camps—employer worksites, community screenings with digital reporting. All services white-labeled under your brand across metros to Tier-3 cities."
+    answer: "Complete healthcare stack: (1) Diagnostics—3,000+ tests, home collection + center visits, pathology + radiology (MRI, CT, X-ray, USG), NABL-accredited labs, (2) Consultations—24/7 teleconsults, 25+ specialties, in-person doctor visits, second opinions, (3) Pharmacy—15,000+ pincodes delivery, chronic medication refills, prescription management, (4) Preventive care—annual health checkups, executive packages, cancer screenings, (5) Chronic care programs—diabetes, hypertension, PCOS management with longitudinal tracking, (6) Health camps—employer worksites, community screenings with digital reporting. All services white-labeled under your brand across metros to Tier-3 cities."
   },
   {
     question: "Will this compete with our core insurance business?",

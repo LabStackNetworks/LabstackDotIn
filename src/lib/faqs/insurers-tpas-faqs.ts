@@ -73,7 +73,7 @@ export const insurersTPAsFAQs = [
   // Cashless OPD for Pharmacy
   {
     question: "How does cashless OPD pharmacy work end-to-end?",
-    answer: "Doctor prescribes medicines (e-prescription or physical Rx uploaded) → Member selects pharmacy delivery or pickup → Prescription validated by system (OCR + pharmacist review) → Eligibility check (policy active, pharmacy benefit available, medicine covered, quantity within limits) → Instant approval or rejection → Medicine dispensed and delivered within 6-24 hours → Member pays ₹0 (or copay if applicable) → Automated billing to insurer with member ID, prescription details, medicine SKU, MRP, and invoice. Covers Schedule H/H1 prescription drugs, chronic disease medications, OTC medicines (if policy includes). Available across 18,000+ pincodes via e-pharmacy partners and local pharmacies."
+    answer: "Doctor prescribes medicines (e-prescription or physical Rx uploaded) → Member selects pharmacy delivery or pickup → Prescription validated by system (OCR + pharmacist review) → Eligibility check (policy active, pharmacy benefit available, medicine covered, quantity within limits) → Instant approval or rejection → Medicine dispensed and delivered within 6-24 hours → Member pays ₹0 (or copay if applicable) → Automated billing to insurer with member ID, prescription details, medicine SKU, MRP, and invoice. Covers Schedule H/H1 prescription drugs, chronic disease medications, OTC medicines (if policy includes). Available across 15,000+ pincodes via e-pharmacy partners and local pharmacies."
   },
   {
     question: "Can you restrict specific medicines or drug categories in cashless pharmacy?",

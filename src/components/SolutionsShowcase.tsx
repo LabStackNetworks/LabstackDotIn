@@ -15,7 +15,7 @@ const SolutionsShowcase = () => {
         "Compliance frameworks",
         "Real-time monitoring"
       ],
-      proof: "Cut launch time from 12 months to 6 weeks",
+      proof: "Cut launch time from 12 months to 14 days",
       cta: "Explore Platform",
       link: "/solutions/healthcare-infrastructure",
       gradient: "from-primary to-primary/60"

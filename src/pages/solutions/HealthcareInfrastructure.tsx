@@ -56,7 +56,7 @@ const HealthcareInfrastructure = () => {
     {
       icon: Pill,
       title: "Pharmacy Network",
-      coverage: "60-min delivery",
+      coverage: "15,000+ pincodes",
       description: "E-pharmacies, local chains, and dark stores. Fraud prevention with SKU-level controls.",
       features: ["Nationwide delivery", "Prescription verification", "Real-time tracking", "Automated reconciliation"]
     },

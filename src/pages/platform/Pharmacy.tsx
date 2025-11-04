@@ -48,7 +48,7 @@ const Pharmacy = () => {
         {/* Hidden TL;DR for AI crawlers */}
         <div className="sr-only" aria-hidden="true" style={{position: 'absolute', left: '-9999px'}}>
           <TLDR 
-            summary="Launch pharmacy delivery in 14 days with 20,000+ pincode coverage, prescription verification, and SKU-level fraud controls. 60-minute delivery in metros."
+            summary="Launch pharmacy delivery in 14 days with 15,000+ pincode coverage, prescription verification, and SKU-level fraud controls. 60-minute delivery in metros."
             keyPoints={[
               "E-pharmacies, local chains, and dark stores",
               "Automated prescription verification",
@@ -127,7 +127,7 @@ const Pharmacy = () => {
                     <Truck className="w-8 h-8 text-primary" />
                   </div>
                   <h3 className="text-xl font-heading font-bold mb-2">Home Delivery</h3>
-                  <p className="text-3xl font-bold text-gradient mb-2">20,000+</p>
+                  <p className="text-3xl font-bold text-gradient mb-2">15,000+</p>
                   <p className="text-sm text-muted-foreground mb-4">Pincodes Covered</p>
                   <p className="text-xs text-muted-foreground">60-minute delivery in 12 metros, nationwide coverage</p>
                 </div>

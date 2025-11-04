@@ -50,7 +50,7 @@ const SolutionSection = () => {
         "Pharmacy partnerships",
         "At-home services"
       ],
-      proof: "Cut launch time from 12 months to 6 weeks",
+      proof: "Cut launch time from 12 months to 14 days",
       cta: "Explore Platform",
       gradient: "from-primary to-primary/60"
     },

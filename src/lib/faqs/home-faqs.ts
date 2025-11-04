@@ -167,7 +167,7 @@ export const homeFAQs = [
   },
   {
     question: "Which pincodes currently support diagnostics and pharmacy services?",
-    answer: "9,000+ pincodes for diagnostics and 18,000+ pincodes for pharmacy across all states. Coverage includes metros, Tier-2 cities (Indore, Jaipur, Kochi), and Tier-3 towns (Ranchi, Dehradun, Guwahati)."
+    answer: "9,000+ pincodes for diagnostics and 15,000+ pincodes for pharmacy across all states. Coverage includes metros, Tier-2 cities (Indore, Jaipur, Kochi), and Tier-3 towns (Ranchi, Dehradun, Guwahati)."
   },
   {
     question: "How fast can platforms launch healthcare services using API or widgets?",

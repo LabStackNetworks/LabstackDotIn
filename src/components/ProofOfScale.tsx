@@ -98,7 +98,7 @@ const ProofOfScale = () => {
                     <div className="absolute top-[25%] left-[40%] group">
                       <div className="w-4 h-4 bg-primary rounded-full animate-pulse-subtle glow-primary cursor-pointer"></div>
                       <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 bg-card text-xs px-2 py-1 rounded shadow-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
-                        Delhi NCR - 500+ Centers
+                        Delhi NCR
                       </div>
                     </div>
                     
@@ -106,7 +106,7 @@ const ProofOfScale = () => {
                     <div className="absolute top-[45%] left-[20%] group">
                       <div className="w-4 h-4 bg-secondary rounded-full animate-pulse-subtle glow-secondary cursor-pointer"></div>
                       <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 bg-card text-xs px-2 py-1 rounded shadow-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
-                        Mumbai - 400+ Centers
+                        Mumbai
                       </div>
                     </div>
                     
@@ -114,7 +114,7 @@ const ProofOfScale = () => {
                     <div className="absolute bottom-[25%] left-[30%] group">
                       <div className="w-4 h-4 bg-success rounded-full animate-pulse-subtle cursor-pointer"></div>
                       <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 bg-card text-xs px-2 py-1 rounded shadow-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
-                        Bangalore - 350+ Centers
+                        Bangalore
                       </div>
                     </div>
                     
@@ -122,7 +122,7 @@ const ProofOfScale = () => {
                     <div className="absolute bottom-[20%] left-[35%] group">
                       <div className="w-4 h-4 bg-warning rounded-full animate-pulse-subtle cursor-pointer"></div>
                       <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 bg-card text-xs px-2 py-1 rounded shadow-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
-                        Chennai - 300+ Centers
+                        Chennai
                       </div>
                     </div>
                     
@@ -130,7 +130,7 @@ const ProofOfScale = () => {
                     <div className="absolute top-[35%] right-[25%] group">
                       <div className="w-4 h-4 bg-primary rounded-full animate-pulse-subtle cursor-pointer"></div>
                       <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 bg-card text-xs px-2 py-1 rounded shadow-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
-                        Kolkata - 250+ Centers
+                        Kolkata
                       </div>
                     </div>
                     
@@ -138,7 +138,7 @@ const ProofOfScale = () => {
                     <div className="absolute bottom-[35%] left-[45%] group">
                       <div className="w-4 h-4 bg-secondary rounded-full animate-pulse-subtle cursor-pointer"></div>
                       <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 bg-card text-xs px-2 py-1 rounded shadow-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
-                        Hyderabad - 200+ Centers
+                        Hyderabad
                       </div>
                     </div>
                     
@@ -146,7 +146,7 @@ const ProofOfScale = () => {
                     <div className="absolute top-[50%] left-[25%] group">
                       <div className="w-3 h-3 bg-success rounded-full animate-pulse-subtle cursor-pointer"></div>
                       <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 bg-card text-xs px-2 py-1 rounded shadow-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
-                        Pune - 180+ Centers
+                        Pune
                       </div>
                     </div>
                     
@@ -154,7 +154,103 @@ const ProofOfScale = () => {
                     <div className="absolute top-[40%] left-[15%] group">
                       <div className="w-3 h-3 bg-warning rounded-full animate-pulse-subtle cursor-pointer"></div>
                       <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 bg-card text-xs px-2 py-1 rounded shadow-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
-                        Ahmedabad - 150+ Centers
+                        Ahmedabad
+                      </div>
+                    </div>
+                    
+                    {/* Jaipur */}
+                    <div className="absolute top-[32%] left-[28%] group">
+                      <div className="w-3 h-3 bg-primary rounded-full animate-pulse-subtle cursor-pointer"></div>
+                      <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 bg-card text-xs px-2 py-1 rounded shadow-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
+                        Jaipur
+                      </div>
+                    </div>
+                    
+                    {/* Lucknow */}
+                    <div className="absolute top-[28%] left-[48%] group">
+                      <div className="w-3 h-3 bg-secondary rounded-full animate-pulse-subtle cursor-pointer"></div>
+                      <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 bg-card text-xs px-2 py-1 rounded shadow-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
+                        Lucknow
+                      </div>
+                    </div>
+                    
+                    {/* Indore */}
+                    <div className="absolute top-[45%] left-[32%] group">
+                      <div className="w-3 h-3 bg-success rounded-full animate-pulse-subtle cursor-pointer"></div>
+                      <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 bg-card text-xs px-2 py-1 rounded shadow-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
+                        Indore
+                      </div>
+                    </div>
+                    
+                    {/* Chandigarh */}
+                    <div className="absolute top-[22%] left-[35%] group">
+                      <div className="w-3 h-3 bg-warning rounded-full animate-pulse-subtle cursor-pointer"></div>
+                      <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 bg-card text-xs px-2 py-1 rounded shadow-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
+                        Chandigarh
+                      </div>
+                    </div>
+                    
+                    {/* Coimbatore */}
+                    <div className="absolute bottom-[28%] left-[28%] group">
+                      <div className="w-3 h-3 bg-primary rounded-full animate-pulse-subtle cursor-pointer"></div>
+                      <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 bg-card text-xs px-2 py-1 rounded shadow-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
+                        Coimbatore
+                      </div>
+                    </div>
+                    
+                    {/* Kochi */}
+                    <div className="absolute bottom-[18%] left-[25%] group">
+                      <div className="w-3 h-3 bg-secondary rounded-full animate-pulse-subtle cursor-pointer"></div>
+                      <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 bg-card text-xs px-2 py-1 rounded shadow-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
+                        Kochi
+                      </div>
+                    </div>
+                    
+                    {/* Nagpur */}
+                    <div className="absolute top-[48%] left-[42%] group">
+                      <div className="w-3 h-3 bg-success rounded-full animate-pulse-subtle cursor-pointer"></div>
+                      <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 bg-card text-xs px-2 py-1 rounded shadow-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
+                        Nagpur
+                      </div>
+                    </div>
+                    
+                    {/* Bhubaneswar */}
+                    <div className="absolute top-[42%] right-[22%] group">
+                      <div className="w-3 h-3 bg-warning rounded-full animate-pulse-subtle cursor-pointer"></div>
+                      <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 bg-card text-xs px-2 py-1 rounded shadow-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
+                        Bhubaneswar
+                      </div>
+                    </div>
+                    
+                    {/* Visakhapatnam */}
+                    <div className="absolute bottom-[32%] right-[18%] group">
+                      <div className="w-3 h-3 bg-primary rounded-full animate-pulse-subtle cursor-pointer"></div>
+                      <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 bg-card text-xs px-2 py-1 rounded shadow-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
+                        Visakhapatnam
+                      </div>
+                    </div>
+                    
+                    {/* Vadodara */}
+                    <div className="absolute top-[43%] left-[18%] group">
+                      <div className="w-2 h-2 bg-secondary rounded-full animate-pulse-subtle cursor-pointer"></div>
+                      <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 bg-card text-xs px-2 py-1 rounded shadow-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
+                        Vadodara
+                      </div>
+                    </div>
+                    
+                    {/* Mysore */}
+                    <div className="absolute bottom-[22%] left-[32%] group">
+                      <div className="w-2 h-2 bg-success rounded-full animate-pulse-subtle cursor-pointer"></div>
+                      <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 bg-card text-xs px-2 py-1 rounded shadow-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
+                        Mysore
+                      </div>
+                    </div>
+                    
+                    {/* Guwahati */}
+                    <div className="absolute top-[30%] right-[12%] group">
+                      <div className="w-2 h-2 bg-warning rounded-full animate-pulse-subtle cursor-pointer"></div>
+                      <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 bg-card text-xs px-2 py-1 rounded shadow-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
+                        Guwahati
                       </div>
                     </div>
                     

@@ -8,7 +8,7 @@ export const pharmacyFAQs = [
   // General Questions
   {
     question: "What is the pharmacy delivery coverage?",
-    answer: "We cover 20,000+ pincodes across India with 60-minute delivery in metro cities and same-day delivery in Tier-2/3 cities. We partner with e-pharmacies, local chains, and dark stores."
+    answer: "We cover 15,000+ pincodes across India with 60-minute delivery in metro cities and same-day delivery in Tier-2/3 cities. We partner with e-pharmacies, local chains, and dark stores."
   },
   {
     question: "How quickly can I launch pharmacy services?",
