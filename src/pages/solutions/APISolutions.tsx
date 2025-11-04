@@ -105,30 +105,53 @@ const APISolutions = () => {
               </div>
             </div>
 
-            {/* API Features */}
+            {/* API Features Grid */}
             <div className="max-w-6xl mx-auto mb-20">
               <h2 className="text-3xl font-heading font-bold text-center mb-12">Complete API Suite</h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+                {[
+                  { icon: "🔌", label: "REST APIs", desc: "All services" },
+                  { icon: "⚡", label: "Webhooks", desc: "Real-time updates" },
+                  { icon: "📱", label: "Mobile SDKs", desc: "iOS & Android" },
+                  { icon: "🔒", label: "Secure", desc: "OAuth 2.0" },
+                  { icon: "📊", label: "Analytics", desc: "Built-in tracking" },
+                  { icon: "🧪", label: "Sandbox", desc: "Test environment" },
+                  { icon: "📚", label: "Docs", desc: "Interactive" },
+                  { icon: "🎯", label: "Support", desc: "Direct access" }
+                ].map((api, index) => (
+                  <div key={index} className="bg-card-gradient p-6 rounded-xl border border-border/20 text-center card-hover">
+                    <div className="text-4xl mb-3">{api.icon}</div>
+                    <h3 className="font-semibold mb-1 text-sm">{api.label}</h3>
+                    <p className="text-xs text-muted-foreground">{api.desc}</p>
+                  </div>
+                ))}
+              </div>
+              
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 {[
                   {
+                    icon: Code,
                     title: "RESTful Healthcare APIs",
                     description: "Complete API coverage for diagnostics, pharmacy, consultations, and home care with webhooks for real-time updates"
                   },
                   {
+                    icon: TrendingUp,
                     title: "Prescription Monetization",
-                    description: "Enable prescription-to-fulfillment automation and grow ARPU by 15% through seamless pharmacy integration"
+                    description: "Enable prescription to fulfillment automation and grow ARPU by 15% through seamless pharmacy integration"
                   },
                   {
+                    icon: Shield,
                     title: "Care Coordination",
-                    description: "Cross-service handoffs from consult → test → pharmacy → follow-up with no manual intervention"
+                    description: "Cross-service handoffs from consult to test to pharmacy to follow-up with no manual intervention"
                   },
                   {
+                    icon: FileCode,
                     title: "Developer-Friendly Docs",
                     description: "Interactive API docs, SDKs, reference implementations, and direct engineering support during rollout"
                   }
                 ].map((feature, index) => (
                   <div key={index} className="bg-card-gradient p-6 rounded-xl border border-border/20 card-hover">
-                    <Code className="w-8 h-8 text-primary mb-4" />
+                    <feature.icon className="w-8 h-8 text-primary mb-4" />
                     <h3 className="font-heading font-bold mb-2">{feature.title}</h3>
                     <p className="text-sm text-muted-foreground">{feature.description}</p>
                   </div>

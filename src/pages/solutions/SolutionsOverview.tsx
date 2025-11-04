@@ -95,6 +95,28 @@ const SolutionsOverview = () => {
               </Link>
             </div>
 
+            {/* Impact Stats */}
+            <div className="max-w-6xl mx-auto mb-12">
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+                <div className="bg-card-gradient p-6 rounded-xl border border-border/20">
+                  <div className="text-4xl font-heading font-bold text-gradient mb-2">14 Days</div>
+                  <p className="text-sm text-muted-foreground">Go Live Time</p>
+                </div>
+                <div className="bg-card-gradient p-6 rounded-xl border border-border/20">
+                  <div className="text-4xl font-heading font-bold text-gradient mb-2">9,000+</div>
+                  <p className="text-sm text-muted-foreground">Pincodes</p>
+                </div>
+                <div className="bg-card-gradient p-6 rounded-xl border border-border/20">
+                  <div className="text-4xl font-heading font-bold text-gradient mb-2">99.5%</div>
+                  <p className="text-sm text-muted-foreground">Uptime</p>
+                </div>
+                <div className="bg-card-gradient p-6 rounded-xl border border-border/20">
+                  <div className="text-4xl font-heading font-bold text-gradient mb-2">Zero</div>
+                  <p className="text-sm text-muted-foreground">Setup Needed</p>
+                </div>
+              </div>
+            </div>
+
             {/* Core Benefits */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto mb-20">
               {benefits.map((benefit, index) => (

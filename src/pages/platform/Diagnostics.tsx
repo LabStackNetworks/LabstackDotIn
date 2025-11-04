@@ -1,4 +1,4 @@
-import { TestTube, MapPin, CheckCircle, ArrowRight, Shield, Clock, FileCheck, Target } from "lucide-react";
+import { TestTube, MapPin, CheckCircle, ArrowRight, Shield, Clock, FileCheck, Target, Home, Users } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
@@ -147,7 +147,7 @@ const Diagnostics = () => {
           </div>
         </section>
 
-        {/* Delivery Modes */}
+        {/* Delivery Modes - Visual Cards */}
         <section className="py-20 bg-gradient-hero border-y border-border/50">
           <div className="container mx-auto px-6">
             <div className="max-w-5xl mx-auto">
@@ -155,41 +155,36 @@ const Diagnostics = () => {
               <p className="text-center text-muted-foreground mb-12">
                 Multiple options for sample collection and testing
               </p>
-              <div className="overflow-x-auto">
-                <table className="w-full bg-card rounded-xl border border-border/20">
-                  <thead>
-                    <tr className="border-b border-border/20">
-                      <th className="p-4 text-left font-heading">Mode</th>
-                      <th className="p-4 text-left font-heading">Experience</th>
-                      <th className="p-4 text-left font-heading">Coverage</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {[
-                      {
-                        mode: "Home Sample Collection",
-                        experience: "Phlebotomist visits home for sample collection",
-                        coverage: "9,000+ pincodes"
-                      },
-                      {
-                        mode: "Center Visits",
-                        experience: "Book appointment and visit nearest diagnostic center",
-                        coverage: "2,600+ centers"
-                      },
-                      {
-                        mode: "Health Camps",
-                        experience: "On-site corporate health screening programs",
-                        coverage: "Major cities"
-                      }
-                    ].map((item, index) => (
-                      <tr key={index} className="border-b border-border/10 last:border-0">
-                        <td className="p-4 font-semibold">{item.mode}</td>
-                        <td className="p-4 text-sm text-muted-foreground">{item.experience}</td>
-                        <td className="p-4 text-sm text-muted-foreground">{item.coverage}</td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div className="bg-card p-8 rounded-2xl border border-border/20 text-center">
+                  <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
+                    <Home className="w-8 h-8 text-primary" />
+                  </div>
+                  <h3 className="text-xl font-heading font-bold mb-2">Home Collection</h3>
+                  <p className="text-3xl font-bold text-gradient mb-2">9,000+</p>
+                  <p className="text-sm text-muted-foreground mb-4">Pincodes Covered</p>
+                  <p className="text-xs text-muted-foreground">Phlebotomist visits for sample collection</p>
+                </div>
+                
+                <div className="bg-card p-8 rounded-2xl border border-border/20 text-center">
+                  <div className="w-16 h-16 rounded-full bg-success/10 flex items-center justify-center mx-auto mb-4">
+                    <MapPin className="w-8 h-8 text-success" />
+                  </div>
+                  <h3 className="text-xl font-heading font-bold mb-2">Center Visits</h3>
+                  <p className="text-3xl font-bold text-gradient mb-2">2,600+</p>
+                  <p className="text-sm text-muted-foreground mb-4">Centers Nationwide</p>
+                  <p className="text-xs text-muted-foreground">Walk-in appointments at centers</p>
+                </div>
+                
+                <div className="bg-card p-8 rounded-2xl border border-border/20 text-center">
+                  <div className="w-16 h-16 rounded-full bg-secondary/10 flex items-center justify-center mx-auto mb-4">
+                    <Users className="w-8 h-8 text-secondary" />
+                  </div>
+                  <h3 className="text-xl font-heading font-bold mb-2">Health Camps</h3>
+                  <p className="text-3xl font-bold text-gradient mb-2">Major</p>
+                  <p className="text-sm text-muted-foreground mb-4">Cities Covered</p>
+                  <p className="text-xs text-muted-foreground">On-site corporate screening programs</p>
+                </div>
               </div>
             </div>
           </div>

@@ -1,4 +1,4 @@
-import { Target, Users, Zap, Shield, ArrowRight, Network } from "lucide-react";
+import { Target, Users, Zap, Shield, ArrowRight, Network, MapPin } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -83,25 +83,33 @@ const About = () => {
               </div>
             </div>
 
-            {/* Impact */}
-            <div className="max-w-5xl mx-auto mb-20">
+            {/* Impact Stats with Visual Cards */}
+            <div className="max-w-6xl mx-auto mb-20">
               <h2 className="text-3xl font-heading font-bold text-center mb-12">Impact (So Far)</h2>
-              <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
-                <div>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div className="bg-card-gradient p-8 rounded-2xl border border-border/20 text-center">
+                  <MapPin className="w-10 h-10 text-primary mx-auto mb-4" />
                   <div className="text-4xl font-heading font-bold text-gradient mb-2">9,000+</div>
-                  <p className="text-sm text-muted-foreground">Pincodes Serviceable</p>
+                  <p className="text-sm text-muted-foreground">Pincodes</p>
+                  <p className="text-xs text-muted-foreground mt-2">Tier-1 to Tier-3</p>
                 </div>
-                <div>
+                <div className="bg-card-gradient p-8 rounded-2xl border border-border/20 text-center">
+                  <Target className="w-10 h-10 text-success mx-auto mb-4" />
                   <div className="text-4xl font-heading font-bold text-gradient mb-2">30K+</div>
-                  <p className="text-sm text-muted-foreground">Orders Per Month</p>
+                  <p className="text-sm text-muted-foreground">Orders/Month</p>
+                  <p className="text-xs text-muted-foreground mt-2">Growing 40% MoM</p>
                 </div>
-                <div>
+                <div className="bg-card-gradient p-8 rounded-2xl border border-border/20 text-center">
+                  <Zap className="w-10 h-10 text-warning mx-auto mb-4" />
                   <div className="text-4xl font-heading font-bold text-gradient mb-2">99.5%</div>
                   <p className="text-sm text-muted-foreground">API Uptime</p>
+                  <p className="text-xs text-muted-foreground mt-2">SLA-backed</p>
                 </div>
-                <div>
+                <div className="bg-card-gradient p-8 rounded-2xl border border-border/20 text-center">
+                  <Shield className="w-10 h-10 text-primary mx-auto mb-4" />
                   <div className="text-4xl font-heading font-bold text-gradient mb-2">100%</div>
-                  <p className="text-sm text-muted-foreground">Report Verification</p>
+                  <p className="text-sm text-muted-foreground">Verified Reports</p>
+                  <p className="text-xs text-muted-foreground mt-2">Quality assured</p>
                 </div>
               </div>
             </div>

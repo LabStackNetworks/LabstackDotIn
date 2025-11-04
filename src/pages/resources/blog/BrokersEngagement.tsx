@@ -67,7 +67,7 @@ const BrokersEngagement = () => {
             What Makes a Wellness Program Actually Work
           </h2>
           <p>
-            Most wellness programs fail because they are add-ons—disconnected from healthcare access, one-time 
+            Most wellness programs fail because they are add-ons disconnected from healthcare access, one-time 
             events, or generic content libraries. Employees ignore them. HR sees no ROI. Brokers get blamed at renewal.
           </p>
           <p>

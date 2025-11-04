@@ -99,16 +99,35 @@ const PlatformOverview = () => {
               />
             </div>
 
-            {/* Why Labstack Platform */}
-            <div className="max-w-5xl mx-auto mb-20">
+            {/* Services Coverage Grid */}
+            <div className="max-w-6xl mx-auto mb-20">
               <div className="text-center mb-12">
-                <h2 className="text-3xl font-heading font-bold mb-6">Why Labstack Platform</h2>
-                <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-                  The operating system for healthcare delivery. Networks, automation, billing, and intelligence unified in one platform.
+                <h2 className="text-3xl lg:text-5xl font-heading font-bold mb-6">Complete Healthcare Stack</h2>
+                <p className="text-lg lg:text-xl text-muted-foreground max-w-3xl mx-auto">
+                  All services, one platform. Launch nationwide in 14 days.
                 </p>
               </div>
               
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
+                {[
+                  { icon: "🔬", label: "Diagnostics", desc: "9K+ pincodes" },
+                  { icon: "👨‍⚕️", label: "Consultations", desc: "All specialists" },
+                  { icon: "💊", label: "Pharmacy", desc: "60-min delivery" },
+                  { icon: "🏠", label: "Home Care", desc: "Premium services" },
+                  { icon: "🧬", label: "Genetics", desc: "Advanced tests" },
+                  { icon: "🩺", label: "Chronic Care", desc: "Care programs" },
+                  { icon: "🚑", label: "Ambulance", desc: "Emergency services" },
+                  { icon: "👁️", label: "Vision & Dental", desc: "Specialized care" }
+                ].map((service, index) => (
+                  <div key={index} className="bg-card-gradient p-6 rounded-xl border border-border/20 text-center card-hover">
+                    <div className="text-4xl mb-3">{service.icon}</div>
+                    <h3 className="font-semibold mb-1 text-sm">{service.label}</h3>
+                    <p className="text-xs text-muted-foreground">{service.desc}</p>
+                  </div>
+                ))}
+              </div>
+              
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 {whyLabstack.map((benefit, index) => (
                   <div key={index} className="flex items-start space-x-3 p-4 bg-card-gradient rounded-xl border border-border/20">
                     <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-1" />

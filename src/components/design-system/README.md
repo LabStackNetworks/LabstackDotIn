@@ -1,7 +1,194 @@
 # Labstack Design System
 
-## Overview
-This directory contains the core design system components for the Labstack Healthcare Platform. All components follow consistent design tokens, semantic color usage, and accessibility standards.
+A comprehensive, production-ready design system for healthcare applications. This system provides reusable components, consistent patterns, and optimized performance for building scalable healthcare platforms.
+
+## Core Principles
+
+- Semantic Tokens First: All styling uses design tokens from index.css
+- Performance Optimized: Lazy loading, minimal rerenders, optimized animations
+- Accessibility: WCAG 2.1 AA compliant with ARIA labels
+- Mobile First: Responsive design patterns throughout
+- SEO & GEO Optimized: Built-in structured data and AI-friendly markup
+
+## Component Library
+
+### Layout Components
+
+#### PageTemplate
+Standard page layout with SEO, header, and footer.
+
+```tsx
+<PageTemplate
+  title="Page Title"
+  description="SEO description"
+  keywords="keywords, here"
+  canonical="https://labstack.in/page"
+  structuredData={schema}
+>
+  <YourContent />
+</PageTemplate>
+```
+
+#### SectionHeader
+Consistent section headers with badges and descriptions.
+
+```tsx
+<SectionHeader
+  badge="PLATFORM"
+  title="Complete Healthcare Infrastructure"
+  description="Launch care services in 48 hours"
+  centered
+/>
+```
+
+### Content Components
+
+#### FeatureCard
+Display features, benefits, or services.
+
+```tsx
+<FeatureCard
+  icon={<CheckCircle />}
+  title="Quality Assurance"
+  description="100% report verification"
+  variant="primary"
+  features={["Feature 1", "Feature 2"]}
+/>
+```
+
+#### StatCard
+Display key metrics and statistics.
+
+```tsx
+<StatCard
+  value="9,000+"
+  label="Pincodes Covered"
+  description="Home sample collection"
+  icon={<MapPin />}
+  variant="gradient"
+/>
+```
+
+#### ProofQuote
+Display customer testimonials and social proof.
+
+```tsx
+<ProofQuote
+  quote="Labstack enabled us to launch in 14 days"
+  author="Healthcare CEO"
+  company="Digital Health Platform"
+  metric="90% faster"
+/>
+```
+
+#### TLDR
+AI-optimized summary component (hidden for users, visible to AI crawlers).
+
+```tsx
+<TLDR
+  summary="Short description for AI engines"
+  keyPoints={[
+    "Key benefit 1",
+    "Key benefit 2"
+  ]}
+/>
+```
+
+## Design Tokens
+
+All colors, spacing, and typography use semantic tokens:
+
+### Colors
+- Primary: Brand color
+- Success: Positive actions
+- Warning: Cautions
+- Destructive: Errors
+- Muted: Secondary content
+
+### Typography
+- Font Heading: Inter (bold weights)
+- Font Body: Inter (regular weights)
+- Text sizes: xs, sm, base, lg, xl, 2xl, 3xl, 4xl, 5xl, 6xl
+
+### Spacing
+- Consistent 4px grid system
+- Semantic spacing: xs, sm, md, lg, xl, 2xl
+
+## Animations
+
+Subtle, performance-optimized animations:
+
+- `animate-fade-in`: Smooth entrance
+- `animate-scale-in`: Pop-in effect
+- `card-hover`: Interactive card states
+- `btn-gradient`: Gradient button effects
+
+## Best Practices
+
+1. Always use semantic tokens - Never hardcode colors
+2. Mobile-first responsive - Design for mobile, enhance for desktop
+3. Lazy load images - Use LazyImage component
+4. Structured data - Include schemas for SEO
+5. Accessibility - Include ARIA labels and keyboard navigation
+6. Performance - Minimize rerenders, use React.memo when needed
+
+## File Organization
+
+```
+src/components/
+├── design-system/          # Core design components
+│   ├── FeatureCard.tsx
+│   ├── StatCard.tsx
+│   ├── SectionHeader.tsx
+│   ├── ProofQuote.tsx
+│   └── TLDR.tsx
+├── ui/                     # Shadcn base components
+└── [feature-components]    # Feature-specific components
+```
+
+## Usage Examples
+
+### Building a Landing Page
+
+```tsx
+import PageTemplate from '@/components/PageTemplate'
+import SectionHeader from '@/components/design-system/SectionHeader'
+import FeatureCard from '@/components/design-system/FeatureCard'
+import StatCard from '@/components/design-system/StatCard'
+
+export default function LandingPage() {
+  return (
+    <PageTemplate {...seoProps}>
+      <section className="py-20">
+        <div className="container mx-auto px-6">
+          <SectionHeader
+            badge="PLATFORM"
+            title="Your Title"
+            description="Your description"
+            centered
+          />
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <StatCard value="9K+" label="Coverage" />
+            <StatCard value="99.5%" label="Uptime" />
+            <StatCard value="14 Days" label="Launch" />
+          </div>
+        </div>
+      </section>
+    </PageTemplate>
+  )
+}
+```
+
+## Contributing
+
+When adding new components:
+1. Use semantic tokens for all styling
+2. Include TypeScript interfaces
+3. Add JSDoc comments
+4. Ensure mobile responsiveness
+5. Test accessibility
+6. Document usage examples
 
 ## Design Principles
 

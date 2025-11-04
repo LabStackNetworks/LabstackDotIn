@@ -50,7 +50,7 @@ const BrokersMultiEmployer = () => {
           <h3 className="text-xl font-semibold mt-6 mb-3">Problem #1: Manual Enrollment Chaos</h3>
           <p>
             Every policy renewal requires collecting employee data via Excel, validating information, submitting 
-            to insurers, tracking approvals, and issuing policies—consuming 40-60 hours of broker team time per 
+            to insurers, tracking approvals, and issuing policies consuming 40-60 hours of broker team time per 
             100 employees.
           </p>
           <div className="bg-muted/50 p-6 rounded-lg my-4">
@@ -76,7 +76,7 @@ const BrokersMultiEmployer = () => {
 
           <h3 className="text-xl font-semibold mt-6 mb-3">Problem #3: Limited Visibility for HR Teams</h3>
           <p>
-            Corporate HR departments lack real-time access to utilization data, claim trends, wellness participation—relying 
+            Corporate HR departments lack real-time access to utilization data, claim trends, wellness participation relying 
             on quarterly reports from brokers that are already outdated when received.
           </p>
           <div className="bg-muted/50 p-6 rounded-lg my-4">
@@ -288,7 +288,7 @@ const BrokersMultiEmployer = () => {
           <p className="mt-8">
             The future of insurance broking is platform-enabled scale. Brokers who embrace digital transformation 
             can serve 5-10x more clients with superior service quality and lower costs. Those who don't will lose 
-            clients to platform-native competitors—or be acquired by them.
+            clients to platform-native competitors or be acquired by them.
           </p>
         </div>
 
