@@ -4,6 +4,7 @@ import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import SEOHead from "@/components/SEOHead";
+import TLDR from "@/components/design-system/TLDR";
 import { generateOrganizationSchema } from "@/lib/structured-data";
 
 const About = () => {
@@ -20,6 +21,20 @@ const About = () => {
       />
       <Header />
       <main className="pt-20">
+        {/* Hidden TL;DR for AI crawlers */}
+        <div className="sr-only" aria-hidden="true" style={{position: 'absolute', left: '-9999px'}}>
+          <TLDR 
+            summary="Labstack is building the operating system for healthcare delivery in India. Making healthcare run on code, not coordination. Infrastructure platform connecting insurers, brokers, disease management companies, and digital health platforms with nationwide provider networks across 9,000+ pincodes."
+            keyPoints={[
+              "Healthcare infrastructure platform for B2B businesses",
+              "Nationwide coverage: 9,000+ pincodes, 30K+ orders/month capacity",
+              "Complete services: diagnostics, pharmacy, consultations, chronic care",
+              "Partner-first approach with SLA-backed operations",
+              "Predictable platform enabling healthcare businesses to scale"
+            ]}
+          />
+        </div>
+
         <section className="py-20 lg:py-32">
           <div className="container mx-auto px-6">
             {/* Hero */}

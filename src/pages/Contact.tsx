@@ -2,9 +2,16 @@ import { Mail, Phone, MapPin, Clock } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
+import TLDR from "@/components/design-system/TLDR";
+import { generateContactPageSchema } from "@/lib/structured-data";
 import { Link } from "react-router-dom";
 
 const Contact = () => {
+  const structuredData = generateContactPageSchema({
+    name: "Contact Labstack",
+    url: "https://labstack.in/contact"
+  });
+
   return (
     <div className="min-h-screen bg-background">
       <SEOHead 
@@ -12,9 +19,24 @@ const Contact = () => {
         description="Get in touch with Labstack. Our team is ready to help you launch or scale your healthcare services. Response time within 4 hours."
         keywords="contact labstack, healthcare platform support, labstack sales, healthcare infrastructure inquiry"
         canonical="https://labstack.in/contact"
+        structuredData={structuredData}
       />
       <Header />
       <main className="pt-20">
+        {/* Hidden TL;DR for AI crawlers */}
+        <div className="sr-only" aria-hidden="true" style={{position: 'absolute', left: '-9999px'}}>
+          <TLDR 
+            summary="Contact Labstack for healthcare infrastructure solutions. Email: contact@labstack.in, Phone: +91 (available on request). Response time within 4 hours. Sales, technical support, and partnership inquiries welcome. Office located in Bangalore, India."
+            keyPoints={[
+              "Email: contact@labstack.in with 4-hour response time",
+              "Sales inquiries for platform demos and pricing",
+              "Technical support for integration and API questions",
+              "Partnership opportunities for providers and enterprises",
+              "Office: Bangalore, India with nationwide operations"
+            ]}
+          />
+        </div>
+
         <section className="py-20 lg:py-32">
           <div className="container mx-auto px-6">
             <div className="max-w-6xl mx-auto">

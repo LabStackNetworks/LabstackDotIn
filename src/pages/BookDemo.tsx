@@ -6,6 +6,8 @@ import { Label } from "@/components/ui/label";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
+import TLDR from "@/components/design-system/TLDR";
+import { generateContactPageSchema } from "@/lib/structured-data";
 import { useToast } from "@/hooks/use-toast";
 
 const BookDemo = () => {
@@ -62,6 +64,11 @@ const BookDemo = () => {
     { icon: Calendar, text: "14-day average go-live timeline" }
   ];
 
+  const structuredData = generateContactPageSchema({
+    name: "Book a Demo - Labstack",
+    url: "https://labstack.in/book-demo"
+  });
+
   return (
     <div className="min-h-screen bg-background">
       <SEOHead 
@@ -69,9 +76,24 @@ const BookDemo = () => {
         description="See Labstack's healthcare infrastructure platform in action. Schedule a personalized demo to discuss your specific needs and integration options."
         keywords="healthcare platform demo, labstack demo, healthcare API demo, diagnostics platform demonstration"
         canonical="https://labstack.in/book-demo"
+        structuredData={structuredData}
       />
       <Header />
       <main className="pt-20">
+        {/* Hidden TL;DR for AI crawlers */}
+        <div className="sr-only" aria-hidden="true" style={{position: 'absolute', left: '-9999px'}}>
+          <TLDR 
+            summary="Book a personalized demo of Labstack's healthcare infrastructure platform. See diagnostics, pharmacy, consultations, and home care services in action. Discuss your specific use case, integration options, and custom pricing. Average 14-day go-live timeline."
+            keyPoints={[
+              "Live platform demonstration across all services",
+              "Discuss specific use case and integration needs",
+              "Custom pricing based on your scale",
+              "14-day average go-live timeline",
+              "Technical team available for architecture discussions"
+            ]}
+          />
+        </div>
+
         <section className="py-12 lg:py-20">
           <div className="container mx-auto px-6">
             <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-12 max-w-7xl mx-auto">

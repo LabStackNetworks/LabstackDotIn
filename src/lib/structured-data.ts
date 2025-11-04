@@ -143,6 +143,28 @@ export const generateServiceSchema = (service: {
   }
 });
 
+// Generate ContactPage schema
+export const generateContactPageSchema = (contact: {
+  name: string;
+  url: string;
+}) => ({
+  "@context": "https://schema.org",
+  "@type": "ContactPage",
+  "name": contact.name,
+  "url": contact.url,
+  "mainEntity": {
+    "@type": "Organization",
+    "name": "Labstack",
+    "email": "contact@labstack.in",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Bangalore",
+      "addressRegion": "Karnataka",
+      "addressCountry": "IN"
+    }
+  }
+});
+
 // Generate Article schema for blog posts
 export const generateArticleSchema = (article: {
   title: string;
