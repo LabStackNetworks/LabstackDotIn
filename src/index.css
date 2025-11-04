@@ -632,7 +632,11 @@ p, span, div, .font-body {
   }
 
   .animate-scroll {
-    animation: scroll 22s linear infinite;
+    animation: scroll 13s linear infinite;
+  }
+  
+  .animate-scroll:hover {
+    animation-play-state: paused;
   }
 
   .animate-fade-in {
