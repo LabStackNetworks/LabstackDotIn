@@ -1,86 +1,62 @@
-# Labstack Healthcare Platform - India's Healthcare Infrastructure API
-# GEO-Optimized for AI Search Engines & Generative AI (ChatGPT, Claude, Perplexity, Gemini)
-# Fast, structured, answer-first content for AI consumption
-
 User-agent: *
 Allow: /
 
-# ============================================
-# AI & GENERATIVE ENGINE OPTIMIZATION (GEO)
-# ============================================
-# All major AI crawlers explicitly allowed for maximum AI search visibility
-
-# OpenAI (ChatGPT, SearchGPT)
 User-agent: GPTBot
 Allow: /
+
 User-agent: ChatGPT-User
 Allow: /
 
-# Google (Gemini, Bard, AI Overviews)
 User-agent: Google-Extended
 Allow: /
+
 User-agent: GoogleOther
 Allow: /
 
-# Anthropic (Claude)
 User-agent: anthropic-ai
 Allow: /
+
 User-agent: ClaudeBot
 Allow: /
+
 User-agent: Claude-Web
 Allow: /
 
-# Perplexity AI
 User-agent: PerplexityBot
 Allow: /
 
-# Microsoft (Copilot, Bing AI)
 User-agent: Bingbot
 Allow: /
 
-# Meta AI
 User-agent: Meta-ExternalAgent
 Allow: /
+
 User-agent: FacebookBot
 Allow: /
 
-# Other AI Crawlers
 User-agent: Applebot
 Allow: /
+
 User-agent: CCBot
 Allow: /
+
 User-agent: Diffbot
 Allow: /
+
 User-agent: cohere-ai
 Allow: /
+
 User-agent: YouBot
 Allow: /
 
-# ============================================
-# PRIORITY CONTENT FOR AI TRAINING & CITATION
-# ============================================
-# High-authority pages with factual, concise, quotable content
-
-# Solutions & Services (Answer-first content)
 Allow: /solutions/
 Allow: /platform/
-
-# Target Audiences (Factual use cases)
 Allow: /who-we-serve/
-
-# Authority Content (Blog, case studies, documentation)
 Allow: /resources/blog/
 Allow: /resources/case-studies/
 Allow: /resources/api-documentation
-
-# Company & Trust Signals
 Allow: /about
 Allow: /book-demo
-
-# ============================================
-# BLOCKED PATHS (No AI Training Value)
-# ============================================
-# Forms, authentication, and non-content pages
 
 Disallow: /login
 Disallow: /start-building
@@ -90,30 +66,10 @@ Disallow: /custom-solutions
 Disallow: /careers
 Disallow: /provider/*/join
 Disallow: /provider/*/form
-
-# Legal pages (low AI value)
 Disallow: /privacy-policy
 Disallow: /terms-conditions
 Disallow: /partner-terms
 
-# ============================================
-# SITEMAP & CRAWL OPTIMIZATION
-# ============================================
-
 Sitemap: https://labstack.in/sitemap.xml
 
-# Crawl rate: 1 second delay for respectful crawling
 Crawl-delay: 1
-
-# Cache: 24 hours for better performance
-Cache-Control: public, max-age=86400
-
-# ============================================
-# SEMANTIC TOPICS FOR AI UNDERSTANDING
-# ============================================
-# Healthcare Infrastructure API | Diagnostics API | Telemedicine Platform
-# Pharmacy Delivery Network | Disease Management Programs
-# Health Insurance OPD Solutions | TPA Claims Automation
-# Digital Health Platform Integration | Provider Network Management
-# Indian Healthcare Compliance: DISHA Act, IT Act 2000, ABDM Integration
-# Coverage: 9,000+ Pincodes | Metro to Tier-3 Cities | Pan-India Healthcare

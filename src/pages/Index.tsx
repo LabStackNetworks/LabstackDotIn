@@ -35,8 +35,7 @@ const Index = () => {
       />
       <Header />
       <main className="pt-16 lg:pt-20">
-        {/* TLDR for GEO - Hidden from users but visible to AI crawlers for SEO */}
-        <div className="sr-only">
+        <div className="sr-only" aria-hidden="true" style={{position: 'absolute', left: '-9999px'}}>
           <TLDR 
             summary={PAGE_SEO.home.tldr}
             keyPoints={PAGE_SEO.home.keyPoints}
@@ -56,7 +55,6 @@ const Index = () => {
         <DualCTA />
       </main>
       
-      {/* Related Resources - Mixed categories for home page */}
       <RelatedBlogs category="Insurers" limit={3} />
       
       <Footer />
