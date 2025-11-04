@@ -17,7 +17,7 @@ interface BlogArticle {
 }
 
 interface RelatedBlogsProps {
-  category: "Insurers" | "Brokers" | "Disease Management" | "Digital Health" | "Providers";
+  category: "Insurers" | "InsureTech" | "Brokers" | "Disease Management" | "Digital Health" | "Providers";
   limit?: number;
 }
 
@@ -46,6 +46,23 @@ const allBlogs: BlogArticle[] = [
     readTime: "12 min read",
     date: "Mar 15, 2025",
     link: "insurers-member-retention"
+  },
+  // InsureTech
+  {
+    title: "InsureTech Revenue Growth: Healthcare as Revenue Engine",
+    excerpt: "How InsureTech platforms increase ARPU by 15-25% and improve retention by 40% through healthcare benefits.",
+    category: "InsureTech",
+    readTime: "10 min read",
+    date: "Jan 10, 2025",
+    link: "insuretech-revenue-growth"
+  },
+  {
+    title: "Product-Led Growth for InsureTech Through Healthcare",
+    excerpt: "How healthcare benefits drive viral growth, reduce CAC by 25%, and create network effects for digital insurance platforms.",
+    category: "InsureTech",
+    readTime: "11 min read",
+    date: "Jan 24, 2025",
+    link: "insuretech-product-led-growth"
   },
   // Brokers
   {

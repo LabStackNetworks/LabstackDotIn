@@ -17,6 +17,7 @@ const BlogWithCategories = () => {
   const categories = [
     "All",
     "Insurers",
+    "InsureTech",
     "Brokers",
     "Disease Management",
     "Digital Health",
