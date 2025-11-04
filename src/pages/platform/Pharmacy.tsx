@@ -67,6 +67,165 @@ const Pharmacy = () => {
               </div>
             </div>
 
+            {/* Definition Section - What is Pharmacy Platform */}
+            <div className="max-w-4xl mx-auto mb-20">
+              <h2 className="text-3xl font-heading font-bold mb-6">What is Labstack Pharmacy Platform?</h2>
+              <p className="text-lg text-muted-foreground leading-relaxed mb-4">
+                Labstack Pharmacy Platform is a nationwide network solution that connects your platform to 20,000+ pincodes through integrated e-pharmacies, local chains, and dark stores. Launch medicine delivery with 60-minute service in metros, prescription verification, SKU-level fraud controls, and unified reconciliation—all within 14 days.
+              </p>
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                Whether you're a health insurer, disease management platform, or digital health company, our pharmacy network eliminates vendor sprawl and provides a single API for all pharmacy operations across India.
+              </p>
+            </div>
+
+            {/* How It Works Section */}
+            <div className="max-w-5xl mx-auto mb-20">
+              <h2 className="text-3xl font-heading font-bold text-center mb-12">How Pharmacy Platform Works</h2>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div className="text-center">
+                  <div className="bg-primary/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <span className="text-2xl font-bold text-primary">1</span>
+                  </div>
+                  <h3 className="text-xl font-heading font-bold mb-3">Order Creation</h3>
+                  <p className="text-muted-foreground">
+                    Patient uploads prescription. System verifies eligibility, checks SKU inclusions/exclusions, and routes to optimal pharmacy partner based on location and inventory.
+                  </p>
+                </div>
+
+                <div className="text-center">
+                  <div className="bg-primary/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <span className="text-2xl font-bold text-primary">2</span>
+                  </div>
+                  <h3 className="text-xl font-heading font-bold mb-3">Fulfilment & Tracking</h3>
+                  <p className="text-muted-foreground">
+                    Pharmacy confirms order, provides substitution options if needed, and fulfills via home delivery or store pickup. Real-time tracking with SMS/push notifications at every stage.
+                  </p>
+                </div>
+
+                <div className="text-center">
+                  <div className="bg-primary/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <span className="text-2xl font-bold text-primary">3</span>
+                  </div>
+                  <h3 className="text-xl font-heading font-bold mb-3">Settlement & Compliance</h3>
+                  <p className="text-muted-foreground">
+                    Automated reconciliation across all pharmacy partners. Fraud detection flags anomalies. Consolidated billing with audit logs for compliance and financial reporting.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Care Delivery Modes */}
+            <div className="max-w-6xl mx-auto mb-20">
+              <h2 className="text-3xl font-heading font-bold text-center mb-4">Pharmacy Delivery Modes</h2>
+              <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
+                Multiple fulfilment options to match patient convenience and clinical urgency
+              </p>
+              <div className="overflow-x-auto">
+                <table className="w-full border-collapse">
+                  <thead>
+                    <tr className="border-b border-border">
+                      <th className="text-left p-4 font-heading">Delivery Mode</th>
+                      <th className="text-left p-4 font-heading">Timeline</th>
+                      <th className="text-left p-4 font-heading">Best For</th>
+                      <th className="text-left p-4 font-heading">Coverage</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr className="border-b border-border/50">
+                      <td className="p-4">60-minute Express Delivery</td>
+                      <td className="p-4 text-muted-foreground">Within 1 hour</td>
+                      <td className="p-4 text-muted-foreground">Emergency medications, acute conditions</td>
+                      <td className="p-4 text-muted-foreground">12 metro cities</td>
+                    </tr>
+                    <tr className="border-b border-border/50">
+                      <td className="p-4">Same-Day Delivery</td>
+                      <td className="p-4 text-muted-foreground">4-8 hours</td>
+                      <td className="p-4 text-muted-foreground">Chronic medications, regular refills</td>
+                      <td className="p-4 text-muted-foreground">100+ cities</td>
+                    </tr>
+                    <tr className="border-b border-border/50">
+                      <td className="p-4">Standard Home Delivery</td>
+                      <td className="p-4 text-muted-foreground">24-48 hours</td>
+                      <td className="p-4 text-muted-foreground">Maintenance medications, bulk orders</td>
+                      <td className="p-4 text-muted-foreground">20,000+ pincodes</td>
+                    </tr>
+                    <tr>
+                      <td className="p-4">Store Pickup</td>
+                      <td className="p-4 text-muted-foreground">2-4 hours</td>
+                      <td className="p-4 text-muted-foreground">Patient preference, immediate need</td>
+                      <td className="p-4 text-muted-foreground">200+ cities</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            {/* Nationwide Care Delivery */}
+            <div className="max-w-5xl mx-auto mb-20 bg-gradient-hero rounded-3xl p-8 lg:p-12 border border-border/50">
+              <h2 className="text-3xl font-heading font-bold mb-6">Nationwide Pharmacy Care Delivery</h2>
+              <p className="text-lg text-muted-foreground mb-8">
+                Our pharmacy network covers every tier of India's healthcare landscape—from metro express delivery to Tier-3 standard fulfillment. Single console, unified SLAs, transparent pricing across all geographies.
+              </p>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div className="bg-background/50 rounded-xl p-6 border border-border/30">
+                  <h4 className="font-heading font-bold mb-2">Metro Cities</h4>
+                  <p className="text-sm text-muted-foreground mb-3">60-minute delivery, 24/7 availability</p>
+                  <p className="text-xs text-muted-foreground">Delhi NCR, Mumbai, Bangalore, Hyderabad, Chennai, Pune, Kolkata, Ahmedabad</p>
+                </div>
+                <div className="bg-background/50 rounded-xl p-6 border border-border/30">
+                  <h4 className="font-heading font-bold mb-2">Tier-2 Cities</h4>
+                  <p className="text-sm text-muted-foreground mb-3">Same-day delivery, local partnerships</p>
+                  <p className="text-xs text-muted-foreground">100+ cities including Jaipur, Lucknow, Indore, Coimbatore, Bhopal</p>
+                </div>
+                <div className="bg-background/50 rounded-xl p-6 border border-border/30">
+                  <h4 className="font-heading font-bold mb-2">Tier-3 & Rural</h4>
+                  <p className="text-sm text-muted-foreground mb-3">24-48 hour delivery, expanding coverage</p>
+                  <p className="text-xs text-muted-foreground">20,000+ pincodes via e-pharmacy and courier networks</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Integration & Quality Assurance */}
+            <div className="max-w-5xl mx-auto mb-20">
+              <h2 className="text-3xl font-heading font-bold text-center mb-12">Integration & Quality Assurance</h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                  <h3 className="text-xl font-heading font-bold mb-4">Integration Options</h3>
+                  <div className="space-y-3">
+                    {[
+                      "REST API for order creation and tracking",
+                      "Webhooks for real-time status updates",
+                      "White-label widgets for seamless UX",
+                      "Console access for operations teams",
+                      "ABDM integration for health records"
+                    ].map((item, i) => (
+                      <div key={i} className="flex items-start space-x-3">
+                        <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                        <span className="text-muted-foreground">{item}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+                <div>
+                  <h3 className="text-xl font-heading font-bold mb-4">Quality Controls</h3>
+                  <div className="space-y-3">
+                    {[
+                      "Partner verification and licensing checks",
+                      "Real-time fraud detection on prescriptions",
+                      "SLA monitoring and automated escalations",
+                      "CSAT tracking per pharmacy partner",
+                      "Audit logs for compliance reporting"
+                    ].map((item, i) => (
+                      <div key={i} className="flex items-start space-x-3">
+                        <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                        <span className="text-muted-foreground">{item}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+
             {/* Problems */}
             <div className="max-w-5xl mx-auto mb-20">
               <h2 className="text-3xl font-heading font-bold text-center mb-12">Why Pharmacy is Broken Today</h2>
@@ -214,6 +373,28 @@ const Pharmacy = () => {
             {/* FAQ Section */}
             <div className="mb-20">
               <FAQ items={pharmacyFAQs} title="Pharmacy FAQ" />
+            </div>
+
+            {/* Related Resources - Internal Links */}
+            <div className="max-w-5xl mx-auto mb-20">
+              <h2 className="text-3xl font-heading font-bold text-center mb-12">Explore Related Solutions</h2>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <Link to="/platform/consultations" className="bg-card-gradient p-6 rounded-2xl border border-border/20 card-hover">
+                  <h3 className="text-lg font-heading font-bold mb-2">Doctor Consultations</h3>
+                  <p className="text-sm text-muted-foreground mb-3">Connect pharmacy orders to teleconsults and in-person visits</p>
+                  <span className="text-primary text-sm font-semibold">Learn more →</span>
+                </Link>
+                <Link to="/platform/diagnostics" className="bg-card-gradient p-6 rounded-2xl border border-border/20 card-hover">
+                  <h3 className="text-lg font-heading font-bold mb-2">Diagnostic Services</h3>
+                  <p className="text-sm text-muted-foreground mb-3">Bundle lab tests with medication delivery for complete care</p>
+                  <span className="text-primary text-sm font-semibold">Learn more →</span>
+                </Link>
+                <Link to="/solutions/healthcare-infrastructure" className="bg-card-gradient p-6 rounded-2xl border border-border/20 card-hover">
+                  <h3 className="text-lg font-heading font-bold mb-2">Healthcare Infrastructure</h3>
+                  <p className="text-sm text-muted-foreground mb-3">See how pharmacy fits into end-to-end care delivery</p>
+                  <span className="text-primary text-sm font-semibold">Learn more →</span>
+                </Link>
+              </div>
             </div>
 
             {/* Final CTA */}
