@@ -215,7 +215,7 @@ public/
 │   ├── change-password       # Password reset redirect
 │   └── README.md             # Well-known documentation
 │
-└── lovable-uploads/          # Uploaded assets
+└── uploads/                  # Uploaded assets
     └── 97d6ae42-...png       # OG image
 ```
 

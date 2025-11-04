@@ -13,7 +13,7 @@ const SEOHead = ({
   title, 
   description, 
   keywords = "healthcare infrastructure, healthcare API, diagnostics API, telemedicine platform, healthcare delivery system, digital health platform India",
-  ogImage = "/lovable-uploads/97d6ae42-ba64-4793-a727-6945e3a2b8bc.png",
+  ogImage = "/uploads/97d6ae42-ba64-4793-a727-6945e3a2b8bc.png",
   canonical,
   structuredData
 }: SEOHeadProps) => {

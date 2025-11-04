@@ -43,7 +43,7 @@ export const BASE_SEO = {
     'tier 2 tier 3 healthcare',
     '9000 pincode healthcare coverage'
   ],
-  socialImage: '/lovable-uploads/97d6ae42-ba64-4793-a727-6945e3a2b8bc.png',
+  socialImage: '/uploads/97d6ae42-ba64-4793-a727-6945e3a2b8bc.png',
   twitterHandle: '@labstackin',
   author: 'Labstack Healthcare',
   locale: 'en_IN',

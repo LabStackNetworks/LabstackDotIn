@@ -194,7 +194,7 @@ export const generateOGMetadata = (page: PageSEO) => {
     'og:description': page.description,
     'og:type': page.article ? 'article' : 'website',
     'og:url': page.canonical || '',
-    'og:image': page.ogImage || 'https://labstack.in/lovable-uploads/97d6ae42-ba64-4793-a727-6945e3a2b8bc.png',
+    'og:image': page.ogImage || 'https://labstack.in/uploads/97d6ae42-ba64-4793-a727-6945e3a2b8bc.png',
     'og:site_name': 'Labstack',
     ...(page.article && {
       'article:published_time': page.article.publishedTime,
@@ -214,6 +214,6 @@ export const generateTwitterMetadata = (page: PageSEO) => {
     'twitter:card': 'summary_large_image',
     'twitter:title': page.title,
     'twitter:description': page.description,
-    'twitter:image': page.ogImage || 'https://labstack.in/lovable-uploads/97d6ae42-ba64-4793-a727-6945e3a2b8bc.png'
+    'twitter:image': page.ogImage || 'https://labstack.in/uploads/97d6ae42-ba64-4793-a727-6945e3a2b8bc.png'
   };
 };

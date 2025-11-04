@@ -13,7 +13,7 @@ export const generateOrganizationSchema = () => ({
   "name": "Labstack",
   "alternateName": "Labstack Healthcare",
   "url": "https://labstack.in",
-  "logo": "https://labstack.in/lovable-uploads/97d6ae42-ba64-4793-a727-6945e3a2b8bc.png",
+  "logo": "https://labstack.in/uploads/97d6ae42-ba64-4793-a727-6945e3a2b8bc.png",
   "description": "India's Healthcare Infrastructure API. Launch diagnostics, consultations, pharmacy, and home care services in 14 days across 9,000+ pincodes with zero upfront investment.",
   "foundingDate": "2020",
   "slogan": "The Growth Engine for Healthcare",
@@ -197,10 +197,10 @@ export const generateArticleSchema = (article: {
     "name": "Labstack",
     "logo": {
       "@type": "ImageObject",
-      "url": "https://labstack.in/lovable-uploads/97d6ae42-ba64-4793-a727-6945e3a2b8bc.png"
+      "url": "https://labstack.in/uploads/97d6ae42-ba64-4793-a727-6945e3a2b8bc.png"
     }
   },
-  "image": article.image || "https://labstack.in/lovable-uploads/97d6ae42-ba64-4793-a727-6945e3a2b8bc.png",
+  "image": article.image || "https://labstack.in/uploads/97d6ae42-ba64-4793-a727-6945e3a2b8bc.png",
   "mainEntityOfPage": {
     "@type": "WebPage",
     "@id": article.url

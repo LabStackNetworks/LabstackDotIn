@@ -32,7 +32,7 @@ public/
 │   ├── security.txt              ← RFC 9116 compliant
 │   ├── change-password           ← W3C standard
 │   └── README.md                 ← Well-known docs
-└── lovable-uploads/
+└── uploads/
     └── 97d6ae42-...png           ← OG image
 
 Documentation/
