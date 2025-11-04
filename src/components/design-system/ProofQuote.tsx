@@ -55,7 +55,7 @@ const ProofQuote = ({
       
       {author && (
         <p className="text-sm text-muted-foreground font-medium">
-          — {author}
+          {author}
         </p>
       )}
     </div>

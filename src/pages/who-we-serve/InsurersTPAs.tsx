@@ -156,13 +156,13 @@ const InsurersTPAs = () => {
                   {
                     title: "Plug-and-Play Services",
                     badge: "Days to launch",
-                    desc: "Diagnostics, consults, pharmacy, chronic care—nationwide instantly.",
+                    desc: "Diagnostics, consults, pharmacy, chronic care available nationwide instantly.",
                     color: "success"
                   },
                   {
                     title: "White-Label Journeys",
                     badge: "Your brand",
-                    desc: "Customize booking flows, care comms—we stay invisible.",
+                    desc: "Customize booking flows, care comms. We stay invisible.",
                     color: "primary"
                   },
                   {

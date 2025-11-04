@@ -120,7 +120,7 @@ const WhoWeServeOverview = () => {
                 Who We Power
               </h2>
               <p className="text-center text-muted-foreground mb-12 max-w-3xl mx-auto">
-                From insurance companies to digital health startups—become the platform that enables their healthcare business without them building infrastructure.
+                From insurance companies to digital health startups become the platform that enables their healthcare business without them building infrastructure.
               </p>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -194,7 +194,7 @@ const WhoWeServeOverview = () => {
                 <div className="bg-card/50 backdrop-blur-sm rounded-xl p-6 border border-border/20">
                   <h3 className="font-heading font-bold mb-3">Your Brand, Our Infrastructure</h3>
                   <p className="text-sm text-muted-foreground">
-                    White-label everything—journeys, care flows, communications. Pure B2B model. Your customers remain yours. We stay invisible.
+                    White-label everything including journeys, care flows, communications. Pure B2B model. Your customers remain yours. We stay invisible.
                   </p>
                 </div>
 

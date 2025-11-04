@@ -46,7 +46,7 @@ const DigitalHealthPlatforms = () => {
               "Delivery modes: home collection, teleconsult, center visits, pharmacy delivery",
               "Nationwide coverage across 9,000+ pincodes from metros to Tier-3",
               "30K+ orders/month capacity with 99.5% uptime SLA",
-              "Pure B2B—your users see only your brand"
+              "Pure B2B model where your users see only your brand"
             ]}
           />
         </div>
@@ -92,7 +92,7 @@ const DigitalHealthPlatforms = () => {
                 <h3 className="text-2xl font-heading font-bold mb-6">What's Breaking</h3>
                 {[
                   "12-18 months lost signing vendor contracts",
-                  "No standard SLAs—ops break city by city",
+                  "No standard SLAs with ops break city by city",
                   "Engineers pulled into compliance vs growth",
                   "Investors want nationwide coverage yesterday"
                 ].map((problem, i) => (
@@ -106,10 +106,10 @@ const DigitalHealthPlatforms = () => {
               <div className="space-y-4">
                 <h3 className="text-2xl font-heading font-bold mb-6">With Labstack</h3>
                 {[
-                  "48-hour launch—infra ready nationwide",
+                  "48 hour launch with infra ready nationwide",
                   "One API • One Console • One Network",
                   "9K+ pincodes, 30K+ orders/month capacity",
-                  "Pure B2B—your customers remain yours"
+                  "Pure B2B model where your customers remain yours"
                 ].map((solution, i) => (
                   <div key={i} className="flex items-start space-x-3 p-4 bg-success/5 border border-success/10 rounded-xl">
                     <CheckCircle className="w-5 h-5 text-success mt-1 flex-shrink-0" />
@@ -132,7 +132,7 @@ const DigitalHealthPlatforms = () => {
             </div>
             <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {[
-                { step: "1", title: "Integrate Platform", description: "API integration or console access—choose your deployment mode" },
+                { step: "1", title: "Integrate Platform", description: "API integration or console access to choose your deployment mode" },
                 { step: "2", title: "Configure Services", description: "Activate diagnostics, pharmacy, consultations based on your product" },
                 { step: "3", title: "White-Label Setup", description: "Your branding, your user experience, your customer relationship" },
                 { step: "4", title: "Go Live Nationwide", description: "Instant access to 9,000+ pincodes with 30K+ orders capacity" }

@@ -19,7 +19,7 @@ const Providers = () => {
 
   const serviceSchema = generateServiceSchema({
     name: "Healthcare Provider Network Partnership",
-    description: "B2B healthcare demand for providers—doctors, labs, pharmacies, hospitals. Increase patient volumes, access enterprise clients.",
+    description: "B2B healthcare demand for providers including doctors, labs, pharmacies, hospitals. Increase patient volumes, access enterprise clients.",
     url: "https://labstack.in/who-we-serve/providers"
   });
 

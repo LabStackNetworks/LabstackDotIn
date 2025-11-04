@@ -46,7 +46,7 @@ const BrokersCorporateWellness = () => {
               "Delivery modes: home collection, teleconsult, center visits, pharmacy delivery",
               "Nationwide coverage across 9,000+ pincodes from metros to Tier-3",
               "Prescription monetization to grow ARPU by ~15%",
-              "Pure B2B platform—your clients remain yours"
+              "Pure B2B platform where your clients remain yours"
             ]}
           />
         </div>
@@ -91,7 +91,7 @@ const BrokersCorporateWellness = () => {
               <div className="space-y-4">
                 <h3 className="text-2xl font-heading font-bold mb-6">Current Challenge</h3>
                 {[
-                  "Policies look same—OPD under-monetized",
+                  "Policies look same with OPD under monetized",
                   "Execution breaks outside metros",
                   "Commission capped at ₹500-2K",
                   "Multi-city vendor reconciliation pain"
@@ -108,8 +108,8 @@ const BrokersCorporateWellness = () => {
                 {[
                   "OPD bundles differentiate policies",
                   "Nationwide fulfillment Tier-1 to Tier-3",
-                  "Prescription monetization—grow ARPU ~15%",
-                  "Pure B2B—your brand, your revenue"
+                  "Prescription monetization to grow ARPU ~15%",
+                  "Pure B2B model with your brand, your revenue"
                 ].map((solution, i) => (
                   <div key={i} className="flex items-start space-x-3 p-4 bg-success/5 border border-success/10 rounded-xl">
                     <CheckCircle className="w-5 h-5 text-success mt-1 flex-shrink-0" />

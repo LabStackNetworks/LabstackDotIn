@@ -43,10 +43,10 @@ const InsureTech = () => {
             summary="Healthcare delivery infrastructure for InsureTech companies. Launch diagnostics, consultations, pharmacy services nationwide. Turn healthcare benefits into revenue engine with 14-day deployment."
             keyPoints={[
               "Launch healthcare services in 14 days across 9,000+ pincodes",
-              "White-label platform—your brand, your member relationships",
+              "White-label platform with your brand, your member relationships",
               "Delivery modes: home collection, teleconsult, center visits, pharmacy delivery",
               "Incremental revenue streams from service fulfillment",
-              "Pure B2B model—zero channel conflict with your insurance business"
+              "Pure B2B model with zero channel conflict with your insurance business"
             ]}
           />
         </div>
@@ -88,9 +88,9 @@ const InsureTech = () => {
 
             {/* InsureTech's Next Chapter */}
             <div className="max-w-4xl mx-auto mb-20">
-              <h2 className="text-3xl font-heading font-bold text-center mb-8">InsureTech's Next Chapter</h2>
+              <h2 className="text-3xl font-heading font-bold text-center mb-8">Your Next Growth Chapter</h2>
               <p className="text-lg text-center text-muted-foreground mb-12">
-                You already own the member relationship. Now unlock the parts of healthcare that actually drive value—preventive care, diagnostics, imaging, and ongoing programs.
+                You already own the member relationship. Now unlock the parts of healthcare that actually drive value: preventive care, diagnostics, imaging, and ongoing programs.
               </p>
             </div>
 
@@ -144,7 +144,7 @@ const InsureTech = () => {
                   </div>
                 </div>
                 <p className="text-sm text-muted-foreground italic mt-4 p-4 bg-accent/30 rounded-lg border border-border/20">
-                  You stay the brand and the marketplace. We power the delivery—behind the scenes.
+                  You stay the brand and the marketplace. We power the delivery behind the scenes.
                 </p>
               </div>
             </div>
@@ -155,7 +155,7 @@ const InsureTech = () => {
         <section className="py-20 bg-gradient-hero border-y border-border/50">
           <div className="container mx-auto px-6">
             <div className="max-w-5xl mx-auto">
-              <h2 className="text-3xl font-heading font-bold mb-4 text-center">Opportunities You Can Activate—Nationwide</h2>
+              <h2 className="text-3xl font-heading font-bold mb-4 text-center">Opportunities You Can Activate Nationwide</h2>
               <p className="text-center text-muted-foreground mb-12 max-w-3xl mx-auto">
                 Complete healthcare services available across 9,000+ pincodes from Day 1
               </p>
@@ -165,7 +165,7 @@ const InsureTech = () => {
                   <TestTube className="w-10 h-10 text-primary mb-4" />
                   <h4 className="font-heading font-bold mb-2">Diagnostics</h4>
                   <p className="text-sm text-muted-foreground mb-4">
-                    Home collection + center visits with SLA routing and fasting optimization.
+                    Home collection and center visits with SLA routing and fasting optimization.
                   </p>
                   <div className="flex items-center text-xs text-success">
                     <CheckCircle className="w-4 h-4 mr-1" />
@@ -177,7 +177,7 @@ const InsureTech = () => {
                   <HeartPulse className="w-10 h-10 text-secondary mb-4" />
                   <h4 className="font-heading font-bold mb-2">Radiology</h4>
                   <p className="text-sm text-muted-foreground mb-4">
-                    AERB-certified MRI, CT, USG, X-ray—plug into claims and chronic pathways.
+                    AERB certified MRI, CT, USG, X-ray. Plug into claims and chronic pathways.
                   </p>
                   <div className="flex items-center text-xs text-success">
                     <CheckCircle className="w-4 h-4 mr-1" />
@@ -266,9 +266,9 @@ const InsureTech = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   {[
                     "Single API and console for everything",
-                    "Home + center + camp in 9,000+ pincodes",
+                    "Home, center, and camp delivery in 9,000+ pincodes",
                     "White-label notifications and documents",
-                    "Real-time status → fewer support calls",
+                    "Real-time status reduces support calls",
                     "Data and consent aligned to claims workflows",
                     "Pure B2B. Zero channel conflict. Your economics stay yours."
                   ].map((feature, index) => (
@@ -307,7 +307,7 @@ const InsureTech = () => {
                 {[
                   "Renewals improve because members see value",
                   "Revenue uplift from services already in demand",
-                  "Healthcare utilization becomes predictable—and monetizable"
+                  "Healthcare utilization becomes predictable and monetizable"
                 ].map((item, index) => (
                   <div key={index} className="flex items-start space-x-3 p-4 bg-card-gradient border border-border/20 rounded-xl">
                     <CheckCircle className="w-5 h-5 text-success mt-0.5 flex-shrink-0" />
@@ -344,7 +344,7 @@ const InsureTech = () => {
                     </div>
                   </div>
                   <p className="text-sm text-muted-foreground italic">
-                    Home-first routing transformed utilization and member satisfaction.
+                    Home first routing transformed utilization and member satisfaction.
                   </p>
                 </div>
               </div>
@@ -365,7 +365,7 @@ const InsureTech = () => {
                       "Console access for ops teams to manage members",
                       "Custom member portals with your branding",
                       "Real-time dashboards for utilization and costs",
-                      "White-label at every touchpoint—we remain invisible"
+                      "White-label at every touchpoint. We remain invisible"
                     ].map((feature, index) => (
                       <li key={index} className="flex items-start space-x-3">
                         <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-1" />

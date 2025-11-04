@@ -106,8 +106,8 @@ const DiseaseManagement = () => {
               <div className="space-y-4">
                 <h3 className="text-2xl font-heading font-bold mb-6">Labstack Closes Gaps</h3>
                 {[
-                  "Protocol pathways—tests, consults, pharmacy linked",
-                  "Raw digital values—longitudinal structured data",
+                  "Protocol pathways for tests, consults, pharmacy linked",
+                  "Raw digital values with longitudinal structured data",
                   "Automated follow-ups for adherence",
                   "Nationwide coverage ensures continuity"
                 ].map((solution, i) => (
@@ -330,7 +330,7 @@ const DiseaseManagement = () => {
                   {
                     title: "Care Program Builder",
                     badge: "Customizable",
-                    desc: "Design programs—configure tests, consults, protocols.",
+                    desc: "Design programs to configure tests, consults, protocols.",
                     color: "primary"
                   },
                   {

@@ -45,7 +45,7 @@ const WhoWeServe = () => {
         "Incremental revenue from service fulfillment",
         "Faster launches (≈14 days nationwide)",
         "Higher renewal and NPS with real value",
-        "Own the healthcare wallet—beyond premiums"
+        "Own the healthcare wallet beyond premiums"
       ],
       proof: "40% higher renewals with active healthcare usage",
       cta: "Launch Healthcare Services",
@@ -64,8 +64,8 @@ const WhoWeServe = () => {
         "Limited network prevents continuity"
       ],
       benefits: [
-        "Protocol pathways—tests, consults, pharmacy linked",
-        "Raw digital values—longitudinal structured data",
+        "Protocol pathways for tests, consults, pharmacy linked",
+        "Raw digital values with longitudinal structured data",
         "Automated follow-ups for adherence",
         "Nationwide coverage ensures continuity"
       ],
@@ -80,7 +80,7 @@ const WhoWeServe = () => {
       title: "Turn Policies Into Revenue Machines",
       description: "OPD benefits platform that insurance brokers launch with API or console. Grow ARPU 15%. Embedded OPD benefits with prescription monetization across 9,000+ pincodes.",
       challenges: [
-        "Policies look same—OPD under-monetized",
+        "Policies look same with OPD under-monetized",
         "Execution breaks outside metros",
         "Commission capped at ₹500-2K",
         "Multi-city vendor reconciliation pain"
@@ -88,8 +88,8 @@ const WhoWeServe = () => {
       benefits: [
         "OPD bundles differentiate policies",
         "Nationwide fulfillment Tier-1 to Tier-3",
-        "Prescription monetization—grow ARPU ~15%",
-        "Pure B2B—your brand, your revenue"
+        "Prescription monetization to grow ARPU ~15%",
+        "Pure B2B model with your brand, your revenue"
       ],
       proof: "~15% ARPU uplift with prescription monetization",
       cta: "Expand Your Portfolio",
@@ -103,15 +103,15 @@ const WhoWeServe = () => {
       description: "Healthcare infrastructure platform that digital health companies launch with one API. Skip 18 months of ops building. 30K+ orders/month capacity. Scale revenue without scaling headcount.",
       challenges: [
         "12-18 months lost signing vendor contracts",
-        "No standard SLAs—ops break city by city",
+        "No standard SLAs with ops break city by city",
         "Engineers pulled into compliance vs growth",
         "Investors want nationwide coverage yesterday"
       ],
       benefits: [
-        "48-hour launch—infra ready nationwide",
+        "48 hour launch with infra ready nationwide",
         "One API • One Console • One Network",
         "9K+ pincodes, 30K+ orders/month capacity",
-        "Pure B2B—your customers remain yours"
+        "Pure B2B model where your customers remain yours"
       ],
       proof: "14 days to go live vs 12-18 months building",
       cta: "Explore Integration",
@@ -131,11 +131,11 @@ const WhoWeServe = () => {
       ],
       benefits: [
         "Steady B2B demand from insurers, corporates, healthtech",
-        "Utilization jumps from 40% → 60-70%",
-        "Revenue doubles, margins increase 15-25%",
+        "Utilization jumps from 40% to 60-70%",
+        "Revenue doubles, margins increase 15 to 25%",
         "Payment in 30 days"
       ],
-      proof: "Utilization 60-70% with predictable B2B revenue",
+      proof: "Utilization 60 to 70% with predictable B2B revenue",
       cta: "Join the Network",
       link: "/who-we-serve/providers"
     }
