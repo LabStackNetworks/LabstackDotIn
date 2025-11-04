@@ -1,4 +1,4 @@
-import { TrendingUp, Target, CheckCircle, ArrowRight, Zap, Shield, Home, Video, Stethoscope, Users } from "lucide-react";
+import { TrendingUp, Target, CheckCircle, ArrowRight, Zap, Shield, Home, Video, Stethoscope, Users, IndianRupee } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -64,17 +64,6 @@ const BrokersCorporateWellness = () => {
           />
         </div>
 
-        {/* Definition Section */}
-        <section className="py-12 bg-gradient-hero border-b border-border/50">
-          <div className="container mx-auto px-6">
-            <div className="max-w-4xl mx-auto text-center">
-              <p className="text-lg text-muted-foreground">
-                White-label OPD benefits platform that insurance brokers and corporate wellness programs use to differentiate policies and monetize out-patient services across India.
-              </p>
-            </div>
-          </div>
-        </section>
-
         <section className="py-20 lg:py-32">
           <div className="container mx-auto px-6">
             {/* Hero */}
@@ -134,14 +123,81 @@ const BrokersCorporateWellness = () => {
           </div>
         </section>
 
-        {/* How It Works */}
+        {/* Impact */}
         <section className="py-20 bg-background">
+          <div className="container mx-auto px-6">
+            <div className="max-w-5xl mx-auto bg-gradient-hero rounded-3xl p-8 lg:p-12 border border-border/50">
+              <h2 className="text-2xl font-heading font-bold text-center mb-12">Impact</h2>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                <div>
+                  <TrendingUp className="w-10 h-10 text-success mx-auto mb-4" />
+                  <div className="text-4xl font-heading font-bold text-gradient mb-2">~15%</div>
+                  <p className="text-sm text-muted-foreground">ARPU Uplift</p>
+                </div>
+                <div>
+                  <Target className="w-10 h-10 text-primary mx-auto mb-4" />
+                  <div className="text-4xl font-heading font-bold text-gradient mb-2">9,000+</div>
+                  <p className="text-sm text-muted-foreground">Pincodes</p>
+                </div>
+                <div>
+                  <Zap className="w-10 h-10 text-secondary mx-auto mb-4" />
+                  <div className="text-4xl font-heading font-bold text-gradient mb-2">Pure B2B</div>
+                  <p className="text-sm text-muted-foreground">No Competition</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Services We Offer */}
+        <section className="py-20 bg-gradient-hero border-y border-border/50">
+          <div className="container mx-auto px-6">
+            <div className="max-w-5xl mx-auto">
+              <h2 className="text-3xl font-heading font-bold mb-12 text-center">OPD Services Portfolio</h2>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                {["Diagnostics", "Consultations", "Pharmacy", "Wellness Programs", "Health Camps", "Chronic Care"].map((service, index) => (
+                  <div key={index} className="bg-card-gradient p-4 rounded-xl border border-border/20 text-center">
+                    <CheckCircle className="w-6 h-6 text-success mx-auto mb-2" />
+                    <p className="text-sm font-medium">{service}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Speed Without Setup */}
+        <section className="py-20 bg-background">
+          <div className="container mx-auto px-6">
+            <div className="max-w-6xl mx-auto">
+              <h2 className="text-3xl font-heading font-bold text-center mb-12">Speed Without Setup</h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {[
+                  { title: "Plug-and-Play Services", badge: "Days to launch", desc: "All OPD services available instantly nationwide.", color: "success" },
+                  { title: "White-Label Platform", badge: "Your brand", desc: "Complete customization under your branding.", color: "primary" },
+                  { title: "Revenue Monetization", badge: "~15% uplift", desc: "Earn from prescription and service fulfillment.", color: "success" }
+                ].map((feature, i) => (
+                  <div key={i} className="bg-card-gradient p-6 rounded-xl border border-border/20">
+                    <div className="flex items-start justify-between mb-3">
+                      <h3 className="font-heading font-bold text-sm">{feature.title}</h3>
+                      <span className={`text-xs bg-${feature.color}/10 text-${feature.color} px-2 py-1 rounded-full whitespace-nowrap`}>
+                        {feature.badge}
+                      </span>
+                    </div>
+                    <p className="text-sm text-muted-foreground">{feature.desc}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* How It Works */}
+        <section className="py-20 bg-gradient-hero border-y border-border/50">
           <div className="container mx-auto px-6">
             <div className="max-w-4xl mx-auto mb-12 text-center">
               <h2 className="text-3xl font-heading font-bold mb-4">How It Works</h2>
-              <p className="text-lg text-muted-foreground">
-                Launch white-label OPD benefits in four steps
-              </p>
+              <p className="text-lg text-muted-foreground">Launch white-label OPD benefits in four steps</p>
             </div>
             <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {[
@@ -163,53 +219,22 @@ const BrokersCorporateWellness = () => {
         </section>
 
         {/* Delivery Modes */}
-        <section className="py-20 bg-gradient-hero border-y border-border/50">
+        <section className="py-20 bg-background">
           <div className="container mx-auto px-6">
             <div className="max-w-5xl mx-auto">
-              <h2 className="text-3xl font-heading font-bold mb-4 text-center">Benefit Delivery Modes</h2>
-              <p className="text-center text-muted-foreground mb-12">
-                Multiple fulfillment options for every member need
-              </p>
+              <h2 className="text-3xl font-heading font-bold mb-12 text-center">Delivery Modes & Coverage</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 {[
-                  {
-                    icon: Home,
-                    mode: "Home Collection",
-                    services: "Diagnostics, pharmacy delivery",
-                    experience: "Sample collection and medicine delivery at doorstep",
-                    color: "primary"
-                  },
-                  {
-                    icon: Video,
-                    mode: "Teleconsultation",
-                    services: "GP, specialist consultations",
-                    experience: "Video/audio consult via app or WhatsApp",
-                    color: "success"
-                  },
-                  {
-                    icon: Stethoscope,
-                    mode: "Center Visit",
-                    services: "Diagnostics, specialist consults",
-                    experience: "Book appointment, visit nearest center",
-                    color: "secondary"
-                  },
-                  {
-                    icon: Users,
-                    mode: "Health Camps",
-                    services: "Corporate wellness screenings",
-                    experience: "On-site health camps for employee groups",
-                    color: "warning"
-                  }
+                  { icon: Home, mode: "Home Collection", color: "primary" },
+                  { icon: Video, mode: "Teleconsultation", color: "success" },
+                  { icon: Stethoscope, mode: "Center Visit", color: "secondary" },
+                  { icon: Users, mode: "Health Camps", color: "warning" }
                 ].map((item, index) => {
                   const Icon = item.icon;
                   return (
-                    <div key={index} className="bg-card-gradient p-6 rounded-xl border border-border/20">
-                      <div className={`w-12 h-12 rounded-full bg-${item.color}/10 flex items-center justify-center mb-4`}>
-                        <Icon className={`w-6 h-6 text-${item.color}`} />
-                      </div>
-                      <h4 className="font-heading font-bold mb-2">{item.mode}</h4>
-                      <p className="text-xs text-muted-foreground mb-3">{item.services}</p>
-                      <p className="text-xs text-muted-foreground">{item.experience}</p>
+                    <div key={index} className="bg-card-gradient p-6 rounded-xl border border-border/20 text-center">
+                      <Icon className={`w-10 h-10 text-${item.color} mx-auto mb-3`} />
+                      <h4 className="font-heading font-bold">{item.mode}</h4>
                     </div>
                   );
                 })}
@@ -218,19 +243,27 @@ const BrokersCorporateWellness = () => {
           </div>
         </section>
 
-        {/* Availability */}
-        <section className="py-20 bg-background">
+        {/* Nationwide Availability */}
+        <section className="py-20 bg-gradient-hero border-y border-border/50">
           <div className="container mx-auto px-6">
             <div className="max-w-5xl mx-auto text-center">
-              <h2 className="text-3xl font-heading font-bold mb-6">Nationwide OPD Coverage</h2>
-              <p className="text-lg text-muted-foreground mb-8">
-                Launch OPD benefits across 9,000+ pincodes from metros to Tier-3 cities. All services available nationwide with consistent quality and SLAs. Your brand, your pricing, your client relationships.
-              </p>
+              <h2 className="text-3xl font-heading font-bold mb-6">Nationwide Availability</h2>
+              <p className="text-lg text-muted-foreground mb-8">Full healthcare service coverage across India</p>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                {["Diagnostics", "Consultations", "Pharmacy", "Wellness Programs", "Health Camps", "Chronic Care", "Preventive Care", "All Services"].map((service, index) => (
+                {[
+                  { service: "Diagnostics", coverage: "9,000+ pincodes" },
+                  { service: "Center Visit", coverage: "2,600+ pincodes" },
+                  { service: "Pharmacy", coverage: "15,000+ pincodes" },
+                  { service: "Consultation", coverage: "Nationwide" },
+                  { service: "Home Care", coverage: "5,000+ pincodes" },
+                  { service: "Emergency", coverage: "Metros" },
+                  { service: "Health Camps", coverage: "Nationwide" },
+                  { service: "All Services", coverage: "Pan-India" }
+                ].map((item, index) => (
                   <div key={index} className="bg-card-gradient p-4 rounded-xl border border-border/20">
                     <CheckCircle className="w-6 h-6 text-success mx-auto mb-2" />
-                    <p className="text-sm font-medium">{service}</p>
+                    <p className="text-sm font-medium">{item.service}</p>
+                    <p className="text-xs text-muted-foreground mt-1">{item.coverage}</p>
                   </div>
                 ))}
               </div>
@@ -239,7 +272,7 @@ const BrokersCorporateWellness = () => {
         </section>
 
         {/* Integration & Quality */}
-        <section className="py-20 bg-gradient-hero border-y border-border/50">
+        <section className="py-20 bg-background">
           <div className="container mx-auto px-6">
             <div className="max-w-6xl mx-auto">
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
@@ -280,47 +313,15 @@ const BrokersCorporateWellness = () => {
           </div>
         </section>
 
-        {/* Impact Metrics */}
-        <section className="py-20 bg-background">
-          <div className="container mx-auto px-6">
-            <div className="max-w-5xl mx-auto bg-gradient-hero rounded-3xl p-8 lg:p-12 border border-border/50">
-              <h3 className="text-2xl font-heading font-bold text-center mb-12">Business Impact</h3>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-                <div>
-                  <TrendingUp className="w-10 h-10 text-success mx-auto mb-4" />
-                  <div className="text-4xl font-heading font-bold text-gradient mb-2">~15%</div>
-                  <p className="text-sm text-muted-foreground">ARPU Uplift</p>
-                  <p className="text-xs text-muted-foreground mt-2">Via prescription monetization</p>
-                </div>
-                <div>
-                  <Target className="w-10 h-10 text-primary mx-auto mb-4" />
-                  <div className="text-4xl font-heading font-bold text-gradient mb-2">9,000+</div>
-                  <p className="text-sm text-muted-foreground">Pincodes</p>
-                  <p className="text-xs text-muted-foreground mt-2">Nationwide coverage</p>
-                </div>
-                <div>
-                  <Zap className="w-10 h-10 text-secondary mx-auto mb-4" />
-                  <div className="text-4xl font-heading font-bold text-gradient mb-2">Pure B2B</div>
-                  <p className="text-sm text-muted-foreground">No Competition</p>
-                  <p className="text-xs text-muted-foreground mt-2">Your clients stay yours</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
         {/* FAQ Section */}
         <section className="py-20 bg-gradient-hero border-y border-border/50">
           <div className="container mx-auto px-6">
             <FAQ items={brokersCorporateWellnessFAQs} />
           </div>
         </section>
-
       </main>
 
-      {/* Related Resources */}
       <RelatedBlogs category="Brokers" limit={3} />
-
       <Footer />
     </div>
   );

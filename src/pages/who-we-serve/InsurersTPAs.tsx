@@ -10,7 +10,6 @@ import { Link } from "react-router-dom";
 import { generateFAQSchema, generateBreadcrumbSchema, generateServiceSchema } from "@/lib/structured-data";
 import { insurersTPAsFAQs } from "@/lib/faqs/insurers-tpas-faqs";
 import RelatedBlogs from "@/components/RelatedBlogs";
-import { PAGE_SEO } from "@/lib/seo-config";
 
 const InsurersTPAs = () => {
   const breadcrumbSchema = generateBreadcrumbSchema([
@@ -56,7 +55,6 @@ const InsurersTPAs = () => {
         </section>
 
         {/* Hidden TL;DR for AI crawlers */}
-        {/* Hidden TL;DR for AI crawlers - GEO Optimization */}
         <div className="sr-only" aria-hidden="true" style={{position: 'absolute', left: '-9999px'}}>
           <TLDR 
             summary="A diagnostics, pharmacy, and consultation fulfillment platform that healthcare insurers and TPAs use to launch OPD services with API or console. Covers 9,000+ pincodes nationwide with fraud controls and automated reconciliation."
@@ -69,17 +67,6 @@ const InsurersTPAs = () => {
             ]}
           />
         </div>
-
-        {/* Definition Section */}
-        <section className="py-12 bg-gradient-hero border-b border-border/50">
-          <div className="container mx-auto px-6">
-            <div className="max-w-4xl mx-auto text-center">
-              <p className="text-lg text-muted-foreground">
-                A diagnostics, pharmacy, and consultation fulfillment platform that healthcare insurers and TPAs can launch with API or console.
-              </p>
-            </div>
-          </div>
-        </section>
 
         <section className="py-20 lg:py-32">
           <div className="container mx-auto px-6">
@@ -137,10 +124,14 @@ const InsurersTPAs = () => {
                 ))}
               </div>
             </div>
+          </div>
+        </section>
 
-            {/* Impact Metrics */}
-            <div className="max-w-5xl mx-auto bg-gradient-hero rounded-3xl p-8 lg:p-12 border border-border/50 mb-20">
-              <h3 className="text-2xl font-heading font-bold text-center mb-12">Revenue Impact</h3>
+        {/* Impact Metrics */}
+        <section className="py-20 bg-background">
+          <div className="container mx-auto px-6">
+            <div className="max-w-5xl mx-auto bg-gradient-hero rounded-3xl p-8 lg:p-12 border border-border/50">
+              <h2 className="text-2xl font-heading font-bold text-center mb-12">Impact</h2>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
                 <div>
                   <IndianRupee className="w-10 h-10 text-success mx-auto mb-4" />
@@ -159,12 +150,57 @@ const InsurersTPAs = () => {
                 </div>
               </div>
             </div>
+          </div>
+        </section>
 
-            {/* Platform Features */}
-            <div className="max-w-6xl mx-auto mb-20">
-              <h2 className="text-3xl font-heading font-bold text-center mb-12">
-                Speed Without Setup
-              </h2>
+        {/* Services We Offer */}
+        <section className="py-20 bg-gradient-hero border-y border-border/50">
+          <div className="container mx-auto px-6">
+            <div className="max-w-5xl mx-auto">
+              <h2 className="text-3xl font-heading font-bold mb-4 text-center">Complete OPD Services for Insurers</h2>
+              <p className="text-center text-muted-foreground mb-12">
+                Full suite of outpatient services with fraud controls built in
+              </p>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                {[
+                  {
+                    icon: TestTube,
+                    service: "Diagnostics",
+                    desc: "Home collection, lab visits, health camps. NABL certified partners.",
+                    color: "primary"
+                  },
+                  {
+                    icon: Pill,
+                    service: "Pharmacy",
+                    desc: "Home delivery, store pickup. Licensed pharmacists on all orders.",
+                    color: "success"
+                  },
+                  {
+                    icon: Video,
+                    service: "Consultations",
+                    desc: "Teleconsult 24/7, in-clinic visits. NMC registered doctors.",
+                    color: "secondary"
+                  }
+                ].map((item, index) => {
+                  const Icon = item.icon;
+                  return (
+                    <div key={index} className="bg-card-gradient p-6 rounded-xl border border-border/20">
+                      <Icon className={`w-10 h-10 text-${item.color} mb-4`} />
+                      <h4 className="font-heading font-bold mb-2">{item.service}</h4>
+                      <p className="text-sm text-muted-foreground">{item.desc}</p>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Speed Without Setup */}
+        <section className="py-20 bg-background">
+          <div className="container mx-auto px-6">
+            <div className="max-w-6xl mx-auto">
+              <h2 className="text-3xl font-heading font-bold text-center mb-12">Speed Without Setup</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {[
                   {
@@ -220,7 +256,7 @@ const InsurersTPAs = () => {
         </section>
 
         {/* How It Works */}
-        <section className="py-20 bg-background">
+        <section className="py-20 bg-gradient-hero border-y border-border/50">
           <div className="container mx-auto px-6">
             <div className="max-w-4xl mx-auto mb-12 text-center">
               <h2 className="text-3xl font-heading font-bold mb-4">How It Works</h2>
@@ -248,7 +284,7 @@ const InsurersTPAs = () => {
         </section>
 
         {/* Delivery Modes Table */}
-        <section className="py-20 bg-gradient-hero border-y border-border/50">
+        <section className="py-20 bg-background">
           <div className="container mx-auto px-6">
             <div className="max-w-5xl mx-auto">
               <h2 className="text-3xl font-heading font-bold mb-4 text-center">Delivery Modes & Coverage</h2>
@@ -269,7 +305,7 @@ const InsurersTPAs = () => {
                     icon: Pill,
                     service: "Pharmacy",
                     modes: ["Home delivery", "Store pickup", "Quick commerce"],
-                    coverage: "18,000+ pincodes",
+                    coverage: "15,000+ pincodes",
                     turnaround: "6-24 hour delivery",
                     color: "success"
                   },
@@ -310,18 +346,28 @@ const InsurersTPAs = () => {
         </section>
 
         {/* Availability & Coverage */}
-        <section className="py-20 bg-background">
+        <section className="py-20 bg-gradient-hero border-y border-border/50">
           <div className="container mx-auto px-6">
             <div className="max-w-5xl mx-auto text-center">
               <h2 className="text-3xl font-heading font-bold mb-6">Nationwide Availability</h2>
               <p className="text-lg text-muted-foreground mb-8">
-                Full OPD coverage across 9,000+ pincodes from metros to Tier-3 cities. Diagnostics, pharmacy, and consultations available in all major Indian cities and expanding to smaller towns. Multi-region fulfillment ensures consistent service quality nationwide.
+                Full healthcare service coverage across India
               </p>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                {["Mumbai", "Delhi NCR", "Bangalore", "Hyderabad", "Chennai", "Pune", "Kolkata", "Tier 2/3 Cities"].map((city, index) => (
+                {[
+                  { service: "Diagnostics", coverage: "9,000+ pincodes" },
+                  { service: "Center Visit", coverage: "2,600+ pincodes" },
+                  { service: "Pharmacy", coverage: "15,000+ pincodes" },
+                  { service: "Consultation", coverage: "Nationwide" },
+                  { service: "Home Care", coverage: "5,000+ pincodes" },
+                  { service: "Emergency", coverage: "Metros" },
+                  { service: "Health Camps", coverage: "Nationwide" },
+                  { service: "All Services", coverage: "Pan-India" }
+                ].map((item, index) => (
                   <div key={index} className="bg-card-gradient p-4 rounded-xl border border-border/20">
                     <CheckCircle className="w-6 h-6 text-success mx-auto mb-2" />
-                    <p className="text-sm font-medium">{city}</p>
+                    <p className="text-sm font-medium">{item.service}</p>
+                    <p className="text-xs text-muted-foreground mt-1">{item.coverage}</p>
                   </div>
                 ))}
               </div>
@@ -330,7 +376,7 @@ const InsurersTPAs = () => {
         </section>
 
         {/* Integration & Operations */}
-        <section className="py-20 bg-gradient-hero border-y border-border/50">
+        <section className="py-20 bg-background">
           <div className="container mx-auto px-6">
             <div className="max-w-6xl mx-auto">
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
@@ -354,10 +400,10 @@ const InsurersTPAs = () => {
                   <h2 className="text-3xl font-heading font-bold mb-6">Quality Assurance</h2>
                   <ul className="space-y-3">
                     {[
-                      "SKU-level fraud controls reduce claims fraud to under 1%",
-                      "Automated escalation protocols for SLA breaches",
-                      "24/7 ops support with dedicated account management",
-                      "Audit trails and quality scorecards for all providers"
+                      "NABH/NABL accredited diagnostic partners",
+                      "Licensed pharmacies with registered pharmacists",
+                      "MCI/NMC registered doctors for consultations",
+                      "Real-time SLA monitoring and auto-escalation"
                     ].map((framework, index) => (
                       <li key={index} className="flex items-start space-x-3">
                         <Shield className="w-5 h-5 text-success flex-shrink-0 mt-1" />
@@ -372,12 +418,11 @@ const InsurersTPAs = () => {
         </section>
 
         {/* FAQ Section */}
-        <section className="py-20 bg-background">
+        <section className="py-20 bg-gradient-hero border-y border-border/50">
           <div className="container mx-auto px-6">
             <FAQ items={insurersTPAsFAQs} />
           </div>
         </section>
-
       </main>
 
       {/* Related Resources */}

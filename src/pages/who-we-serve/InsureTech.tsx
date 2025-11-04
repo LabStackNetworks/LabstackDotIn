@@ -1,4 +1,4 @@
-import { TrendingUp, Target, CheckCircle, ArrowRight, Zap, Shield, Home, Video, Stethoscope, Users, Truck, HeartPulse, TestTube, Pill } from "lucide-react";
+import { TrendingUp, Target, CheckCircle, ArrowRight, Zap, Shield, Home, Video, Stethoscope, Users, Truck, HeartPulse, TestTube, Pill, IndianRupee } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -64,17 +64,6 @@ const InsureTech = () => {
           />
         </div>
 
-        {/* Definition Section */}
-        <section className="py-12 bg-gradient-hero border-b border-border/50">
-          <div className="container mx-auto px-6">
-            <div className="max-w-4xl mx-auto text-center">
-              <p className="text-lg text-muted-foreground">
-                Healthcare delivery platform that InsureTech companies use to launch OPD benefits, drive member engagement, and create new revenue streams beyond insurance premiums.
-              </p>
-            </div>
-          </div>
-        </section>
-
         <section className="py-20 lg:py-32">
           <div className="container mx-auto px-6">
             {/* Hero */}
@@ -99,14 +88,6 @@ const InsureTech = () => {
               </Link>
             </div>
 
-            {/* InsureTech's Next Chapter */}
-            <div className="max-w-4xl mx-auto mb-20">
-              <h2 className="text-3xl font-heading font-bold text-center mb-8">Your Next Growth Chapter</h2>
-              <p className="text-lg text-center text-muted-foreground mb-12">
-                You already own the member relationship. Now unlock the parts of healthcare that drive real value: preventive care, diagnostics, imaging, and ongoing programs.
-              </p>
-            </div>
-
             {/* Current Blockers → What Changes */}
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto mb-20">
               <div className="space-y-4">
@@ -126,45 +107,50 @@ const InsureTech = () => {
 
               <div className="space-y-4">
                 <h3 className="text-2xl font-heading font-bold mb-6">What Changes with Labstack</h3>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <div className="space-y-3">
-                    <h4 className="text-sm font-semibold text-primary uppercase tracking-wide">Member Value</h4>
-                    {[
-                      "Health services that just work",
-                      "Home-first access across cities",
-                      "Predictable timelines",
-                      "Consistent branded experience"
-                    ].map((value, i) => (
-                      <div key={i} className="flex items-start space-x-2 p-3 bg-success/5 border border-success/10 rounded-lg">
-                        <CheckCircle className="w-4 h-4 text-success mt-0.5 flex-shrink-0" />
-                        <span className="text-xs">{value}</span>
-                      </div>
-                    ))}
+                {[
+                  "Health services that just work",
+                  "Home-first access across cities",
+                  "Faster launches (≈14 days)",
+                  "Incremental revenue streams",
+                  "Own the healthcare wallet"
+                ].map((solution, i) => (
+                  <div key={i} className="flex items-start space-x-3 p-4 bg-success/5 border border-success/10 rounded-xl">
+                    <CheckCircle className="w-5 h-5 text-success mt-1 flex-shrink-0" />
+                    <span className="text-sm">{solution}</span>
                   </div>
-                  <div className="space-y-3">
-                    <h4 className="text-sm font-semibold text-secondary uppercase tracking-wide">Business Value</h4>
-                    {[
-                      "Incremental revenue streams",
-                      "Faster launches (≈14 days)",
-                      "Higher renewal and NPS",
-                      "Own the healthcare wallet"
-                    ].map((value, i) => (
-                      <div key={i} className="flex items-start space-x-2 p-3 bg-secondary/5 border border-secondary/10 rounded-lg">
-                        <CheckCircle className="w-4 h-4 text-secondary mt-0.5 flex-shrink-0" />
-                        <span className="text-xs">{value}</span>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-                <p className="text-sm text-muted-foreground italic mt-4 p-4 bg-accent/30 rounded-lg border border-border/20">
-                  You stay the brand and the marketplace. We power the delivery behind the scenes.
-                </p>
+                ))}
               </div>
             </div>
           </div>
         </section>
 
-        {/* Opportunities You Can Activate */}
+        {/* Impact Section */}
+        <section className="py-20 bg-background">
+          <div className="container mx-auto px-6">
+            <div className="max-w-5xl mx-auto bg-gradient-hero rounded-3xl p-8 lg:p-12 border border-border/50">
+              <h2 className="text-2xl font-heading font-bold text-center mb-12">Impact</h2>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                <div>
+                  <IndianRupee className="w-10 h-10 text-success mx-auto mb-4" />
+                  <div className="text-4xl font-heading font-bold text-gradient mb-2">~15%</div>
+                  <p className="text-sm text-muted-foreground">Additional Revenue via Services</p>
+                </div>
+                <div>
+                  <TrendingUp className="w-10 h-10 text-primary mx-auto mb-4" />
+                  <div className="text-4xl font-heading font-bold text-gradient mb-2">14 Days</div>
+                  <p className="text-sm text-muted-foreground">Time to Nationwide Launch</p>
+                </div>
+                <div>
+                  <Users className="w-10 h-10 text-secondary mx-auto mb-4" />
+                  <div className="text-4xl font-heading font-bold text-gradient mb-2">+20</div>
+                  <p className="text-sm text-muted-foreground">NPS Uplift from Better UX</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Services We Offer */}
         <section className="py-20 bg-gradient-hero border-y border-border/50">
           <div className="container mx-auto px-6">
             <div className="max-w-5xl mx-auto">
@@ -226,11 +212,80 @@ const InsureTech = () => {
           </div>
         </section>
 
-        {/* Delivery Modes */}
+        {/* Speed Without Setup */}
+        <section className="py-20 bg-background">
+          <div className="container mx-auto px-6">
+            <div className="max-w-6xl mx-auto">
+              <h2 className="text-3xl font-heading font-bold text-center mb-12">Speed Without Setup</h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {[
+                  {
+                    title: "Plug-and-Play Services",
+                    badge: "Days to launch",
+                    desc: "Diagnostics, consults, pharmacy, chronic care available nationwide instantly.",
+                    color: "success"
+                  },
+                  {
+                    title: "White-Label Journeys",
+                    badge: "Your brand",
+                    desc: "Customize booking flows, care comms. We stay invisible.",
+                    color: "primary"
+                  },
+                  {
+                    title: "Revenue Streams",
+                    badge: "~15% uplift",
+                    desc: "Earn from every health service transaction your members use.",
+                    color: "success"
+                  }
+                ].map((feature, i) => (
+                  <div key={i} className="bg-card-gradient p-6 rounded-xl border border-border/20">
+                    <div className="flex items-start justify-between mb-3">
+                      <h3 className="font-heading font-bold text-sm">{feature.title}</h3>
+                      <span className={`text-xs bg-${feature.color}/10 text-${feature.color} px-2 py-1 rounded-full whitespace-nowrap`}>
+                        {feature.badge}
+                      </span>
+                    </div>
+                    <p className="text-sm text-muted-foreground">{feature.desc}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* How It Works */}
+        <section className="py-20 bg-gradient-hero border-y border-border/50">
+          <div className="container mx-auto px-6">
+            <div className="max-w-4xl mx-auto mb-12 text-center">
+              <h2 className="text-3xl font-heading font-bold mb-4">How It Works</h2>
+              <p className="text-lg text-muted-foreground">
+                Launch healthcare services in four simple steps
+              </p>
+            </div>
+            <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {[
+                { step: "1", title: "Choose Integration Mode", description: "API or console setup. SDK support for React, Node, Python. Pre-built webhooks." },
+                { step: "2", title: "Configure Services", description: "Set coverage limits, member eligibility rules, and white-label branding." },
+                { step: "3", title: "Launch Nationwide", description: "Go live across 9,000+ pincodes with all delivery modes active." },
+                { step: "4", title: "Monitor & Earn", description: "Track fulfillment, NPS, and revenue from dashboard." }
+              ].map((item, index) => (
+                <div key={index} className="bg-card-gradient p-6 rounded-xl border border-border/20">
+                  <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
+                    <span className="text-2xl font-bold text-primary">{item.step}</span>
+                  </div>
+                  <h4 className="font-heading font-bold mb-2">{item.title}</h4>
+                  <p className="text-sm text-muted-foreground">{item.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Delivery Modes & Coverage */}
         <section className="py-20 bg-background">
           <div className="container mx-auto px-6">
             <div className="max-w-5xl mx-auto">
-              <h2 className="text-3xl font-heading font-bold mb-4 text-center">How Members Access Services</h2>
+              <h2 className="text-3xl font-heading font-bold mb-4 text-center">Delivery Modes & Coverage</h2>
               <p className="text-center text-muted-foreground mb-12 max-w-3xl mx-auto">
                 Four delivery modes designed for member convenience across 9,000+ pincodes
               </p>
@@ -360,86 +415,33 @@ const InsureTech = () => {
                   </div>
                 </div>
               </div>
-
-              <div className="bg-gradient-hero rounded-2xl p-8 border border-border/20">
-                <h3 className="text-xl font-heading font-bold mb-6 text-center">Platform Integration Features</h3>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  {[
-                    "Single API endpoint for all delivery modes",
-                    "White-label member notifications (SMS, email, app)",
-                    "Real-time order tracking reduces support tickets by 40%",
-                    "Member consent workflows aligned to insurance claims",
-                    "Automated report delivery in member's preferred format",
-                    "Pure B2B pricing model with zero channel conflict"
-                  ].map((feature, index) => (
-                    <div key={index} className="flex items-start space-x-3">
-                      <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                      <span className="text-sm">{feature}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
             </div>
           </div>
         </section>
 
-        {/* How It Works */}
+        {/* Nationwide Availability */}
         <section className="py-20 bg-gradient-hero border-y border-border/50">
           <div className="container mx-auto px-6">
-            <div className="max-w-4xl mx-auto mb-12 text-center">
-              <h2 className="text-3xl font-heading font-bold mb-4">How It Works</h2>
-              <p className="text-lg text-muted-foreground">
-                Launch healthcare services in four simple steps
+            <div className="max-w-5xl mx-auto text-center">
+              <h2 className="text-3xl font-heading font-bold mb-6">Nationwide Availability</h2>
+              <p className="text-lg text-muted-foreground mb-8">
+                Full healthcare service coverage across India
               </p>
-            </div>
-            <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {[
-                { step: "1", title: "Choose Integration Mode", description: "API or console setup. SDK support for React, Node, Python. Pre-built webhooks." },
-                { step: "2", title: "Configure Services", description: "Set coverage limits, member eligibility rules, and white-label branding." },
-                { step: "3", title: "Launch Nationwide", description: "Go live across 9,000+ pincodes with all delivery modes active." },
-                { step: "4", title: "Monitor & Earn", description: "Track fulfillment, NPS, and revenue from dashboard." }
-              ].map((item, index) => (
-                <div key={index} className="bg-card-gradient p-6 rounded-xl border border-border/20">
-                  <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
-                    <span className="text-2xl font-bold text-primary">{item.step}</span>
-                  </div>
-                  <h4 className="font-heading font-bold mb-2">{item.title}</h4>
-                  <p className="text-sm text-muted-foreground">{item.description}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* What Success Looks Like */}
-        <section className="py-20 bg-background">
-          <div className="container mx-auto px-6">
-            <div className="max-w-5xl mx-auto">
-              <h2 className="text-3xl font-heading font-bold text-center mb-12">What Success Looks Like</h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-                <div className="bg-card-gradient p-6 rounded-xl border border-border/20 text-center">
-                  <div className="text-4xl font-heading font-bold text-gradient mb-2">98%</div>
-                  <p className="text-sm text-muted-foreground">Reports delivered on time (24 to 48 hour TAT)</p>
-                </div>
-                <div className="bg-card-gradient p-6 rounded-xl border border-border/20 text-center">
-                  <div className="text-4xl font-heading font-bold text-gradient mb-2">&lt;2%</div>
-                  <p className="text-sm text-muted-foreground">Sample rejection rate (pre-collection SOPs)</p>
-                </div>
-                <div className="bg-card-gradient p-6 rounded-xl border border-border/20 text-center">
-                  <div className="text-4xl font-heading font-bold text-gradient mb-2">14 days</div>
-                  <p className="text-sm text-muted-foreground">Average time to launch in new cities</p>
-                </div>
-              </div>
-
-              <div className="space-y-4">
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                 {[
-                  "Member renewals improve with visible health value",
-                  "Revenue grows from services members already need",
-                  "Healthcare utilization becomes predictable and monetizable"
+                  { service: "Diagnostics", coverage: "9,000+ pincodes" },
+                  { service: "Center Visit", coverage: "2,600+ pincodes" },
+                  { service: "Pharmacy", coverage: "15,000+ pincodes" },
+                  { service: "Consultation", coverage: "Nationwide" },
+                  { service: "Home Care", coverage: "5,000+ pincodes" },
+                  { service: "Emergency", coverage: "Metros" },
+                  { service: "Health Camps", coverage: "Nationwide" },
+                  { service: "All Services", coverage: "Pan-India" }
                 ].map((item, index) => (
-                  <div key={index} className="flex items-start space-x-3 p-4 bg-card-gradient border border-border/20 rounded-xl">
-                    <CheckCircle className="w-5 h-5 text-success mt-0.5 flex-shrink-0" />
-                    <span className="text-sm">{item}</span>
+                  <div key={index} className="bg-card-gradient p-4 rounded-xl border border-border/20">
+                    <CheckCircle className="w-6 h-6 text-success mx-auto mb-2" />
+                    <p className="text-sm font-medium">{item.service}</p>
+                    <p className="text-xs text-muted-foreground mt-1">{item.coverage}</p>
                   </div>
                 ))}
               </div>
@@ -447,41 +449,8 @@ const InsureTech = () => {
           </div>
         </section>
 
-        {/* Impact */}
-        <section className="py-20 bg-gradient-hero border-y border-border/50">
-          <div className="container mx-auto px-6">
-            <div className="max-w-4xl mx-auto">
-              <div className="bg-card-gradient rounded-3xl p-8 lg:p-12 border border-border/50">
-                <h3 className="text-2xl font-heading font-bold mb-6 text-center">Impact</h3>
-                <div className="bg-card/50 backdrop-blur-sm rounded-xl p-6 border border-border/20">
-                  <p className="text-muted-foreground mb-4">
-                    A leading InsureTech expanded preventive checkups for a 5K-member enterprise across 5 cities.
-                  </p>
-                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
-                    <div className="text-center">
-                      <div className="text-3xl font-heading font-bold text-gradient mb-1">37% → 71%</div>
-                      <p className="text-xs text-muted-foreground">Completion rate in 30 days</p>
-                    </div>
-                    <div className="text-center">
-                      <div className="text-3xl font-heading font-bold text-gradient mb-1">↑ RPL</div>
-                      <p className="text-xs text-muted-foreground">Revenue per covered life</p>
-                    </div>
-                    <div className="text-center">
-                      <div className="text-3xl font-heading font-bold text-gradient mb-1">Early</div>
-                      <p className="text-xs text-muted-foreground">Renewal secured</p>
-                    </div>
-                  </div>
-                  <p className="text-sm text-muted-foreground italic">
-                    Home first routing transformed utilization and member satisfaction.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
         {/* Integration & Quality */}
-        <section className="py-20 bg-gradient-hero border-y border-border/50">
+        <section className="py-20 bg-background">
           <div className="container mx-auto px-6">
             <div className="max-w-6xl mx-auto">
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
@@ -525,29 +494,9 @@ const InsureTech = () => {
         </section>
 
         {/* FAQ Section */}
-        <section className="py-20 bg-background">
+        <section className="py-20 bg-gradient-hero border-y border-border/50">
           <div className="container mx-auto px-6">
             <FAQ items={insuretechFAQs} />
-          </div>
-        </section>
-
-        {/* CTA Band */}
-        <section className="py-20 bg-gradient-hero border-t border-border/50">
-          <div className="container mx-auto px-6">
-            <div className="max-w-4xl mx-auto text-center">
-              <h2 className="text-3xl lg:text-4xl font-heading font-bold mb-6">
-                Launch Healthcare Services with Labstack
-              </h2>
-              <p className="text-lg text-muted-foreground mb-8">
-                Turn healthcare benefits into your competitive advantage and revenue engine
-              </p>
-              <Link to="/book-demo">
-                <Button size="lg" className="btn-gradient">
-                  Book a Demo
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </Button>
-              </Link>
-            </div>
           </div>
         </section>
       </main>
