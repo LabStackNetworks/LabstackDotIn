@@ -194,9 +194,19 @@ const Diagnostics = () => {
                   <div className="w-16 h-16 rounded-full bg-secondary/10 flex items-center justify-center mx-auto mb-4">
                     <Users className="w-8 h-8 text-secondary" />
                   </div>
+                  <h3 className="text-xl font-heading font-bold mb-2">Active Partners</h3>
+                  <p className="text-3xl font-bold text-gradient mb-2">5,000+</p>
+                  <p className="text-sm text-muted-foreground mb-4">Verified Providers</p>
+                  <p className="text-xs text-muted-foreground">Quality-assured partner network</p>
+                </div>
+                
+                <div className="bg-card p-8 rounded-2xl border border-border/20 text-center">
+                  <div className="w-16 h-16 rounded-full bg-warning/10 flex items-center justify-center mx-auto mb-4">
+                    <Target className="w-8 h-8 text-warning" />
+                  </div>
                   <h3 className="text-xl font-heading font-bold mb-2">Health Camps</h3>
-                  <p className="text-3xl font-bold text-gradient mb-2">Major</p>
-                  <p className="text-sm text-muted-foreground mb-4">Cities Covered</p>
+                  <p className="text-3xl font-bold text-gradient mb-2">Nationwide</p>
+                  <p className="text-sm text-muted-foreground mb-4">Coverage</p>
                   <p className="text-xs text-muted-foreground">On-site corporate screening programs</p>
                 </div>
               </div>

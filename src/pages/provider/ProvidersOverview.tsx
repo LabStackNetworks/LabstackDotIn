@@ -126,15 +126,15 @@ const ProvidersOverview = () => {
               <div className="text-sm text-muted-foreground">Monthly Orders</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl font-bold text-primary mb-2">9,000+</div>
-              <div className="text-sm text-muted-foreground">Pincodes Covered</div>
+              <div className="text-4xl font-bold text-primary mb-2">15,000+</div>
+              <div className="text-sm text-muted-foreground">Pharmacy Pincodes</div>
             </div>
             <div className="text-center">
               <div className="text-4xl font-bold text-primary mb-2">99.5%</div>
               <div className="text-sm text-muted-foreground">Platform Uptime</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl font-bold text-primary mb-2">1000+</div>
+              <div className="text-4xl font-bold text-primary mb-2">5,000+</div>
               <div className="text-sm text-muted-foreground">Active Partners</div>
             </div>
           </div>

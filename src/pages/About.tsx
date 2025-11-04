@@ -104,9 +104,9 @@ const About = () => {
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 <div className="bg-card-gradient p-8 rounded-2xl border border-border/20 text-center">
                   <MapPin className="w-10 h-10 text-primary mx-auto mb-4" />
-                  <div className="text-4xl font-heading font-bold text-gradient mb-2">9,000+</div>
-                  <p className="text-sm text-muted-foreground">Pincodes</p>
-                  <p className="text-xs text-muted-foreground mt-2">Tier-1 to Tier-3</p>
+                  <div className="text-4xl font-heading font-bold text-gradient mb-2">5,000+</div>
+                  <p className="text-sm text-muted-foreground">Active Partners</p>
+                  <p className="text-xs text-muted-foreground mt-2">Verified providers</p>
                 </div>
                 <div className="bg-card-gradient p-8 rounded-2xl border border-border/20 text-center">
                   <Target className="w-10 h-10 text-success mx-auto mb-4" />
@@ -116,8 +116,8 @@ const About = () => {
                 </div>
                 <div className="bg-card-gradient p-8 rounded-2xl border border-border/20 text-center">
                   <Zap className="w-10 h-10 text-warning mx-auto mb-4" />
-                  <div className="text-4xl font-heading font-bold text-gradient mb-2">99.5%</div>
-                  <p className="text-sm text-muted-foreground">API Uptime</p>
+                  <div className="text-4xl font-heading font-bold text-gradient mb-2">Tier 3</div>
+                  <p className="text-sm text-muted-foreground">Coverage</p>
                   <p className="text-xs text-muted-foreground mt-2">SLA-backed</p>
                 </div>
                 <div className="bg-card-gradient p-8 rounded-2xl border border-border/20 text-center">

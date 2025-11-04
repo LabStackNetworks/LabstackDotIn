@@ -16,16 +16,16 @@ const ProofOfScale = () => {
     },
     {
       icon: MapPin,
-      value: "10,000+",
-      label: "pincodes covered", 
-      description: "From metros to tier-3 cities",
+      value: "5,000+",
+      label: "active partners", 
+      description: "Verified provider network",
       color: "text-secondary"
     },
     {
       icon: CheckCircle,
-      value: "2,600+",
-      label: "service centres",
-      description: "Quality-verified provider network",
+      value: "Tier 3",
+      label: "coverage",
+      description: "Metros to tier-3 cities",
       color: "text-success"
     },
     {

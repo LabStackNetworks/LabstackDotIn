@@ -136,8 +136,8 @@ const DigitalHealthPlatforms = () => {
                 </div>
                 <div>
                   <Globe className="w-10 h-10 text-success mx-auto mb-4" />
-                  <div className="text-4xl font-heading font-bold text-gradient mb-2">9K+</div>
-                  <p className="text-sm text-muted-foreground">Pincodes Live</p>
+                  <div className="text-4xl font-heading font-bold text-gradient mb-2">15K+</div>
+                  <p className="text-sm text-muted-foreground">Pharmacy Pincodes</p>
                 </div>
                 <div>
                   <Target className="w-10 h-10 text-secondary mx-auto mb-4" />

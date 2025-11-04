@@ -383,8 +383,8 @@ const HealthcareInfrastructure = () => {
               <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
                 <div>
                   <MapPin className="w-8 h-8 text-primary mx-auto mb-3" />
-                  <div className="text-3xl font-heading font-bold text-gradient mb-2">9,000+</div>
-                  <p className="text-sm text-muted-foreground">Pincodes Covered</p>
+                  <div className="text-3xl font-heading font-bold text-gradient mb-2">15,000+</div>
+                  <p className="text-sm text-muted-foreground">Pharmacy Pincodes</p>
                 </div>
                 <div>
                   <Users className="w-8 h-8 text-secondary mx-auto mb-3" />
@@ -393,13 +393,13 @@ const HealthcareInfrastructure = () => {
                 </div>
                 <div>
                   <Shield className="w-8 h-8 text-success mx-auto mb-3" />
-                  <div className="text-3xl font-heading font-bold text-gradient mb-2">99.5%</div>
-                  <p className="text-sm text-muted-foreground">API Uptime</p>
+                  <div className="text-3xl font-heading font-bold text-gradient mb-2">5,000+</div>
+                  <p className="text-sm text-muted-foreground">Active Partners</p>
                 </div>
                 <div>
                   <CheckCircle className="w-8 h-8 text-warning mx-auto mb-3" />
-                  <div className="text-3xl font-heading font-bold text-gradient mb-2">100%</div>
-                  <p className="text-sm text-muted-foreground">Reports Verified</p>
+                  <div className="text-3xl font-heading font-bold text-gradient mb-2">Tier 3</div>
+                  <p className="text-sm text-muted-foreground">Metros to Tier-3</p>
                 </div>
               </div>
 

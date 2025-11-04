@@ -7,8 +7,8 @@ const SolutionSection = () => {
     {
       icon: Network,
       title: "Provider Network",
-      description: "1000+ verified labs, doctors, pharmacies, home care, and specialized services across all tiers",
-      features: ["Quality-assured providers", "Nationwide coverage", "Real-time availability", "Tier-1 to Tier-3 reach"],
+      description: "5,000+ verified labs, doctors, pharmacies, home care, and specialized services across all tiers",
+      features: ["Quality-assured providers", "Metros to Tier-3 coverage", "Real-time availability", "15,000+ pharmacy pincodes"],
       gradient: "from-primary to-primary/60",
       position: "top-0 left-1/2 transform -translate-x-1/2"
     },

@@ -268,15 +268,15 @@ const PlatformOverview = () => {
                 </div>
                 <div>
                   <Globe className="w-8 h-8 text-primary mx-auto mb-3" />
-                  <div className="text-3xl font-heading font-bold text-gradient mb-2">9,000+</div>
-                  <p className="text-sm text-muted-foreground">Pincodes Covered</p>
-                  <p className="text-xs text-muted-foreground mt-2">Tier-1 to Tier-3 cities</p>
+                  <div className="text-3xl font-heading font-bold text-gradient mb-2">5,000+</div>
+                  <p className="text-sm text-muted-foreground">Active Partners</p>
+                  <p className="text-xs text-muted-foreground mt-2">Verified provider network</p>
                 </div>
                 <div>
                   <Shield className="w-8 h-8 text-success mx-auto mb-3" />
-                  <div className="text-3xl font-heading font-bold text-gradient mb-2">99.5%</div>
-                  <p className="text-sm text-muted-foreground">API Uptime</p>
-                  <p className="text-xs text-muted-foreground mt-2">Enterprise-grade reliability</p>
+                  <div className="text-3xl font-heading font-bold text-gradient mb-2">Tier 3</div>
+                  <p className="text-sm text-muted-foreground">Coverage</p>
+                  <p className="text-xs text-muted-foreground mt-2">Metros to tier-3 cities</p>
                 </div>
               </div>
             </div>
