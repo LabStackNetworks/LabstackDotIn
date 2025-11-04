@@ -1,36 +1,77 @@
-import { TestTube, MapPin, CheckCircle, ArrowRight, Shield, Clock, FileCheck } from "lucide-react";
+import { TestTube, MapPin, CheckCircle, ArrowRight, Shield, Clock, FileCheck, Target } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
-import CTAButtons from "@/components/CTAButtons";
 import FAQ from "@/components/FAQ";
 import TLDR from "@/components/design-system/TLDR";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { generateProductSchema, generateFAQSchema } from "@/lib/structured-data";
+import { generateProductSchema, generateFAQSchema, generateBreadcrumbSchema, generateHowToSchema } from "@/lib/structured-data";
 import { diagnosticsFAQs } from "@/lib/faqs/diagnostics-faqs";
 
 const Diagnostics = () => {
-  const structuredData = [
-    generateProductSchema({
-      name: "Labstack Diagnostics Network",
-      description: "Complete diagnostics network across 9,000+ pincodes. Pathology, radiology, cardiac, genetic testing with quality frameworks built in.",
-      url: "https://labstack.in/platform/diagnostics"
-    }),
-    generateFAQSchema(diagnosticsFAQs)
-  ];
+  const productSchema = generateProductSchema({
+    name: "Labstack Diagnostics Network",
+    description: "Complete diagnostics network across 9,000+ pincodes. Pathology, radiology, cardiac, genetic testing with quality frameworks built in.",
+    url: "https://labstack.in/platform/diagnostics"
+  });
+
+  const breadcrumbSchema = generateBreadcrumbSchema([
+    { name: "Home", url: "https://labstack.in" },
+    { name: "Platform", url: "https://labstack.in/platform" },
+    { name: "Diagnostics", url: "https://labstack.in/platform/diagnostics" }
+  ]);
+
+  const howToSchema = generateHowToSchema({
+    name: "How to Launch Diagnostics Services",
+    description: "Launch nationwide diagnostics services with quality frameworks",
+    steps: [
+      { name: "Select Tests", text: "Choose from pathology, radiology, cardiac, genetic, allergy tests" },
+      { name: "Configure Coverage", text: "Activate home collection or center visits by geography" },
+      { name: "Set Quality Rules", text: "Enable report verification, lab selection, quality frameworks" },
+      { name: "Go Live", text: "Start fulfilling diagnostic orders with 100% report verification" }
+    ]
+  });
+
+  const faqSchema = generateFAQSchema(diagnosticsFAQs);
+  const structuredData = [productSchema, faqSchema, breadcrumbSchema, howToSchema];
 
   return (
     <div className="min-h-screen bg-background">
       <SEOHead 
-        title="Diagnostics Network Platform"
-        description="Complete diagnostics network across 9,000+ pincodes. Pathology, radiology, cardiac, genetic testing with quality frameworks built in."
+        title="Diagnostics network with quality frameworks | LabStack"
+        description="Complete diagnostics network across 9,000+ pincodes. Pathology, radiology, cardiac, genetic testing. 100% report verification. Home collection and 2,600+ centers."
         keywords="diagnostics network India, pathology services, radiology network, home sample collection, diagnostic testing API, lab network"
         canonical="https://labstack.in/platform/diagnostics"
         structuredData={structuredData}
       />
       <Header />
       <main className="pt-20">
+        {/* Hidden TL;DR for AI crawlers */}
+        <div className="sr-only" aria-hidden="true" style={{position: 'absolute', left: '-9999px'}}>
+          <TLDR 
+            summary="Complete diagnostics network across 9,000+ pincodes with pathology, radiology, cardiac, genetic testing. 100% report verification with quality frameworks. Home collection and 2,600+ centers nationwide."
+            keyPoints={[
+              "Complete diagnostics: pathology, radiology, cardiac, genetic, allergy testing",
+              "Delivery modes: home sample collection (9K+ pincodes), center visits (2.6K+ centers)",
+              "100% report verification before delivery to patients",
+              "Digital raw values with structured health data",
+              "CSAT-based lab selection and phlebo blacklisting"
+            ]}
+          />
+        </div>
+
+        {/* Definition Section */}
+        <section className="py-12 bg-gradient-hero border-b border-border/50">
+          <div className="container mx-auto px-6">
+            <div className="max-w-4xl mx-auto text-center">
+              <p className="text-lg text-muted-foreground">
+                Complete diagnostics network that healthcare businesses use to launch pathology, radiology, cardiac, and genetic testing with built-in quality frameworks and 100% report verification.
+              </p>
+            </div>
+          </div>
+        </section>
+
         {/* Hero */}
         <section className="py-20 lg:py-32">
           <div className="container mx-auto px-6">
@@ -74,8 +115,150 @@ const Diagnostics = () => {
                 Result: High complaints, low trust, and poor patient outcomes.
               </p>
             </div>
+          </div>
+        </section>
 
-            {/* Labstack Advantage */}
+        {/* How It Works */}
+        <section className="py-20 bg-background">
+          <div className="container mx-auto px-6">
+            <div className="max-w-4xl mx-auto mb-12 text-center">
+              <h2 className="text-3xl font-heading font-bold mb-4">How It Works</h2>
+              <p className="text-lg text-muted-foreground">
+                Launch diagnostics services in four steps
+              </p>
+            </div>
+            <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {[
+                { step: "1", title: "Select Tests", description: "Choose from pathology, radiology, cardiac, genetic, allergy tests" },
+                { step: "2", title: "Configure Coverage", description: "Activate home collection or center visits by geography" },
+                { step: "3", title: "Set Quality Rules", description: "Enable report verification, lab selection, quality frameworks" },
+                { step: "4", title: "Go Live", description: "Start fulfilling orders with 100% report verification" }
+              ].map((item, index) => (
+                <div key={index} className="bg-card-gradient p-6 rounded-xl border border-border/20">
+                  <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
+                    <span className="text-2xl font-bold text-primary">{item.step}</span>
+                  </div>
+                  <h4 className="font-heading font-bold mb-2">{item.title}</h4>
+                  <p className="text-sm text-muted-foreground">{item.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Delivery Modes */}
+        <section className="py-20 bg-gradient-hero border-y border-border/50">
+          <div className="container mx-auto px-6">
+            <div className="max-w-5xl mx-auto">
+              <h2 className="text-3xl font-heading font-bold mb-4 text-center">Diagnostics Delivery Modes</h2>
+              <p className="text-center text-muted-foreground mb-12">
+                Multiple options for sample collection and testing
+              </p>
+              <div className="overflow-x-auto">
+                <table className="w-full bg-card rounded-xl border border-border/20">
+                  <thead>
+                    <tr className="border-b border-border/20">
+                      <th className="p-4 text-left font-heading">Mode</th>
+                      <th className="p-4 text-left font-heading">Experience</th>
+                      <th className="p-4 text-left font-heading">Coverage</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {[
+                      {
+                        mode: "Home Sample Collection",
+                        experience: "Phlebotomist visits home for sample collection",
+                        coverage: "9,000+ pincodes"
+                      },
+                      {
+                        mode: "Center Visits",
+                        experience: "Book appointment and visit nearest diagnostic center",
+                        coverage: "2,600+ centers"
+                      },
+                      {
+                        mode: "Health Camps",
+                        experience: "On-site corporate health screening programs",
+                        coverage: "Major cities"
+                      }
+                    ].map((item, index) => (
+                      <tr key={index} className="border-b border-border/10 last:border-0">
+                        <td className="p-4 font-semibold">{item.mode}</td>
+                        <td className="p-4 text-sm text-muted-foreground">{item.experience}</td>
+                        <td className="p-4 text-sm text-muted-foreground">{item.coverage}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Availability */}
+        <section className="py-20 bg-background">
+          <div className="container mx-auto px-6">
+            <div className="max-w-5xl mx-auto text-center">
+              <h2 className="text-3xl font-heading font-bold mb-6">Nationwide Diagnostics Coverage</h2>
+              <p className="text-lg text-muted-foreground mb-8">
+                Launch diagnostic services across 9,000+ pincodes from metros to Tier-3 cities. Complete test coverage including pathology, radiology, cardiac, genetic, allergy testing. 100% report verification with digital raw values.
+              </p>
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                {["Pathology Tests", "Radiology", "Cardiac Tests", "Genetic Testing", "Allergy Testing", "Microbiome", "Home Collection", "All Tests"].map((service, index) => (
+                  <div key={index} className="bg-card-gradient p-4 rounded-xl border border-border/20">
+                    <CheckCircle className="w-6 h-6 text-success mx-auto mb-2" />
+                    <p className="text-sm font-medium">{service}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Quality Frameworks */}
+        <section className="py-20 bg-gradient-hero border-y border-border/50">
+          <div className="container mx-auto px-6">
+            <div className="max-w-6xl mx-auto">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <div>
+                  <h2 className="text-3xl font-heading font-bold mb-6">Quality Frameworks</h2>
+                  <ul className="space-y-3">
+                    {[
+                      "100% report verification before delivery to patients",
+                      "Digital raw values with structured health data",
+                      "CSAT-based lab selection and auto-routing",
+                      "Phlebo/lab blacklisting by pincode for quality control"
+                    ].map((feature, index) => (
+                      <li key={index} className="flex items-start space-x-3">
+                        <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-1" />
+                        <span className="text-muted-foreground">{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <div>
+                  <h2 className="text-3xl font-heading font-bold mb-6">Network Coverage</h2>
+                  <ul className="space-y-3">
+                    {[
+                      "9,000+ pincodes for home sample collection",
+                      "2,600+ diagnostic centers for walk-in visits",
+                      "NABH/NABL accredited lab partners",
+                      "Continuous quality monitoring and feedback loops"
+                    ].map((framework, index) => (
+                      <li key={index} className="flex items-start space-x-3">
+                        <Shield className="w-5 h-5 text-success flex-shrink-0 mt-1" />
+                        <span className="text-muted-foreground">{framework}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Labstack Advantage */}
+        <section className="py-20 bg-background">
+          <div className="container mx-auto px-6">
             <div className="max-w-6xl mx-auto mb-20">
               <h2 className="text-3xl font-heading font-bold text-center mb-12">The Labstack Advantage: Diagnostics</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -119,7 +302,7 @@ const Diagnostics = () => {
               </div>
             </div>
 
-            {/* Quality Frameworks */}
+            {/* Quality Section */}
             <div className="max-w-5xl mx-auto mb-20 bg-gradient-hero rounded-3xl p-8 lg:p-12 border border-border/50">
               <h2 className="text-3xl font-heading font-bold mb-6">Quality isn't optional. It's built in.</h2>
               <p className="text-lg text-muted-foreground mb-8">
@@ -160,48 +343,6 @@ const Diagnostics = () => {
               </Button>
             </div>
 
-            {/* Customer Experience */}
-            <div className="max-w-6xl mx-auto mb-20">
-              <h2 className="text-3xl font-heading font-bold text-center mb-4">Diagnostics, Reimagined.</h2>
-              <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
-                Enhanced patient experience at every touchpoint
-              </p>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {[
-                  "Real-time appointment slots & confirmations",
-                  "Home visits + center visits + Health Camps across cities",
-                  "Cashless booking with ID verification",
-                  "Patient prep instructions (fasting, pre-tests)",
-                  "Online report downloads + raw values for structured analytics",
-                  "Feedback collection (white-labelled option)",
-                  "PhleboNet for on-demand phlebotomy services"
-                ].map((feature, i) => (
-                  <div key={i} className="flex items-start space-x-3 p-4 bg-card-gradient rounded-xl border border-border/20">
-                    <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                    <span className="text-sm text-muted-foreground">{feature}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* Expanded Coverage */}
-            <div className="max-w-5xl mx-auto mb-20">
-              <h2 className="text-3xl font-heading font-bold text-center mb-12">Expanded Test & Network Coverage</h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                {[
-                  "Genetic, microbiome, and allergy panels supported nationwide",
-                  "Center visit network extended to 5,000+ serviceable pincodes",
-                  "Independent phlebo networks powering nationwide reach",
-                  "Customer experience metrics dashboard with trend analytics"
-                ].map((item, i) => (
-                  <div key={i} className="flex items-start space-x-3 p-6 bg-card-gradient rounded-xl border border-border/20">
-                    <CheckCircle className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
-                    <p className="text-muted-foreground">{item}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-
             {/* Proof */}
             <div className="max-w-4xl mx-auto mb-20 text-center">
               <div className="bg-card-gradient p-8 rounded-2xl border border-border/20">
@@ -210,34 +351,43 @@ const Diagnostics = () => {
                 </p>
               </div>
             </div>
+          </div>
+        </section>
 
-            {/* FAQ Section */}
-            <div className="mb-20">
-              <FAQ items={diagnosticsFAQs} title="Diagnostics FAQ" />
-            </div>
+        {/* FAQ Section */}
+        <section className="py-20 bg-gradient-hero border-y border-border/50">
+          <div className="container mx-auto px-6">
+            <FAQ items={diagnosticsFAQs} title="Diagnostics FAQ" />
+          </div>
+        </section>
 
-            {/* Final CTA */}
-            <div className="max-w-4xl mx-auto text-center">
-              <h2 className="text-3xl font-heading font-bold mb-6">
-                Scale diagnostics without the cost and chaos of building networks.
-              </h2>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link to="/book-demo">
-                  <Button size="lg" className="btn-gradient">
-                    Book a Demo
-                    <ArrowRight className="ml-2 h-5 w-5" />
-                  </Button>
-                </Link>
-                <Link to="/contact">
-                  <Button size="lg" variant="outline">
-                    Talk to Sales
-                  </Button>
-                </Link>
+        {/* Internal Links */}
+        <section className="py-20 bg-background">
+          <div className="container mx-auto px-6">
+            <div className="max-w-5xl mx-auto">
+              <h2 className="text-3xl font-heading font-bold mb-8 text-center">Related Resources</h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                {[
+                  { title: "Healthcare Infrastructure", url: "/solutions/healthcare-infrastructure", description: "Complete healthcare delivery platform" },
+                  { title: "Consultations Platform", url: "/platform/consultations", description: "Teleconsult and EMR integration" },
+                  { title: "Pharmacy Network", url: "/platform/pharmacy", description: "Medicine delivery nationwide" },
+                  { title: "Digital Health Platforms", url: "/who-we-serve/digital-health-platforms", description: "Solutions for healthtech companies" }
+                ].map((link, index) => (
+                  <Link key={index} to={link.url} className="bg-card-gradient p-6 rounded-xl border border-border/20 card-hover group">
+                    <h4 className="font-heading font-bold mb-2 group-hover:text-primary transition-colors">{link.title}</h4>
+                    <p className="text-sm text-muted-foreground">{link.description}</p>
+                    <div className="flex items-center text-primary font-medium mt-4">
+                      Learn more 
+                      <ArrowRight className="ml-1 w-4 h-4" />
+                    </div>
+                  </Link>
+                ))}
               </div>
             </div>
           </div>
         </section>
       </main>
+      
       <Footer />
     </div>
   );

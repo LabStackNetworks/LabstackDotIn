@@ -1,16 +1,29 @@
-import { Heart, Activity, TrendingUp, ArrowRight, CheckCircle, Zap } from "lucide-react";
+import { Heart, Activity, TrendingUp, ArrowRight, CheckCircle, Zap, Shield, Target } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FAQ from "@/components/FAQ";
 import SEOHead from "@/components/SEOHead";
-import RelatedBlogs from "@/components/RelatedBlogs";
+import TLDR from "@/components/design-system/TLDR";
 import { Link } from "react-router-dom";
-import { generateFAQSchema } from "@/lib/structured-data";
+import { generateFAQSchema, generateBreadcrumbSchema, generateServiceSchema } from "@/lib/structured-data";
 import { diseaseManagementFAQs } from "@/lib/faqs/disease-management-faqs";
 
 const DiseaseManagement = () => {
-  const structuredData = generateFAQSchema(diseaseManagementFAQs);
+  const breadcrumbSchema = generateBreadcrumbSchema([
+    { name: "Home", url: "https://labstack.in" },
+    { name: "Who We Serve", url: "https://labstack.in/who-we-serve" },
+    { name: "Disease Management", url: "https://labstack.in/who-we-serve/disease-management" }
+  ]);
+
+  const serviceSchema = generateServiceSchema({
+    name: "Protocol-Driven Disease Management Platform",
+    description: "Care delivery platform with home sample collection, pharmacy delivery, teleconsults for disease management programs. Protocol-driven pathways across India.",
+    url: "https://labstack.in/who-we-serve/disease-management"
+  });
+
+  const faqSchema = generateFAQSchema(diseaseManagementFAQs);
+  const structuredData = [faqSchema, breadcrumbSchema, serviceSchema];
 
   return (
     <div className="min-h-screen bg-background">
@@ -23,6 +36,31 @@ const DiseaseManagement = () => {
       />
       <Header />
       <main className="pt-20">
+        {/* Hidden TL;DR for AI crawlers */}
+        <div className="sr-only" aria-hidden="true" style={{position: 'absolute', left: '-9999px'}}>
+          <TLDR 
+            summary="Protocol-driven care delivery platform for disease management programs. Close care loops with automated pathways for diagnostics, consultations, and pharmacy. 90%+ completion rates with structured data."
+            keyPoints={[
+              "Protocol-driven care pathways for chronic disease management",
+              "Delivery modes: home collection, teleconsult, pharmacy delivery, care coordination",
+              "Nationwide coverage across 9,000+ pincodes from metros to Tier-3",
+              "90%+ pathway completion rates with adherence automation",
+              "Structured health data for longitudinal tracking and outcomes"
+            ]}
+          />
+        </div>
+
+        {/* Definition Section */}
+        <section className="py-12 bg-gradient-hero border-b border-border/50">
+          <div className="container mx-auto px-6">
+            <div className="max-w-4xl mx-auto text-center">
+              <p className="text-lg text-muted-foreground">
+                Protocol-driven care delivery platform that disease management programs use to close care loops with automated pathways for diagnostics, consultations, and pharmacy across India.
+              </p>
+            </div>
+          </div>
+        </section>
+
         <section className="py-20 lg:py-32">
           <div className="container mx-auto px-6">
             {/* Hero */}
@@ -79,8 +117,155 @@ const DiseaseManagement = () => {
                 ))}
               </div>
             </div>
+          </div>
+        </section>
 
-            {/* Workflow Example */}
+        {/* How It Works */}
+        <section className="py-20 bg-background">
+          <div className="container mx-auto px-6">
+            <div className="max-w-4xl mx-auto mb-12 text-center">
+              <h2 className="text-3xl font-heading font-bold mb-4">How It Works</h2>
+              <p className="text-lg text-muted-foreground">
+                Launch protocol-driven care pathways in four steps
+              </p>
+            </div>
+            <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {[
+                { step: "1", title: "Design Protocols", description: "Build care pathways: diagnostics → consult → pharmacy → follow-up" },
+                { step: "2", title: "Configure Programs", description: "Set eligibility, frequency, escalation rules, adherence triggers" },
+                { step: "3", title: "Activate Nationwide", description: "Instant access to 9,000+ pincode fulfillment network" },
+                { step: "4", title: "Track Outcomes", description: "Monitor completion, adherence, clinical outcomes, program ROI" }
+              ].map((item, index) => (
+                <div key={index} className="bg-card-gradient p-6 rounded-xl border border-border/20">
+                  <div className="w-12 h-12 rounded-full bg-success/10 flex items-center justify-center mb-4">
+                    <span className="text-2xl font-bold text-success">{item.step}</span>
+                  </div>
+                  <h4 className="font-heading font-bold mb-2">{item.title}</h4>
+                  <p className="text-sm text-muted-foreground">{item.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Care Delivery Modes */}
+        <section className="py-20 bg-gradient-hero border-y border-border/50">
+          <div className="container mx-auto px-6">
+            <div className="max-w-5xl mx-auto">
+              <h2 className="text-3xl font-heading font-bold mb-4 text-center">Care Delivery Modes</h2>
+              <p className="text-center text-muted-foreground mb-12">
+                Multiple fulfillment options for complete care coordination
+              </p>
+              <div className="overflow-x-auto">
+                <table className="w-full bg-card rounded-xl border border-border/20">
+                  <thead>
+                    <tr className="border-b border-border/20">
+                      <th className="p-4 text-left font-heading">Care Mode</th>
+                      <th className="p-4 text-left font-heading">Services</th>
+                      <th className="p-4 text-left font-heading">Patient Experience</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {[
+                      {
+                        mode: "Home Diagnostics",
+                        services: "Pathology, HbA1c, lipid panel, chronic markers",
+                        experience: "Home sample collection with protocol-specific tests"
+                      },
+                      {
+                        mode: "Teleconsultation",
+                        services: "GP and specialist consults with protocol workflows",
+                        experience: "Video consults with care pathway integration"
+                      },
+                      {
+                        mode: "Pharmacy Delivery",
+                        services: "Prescription fulfillment with adherence tracking",
+                        experience: "Medicine delivery with refill reminders"
+                      },
+                      {
+                        mode: "Care Coordination",
+                        services: "Automated follow-ups, lifestyle coaching, monitoring",
+                        experience: "Smart nudges for adherence and milestone tracking"
+                      }
+                    ].map((item, index) => (
+                      <tr key={index} className="border-b border-border/10 last:border-0">
+                        <td className="p-4 font-semibold">{item.mode}</td>
+                        <td className="p-4 text-sm text-muted-foreground">{item.services}</td>
+                        <td className="p-4 text-sm text-muted-foreground">{item.experience}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Nationwide Care Delivery */}
+        <section className="py-20 bg-background">
+          <div className="container mx-auto px-6">
+            <div className="max-w-5xl mx-auto text-center">
+              <h2 className="text-3xl font-heading font-bold mb-6">Nationwide Care Delivery</h2>
+              <p className="text-lg text-muted-foreground mb-8">
+                Launch disease management programs across 9,000+ pincodes from metros to Tier-3 cities. Complete care coordination with diagnostics, consultations, pharmacy. 90%+ pathway completion with adherence automation.
+              </p>
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                {["Diabetes Care", "Hypertension", "PCOS Management", "Cardiac Programs", "Chronic Care", "Lifestyle Programs", "Preventive Care", "All Programs"].map((service, index) => (
+                  <div key={index} className="bg-card-gradient p-4 rounded-xl border border-border/20">
+                    <CheckCircle className="w-6 h-6 text-success mx-auto mb-2" />
+                    <p className="text-sm font-medium">{service}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Integration & Quality */}
+        <section className="py-20 bg-gradient-hero border-y border-border/50">
+          <div className="container mx-auto px-6">
+            <div className="max-w-6xl mx-auto">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <div>
+                  <h2 className="text-3xl font-heading font-bold mb-6">Integration Options</h2>
+                  <ul className="space-y-3">
+                    {[
+                      "API integration for programmatic care pathway management",
+                      "Console access for care coordinators and ops teams",
+                      "White-label patient apps with your branding",
+                      "Real-time dashboards for adherence and outcomes tracking"
+                    ].map((feature, index) => (
+                      <li key={index} className="flex items-start space-x-3">
+                        <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-1" />
+                        <span className="text-muted-foreground">{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <div>
+                  <h2 className="text-3xl font-heading font-bold mb-6">Quality & Outcomes</h2>
+                  <ul className="space-y-3">
+                    {[
+                      "Structured health data for longitudinal tracking",
+                      "Automated adherence protocols with smart nudges",
+                      "Clinical outcome measurement and reporting",
+                      "90%+ pathway completion rates across programs"
+                    ].map((framework, index) => (
+                      <li key={index} className="flex items-start space-x-3">
+                        <Shield className="w-5 h-5 text-success flex-shrink-0 mt-1" />
+                        <span className="text-muted-foreground">{framework}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Workflow Example */}
+        <section className="py-20 bg-background">
+          <div className="container mx-auto px-6">
             <div className="max-w-5xl mx-auto mb-20">
               <h2 className="text-3xl font-heading font-bold text-center mb-4">
                 Diabetes Care Pathway Example
@@ -163,19 +348,67 @@ const DiseaseManagement = () => {
                 ))}
               </div>
             </div>
+
+            {/* Impact Metrics */}
+            <div className="max-w-5xl mx-auto bg-gradient-hero rounded-3xl p-8 lg:p-12 border border-border/50">
+              <h3 className="text-2xl font-heading font-bold text-center mb-12">Program Outcomes</h3>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                <div>
+                  <Target className="w-10 h-10 text-success mx-auto mb-4" />
+                  <div className="text-4xl font-heading font-bold text-gradient mb-2">90%+</div>
+                  <p className="text-sm text-muted-foreground">Pathway Completion</p>
+                  <p className="text-xs text-muted-foreground mt-2">With adherence automation</p>
+                </div>
+                <div>
+                  <Activity className="w-10 h-10 text-primary mx-auto mb-4" />
+                  <div className="text-4xl font-heading font-bold text-gradient mb-2">100%</div>
+                  <p className="text-sm text-muted-foreground">Structured Data</p>
+                  <p className="text-xs text-muted-foreground mt-2">Digital raw values</p>
+                </div>
+                <div>
+                  <Zap className="w-10 h-10 text-secondary mx-auto mb-4" />
+                  <div className="text-4xl font-heading font-bold text-gradient mb-2">9K+</div>
+                  <p className="text-sm text-muted-foreground">Pincodes</p>
+                  <p className="text-xs text-muted-foreground mt-2">Nationwide care delivery</p>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
 
         {/* FAQ Section */}
-        <section className="py-20 bg-background">
+        <section className="py-20 bg-gradient-hero border-y border-border/50">
           <div className="container mx-auto px-6">
             <FAQ items={diseaseManagementFAQs} />
           </div>
         </section>
+
+        {/* Internal Links */}
+        <section className="py-20 bg-background">
+          <div className="container mx-auto px-6">
+            <div className="max-w-5xl mx-auto">
+              <h2 className="text-3xl font-heading font-bold mb-8 text-center">Related Resources</h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                {[
+                  { title: "Healthcare Infrastructure", url: "/solutions/healthcare-infrastructure", description: "Complete healthcare delivery platform" },
+                  { title: "Digital Platform", url: "/solutions/digital-platform", description: "White-label patient experience with structured data" },
+                  { title: "Insurers & TPAs", url: "/who-we-serve/insurers-tpas", description: "OPD claims automation for insurers" },
+                  { title: "Disease Management Engagement Blog", url: "/resources/blog/disease-management-engagement", description: "How to improve patient adherence in care programs" }
+                ].map((link, index) => (
+                  <Link key={index} to={link.url} className="bg-card-gradient p-6 rounded-xl border border-border/20 card-hover group">
+                    <h4 className="font-heading font-bold mb-2 group-hover:text-primary transition-colors">{link.title}</h4>
+                    <p className="text-sm text-muted-foreground">{link.description}</p>
+                    <div className="flex items-center text-primary font-medium mt-4">
+                      Learn more 
+                      <ArrowRight className="ml-1 w-4 h-4" />
+                    </div>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
       </main>
-      
-      {/* Related Resources */}
-      <RelatedBlogs category="Disease Management" limit={3} />
       
       <Footer />
     </div>
