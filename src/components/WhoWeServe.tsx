@@ -11,110 +11,110 @@ const WhoWeServe = () => {
       id: "insurers",
       icon: Shield,
       label: "Insurers & TPAs",
-      title: "Turn Claim Costs Into Revenue.",
-      description: "Convert OPD claims from expense centers to profit centers. Cut leakage 12%. Boost NPS 25 points.",
+      title: "OPD Fulfilment for Healthcare Insurers",
+      description: "A diagnostics, pharmacy, and consultation fulfillment platform that healthcare insurers can launch with API or console. Turn claim costs into revenue with fraud controls and automated reconciliation.",
       challenges: [
-        "15-20% fraud in claims",
-        "₹200-400 processing on ₹500 claims",
-        "PPMC delays = lost sales",
-        "No preventive infrastructure"
+        "15-20% claims fraud and leakage",
+        "₹200-400 processing cost per ₹500 claim",
+        "PPMC launch delays lose customers",
+        "No preventive care infrastructure"
       ],
       benefits: [
-        "Fraud drops to <1%",
-        "PPMC in 14 days",
-        "Processing <₹100 per claim",
-        "Preventive care built-in"
+        "Claims fraud reduced to under 1%",
+        "PPMC launch in 14 days nationwide",
+        "Processing cost under ₹100 per claim",
+        "Built-in preventive care programs"
       ],
-      proof: "Conversion >75% with fast PPMC",
-      cta: "Transform OPD",
+      proof: "Policy conversion over 75% with fast PPMC",
+      cta: "Launch OPD Services",
       link: "/who-we-serve/insurers-tpas"
     },
     {
       id: "disease-management",
       icon: Heart,
       label: "Disease Management",
-      title: "Close Care Loops, Prove Outcomes",
-      description: "95%+ test completion. Structured data. Nursing, specialists, pharmacy connected.",
+      title: "Protocol-Driven Care for Chronic Conditions",
+      description: "A care delivery platform that disease management companies use to launch protocol-driven pathways via API or console. Close care loops with 95%+ test completion and structured health data.",
       challenges: [
-        "25-35% drop-off on tests",
-        "Broken care loops",
-        "Can't prove efficacy",
-        "High CAC, low LTV"
+        "25-35% patient drop-off on diagnostic tests",
+        "Broken care loops between test and treatment",
+        "Cannot prove clinical efficacy or outcomes",
+        "High customer acquisition cost with low lifetime value"
       ],
       benefits: [
-        ">90% completion, 24hr turnaround",
-        "Auto-flow to care teams",
-        "9,000 pincode coverage",
-        "Churn: 35% → <15%"
+        "Over 90% test completion with 24-hour turnaround",
+        "Automated data flow to care teams",
+        "Nationwide coverage across 9,000 pincodes",
+        "Patient churn reduced from 35% to under 15%"
       ],
-      proof: "LTV improved 2.5-3x",
-      cta: "Scale Care",
+      proof: "Customer lifetime value improved by 2.5 to 3 times",
+      cta: "Launch Care Programs",
       link: "/who-we-serve/disease-management"
     },
     {
       id: "brokers",
       icon: Users,
-      label: "Brokers & Aggregators",
-      title: "2x Revenue Per Customer",
-      description: "₹1,500 commission → ₹3,000+ recurring. Add PPMC, OPD, preventive instantly.",
+      label: "Brokers & Corporate Wellness",
+      title: "OPD Benefits for Insurance Brokers",
+      description: "An OPD benefit platform that insurance brokers and corporate wellness programs can offer via API or console. Grow revenue per policy with nationwide healthcare service fulfillment.",
       challenges: [
-        "Capped commission",
-        "Rising CAC, flat LTV",
-        "No service differentiation",
-        "Zero recurring revenue"
+        "Revenue capped at one-time commission",
+        "Rising customer acquisition costs with flat lifetime value",
+        "No service differentiation in competitive RFPs",
+        "Zero recurring revenue streams"
       ],  
       benefits: [
-        "Revenue 2x in 12 months",
-        "White-label platform",
-        "Win more RFPs",
-        "+30-40% without headcount"
+        "Revenue doubles in 12 months with recurring streams",
+        "White-label platform under broker brand",
+        "Win more RFPs with differentiated OPD offerings",
+        "Revenue growth of 30-40% without additional headcount"
       ],
-      proof: "LTV increased 3-5x",
-      cta: "Expand Revenue",
+      proof: "Customer lifetime value increased by 3 to 5 times",
+      cta: "Launch OPD Benefits",
       link: "/who-we-serve/brokers-aggregators"
     },
     {
       id: "digital-health",
       icon: Smartphone,
-      label: "Digital Health",
-      title: "Go Full-Stack in 14 Days",
-      description: "One API for diagnostics, teleconsult, pharmacy, home care. Revenue +73%.",
+      label: "Digital Health Platforms",
+      title: "Full-Stack Healthcare for Healthtech",
+      description: "A healthcare infrastructure platform that digital health companies can launch with one API. Go from single service to full-stack healthcare delivery nationwide in 14 days.",
       challenges: [
-        "Thin margins (10-15%)",
-        "High CAC, low repeat",
-        "Can't reach Tier 2/3",
-        "No care continuity"
+        "Thin operating margins of 10-15%",
+        "High customer acquisition cost with low repeat usage",
+        "Cannot reach Tier-2 and Tier-3 markets",
+        "No care continuity across services"
       ],
       benefits: [
-        "Full stack via one API",
-        "Auto-flow reports",
-        "Revenue: ₹800 → ₹1,380",
-        "Churn -30-50%"
+        "Full healthcare stack via one API integration",
+        "Automated report and prescription flows",
+        "Revenue per customer grows from ₹800 to ₹1,380",
+        "Customer churn reduced by 30-50%"
       ],
-      proof: "Revenue per customer 2-3x",
-      cta: "Go Full-Stack",
+      proof: "Revenue per customer increased by 2 to 3 times",
+      cta: "Launch Full-Stack",
       link: "/who-we-serve/digital-health-platforms"
     },
     {
       id: "providers",
       icon: Building,
-      label: "Providers",
-      title: "Fill Capacity, Double Revenue",
-      description: "40% → 60-70% utilization. Margins +15-25%. Payment in 30 days.",
+      label: "Healthcare Providers",
+      title: "B2B Demand for Healthcare Providers",
+      description: "A partner network that healthcare providers join to receive steady B2B demand via API or console. Increase utilization from 40% to 60-70% with 30-day payment terms.",
       challenges: [
-        "40-50% utilization",
-        "No digital demand access",
-        "60-90 day payment cycles",
-        "Margin erosion"
+        "Capacity utilization stuck at 40-50%",
+        "No access to digital and B2B demand channels",
+        "Payment cycles stretch to 60-90 days",
+        "Price competition eroding margins"
       ],
       benefits: [
-        "Steady B2B demand",
-        "Utilization to 60-70%",
-        "Revenue doubles, margins +15-25%",
-        "15-day payments"
+        "Steady B2B demand from insurers and healthtech",
+        "Utilization increases to 60-70%",
+        "Revenue doubles with margins up 15-25%",
+        "Payment received within 30 days"
       ],
-      proof: "Labs doubled revenue",
-      cta: "Join Network",
+      proof: "Provider partners doubled revenue within 12 months",
+      cta: "Join Provider Network",
       link: "/who-we-serve/providers"
     }
   ];
@@ -127,7 +127,7 @@ const WhoWeServe = () => {
             Who We <span className="text-gradient">Serve</span>
           </h2>
           <p className="mobile-subheading text-muted-foreground">
-            Infrastructure for insurers, healthtech, providers, and disease management
+            Healthcare fulfillment platform for insurers, brokers, disease management companies, digital health platforms, and providers
           </p>
         </div>
 

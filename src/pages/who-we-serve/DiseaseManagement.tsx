@@ -15,9 +15,9 @@ const DiseaseManagement = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead 
-        title="Disease Management Program Solutions"
-        description="Protocol-driven care pathways with structured health data, automated follow-ups, and 90%+ test completion rates. Close care loops for chronic disease management."
-        keywords="disease management programs, chronic care management, diabetes care programs, care pathways, health monitoring, patient adherence"
+        title="Protocol-driven care for disease management | LabStack"
+        description="Care delivery platform with home sample collection, pharmacy delivery, and teleconsults for disease management companies. API or console launch. Available nationwide."
+        keywords="disease management programs, chronic care management, diabetes care programs, care pathways India, patient adherence"
         canonical="https://labstack.in/who-we-serve/disease-management"
         structuredData={structuredData}
       />

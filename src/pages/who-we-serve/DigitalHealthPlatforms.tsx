@@ -15,9 +15,9 @@ const DigitalHealthPlatforms = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead 
-        title="Healthcare Platform Solutions for Digital Health Startups"
-        description="Scale nationwide in 14 days with one API. 9,000+ pincodes, 30K+ orders/month capacity, 99.5% uptime. Launch diagnostics, pharmacy, and consultations instantly."
-        keywords="digital health platform, healthtech infrastructure, healthcare API integration, telemedicine platform, health startup solutions"
+        title="Full-stack healthcare for digital health platforms | LabStack"
+        description="Healthcare infrastructure platform with diagnostics, pharmacy, and teleconsults for healthtech companies. API or console launch. Available across India."
+        keywords="digital health platform, healthtech infrastructure, healthcare API integration India, telemedicine platform, health startup solutions"
         canonical="https://labstack.in/who-we-serve/digital-health-platforms"
         structuredData={structuredData}
       />

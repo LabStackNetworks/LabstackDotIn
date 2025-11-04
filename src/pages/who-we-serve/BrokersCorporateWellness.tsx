@@ -15,9 +15,9 @@ const BrokersCorporateWellness = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead 
-        title="Healthcare Solutions for Insurance Brokers & Corporate Wellness"
-        description="Differentiate policies with OPD benefits. Grow ARPU by 15% through prescription monetization. Nationwide fulfillment across 9,000+ pincodes."
-        keywords="insurance broker solutions, OPD insurance, corporate wellness programs, policy differentiation, ARPU growth, insurance benefits"
+        title="OPD benefits for insurance brokers | LabStack"
+        description="OPD benefit platform with diagnostics, pharmacy, and teleconsults for insurance brokers. API or console launch. Available across major Indian cities."
+        keywords="insurance broker solutions, OPD insurance India, corporate wellness programs, policy differentiation, broker technology platform"
         canonical="https://labstack.in/who-we-serve/brokers-corporate-wellness"
         structuredData={structuredData}
       />

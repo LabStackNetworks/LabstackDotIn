@@ -31,11 +31,11 @@ const Providers = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead 
-        title="Partner Network for Healthcare Providers"
-        description="Join India's healthcare network. Fill capacity from 40% to 60-70%. Earn predictably with 30-day payments. Serve B2B demand from insurers and corporates."
-        keywords="healthcare provider network, diagnostic lab partnership, pharmacy network, doctor network, healthcare B2B demand"
+        title="B2B demand for healthcare providers | LabStack"
+        description="Partner network with diagnostics, pharmacy, and consultation demand for healthcare providers. API or console access. Available across major Indian cities."
+        keywords="healthcare provider network India, diagnostic lab partnership, pharmacy network, doctor network, B2B healthcare demand"
         canonical="https://labstack.in/who-we-serve/providers"
-        structuredData={structuredData}
+        structuredData={providersFAQs}
       />
       <Header />
       <main className="pt-20">
