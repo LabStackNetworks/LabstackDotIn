@@ -30,6 +30,28 @@ const WhoWeServe = () => {
       link: "/who-we-serve/insurers-tpas"
     },
     {
+      id: "insuretech",
+      icon: Rocket,
+      label: "InsureTech",
+      title: "Make Healthcare Benefits a Revenue Engine",
+      description: "Healthcare delivery platform that InsureTech companies launch with API or console. Turn benefits into revenue streams. Launch nationwide in 14 days. Higher renewals, incremental revenue.",
+      challenges: [
+        "Low utilization = lost outcomes and revenue",
+        "Fragmented delivery kills trust",
+        "Ops friction stalls launches",
+        "Support cost rises with uncertainty"
+      ],
+      benefits: [
+        "Incremental revenue from service fulfillment",
+        "Faster launches (≈14 days nationwide)",
+        "Higher renewal and NPS with real value",
+        "Own the healthcare wallet—beyond premiums"
+      ],
+      proof: "40% higher renewals with active healthcare usage",
+      cta: "Launch Healthcare Services",
+      link: "/who-we-serve/insuretech"
+    },
+    {
       id: "disease-management",
       icon: Heart,
       label: "Disease Management",
