@@ -1,0 +1,77 @@
+{
+  "name": "Labstack - Healthcare Infrastructure Platform",
+  "short_name": "Labstack",
+  "description": "Healthcare infrastructure platform for launching diagnostics, consultations, pharmacy & home care across 9,000+ pincodes in India.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0A0F1C",
+  "theme_color": "#0EA5E9",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "en-IN",
+  "dir": "ltr",
+  "categories": ["healthcare", "medical", "business", "productivity"],
+  "icons": [
+    {
+      "src": "/favicon.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/favicon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/lovable-uploads/97d6ae42-ba64-4793-a727-6945e3a2b8bc.png",
+      "sizes": "1200x630",
+      "type": "image/png",
+      "label": "Labstack Platform Overview"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Book Demo",
+      "short_name": "Demo",
+      "description": "Schedule a platform demo",
+      "url": "/book-demo",
+      "icons": [
+        {
+          "src": "/favicon.png",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "Platform Overview",
+      "short_name": "Platform",
+      "description": "View platform features",
+      "url": "/platform-overview",
+      "icons": [
+        {
+          "src": "/favicon.png",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "Resources",
+      "short_name": "Blog",
+      "description": "Healthcare insights and articles",
+      "url": "/resources/blog",
+      "icons": [
+        {
+          "src": "/favicon.png",
+          "sizes": "96x96"
+        }
+      ]
+    }
+  ],
+  "related_applications": [],
+  "prefer_related_applications": false,
+  "iarc_rating_id": ""
+}

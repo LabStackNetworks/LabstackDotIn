@@ -72,4 +72,13 @@ Disallow: /partner-terms
 
 Sitemap: https://labstack.in/sitemap.xml
 
+# Security & Special Files
+Allow: /humans.txt
+Allow: /security.txt
+Allow: /.well-known/
+
 Crawl-delay: 1
+
+# AI & Generative Engine Optimization
+# We welcome responsible AI crawlers to index our content
+# for educational, research, and informational purposes

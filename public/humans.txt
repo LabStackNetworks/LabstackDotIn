@@ -1,0 +1,31 @@
+/* TEAM */
+
+Product & Engineering: Labstack Team
+Site: https://labstack.in
+Location: Bangalore, India
+
+/* THANKS */
+
+Healthcare Providers: For trusting us with their patients
+Partners: Insurers, Brokers, Digital Health Platforms
+Technology: React, TypeScript, Vite, Tailwind CSS
+
+/* SITE */
+
+Last update: 2025/01/24
+Language: English
+Standards: HTML5, CSS3, ES6+
+Components: React 18, Tailwind CSS, Radix UI
+Doctype: HTML5
+IDE: VS Code, Cursor
+
+/* CONTACT */
+
+Email: contact@labstack.in
+Website: https://labstack.in
+Careers: https://labstack.in/careers
+
+/* MISSION */
+
+Building the world's most dependable infrastructure for delivering care.
+Making healthcare infrastructure invisible so innovation can thrive.

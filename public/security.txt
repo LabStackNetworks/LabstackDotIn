@@ -1,0 +1,51 @@
+Contact: mailto:security@labstack.in
+Contact: https://labstack.in/contact
+Expires: 2026-12-31T23:59:59.000Z
+Encryption: https://labstack.in/.well-known/pgp-key.txt
+Preferred-Languages: en
+Canonical: https://labstack.in/.well-known/security.txt
+
+# Security Policy
+
+Thank you for helping keep Labstack and our users safe!
+
+## Reporting a Vulnerability
+
+If you discover a security vulnerability, please report it to us responsibly:
+
+1. Email: security@labstack.in
+2. Include detailed steps to reproduce
+3. Allow us 90 days to address before public disclosure
+4. We'll acknowledge within 48 hours
+
+## Scope
+
+In scope:
+- Authentication and authorization issues
+- Data exposure or leakage
+- Injection vulnerabilities (SQL, XSS, etc.)
+- API security issues
+- CSRF/SSRF vulnerabilities
+- PHI/PII data protection issues
+
+Out of scope:
+- Social engineering
+- Physical security
+- DDoS attacks
+- Spam or brute force
+
+## Safe Harbor
+
+We support safe harbor for security researchers who:
+- Make good faith effort to avoid harm
+- Don't access or modify user data
+- Report findings responsibly
+- Follow disclosure guidelines
+
+We won't pursue legal action against researchers who follow these guidelines.
+
+## Recognition
+
+With your permission, we'll acknowledge security researchers who report valid vulnerabilities on our security hall of fame.
+
+Thank you for helping us build secure healthcare infrastructure!
