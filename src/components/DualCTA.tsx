@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const DualCTA = () => {
   return (
-    <section className="py-20 lg:py-32">
+    <section className="py-12 lg:py-16">
       <div className="container mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
           {/* For Builders */}

@@ -59,7 +59,7 @@ const Footer = () => {
     <footer className="bg-card border-t border-border/50">
       <div className="container mx-auto px-6">
         {/* Main Footer Content */}
-        <div className="py-16 lg:py-20">
+        <div className="py-12 lg:py-16">
           <div className="grid grid-cols-1 lg:grid-cols-4 gap-12 lg:gap-16">
             {/* Company Info */}
             <div className="lg:col-span-1">

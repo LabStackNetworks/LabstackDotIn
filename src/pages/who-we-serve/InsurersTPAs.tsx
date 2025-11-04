@@ -68,7 +68,7 @@ const InsurersTPAs = () => {
           />
         </div>
 
-        <section className="py-20 lg:py-32">
+        <section className="py-16 lg:py-24">
           <div className="container mx-auto px-6">
             {/* Hero */}
             <div className="max-w-4xl mx-auto text-center mb-16">
@@ -128,7 +128,7 @@ const InsurersTPAs = () => {
         </section>
 
         {/* Impact Metrics */}
-        <section className="py-20 bg-background">
+        <section className="py-12 lg:py-16 bg-background">
           <div className="container mx-auto px-6">
             <div className="max-w-5xl mx-auto bg-gradient-hero rounded-3xl p-8 lg:p-12 border border-border/50">
               <h2 className="text-2xl font-heading font-bold text-center mb-12">Impact</h2>
@@ -154,7 +154,7 @@ const InsurersTPAs = () => {
         </section>
 
         {/* Services We Offer */}
-        <section className="py-20 bg-gradient-hero border-y border-border/50">
+        <section className="py-12 lg:py-16 bg-gradient-hero border-y border-border/50">
           <div className="container mx-auto px-6">
             <div className="max-w-5xl mx-auto">
               <h2 className="text-3xl font-heading font-bold mb-4 text-center">Complete OPD Services for Insurers</h2>
@@ -216,7 +216,7 @@ const InsurersTPAs = () => {
         </section>
 
         {/* Speed Without Setup */}
-        <section className="py-20 bg-background">
+        <section className="py-12 lg:py-16 bg-background">
           <div className="container mx-auto px-6">
             <div className="max-w-6xl mx-auto">
               <h2 className="text-3xl font-heading font-bold text-center mb-12">Speed Without Setup</h2>
@@ -275,7 +275,7 @@ const InsurersTPAs = () => {
         </section>
 
         {/* How It Works */}
-        <section className="py-20 bg-gradient-hero border-y border-border/50">
+        <section className="py-12 lg:py-16 bg-gradient-hero border-y border-border/50">
           <div className="container mx-auto px-6">
             <div className="max-w-4xl mx-auto mb-12 text-center">
               <h2 className="text-3xl font-heading font-bold mb-4">How It Works</h2>
@@ -303,7 +303,7 @@ const InsurersTPAs = () => {
         </section>
 
         {/* Delivery Modes Table */}
-        <section className="py-20 bg-background">
+        <section className="py-12 lg:py-16 bg-background">
           <div className="container mx-auto px-6">
             <div className="max-w-5xl mx-auto">
               <h2 className="text-3xl font-heading font-bold mb-4 text-center">Delivery Modes & Coverage</h2>
@@ -365,7 +365,7 @@ const InsurersTPAs = () => {
         </section>
 
         {/* Availability & Coverage */}
-        <section className="py-20 bg-gradient-hero border-y border-border/50">
+        <section className="py-12 lg:py-16 bg-gradient-hero border-y border-border/50">
           <div className="container mx-auto px-6">
             <div className="max-w-5xl mx-auto text-center">
               <h2 className="text-3xl font-heading font-bold mb-6">Nationwide Availability</h2>
@@ -395,7 +395,7 @@ const InsurersTPAs = () => {
         </section>
 
         {/* Integration & Operations */}
-        <section className="py-20 bg-background">
+        <section className="py-12 lg:py-16 bg-background">
           <div className="container mx-auto px-6">
             <div className="max-w-6xl mx-auto">
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
@@ -437,7 +437,7 @@ const InsurersTPAs = () => {
         </section>
 
         {/* FAQ Section */}
-        <section className="py-20 bg-gradient-hero border-y border-border/50">
+        <section className="py-12 lg:py-16 bg-gradient-hero border-y border-border/50">
           <div className="container mx-auto px-6">
             <FAQ items={insurersTPAsFAQs} />
           </div>

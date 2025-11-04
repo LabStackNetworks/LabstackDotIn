@@ -142,7 +142,7 @@ const WhoWeServe = () => {
   ];
 
   return (
-    <section className="py-20 lg:py-32 bg-background">
+    <section className="py-12 lg:py-16 bg-background">
       <div className="container mx-auto px-6">
         <div className="max-w-4xl mx-auto text-center mb-12 sm:mb-16">
           <h2 className="mobile-section-title font-heading font-bold mb-6">

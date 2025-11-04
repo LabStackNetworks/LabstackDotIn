@@ -64,7 +64,7 @@ const InsureTech = () => {
           />
         </div>
 
-        <section className="py-20 lg:py-32">
+        <section className="py-16 lg:py-24">
           <div className="container mx-auto px-6">
             {/* Hero */}
             <div className="max-w-4xl mx-auto text-center mb-16">
@@ -125,7 +125,7 @@ const InsureTech = () => {
         </section>
 
         {/* Impact Section */}
-        <section className="py-20 bg-background">
+        <section className="py-12 lg:py-16 bg-background">
           <div className="container mx-auto px-6">
             <div className="max-w-5xl mx-auto bg-gradient-hero rounded-3xl p-8 lg:p-12 border border-border/50">
               <h2 className="text-2xl font-heading font-bold text-center mb-12">Impact</h2>
@@ -151,7 +151,7 @@ const InsureTech = () => {
         </section>
 
         {/* Services We Offer */}
-        <section className="py-20 bg-gradient-hero border-y border-border/50">
+        <section className="py-12 lg:py-16 bg-gradient-hero border-y border-border/50">
           <div className="container mx-auto px-6">
             <div className="max-w-5xl mx-auto">
               <h2 className="text-3xl font-heading font-bold mb-4 text-center">Complete Service Coverage Nationwide</h2>
@@ -213,7 +213,7 @@ const InsureTech = () => {
         </section>
 
         {/* Speed Without Setup */}
-        <section className="py-20 bg-background">
+        <section className="py-12 lg:py-16 bg-background">
           <div className="container mx-auto px-6">
             <div className="max-w-6xl mx-auto">
               <h2 className="text-3xl font-heading font-bold text-center mb-12">Speed Without Setup</h2>
@@ -272,7 +272,7 @@ const InsureTech = () => {
         </section>
 
         {/* How It Works */}
-        <section className="py-20 bg-gradient-hero border-y border-border/50">
+        <section className="py-12 lg:py-16 bg-gradient-hero border-y border-border/50">
           <div className="container mx-auto px-6">
             <div className="max-w-4xl mx-auto mb-12 text-center">
               <h2 className="text-3xl font-heading font-bold mb-4">How It Works</h2>
@@ -300,7 +300,7 @@ const InsureTech = () => {
         </section>
 
         {/* Delivery Modes & Coverage */}
-        <section className="py-20 bg-background">
+        <section className="py-12 lg:py-16 bg-background">
           <div className="container mx-auto px-6">
             <div className="max-w-5xl mx-auto">
               <h2 className="text-3xl font-heading font-bold mb-4 text-center">Delivery Modes & Coverage</h2>
@@ -438,7 +438,7 @@ const InsureTech = () => {
         </section>
 
         {/* Nationwide Availability */}
-        <section className="py-20 bg-gradient-hero border-y border-border/50">
+        <section className="py-12 lg:py-16 bg-gradient-hero border-y border-border/50">
           <div className="container mx-auto px-6">
             <div className="max-w-5xl mx-auto text-center">
               <h2 className="text-3xl font-heading font-bold mb-6">Nationwide Availability</h2>
@@ -468,7 +468,7 @@ const InsureTech = () => {
         </section>
 
         {/* Integration & Quality */}
-        <section className="py-20 bg-background">
+        <section className="py-12 lg:py-16 bg-background">
           <div className="container mx-auto px-6">
             <div className="max-w-6xl mx-auto">
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
@@ -512,7 +512,7 @@ const InsureTech = () => {
         </section>
 
         {/* FAQ Section */}
-        <section className="py-20 bg-gradient-hero border-y border-border/50">
+        <section className="py-12 lg:py-16 bg-gradient-hero border-y border-border/50">
           <div className="container mx-auto px-6">
             <FAQ items={insuretechFAQs} />
           </div>
