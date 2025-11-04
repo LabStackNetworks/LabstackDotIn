@@ -26,22 +26,6 @@ const BlogWithCategories = () => {
 
   const allArticles = [
     {
-      title: "Digital Transformation for Health Insurers: A 2025 Roadmap",
-      excerpt: "How leading insurers are reducing claim processing time by 60% and scaling to Tier-2/3 cities with digital infrastructure.",
-      category: "Insurers",
-      readTime: "8 min read",
-      date: "Jan 15, 2025",
-      link: "insurers-digital-transformation"
-    },
-    {
-      title: "Reducing Claims Fraud: AI-Powered Detection",
-      excerpt: "Learn how AI and data analytics help insurers detect fraud, saving ₹800-1200 per suspicious claim and reducing fraud rates by 40%.",
-      category: "Insurers",
-      readTime: "10 min read",
-      date: "Jan 20, 2025",
-      link: "insurers-claims-fraud"
-    },
-    {
       title: "InsureTech Revenue Growth: Healthcare as Revenue Engine",
       excerpt: "How InsureTech platforms increase ARPU by 15-25% and improve retention by 40% through healthcare benefits.",
       category: "InsureTech",
@@ -50,68 +34,68 @@ const BlogWithCategories = () => {
       link: "insuretech-revenue-growth"
     },
     {
-      title: "Product-Led Growth for InsureTech Through Healthcare",
-      excerpt: "How healthcare benefits drive viral growth, reduce CAC by 25%, and create network effects for digital insurance platforms.",
-      category: "InsureTech",
-      readTime: "11 min read",
-      date: "Jan 24, 2025",
-      link: "insuretech-product-led-growth"
-    },
-    {
-      title: "Employee Wellness Programs That Drive ROI",
-      excerpt: "How brokers use digital wellness platforms to increase retention by 35%, reduce claims by 20%, and differentiate in competitive markets.",
-      category: "Brokers",
-      readTime: "9 min read",
-      date: "Jan 18, 2025",
-      link: "brokers-engagement"
-    },
-    {
-      title: "Technology Stack for Modern Insurance Brokers",
-      excerpt: "How tech-enabled brokers are serving 3x more clients with 40% lower operational costs through automation.",
-      category: "Brokers",
-      readTime: "11 min read",
-      date: "Jan 22, 2025",
-      link: "brokers-tech"
-    },
-    {
-      title: "Chronic Disease Management at Scale",
-      excerpt: "Discover how disease management programs reduce hospitalizations by 45% and lower treatment costs by ₹8,000-12,000 per patient annually.",
-      category: "Disease Management",
-      readTime: "12 min read",
-      date: "Jan 25, 2025",
-      link: "disease-management-chronic"
-    },
-    {
-      title: "Patient Engagement: Getting to 70%+ Participation",
-      excerpt: "Proven strategies to achieve 70%+ enrollment and 50%+ active engagement in disease management programs through behavioral design.",
-      category: "Disease Management",
-      readTime: "11 min read",
-      date: "Jan 28, 2025",
-      link: "disease-management-engagement"
+      title: "Digital Transformation for Health Insurers: A 2025 Roadmap",
+      excerpt: "How leading insurers are reducing claim processing time by 60% and scaling to Tier-2/3 cities with digital infrastructure.",
+      category: "Insurers",
+      readTime: "8 min read",
+      date: "Jan 15, 2025",
+      link: "insurers-digital-transformation"
     },
     {
       title: "API-First Healthcare Infrastructure",
       excerpt: "Build faster with healthcare APIs. Launch diagnostics, consultations, and pharmacy in 14 days instead of 14 months.",
       category: "Digital Health",
       readTime: "9 min read",
-      date: "Jan 12, 2025",
+      date: "Jan 25, 2025",
       link: "digital-health-api"
+    },
+    {
+      title: "Reducing Claims Fraud: AI-Powered Detection",
+      excerpt: "Learn how AI and data analytics help insurers detect fraud, saving ₹800-1200 per suspicious claim and reducing fraud rates by 40%.",
+      category: "Insurers",
+      readTime: "10 min read",
+      date: "Jan 28, 2025",
+      link: "insurers-claims-fraud"
     },
     {
       title: "Scaling to Tier 2/3 Cities",
       excerpt: "Expand beyond metros with infrastructure that works in 600+ cities. Learn how platforms scale profitably to Tier-2/3 markets.",
       category: "Digital Health",
       readTime: "7 min read",
-      date: "Jan 16, 2025",
+      date: "Feb 5, 2025",
       link: "digital-health-scale"
     },
     {
-      title: "Predictive Analytics in Disease Management",
-      excerpt: "How AI identifies high-risk members 6-12 months before complications, reducing hospitalizations by 45%.",
-      category: "Disease Management",
+      title: "Employee Wellness Programs That Drive ROI",
+      excerpt: "How brokers use digital wellness platforms to increase retention by 35%, reduce claims by 20%, and differentiate in competitive markets.",
+      category: "Brokers",
       readTime: "9 min read",
-      date: "Feb 25, 2025",
-      link: "disease-management-predictive-analytics"
+      date: "Feb 15, 2025",
+      link: "brokers-engagement"
+    },
+    {
+      title: "Building Healthcare Networks That Scale",
+      excerpt: "Strategies for expanding provider networks while maintaining quality and service standards.",
+      category: "Providers",
+      readTime: "10 min read",
+      date: "Feb 22, 2025",
+      link: "providers-network"
+    },
+    {
+      title: "Product-Led Growth for InsureTech Through Healthcare",
+      excerpt: "How healthcare benefits drive viral growth, reduce CAC by 25%, and create network effects for digital insurance platforms.",
+      category: "InsureTech",
+      readTime: "11 min read",
+      date: "Feb 24, 2025",
+      link: "insuretech-product-led-growth"
+    },
+    {
+      title: "Technology Stack for Modern Insurance Brokers",
+      excerpt: "How tech-enabled brokers are serving 3x more clients with 40% lower operational costs through automation.",
+      category: "Brokers",
+      readTime: "11 min read",
+      date: "Mar 12, 2025",
+      link: "brokers-tech"
     },
     {
       title: "Member Retention Through Digital Health Benefits",
@@ -122,12 +106,28 @@ const BlogWithCategories = () => {
       link: "insurers-member-retention"
     },
     {
+      title: "Chronic Disease Management at Scale",
+      excerpt: "Discover how disease management programs reduce hospitalizations by 45% and lower treatment costs by ₹8,000-12,000 per patient annually.",
+      category: "Disease Management",
+      readTime: "12 min read",
+      date: "Apr 8, 2025",
+      link: "disease-management-chronic"
+    },
+    {
       title: "Multi-Employer Platform Management at Scale",
       excerpt: "How brokers serve 100+ corporate clients efficiently, reducing costs by 60% while improving retention.",
       category: "Brokers",
       readTime: "10 min read",
       date: "Apr 20, 2025",
-      link: "brokers-multi-employer-platform"
+      link: "brokers-multi-employer"
+    },
+    {
+      title: "Provider Technology Stack for 2025",
+      excerpt: "Essential tools for modern healthcare providers to improve efficiency and patient satisfaction.",
+      category: "Providers",
+      readTime: "9 min read",
+      date: "May 5, 2025",
+      link: "providers-tech"
     },
     {
       title: "Digital Transformation for Healthcare Providers",
@@ -138,12 +138,28 @@ const BlogWithCategories = () => {
       link: "providers-digital-transformation"
     },
     {
+      title: "Patient Engagement: Getting to 70%+ Participation",
+      excerpt: "Proven strategies to achieve 70%+ enrollment and 50%+ active engagement in disease management programs through behavioral design.",
+      category: "Disease Management",
+      readTime: "11 min read",
+      date: "May 20, 2025",
+      link: "disease-management-engagement"
+    },
+    {
       title: "Claims Processing Automation: From 7 Days to 2 Hours",
       excerpt: "AI-powered automation reduces processing time by 95%, cuts costs by ₹200-300 per claim, and improves satisfaction.",
       category: "Insurers",
       readTime: "11 min read",
       date: "Jun 10, 2025",
       link: "insurers-claims-automation"
+    },
+    {
+      title: "Predictive Analytics in Disease Management",
+      excerpt: "How AI identifies high-risk members 6-12 months before complications, reducing hospitalizations by 45%.",
+      category: "Disease Management",
+      readTime: "9 min read",
+      date: "Jun 14, 2025",
+      link: "disease-management-predictive"
     },
     {
       title: "Wellness ROI: Measuring Beyond Healthcare Costs",
@@ -159,7 +175,7 @@ const BlogWithCategories = () => {
       category: "Disease Management",
       readTime: "10 min read",
       date: "Aug 12, 2025",
-      link: "disease-management-behavioral-design"
+      link: "disease-management-behavioral"
     },
     {
       title: "White-Label vs Build: Launch Healthcare Apps in 14 Days",
@@ -167,10 +183,10 @@ const BlogWithCategories = () => {
       category: "Digital Health",
       readTime: "10 min read",
       date: "Sep 8, 2025",
-      link: "digital-health-whitelabel-launch"
+      link: "digital-health-whitelabel"
     },
     {
-      title: "Healthcare Network Partnerships: Provider Growth Strategy",
+      title: "Provider Network Partnerships: Revenue Growth Strategy",
       excerpt: "How joining digital health networks increases provider revenue by 40% through insurance and aggregator visibility.",
       category: "Providers",
       readTime: "10 min read",

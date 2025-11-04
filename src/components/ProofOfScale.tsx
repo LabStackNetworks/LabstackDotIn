@@ -5,68 +5,95 @@ import { Link } from "react-router-dom";
 
 const ProofOfScale = () => {
   const [isMapExpanded, setIsMapExpanded] = useState(false);
+  const [zoomLevel, setZoomLevel] = useState(1);
 
-  // Generate 200+ cities with service availability
-  const generateCities = () => {
-    const services = ['home', 'center', 'pharmacy', 'consult'];
-    const colors = ['bg-primary', 'bg-secondary', 'bg-success', 'bg-warning'];
+  // Real Indian cities - Metros, Tier-1, Tier-2, Tier-3
+  const allCities = [
+    // Major Metros (Tier-0) - Always visible
+    { name: 'Delhi NCR', x: 40, y: 25, tier: 0, hasHome: true, hasCenter: true, hasPharmacy: true, hasConsult: true },
+    { name: 'Mumbai', x: 20, y: 45, tier: 0, hasHome: true, hasCenter: true, hasPharmacy: true, hasConsult: true },
+    { name: 'Bangalore', x: 30, y: 75, tier: 0, hasHome: true, hasCenter: true, hasPharmacy: true, hasConsult: true },
+    { name: 'Chennai', x: 35, y: 80, tier: 0, hasHome: true, hasCenter: true, hasPharmacy: true, hasConsult: true },
+    { name: 'Kolkata', x: 75, y: 35, tier: 0, hasHome: true, hasCenter: true, hasPharmacy: true, hasConsult: true },
+    { name: 'Hyderabad', x: 45, y: 65, tier: 0, hasHome: true, hasCenter: true, hasPharmacy: true, hasConsult: true },
     
-    const cities = [
-      // Major metros and tier-1
-      { name: 'Delhi NCR', x: 40, y: 25, size: 'large' },
-      { name: 'Mumbai', x: 20, y: 45, size: 'large' },
-      { name: 'Bangalore', x: 30, y: 75, size: 'large' },
-      { name: 'Chennai', x: 35, y: 80, size: 'large' },
-      { name: 'Kolkata', x: 75, y: 35, size: 'large' },
-      { name: 'Hyderabad', x: 45, y: 65, size: 'large' },
-      { name: 'Pune', x: 25, y: 50, size: 'medium' },
-      { name: 'Ahmedabad', x: 15, y: 40, size: 'medium' },
-      { name: 'Jaipur', x: 28, y: 32, size: 'medium' },
-      { name: 'Lucknow', x: 48, y: 28, size: 'medium' },
-      { name: 'Indore', x: 32, y: 45, size: 'medium' },
-      { name: 'Chandigarh', x: 35, y: 22, size: 'medium' },
-      { name: 'Coimbatore', x: 28, y: 72, size: 'medium' },
-      { name: 'Kochi', x: 25, y: 82, size: 'medium' },
-      { name: 'Nagpur', x: 42, y: 48, size: 'medium' },
-      { name: 'Bhubaneswar', x: 78, y: 42, size: 'medium' },
-      { name: 'Visakhapatnam', x: 82, y: 68, size: 'medium' },
-      { name: 'Vadodara', x: 18, y: 43, size: 'small' },
-      { name: 'Mysore', x: 32, y: 78, size: 'small' },
-      { name: 'Guwahati', x: 88, y: 30, size: 'small' }
-    ];
+    // Tier-1 Cities - Visible at zoom 1+
+    { name: 'Pune', x: 25, y: 50, tier: 1, hasHome: true, hasCenter: true, hasPharmacy: true, hasConsult: true },
+    { name: 'Ahmedabad', x: 15, y: 40, tier: 1, hasHome: true, hasCenter: true, hasPharmacy: true, hasConsult: true },
+    { name: 'Jaipur', x: 28, y: 32, tier: 1, hasHome: true, hasCenter: true, hasPharmacy: true, hasConsult: true },
+    { name: 'Lucknow', x: 48, y: 28, tier: 1, hasHome: true, hasCenter: true, hasPharmacy: true, hasConsult: true },
+    { name: 'Surat', x: 18, y: 42, tier: 1, hasHome: true, hasCenter: true, hasPharmacy: true, hasConsult: false },
+    { name: 'Chandigarh', x: 35, y: 22, tier: 1, hasHome: true, hasCenter: true, hasPharmacy: true, hasConsult: true },
+    { name: 'Kochi', x: 25, y: 82, tier: 1, hasHome: true, hasCenter: true, hasPharmacy: true, hasConsult: true },
+    { name: 'Visakhapatnam', x: 82, y: 68, tier: 1, hasHome: true, hasCenter: true, hasPharmacy: true, hasConsult: false },
+    { name: 'Indore', x: 32, y: 45, tier: 1, hasHome: true, hasCenter: true, hasPharmacy: true, hasConsult: true },
+    { name: 'Coimbatore', x: 28, y: 72, tier: 1, hasHome: true, hasCenter: true, hasPharmacy: true, hasConsult: false },
+    { name: 'Bhopal', x: 38, y: 43, tier: 1, hasHome: true, hasCenter: true, hasPharmacy: true, hasConsult: false },
+    { name: 'Patna', x: 62, y: 30, tier: 1, hasHome: true, hasCenter: true, hasPharmacy: false, hasConsult: false },
+    { name: 'Vadodara', x: 18, y: 43, tier: 1, hasHome: true, hasCenter: true, hasPharmacy: true, hasConsult: false },
+    { name: 'Nagpur', x: 42, y: 48, tier: 1, hasHome: true, hasCenter: true, hasPharmacy: true, hasConsult: false },
 
-    // Generate 180+ more tier-2 and tier-3 cities
-    const additionalCities = [];
-    for (let i = 0; i < 180; i++) {
-      const x = 15 + Math.random() * 70;
-      const y = 20 + Math.random() * 65;
-      const hasHome = Math.random() > 0.2;
-      const hasCenter = Math.random() > 0.1;
-      const hasPharmacy = Math.random() > 0.15;
-      const hasConsult = Math.random() > 0.05;
-      
-      additionalCities.push({
-        name: `City ${i + 21}`,
-        x,
-        y,
-        size: 'tiny',
-        hasHome,
-        hasCenter,
-        hasPharmacy,
-        hasConsult
-      });
-    }
+    // Tier-2 Cities - Visible at zoom 1.2+
+    { name: 'Guwahati', x: 88, y: 30, tier: 2, hasHome: true, hasCenter: true, hasPharmacy: true, hasConsult: false },
+    { name: 'Bhubaneswar', x: 78, y: 42, tier: 2, hasHome: true, hasCenter: true, hasPharmacy: true, hasConsult: false },
+    { name: 'Mysore', x: 32, y: 78, tier: 2, hasHome: true, hasCenter: true, hasPharmacy: true, hasConsult: false },
+    { name: 'Thiruvananthapuram', x: 28, y: 85, tier: 2, hasHome: true, hasCenter: true, hasPharmacy: false, hasConsult: false },
+    { name: 'Dehradun', x: 38, y: 20, tier: 2, hasHome: true, hasCenter: true, hasPharmacy: false, hasConsult: false },
+    { name: 'Ranchi', x: 68, y: 38, tier: 2, hasHome: true, hasCenter: true, hasPharmacy: false, hasConsult: false },
+    { name: 'Raipur', x: 52, y: 48, tier: 2, hasHome: true, hasCenter: true, hasPharmacy: true, hasConsult: false },
+    { name: 'Jabalpur', x: 44, y: 40, tier: 2, hasHome: true, hasCenter: false, hasPharmacy: true, hasConsult: false },
+    { name: 'Varanasi', x: 55, y: 32, tier: 2, hasHome: true, hasCenter: true, hasPharmacy: false, hasConsult: false },
+    { name: 'Agra', x: 43, y: 28, tier: 2, hasHome: true, hasCenter: true, hasPharmacy: true, hasConsult: false },
+    { name: 'Nashik', x: 22, y: 42, tier: 2, hasHome: true, hasCenter: true, hasPharmacy: false, hasConsult: false },
+    { name: 'Madurai', x: 30, y: 82, tier: 2, hasHome: true, hasCenter: true, hasPharmacy: true, hasConsult: false },
+    { name: 'Vijayawada', x: 52, y: 72, tier: 2, hasHome: true, hasCenter: true, hasPharmacy: false, hasConsult: false },
+    { name: 'Rajkot', x: 16, y: 38, tier: 2, hasHome: true, hasCenter: true, hasPharmacy: true, hasConsult: false },
+    { name: 'Jodhpur', x: 22, y: 32, tier: 2, hasHome: true, hasCenter: false, hasPharmacy: true, hasConsult: false },
+    { name: 'Amritsar', x: 32, y: 18, tier: 2, hasHome: true, hasCenter: true, hasPharmacy: false, hasConsult: false },
+    { name: 'Gwalior', x: 42, y: 32, tier: 2, hasHome: true, hasCenter: false, hasPharmacy: true, hasConsult: false },
+    { name: 'Kota', x: 30, y: 35, tier: 2, hasHome: true, hasCenter: true, hasPharmacy: false, hasConsult: false },
+    { name: 'Guntur', x: 48, y: 70, tier: 2, hasHome: true, hasCenter: false, hasPharmacy: true, hasConsult: false },
+    { name: 'Jalandhar', x: 33, y: 20, tier: 2, hasHome: true, hasCenter: true, hasPharmacy: false, hasConsult: false },
+    { name: 'Aurangabad', x: 28, y: 47, tier: 2, hasHome: true, hasCenter: true, hasPharmacy: true, hasConsult: false },
+    { name: 'Mangalore', x: 27, y: 78, tier: 2, hasHome: true, hasCenter: true, hasPharmacy: false, hasConsult: false },
 
-    return [...cities.map(c => ({
-      ...c,
-      hasHome: true,
-      hasCenter: true,
-      hasPharmacy: true,
-      hasConsult: true
-    })), ...additionalCities];
+    // Tier-3 Cities - Visible at zoom 1.4+
+    { name: 'Shimla', x: 36, y: 18, tier: 3, hasHome: true, hasCenter: false, hasPharmacy: false, hasConsult: false },
+    { name: 'Bikaner', x: 22, y: 28, tier: 3, hasHome: true, hasCenter: false, hasPharmacy: true, hasConsult: false },
+    { name: 'Ujjain', x: 30, y: 42, tier: 3, hasHome: true, hasCenter: true, hasPharmacy: false, hasConsult: false },
+    { name: 'Solapur', x: 28, y: 54, tier: 3, hasHome: true, hasCenter: false, hasPharmacy: true, hasConsult: false },
+    { name: 'Tirupati', x: 42, y: 78, tier: 3, hasHome: true, hasCenter: true, hasPharmacy: false, hasConsult: false },
+    { name: 'Siliguri', x: 72, y: 32, tier: 3, hasHome: true, hasCenter: false, hasPharmacy: true, hasConsult: false },
+    { name: 'Kolhapur', x: 24, y: 52, tier: 3, hasHome: true, hasCenter: false, hasPharmacy: false, hasConsult: false },
+    { name: 'Nellore', x: 46, y: 76, tier: 3, hasHome: true, hasCenter: false, hasPharmacy: true, hasConsult: false },
+    { name: 'Ajmer', x: 26, y: 33, tier: 3, hasHome: true, hasCenter: false, hasPharmacy: false, hasConsult: false },
+    { name: 'Udaipur', x: 24, y: 36, tier: 3, hasHome: true, hasCenter: true, hasPharmacy: false, hasConsult: false },
+    { name: 'Tirunelveli', x: 28, y: 86, tier: 3, hasHome: true, hasCenter: false, hasPharmacy: true, hasConsult: false },
+    { name: 'Belgaum', x: 26, y: 68, tier: 3, hasHome: true, hasCenter: false, hasPharmacy: false, hasConsult: false },
+    { name: 'Salem', x: 32, y: 74, tier: 3, hasHome: true, hasCenter: true, hasPharmacy: false, hasConsult: false },
+    { name: 'Bhilai', x: 54, y: 48, tier: 3, hasHome: true, hasCenter: false, hasPharmacy: true, hasConsult: false },
+    { name: 'Warangal', x: 50, y: 64, tier: 3, hasHome: true, hasCenter: false, hasPharmacy: false, hasConsult: false },
+    { name: 'Durgapur', x: 70, y: 38, tier: 3, hasHome: true, hasCenter: false, hasPharmacy: true, hasConsult: false },
+    { name: 'Bareilly', x: 46, y: 26, tier: 3, hasHome: true, hasCenter: true, hasPharmacy: false, hasConsult: false },
+    { name: 'Jamshedpur', x: 72, y: 40, tier: 3, hasHome: true, hasCenter: false, hasPharmacy: false, hasConsult: false },
+    { name: 'Moradabad', x: 44, y: 24, tier: 3, hasHome: true, hasCenter: false, hasPharmacy: true, hasConsult: false },
+    { name: 'Aligarh', x: 44, y: 26, tier: 3, hasHome: true, hasCenter: false, hasPharmacy: false, hasConsult: false },
+    { name: 'Vellore', x: 38, y: 76, tier: 3, hasHome: true, hasCenter: true, hasPharmacy: false, hasConsult: false },
+    { name: 'Rourkela', x: 74, y: 42, tier: 3, hasHome: true, hasCenter: false, hasPharmacy: true, hasConsult: false },
+    { name: 'Bhavnagar', x: 16, y: 44, tier: 3, hasHome: true, hasCenter: false, hasPharmacy: false, hasConsult: false },
+    { name: 'Muzaffarpur', x: 64, y: 32, tier: 3, hasHome: true, hasCenter: false, hasPharmacy: true, hasConsult: false },
+    { name: 'Bilaspur', x: 58, y: 46, tier: 3, hasHome: true, hasCenter: false, hasPharmacy: false, hasConsult: false },
+  ];
+
+  // Filter cities based on zoom level
+  const getVisibleCities = () => {
+    if (zoomLevel >= 1.4) return allCities; // Show all at high zoom
+    if (zoomLevel >= 1.2) return allCities.filter(c => c.tier <= 2); // Show metros + tier-1 + tier-2
+    if (zoomLevel >= 1.0) return allCities.filter(c => c.tier <= 1); // Show metros + tier-1
+    return allCities.filter(c => c.tier === 0); // Show only metros
   };
 
-  const cities = generateCities();
+  const visibleCities = getVisibleCities();
 
   const metrics = [
     {
@@ -154,46 +181,36 @@ const ProofOfScale = () => {
                   {/* Zoom Controls */}
                   <div className="absolute top-2 right-2 z-50 flex flex-col gap-1 bg-card/90 backdrop-blur-sm rounded-lg p-1 border border-border/50">
                     <button 
-                      onClick={() => {
-                        const map = document.querySelector('.map-container');
-                        if (map) {
-                          const currentScale = parseFloat(map.getAttribute('data-scale') || '1');
-                          const newScale = Math.min(currentScale + 0.2, 2);
-                          map.setAttribute('data-scale', newScale.toString());
-                          (map as HTMLElement).style.transform = `scale(${newScale})`;
-                        }
-                      }}
-                      className="w-6 h-6 flex items-center justify-center hover:bg-primary/10 rounded text-foreground text-sm font-bold"
+                      onClick={() => setZoomLevel(prev => Math.min(prev + 0.2, 2))}
+                      className="w-8 h-8 flex items-center justify-center hover:bg-primary/10 rounded text-foreground font-bold transition-colors"
                       title="Zoom In"
                     >
                       +
                     </button>
+                    <div className="text-[10px] text-center text-muted-foreground px-1">
+                      {visibleCities.length}
+                    </div>
                     <button 
-                      onClick={() => {
-                        const map = document.querySelector('.map-container');
-                        if (map) {
-                          const currentScale = parseFloat(map.getAttribute('data-scale') || '1');
-                          const newScale = Math.max(currentScale - 0.2, 0.6);
-                          map.setAttribute('data-scale', newScale.toString());
-                          (map as HTMLElement).style.transform = `scale(${newScale})`;
-                        }
-                      }}
-                      className="w-6 h-6 flex items-center justify-center hover:bg-primary/10 rounded text-foreground text-sm font-bold"
+                      onClick={() => setZoomLevel(prev => Math.max(prev - 0.2, 0.8))}
+                      className="w-8 h-8 flex items-center justify-center hover:bg-primary/10 rounded text-foreground font-bold transition-colors"
                       title="Zoom Out"
                     >
                       −
                     </button>
                   </div>
-                  {/* India Map with 200+ Healthcare Points */}
-                  <div className="map-container relative w-full h-full flex items-center justify-center transition-transform duration-300" data-scale="1">
+                  {/* India Map with Progressive City Display */}
+                  <div 
+                    className="relative w-full h-full flex items-center justify-center transition-transform duration-300"
+                    style={{ transform: `scale(${zoomLevel})` }}
+                  >
                     <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-xl opacity-50"></div>
                     
-                    {/* Render 200+ cities with service indicators */}
-                    {cities.map((city, index) => {
+                    {/* Render cities based on zoom level */}
+                    {visibleCities.map((city, index) => {
                       const sizeClass = 
-                        city.size === 'large' ? 'w-4 h-4' :
-                        city.size === 'medium' ? 'w-3 h-3' :
-                        city.size === 'small' ? 'w-2 h-2' : 'w-1.5 h-1.5';
+                        city.tier === 0 ? 'w-4 h-4' :
+                        city.tier === 1 ? 'w-3 h-3' :
+                        city.tier === 2 ? 'w-2.5 h-2.5' : 'w-2 h-2';
                       
                       const colorClass = 
                         city.hasHome && city.hasCenter && city.hasPharmacy && city.hasConsult ? 'bg-primary' :
@@ -201,13 +218,15 @@ const ProofOfScale = () => {
                         city.hasHome && city.hasCenter ? 'bg-success' :
                         city.hasHome || city.hasCenter ? 'bg-warning' : 'bg-muted';
                       
+                      const animateClass = city.tier <= 1 ? 'animate-pulse-subtle' : '';
+                      
                       return (
                         <div 
                           key={index}
-                          className="absolute group cursor-pointer"
+                          className="absolute group cursor-pointer transition-opacity duration-300"
                           style={{ top: `${city.y}%`, left: `${city.x}%` }}
                         >
-                          <div className={`${sizeClass} ${colorClass} rounded-full ${city.size !== 'tiny' ? 'animate-pulse-subtle' : ''}`}></div>
+                          <div className={`${sizeClass} ${colorClass} rounded-full ${animateClass}`}></div>
                           <div className="absolute -top-16 left-1/2 transform -translate-x-1/2 bg-card/95 backdrop-blur-sm text-xs px-3 py-2 rounded-lg shadow-xl opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap z-50 border border-border/50">
                             <div className="font-semibold mb-1">{city.name}</div>
                             <div className="flex flex-col gap-0.5 text-[10px]">
