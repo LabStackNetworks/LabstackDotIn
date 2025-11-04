@@ -6,6 +6,7 @@ import FAQ from "@/components/FAQ";
 import SEOHead from "@/components/SEOHead";
 import TLDR from "@/components/design-system/TLDR";
 import RelatedBlogs from "@/components/RelatedBlogs";
+import Breadcrumbs from "@/components/Breadcrumbs";
 import { Link } from "react-router-dom";
 import { generateFAQSchema, generateBreadcrumbSchema, generateServiceSchema } from "@/lib/structured-data";
 import { brokersCorporateWellnessFAQs } from "@/lib/faqs/brokers-corporate-wellness-faqs";
@@ -37,6 +38,18 @@ const BrokersCorporateWellness = () => {
       />
       <Header />
       <main className="pt-20">
+        {/* Breadcrumbs */}
+        <section className="py-4 bg-background border-b border-border/50">
+          <div className="container mx-auto px-6">
+            <Breadcrumbs 
+              items={[
+                { label: "Who We Serve", href: "/who-we-serve" },
+                { label: "Brokers & Corporate Wellness" }
+              ]}
+            />
+          </div>
+        </section>
+
         {/* Hidden TL;DR for AI crawlers */}
         <div className="sr-only" aria-hidden="true" style={{position: 'absolute', left: '-9999px'}}>
           <TLDR 

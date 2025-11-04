@@ -6,6 +6,7 @@ import FAQ from "@/components/FAQ";
 import SEOHead from "@/components/SEOHead";
 import TLDR from "@/components/design-system/TLDR";
 import RelatedBlogs from "@/components/RelatedBlogs";
+import Breadcrumbs from "@/components/Breadcrumbs";
 import { Link } from "react-router-dom";
 import { generateProductSchema, generateFAQSchema, generateBreadcrumbSchema, generateHowToSchema } from "@/lib/structured-data";
 import { healthcareInfrastructureFAQs } from "@/lib/faqs/healthcare-infrastructure-faqs";
@@ -86,6 +87,19 @@ const HealthcareInfrastructure = () => {
       />
       <Header />
       <main className="pt-20">
+        {/* Breadcrumbs */}
+        <section className="py-4 bg-background border-b border-border/50">
+          <div className="container mx-auto px-6">
+            <Breadcrumbs 
+              items={[
+                { label: "Solutions", href: "/solutions" },
+                { label: "Healthcare Infrastructure" }
+              ]}
+            />
+          </div>
+        </section>
+
+        {/* Hidden TL;DR for AI crawlers */}
         {/* Hidden TL;DR for AI crawlers */}
         <div className="sr-only" aria-hidden="true" style={{position: 'absolute', left: '-9999px'}}>
           <TLDR 

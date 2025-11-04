@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 import FAQ from "@/components/FAQ";
 import SEOHead from "@/components/SEOHead";
 import TLDR from "@/components/design-system/TLDR";
+import Breadcrumbs from "@/components/Breadcrumbs";
 import { Link } from "react-router-dom";
 import { generateFAQSchema, generateBreadcrumbSchema, generateServiceSchema } from "@/lib/structured-data";
 import { insurersTPAsFAQs } from "@/lib/faqs/insurers-tpas-faqs";
@@ -42,6 +43,19 @@ const InsurersTPAs = () => {
       />
       <Header />
       <main className="pt-20">
+        {/* Breadcrumbs */}
+        <section className="py-4 bg-background border-b border-border/50">
+          <div className="container mx-auto px-6">
+            <Breadcrumbs 
+              items={[
+                { label: "Who We Serve", href: "/who-we-serve" },
+                { label: "Insurers & TPAs" }
+              ]}
+            />
+          </div>
+        </section>
+
+        {/* Hidden TL;DR for AI crawlers */}
         {/* Hidden TL;DR for AI crawlers - GEO Optimization */}
         <div className="sr-only" aria-hidden="true" style={{position: 'absolute', left: '-9999px'}}>
           <TLDR 

@@ -5,6 +5,7 @@ import SEOHead from "@/components/SEOHead";
 import FAQ from "@/components/FAQ";
 import TLDR from "@/components/design-system/TLDR";
 import RelatedBlogs from "@/components/RelatedBlogs";
+import Breadcrumbs from "@/components/Breadcrumbs";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { generateProductSchema, generateFAQSchema, generateBreadcrumbSchema, generateHowToSchema } from "@/lib/structured-data";
@@ -48,6 +49,19 @@ const Diagnostics = () => {
       />
       <Header />
       <main className="pt-20">
+        {/* Breadcrumbs */}
+        <section className="py-4 bg-background border-b border-border/50">
+          <div className="container mx-auto px-6">
+            <Breadcrumbs 
+              items={[
+                { label: "Platform", href: "/platform-overview" },
+                { label: "Diagnostics" }
+              ]}
+            />
+          </div>
+        </section>
+
+        {/* Hidden TL;DR for AI crawlers */}
         {/* Hidden TL;DR for AI crawlers */}
         <div className="sr-only" aria-hidden="true" style={{position: 'absolute', left: '-9999px'}}>
           <TLDR 
