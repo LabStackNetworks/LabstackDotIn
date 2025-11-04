@@ -32,43 +32,18 @@ const Pharmacy = () => {
       />
       <Header />
       <main className="pt-20">
-        {/* Hero */}
-        <section className="py-20 lg:py-32">
-          <div className="container mx-auto px-6">
-            <div className="max-w-4xl mx-auto text-center mb-16">
-              <h1 className="text-4xl lg:text-6xl font-heading font-bold mb-6">
-                Pharmacy. <span className="text-gradient">Integrated, Nationwide.</span>
-              </h1>
-              <p className="text-lg lg:text-xl text-muted-foreground mb-8">
-                Nationwide pharmacy network with 60-min delivery in metros, fraud prevention, and SKU-level controls. Home delivery or store pickup.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-                <Link to="/book-demo">
-                  <Button size="lg" className="btn-gradient">
-                    Book a Demo
-                    <ArrowRight className="ml-2 h-5 w-5" />
-                  </Button>
-                </Link>
-                <Button size="lg" variant="outline">
-                  Explore Pharmacy Network
-                </Button>
-              </div>
-              
-              {/* TLDR Summary - Hidden from users, visible only for SEO/GEO */}
-              <div className="sr-only">
-                <TLDR 
-                  summary="Launch pharmacy delivery in 14 days with 20,000+ pincode coverage, prescription verification, and SKU-level fraud controls. 60-minute delivery in metros."
-                  keyPoints={[
-                    "E-pharmacies, local chains, and dark stores",
-                    "Automated prescription verification",
-                    "Real-time inventory and substitution",
-                    "Transparent pricing and reconciliation"
-                  ]}
-                />
-              </div>
-            </div>
-          </div>
-        </section>
+        {/* Hidden TL;DR for AI crawlers */}
+        <div className="sr-only" aria-hidden="true" style={{position: 'absolute', left: '-9999px'}}>
+          <TLDR 
+            summary="Launch pharmacy delivery in 14 days with 20,000+ pincode coverage, prescription verification, and SKU-level fraud controls. 60-minute delivery in metros."
+            keyPoints={[
+              "E-pharmacies, local chains, and dark stores",
+              "Automated prescription verification",
+              "Real-time inventory and substitution",
+              "Transparent pricing and reconciliation"
+            ]}
+          />
+        </div>
 
         {/* Definition Section */}
         <section className="py-12 bg-gradient-hero border-b border-border/50">
@@ -84,6 +59,25 @@ const Pharmacy = () => {
         {/* Hero */}
         <section className="py-20 lg:py-32">
           <div className="container mx-auto px-6">
+            <div className="max-w-4xl mx-auto text-center mb-16">
+              <h1 className="text-4xl lg:text-6xl font-heading font-bold mb-6">
+                Pharmacy. <span className="text-gradient">Integrated, Nationwide.</span>
+              </h1>
+              <p className="text-lg lg:text-xl text-muted-foreground mb-8">
+                Nationwide pharmacy network with 60-min delivery in metros, fraud prevention, and SKU-level controls. Home delivery or store pickup.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link to="/book-demo">
+                  <Button size="lg" className="btn-gradient">
+                    Book a Demo
+                    <ArrowRight className="ml-2 h-5 w-5" />
+                  </Button>
+                </Link>
+                <Button size="lg" variant="outline">
+                  Explore Pharmacy Network
+                </Button>
+              </div>
+            </div>
             <div className="max-w-5xl mx-auto mb-20">
               <h2 className="text-3xl font-heading font-bold text-center mb-12">Why Pharmacy is Broken Today</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">

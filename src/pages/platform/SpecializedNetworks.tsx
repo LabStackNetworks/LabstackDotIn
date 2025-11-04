@@ -42,45 +42,18 @@ const SpecializedNetworks = () => {
       />
       <Header />
       <main className="pt-20">
-        {/* Hero */}
-        <section className="py-20 lg:py-32">
-          <div className="container mx-auto px-6">
-            <div className="max-w-4xl mx-auto text-center mb-16">
-              <h1 className="text-4xl lg:text-6xl font-heading font-bold mb-6">
-                Switch On <span className="text-gradient">Specialised Care.</span> Instantly.
-              </h1>
-              <p className="text-lg lg:text-xl text-muted-foreground mb-8">
-                Ambulance, vision, dental, mental health, physiotherapy, and home care. All via one API and console. Specialized networks you don't have to build.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-                <Link to="/book-demo">
-                  <Button size="lg" className="btn-gradient">
-                    Book a Demo
-                    <ArrowRight className="ml-2 h-5 w-5" />
-                  </Button>
-                </Link>
-                <Link to="/contact">
-                  <Button size="lg" variant="outline">
-                    Talk to Sales
-                  </Button>
-                </Link>
-              </div>
-
-              {/* TLDR Summary - Hidden from users, visible only for SEO/GEO */}
-              <div className="sr-only">
-                <TLDR 
-                  summary="Access ambulance, vision, dental, mental health, physiotherapy, and home care through one API. Launch specialized services in days without vendor sprawl or operational complexity."
-                  keyPoints={[
-                    "8+ specialized service types via single platform",
-                    "Standard workflows across all services",
-                    "Nationwide coverage with quality SLAs",
-                    "Consolidated billing and reconciliation"
-                  ]}
-                />
-              </div>
-            </div>
-          </div>
-        </section>
+        {/* Hidden TL;DR for AI crawlers */}
+        <div className="sr-only" aria-hidden="true" style={{position: 'absolute', left: '-9999px'}}>
+          <TLDR 
+            summary="Access ambulance, vision, dental, mental health, physiotherapy, and home care through one API. Launch specialized services in days without vendor sprawl or operational complexity."
+            keyPoints={[
+              "8+ specialized service types via single platform",
+              "Standard workflows across all services",
+              "Nationwide coverage with quality SLAs",
+              "Consolidated billing and reconciliation"
+            ]}
+          />
+        </div>
 
         {/* Definition Section */}
         <section className="py-12 bg-gradient-hero border-b border-border/50">
@@ -96,6 +69,27 @@ const SpecializedNetworks = () => {
         {/* Hero */}
         <section className="py-20 lg:py-32">
           <div className="container mx-auto px-6">
+            <div className="max-w-4xl mx-auto text-center mb-16">
+              <h1 className="text-4xl lg:text-6xl font-heading font-bold mb-6">
+                Switch On <span className="text-gradient">Specialised Care.</span> Instantly.
+              </h1>
+              <p className="text-lg lg:text-xl text-muted-foreground mb-8">
+                Ambulance, vision, dental, mental health, physiotherapy, and home care. All via one API and console. Specialized networks you don't have to build.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link to="/book-demo">
+                  <Button size="lg" className="btn-gradient">
+                    Book a Demo
+                    <ArrowRight className="ml-2 h-5 w-5" />
+                  </Button>
+                </Link>
+                <Link to="/contact">
+                  <Button size="lg" variant="outline">
+                    Talk to Sales
+                  </Button>
+                </Link>
+              </div>
+            </div>
             <div className="max-w-6xl mx-auto mb-20">
               <h2 className="text-3xl font-heading font-bold text-center mb-4">All Specialized Services. One Platform.</h2>
               <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
