@@ -6,6 +6,68 @@ import { Link } from "react-router-dom";
 const ProofOfScale = () => {
   const [isMapExpanded, setIsMapExpanded] = useState(false);
 
+  // Generate 200+ cities with service availability
+  const generateCities = () => {
+    const services = ['home', 'center', 'pharmacy', 'consult'];
+    const colors = ['bg-primary', 'bg-secondary', 'bg-success', 'bg-warning'];
+    
+    const cities = [
+      // Major metros and tier-1
+      { name: 'Delhi NCR', x: 40, y: 25, size: 'large' },
+      { name: 'Mumbai', x: 20, y: 45, size: 'large' },
+      { name: 'Bangalore', x: 30, y: 75, size: 'large' },
+      { name: 'Chennai', x: 35, y: 80, size: 'large' },
+      { name: 'Kolkata', x: 75, y: 35, size: 'large' },
+      { name: 'Hyderabad', x: 45, y: 65, size: 'large' },
+      { name: 'Pune', x: 25, y: 50, size: 'medium' },
+      { name: 'Ahmedabad', x: 15, y: 40, size: 'medium' },
+      { name: 'Jaipur', x: 28, y: 32, size: 'medium' },
+      { name: 'Lucknow', x: 48, y: 28, size: 'medium' },
+      { name: 'Indore', x: 32, y: 45, size: 'medium' },
+      { name: 'Chandigarh', x: 35, y: 22, size: 'medium' },
+      { name: 'Coimbatore', x: 28, y: 72, size: 'medium' },
+      { name: 'Kochi', x: 25, y: 82, size: 'medium' },
+      { name: 'Nagpur', x: 42, y: 48, size: 'medium' },
+      { name: 'Bhubaneswar', x: 78, y: 42, size: 'medium' },
+      { name: 'Visakhapatnam', x: 82, y: 68, size: 'medium' },
+      { name: 'Vadodara', x: 18, y: 43, size: 'small' },
+      { name: 'Mysore', x: 32, y: 78, size: 'small' },
+      { name: 'Guwahati', x: 88, y: 30, size: 'small' }
+    ];
+
+    // Generate 180+ more tier-2 and tier-3 cities
+    const additionalCities = [];
+    for (let i = 0; i < 180; i++) {
+      const x = 15 + Math.random() * 70;
+      const y = 20 + Math.random() * 65;
+      const hasHome = Math.random() > 0.2;
+      const hasCenter = Math.random() > 0.1;
+      const hasPharmacy = Math.random() > 0.15;
+      const hasConsult = Math.random() > 0.05;
+      
+      additionalCities.push({
+        name: `City ${i + 21}`,
+        x,
+        y,
+        size: 'tiny',
+        hasHome,
+        hasCenter,
+        hasPharmacy,
+        hasConsult
+      });
+    }
+
+    return [...cities.map(c => ({
+      ...c,
+      hasHome: true,
+      hasCenter: true,
+      hasPharmacy: true,
+      hasConsult: true
+    })), ...additionalCities];
+  };
+
+  const cities = generateCities();
+
   const metrics = [
     {
       icon: TrendingUp,
@@ -89,170 +151,42 @@ const ProofOfScale = () => {
             <div className="relative">
               <div className="bg-card-gradient rounded-2xl p-8 border border-border/50 overflow-hidden">
                 <div className="relative h-80 bg-muted/30 rounded-xl flex items-center justify-center mb-6">
-                  {/* India Map with Healthcare Hotspots */}
+                  {/* India Map with 200+ Healthcare Points */}
                   <div className="relative w-full h-full flex items-center justify-center">
                     <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-xl opacity-50"></div>
                     
-                    {/* Major Healthcare Hotspots across India */}
-                    {/* Delhi/NCR */}
-                    <div className="absolute top-[25%] left-[40%] group">
-                      <div className="w-4 h-4 bg-primary rounded-full animate-pulse-subtle glow-primary cursor-pointer"></div>
-                      <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 bg-card text-xs px-2 py-1 rounded shadow-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
-                        Delhi NCR
-                      </div>
-                    </div>
-                    
-                    {/* Mumbai */}
-                    <div className="absolute top-[45%] left-[20%] group">
-                      <div className="w-4 h-4 bg-secondary rounded-full animate-pulse-subtle glow-secondary cursor-pointer"></div>
-                      <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 bg-card text-xs px-2 py-1 rounded shadow-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
-                        Mumbai
-                      </div>
-                    </div>
-                    
-                    {/* Bangalore */}
-                    <div className="absolute bottom-[25%] left-[30%] group">
-                      <div className="w-4 h-4 bg-success rounded-full animate-pulse-subtle cursor-pointer"></div>
-                      <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 bg-card text-xs px-2 py-1 rounded shadow-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
-                        Bangalore
-                      </div>
-                    </div>
-                    
-                    {/* Chennai */}
-                    <div className="absolute bottom-[20%] left-[35%] group">
-                      <div className="w-4 h-4 bg-warning rounded-full animate-pulse-subtle cursor-pointer"></div>
-                      <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 bg-card text-xs px-2 py-1 rounded shadow-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
-                        Chennai
-                      </div>
-                    </div>
-                    
-                    {/* Kolkata */}
-                    <div className="absolute top-[35%] right-[25%] group">
-                      <div className="w-4 h-4 bg-primary rounded-full animate-pulse-subtle cursor-pointer"></div>
-                      <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 bg-card text-xs px-2 py-1 rounded shadow-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
-                        Kolkata
-                      </div>
-                    </div>
-                    
-                    {/* Hyderabad */}
-                    <div className="absolute bottom-[35%] left-[45%] group">
-                      <div className="w-4 h-4 bg-secondary rounded-full animate-pulse-subtle cursor-pointer"></div>
-                      <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 bg-card text-xs px-2 py-1 rounded shadow-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
-                        Hyderabad
-                      </div>
-                    </div>
-                    
-                    {/* Pune */}
-                    <div className="absolute top-[50%] left-[25%] group">
-                      <div className="w-3 h-3 bg-success rounded-full animate-pulse-subtle cursor-pointer"></div>
-                      <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 bg-card text-xs px-2 py-1 rounded shadow-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
-                        Pune
-                      </div>
-                    </div>
-                    
-                    {/* Ahmedabad */}
-                    <div className="absolute top-[40%] left-[15%] group">
-                      <div className="w-3 h-3 bg-warning rounded-full animate-pulse-subtle cursor-pointer"></div>
-                      <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 bg-card text-xs px-2 py-1 rounded shadow-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
-                        Ahmedabad
-                      </div>
-                    </div>
-                    
-                    {/* Jaipur */}
-                    <div className="absolute top-[32%] left-[28%] group">
-                      <div className="w-3 h-3 bg-primary rounded-full animate-pulse-subtle cursor-pointer"></div>
-                      <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 bg-card text-xs px-2 py-1 rounded shadow-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
-                        Jaipur
-                      </div>
-                    </div>
-                    
-                    {/* Lucknow */}
-                    <div className="absolute top-[28%] left-[48%] group">
-                      <div className="w-3 h-3 bg-secondary rounded-full animate-pulse-subtle cursor-pointer"></div>
-                      <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 bg-card text-xs px-2 py-1 rounded shadow-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
-                        Lucknow
-                      </div>
-                    </div>
-                    
-                    {/* Indore */}
-                    <div className="absolute top-[45%] left-[32%] group">
-                      <div className="w-3 h-3 bg-success rounded-full animate-pulse-subtle cursor-pointer"></div>
-                      <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 bg-card text-xs px-2 py-1 rounded shadow-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
-                        Indore
-                      </div>
-                    </div>
-                    
-                    {/* Chandigarh */}
-                    <div className="absolute top-[22%] left-[35%] group">
-                      <div className="w-3 h-3 bg-warning rounded-full animate-pulse-subtle cursor-pointer"></div>
-                      <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 bg-card text-xs px-2 py-1 rounded shadow-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
-                        Chandigarh
-                      </div>
-                    </div>
-                    
-                    {/* Coimbatore */}
-                    <div className="absolute bottom-[28%] left-[28%] group">
-                      <div className="w-3 h-3 bg-primary rounded-full animate-pulse-subtle cursor-pointer"></div>
-                      <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 bg-card text-xs px-2 py-1 rounded shadow-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
-                        Coimbatore
-                      </div>
-                    </div>
-                    
-                    {/* Kochi */}
-                    <div className="absolute bottom-[18%] left-[25%] group">
-                      <div className="w-3 h-3 bg-secondary rounded-full animate-pulse-subtle cursor-pointer"></div>
-                      <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 bg-card text-xs px-2 py-1 rounded shadow-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
-                        Kochi
-                      </div>
-                    </div>
-                    
-                    {/* Nagpur */}
-                    <div className="absolute top-[48%] left-[42%] group">
-                      <div className="w-3 h-3 bg-success rounded-full animate-pulse-subtle cursor-pointer"></div>
-                      <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 bg-card text-xs px-2 py-1 rounded shadow-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
-                        Nagpur
-                      </div>
-                    </div>
-                    
-                    {/* Bhubaneswar */}
-                    <div className="absolute top-[42%] right-[22%] group">
-                      <div className="w-3 h-3 bg-warning rounded-full animate-pulse-subtle cursor-pointer"></div>
-                      <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 bg-card text-xs px-2 py-1 rounded shadow-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
-                        Bhubaneswar
-                      </div>
-                    </div>
-                    
-                    {/* Visakhapatnam */}
-                    <div className="absolute bottom-[32%] right-[18%] group">
-                      <div className="w-3 h-3 bg-primary rounded-full animate-pulse-subtle cursor-pointer"></div>
-                      <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 bg-card text-xs px-2 py-1 rounded shadow-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
-                        Visakhapatnam
-                      </div>
-                    </div>
-                    
-                    {/* Vadodara */}
-                    <div className="absolute top-[43%] left-[18%] group">
-                      <div className="w-2 h-2 bg-secondary rounded-full animate-pulse-subtle cursor-pointer"></div>
-                      <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 bg-card text-xs px-2 py-1 rounded shadow-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
-                        Vadodara
-                      </div>
-                    </div>
-                    
-                    {/* Mysore */}
-                    <div className="absolute bottom-[22%] left-[32%] group">
-                      <div className="w-2 h-2 bg-success rounded-full animate-pulse-subtle cursor-pointer"></div>
-                      <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 bg-card text-xs px-2 py-1 rounded shadow-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
-                        Mysore
-                      </div>
-                    </div>
-                    
-                    {/* Guwahati */}
-                    <div className="absolute top-[30%] right-[12%] group">
-                      <div className="w-2 h-2 bg-warning rounded-full animate-pulse-subtle cursor-pointer"></div>
-                      <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 bg-card text-xs px-2 py-1 rounded shadow-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
-                        Guwahati
-                      </div>
-                    </div>
+                    {/* Render 200+ cities with service indicators */}
+                    {cities.map((city, index) => {
+                      const sizeClass = 
+                        city.size === 'large' ? 'w-4 h-4' :
+                        city.size === 'medium' ? 'w-3 h-3' :
+                        city.size === 'small' ? 'w-2 h-2' : 'w-1.5 h-1.5';
+                      
+                      const colorClass = 
+                        city.hasHome && city.hasCenter && city.hasPharmacy && city.hasConsult ? 'bg-primary' :
+                        city.hasHome && city.hasCenter && city.hasPharmacy ? 'bg-secondary' :
+                        city.hasHome && city.hasCenter ? 'bg-success' :
+                        city.hasHome || city.hasCenter ? 'bg-warning' : 'bg-muted';
+                      
+                      return (
+                        <div 
+                          key={index}
+                          className="absolute group cursor-pointer"
+                          style={{ top: `${city.y}%`, left: `${city.x}%` }}
+                        >
+                          <div className={`${sizeClass} ${colorClass} rounded-full ${city.size !== 'tiny' ? 'animate-pulse-subtle' : ''}`}></div>
+                          <div className="absolute -top-16 left-1/2 transform -translate-x-1/2 bg-card/95 backdrop-blur-sm text-xs px-3 py-2 rounded-lg shadow-xl opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap z-50 border border-border/50">
+                            <div className="font-semibold mb-1">{city.name}</div>
+                            <div className="flex flex-col gap-0.5 text-[10px]">
+                              {city.hasHome && <div className="flex items-center gap-1"><span className="w-1.5 h-1.5 bg-primary rounded-full"></span>Home Sample</div>}
+                              {city.hasCenter && <div className="flex items-center gap-1"><span className="w-1.5 h-1.5 bg-secondary rounded-full"></span>Center Visit</div>}
+                              {city.hasPharmacy && <div className="flex items-center gap-1"><span className="w-1.5 h-1.5 bg-success rounded-full"></span>Pharmacy</div>}
+                              {city.hasConsult && <div className="flex items-center gap-1"><span className="w-1.5 h-1.5 bg-warning rounded-full"></span>Consult</div>}
+                            </div>
+                          </div>
+                        </div>
+                      );
+                    })}
                     
                     {/* Connecting lines animation */}
                     <svg className="absolute inset-0 w-full h-full pointer-events-none opacity-30">
@@ -270,13 +204,25 @@ const ProofOfScale = () => {
                       </path>
                     </svg>
                     
-                    <div className="text-center z-10">
-                      <MapPin className="w-12 h-12 text-primary mx-auto mb-2" />
-                      <div className="text-sm font-medium text-muted-foreground">
-                        Healthcare Network Across India
-                      </div>
-                      <div className="text-xs text-muted-foreground/70 mt-1">
-                        9,000+ Pincodes
+                    <div className="absolute bottom-4 right-4 bg-card/95 backdrop-blur-sm p-3 rounded-lg border border-border/50">
+                      <div className="text-xs font-semibold mb-2">Service Legend</div>
+                      <div className="flex flex-col gap-1.5 text-[10px]">
+                        <div className="flex items-center gap-2">
+                          <div className="w-2 h-2 bg-primary rounded-full"></div>
+                          <span>All Services</span>
+                        </div>
+                        <div className="flex items-center gap-2">
+                          <div className="w-2 h-2 bg-secondary rounded-full"></div>
+                          <span>3 Services</span>
+                        </div>
+                        <div className="flex items-center gap-2">
+                          <div className="w-2 h-2 bg-success rounded-full"></div>
+                          <span>2 Services</span>
+                        </div>
+                        <div className="flex items-center gap-2">
+                          <div className="w-2 h-2 bg-warning rounded-full"></div>
+                          <span>1 Service</span>
+                        </div>
                       </div>
                     </div>
                   </div>

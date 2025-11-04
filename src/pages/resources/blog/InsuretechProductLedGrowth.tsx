@@ -44,7 +44,7 @@ const InsuretechProductLedGrowth = () => {
   return (
     <PageTemplate
       title="Product-Led Growth for InsureTech Through Healthcare Benefits | Labstack"
-      description: "How InsureTech platforms use healthcare benefits to drive viral growth, reduce CAC by 25%, and create network effects. Launch PLG features in 14 days."
+      description="How InsureTech platforms use healthcare benefits to drive viral growth, reduce CAC by 25%, and create network effects. Launch PLG features in 14 days."
       keywords="product led growth insuretech, viral insurance growth, insurance network effects, PLG insurance, healthcare viral loops"
       canonical="https://labstack.in/resources/blog/insuretech-product-led-growth"
       structuredData={structuredData}
@@ -318,7 +318,7 @@ const InsuretechProductLedGrowth = () => {
           <div className="space-y-4">
             <div className="border-l-4 border-primary pl-4">
               <p className="font-semibold">Low Friction Onboarding</p>
-              <p className="text-sm text-muted-foreground">Sign-up to first healthcare use in <5 minutes. Pre-fill data where possible. Offer instant gratification (free consultation within 1 hour of signup).</p>
+              <p className="text-sm text-muted-foreground">Sign-up to first healthcare use in &lt;5 minutes. Pre-fill data where possible. Offer instant gratification (free consultation within 1 hour of signup).</p>
             </div>
 
             <div className="border-l-4 border-primary pl-4">

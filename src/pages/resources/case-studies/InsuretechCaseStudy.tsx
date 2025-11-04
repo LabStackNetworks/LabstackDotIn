@@ -323,7 +323,7 @@ const InsuretechCaseStudy = () => {
             <li>Building B2B2C channel through employer partnerships (10-15 companies targeted)</li>
             <li>Launching in 2 new states (Maharashtra, Tamil Nadu) with localized healthcare networks</li>
             <li>Targeting 200,000 members by Month 24 with same PLG playbook</li>
-            <li>Maintaining viral coefficient >0.5 and CAC <₹2,500 for profitable scaling</li>
+            <li>Maintaining viral coefficient &gt;0.5 and CAC &lt;₹2,500 for profitable scaling</li>
           </ul>
         </div>
 

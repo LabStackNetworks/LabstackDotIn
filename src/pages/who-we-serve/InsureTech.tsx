@@ -520,7 +520,7 @@ const InsureTech = () => {
       </main>
 
       {/* Related Resources */}
-      <RelatedBlogs category="Insurers" limit={3} />
+      <RelatedBlogs category="InsureTech" limit={3} />
 
       <Footer />
     </div>

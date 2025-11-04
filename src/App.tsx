@@ -79,6 +79,9 @@ const DigitalHealthWhitelabel = lazy(() => import("./pages/resources/blog/Digita
 const DigitalHealthComplianceABDM = lazy(() => import("./pages/resources/blog/DigitalHealthComplianceABDM"));
 const ProvidersDigitalTransformation = lazy(() => import("./pages/resources/blog/ProvidersDigitalTransformation"));
 const ProvidersNetworkPartnerships = lazy(() => import("./pages/resources/blog/ProvidersNetworkPartnerships"));
+const InsuretechRevenue = lazy(() => import("./pages/resources/blog/InsuretechRevenue"));
+const InsuretechProductLedGrowth = lazy(() => import("./pages/resources/blog/InsuretechProductLedGrowth"));
+const InsuretechCaseStudy = lazy(() => import("./pages/resources/case-studies/InsuretechCaseStudy"));
 
 const queryClient = new QueryClient();
 
@@ -156,11 +159,14 @@ const App = () => (
               <Route path="/resources/blog/digital-health-compliance-abdm" element={<DigitalHealthComplianceABDM />} />
               <Route path="/resources/blog/providers-digital-transformation" element={<ProvidersDigitalTransformation />} />
               <Route path="/resources/blog/providers-network-partnerships" element={<ProvidersNetworkPartnerships />} />
+              <Route path="/resources/blog/insuretech-revenue" element={<InsuretechRevenue />} />
+              <Route path="/resources/blog/insuretech-product-led-growth" element={<InsuretechProductLedGrowth />} />
               <Route path="/resources/research-hub" element={<ResearchHub />} />
               <Route path="/resources/case-studies/insurer" element={<InsurerCaseStudy />} />
               <Route path="/resources/case-studies/broker" element={<BrokerCaseStudy />} />
               <Route path="/resources/case-studies/disease-management" element={<DiseaseManagementCaseStudy />} />
               <Route path="/resources/case-studies/digital-health" element={<DigitalHealthCaseStudy />} />
+              <Route path="/resources/case-studies/insuretech" element={<InsuretechCaseStudy />} />
               <Route path="/resources/api-documentation" element={<APIDocumentation />} />
               <Route path="/custom-solutions" element={<CustomSolutions />} />
               <Route path="*" element={<NotFound />} />
