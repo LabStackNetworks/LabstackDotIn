@@ -635,7 +635,7 @@ p, span, div, .font-body {
     animation: scroll 13s linear infinite;
   }
   
-  .animate-scroll:hover {
+  .group:hover .animate-scroll {
     animation-play-state: paused;
   }
 

@@ -128,12 +128,12 @@ const Hero = () => {
               </p>
               
               {/* Scrolling Logo Strip */}
-              <div className="relative overflow-hidden mobile-no-scroll-x">
-                <div className="flex animate-scroll space-x-12 sm:space-x-16 lg:space-x-20">
+              <div className="relative overflow-hidden mobile-no-scroll-x group">
+                <div className="flex animate-scroll group-hover:pause space-x-12 sm:space-x-16 lg:space-x-20">
                   {[...trustedLogos, ...trustedLogos].map((logo, index) => (
                     <div 
                       key={index}
-                      className="flex-shrink-0 text-foreground/50 hover:text-foreground/80 transition-smooth font-sora font-bold whitespace-nowrap text-3xl"
+                      className="flex-shrink-0 text-foreground/50 hover:text-foreground/80 transition-smooth font-sora font-bold whitespace-nowrap text-base"
                     >
                       {logo}
                     </div>
