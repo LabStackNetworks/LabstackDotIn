@@ -16,7 +16,7 @@ const BrokersCorporateWellness = () => {
     <div className="min-h-screen bg-background">
       <SEOHead 
         title="OPD benefits for insurance brokers | LabStack"
-        description="OPD benefit platform with diagnostics, pharmacy, and teleconsults for insurance brokers. API or console launch. Available across major Indian cities."
+        description="OPD benefits platform with home diagnostics, pharmacy delivery, teleconsults for brokers and corporate wellness programs. API or console launch across 9,000+ pincodes."
         keywords="insurance broker solutions, OPD insurance India, corporate wellness programs, policy differentiation, broker technology platform"
         canonical="https://labstack.in/who-we-serve/brokers-corporate-wellness"
         structuredData={structuredData}
@@ -33,11 +33,11 @@ const BrokersCorporateWellness = () => {
               </div>
 
               <h1 className="text-4xl lg:text-6xl font-heading font-bold mb-6">
-                New Revenue. <span className="text-gradient">Zero Infrastructure.</span>
+                Turn Policies Into <span className="text-gradient">Revenue Machines.</span>
               </h1>
 
               <p className="text-xl text-muted-foreground mb-8">
-                White-label OPD offerings in days. Lift ARPU ~15%. Cover 9K+ pincodes.
+                Grow ARPU 15%. Differentiate with embedded OPD benefits. Prescription monetization across 9,000+ pincodes.
               </p>
 
               <Link to="/book-demo">

@@ -355,31 +355,6 @@ const InsurersTPAs = () => {
           </div>
         </section>
 
-        {/* Internal Links */}
-        <section className="py-20 bg-gradient-hero border-y border-border/50">
-          <div className="container mx-auto px-6">
-            <div className="max-w-5xl mx-auto">
-              <h2 className="text-3xl font-heading font-bold mb-8 text-center">Related Resources</h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                {[
-                  { title: "Platform Overview", url: "/platform-overview", description: "Explore our complete healthcare platform" },
-                  { title: "Healthcare Infrastructure Solution", url: "/solutions/healthcare-infrastructure", description: "Full-stack healthcare delivery" },
-                  { title: "Provider Network", url: "/who-we-serve/providers", description: "Join our healthcare provider network" },
-                  { title: "Claims Automation Blog", url: "/resources/blog/insurers-claims-automation", description: "Learn about automated claims processing" }
-                ].map((link, index) => (
-                  <Link key={index} to={link.url} className="bg-card-gradient p-6 rounded-xl border border-border/20 card-hover">
-                    <h4 className="font-heading font-bold mb-2">{link.title}</h4>
-                    <p className="text-sm text-muted-foreground">{link.description}</p>
-                    <div className="flex items-center text-primary font-medium mt-4 group-hover:gap-2 transition-all">
-                      Learn more 
-                      <ArrowRight className="ml-1 w-4 h-4" />
-                    </div>
-                  </Link>
-                ))}
-              </div>
-            </div>
-          </div>
-        </section>
       </main>
 
       {/* Related Resources */}

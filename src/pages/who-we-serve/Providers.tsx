@@ -31,11 +31,11 @@ const Providers = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead 
-        title="B2B demand for healthcare providers | LabStack"
-        description="Partner network with diagnostics, pharmacy, and consultation demand for healthcare providers. API or console access. Available across major Indian cities."
+        title="Healthcare provider network partnership | LabStack"
+        description="Provider network for doctors, labs, pharmacies, hospitals. Increase patient volumes, reduce acquisition costs, access enterprise clients nationwide."
         keywords="healthcare provider network India, diagnostic lab partnership, pharmacy network, doctor network, B2B healthcare demand"
         canonical="https://labstack.in/who-we-serve/providers"
-        structuredData={providersFAQs}
+        structuredData={structuredData}
       />
       <Header />
       <main className="pt-20">
@@ -48,11 +48,11 @@ const Providers = () => {
               </div>
 
               <h1 className="text-4xl lg:text-6xl font-heading font-bold mb-6">
-                Fill Capacity. <span className="text-gradient">Earn Predictably</span>
+                Fill Your Calendar. <span className="text-gradient">Zero Marketing Spend.</span>
               </h1>
 
               <p className="text-lg lg:text-xl text-muted-foreground mb-8">
-                Join India's healthcare network. Steady B2B demand takes utilization from 40% → 60-70%. 30-day payments.
+                Guaranteed patient volumes from insurers, enterprises, digital health platforms. Predictable revenue. No customer acquisition costs.
               </p>
 
               <Link to="/provider/join-network">

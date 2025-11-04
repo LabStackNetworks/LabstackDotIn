@@ -15,8 +15,8 @@ const DigitalHealthPlatforms = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead 
-        title="Full-stack healthcare for digital health platforms | LabStack"
-        description="Healthcare infrastructure platform with diagnostics, pharmacy, and teleconsults for healthtech companies. API or console launch. Available across India."
+        title="Healthcare fulfillment for health apps | LabStack"
+        description="Diagnostics, pharmacy, teleconsults platform for digital health companies. API or console launch. 30K+ orders capacity across 9,000+ pincodes nationwide."
         keywords="digital health platform, healthtech infrastructure, healthcare API integration India, telemedicine platform, health startup solutions"
         canonical="https://labstack.in/who-we-serve/digital-health-platforms"
         structuredData={structuredData}
@@ -33,11 +33,11 @@ const DigitalHealthPlatforms = () => {
               </div>
 
               <h1 className="text-4xl lg:text-6xl font-heading font-bold mb-6">
-                Nationwide. <span className="text-gradient">Zero Build Time.</span>
+                Launch Nationwide in <span className="text-gradient">14 Days.</span>
               </h1>
 
               <p className="text-xl text-muted-foreground mb-8">
-                Launch in 14 days. One API. 9K+ pincodes. 30K+ orders/month capacity.
+                Skip 18 months of ops building. 30K+ orders/month capacity, 99.5% uptime. Scale revenue without scaling headcount.
               </p>
 
               <Link to="/start-building">
