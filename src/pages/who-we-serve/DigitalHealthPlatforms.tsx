@@ -1,4 +1,4 @@
-import { Smartphone, Globe, Zap, ArrowRight, CheckCircle, Target, Shield } from "lucide-react";
+import { Smartphone, Globe, Zap, ArrowRight, CheckCircle, Target, Shield, Code, Monitor, Tablet, Smartphone as Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -157,46 +157,51 @@ const DigitalHealthPlatforms = () => {
               <p className="text-center text-muted-foreground mb-12">
                 Multiple deployment options for every product architecture
               </p>
-              <div className="overflow-x-auto">
-                <table className="w-full bg-card rounded-xl border border-border/20">
-                  <thead>
-                    <tr className="border-b border-border/20">
-                      <th className="p-4 text-left font-heading">Mode</th>
-                      <th className="p-4 text-left font-heading">Best For</th>
-                      <th className="p-4 text-left font-heading">Setup Time</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {[
-                      {
-                        mode: "RESTful APIs",
-                        best: "Full programmatic control and custom workflows",
-                        setup: "48-hour integration"
-                      },
-                      {
-                        mode: "Console Access",
-                        best: "Ops teams managing fulfillment without engineering",
-                        setup: "Instant activation"
-                      },
-                      {
-                        mode: "Embeddable Widgets",
-                        best: "Quick white-label booking inside your app",
-                        setup: "Same-day deployment"
-                      },
-                      {
-                        mode: "Mobile SDKs",
-                        best: "Native iOS/Android integration",
-                        setup: "1-week integration"
-                      }
-                    ].map((item, index) => (
-                      <tr key={index} className="border-b border-border/10 last:border-0">
-                        <td className="p-4 font-semibold">{item.mode}</td>
-                        <td className="p-4 text-sm text-muted-foreground">{item.best}</td>
-                        <td className="p-4 text-sm text-muted-foreground">{item.setup}</td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                {[
+                  {
+                    icon: Code,
+                    mode: "RESTful APIs",
+                    best: "Full programmatic control and custom workflows",
+                    setup: "48-hour integration",
+                    color: "primary"
+                  },
+                  {
+                    icon: Monitor,
+                    mode: "Console Access",
+                    best: "Ops teams managing fulfillment without engineering",
+                    setup: "Instant activation",
+                    color: "success"
+                  },
+                  {
+                    icon: Tablet,
+                    mode: "Embeddable Widgets",
+                    best: "Quick white-label booking inside your app",
+                    setup: "Same-day deployment",
+                    color: "secondary"
+                  },
+                  {
+                    icon: Phone,
+                    mode: "Mobile SDKs",
+                    best: "Native iOS/Android integration",
+                    setup: "1-week integration",
+                    color: "warning"
+                  }
+                ].map((item, index) => {
+                  const Icon = item.icon;
+                  return (
+                    <div key={index} className="bg-card-gradient p-6 rounded-xl border border-border/20">
+                      <div className={`w-12 h-12 rounded-full bg-${item.color}/10 flex items-center justify-center mb-4`}>
+                        <Icon className={`w-6 h-6 text-${item.color}`} />
+                      </div>
+                      <h4 className="font-heading font-bold mb-2">{item.mode}</h4>
+                      <p className="text-xs text-muted-foreground mb-3">{item.best}</p>
+                      <div className="pt-3 border-t border-border/20">
+                        <p className="text-xs font-semibold text-primary">{item.setup}</p>
+                      </div>
+                    </div>
+                  );
+                })}
               </div>
             </div>
           </div>

@@ -1,4 +1,4 @@
-import { Shield, IndianRupee, Clock, CheckCircle, ArrowRight, TrendingUp, Users, Zap } from "lucide-react";
+import { Shield, IndianRupee, Clock, CheckCircle, ArrowRight, TrendingUp, Users, Zap, TestTube, Pill, Video, Store, Home, Truck } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -241,46 +241,55 @@ const InsurersTPAs = () => {
               <p className="text-center text-muted-foreground mb-12">
                 Multiple fulfillment options for every service
               </p>
-              <div className="overflow-x-auto">
-                <table className="w-full bg-card rounded-xl border border-border/20">
-                  <thead>
-                    <tr className="border-b border-border/20">
-                      <th className="p-4 text-left font-heading">Service</th>
-                      <th className="p-4 text-left font-heading">Delivery Modes</th>
-                      <th className="p-4 text-left font-heading">Coverage</th>
-                      <th className="p-4 text-left font-heading">Turnaround</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {[
-                      {
-                        service: "Diagnostics",
-                        modes: "Home collection, Lab visits, Health camps",
-                        coverage: "9,000+ pincodes",
-                        turnaround: "Same-day reports for routine tests"
-                      },
-                      {
-                        service: "Pharmacy",
-                        modes: "Home delivery, Store pickup, Quick commerce",
-                        coverage: "18,000+ pincodes",
-                        turnaround: "6-24 hour delivery"
-                      },
-                      {
-                        service: "Consultations",
-                        modes: "Teleconsult (video/audio/chat), In-clinic",
-                        coverage: "Nationwide 24/7",
-                        turnaround: "Instant for teleconsult"
-                      }
-                    ].map((item, index) => (
-                      <tr key={index} className="border-b border-border/10 last:border-0">
-                        <td className="p-4 font-semibold">{item.service}</td>
-                        <td className="p-4 text-sm text-muted-foreground">{item.modes}</td>
-                        <td className="p-4 text-sm text-muted-foreground">{item.coverage}</td>
-                        <td className="p-4 text-sm text-muted-foreground">{item.turnaround}</td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                {[
+                  {
+                    icon: TestTube,
+                    service: "Diagnostics",
+                    modes: ["Home collection", "Lab visits", "Health camps"],
+                    coverage: "9,000+ pincodes",
+                    turnaround: "Same-day reports for routine tests",
+                    color: "primary"
+                  },
+                  {
+                    icon: Pill,
+                    service: "Pharmacy",
+                    modes: ["Home delivery", "Store pickup", "Quick commerce"],
+                    coverage: "18,000+ pincodes",
+                    turnaround: "6-24 hour delivery",
+                    color: "success"
+                  },
+                  {
+                    icon: Video,
+                    service: "Consultations",
+                    modes: ["Teleconsult (video/audio/chat)", "In-clinic"],
+                    coverage: "Nationwide 24/7",
+                    turnaround: "Instant for teleconsult",
+                    color: "secondary"
+                  }
+                ].map((item, index) => {
+                  const Icon = item.icon;
+                  return (
+                    <div key={index} className="bg-card-gradient p-6 rounded-xl border border-border/20">
+                      <div className={`w-12 h-12 rounded-full bg-${item.color}/10 flex items-center justify-center mb-4`}>
+                        <Icon className={`w-6 h-6 text-${item.color}`} />
+                      </div>
+                      <h4 className="font-heading font-bold mb-3">{item.service}</h4>
+                      <div className="space-y-2 mb-4">
+                        {item.modes.map((mode, i) => (
+                          <div key={i} className="flex items-start space-x-2">
+                            <CheckCircle className="w-4 h-4 text-success mt-0.5 flex-shrink-0" />
+                            <span className="text-xs text-muted-foreground">{mode}</span>
+                          </div>
+                        ))}
+                      </div>
+                      <div className="pt-4 border-t border-border/20 space-y-2">
+                        <p className="text-xs text-muted-foreground"><span className="font-semibold">Coverage:</span> {item.coverage}</p>
+                        <p className="text-xs text-muted-foreground"><span className="font-semibold">Turnaround:</span> {item.turnaround}</p>
+                      </div>
+                    </div>
+                  );
+                })}
               </div>
             </div>
           </div>

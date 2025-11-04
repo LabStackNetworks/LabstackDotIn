@@ -1,4 +1,4 @@
-import { Building2, TrendingUp, IndianRupee, Zap, ArrowRight, CheckCircle, Users, Shield } from "lucide-react";
+import { Building2, TrendingUp, IndianRupee, Zap, ArrowRight, CheckCircle, Users, Shield, Home, Stethoscope, Video, Truck } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -167,46 +167,51 @@ const Providers = () => {
               <p className="text-center text-muted-foreground mb-12">
                 Multiple fulfillment modes to maximize your capacity
               </p>
-              <div className="overflow-x-auto">
-                <table className="w-full bg-card rounded-xl border border-border/20">
-                  <thead>
-                    <tr className="border-b border-border/20">
-                      <th className="p-4 text-left font-heading">Delivery Mode</th>
-                      <th className="p-4 text-left font-heading">Provider Type</th>
-                      <th className="p-4 text-left font-heading">Revenue Impact</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {[
-                      {
-                        mode: "Home Collection/Visits",
-                        provider: "Phlebotomists, nurses, allied health staff",
-                        impact: "30-40% utilization boost"
-                      },
-                      {
-                        mode: "Center Visits",
-                        provider: "Labs, clinics, diagnostic centers",
-                        impact: "20-30% utilization boost"
-                      },
-                      {
-                        mode: "Teleconsultation",
-                        provider: "Doctors (GP and specialists)",
-                        impact: "50-60% capacity increase"
-                      },
-                      {
-                        mode: "Pharmacy Delivery",
-                        provider: "Retail pharmacies",
-                        impact: "25-35% revenue uplift"
-                      }
-                    ].map((item, index) => (
-                      <tr key={index} className="border-b border-border/10 last:border-0">
-                        <td className="p-4 font-semibold">{item.mode}</td>
-                        <td className="p-4 text-sm text-muted-foreground">{item.provider}</td>
-                        <td className="p-4 text-sm text-muted-foreground">{item.impact}</td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                {[
+                  {
+                    icon: Home,
+                    mode: "Home Collection/Visits",
+                    provider: "Phlebotomists, nurses, allied health staff",
+                    impact: "30-40% utilization boost",
+                    color: "primary"
+                  },
+                  {
+                    icon: Stethoscope,
+                    mode: "Center Visits",
+                    provider: "Labs, clinics, diagnostic centers",
+                    impact: "20-30% utilization boost",
+                    color: "success"
+                  },
+                  {
+                    icon: Video,
+                    mode: "Teleconsultation",
+                    provider: "Doctors (GP and specialists)",
+                    impact: "50-60% capacity increase",
+                    color: "secondary"
+                  },
+                  {
+                    icon: Truck,
+                    mode: "Pharmacy Delivery",
+                    provider: "Retail pharmacies",
+                    impact: "25-35% revenue uplift",
+                    color: "warning"
+                  }
+                ].map((item, index) => {
+                  const Icon = item.icon;
+                  return (
+                    <div key={index} className="bg-card-gradient p-6 rounded-xl border border-border/20">
+                      <div className={`w-12 h-12 rounded-full bg-${item.color}/10 flex items-center justify-center mb-4`}>
+                        <Icon className={`w-6 h-6 text-${item.color}`} />
+                      </div>
+                      <h4 className="font-heading font-bold mb-2">{item.mode}</h4>
+                      <p className="text-xs text-muted-foreground mb-3">{item.provider}</p>
+                      <div className="pt-3 border-t border-border/20">
+                        <p className="text-xs font-semibold text-success">{item.impact}</p>
+                      </div>
+                    </div>
+                  );
+                })}
               </div>
             </div>
           </div>

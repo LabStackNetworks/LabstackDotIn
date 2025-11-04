@@ -1,4 +1,4 @@
-import { Heart, Activity, TrendingUp, ArrowRight, CheckCircle, Zap, Shield, Target } from "lucide-react";
+import { Heart, Activity, TrendingUp, ArrowRight, CheckCircle, Zap, Shield, Target, Home, Video, Truck, HeartPulse } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -157,46 +157,49 @@ const DiseaseManagement = () => {
               <p className="text-center text-muted-foreground mb-12">
                 Multiple fulfillment options for complete care coordination
               </p>
-              <div className="overflow-x-auto">
-                <table className="w-full bg-card rounded-xl border border-border/20">
-                  <thead>
-                    <tr className="border-b border-border/20">
-                      <th className="p-4 text-left font-heading">Care Mode</th>
-                      <th className="p-4 text-left font-heading">Services</th>
-                      <th className="p-4 text-left font-heading">Patient Experience</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {[
-                      {
-                        mode: "Home Diagnostics",
-                        services: "Pathology, HbA1c, lipid panel, chronic markers",
-                        experience: "Home sample collection with protocol-specific tests"
-                      },
-                      {
-                        mode: "Teleconsultation",
-                        services: "GP and specialist consults with protocol workflows",
-                        experience: "Video consults with care pathway integration"
-                      },
-                      {
-                        mode: "Pharmacy Delivery",
-                        services: "Prescription fulfillment with adherence tracking",
-                        experience: "Medicine delivery with refill reminders"
-                      },
-                      {
-                        mode: "Care Coordination",
-                        services: "Automated follow-ups, lifestyle coaching, monitoring",
-                        experience: "Smart nudges for adherence and milestone tracking"
-                      }
-                    ].map((item, index) => (
-                      <tr key={index} className="border-b border-border/10 last:border-0">
-                        <td className="p-4 font-semibold">{item.mode}</td>
-                        <td className="p-4 text-sm text-muted-foreground">{item.services}</td>
-                        <td className="p-4 text-sm text-muted-foreground">{item.experience}</td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                {[
+                  {
+                    icon: Home,
+                    mode: "Home Diagnostics",
+                    services: "Pathology, HbA1c, lipid panel, chronic markers",
+                    experience: "Home sample collection with protocol-specific tests",
+                    color: "primary"
+                  },
+                  {
+                    icon: Video,
+                    mode: "Teleconsultation",
+                    services: "GP and specialist consults with protocol workflows",
+                    experience: "Video consults with care pathway integration",
+                    color: "success"
+                  },
+                  {
+                    icon: Truck,
+                    mode: "Pharmacy Delivery",
+                    services: "Prescription fulfillment with adherence tracking",
+                    experience: "Medicine delivery with refill reminders",
+                    color: "secondary"
+                  },
+                  {
+                    icon: HeartPulse,
+                    mode: "Care Coordination",
+                    services: "Automated follow-ups, lifestyle coaching, monitoring",
+                    experience: "Smart nudges for adherence and milestone tracking",
+                    color: "warning"
+                  }
+                ].map((item, index) => {
+                  const Icon = item.icon;
+                  return (
+                    <div key={index} className="bg-card-gradient p-6 rounded-xl border border-border/20">
+                      <div className={`w-12 h-12 rounded-full bg-${item.color}/10 flex items-center justify-center mb-4`}>
+                        <Icon className={`w-6 h-6 text-${item.color}`} />
+                      </div>
+                      <h4 className="font-heading font-bold mb-2">{item.mode}</h4>
+                      <p className="text-xs text-muted-foreground mb-3">{item.services}</p>
+                      <p className="text-xs text-muted-foreground">{item.experience}</p>
+                    </div>
+                  );
+                })}
               </div>
             </div>
           </div>

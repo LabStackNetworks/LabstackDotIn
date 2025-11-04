@@ -1,4 +1,4 @@
-import { TrendingUp, Target, CheckCircle, ArrowRight, Zap, Shield } from "lucide-react";
+import { TrendingUp, Target, CheckCircle, ArrowRight, Zap, Shield, Home, Video, Stethoscope, Users } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -157,46 +157,49 @@ const BrokersCorporateWellness = () => {
               <p className="text-center text-muted-foreground mb-12">
                 Multiple fulfillment options for every member need
               </p>
-              <div className="overflow-x-auto">
-                <table className="w-full bg-card rounded-xl border border-border/20">
-                  <thead>
-                    <tr className="border-b border-border/20">
-                      <th className="p-4 text-left font-heading">Delivery Mode</th>
-                      <th className="p-4 text-left font-heading">Services</th>
-                      <th className="p-4 text-left font-heading">Member Experience</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {[
-                      {
-                        mode: "Home Collection",
-                        services: "Diagnostics, pharmacy delivery",
-                        experience: "Sample collection and medicine delivery at doorstep"
-                      },
-                      {
-                        mode: "Teleconsultation",
-                        services: "GP, specialist consultations",
-                        experience: "Video/audio consult via app or WhatsApp"
-                      },
-                      {
-                        mode: "Center Visit",
-                        services: "Diagnostics, specialist consults",
-                        experience: "Book appointment, visit nearest center"
-                      },
-                      {
-                        mode: "Health Camps",
-                        services: "Corporate wellness screenings",
-                        experience: "On-site health camps for employee groups"
-                      }
-                    ].map((item, index) => (
-                      <tr key={index} className="border-b border-border/10 last:border-0">
-                        <td className="p-4 font-semibold">{item.mode}</td>
-                        <td className="p-4 text-sm text-muted-foreground">{item.services}</td>
-                        <td className="p-4 text-sm text-muted-foreground">{item.experience}</td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                {[
+                  {
+                    icon: Home,
+                    mode: "Home Collection",
+                    services: "Diagnostics, pharmacy delivery",
+                    experience: "Sample collection and medicine delivery at doorstep",
+                    color: "primary"
+                  },
+                  {
+                    icon: Video,
+                    mode: "Teleconsultation",
+                    services: "GP, specialist consultations",
+                    experience: "Video/audio consult via app or WhatsApp",
+                    color: "success"
+                  },
+                  {
+                    icon: Stethoscope,
+                    mode: "Center Visit",
+                    services: "Diagnostics, specialist consults",
+                    experience: "Book appointment, visit nearest center",
+                    color: "secondary"
+                  },
+                  {
+                    icon: Users,
+                    mode: "Health Camps",
+                    services: "Corporate wellness screenings",
+                    experience: "On-site health camps for employee groups",
+                    color: "warning"
+                  }
+                ].map((item, index) => {
+                  const Icon = item.icon;
+                  return (
+                    <div key={index} className="bg-card-gradient p-6 rounded-xl border border-border/20">
+                      <div className={`w-12 h-12 rounded-full bg-${item.color}/10 flex items-center justify-center mb-4`}>
+                        <Icon className={`w-6 h-6 text-${item.color}`} />
+                      </div>
+                      <h4 className="font-heading font-bold mb-2">{item.mode}</h4>
+                      <p className="text-xs text-muted-foreground mb-3">{item.services}</p>
+                      <p className="text-xs text-muted-foreground">{item.experience}</p>
+                    </div>
+                  );
+                })}
               </div>
             </div>
           </div>
