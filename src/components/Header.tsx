@@ -1,3 +1,19 @@
+/**
+ * Navigation Header Component
+ * 
+ * Global header with dropdown menus, mobile navigation, and theme toggle.
+ * Includes hover-activated dropdowns with timeout for better UX.
+ * 
+ * Features:
+ * - Multi-level dropdown menus
+ * - Mobile-responsive hamburger menu
+ * - Smooth hover interactions with delay
+ * - Dark/light mode toggle
+ * - Sticky positioning
+ * 
+ * @component
+ */
+
 import { useState, useRef, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X, ChevronDown, Building2, Users, Stethoscope, FileText, Info } from "lucide-react";
@@ -9,6 +25,7 @@ const Header = () => {
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const timeoutRef = useRef<NodeJS.Timeout>();
 
+  // Handle dropdown open with immediate effect
   const handleMouseEnter = (dropdown: string) => {
     if (timeoutRef.current) {
       clearTimeout(timeoutRef.current);
@@ -16,12 +33,14 @@ const Header = () => {
     setActiveDropdown(dropdown);
   };
 
+  // Handle dropdown close with 150ms delay for better UX
   const handleMouseLeave = () => {
     timeoutRef.current = setTimeout(() => {
       setActiveDropdown(null);
     }, 150);
   };
 
+  // Cleanup timeout on unmount
   useEffect(() => {
     return () => {
       if (timeoutRef.current) {
@@ -30,6 +49,7 @@ const Header = () => {
     };
   }, []);
 
+  // Navigation structure with dropdowns
   const navItems = [
     { 
       label: "Platform", 

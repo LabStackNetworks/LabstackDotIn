@@ -1,7 +1,24 @@
+/**
+ * Footer Component
+ * 
+ * Global footer with site navigation, social links, and contact information.
+ * Organized into multiple columns for clear content hierarchy.
+ * 
+ * Features:
+ * - Multi-column navigation
+ * - Social media links
+ * - Contact information
+ * - Legal links
+ * - Newsletter signup (optional)
+ * 
+ * @component
+ */
+
 import { Linkedin, Twitter, Facebook, Mail, Phone, MapPin } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Footer = () => {
+  // Footer navigation structure organized by categories
   const navigation = {
     platform: [
       { name: "Overview", href: "/platform-overview" },

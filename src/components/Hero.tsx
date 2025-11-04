@@ -1,9 +1,27 @@
+/**
+ * Hero Section Component
+ * 
+ * Main hero section for the homepage featuring:
+ * - Animated badge with pulse effect
+ * - Responsive gradient headline
+ * - Key value propositions
+ * - Primary and secondary CTAs
+ * - Scrolling logo wall with 41 healthcare partners
+ * - Animated background elements
+ * 
+ * Uses 6 distinctive fonts for partner logos:
+ * Manrope, DM Sans, Work Sans, Outfit, Lexend, Plus Jakarta Sans
+ * 
+ * @component
+ */
+
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Play } from "lucide-react";
 import { Link } from "react-router-dom";
 import CTAButtons from "@/components/CTAButtons";
 
 const Hero = () => {
+  // Partner logos with varied fonts for visual interest
   const trustedLogos = [
     { name: "Plum Benefits", font: "font-manrope" },
     { name: "Health Assure", font: "font-dm-sans" },
