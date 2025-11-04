@@ -391,7 +391,7 @@ All essential files and optimizations for production launch are now complete. Th
 - Website: https://labstack.in
 
 **Security Issues:**
-- Email: security@labstack.in
+- Email: contact@labstack.in (Subject: Security Vulnerability Report)
 - Report via: https://labstack.in/contact
 
 **Careers:**

@@ -232,9 +232,16 @@ src/
 
 ## Contact for Launch Support
 
-- **Email:** contact@labstack.in
-- **Security:** security@labstack.in
-- **Website:** https://labstack.in
+**General Inquiries:**
+- Email: contact@labstack.in
+- Website: https://labstack.in
+
+**Security Issues:**
+- Email: contact@labstack.in (Subject: Security Vulnerability Report)
+- Report via: https://labstack.in/contact
+
+**Careers:**
+- Website: https://labstack.in/careers
 
 ---
 

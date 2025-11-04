@@ -1,4 +1,4 @@
-Contact: mailto:security@labstack.in
+Contact: mailto:contact@labstack.in
 Contact: https://labstack.in/contact
 Expires: 2026-12-31T23:59:59.000Z
 Encryption: https://labstack.in/.well-known/pgp-key.txt
@@ -13,7 +13,7 @@ Thank you for helping keep Labstack and our users safe!
 
 If you discover a security vulnerability, please report it to us responsibly:
 
-1. Email: security@labstack.in
+1. Email: contact@labstack.in (Subject: Security Vulnerability Report)
 2. Include detailed steps to reproduce
 3. Allow us 90 days to address before public disclosure
 4. We'll acknowledge within 48 hours

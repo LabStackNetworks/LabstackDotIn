@@ -201,7 +201,7 @@ curl https://labstack.in/manifest.json
 - Email: contact@labstack.in
 
 **Security Concerns:**
-- Email: security@labstack.in
+- Email: contact@labstack.in (Subject: Security Vulnerability Report)
 
 **Documentation:**
 - See: PRODUCTION_CHECKLIST.md
