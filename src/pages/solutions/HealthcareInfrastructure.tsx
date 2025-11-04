@@ -4,10 +4,9 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FAQ from "@/components/FAQ";
 import SEOHead from "@/components/SEOHead";
-import CTAButtons from "@/components/CTAButtons";
-import RelatedBlogs from "@/components/RelatedBlogs";
+import TLDR from "@/components/design-system/TLDR";
 import { Link } from "react-router-dom";
-import { generateProductSchema, generateFAQSchema } from "@/lib/structured-data";
+import { generateProductSchema, generateFAQSchema, generateBreadcrumbSchema, generateHowToSchema } from "@/lib/structured-data";
 import { healthcareInfrastructureFAQs } from "@/lib/faqs/healthcare-infrastructure-faqs";
 
 const HealthcareInfrastructure = () => {
@@ -17,8 +16,25 @@ const HealthcareInfrastructure = () => {
     url: "https://labstack.in/solutions/healthcare-infrastructure"
   });
 
+  const breadcrumbSchema = generateBreadcrumbSchema([
+    { name: "Home", url: "https://labstack.in" },
+    { name: "Solutions", url: "https://labstack.in/solutions" },
+    { name: "Healthcare Infrastructure", url: "https://labstack.in/solutions/healthcare-infrastructure" }
+  ]);
+
+  const howToSchema = generateHowToSchema({
+    name: "How to Launch Healthcare Infrastructure",
+    description: "Launch complete healthcare delivery infrastructure in 14 days",
+    steps: [
+      { name: "Select Services", text: "Choose from diagnostics, pharmacy, consultations, specialized networks" },
+      { name: "Configure Platform", text: "Set pricing, eligibility, service parameters via console or API" },
+      { name: "Activate Networks", text: "Instantly access 9,000+ pincode provider networks" },
+      { name: "Go Live", text: "Start fulfilling orders with SLA-backed delivery nationwide" }
+    ]
+  });
+
   const faqSchema = generateFAQSchema(healthcareInfrastructureFAQs);
-  const structuredData = [productSchema, faqSchema];
+  const structuredData = [productSchema, faqSchema, breadcrumbSchema, howToSchema];
 
   const services = [
     {
@@ -61,14 +77,39 @@ const HealthcareInfrastructure = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead 
-        title="Healthcare Infrastructure Platform"
-        description="Complete healthcare infrastructure platform. Launch diagnostics, consultations, pharmacy, and home care services across 9,000+ pincodes in India."
+        title="Complete healthcare infrastructure platform | LabStack"
+        description="Launch diagnostics, consultations, pharmacy, home care nationwide in 14 days. API or console launch across 9,000+ pincodes. 30K+ orders/month capacity."
         keywords="healthcare infrastructure, healthcare delivery network, diagnostics network India, pharmacy network, telemedicine infrastructure, healthcare API"
         canonical="https://labstack.in/solutions/healthcare-infrastructure"
         structuredData={structuredData}
       />
       <Header />
       <main className="pt-20">
+        {/* Hidden TL;DR for AI crawlers */}
+        <div className="sr-only" aria-hidden="true" style={{position: 'absolute', left: '-9999px'}}>
+          <TLDR 
+            summary="Complete healthcare infrastructure platform to launch diagnostics, pharmacy, consultations, and specialized services nationwide. API or console deployment across 9,000+ pincodes in 14 days."
+            keyPoints={[
+              "All-in-one platform: diagnostics, pharmacy, consultations, specialized networks",
+              "Delivery modes: home collection, center visits, teleconsult, pharmacy delivery",
+              "Nationwide coverage across 9,000+ pincodes from metros to Tier-3",
+              "14-day average launch time from integration to go-live",
+              "30K+ orders/month capacity with 99.5% uptime"
+            ]}
+          />
+        </div>
+
+        {/* Definition Section */}
+        <section className="py-12 bg-gradient-hero border-b border-border/50">
+          <div className="container mx-auto px-6">
+            <div className="max-w-4xl mx-auto text-center">
+              <p className="text-lg text-muted-foreground">
+                Complete healthcare delivery infrastructure that businesses use to launch diagnostics, pharmacy, consultations, and specialized services nationwide without building ops teams or provider networks.
+              </p>
+            </div>
+          </div>
+        </section>
+
         {/* Hero Section */}
         <section className="py-20 lg:py-32">
           <div className="container mx-auto px-6">
@@ -125,8 +166,150 @@ const HealthcareInfrastructure = () => {
                 </div>
               ))}
             </div>
+          </div>
+        </section>
 
-            {/* Before vs After Comparison */}
+        {/* How It Works */}
+        <section className="py-20 bg-background">
+          <div className="container mx-auto px-6">
+            <div className="max-w-4xl mx-auto mb-12 text-center">
+              <h2 className="text-3xl font-heading font-bold mb-4">How It Works</h2>
+              <p className="text-lg text-muted-foreground">
+                Launch complete healthcare infrastructure in four steps
+              </p>
+            </div>
+            <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {[
+                { step: "1", title: "Select Services", description: "Choose diagnostics, pharmacy, consultations, specialized networks" },
+                { step: "2", title: "Configure Platform", description: "Set pricing, eligibility, service parameters via console or API" },
+                { step: "3", title: "Activate Networks", description: "Instant access to 9,000+ pincode provider networks" },
+                { step: "4", title: "Go Live", description: "Start fulfilling orders with SLA-backed delivery nationwide" }
+              ].map((item, index) => (
+                <div key={index} className="bg-card-gradient p-6 rounded-xl border border-border/20">
+                  <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
+                    <span className="text-2xl font-bold text-primary">{item.step}</span>
+                  </div>
+                  <h4 className="font-heading font-bold mb-2">{item.title}</h4>
+                  <p className="text-sm text-muted-foreground">{item.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Delivery Modes */}
+        <section className="py-20 bg-gradient-hero border-y border-border/50">
+          <div className="container mx-auto px-6">
+            <div className="max-w-5xl mx-auto">
+              <h2 className="text-3xl font-heading font-bold mb-4 text-center">Service Delivery Modes</h2>
+              <p className="text-center text-muted-foreground mb-12">
+                Multiple fulfillment options for every healthcare service
+              </p>
+              <div className="overflow-x-auto">
+                <table className="w-full bg-card rounded-xl border border-border/20">
+                  <thead>
+                    <tr className="border-b border-border/20">
+                      <th className="p-4 text-left font-heading">Delivery Mode</th>
+                      <th className="p-4 text-left font-heading">Services Available</th>
+                      <th className="p-4 text-left font-heading">Coverage</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {[
+                      {
+                        mode: "Home Collection/Delivery",
+                        services: "Diagnostics sample collection, pharmacy delivery",
+                        coverage: "9,000+ pincodes"
+                      },
+                      {
+                        mode: "Center Visits",
+                        services: "Diagnostics, specialist consultations",
+                        coverage: "2,600+ centers"
+                      },
+                      {
+                        mode: "Teleconsultation",
+                        services: "GP and specialist consults via video/audio",
+                        coverage: "Pan-India"
+                      },
+                      {
+                        mode: "Specialized Home Services",
+                        services: "Ambulance, physiotherapy, mental health, home care",
+                        coverage: "Major cities"
+                      }
+                    ].map((item, index) => (
+                      <tr key={index} className="border-b border-border/10 last:border-0">
+                        <td className="p-4 font-semibold">{item.mode}</td>
+                        <td className="p-4 text-sm text-muted-foreground">{item.services}</td>
+                        <td className="p-4 text-sm text-muted-foreground">{item.coverage}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Availability */}
+        <section className="py-20 bg-background">
+          <div className="container mx-auto px-6">
+            <div className="max-w-5xl mx-auto text-center">
+              <h2 className="text-3xl font-heading font-bold mb-6">Nationwide Healthcare Infrastructure</h2>
+              <p className="text-lg text-muted-foreground mb-8">
+                Launch complete healthcare services across 9,000+ pincodes from metros to Tier-3 cities. All services available with consistent quality and SLAs. 30K+ orders/month capacity with 99.5% uptime.
+              </p>
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                {["Diagnostics", "Consultations", "Pharmacy", "Specialized Networks", "Home Care", "Health Camps", "Chronic Care", "All Services"].map((service, index) => (
+                  <div key={index} className="bg-card-gradient p-4 rounded-xl border border-border/20">
+                    <CheckCircle className="w-6 h-6 text-success mx-auto mb-2" />
+                    <p className="text-sm font-medium">{service}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Integration & Quality */}
+        <section className="py-20 bg-gradient-hero border-y border-border/50">
+          <div className="container mx-auto px-6">
+            <div className="max-w-6xl mx-auto">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <div>
+                  <h2 className="text-3xl font-heading font-bold mb-6">Integration Options</h2>
+                  <ul className="space-y-3">
+                    {[
+                      "RESTful APIs for programmatic control of all services",
+                      "Console access for ops teams to manage fulfillment",
+                      "Embeddable widgets for white-label booking flows",
+                      "Real-time webhooks for order status updates"
+                    ].map((feature, index) => (
+                      <li key={index} className="flex items-start space-x-3">
+                        <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-1" />
+                        <span className="text-muted-foreground">{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <div>
+                  <h2 className="text-3xl font-heading font-bold mb-6">Quality Assurance</h2>
+                  <ul className="space-y-3">
+                    {qualityFrameworks.map((framework, index) => (
+                      <li key={index} className="flex items-start space-x-3">
+                        <Shield className="w-5 h-5 text-success flex-shrink-0 mt-1" />
+                        <span className="text-muted-foreground">{framework}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Before vs After */}
+        <section className="py-20 bg-background">
+          <div className="container mx-auto px-6">
             <div className="max-w-5xl mx-auto mb-20">
               <h2 className="text-3xl font-heading font-bold text-center mb-12">
                 Before vs After Labstack
@@ -176,27 +359,6 @@ const HealthcareInfrastructure = () => {
               </div>
             </div>
 
-            {/* Quality Frameworks */}
-            <div className="max-w-4xl mx-auto mb-20 bg-gradient-hero rounded-3xl p-8 lg:p-12 border border-border/50">
-              <div className="flex items-center justify-center mb-8">
-                <Shield className="w-12 h-12 text-primary" />
-              </div>
-              <h2 className="text-2xl lg:text-3xl font-heading font-bold text-center mb-4">
-                Quality Frameworks Built In
-              </h2>
-              <p className="text-center text-muted-foreground mb-8">
-                Quality is not optional. It's automated across our network
-              </p>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                {qualityFrameworks.map((framework, index) => (
-                  <div key={index} className="flex items-start space-x-3 bg-card/50 p-4 rounded-xl">
-                    <CheckCircle className="w-5 h-5 text-success flex-shrink-0 mt-0.5" />
-                    <span className="text-sm">{framework}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-
             {/* Proof Metrics */}
             <div className="max-w-5xl mx-auto bg-gradient-hero rounded-3xl p-8 lg:p-12 border border-border/50">
               <h2 className="text-3xl font-heading font-bold text-center mb-12">
@@ -236,15 +398,38 @@ const HealthcareInfrastructure = () => {
         </section>
 
         {/* FAQ Section */}
-        <section className="py-20 bg-background">
+        <section className="py-20 bg-gradient-hero border-y border-border/50">
           <div className="container mx-auto px-6">
             <FAQ items={healthcareInfrastructureFAQs} />
           </div>
         </section>
+
+        {/* Internal Links */}
+        <section className="py-20 bg-background">
+          <div className="container mx-auto px-6">
+            <div className="max-w-5xl mx-auto">
+              <h2 className="text-3xl font-heading font-bold mb-8 text-center">Related Solutions</h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                {[
+                  { title: "API Solutions", url: "/solutions/api-solutions", description: "Developer-first healthcare APIs" },
+                  { title: "Digital Platform", url: "/solutions/digital-platform", description: "White-label patient experience platform" },
+                  { title: "Coverage Expansion", url: "/solutions/coverage-expansion", description: "Geographic expansion to Tier-2/3 markets" },
+                  { title: "Digital Health Platforms", url: "/who-we-serve/digital-health-platforms", description: "Solutions for healthtech companies" }
+                ].map((link, index) => (
+                  <Link key={index} to={link.url} className="bg-card-gradient p-6 rounded-xl border border-border/20 card-hover group">
+                    <h4 className="font-heading font-bold mb-2 group-hover:text-primary transition-colors">{link.title}</h4>
+                    <p className="text-sm text-muted-foreground">{link.description}</p>
+                    <div className="flex items-center text-primary font-medium mt-4">
+                      Learn more 
+                      <ArrowRight className="ml-1 w-4 h-4" />
+                    </div>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
       </main>
-      
-      {/* Related Resources */}
-      <RelatedBlogs category="Digital Health" limit={3} />
       
       <Footer />
     </div>
