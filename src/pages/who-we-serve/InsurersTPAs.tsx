@@ -158,39 +158,58 @@ const InsurersTPAs = () => {
           <div className="container mx-auto px-6">
             <div className="max-w-5xl mx-auto">
               <h2 className="text-3xl font-heading font-bold mb-4 text-center">Complete OPD Services for Insurers</h2>
-              <p className="text-center text-muted-foreground mb-12">
-                Full suite of outpatient services with fraud controls built in
+              <p className="text-center text-muted-foreground mb-12 max-w-3xl mx-auto">
+                Full suite of outpatient services with built-in fraud controls and automated operations
               </p>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                {[
-                  {
-                    icon: TestTube,
-                    service: "Diagnostics",
-                    desc: "Home collection, lab visits, health camps. NABL certified partners.",
-                    color: "primary"
-                  },
-                  {
-                    icon: Pill,
-                    service: "Pharmacy",
-                    desc: "Home delivery, store pickup. Licensed pharmacists on all orders.",
-                    color: "success"
-                  },
-                  {
-                    icon: Video,
-                    service: "Consultations",
-                    desc: "Teleconsult 24/7, in-clinic visits. NMC registered doctors.",
-                    color: "secondary"
-                  }
-                ].map((item, index) => {
-                  const Icon = item.icon;
-                  return (
-                    <div key={index} className="bg-card-gradient p-6 rounded-xl border border-border/20">
-                      <Icon className={`w-10 h-10 text-${item.color} mb-4`} />
-                      <h4 className="font-heading font-bold mb-2">{item.service}</h4>
-                      <p className="text-sm text-muted-foreground">{item.desc}</p>
-                    </div>
-                  );
-                })}
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+                <div className="bg-card-gradient p-6 rounded-xl border border-border/20">
+                  <TestTube className="w-10 h-10 text-primary mb-4" />
+                  <h4 className="font-heading font-bold mb-2">Diagnostics & Labs</h4>
+                  <p className="text-sm text-muted-foreground mb-4">
+                    Home collection, center visits, health camps. NABL certified partners with fraud detection.
+                  </p>
+                  <div className="flex items-center text-xs text-success">
+                    <CheckCircle className="w-4 h-4 mr-1" />
+                    SKU-level fraud controls
+                  </div>
+                </div>
+
+                <div className="bg-card-gradient p-6 rounded-xl border border-border/20">
+                  <Pill className="w-10 h-10 text-success mb-4" />
+                  <h4 className="font-heading font-bold mb-2">Pharmacy Network</h4>
+                  <p className="text-sm text-muted-foreground mb-4">
+                    Home delivery and store pickup. Licensed pharmacists with prescription verification.
+                  </p>
+                  <div className="flex items-center text-xs text-success">
+                    <CheckCircle className="w-4 h-4 mr-1" />
+                    Automated claim validation
+                  </div>
+                </div>
+
+                <div className="bg-card-gradient p-6 rounded-xl border border-border/20">
+                  <Video className="w-10 h-10 text-secondary mb-4" />
+                  <h4 className="font-heading font-bold mb-2">Consultations</h4>
+                  <p className="text-sm text-muted-foreground mb-4">
+                    24/7 teleconsult and in-clinic visits. NMC registered doctors with digital records.
+                  </p>
+                  <div className="flex items-center text-xs text-success">
+                    <CheckCircle className="w-4 h-4 mr-1" />
+                    Real-time utilization tracking
+                  </div>
+                </div>
+
+                <div className="bg-card-gradient p-6 rounded-xl border border-border/20">
+                  <Store className="w-10 h-10 text-warning mb-4" />
+                  <h4 className="font-heading font-bold mb-2">Health & Wellness</h4>
+                  <p className="text-sm text-muted-foreground mb-4">
+                    Preventive care, chronic disease management, wellness programs for member retention.
+                  </p>
+                  <div className="flex items-center text-xs text-success">
+                    <CheckCircle className="w-4 h-4 mr-1" />
+                    Improves NPS and retention
+                  </div>
+                </div>
               </div>
             </div>
           </div>
