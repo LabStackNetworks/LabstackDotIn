@@ -1,16 +1,15 @@
 /**
  * SEO Configuration for Labstack Healthcare Platform
  * 
- * Centralized SEO metadata, Open Graph data, structured data schemas,
- * and GEO (Generative Engine Optimization) utilities for maximum discoverability
- * across traditional search engines (Google, Bing) and AI engines (ChatGPT, Perplexity, Claude).
+ * Centralized configuration for metadata, Open Graph tags, structured data schemas,
+ * and page-specific SEO content across the application.
  * 
  * @module seo-config
  */
 
 /**
  * Base SEO configuration for the entire website
- * GEO-Optimized for AI search engines with answer-first, factual content
+ * Contains default metadata values used across all pages
  */
 export const BASE_SEO = {
   siteName: 'Labstack',

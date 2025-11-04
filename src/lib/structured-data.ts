@@ -1,5 +1,11 @@
-// JSON-LD Structured Data utilities for SEO & GEO (Generative Engine Optimization)
-// Optimized for AI search engines: ChatGPT, Claude, Perplexity, Gemini, Copilot
+/**
+ * JSON-LD Structured Data Utilities
+ * 
+ * Helper functions to generate Schema.org compliant structured data
+ * for better search engine understanding and rich snippet display.
+ * 
+ * @module structured-data
+ */
 
 export const generateOrganizationSchema = () => ({
   "@context": "https://schema.org",

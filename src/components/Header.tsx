@@ -226,11 +226,11 @@ const Header = () => {
                   )}
                 </button>
                 
-                {/* Beautiful Asymmetrical Dropdown */}
+                {/* Dropdown Menu */}
                 {item.hasDropdown && activeDropdown === item.label && (
                   <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-[800px] bg-card/95 backdrop-blur-xl border border-border/50 rounded-2xl shadow-neural overflow-hidden z-50 animate-scale-in">
                     <div className="grid grid-cols-12 min-h-[400px]">
-                      {/* Featured Section - Asymmetrical Large Tile */}
+                      {/* Featured Section */}
                       <div className="col-span-5 bg-gradient-primary p-8 flex flex-col justify-between text-white relative overflow-hidden">
                         <div className="absolute inset-0 bg-black/10"></div>
                         <div className="relative z-10">
@@ -258,7 +258,7 @@ const Header = () => {
                         <div className="absolute -right-4 -top-4 w-16 h-16 bg-white/5 rounded-full"></div>
                       </div>
                       
-                      {/* Navigation Sections - Smaller Tiles */}
+                      {/* Navigation Sections */}
                       <div className="col-span-7 p-6">
                         <div className="grid grid-cols-2 gap-6 h-full">
                           {item.dropdown.sections.map((section, sectionIdx) => (

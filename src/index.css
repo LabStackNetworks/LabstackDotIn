@@ -2,9 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Premium Dark Theme Design System for Labstack Healthcare Platform
-All colors MUST be HSL. Inspired by Stripe/Linear/Notion aesthetics with healthcare credibility.
-*/
+/**
+ * Design System - Labstack Healthcare Platform
+ * 
+ * Color system uses HSL format for consistent theming across light and dark modes.
+ * Design approach inspired by modern SaaS interfaces (Stripe, Linear, Notion).
+ */
 
 @layer base {
   :root {
