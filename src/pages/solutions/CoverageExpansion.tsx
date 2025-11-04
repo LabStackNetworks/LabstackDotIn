@@ -170,13 +170,18 @@ const CoverageExpansion = () => {
                   <tbody>
                     {[
                       {
-                        tier: "Metros",
+                        tier: "Metro Cities",
                         coverage: "Complete coverage",
                         services: "All services: diagnostics, pharmacy, consultations, home care, specialized"
                       },
                       {
-                        tier: "Tier-2 (50+ cities)",
+                        tier: "Tier-1 Cities",
                         coverage: "Full service coverage",
+                        services: "Diagnostics, pharmacy, consultations, specialized networks"
+                      },
+                      {
+                        tier: "Tier-2 (50+ cities)",
+                        coverage: "Core service coverage",
                         services: "Diagnostics, pharmacy, consultations, health camps"
                       },
                       {

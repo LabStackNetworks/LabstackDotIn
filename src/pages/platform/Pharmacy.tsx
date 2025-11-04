@@ -68,6 +68,13 @@ const Pharmacy = () => {
               </div>
             </div>
 
+            {/* Definition Section */}
+            <div className="max-w-4xl mx-auto mb-20 text-center bg-gradient-hero rounded-2xl p-8 border border-border/50">
+              <p className="text-lg text-muted-foreground">
+                Nationwide pharmacy network that healthcare businesses use to launch medicine delivery with 60-minute service in metros, prescription verification, SKU-level fraud controls, and unified reconciliation.
+              </p>
+            </div>
+
             {/* Problems */}
             <div className="max-w-5xl mx-auto mb-20">
               <h2 className="text-3xl font-heading font-bold text-center mb-12">Why Pharmacy is Broken Today</h2>
