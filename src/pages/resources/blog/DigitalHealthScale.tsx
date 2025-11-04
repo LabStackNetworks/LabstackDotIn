@@ -2,14 +2,24 @@ import { ArrowLeft, TrendingUp } from "lucide-react";
 import { Link } from "react-router-dom";
 import PageTemplate from "@/components/PageTemplate";
 import { Button } from "@/components/ui/button";
+import { generateArticleSchema } from "@/lib/structured-data";
 
 const DigitalHealthScale = () => {
+  const structuredData = generateArticleSchema({
+    title: "Scaling Digital Health Platforms to Tier 2/3 Cities",
+    description: "Expand beyond metros with infrastructure that works in 600+ cities. Learn how platforms scale profitably to tier 2/3 markets.",
+    url: "https://labstack.in/resources/blog/digital-health-scale",
+    datePublished: "2025-01-22",
+    author: "Labstack Team"
+  });
+
   return (
     <PageTemplate
       title="Scaling Digital Health Platforms to Tier 2/3 Cities | Labstack"
       description="Expand beyond metros with infrastructure that works in 600+ cities. Learn how platforms scale profitably to tier 2/3 markets."
       keywords="digital health expansion India, tier 2 tier 3 healthcare, healthcare platform scaling, rural healthcare technology"
       canonical="https://labstack.in/resources/blog/digital-health-scale"
+      structuredData={structuredData}
     >
       <article className="container mx-auto px-4 py-12 max-w-4xl">
         <Link to="/resources/blog" className="inline-flex items-center text-primary hover:underline mb-8">

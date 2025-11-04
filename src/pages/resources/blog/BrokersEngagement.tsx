@@ -2,14 +2,24 @@ import { ArrowLeft, Users, TrendingUp, Target, Sparkles } from "lucide-react";
 import { Link } from "react-router-dom";
 import PageTemplate from "@/components/PageTemplate";
 import { Button } from "@/components/ui/button";
+import { generateArticleSchema } from "@/lib/structured-data";
 
 const BrokersEngagement = () => {
+  const structuredData = generateArticleSchema({
+    title: "Employee Wellness Programs That Drive ROI: A Broker's Guide",
+    description: "Learn how insurance brokers are using digital wellness platforms to increase retention by 35%, reduce claims by 20%, and differentiate in competitive markets.",
+    url: "https://labstack.in/resources/blog/brokers-engagement",
+    datePublished: "2025-02-15",
+    author: "Labstack Team"
+  });
+
   return (
     <PageTemplate
       title="Employee Wellness Programs That Drive ROI: A Broker's Guide | Labstack"
       description="Learn how insurance brokers are using digital wellness platforms to increase retention by 35%, reduce claims by 20%, and differentiate in competitive markets."
       keywords="corporate wellness programs India, employee health engagement, wellness ROI, insurance broker technology, healthcare benefits platform"
       canonical="https://labstack.in/resources/blog/brokers-engagement"
+      structuredData={structuredData}
     >
       <article className="container mx-auto px-4 py-12 max-w-4xl">
         <Link to="/resources/blog" className="inline-flex items-center text-primary hover:underline mb-8">

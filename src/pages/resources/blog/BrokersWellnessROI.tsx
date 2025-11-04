@@ -2,14 +2,24 @@ import { ArrowLeft, TrendingUp, HeartPulse, DollarSign, Target } from "lucide-re
 import { Link } from "react-router-dom";
 import PageTemplate from "@/components/PageTemplate";
 import { Button } from "@/components/ui/button";
+import { generateArticleSchema } from "@/lib/structured-data";
 
 const BrokersWellnessROI = () => {
+  const structuredData = generateArticleSchema({
+    title: "Wellness ROI: Measuring Beyond Healthcare Costs",
+    description: "How corporate wellness programs deliver 3:1 ROI through productivity gains, reduced absenteeism, and improved employee retention—beyond just healthcare savings.",
+    url: "https://labstack.in/resources/blog/brokers-wellness-roi",
+    datePublished: "2025-02-12",
+    author: "Labstack Team"
+  });
+
   return (
     <PageTemplate
       title="Wellness ROI: Measuring Beyond Healthcare Costs | Labstack"
       description="How corporate wellness programs deliver 3:1 ROI through productivity gains, reduced absenteeism, and improved employee retention—beyond just healthcare savings."
       keywords="wellness ROI, corporate wellness programs, employee wellness benefits, health benefits ROI, workplace wellness measurement"
       canonical="https://labstack.in/resources/blog/brokers-wellness-roi"
+      structuredData={structuredData}
     >
       <article className="container mx-auto px-4 py-12 max-w-4xl">
         <Link to="/resources/blog" className="inline-flex items-center text-primary hover:underline mb-8">

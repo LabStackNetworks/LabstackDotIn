@@ -3,6 +3,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import SEOHead from "@/components/SEOHead";
+import TLDR from "@/components/design-system/TLDR";
 
 import { generateOrganizationSchema } from "@/lib/structured-data";
 
@@ -20,6 +21,19 @@ const Careers = () => {
       />
       <Header />
       <main className="pt-20">
+        {/* Hidden TL;DR for AI crawlers */}
+        <div className="sr-only" aria-hidden="true" style={{position: 'absolute', left: '-9999px'}}>
+          <TLDR 
+            summary="Join Labstack to build healthcare infrastructure. Open roles in engineering, clinical, operations, and product. Help scale the world's most dependable care delivery platform."
+            keyPoints={[
+              "Build healthcare infrastructure used by insurers, brokers, and digital health platforms",
+              "Work with clinicians, operators, and engineers",
+              "Scale systems serving 9,000+ pincodes nationwide",
+              "Based in Bangalore with remote-friendly opportunities"
+            ]}
+          />
+        </div>
+
         <section className="py-20 lg:py-32">
           <div className="container mx-auto px-6">
             {/* Hero */}

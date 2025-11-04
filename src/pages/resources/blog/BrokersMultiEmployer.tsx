@@ -2,14 +2,24 @@ import { ArrowLeft, Building2, Users, Zap, Target } from "lucide-react";
 import { Link } from "react-router-dom";
 import PageTemplate from "@/components/PageTemplate";
 import { Button } from "@/components/ui/button";
+import { generateArticleSchema } from "@/lib/structured-data";
 
 const BrokersMultiEmployer = () => {
+  const structuredData = generateArticleSchema({
+    title: "Multi-Employer Platform Management at Scale",
+    description: "How insurance brokers serve 100+ corporate clients efficiently through unified digital platforms, reducing operational costs by 60% while increasing retention.",
+    url: "https://labstack.in/resources/blog/brokers-multi-employer-platform",
+    datePublished: "2025-02-10",
+    author: "Labstack Team"
+  });
+
   return (
     <PageTemplate
       title="Multi-Employer Platform Management at Scale | Labstack"
       description="How insurance brokers serve 100+ corporate clients efficiently through unified digital platforms, reducing operational costs by 60% while increasing retention."
       keywords="insurance broker platform, multi-employer management, corporate health insurance, broker technology, employee benefits platform"
       canonical="https://labstack.in/resources/blog/brokers-multi-employer-platform"
+      structuredData={structuredData}
     >
       <article className="container mx-auto px-4 py-12 max-w-4xl">
         <Link to="/resources/blog" className="inline-flex items-center text-primary hover:underline mb-8">

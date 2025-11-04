@@ -2,14 +2,24 @@ import { ArrowLeft, TrendingUp, Users, Award } from "lucide-react";
 import { Link } from "react-router-dom";
 import PageTemplate from "@/components/PageTemplate";
 import { Button } from "@/components/ui/button";
+import { generateArticleSchema } from "@/lib/structured-data";
 
 const BrokerCaseStudy = () => {
+  const structuredData = generateArticleSchema({
+    title: "Insurance Broker Case Study: 3x Revenue Growth with Wellness Platform",
+    description: "How a mid-sized broker grew from 30 to 95 corporate clients, achieved 35% higher retention, and differentiated through integrated wellness offerings.",
+    url: "https://labstack.in/resources/case-studies/broker",
+    datePublished: "2025-01-20",
+    author: "Labstack Team"
+  });
+
   return (
     <PageTemplate
       title="Insurance Broker Case Study: 3x Revenue Growth with Wellness Platform | Labstack"
       description="How a mid-sized broker grew from 30 to 95 corporate clients, achieved 35% higher retention, and differentiated through integrated wellness offerings."
       keywords="insurance broker case study, corporate wellness platform, broker technology, employee benefits technology"
       canonical="https://labstack.in/resources/case-studies/broker"
+      structuredData={structuredData}
     >
       <article className="container mx-auto px-4 py-12 max-w-4xl">
         <Link to="/resources/research-hub" className="inline-flex items-center text-primary hover:underline mb-8">

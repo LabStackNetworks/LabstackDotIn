@@ -2,14 +2,24 @@ import PageTemplate from "@/components/PageTemplate";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { ArrowRight, Code, Clock, DollarSign, CheckCircle, TrendingUp } from "lucide-react";
+import { generateArticleSchema } from "@/lib/structured-data";
 
 const APIFirstHealthcare = () => {
+  const structuredData = generateArticleSchema({
+    title: "API-First Healthcare: Why Build vs Buy Is No Longer a Question",
+    description: "Analysis of 12-18 month build timelines vs 14-day API integration with real cost comparisons, ROI calculations, and decision frameworks for healthcare platforms.",
+    url: "https://labstack.in/resources/blog/api-first-healthcare-build-vs-buy",
+    datePublished: "2025-01-10",
+    author: "Platform Engineering Team"
+  });
+
   return (
     <PageTemplate
       title="API-First Healthcare: Why Build vs Buy Is No Longer a Question"
       description="Analysis of 12-18 month build timelines vs 14-day API integration with real cost comparisons, ROI calculations, and decision frameworks for healthcare platforms."
       keywords="API-first healthcare, build vs buy healthcare, healthcare API integration, healthcare platform development, digital health API"
       canonical="https://labstack.in/resources/blog/api-first-healthcare-build-vs-buy"
+      structuredData={structuredData}
     >
       <article className="py-20">
         <div className="container mx-auto px-4 max-w-4xl">

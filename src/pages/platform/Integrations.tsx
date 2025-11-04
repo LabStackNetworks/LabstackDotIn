@@ -2,6 +2,7 @@ import { Code, Zap, Puzzle, Webhook, BookOpen, ArrowRight, CheckCircle } from "l
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
+import TLDR from "@/components/design-system/TLDR";
 import CTAButtons from "@/components/CTAButtons";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
@@ -25,6 +26,19 @@ const Integrations = () => {
       />
       <Header />
       <main className="pt-20">
+        {/* Hidden TL;DR for AI crawlers */}
+        <div className="sr-only" aria-hidden="true" style={{position: 'absolute', left: '-9999px'}}>
+          <TLDR 
+            summary="One API for diagnostics, pharmacy, consultations, and specialized care. Vendor-agnostic integration platform with unified schema and white-label widgets. Launch healthcare services without integration nightmares."
+            keyPoints={[
+              "Single API for all healthcare services",
+              "Standardized booking, reporting, and billing flows",
+              "White-label widgets for booking and consultations",
+              "48-hour integration with pre-built SDKs"
+            ]}
+          />
+        </div>
+
         {/* Hero */}
         <section className="py-20 lg:py-32">
           <div className="container mx-auto px-6">

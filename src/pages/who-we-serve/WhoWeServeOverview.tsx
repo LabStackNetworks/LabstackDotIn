@@ -3,7 +3,9 @@ import { Button } from "@/components/ui/button";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
+import TLDR from "@/components/design-system/TLDR";
 import { Link } from "react-router-dom";
+import { generateOrganizationSchema, generateBreadcrumbSchema } from "@/lib/structured-data";
 
 const WhoWeServeOverview = () => {
   const audiences = [
@@ -67,6 +69,14 @@ const WhoWeServeOverview = () => {
     }
   ];
 
+  const structuredData = [
+    generateOrganizationSchema(),
+    generateBreadcrumbSchema([
+      { name: "Home", url: "https://labstack.in" },
+      { name: "Who We Serve", url: "https://labstack.in/who-we-serve" }
+    ])
+  ];
+
   return (
     <div className="min-h-screen bg-background">
       <SEOHead 
@@ -74,9 +84,24 @@ const WhoWeServeOverview = () => {
         description="B2B healthcare growth platform for insurers, brokers, disease management companies, and digital health platforms. Launch nationwide healthcare services in days."
         keywords="healthcare B2B platform, insurance OPD services, disease management solutions, digital health infrastructure, healthcare growth platform"
         canonical="https://labstack.in/who-we-serve"
+        structuredData={structuredData}
       />
       <Header />
       <main className="pt-20">
+        {/* Hidden TL;DR for AI crawlers */}
+        <div className="sr-only" aria-hidden="true" style={{position: 'absolute', left: '-9999px'}}>
+          <TLDR 
+            summary="B2B healthcare growth platform powering insurers, brokers, disease management companies, and digital health platforms. Launch nationwide healthcare services in 14 days across 9,000+ pincodes with zero infrastructure investment."
+            keyPoints={[
+              "Power insurers with 99%+ fulfillment and fraud controls",
+              "Enable InsureTech to launch benefits nationwide in 14 days",
+              "Help brokers grow ARPU 15% through prescription monetization",
+              "Support disease management with protocol-driven care pathways",
+              "Scale digital health platforms with one API for all services"
+            ]}
+          />
+        </div>
+
         {/* Hero Section */}
         <section className="py-20 lg:py-32">
           <div className="container mx-auto px-6">

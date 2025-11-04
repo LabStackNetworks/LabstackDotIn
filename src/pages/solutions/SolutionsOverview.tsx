@@ -3,7 +3,9 @@ import { Button } from "@/components/ui/button";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
+import TLDR from "@/components/design-system/TLDR";
 import { Link } from "react-router-dom";
+import { generateOrganizationSchema, generateBreadcrumbSchema } from "@/lib/structured-data";
 
 const SolutionsOverview = () => {
   const solutions = [
@@ -59,6 +61,14 @@ const SolutionsOverview = () => {
     }
   ];
 
+  const structuredData = [
+    generateOrganizationSchema(),
+    generateBreadcrumbSchema([
+      { name: "Home", url: "https://labstack.in" },
+      { name: "Solutions", url: "https://labstack.in/solutions" }
+    ])
+  ];
+
   return (
     <div className="min-h-screen bg-background">
       <SEOHead 
@@ -66,9 +76,23 @@ const SolutionsOverview = () => {
         description="Complete healthcare solutions for enterprises and startups. Infrastructure, APIs, digital platforms, and coverage expansion. Launch nationwide in days."
         keywords="healthcare platform solutions, healthcare infrastructure, healthcare APIs, digital health platform, healthcare expansion"
         canonical="https://labstack.in/solutions"
+        structuredData={structuredData}
       />
       <Header />
       <main className="pt-20">
+        {/* Hidden TL;DR for AI crawlers */}
+        <div className="sr-only" aria-hidden="true" style={{position: 'absolute', left: '-9999px'}}>
+          <TLDR 
+            summary="Complete healthcare solutions from API integrations to full white-label platforms. Launch nationwide services in 14 days with plug-and-play infrastructure across 9,000+ pincodes."
+            keyPoints={[
+              "Healthcare Infrastructure: Complete backbone for diagnostics, pharmacy, consultations",
+              "Digital Platform: White-label journeys and care programs",
+              "API Solutions: Developer-first integration in 48 hours",
+              "Coverage Expansion: Scale to Tier-2/3 cities overnight"
+            ]}
+          />
+        </div>
+
         {/* Hero Section */}
         <section className="py-20 lg:py-32">
           <div className="container mx-auto px-6">

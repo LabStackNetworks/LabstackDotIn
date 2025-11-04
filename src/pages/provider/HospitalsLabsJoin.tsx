@@ -6,6 +6,7 @@ import SEOHead from "@/components/SEOHead";
 import TLDR from "@/components/design-system/TLDR";
 import RelatedBlogs from "@/components/RelatedBlogs";
 import { Link } from "react-router-dom";
+import { generateServiceSchema, generateBreadcrumbSchema } from "@/lib/structured-data";
 
 const HospitalsLabsJoin = () => {
   const benefits = [
@@ -21,6 +22,19 @@ const HospitalsLabsJoin = () => {
     { metric: "30 days", label: "Payment Terms", sublabel: "Guaranteed settlements" }
   ];
 
+  const structuredData = [
+    generateServiceSchema({
+      name: "Hospital & Lab Partnership Program",
+      description: "Join Labstack network to increase facility utilization to 60-70% through B2B demand with AI-native operations platform.",
+      url: "https://labstack.in/provider/hospitals-labs"
+    }),
+    generateBreadcrumbSchema([
+      { name: "Home", url: "https://labstack.in" },
+      { name: "Providers", url: "https://labstack.in/provider" },
+      { name: "Hospitals & Labs", url: "https://labstack.in/provider/hospitals-labs" }
+    ])
+  ];
+
   return (
     <div className="min-h-screen bg-background">
       <SEOHead 
@@ -28,6 +42,7 @@ const HospitalsLabsJoin = () => {
         description="Partner with Labstack to increase lab and hospital utilization to 60-70%. Access B2B demand from insurers, corporates, and digital health platforms with guaranteed 30-day payments."
         keywords="hospital partnership India, diagnostic lab network, healthcare provider partnership, B2B healthcare demand, medical facility growth"
         canonical="https://labstack.in/provider/hospitals-labs"
+        structuredData={structuredData}
       />
       <Header />
       <main className="pt-20">

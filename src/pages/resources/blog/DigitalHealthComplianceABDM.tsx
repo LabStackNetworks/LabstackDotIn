@@ -2,14 +2,24 @@ import { ArrowLeft, Shield, CheckCircle, FileText } from "lucide-react";
 import { Link } from "react-router-dom";
 import PageTemplate from "@/components/PageTemplate";
 import { Button } from "@/components/ui/button";
+import { generateArticleSchema } from "@/lib/structured-data";
 
 const DigitalHealthComplianceABDM = () => {
+  const structuredData = generateArticleSchema({
+    title: "ABDM Integration & Healthcare Compliance in 2025",
+    description: "Complete guide to ABDM (Ayushman Bharat Digital Mission) integration, DISHA compliance, IT Act 2000, and telemedicine guidelines for digital health platforms.",
+    url: "https://labstack.in/resources/blog/digital-health-compliance-abdm",
+    datePublished: "2025-01-18",
+    author: "Labstack Team"
+  });
+
   return (
     <PageTemplate
       title="ABDM Integration & Healthcare Compliance in 2025 | Labstack"
       description="Complete guide to ABDM (Ayushman Bharat Digital Mission) integration, DISHA compliance, IT Act 2000, and telemedicine guidelines for digital health platforms."
       keywords="ABDM integration, healthcare compliance India, DISHA compliance, telemedicine guidelines, health data privacy"
       canonical="https://labstack.in/resources/blog/digital-health-compliance-abdm"
+      structuredData={structuredData}
     >
       <article className="container mx-auto px-4 py-12 max-w-4xl">
         <Link to="/resources/blog" className="inline-flex items-center text-primary hover:underline mb-8">

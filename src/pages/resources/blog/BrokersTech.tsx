@@ -2,14 +2,24 @@ import { ArrowLeft, Zap, BarChart3, Clock, Shield } from "lucide-react";
 import { Link } from "react-router-dom";
 import PageTemplate from "@/components/PageTemplate";
 import { Button } from "@/components/ui/button";
+import { generateArticleSchema } from "@/lib/structured-data";
 
 const BrokersTech = () => {
+  const structuredData = generateArticleSchema({
+    title: "Technology Stack for Modern Insurance Brokers: 2025 Guide",
+    description: "Discover how forward-thinking brokers are using technology to automate operations, serve 3x more clients, and deliver superior member experiences with 40% lower overhead.",
+    url: "https://labstack.in/resources/blog/brokers-tech",
+    datePublished: "2025-02-05",
+    author: "Labstack Team"
+  });
+
   return (
     <PageTemplate
       title="Technology Stack for Modern Insurance Brokers: 2025 Guide | Labstack"
       description="Discover how forward-thinking brokers are using technology to automate operations, serve 3x more clients, and deliver superior member experiences with 40% lower overhead."
       keywords="insurance broker technology, brokerage automation, insurance tech stack India, broker software platform, digital brokerage operations"
       canonical="https://labstack.in/resources/blog/brokers-tech"
+      structuredData={structuredData}
     >
       <article className="container mx-auto px-4 py-12 max-w-4xl">
         <Link to="/resources/blog" className="inline-flex items-center text-primary hover:underline mb-8">

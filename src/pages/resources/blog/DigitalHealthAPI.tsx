@@ -2,14 +2,24 @@ import { ArrowLeft, Code, Zap, Shield } from "lucide-react";
 import { Link } from "react-router-dom";
 import PageTemplate from "@/components/PageTemplate";
 import { Button } from "@/components/ui/button";
+import { generateArticleSchema } from "@/lib/structured-data";
 
 const DigitalHealthAPI = () => {
+  const structuredData = generateArticleSchema({
+    title: "API-First Healthcare Infrastructure for Digital Health Platforms",
+    description: "Build faster with healthcare APIs. Launch diagnostics, consultations, and pharmacy in 14 days instead of 14 months with plug-and-play infrastructure.",
+    url: "https://labstack.in/resources/blog/digital-health-api",
+    datePublished: "2025-01-15",
+    author: "Labstack Team"
+  });
+
   return (
     <PageTemplate
       title="API-First Healthcare Infrastructure for Digital Health Platforms | Labstack"
       description="Build faster with healthcare APIs. Launch diagnostics, consultations, and pharmacy in 14 days instead of 14 months with plug-and-play infrastructure."
       keywords="healthcare API integration, digital health infrastructure, telemedicine API, diagnostics API India, pharmacy API platform"
       canonical="https://labstack.in/resources/blog/digital-health-api"
+      structuredData={structuredData}
     >
       <article className="container mx-auto px-4 py-12 max-w-4xl">
         <Link to="/resources/blog" className="inline-flex items-center text-primary hover:underline mb-8">

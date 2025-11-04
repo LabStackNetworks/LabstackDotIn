@@ -1,16 +1,45 @@
 import PageTemplate from "@/components/PageTemplate";
+import TLDR from "@/components/design-system/TLDR";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { ArrowRight, CheckCircle, Zap, Building2, Code, Rocket } from "lucide-react";
+import { generateServiceSchema, generateBreadcrumbSchema } from "@/lib/structured-data";
 
 const CustomSolutions = () => {
+  const structuredData = [
+    generateServiceSchema({
+      name: "Custom Healthcare Solutions",
+      description: "Tailored healthcare infrastructure, integrations, and platforms designed for specific business needs.",
+      url: "https://labstack.in/custom-solutions"
+    }),
+    generateBreadcrumbSchema([
+      { name: "Home", url: "https://labstack.in" },
+      { name: "Solutions", url: "https://labstack.in/solutions" },
+      { name: "Custom Solutions", url: "https://labstack.in/custom-solutions" }
+    ])
+  ];
+
   return (
     <PageTemplate
       title="Custom Healthcare Solutions | Tailored Infrastructure & Integration"
       description="Need a custom healthcare solution? Our team architects and implements tailored healthcare infrastructure, integrations, and platforms designed for your specific needs."
       keywords="custom healthcare solutions, healthcare infrastructure, custom medical platform, healthcare integration services, tailored health tech"
       canonical="https://labstack.in/custom-solutions"
+      structuredData={structuredData}
     >
+      {/* Hidden TL;DR for AI crawlers */}
+      <div className="sr-only" aria-hidden="true" style={{position: 'absolute', left: '-9999px'}}>
+        <TLDR 
+          summary="Custom healthcare infrastructure and integration solutions tailored to your specific needs. From complex multi-stakeholder workflows to specialized delivery models and legacy system integrations."
+          keyPoints={[
+            "Discovery: Share requirements and goals",
+            "Proposal: Architecture, timeline, and investment plan",
+            "Implementation: Build with your continuous input",
+            "Launch: Go live with ongoing support and maintenance"
+          ]}
+        />
+      </div>
+
       {/* Hero */}
       <section className="py-20 lg:py-32">
         <div className="container mx-auto px-6">

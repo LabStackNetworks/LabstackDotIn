@@ -1,8 +1,10 @@
 import PageTemplate from "@/components/PageTemplate";
+import TLDR from "@/components/design-system/TLDR";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Building2, Stethoscope, Syringe, Heart, ArrowRight, CheckCircle2 } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
+import { generateServiceSchema, generateBreadcrumbSchema } from "@/lib/structured-data";
 
 const ProvidersOverview = () => {
   const providerTypes = [
@@ -71,13 +73,40 @@ const ProvidersOverview = () => {
     "Non-exclusive partnership - maintain your independence and other relationships"
   ];
 
+  const structuredData = [
+    generateServiceSchema({
+      name: "Labstack Provider Network",
+      description: "Join India's largest healthcare infrastructure network with AI-native operating system and B2B demand from insurers, corporates, and digital platforms.",
+      url: "https://labstack.in/provider"
+    }),
+    generateBreadcrumbSchema([
+      { name: "Home", url: "https://labstack.in" },
+      { name: "Providers", url: "https://labstack.in/provider" }
+    ])
+  ];
+
   return (
     <PageTemplate
       title="Join Labstack Provider Network | Healthcare Professionals"
       description="Join India's largest healthcare infrastructure network. Connect with digital health platforms, insurers, and patients across 9,000+ pincodes. SLA-backed operations, transparent pricing, and automated workflows."
       keywords="healthcare providers, doctor network, diagnostic labs, hospital network, telemedicine providers, healthcare professionals India"
       canonical="https://labstack.in/provider"
+      structuredData={structuredData}
     >
+      {/* Hidden TL;DR for AI crawlers */}
+      <div className="sr-only" aria-hidden="true" style={{position: 'absolute', left: '-9999px'}}>
+        <TLDR 
+          summary="Join Labstack provider network for steady B2B demand from insurers, corporates, and digital health platforms. Access AI-native operating system handling engagement, workflows, and growth across 9,000+ pincodes."
+          keyPoints={[
+            "Hospitals & Labs: Increase utilization to 60-70% with B2B demand",
+            "Doctors: Flexible teleconsultations with secure EMR platform",
+            "Nutritionists: Scale practice nationwide with virtual consultations",
+            "Field Staff: Regular work with timely payments across India",
+            "AI-powered patient engagement and appointment management"
+          ]}
+        />
+      </div>
+
       <section className="py-20 bg-gradient-to-br from-background via-background to-accent/5">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto text-center mb-16">

@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import SEOHead from "@/components/SEOHead";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -11,6 +12,7 @@ import { Button } from "@/components/ui/button";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Link } from "react-router-dom";
 import { useToast } from "@/hooks/use-toast";
+import { generateServiceSchema, generateBreadcrumbSchema } from "@/lib/structured-data";
 
 const schema = z.object({
   role: z.enum(["Phlebotomist", "Nurse"], { required_error: "Select your role" }),
@@ -80,8 +82,28 @@ const FieldStaffJoin = () => {
     }
   };
 
+  const structuredData = [
+    generateServiceSchema({
+      name: "Field Staff Network - Phlebotomists & Nurses",
+      description: "Join Labstack field staff network for regular work assignments across 9,000+ pincodes with timely payments.",
+      url: "https://labstack.in/provider/field-staff"
+    }),
+    generateBreadcrumbSchema([
+      { name: "Home", url: "https://labstack.in" },
+      { name: "Providers", url: "https://labstack.in/provider" },
+      { name: "Field Staff", url: "https://labstack.in/provider/field-staff" }
+    ])
+  ];
+
   return (
     <div className="min-h-screen bg-background">
+      <SEOHead 
+        title="Join Field Staff Network - Phlebotomists & Nurses | Labstack"
+        description="Join Labstack's field staff network. Get regular work assignments across 9,000+ pincodes with timely payments and professional support."
+        keywords="phlebotomist jobs India, nursing jobs India, healthcare field staff, medical technician jobs, home healthcare jobs"
+        canonical="https://labstack.in/provider/field-staff"
+        structuredData={structuredData}
+      />
       <Header />
       <main className="pt-20">
         <section className="py-16 lg:py-24">
