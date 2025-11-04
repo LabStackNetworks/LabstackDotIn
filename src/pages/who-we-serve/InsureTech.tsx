@@ -6,6 +6,7 @@ import FAQ from "@/components/FAQ";
 import SEOHead from "@/components/SEOHead";
 import TLDR from "@/components/design-system/TLDR";
 import RelatedBlogs from "@/components/RelatedBlogs";
+import Breadcrumbs from "@/components/Breadcrumbs";
 import { Link } from "react-router-dom";
 import { generateFAQSchema, generateBreadcrumbSchema, generateServiceSchema } from "@/lib/structured-data";
 import { insuretechFAQs } from "@/lib/faqs/insuretech-faqs";
@@ -37,6 +38,18 @@ const InsureTech = () => {
       />
       <Header />
       <main className="pt-20">
+        {/* Breadcrumbs */}
+        <section className="py-4 bg-background border-b border-border/50">
+          <div className="container mx-auto px-6">
+            <Breadcrumbs 
+              items={[
+                { label: "Who We Serve", href: "/who-we-serve" },
+                { label: "InsureTech" }
+              ]}
+            />
+          </div>
+        </section>
+
         {/* Hidden TL;DR for AI crawlers */}
         <div className="sr-only" aria-hidden="true" style={{position: 'absolute', left: '-9999px'}}>
           <TLDR 
@@ -76,7 +89,7 @@ const InsureTech = () => {
               </h1>
 
               <p className="text-xl text-muted-foreground mb-8">
-                Launch faster, scale wider, and earn the full share of the healthcare wallet.
+                Launch faster, scale wider, earn from the complete healthcare wallet.
               </p>
 
               <Link to="/book-demo">
@@ -99,10 +112,10 @@ const InsureTech = () => {
               <div className="space-y-4">
                 <h3 className="text-2xl font-heading font-bold mb-6">Current Blockers</h3>
                 {[
-                  "Low utilization = lost outcomes and lost revenue",
-                  "Fragmented delivery kills trust",
-                  "Ops friction stalls launches",
-                  "Support cost rises with uncertainty"
+                  "Low utilization equals lost outcomes and revenue",
+                  "Fragmented delivery damages member trust",
+                  "Operational friction delays market launches",
+                  "Support costs rise with service uncertainty"
                 ].map((problem, i) => (
                   <div key={i} className="flex items-start space-x-3 p-4 bg-destructive/5 border border-destructive/10 rounded-xl">
                     <span className="text-destructive mt-1">✗</span>
@@ -165,7 +178,7 @@ const InsureTech = () => {
                   <TestTube className="w-10 h-10 text-primary mb-4" />
                   <h4 className="font-heading font-bold mb-2">Diagnostics</h4>
                   <p className="text-sm text-muted-foreground mb-4">
-                    Home collection and center visits with SLA routing and fasting optimization.
+                    Home collection and center visits. SLA routing with fasting optimization.
                   </p>
                   <div className="flex items-center text-xs text-success">
                     <CheckCircle className="w-4 h-4 mr-1" />
@@ -201,7 +214,7 @@ const InsureTech = () => {
                   <Stethoscope className="w-10 h-10 text-success mb-4" />
                   <h4 className="font-heading font-bold mb-2">Health Camps</h4>
                   <p className="text-sm text-muted-foreground mb-4">
-                    Employer campuses or distributed worksites with digital reporting.
+                    Employer campuses and distributed worksites. Digital reporting included.
                   </p>
                   <div className="flex items-center text-xs text-success">
                     <CheckCircle className="w-4 h-4 mr-1" />
@@ -265,12 +278,12 @@ const InsureTech = () => {
                 <h3 className="font-heading font-bold mb-6 text-center">Platform Features</h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   {[
-                    "Single API and console for everything",
-                    "Home, center, and camp delivery in 9,000+ pincodes",
-                    "White-label notifications and documents",
-                    "Real-time status reduces support calls",
-                    "Data and consent aligned to claims workflows",
-                    "Pure B2B. Zero channel conflict. Your economics stay yours."
+                    "Single API and console for all services",
+                    "Home, center, and camp delivery across 9,000+ pincodes",
+                    "White-label notifications and member documents",
+                    "Real-time status tracking reduces support volume",
+                    "Data and consent workflows aligned to insurance claims",
+                    "Pure B2B model. Zero channel conflict. You control economics."
                   ].map((feature, index) => (
                     <div key={index} className="flex items-start space-x-3">
                       <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
@@ -291,22 +304,22 @@ const InsureTech = () => {
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
                 <div className="bg-card-gradient p-6 rounded-xl border border-border/20 text-center">
                   <div className="text-4xl font-heading font-bold text-gradient mb-2">98%</div>
-                  <p className="text-sm text-muted-foreground">On-time reports</p>
+                  <p className="text-sm text-muted-foreground">Reports delivered on time (24 to 48 hour TAT)</p>
                 </div>
                 <div className="bg-card-gradient p-6 rounded-xl border border-border/20 text-center">
                   <div className="text-4xl font-heading font-bold text-gradient mb-2">&lt;2%</div>
-                  <p className="text-sm text-muted-foreground">Rejection with built-in SOPs</p>
+                  <p className="text-sm text-muted-foreground">Sample rejection rate (pre-collection SOPs)</p>
                 </div>
                 <div className="bg-card-gradient p-6 rounded-xl border border-border/20 text-center">
-                  <div className="text-4xl font-heading font-bold text-gradient mb-2">~14 days</div>
-                  <p className="text-sm text-muted-foreground">Time-to-launch new cities</p>
+                  <div className="text-4xl font-heading font-bold text-gradient mb-2">14 days</div>
+                  <p className="text-sm text-muted-foreground">Average time to launch in new cities</p>
                 </div>
               </div>
 
               <div className="space-y-4">
                 {[
-                  "Renewals improve because members see value",
-                  "Revenue uplift from services already in demand",
+                  "Member renewals improve with visible health value",
+                  "Revenue grows from services members already need",
                   "Healthcare utilization becomes predictable and monetizable"
                 ].map((item, index) => (
                   <div key={index} className="flex items-start space-x-3 p-4 bg-card-gradient border border-border/20 rounded-xl">

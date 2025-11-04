@@ -359,7 +359,7 @@ const DigitalPlatform = () => {
                   <Smartphone className="w-8 h-8 text-secondary mx-auto mb-3" />
                   <div className="text-3xl font-heading font-bold text-gradient mb-2">&gt;85</div>
                   <p className="text-sm text-muted-foreground">Patient NPS Score</p>
-                  <p className="text-xs text-muted-foreground mt-2">Industry-leading satisfaction</p>
+                  <p className="text-xs text-muted-foreground mt-2">Top quartile satisfaction score</p>
                 </div>
               </div>
 
