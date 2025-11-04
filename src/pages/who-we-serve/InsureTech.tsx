@@ -90,7 +90,7 @@ const InsureTech = () => {
             <div className="max-w-4xl mx-auto mb-20">
               <h2 className="text-3xl font-heading font-bold text-center mb-8">Your Next Growth Chapter</h2>
               <p className="text-lg text-center text-muted-foreground mb-12">
-                You already own the member relationship. Now unlock the parts of healthcare that actually drive value: preventive care, diagnostics, imaging, and ongoing programs.
+                You already own the member relationship. Now unlock the parts of healthcare that drive real value: preventive care, diagnostics, imaging, and ongoing programs.
               </p>
             </div>
 
@@ -120,7 +120,7 @@ const InsureTech = () => {
                       "Health services that just work",
                       "Home-first access across cities",
                       "Predictable timelines",
-                      "Seamless branded experience"
+                      "Consistent branded experience"
                     ].map((value, i) => (
                       <div key={i} className="flex items-start space-x-2 p-3 bg-success/5 border border-success/10 rounded-lg">
                         <CheckCircle className="w-4 h-4 text-success mt-0.5 flex-shrink-0" />
@@ -155,9 +155,9 @@ const InsureTech = () => {
         <section className="py-20 bg-gradient-hero border-y border-border/50">
           <div className="container mx-auto px-6">
             <div className="max-w-5xl mx-auto">
-              <h2 className="text-3xl font-heading font-bold mb-4 text-center">Opportunities You Can Activate Nationwide</h2>
+              <h2 className="text-3xl font-heading font-bold mb-4 text-center">Complete Service Coverage Nationwide</h2>
               <p className="text-center text-muted-foreground mb-12 max-w-3xl mx-auto">
-                Complete healthcare services available across 9,000+ pincodes from Day 1
+                Full healthcare services available across 9,000+ pincodes from Day 1
               </p>
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">

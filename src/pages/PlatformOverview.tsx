@@ -51,16 +51,16 @@ const PlatformOverview = () => {
 
   const whyLabstack = [
     "Widest Provider Network: 1000+ verified labs, doctors, pharmacies, and wellness providers",
-    "Seamless Operations: Automated routing, SLAs, escalations, and fulfilment",
+    "Automated Operations: Smart routing, SLAs, escalations, and fulfillment",
     "Financial Clarity: Transparent pricing, reconciliation, and revenue analytics",
     "AI Intelligence: Smart care protocols, predictive scoring, and clinical insights",
     "Pure B2B: Non-conflict model. No exclusivity. No lock-in"
   ];
 
   const customerQuotes = [
-    "Labstack enabled us to launch new healthcare services in 14 days instead of 12 months.",
-    "Their infra helped us improve conversions by 20% with better coverage.",
-    "Prescription monetisation through Labstack improved ARPU by 15%."
+    "Labstack helped us launch new healthcare services in 14 days instead of 12 months.",
+    "Their infrastructure improved our conversions by 20% with better coverage.",
+    "Prescription monetization through Labstack boosted ARPU by 15%."
   ];
 
   return (
@@ -194,8 +194,8 @@ const PlatformOverview = () => {
                 <div className="flex items-start space-x-3">
                   <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-1" />
                   <div>
-                    <h4 className="font-semibold mb-1">Seamless EMR, EHR integrations</h4>
-                    <p className="text-sm text-muted-foreground">Connect with existing systems</p>
+                    <h4 className="font-semibold mb-1">Easy EMR, EHR integrations</h4>
+                    <p className="text-sm text-muted-foreground">Connect with your existing systems</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-3">

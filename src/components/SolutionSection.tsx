@@ -7,15 +7,15 @@ const SolutionSection = () => {
     {
       icon: Network,
       title: "Provider Network",
-      description: "1000+ verified labs, doctors, pharmacies, home care, specialised services across all tiers",
+      description: "1000+ verified labs, doctors, pharmacies, home care, and specialized services across all tiers",
       features: ["Quality-assured providers", "Nationwide coverage", "Real-time availability", "Tier-1 to Tier-3 reach"],
       gradient: "from-primary to-primary/60",
       position: "top-0 left-1/2 transform -translate-x-1/2"
     },
     {
       icon: Zap,
-      title: "Operations & Automation", 
-      description: "SLA-backed routing, fulfilment, escalations, real-time tracking with intelligent workflows",
+      title: "Operations & Automation",
+      description: "SLA backed routing, real-time tracking with intelligent workflows and instant escalations",
       features: ["Automated workflows", "Smart routing", "SLA monitoring", "Quality assurance"],
       gradient: "from-secondary to-secondary/60",
       position: "top-1/2 right-0 transform -translate-y-1/2"
@@ -23,7 +23,7 @@ const SolutionSection = () => {
     {
       icon: CreditCard,
       title: "Financials",
-      description: "Transparent pricing, automated reconciliation, billing, analytics with full visibility",
+      description: "Transparent pricing, automated billing, reconciliation, and analytics with full visibility",
       features: ["Unified billing", "Real-time analytics", "Cost optimization", "Revenue tracking"],
       gradient: "from-primary to-secondary",
       position: "bottom-0 left-1/2 transform -translate-x-1/2"
@@ -31,7 +31,7 @@ const SolutionSection = () => {
     {
       icon: Brain,
       title: "AI & Intelligence",
-      description: "Raw values, predictive scoring, quality frameworks powered by advanced intelligence",
+      description: "Raw health values, predictive scoring, and quality frameworks powered by advanced AI",
       features: ["Structured data", "Quality scoring", "Predictive insights", "Smart analytics"],
       gradient: "from-secondary to-primary",
       position: "top-1/2 left-0 transform -translate-y-1/2"
@@ -58,7 +58,7 @@ const SolutionSection = () => {
       icon: Smartphone,
       title: "Digital Platform",
       subtitle: "White-label patient experiences",
-      description: "Structured data, not PDFs. Built for engagement and retention with seamless health journeys.",
+      description: "Structured data, not PDFs. Built for engagement and retention with connected health journeys.",
       features: [
         "White-label patient flows",
         "Structured health data",
@@ -87,8 +87,8 @@ const SolutionSection = () => {
     {
       icon: Globe,
       title: "Coverage Expansion",
-      subtitle: "Tier-1 to Tier-3 instantly",
-      description: "Expand to untapped markets with quality-assured providers and local market expertise.",
+      subtitle: "Launch anywhere in India instantly",
+      description: "Expand into untapped markets with quality providers and local market expertise.",
       features: [
         "Tier-2/3 market access",
         "Quality assurance",
@@ -125,7 +125,7 @@ const SolutionSection = () => {
               </h2>
               
               <p className="text-lg lg:text-xl text-muted-foreground max-w-3xl mx-auto mb-4">
-                Labstack gives you a full healthcare delivery stack. Plug it into your product, launch care anywhere.
+                Labstack gives you a complete healthcare delivery stack. Plug it into your product and launch care services anywhere.
               </p>
             </div>
 
@@ -145,7 +145,7 @@ const SolutionSection = () => {
                         <Code className="h-10 w-10 text-primary" />
                       </div>
                       <h4 className="text-lg font-bold mb-2 group-hover:text-gradient transition-colors duration-300">APIs</h4>
-                      <p className="text-sm text-muted-foreground">Program bookings, prescriptions, home visits, and payments</p>
+                      <p className="text-sm text-muted-foreground">Program bookings, prescriptions, home visits, and patient payments</p>
                     </div>
                   </div>
 
@@ -176,8 +176,8 @@ const SolutionSection = () => {
                 <div className="bg-gradient-to-r from-destructive/10 to-success/10 border border-border rounded-xl p-6 text-center">
                   <p className="text-lg font-semibold">
                     <span className="text-destructive line-through mr-2">No stitching.</span>
-                    <span className="text-destructive line-through mr-2">No local setups.</span>
-                    <span className="text-destructive line-through">No chasing providers.</span>
+                    <span className="text-destructive line-through mr-2">No local setup.</span>
+                    <span className="text-destructive line-through">No provider chasing.</span>
                   </p>
                 </div>
               </div>
@@ -243,8 +243,8 @@ const SolutionSection = () => {
                         <Brain className="h-6 w-6 text-primary" />
                       </div>
                       <div>
-                        <h4 className="font-bold mb-2">Raw Values</h4>
-                        <p className="text-sm text-muted-foreground">Harmonise values for each service, interoperable data across services</p>
+                        <h4 className="font-bold mb-2">Raw Health Values</h4>
+                        <p className="text-sm text-muted-foreground">Harmonized values for each service, interoperable data across all services</p>
                       </div>
                     </div>
                   </div>
@@ -256,7 +256,7 @@ const SolutionSection = () => {
                       </div>
                       <div>
                         <h4 className="font-bold mb-2">Full Brand Control</h4>
-                        <p className="text-sm text-muted-foreground">Your experience, powered quietly by us</p>
+                        <p className="text-sm text-muted-foreground">Your brand experience, quietly powered by us</p>
                       </div>
                     </div>
                   </div>

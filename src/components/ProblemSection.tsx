@@ -10,32 +10,32 @@ const ProblemSection = () => {
     },
     {
       icon: Users,
-      title: "Manual ops at scale",
-      description: "Excel reconciliation, SLA chasing, fragmented vendors",
+      title: "Manual operations at scale",
+      description: "Excel sheets for reconciliation, SLA chasing, fragmented vendors",
       color: "text-destructive"
     },
     {
       icon: Lock,
       title: "Can't expand beyond metros",
-      description: "Network quality breaks in Tier 2/3 cities",
+      description: "Network quality drops in Tier 2 and Tier 3 cities",
       color: "text-secondary"
     },
     {
       icon: AlertTriangle,
       title: "Broken care loops",
-      description: "Prescriptions → diagnostics → reports never connect",
+      description: "Prescriptions, diagnostics, and reports never connect",
       color: "text-warning"
     },
     {
       icon: TrendingDown,
-      title: "Systems don't talk",
-      description: "Legacy tech requires manual stitching",
+      title: "Systems don't talk to each other",
+      description: "Legacy tech needs manual integration",
       color: "text-destructive"
     },
     {
       icon: IndianRupee,
-      title: "High CAC, flat LTV",
-      description: "Building ops instead of products",
+      title: "High customer costs, flat value",
+      description: "You're building operations instead of products",
       color: "text-primary"
     }
   ];
@@ -48,7 +48,7 @@ const ProblemSection = () => {
             Why Healthcare <span className="text-gradient">Innovation Stalls</span>
           </h2>
           <p className="mobile-subheading text-muted-foreground max-w-3xl mx-auto">
-            Every healthtech rebuilds the same infrastructure. Innovation slows. Growth stalls.
+            Every healthtech company rebuilds the same infrastructure. Innovation slows down. Growth stalls.
           </p>
         </div>
 
@@ -82,7 +82,7 @@ const ProblemSection = () => {
           <div className="inline-flex items-center space-x-3 bg-destructive/10 border border-destructive/20 px-4 sm:px-6 py-3 rounded-full mobile-touch-target">
             <AlertTriangle className="w-5 h-5 text-destructive flex-shrink-0" />
             <span className="text-destructive font-medium text-sm sm:text-base">
-              Result: Delayed launches, rising costs, stalled growth
+              Result: Launches get delayed, costs keep rising, growth stalls
             </span>
           </div>
         </div>
