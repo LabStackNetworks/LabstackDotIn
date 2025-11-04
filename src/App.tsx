@@ -31,7 +31,6 @@ import { ThemeProvider } from "@/components/ThemeProvider";
 import { Suspense, lazy } from "react";
 import Loader from "@/components/Loader";
 import ScrollToTop from "@/components/ScrollToTop";
-import RouteLoader from "@/components/RouteLoader";
 
 /**
  * Lazy-loaded Page Components
@@ -187,9 +186,6 @@ const App = () => (
         <BrowserRouter future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>
           {/* Scroll to top on route change */}
           <ScrollToTop />
-          
-          {/* Route transition loader */}
-          <RouteLoader />
           
           {/* Suspense boundary for lazy-loaded routes */}
           <Suspense fallback={<Loader />}>
