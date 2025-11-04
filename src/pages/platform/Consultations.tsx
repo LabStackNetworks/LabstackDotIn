@@ -67,7 +67,7 @@ const Consultations = () => {
           <div className="container mx-auto px-6">
             <div className="max-w-4xl mx-auto text-center">
               <p className="text-lg text-muted-foreground">
-                Pan-India teleconsultation platform that healthcare businesses use to launch online and offline consultation services with proprietary video SaaS, integrated EMR, and e-prescriptions.
+                Pan-India consultation platform that healthcare businesses use to launch online and offline consultation services with proprietary video SaaS, integrated EMR, and e-prescriptions.
               </p>
             </div>
           </div>

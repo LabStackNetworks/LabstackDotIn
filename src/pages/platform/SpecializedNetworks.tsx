@@ -79,15 +79,23 @@ const SpecializedNetworks = () => {
                 />
               </div>
             </div>
+          </div>
+        </section>
 
-            {/* Definition Section */}
-            <div className="max-w-4xl mx-auto mb-20 text-center bg-gradient-hero rounded-2xl p-8 border border-border/50">
+        {/* Definition Section */}
+        <section className="py-12 bg-gradient-hero border-b border-border/50">
+          <div className="container mx-auto px-6">
+            <div className="max-w-4xl mx-auto text-center">
               <p className="text-lg text-muted-foreground">
-                Specialized healthcare networks platform that businesses use to launch ambulance, vision, dental, mental health, physiotherapy, and home care services through one API with standardized workflows and consolidated operations.
+                Specialized healthcare networks platform that businesses use to launch ambulance, vision, dental, mental health, physiotherapy, and home care services through one API with standardized workflows.
               </p>
             </div>
+          </div>
+        </section>
 
-            {/* Services Grid */}
+        {/* Hero */}
+        <section className="py-20 lg:py-32">
+          <div className="container mx-auto px-6">
             <div className="max-w-6xl mx-auto mb-20">
               <h2 className="text-3xl font-heading font-bold text-center mb-4">All Specialized Services. One Platform.</h2>
               <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
