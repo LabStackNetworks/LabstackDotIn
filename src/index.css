@@ -632,7 +632,7 @@ p, span, div, .font-body {
   }
 
   .animate-scroll {
-    animation: scroll 75s linear infinite;
+    animation: scroll 100s linear infinite;
   }
   
   .group:hover .animate-scroll {
