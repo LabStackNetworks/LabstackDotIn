@@ -203,7 +203,7 @@ const BrokersTech = () => {
               </div>
             </div>
             <p className="mt-4 text-sm font-semibold text-primary">
-              Platform approach: 4-5x lower total cost, zero tech risk, live in 2 weeks
+              Platform approach: 4-5x lower total cost, zero tech risk, live in 14 days
             </p>
           </div>
 
@@ -292,7 +292,7 @@ const BrokersTech = () => {
               },
               {
                 question: "Can I integrate brokerage platform with my existing tools?",
-                answer: "Most modern platforms provide API access for integration with CRMs (Salesforce, Zoho), accounting software (Tally, QuickBooks), communication tools (WhatsApp Business, Email marketing), and insurer portals. Integration typically takes 1-2 weeks post-platform setup. Check for pre-built connectors vs. custom API development needs."
+                answer: "Most modern platforms provide API access for integration with CRMs (Salesforce, Zoho), accounting software (Tally, QuickBooks), communication tools (WhatsApp Business, Email marketing), and insurer portals. Integration typically takes 14 days post-platform setup. Check for pre-built connectors vs. custom API development needs."
               },
               {
                 question: "What happens to my data if I switch platforms later?",

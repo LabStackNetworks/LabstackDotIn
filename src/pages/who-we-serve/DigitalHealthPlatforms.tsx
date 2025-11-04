@@ -108,7 +108,7 @@ const DigitalHealthPlatforms = () => {
               <div className="space-y-4">
                 <h3 className="text-2xl font-heading font-bold mb-6">With Labstack</h3>
                 {[
-                  "48 hour launch with infra ready nationwide",
+                  "14-day launch with infra ready nationwide",
                   "One API • One Console • One Network",
                   "9K+ pincodes, 30K+ orders/month capacity",
                   "Pure B2B model where your customers remain yours"

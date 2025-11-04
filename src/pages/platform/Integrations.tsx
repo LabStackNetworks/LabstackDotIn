@@ -34,7 +34,7 @@ const Integrations = () => {
               "Single API for all healthcare services",
               "Standardized booking, reporting, and billing flows",
               "White-label widgets for booking and consultations",
-              "48-hour integration with pre-built SDKs"
+              "14-day integration with pre-built SDKs"
             ]}
           />
         </div>

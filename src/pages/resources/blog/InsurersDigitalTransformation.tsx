@@ -193,7 +193,7 @@ const InsurersDigitalTransformation = () => {
               },
               {
                 question: "Can I integrate with my existing TPA and policy administration systems?",
-                answer: "Yes, our platform provides REST APIs and webhooks that integrate with major TPA systems, policy administration platforms, and core insurance systems. Standard integrations available for top 10 TPAs in India. Custom integrations completed within 2-3 weeks."
+                answer: "Yes, our platform provides REST APIs and webhooks that integrate with major TPA systems, policy administration platforms, and core insurance systems. Standard integrations available for top 10 TPAs in India. Custom integrations completed within 14 days."
               },
               {
                 question: "How do you ensure data security and regulatory compliance?",

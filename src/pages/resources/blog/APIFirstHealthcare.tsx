@@ -247,7 +247,7 @@ const APIFirstHealthcare = () => {
                   <tr>
                     <td className="p-4 text-muted-foreground">Time to Add New Service Line</td>
                     <td className="p-4 text-center font-bold">6-9 months</td>
-                    <td className="p-4 text-center font-bold text-success">1-2 weeks</td>
+                    <td className="p-4 text-center font-bold text-success">14 days</td>
                   </tr>
                 </tbody>
               </table>

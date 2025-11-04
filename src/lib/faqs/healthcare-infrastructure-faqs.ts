@@ -17,7 +17,7 @@ export const healthcareInfrastructureFAQs = [
   },
   {
     question: "What is the implementation timeline?",
-    answer: "14 days for basic integration. 2-3 weeks for full white-label deployment with custom workflows. 4-6 weeks for complex enterprise integrations with existing systems."
+    answer: "14 days for basic integration. 3-4 weeks for full white-label deployment with complex custom workflows and enterprise system integrations."
   },
   {
     question: "Do you provide operations support?",

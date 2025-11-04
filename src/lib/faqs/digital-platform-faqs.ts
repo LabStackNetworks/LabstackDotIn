@@ -50,6 +50,6 @@ export const digitalPlatformFAQs = [
   },
   {
     question: "How quickly can we launch a white-labeled patient experience?",
-    answer: "Basic white-label booking and reports in 1 week. Fully customized experience with your design system in 2-3 weeks. Complex integrations with existing apps in 4-6 weeks. Faster than building from scratch."
+    answer: "14 days for basic white-label booking and reports. Fully customized experience with your design system in 3-4 weeks for complex integrations with existing apps. Faster than building from scratch."
   }
 ];

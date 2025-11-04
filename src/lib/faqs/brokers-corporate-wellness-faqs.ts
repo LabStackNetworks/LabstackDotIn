@@ -7,7 +7,7 @@ export const brokersCorporateWellnessFAQs = [
   // Corporate Wellness Program Setup
   {
     question: "How quickly can I launch wellness programs for corporate clients across India?",
-    answer: "14 days for basic wellness rollout (diagnostics, teleconsults, pharmacy) covering employees across metros (Mumbai, Delhi, Bangalore, Pune, Hyderabad, Chennai) and tier-2 cities (Indore, Jaipur, Coimbatore, Kochi, Nagpur, Chandigarh). 3-4 weeks for customized programs with white-label branding, custom benefits design, and integration with client's HRMS. Works for corporates from 100 to 100,000+ employees across 50+ office locations nationwide."
+    answer: "14 days for full wellness rollout (diagnostics, teleconsults, pharmacy, white-label branding) covering employees across metros (Mumbai, Delhi, Bangalore, Pune, Hyderabad, Chennai) and tier-2 cities (Indore, Jaipur, Coimbatore, Kochi, Nagpur, Chandigarh). Complex enterprise integrations with custom HRMS workflows may take 3-4 weeks. Works for corporates from 100 to 100,000+ employees across 50+ office locations nationwide."
   },
   {
     question: "What wellness services can I offer to differentiate from competitor brokers?",
@@ -73,7 +73,7 @@ export const brokersCorporateWellnessFAQs = [
   },
   {
     question: "Can I integrate OPD services into my existing broker platform or member app?",
-    answer: "API-first integration: (1) Headless APIs—integrate booking, eligibility checks, order tracking into your existing broker platform/portal, (2) White-label widgets—embeddable booking flows if you don't want to build UI, (3) Webhooks—real-time notifications for order status, reports ready, claims updates, (4) SSO integration—single sign-on so employees don't need separate login, (5) Custom branding—your logo, colors, fonts across all touchpoints, (6) Mobile SDKs—if you have iOS/Android apps for members. Integration timeline: 1-2 weeks for basic API integration, 3-4 weeks for full white-label customization. Technical requirements: REST API knowledge, webhook handling, basic frontend for displaying booking confirmations. We provide: Sandbox environment, API documentation, Postman collections, integration support, developer office hours."
+    answer: "API-first integration: (1) Headless APIs—integrate booking, eligibility checks, order tracking into your existing broker platform/portal, (2) White-label widgets—embeddable booking flows if you don't want to build UI, (3) Webhooks—real-time notifications for order status, reports ready, claims updates, (4) SSO integration—single sign-on so employees don't need separate login, (5) Custom branding—your logo, colors, fonts across all touchpoints, (6) Mobile SDKs—if you have iOS/Android apps for members. Integration timeline: 14 days from start to production launch including full white-label customization. Technical requirements: REST API knowledge, webhook handling, basic frontend for displaying booking confirmations. We provide: Sandbox environment, API documentation, Postman collections, integration support, developer office hours."
   },
   {
     question: "What marketing support do you provide to help me sell wellness programs?",

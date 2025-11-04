@@ -285,7 +285,7 @@ const InsurersTPAs = () => {
             </div>
             <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {[
-                { step: "1", title: "Integrate via API or Console", description: "48-hour integration with pre-built SDKs or use console for no-code setup" },
+                { step: "1", title: "Integrate via API or Console", description: "14-day integration with pre-built SDKs or use console for no-code setup" },
                 { step: "2", title: "Configure Services", description: "Set SKU-level controls, member eligibility, and fraud detection rules" },
                 { step: "3", title: "Launch Nationwide", description: "Go live across 9,000+ pincodes with automated fulfillment" },
                 { step: "4", title: "Monitor & Optimize", description: "Real-time dashboards for claims, fraud detection, and NPS" }

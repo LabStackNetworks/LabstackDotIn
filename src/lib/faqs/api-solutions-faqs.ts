@@ -7,7 +7,7 @@ export const apiSolutionsFAQs = [
   // Integration & Setup
   {
     question: "How long does it take to integrate Labstack APIs into our platform?",
-    answer: "Basic integration in 2-4 hours using pre-built SDKs (JavaScript, Python, PHP, Java). Production-ready in 1-2 weeks including authentication, webhooks, and testing. Full white-label customization in 2-3 weeks."
+    answer: "Full production launch in 14 days from start to finish. Week 1: API integration using pre-built SDKs (JavaScript, Python, PHP, Java), sandbox testing, authentication setup. Week 2: Production deployment with webhooks, white-label branding, and go-live testing."
   },
   {
     question: "Do you provide embeddable widgets or only backend APIs?",
@@ -107,7 +107,7 @@ export const apiSolutionsFAQs = [
   },
   {
     question: "Can I integrate with health record systems like Practo Ray, HealthPlix, or other Indian platforms?",
-    answer: "Yes. HL7/FHIR support for health record system integration. Bidirectional data sync—push care plans to Labstack, pull completed test results back into your system. Custom connectors for popular Indian platforms. Integration timeline: 2-3 weeks."
+    answer: "Yes. HL7/FHIR support for health record system integration. Bidirectional data sync—push care plans to Labstack, pull completed test results back into your system. Custom connectors for popular Indian platforms. Integration timeline: 14 days for standard platforms."
   },
   {
     question: "How do we handle pricing transparency for end users?",

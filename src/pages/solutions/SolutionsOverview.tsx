@@ -28,10 +28,10 @@ const SolutionsOverview = () => {
     {
       icon: Code,
       title: "API Solutions",
-      description: "Developer-first healthcare APIs. One integration for diagnostics, pharmacy, consults. 48-hour setup with SDKs and webhooks.",
+      description: "Developer-first healthcare APIs. One integration for diagnostics, pharmacy, consults. 14-day setup with SDKs and webhooks.",
       link: "/solutions/api-solutions",
       color: "success",
-      features: ["48-hour setup", "One API", "Pre-built SDKs"]
+      features: ["14-day setup", "One API", "Pre-built SDKs"]
     },
     {
       icon: Network,
@@ -87,7 +87,7 @@ const SolutionsOverview = () => {
             keyPoints={[
               "Healthcare Infrastructure: Complete backbone for diagnostics, pharmacy, consultations",
               "Digital Platform: White-label journeys and care programs",
-              "API Solutions: Developer-first integration in 48 hours",
+              "API Solutions: Developer-first integration in 14 days",
               "Coverage Expansion: Scale to Tier-2/3 cities overnight"
             ]}
           />
@@ -221,7 +221,7 @@ const SolutionsOverview = () => {
                   </div>
                   <h3 className="font-heading font-bold mb-3">Start Simple</h3>
                   <p className="text-sm text-muted-foreground">
-                    Begin with API access. Integrate diagnostics, pharmacy, or consultations with 48-hour setup.
+                    Begin with API access. Integrate diagnostics, pharmacy, or consultations with 14-day setup.
                   </p>
                 </div>
 

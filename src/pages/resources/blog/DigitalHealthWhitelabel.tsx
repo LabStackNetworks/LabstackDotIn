@@ -237,7 +237,7 @@ const DigitalHealthWhitelabel = () => {
             <p className="text-muted-foreground">
               Large insurer white-labeled platform but needed custom integration with policy administration system 
               for real-time eligibility checks. API integration completed in 3 weeks. Custom copay logic 
-              implemented in 2 weeks. Total time: 8 weeks from start to full-scale launch vs 18+ months if built in-house.
+              implemented in 14 days. Total time: 8 weeks from start to full-scale launch vs 18+ months if built in-house.
             </p>
           </div>
 

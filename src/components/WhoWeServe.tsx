@@ -108,7 +108,7 @@ const WhoWeServe = () => {
         "Investors want nationwide coverage yesterday"
       ],
       benefits: [
-        "48 hour launch with infra ready nationwide",
+        "14-day launch with infra ready nationwide",
         "One API • One Console • One Network",
         "30K+ orders/month, 5K+ partners",
         "Pure B2B model where your customers remain yours"

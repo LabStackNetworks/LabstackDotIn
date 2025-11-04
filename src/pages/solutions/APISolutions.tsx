@@ -225,7 +225,7 @@ const APISolutions = () => {
                       {
                         mode: "RESTful APIs",
                         useCase: "Full programmatic control of healthcare workflows",
-                        setup: "48-hour integration"
+                        setup: "14-day integration"
                       },
                       {
                         mode: "Embeddable Widgets",

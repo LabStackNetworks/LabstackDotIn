@@ -212,7 +212,7 @@ const WhoWeServeOverview = () => {
                 <div className="bg-card/50 backdrop-blur-sm rounded-xl p-6 border border-border/20">
                   <h3 className="font-heading font-bold mb-3">Launch in Days, Not Months</h3>
                   <p className="text-sm text-muted-foreground">
-                    48-hour integration with pre-built SDKs. Go from idea to live healthcare services across 9,000+ pincodes in 14 days.
+                    14-day integration with pre-built SDKs. Go from idea to live healthcare services across 9,000+ pincodes in 14 days.
                   </p>
                 </div>
 

@@ -141,6 +141,6 @@ export const insurersTPAsFAQs = [
   },
   {
     question: "How quickly can we launch OPD benefits for our members?",
-    answer: "14 days for basic integration (diagnostics, consultations, pharmacy with standard rules). 2-3 weeks for custom eligibility rules, white-label branding, and member communication templates. 4-6 weeks for complex enterprise integrations with legacy policy admin systems, custom fraud rules, and multi-TPA workflows. Phased rollout recommended: Pilot with 1-2 corporate clients (1,000-5,000 lives), validate workflows, then scale to full member base. Post-launch support: Dedicated account manager, 24/7 ops support, monthly business reviews."
+    answer: "14 days for basic integration (diagnostics, consultations, pharmacy with standard rules). 3-4 weeks for custom eligibility rules, white-label branding, member communication templates, and complex enterprise integrations with legacy policy admin systems, custom fraud rules, and multi-TPA workflows. Phased rollout recommended: Pilot with 1-2 corporate clients (1,000-5,000 lives), validate workflows, then scale to full member base. Post-launch support: Dedicated account manager, 24/7 ops support, monthly business reviews."
   }
 ];

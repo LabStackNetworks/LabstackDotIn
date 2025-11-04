@@ -147,7 +147,7 @@ export const homeFAQs = [
   },
   {
     question: "How do I integrate Labstack APIs into my platform?",
-    answer: "RESTful APIs with comprehensive documentation, SDKs for multiple languages, and sandbox environment for testing. Integration takes 2-4 hours for developers. Direct engineering support provided during rollout."
+    answer: "RESTful APIs with comprehensive documentation, SDKs for multiple languages, and sandbox environment for testing. Full production launch takes 14 days. Direct engineering support provided during rollout."
   },
   {
     question: "Is there a minimum commitment or contract period?",
@@ -171,7 +171,7 @@ export const homeFAQs = [
   },
   {
     question: "How fast can platforms launch healthcare services using API or widgets?",
-    answer: "2-4 hours for basic API integration with SDKs. 1-2 weeks for full white-label launch with custom branding. Widgets can be embedded in 1 day for quick start."
+    answer: "14 days for full production launch with white-label branding. Week 1: API integration with SDKs, authentication, and testing. Week 2: Production deployment with custom branding and go-live. Widgets can be embedded in 1 day for quick prototypes."
   },
   {
     question: "Do we keep full control of our app's branding and user experience?",

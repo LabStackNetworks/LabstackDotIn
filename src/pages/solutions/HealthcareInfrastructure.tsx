@@ -358,7 +358,7 @@ const HealthcareInfrastructure = () => {
                   </h3>
                   <ul className="space-y-4">
                     <li className="text-sm text-muted-foreground">
-                      <strong className="text-foreground">48-hour launch</strong> with infrastructure ready across all services
+                      <strong className="text-foreground">14-day launch</strong> with infrastructure ready across all services
                     </li>
                     <li className="text-sm text-muted-foreground">
                       <strong className="text-foreground">SLA-backed fulfillment</strong> with unified billing and compliance
