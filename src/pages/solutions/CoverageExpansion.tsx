@@ -72,7 +72,7 @@ const CoverageExpansion = () => {
               </div>
 
               <h1 className="text-4xl lg:text-6xl font-heading font-bold mb-6">
-                Tier-1 to Tier-3 <span className="text-gradient">Instantly</span>
+                Metros to Tier-3 <span className="text-gradient">Instantly</span>
               </h1>
 
               <p className="text-lg lg:text-xl text-muted-foreground mb-8">
@@ -170,7 +170,7 @@ const CoverageExpansion = () => {
                   <tbody>
                     {[
                       {
-                        tier: "Tier-1 (Metros)",
+                        tier: "Metros",
                         coverage: "Complete coverage",
                         services: "All services: diagnostics, pharmacy, consultations, home care, specialized"
                       },
