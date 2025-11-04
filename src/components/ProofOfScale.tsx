@@ -180,7 +180,7 @@ const ProofOfScale = () => {
                         Healthcare Network Across India
                       </div>
                       <div className="text-xs text-muted-foreground/70 mt-1">
-                        2,600+ Active Service Centers
+                        9,000+ Pincodes
                       </div>
                     </div>
                   </div>

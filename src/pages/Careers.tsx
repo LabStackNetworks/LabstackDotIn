@@ -155,9 +155,9 @@ const Careers = () => {
               <p className="text-lg text-muted-foreground mb-8">
                 Send your resume and a note about why you want to join Labstack.
               </p>
-              <a href="mailto:careers@labstack.in">
+              <a href="mailto:contact@labstack.in">
                 <Button size="lg" className="btn-gradient">
-                  Email us at careers@labstack.in
+                  Email us at contact@labstack.in
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
               </a>
