@@ -7,7 +7,7 @@ const ProofOfScale = () => {
   const [isMapExpanded, setIsMapExpanded] = useState(false);
   const [zoomLevel, setZoomLevel] = useState(1);
 
-  // Real Indian cities - Metros, Tier-1, Tier-2, Tier-3
+  // Real Indian cities - Progressive loading based on zoom
   const allCities = [
     // Major Metros (Tier-0) - Always visible
     { name: 'Delhi NCR', x: 40, y: 25, tier: 0, hasHome: true, hasCenter: true, hasPharmacy: true, hasConsult: true },
@@ -83,14 +83,79 @@ const ProofOfScale = () => {
     { name: 'Bhavnagar', x: 16, y: 44, tier: 3, hasHome: true, hasCenter: false, hasPharmacy: false, hasConsult: false },
     { name: 'Muzaffarpur', x: 64, y: 32, tier: 3, hasHome: true, hasCenter: false, hasPharmacy: true, hasConsult: false },
     { name: 'Bilaspur', x: 58, y: 46, tier: 3, hasHome: true, hasCenter: false, hasPharmacy: false, hasConsult: false },
+    { name: 'Gorakhpur', x: 57, y: 30, tier: 3, hasHome: true, hasCenter: false, hasPharmacy: true, hasConsult: false },
+    { name: 'Cuttack', x: 76, y: 44, tier: 3, hasHome: true, hasCenter: false, hasPharmacy: false, hasConsult: false },
+    { name: 'Sangli', x: 24, y: 53, tier: 3, hasHome: true, hasCenter: false, hasPharmacy: true, hasConsult: false },
+    { name: 'Belgavi', x: 26, y: 69, tier: 3, hasHome: true, hasCenter: false, hasPharmacy: false, hasConsult: false },
+    { name: 'Ambala', x: 37, y: 21, tier: 3, hasHome: true, hasCenter: false, hasPharmacy: true, hasConsult: false },
+    { name: 'Tumkur', x: 31, y: 76, tier: 3, hasHome: true, hasCenter: false, hasPharmacy: false, hasConsult: false },
+    { name: 'Erode', x: 29, y: 73, tier: 3, hasHome: true, hasCenter: false, hasPharmacy: true, hasConsult: false },
+    { name: 'Kannur', x: 26, y: 79, tier: 3, hasHome: true, hasCenter: false, hasPharmacy: false, hasConsult: false },
+    { name: 'Karnal', x: 39, y: 23, tier: 3, hasHome: true, hasCenter: false, hasPharmacy: true, hasConsult: false },
+
+    // Tier-4 Cities - Visible at zoom 1.6+
+    { name: 'Rohtak', x: 38, y: 24, tier: 4, hasHome: true, hasCenter: false, hasPharmacy: false, hasConsult: false },
+    { name: 'Panipat', x: 39, y: 23, tier: 4, hasHome: true, hasCenter: false, hasPharmacy: true, hasConsult: false },
+    { name: 'Firozabad', x: 45, y: 28, tier: 4, hasHome: true, hasCenter: false, hasPharmacy: false, hasConsult: false },
+    { name: 'Mathura', x: 42, y: 28, tier: 4, hasHome: true, hasCenter: false, hasPharmacy: true, hasConsult: false },
+    { name: 'Haridwar', x: 40, y: 22, tier: 4, hasHome: true, hasCenter: false, hasPharmacy: false, hasConsult: false },
+    { name: 'Meerut', x: 42, y: 24, tier: 4, hasHome: true, hasCenter: false, hasPharmacy: true, hasConsult: false },
+    { name: 'Saharanpur', x: 41, y: 23, tier: 4, hasHome: true, hasCenter: false, hasPharmacy: false, hasConsult: false },
+    { name: 'Jhansi', x: 44, y: 35, tier: 4, hasHome: true, hasCenter: false, hasPharmacy: true, hasConsult: false },
+    { name: 'Satna', x: 50, y: 37, tier: 4, hasHome: true, hasCenter: false, hasPharmacy: false, hasConsult: false },
+    { name: 'Korba', x: 58, y: 45, tier: 4, hasHome: true, hasCenter: false, hasPharmacy: true, hasConsult: false },
+    { name: 'Dhanbad', x: 70, y: 39, tier: 4, hasHome: true, hasCenter: false, hasPharmacy: false, hasConsult: false },
+    { name: 'Asansol', x: 72, y: 38, tier: 4, hasHome: true, hasCenter: false, hasPharmacy: true, hasConsult: false },
+    { name: 'Darjeeling', x: 75, y: 31, tier: 4, hasHome: true, hasCenter: false, hasPharmacy: false, hasConsult: false },
+    { name: 'Gangtok', x: 78, y: 29, tier: 4, hasHome: true, hasCenter: false, hasPharmacy: true, hasConsult: false },
+    { name: 'Imphal', x: 87, y: 35, tier: 4, hasHome: true, hasCenter: false, hasPharmacy: false, hasConsult: false },
+    { name: 'Shillong', x: 86, y: 32, tier: 4, hasHome: true, hasCenter: false, hasPharmacy: true, hasConsult: false },
+    { name: 'Dibrugarh', x: 91, y: 31, tier: 4, hasHome: true, hasCenter: false, hasPharmacy: false, hasConsult: false },
+    { name: 'Silchar', x: 87, y: 36, tier: 4, hasHome: true, hasCenter: false, hasPharmacy: false, hasConsult: false },
+    { name: 'Sambalpur', x: 76, y: 46, tier: 4, hasHome: true, hasCenter: false, hasPharmacy: true, hasConsult: false },
+    { name: 'Brahmapur', x: 78, y: 48, tier: 4, hasHome: true, hasCenter: false, hasPharmacy: false, hasConsult: false },
+    { name: 'Rajahmundry', x: 54, y: 70, tier: 4, hasHome: true, hasCenter: false, hasPharmacy: true, hasConsult: false },
+    { name: 'Kakinada', x: 57, y: 69, tier: 4, hasHome: true, hasCenter: false, hasPharmacy: false, hasConsult: false },
+    { name: 'Nellore', x: 46, y: 77, tier: 4, hasHome: true, hasCenter: false, hasPharmacy: true, hasConsult: false },
+    { name: 'Kurnool', x: 42, y: 68, tier: 4, hasHome: true, hasCenter: false, hasPharmacy: false, hasConsult: false },
+    { name: 'Anantapur', x: 40, y: 70, tier: 4, hasHome: true, hasCenter: false, hasPharmacy: true, hasConsult: false },
+    { name: 'Kadapa', x: 41, y: 73, tier: 4, hasHome: true, hasCenter: false, hasPharmacy: false, hasConsult: false },
+    { name: 'Nizamabad', x: 44, y: 60, tier: 4, hasHome: true, hasCenter: false, hasPharmacy: true, hasConsult: false },
+    { name: 'Karimnagar', x: 50, y: 62, tier: 4, hasHome: true, hasCenter: false, hasPharmacy: false, hasConsult: false },
+    { name: 'Raichur', x: 38, y: 68, tier: 4, hasHome: true, hasCenter: false, hasPharmacy: true, hasConsult: false },
+    { name: 'Bijapur', x: 28, y: 66, tier: 4, hasHome: true, hasCenter: false, hasPharmacy: false, hasConsult: false },
+    { name: 'Gulbarga', x: 35, y: 63, tier: 4, hasHome: true, hasCenter: false, hasPharmacy: true, hasConsult: false },
+    { name: 'Hubli', x: 27, y: 69, tier: 4, hasHome: true, hasCenter: false, hasPharmacy: false, hasConsult: false },
+    { name: 'Davangere', x: 30, y: 72, tier: 4, hasHome: true, hasCenter: false, hasPharmacy: true, hasConsult: false },
+    { name: 'Shimoga', x: 28, y: 75, tier: 4, hasHome: true, hasCenter: false, hasPharmacy: false, hasConsult: false },
+    { name: 'Udupi', x: 26, y: 77, tier: 4, hasHome: true, hasCenter: false, hasPharmacy: true, hasConsult: false },
+    { name: 'Thrissur', x: 27, y: 80, tier: 4, hasHome: true, hasCenter: false, hasPharmacy: false, hasConsult: false },
+    { name: 'Kollam', x: 27, y: 84, tier: 4, hasHome: true, hasCenter: false, hasPharmacy: true, hasConsult: false },
+    { name: 'Palakkad', x: 28, y: 79, tier: 4, hasHome: true, hasCenter: false, hasPharmacy: false, hasConsult: false },
+    { name: 'Alappuzha', x: 27, y: 82, tier: 4, hasHome: true, hasCenter: false, hasPharmacy: true, hasConsult: false },
+    { name: 'Tiruchirappalli', x: 33, y: 78, tier: 4, hasHome: true, hasCenter: false, hasPharmacy: false, hasConsult: false },
+    { name: 'Thanjavur', x: 34, y: 80, tier: 4, hasHome: true, hasCenter: false, hasPharmacy: true, hasConsult: false },
+    { name: 'Dindigul', x: 31, y: 80, tier: 4, hasHome: true, hasCenter: false, hasPharmacy: false, hasConsult: false },
+    { name: 'Pudukkottai', x: 34, y: 82, tier: 4, hasHome: true, hasCenter: false, hasPharmacy: true, hasConsult: false },
+    { name: 'Cuddalore', x: 36, y: 79, tier: 4, hasHome: true, hasCenter: false, hasPharmacy: false, hasConsult: false },
+    { name: 'Tiruvannamalai', x: 37, y: 78, tier: 4, hasHome: true, hasCenter: false, hasPharmacy: true, hasConsult: false },
+    { name: 'Hosur', x: 33, y: 76, tier: 4, hasHome: true, hasCenter: false, hasPharmacy: false, hasConsult: false },
+    { name: 'Pondicherry', x: 37, y: 80, tier: 4, hasHome: true, hasCenter: false, hasPharmacy: true, hasConsult: false },
+    { name: 'Gandhidham', x: 14, y: 38, tier: 4, hasHome: true, hasCenter: false, hasPharmacy: false, hasConsult: false },
+    { name: 'Junagadh', x: 15, y: 42, tier: 4, hasHome: true, hasCenter: false, hasPharmacy: true, hasConsult: false },
+    { name: 'Anand', x: 17, y: 41, tier: 4, hasHome: true, hasCenter: false, hasPharmacy: false, hasConsult: false },
+    { name: 'Bharuch', x: 17, y: 43, tier: 4, hasHome: true, hasCenter: false, hasPharmacy: true, hasConsult: false },
+    { name: 'Valsad', x: 18, y: 44, tier: 4, hasHome: true, hasCenter: false, hasPharmacy: false, hasConsult: false },
+    { name: 'Navsari', x: 17, y: 44, tier: 4, hasHome: true, hasCenter: false, hasPharmacy: true, hasConsult: false },
   ];
 
-  // Filter cities based on zoom level
+  // Filter cities based on zoom level for progressive disclosure
   const getVisibleCities = () => {
-    if (zoomLevel >= 1.4) return allCities; // Show all at high zoom
-    if (zoomLevel >= 1.2) return allCities.filter(c => c.tier <= 2); // Show metros + tier-1 + tier-2
+    if (zoomLevel >= 1.6) return allCities; // Show all 120 cities at highest zoom
+    if (zoomLevel >= 1.4) return allCities.filter(c => c.tier <= 3); // Show up to tier-3
+    if (zoomLevel >= 1.2) return allCities.filter(c => c.tier <= 2); // Show up to tier-2
     if (zoomLevel >= 1.0) return allCities.filter(c => c.tier <= 1); // Show metros + tier-1
-    return allCities.filter(c => c.tier === 0); // Show only metros
+    return allCities.filter(c => c.tier === 0); // Show only metros at base zoom
   };
 
   const visibleCities = getVisibleCities();
@@ -210,7 +275,8 @@ const ProofOfScale = () => {
                       const sizeClass = 
                         city.tier === 0 ? 'w-4 h-4' :
                         city.tier === 1 ? 'w-3 h-3' :
-                        city.tier === 2 ? 'w-2.5 h-2.5' : 'w-2 h-2';
+                        city.tier === 2 ? 'w-2.5 h-2.5' :
+                        city.tier === 3 ? 'w-2 h-2' : 'w-1.5 h-1.5';
                       
                       const colorClass = 
                         city.hasHome && city.hasCenter && city.hasPharmacy && city.hasConsult ? 'bg-primary' :
