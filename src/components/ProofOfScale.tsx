@@ -222,12 +222,12 @@ const ProofOfScale = () => {
                       
                       return (
                         <div 
-                          key={index}
-                          className="absolute group cursor-pointer transition-opacity duration-300"
+                          key={`city-${index}-${city.name}`}
+                          className="absolute group/city isolate cursor-pointer transition-opacity duration-300"
                           style={{ top: `${city.y}%`, left: `${city.x}%` }}
                         >
-                          <div className={`${sizeClass} ${colorClass} rounded-full ${animateClass}`}></div>
-                          <div className="absolute -top-16 left-1/2 transform -translate-x-1/2 bg-card/95 backdrop-blur-sm text-xs px-3 py-2 rounded-lg shadow-xl opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap z-50 border border-border/50">
+                          <div className={`${sizeClass} ${colorClass} rounded-full ${animateClass} relative z-10`}></div>
+                          <div className="absolute -top-16 left-1/2 transform -translate-x-1/2 bg-card/95 backdrop-blur-sm text-xs px-3 py-2 rounded-lg shadow-xl opacity-0 invisible group-hover/city:opacity-100 group-hover/city:visible transition-all duration-200 whitespace-nowrap pointer-events-none border border-border/50" style={{ zIndex: 100 }}>
                             <div className="font-semibold mb-1">{city.name}</div>
                             <div className="flex flex-col gap-0.5 text-[10px]">
                               {city.hasHome && <div className="flex items-center gap-1"><span className="w-1.5 h-1.5 bg-primary rounded-full"></span>Home Sample</div>}
