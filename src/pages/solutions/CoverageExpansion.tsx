@@ -299,7 +299,7 @@ const CoverageExpansion = () => {
           </div>
         </section>
 
-        {/* Internal Links */}
+        {/* Related Resources */}
         <section className="py-20 bg-background">
           <div className="container mx-auto px-6">
             <div className="max-w-5xl mx-auto">
@@ -325,9 +325,6 @@ const CoverageExpansion = () => {
           </div>
         </section>
       </main>
-      
-      {/* Related Resources */}
-      <RelatedBlogs category="Digital Health" limit={3} />
       
       <Footer />
     </div>

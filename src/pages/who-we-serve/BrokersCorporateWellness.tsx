@@ -1,16 +1,29 @@
-import { TrendingUp, Target, CheckCircle, ArrowRight, Zap } from "lucide-react";
+import { TrendingUp, Target, CheckCircle, ArrowRight, Zap, Shield } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FAQ from "@/components/FAQ";
 import SEOHead from "@/components/SEOHead";
+import TLDR from "@/components/design-system/TLDR";
 import { Link } from "react-router-dom";
-import { generateFAQSchema } from "@/lib/structured-data";
+import { generateFAQSchema, generateBreadcrumbSchema, generateServiceSchema } from "@/lib/structured-data";
 import { brokersCorporateWellnessFAQs } from "@/lib/faqs/brokers-corporate-wellness-faqs";
-import RelatedBlogs from "@/components/RelatedBlogs";
 
 const BrokersCorporateWellness = () => {
-  const structuredData = generateFAQSchema(brokersCorporateWellnessFAQs);
+  const breadcrumbSchema = generateBreadcrumbSchema([
+    { name: "Home", url: "https://labstack.in" },
+    { name: "Who We Serve", url: "https://labstack.in/who-we-serve" },
+    { name: "Brokers & Corporate Wellness", url: "https://labstack.in/who-we-serve/brokers-corporate-wellness" }
+  ]);
+
+  const serviceSchema = generateServiceSchema({
+    name: "OPD Benefits Platform for Insurance Brokers",
+    description: "White-label OPD benefits platform for insurance brokers and corporate wellness programs. Nationwide diagnostics, pharmacy, consultations delivery.",
+    url: "https://labstack.in/who-we-serve/brokers-corporate-wellness"
+  });
+
+  const faqSchema = generateFAQSchema(brokersCorporateWellnessFAQs);
+  const structuredData = [faqSchema, breadcrumbSchema, serviceSchema];
 
   return (
     <div className="min-h-screen bg-background">
@@ -23,6 +36,31 @@ const BrokersCorporateWellness = () => {
       />
       <Header />
       <main className="pt-20">
+        {/* Hidden TL;DR for AI crawlers */}
+        <div className="sr-only" aria-hidden="true" style={{position: 'absolute', left: '-9999px'}}>
+          <TLDR 
+            summary="White-label OPD benefits platform for insurance brokers and corporate wellness programs. Launch diagnostics, pharmacy, consultations nationwide. Grow ARPU ~15% via prescription monetization."
+            keyPoints={[
+              "White-label OPD benefits for policy differentiation",
+              "Delivery modes: home collection, teleconsult, center visits, pharmacy delivery",
+              "Nationwide coverage across 9,000+ pincodes from metros to Tier-3",
+              "Prescription monetization to grow ARPU by ~15%",
+              "Pure B2B platform—your clients remain yours"
+            ]}
+          />
+        </div>
+
+        {/* Definition Section */}
+        <section className="py-12 bg-gradient-hero border-b border-border/50">
+          <div className="container mx-auto px-6">
+            <div className="max-w-4xl mx-auto text-center">
+              <p className="text-lg text-muted-foreground">
+                White-label OPD benefits platform that insurance brokers and corporate wellness programs use to differentiate policies and monetize out-patient services across India.
+              </p>
+            </div>
+          </div>
+        </section>
+
         <section className="py-20 lg:py-32">
           <div className="container mx-auto px-6">
             {/* Hero */}
@@ -79,81 +117,103 @@ const BrokersCorporateWellness = () => {
                 ))}
               </div>
             </div>
+          </div>
+        </section>
 
-            {/* Impact Metrics */}
-            <div className="max-w-5xl mx-auto bg-gradient-hero rounded-3xl p-8 lg:p-12 border border-border/50 mb-20">
-              <h3 className="text-2xl font-heading font-bold text-center mb-12">Business Impact</h3>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-                <div>
-                  <TrendingUp className="w-10 h-10 text-success mx-auto mb-4" />
-                  <div className="text-4xl font-heading font-bold text-gradient mb-2">~15%</div>
-                  <p className="text-sm text-muted-foreground">ARPU Uplift</p>
+        {/* How It Works */}
+        <section className="py-20 bg-background">
+          <div className="container mx-auto px-6">
+            <div className="max-w-4xl mx-auto mb-12 text-center">
+              <h2 className="text-3xl font-heading font-bold mb-4">How It Works</h2>
+              <p className="text-lg text-muted-foreground">
+                Launch white-label OPD benefits in four steps
+              </p>
+            </div>
+            <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {[
+                { step: "1", title: "Configure Benefits", description: "Build OPD bundles: diagnostics, consultations, pharmacy benefits" },
+                { step: "2", title: "White-Label Setup", description: "Your branding, your client portal, your customer relationship" },
+                { step: "3", title: "Activate Nationwide", description: "Instant access to 9,000+ pincodes fulfillment network" },
+                { step: "4", title: "Monetize Rx", description: "Enable prescription fulfillment, grow ARPU through pharmacy delivery" }
+              ].map((item, index) => (
+                <div key={index} className="bg-card-gradient p-6 rounded-xl border border-border/20">
+                  <div className="w-12 h-12 rounded-full bg-secondary/10 flex items-center justify-center mb-4">
+                    <span className="text-2xl font-bold text-secondary">{item.step}</span>
+                  </div>
+                  <h4 className="font-heading font-bold mb-2">{item.title}</h4>
+                  <p className="text-sm text-muted-foreground">{item.description}</p>
                 </div>
-                <div>
-                  <Target className="w-10 h-10 text-primary mx-auto mb-4" />
-                  <div className="text-4xl font-heading font-bold text-gradient mb-2">9,000+</div>
-                  <p className="text-sm text-muted-foreground">Pincodes</p>
-                </div>
-                <div>
-                  <Zap className="w-10 h-10 text-secondary mx-auto mb-4" />
-                  <div className="text-4xl font-heading font-bold text-gradient mb-2">Pure B2B</div>
-                  <p className="text-sm text-muted-foreground">No Competition</p>
-                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Delivery Modes */}
+        <section className="py-20 bg-gradient-hero border-y border-border/50">
+          <div className="container mx-auto px-6">
+            <div className="max-w-5xl mx-auto">
+              <h2 className="text-3xl font-heading font-bold mb-4 text-center">Benefit Delivery Modes</h2>
+              <p className="text-center text-muted-foreground mb-12">
+                Multiple fulfillment options for every member need
+              </p>
+              <div className="overflow-x-auto">
+                <table className="w-full bg-card rounded-xl border border-border/20">
+                  <thead>
+                    <tr className="border-b border-border/20">
+                      <th className="p-4 text-left font-heading">Delivery Mode</th>
+                      <th className="p-4 text-left font-heading">Services</th>
+                      <th className="p-4 text-left font-heading">Member Experience</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {[
+                      {
+                        mode: "Home Collection",
+                        services: "Diagnostics, pharmacy delivery",
+                        experience: "Sample collection and medicine delivery at doorstep"
+                      },
+                      {
+                        mode: "Teleconsultation",
+                        services: "GP, specialist consultations",
+                        experience: "Video/audio consult via app or WhatsApp"
+                      },
+                      {
+                        mode: "Center Visit",
+                        services: "Diagnostics, specialist consults",
+                        experience: "Book appointment, visit nearest center"
+                      },
+                      {
+                        mode: "Health Camps",
+                        services: "Corporate wellness screenings",
+                        experience: "On-site health camps for employee groups"
+                      }
+                    ].map((item, index) => (
+                      <tr key={index} className="border-b border-border/10 last:border-0">
+                        <td className="p-4 font-semibold">{item.mode}</td>
+                        <td className="p-4 text-sm text-muted-foreground">{item.services}</td>
+                        <td className="p-4 text-sm text-muted-foreground">{item.experience}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
               </div>
             </div>
+          </div>
+        </section>
 
-            {/* Platform Features */}
-            <div className="max-w-6xl mx-auto mb-20">
-              <h2 className="text-3xl font-heading font-bold text-center mb-12">
-                Grow Revenue From Day One
-              </h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {[
-                  {
-                    title: "Nationwide Coverage",
-                    badge: "9K+ pincodes",
-                    desc: "Activate across Tier-1 to Tier-3 instantly.",
-                    color: "success"
-                  },
-                  {
-                    title: "OPD Bundling",
-                    badge: "~15% ARPU lift",
-                    desc: "Bundle diagnostics, consults, pharmacy benefits.",
-                    color: "primary"
-                  },
-                  {
-                    title: "White-Label Brand",
-                    badge: "Pure B2B",
-                    desc: "Your clients remain yours—we stay invisible.",
-                    color: "secondary"
-                  },
-                  {
-                    title: "Custom Packages",
-                    badge: "Flexible",
-                    desc: "Build wellness bundles, preventive care subscriptions.",
-                    color: "success"
-                  },
-                  {
-                    title: "Unified Operations",
-                    badge: "Single invoice",
-                    desc: "We handle fulfillment, SLA, quality control.",
-                    color: "primary"
-                  },
-                  {
-                    title: "Rx Monetization",
-                    badge: "Revenue+",
-                    desc: "Pharmacy fulfillment integrated with consults.",
-                    color: "success"
-                  }
-                ].map((feature, i) => (
-                  <div key={i} className="bg-card-gradient p-6 rounded-xl border border-border/20">
-                    <div className="flex items-start justify-between mb-3">
-                      <h3 className="font-heading font-bold text-sm">{feature.title}</h3>
-                      <span className={`text-xs bg-${feature.color}/10 text-${feature.color} px-2 py-1 rounded-full whitespace-nowrap`}>
-                        {feature.badge}
-                      </span>
-                    </div>
-                    <p className="text-sm text-muted-foreground">{feature.desc}</p>
+        {/* Availability */}
+        <section className="py-20 bg-background">
+          <div className="container mx-auto px-6">
+            <div className="max-w-5xl mx-auto text-center">
+              <h2 className="text-3xl font-heading font-bold mb-6">Nationwide OPD Coverage</h2>
+              <p className="text-lg text-muted-foreground mb-8">
+                Launch OPD benefits across 9,000+ pincodes from metros to Tier-3 cities. All services available nationwide with consistent quality and SLAs. Your brand, your pricing, your client relationships.
+              </p>
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                {["Diagnostics", "Consultations", "Pharmacy", "Wellness Programs", "Health Camps", "Chronic Care", "Preventive Care", "All Services"].map((service, index) => (
+                  <div key={index} className="bg-card-gradient p-4 rounded-xl border border-border/20">
+                    <CheckCircle className="w-6 h-6 text-success mx-auto mb-2" />
+                    <p className="text-sm font-medium">{service}</p>
                   </div>
                 ))}
               </div>
@@ -161,16 +221,110 @@ const BrokersCorporateWellness = () => {
           </div>
         </section>
 
-        {/* FAQ Section */}
+        {/* Integration & Quality */}
+        <section className="py-20 bg-gradient-hero border-y border-border/50">
+          <div className="container mx-auto px-6">
+            <div className="max-w-6xl mx-auto">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <div>
+                  <h2 className="text-3xl font-heading font-bold mb-6">Integration Options</h2>
+                  <ul className="space-y-3">
+                    {[
+                      "API integration for programmatic benefit delivery",
+                      "Console access for ops teams to manage members",
+                      "Custom member portals with your branding",
+                      "Real-time dashboards for utilization and costs"
+                    ].map((feature, index) => (
+                      <li key={index} className="flex items-start space-x-3">
+                        <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-1" />
+                        <span className="text-muted-foreground">{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <div>
+                  <h2 className="text-3xl font-heading font-bold mb-6">Quality Assurance</h2>
+                  <ul className="space-y-3">
+                    {[
+                      "NABH/NABL accredited diagnostic partners",
+                      "Registered pharmacists for all medicine orders",
+                      "Verified doctors with valid MCI/NMC registration",
+                      "Real-time SLA monitoring and escalation"
+                    ].map((framework, index) => (
+                      <li key={index} className="flex items-start space-x-3">
+                        <Shield className="w-5 h-5 text-success flex-shrink-0 mt-1" />
+                        <span className="text-muted-foreground">{framework}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Impact Metrics */}
         <section className="py-20 bg-background">
+          <div className="container mx-auto px-6">
+            <div className="max-w-5xl mx-auto bg-gradient-hero rounded-3xl p-8 lg:p-12 border border-border/50">
+              <h3 className="text-2xl font-heading font-bold text-center mb-12">Business Impact</h3>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                <div>
+                  <TrendingUp className="w-10 h-10 text-success mx-auto mb-4" />
+                  <div className="text-4xl font-heading font-bold text-gradient mb-2">~15%</div>
+                  <p className="text-sm text-muted-foreground">ARPU Uplift</p>
+                  <p className="text-xs text-muted-foreground mt-2">Via prescription monetization</p>
+                </div>
+                <div>
+                  <Target className="w-10 h-10 text-primary mx-auto mb-4" />
+                  <div className="text-4xl font-heading font-bold text-gradient mb-2">9,000+</div>
+                  <p className="text-sm text-muted-foreground">Pincodes</p>
+                  <p className="text-xs text-muted-foreground mt-2">Nationwide coverage</p>
+                </div>
+                <div>
+                  <Zap className="w-10 h-10 text-secondary mx-auto mb-4" />
+                  <div className="text-4xl font-heading font-bold text-gradient mb-2">Pure B2B</div>
+                  <p className="text-sm text-muted-foreground">No Competition</p>
+                  <p className="text-xs text-muted-foreground mt-2">Your clients stay yours</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* FAQ Section */}
+        <section className="py-20 bg-gradient-hero border-y border-border/50">
           <div className="container mx-auto px-6">
             <FAQ items={brokersCorporateWellnessFAQs} />
           </div>
         </section>
-      </main>
 
-      {/* Related Resources */}
-      <RelatedBlogs category="Brokers" limit={3} />
+        {/* Internal Links */}
+        <section className="py-20 bg-background">
+          <div className="container mx-auto px-6">
+            <div className="max-w-5xl mx-auto">
+              <h2 className="text-3xl font-heading font-bold mb-8 text-center">Related Resources</h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                {[
+                  { title: "Insurers & TPAs", url: "/who-we-serve/insurers-tpas", description: "OPD claims automation and fraud control" },
+                  { title: "Healthcare Infrastructure", url: "/solutions/healthcare-infrastructure", description: "Complete healthcare delivery platform" },
+                  { title: "Digital Platform", url: "/solutions/digital-platform", description: "White-label patient experience platform" },
+                  { title: "Broker Engagement Blog", url: "/resources/blog/brokers-engagement", description: "How brokers grow with OPD benefits" }
+                ].map((link, index) => (
+                  <Link key={index} to={link.url} className="bg-card-gradient p-6 rounded-xl border border-border/20 card-hover group">
+                    <h4 className="font-heading font-bold mb-2 group-hover:text-primary transition-colors">{link.title}</h4>
+                    <p className="text-sm text-muted-foreground">{link.description}</p>
+                    <div className="flex items-center text-primary font-medium mt-4">
+                      Learn more 
+                      <ArrowRight className="ml-1 w-4 h-4" />
+                    </div>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
 
       <Footer />
     </div>
