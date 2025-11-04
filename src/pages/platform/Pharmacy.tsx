@@ -5,6 +5,7 @@ import SEOHead from "@/components/SEOHead";
 import CTAButtons from "@/components/CTAButtons";
 import FAQ from "@/components/FAQ";
 import TLDR from "@/components/design-system/TLDR";
+import RelatedBlogs from "@/components/RelatedBlogs";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { generateProductSchema, generateFAQSchema } from "@/lib/structured-data";
@@ -375,28 +376,6 @@ const Pharmacy = () => {
               <FAQ items={pharmacyFAQs} title="Pharmacy FAQ" />
             </div>
 
-            {/* Related Resources - Internal Links */}
-            <div className="max-w-5xl mx-auto mb-20">
-              <h2 className="text-3xl font-heading font-bold text-center mb-12">Explore Related Solutions</h2>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <Link to="/platform/consultations" className="bg-card-gradient p-6 rounded-2xl border border-border/20 card-hover">
-                  <h3 className="text-lg font-heading font-bold mb-2">Doctor Consultations</h3>
-                  <p className="text-sm text-muted-foreground mb-3">Connect pharmacy orders to teleconsults and in-person visits</p>
-                  <span className="text-primary text-sm font-semibold">Learn more →</span>
-                </Link>
-                <Link to="/platform/diagnostics" className="bg-card-gradient p-6 rounded-2xl border border-border/20 card-hover">
-                  <h3 className="text-lg font-heading font-bold mb-2">Diagnostic Services</h3>
-                  <p className="text-sm text-muted-foreground mb-3">Bundle lab tests with medication delivery for complete care</p>
-                  <span className="text-primary text-sm font-semibold">Learn more →</span>
-                </Link>
-                <Link to="/solutions/healthcare-infrastructure" className="bg-card-gradient p-6 rounded-2xl border border-border/20 card-hover">
-                  <h3 className="text-lg font-heading font-bold mb-2">Healthcare Infrastructure</h3>
-                  <p className="text-sm text-muted-foreground mb-3">See how pharmacy fits into end-to-end care delivery</p>
-                  <span className="text-primary text-sm font-semibold">Learn more →</span>
-                </Link>
-              </div>
-            </div>
-
             {/* Final CTA */}
             <div className="max-w-4xl mx-auto text-center">
               <h2 className="text-3xl font-heading font-bold mb-6">
@@ -419,6 +398,9 @@ const Pharmacy = () => {
           </div>
         </section>
       </main>
+
+      {/* Related Resources */}
+      <RelatedBlogs category="Digital Health" limit={3} />
       <Footer />
     </div>
   );

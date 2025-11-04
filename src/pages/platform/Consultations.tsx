@@ -4,6 +4,7 @@ import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import FAQ from "@/components/FAQ";
 import TLDR from "@/components/design-system/TLDR";
+import RelatedBlogs from "@/components/RelatedBlogs";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { generateProductSchema, generateFAQSchema, generateBreadcrumbSchema, generateHowToSchema } from "@/lib/structured-data";
@@ -310,32 +311,10 @@ const Consultations = () => {
           </div>
         </section>
 
-        {/* Internal Links */}
-        <section className="py-20 bg-background">
-          <div className="container mx-auto px-6">
-            <div className="max-w-5xl mx-auto">
-              <h2 className="text-3xl font-heading font-bold mb-8 text-center">Related Resources</h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                {[
-                  { title: "Healthcare Infrastructure", url: "/solutions/healthcare-infrastructure", description: "Complete healthcare delivery platform" },
-                  { title: "Diagnostics Network", url: "/platform/diagnostics", description: "9,000+ pincode diagnostics coverage" },
-                  { title: "Pharmacy Network", url: "/platform/pharmacy", description: "60-min medicine delivery nationwide" },
-                  { title: "Digital Health Platforms", url: "/who-we-serve/digital-health-platforms", description: "Solutions for healthtech companies" }
-                ].map((link, index) => (
-                  <Link key={index} to={link.url} className="bg-card-gradient p-6 rounded-xl border border-border/20 card-hover group">
-                    <h4 className="font-heading font-bold mb-2 group-hover:text-primary transition-colors">{link.title}</h4>
-                    <p className="text-sm text-muted-foreground">{link.description}</p>
-                    <div className="flex items-center text-primary font-medium mt-4">
-                      Learn more 
-                      <ArrowRight className="ml-1 w-4 h-4" />
-                    </div>
-                  </Link>
-                ))}
-              </div>
-            </div>
-          </div>
-        </section>
       </main>
+
+      {/* Related Resources */}
+      <RelatedBlogs category="Digital Health" limit={3} />
       
       <Footer />
     </div>
