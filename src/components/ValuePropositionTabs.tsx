@@ -36,18 +36,17 @@ const ValuePropositionTabs = () => {
       color: "from-emerald-500 to-teal-600"
     },
     {
-      id: "network-access",
       icon: Network,
       label: "Network Access",
-      title: "Tier-1 to Tier-3 Coverage",
-      description: "Access the largest verified healthcare network in India. From metros to tier-3 cities, deliver consistent care experiences across 9,000+ pincodes.",
+      title: "Metros to Tier-3 Coverage",
+      description: "Access 5,000+ verified healthcare partners across India. From metros to tier-3 cities, deliver consistent care with nationwide reach.",
       features: [
-        "9,000+ pincodes covered",
-        "2,600+ service centres", 
-        "Quality-verified providers",
-        "Consistent care standards"
+        "Diagnostics: 9,000+ pincodes (home)",
+        "Pharmacy: 15,000+ pincodes",
+        "Center visits: 2,600+ locations", 
+        "Consultations: Nationwide coverage"
       ],
-      stat: "Nationwide reach",
+      stat: "5,000+ active partners",
       color: "from-violet-500 to-purple-600"
     },
     {

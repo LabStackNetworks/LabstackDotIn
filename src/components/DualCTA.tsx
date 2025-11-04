@@ -40,7 +40,7 @@ const DualCTA = () => {
                 </div>
                 <div className="flex items-center space-x-3">
                   <div className="w-2 h-2 bg-success rounded-full"></div>
-                  <span className="text-sm text-muted-foreground">9,000+ pincodes</span>
+                  <span className="text-sm text-muted-foreground">5,000+ active partners</span>
                 </div>
               </div>
 
@@ -116,16 +116,16 @@ const DualCTA = () => {
         <div className="mt-16 text-center">
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 max-w-3xl mx-auto">
             <div>
-              <div className="text-2xl lg:text-3xl font-heading font-bold text-gradient mb-2">9,000+</div>
-              <div className="text-sm text-muted-foreground">Pincodes covered nationwide</div>
+              <div className="text-2xl lg:text-3xl font-heading font-bold text-gradient mb-2">5,000+</div>
+              <div className="text-sm text-muted-foreground">Active verified partners</div>
             </div>
             <div>
-              <div className="text-2xl lg:text-3xl font-heading font-bold text-gradient mb-2">2,600+</div>
-              <div className="text-sm text-muted-foreground">Service centers across India</div>
+              <div className="text-2xl lg:text-3xl font-heading font-bold text-gradient mb-2">30,000+</div>
+              <div className="text-sm text-muted-foreground">Orders processed monthly</div>
             </div>
             <div>
-              <div className="text-2xl lg:text-3xl font-heading font-bold text-gradient mb-2">98%</div>
-              <div className="text-sm text-muted-foreground">On-time delivery guaranteed</div>
+              <div className="text-2xl lg:text-3xl font-heading font-bold text-gradient mb-2">Tier 3</div>
+              <div className="text-sm text-muted-foreground">Metros to tier-3 coverage</div>
             </div>
           </div>
         </div>

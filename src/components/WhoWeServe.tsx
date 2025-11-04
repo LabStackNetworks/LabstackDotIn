@@ -78,7 +78,7 @@ const WhoWeServe = () => {
       icon: Users,
       label: "Brokers & Corporate Wellness",
       title: "Turn Policies Into Revenue Machines",
-      description: "OPD benefits platform that insurance brokers launch with API or console. Grow ARPU 15%. Embedded OPD benefits with prescription monetization across 9,000+ pincodes.",
+      description: "OPD benefits platform that insurance brokers launch with API or console. Grow ARPU 15%. Embedded OPD benefits with prescription monetization nationwide.",
       challenges: [
         "Policies look same with OPD under-monetized",
         "Execution breaks outside metros",
@@ -110,7 +110,7 @@ const WhoWeServe = () => {
       benefits: [
         "48 hour launch with infra ready nationwide",
         "One API • One Console • One Network",
-        "9K+ pincodes, 30K+ orders/month capacity",
+        "30K+ orders/month, 5K+ partners",
         "Pure B2B model where your customers remain yours"
       ],
       proof: "14 days to go live vs 12-18 months building",

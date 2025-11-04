@@ -35,7 +35,7 @@ const Hero = () => {
 
             {/* Sub-headline */}
             <p className="mobile-subheading text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed text-center">
-              One API for diagnostics, consultations, pharmacy, and home care across <span className="text-foreground font-semibold">9,000+ pincodes</span>. Launch in 14 days.
+              One API for diagnostics, consultations, pharmacy, and home care. <span className="text-foreground font-semibold">5,000+ active partners</span> across metros to tier-3. Launch in 14 days.
             </p>
 
             {/* Value Props */}

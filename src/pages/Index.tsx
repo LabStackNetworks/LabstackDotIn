@@ -28,7 +28,7 @@ const Index = () => {
     <div className="min-h-screen bg-background text-foreground">
       <SEOHead 
         title="The Growth Engine for Healthcare"
-        description="Launch diagnostics, consultations, pharmacy, and home care in 14 days. One API for 9,000+ pincodes. Healthcare infrastructure that scales like software."
+        description="Launch diagnostics, consultations, pharmacy, and home care in 14 days. 5,000+ active partners nationwide. Healthcare infrastructure that scales like software."
         keywords="healthcare API, diagnostics API, telemedicine platform, healthcare infrastructure India, digital health platform, healthcare delivery system, medical API integration"
         canonical="https://labstack.in"
         structuredData={structuredData}
