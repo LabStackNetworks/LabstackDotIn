@@ -21,6 +21,7 @@ const Footer = () => {
     whoWeServe: [
       { name: "Healthcare Ecosystem", href: "/who-we-serve" },
       { name: "Insurers & TPAs", href: "/who-we-serve/insurers-tpas" },
+      { name: "InsureTech", href: "/who-we-serve/insuretech" },
       { name: "Brokers & Corporate Wellness", href: "/who-we-serve/brokers-corporate-wellness" },
       { name: "Disease Management", href: "/who-we-serve/disease-management" },
       { name: "Digital Health Platforms", href: "/who-we-serve/digital-health-platforms" }

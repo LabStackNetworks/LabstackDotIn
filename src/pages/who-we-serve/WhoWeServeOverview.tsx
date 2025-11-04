@@ -16,6 +16,14 @@ const WhoWeServeOverview = () => {
       metrics: ["12% leakage reduction", "99%+ SLA adherence", "+25 NPS points"]
     },
     {
+      icon: Smartphone,
+      title: "InsureTech",
+      description: "Turn healthcare benefits into revenue engine. Launch nationwide in 14 days. Higher renewals, incremental revenue, zero ops drag.",
+      link: "/who-we-serve/insuretech",
+      color: "success",
+      metrics: ["14-day launch", "Revenue uplift", "Pure B2B"]
+    },
+    {
       icon: TrendingUp,
       title: "Brokers & Corporate Wellness",
       description: "Differentiate policies with OPD benefits. Grow ARPU by 15% through prescription monetization across 9,000+ pincodes.",
@@ -32,11 +40,11 @@ const WhoWeServeOverview = () => {
       metrics: ["90%+ completion", "Longitudinal data", "Automated adherence"]
     },
     {
-      icon: Smartphone,
+      icon: Heart,
       title: "Digital Health Platforms",
       description: "Scale nationwide in 14 days with one API. 30K+ orders/month capacity with 99.5% uptime across all services.",
       link: "/who-we-serve/digital-health-platforms",
-      color: "primary",
+      color: "warning",
       metrics: ["14-day launch", "30K+ orders/month", "99.5% uptime"]
     }
   ];

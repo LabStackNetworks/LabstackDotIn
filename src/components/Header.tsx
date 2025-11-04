@@ -104,6 +104,7 @@ const Header = () => {
             items: [
               { label: "Healthcare Ecosystem", href: "/who-we-serve", description: "Platform overview" },
               { label: "Insurers & TPAs", href: "/who-we-serve/insurers-tpas", description: "Insurance companies" },
+              { label: "InsureTech", href: "/who-we-serve/insuretech", description: "Digital insurance platforms" },
               { label: "Brokers & Corporate Wellness", href: "/who-we-serve/brokers-corporate-wellness", description: "Insurance & wellness programs" },
               { label: "Disease Management", href: "/who-we-serve/disease-management", description: "Chronic care platforms" },
               { label: "Digital Health Platforms", href: "/who-we-serve/digital-health-platforms", description: "Health tech companies" }
