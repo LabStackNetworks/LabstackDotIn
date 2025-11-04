@@ -1,4 +1,4 @@
-import { TrendingUp, Target, CheckCircle, ArrowRight, Zap, Shield, Home, Video, Stethoscope, Users, IndianRupee } from "lucide-react";
+import { TrendingUp, Target, CheckCircle, ArrowRight, Zap, Shield, Home, Video, Stethoscope, Users, IndianRupee, TestTube, Pill } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -153,14 +153,59 @@ const BrokersCorporateWellness = () => {
         <section className="py-20 bg-gradient-hero border-y border-border/50">
           <div className="container mx-auto px-6">
             <div className="max-w-5xl mx-auto">
-              <h2 className="text-3xl font-heading font-bold mb-12 text-center">OPD Services Portfolio</h2>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                {["Diagnostics", "Consultations", "Pharmacy", "Wellness Programs", "Health Camps", "Chronic Care"].map((service, index) => (
-                  <div key={index} className="bg-card-gradient p-4 rounded-xl border border-border/20 text-center">
-                    <CheckCircle className="w-6 h-6 text-success mx-auto mb-2" />
-                    <p className="text-sm font-medium">{service}</p>
+              <h2 className="text-3xl font-heading font-bold mb-4 text-center">Complete OPD Services Portfolio</h2>
+              <p className="text-center text-muted-foreground mb-12 max-w-3xl mx-auto">
+                Full healthcare benefits stack available across 9,000+ pincodes from Day 1
+              </p>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+                <div className="bg-card-gradient p-6 rounded-xl border border-border/20">
+                  <TestTube className="w-10 h-10 text-primary mb-4" />
+                  <h4 className="font-heading font-bold mb-2">Diagnostics & Radiology</h4>
+                  <p className="text-sm text-muted-foreground mb-4">
+                    Home collection and center visits. NABL certified labs with same-day reporting.
+                  </p>
+                  <div className="flex items-center text-xs text-success">
+                    <CheckCircle className="w-4 h-4 mr-1" />
+                    Higher member engagement
                   </div>
-                ))}
+                </div>
+
+                <div className="bg-card-gradient p-6 rounded-xl border border-border/20">
+                  <Video className="w-10 h-10 text-secondary mb-4" />
+                  <h4 className="font-heading font-bold mb-2">Consultations</h4>
+                  <p className="text-sm text-muted-foreground mb-4">
+                    Teleconsult 24/7 and in-clinic visits. NMC registered doctors across specialties.
+                  </p>
+                  <div className="flex items-center text-xs text-success">
+                    <CheckCircle className="w-4 h-4 mr-1" />
+                    Immediate member access
+                  </div>
+                </div>
+
+                <div className="bg-card-gradient p-6 rounded-xl border border-border/20">
+                  <Pill className="w-10 h-10 text-success mb-4" />
+                  <h4 className="font-heading font-bold mb-2">Pharmacy Benefits</h4>
+                  <p className="text-sm text-muted-foreground mb-4">
+                    Home delivery and store pickup. Licensed pharmacists with 24-48hr fulfillment.
+                  </p>
+                  <div className="flex items-center text-xs text-success">
+                    <CheckCircle className="w-4 h-4 mr-1" />
+                    Prescription monetization
+                  </div>
+                </div>
+
+                <div className="bg-card-gradient p-6 rounded-xl border border-border/20">
+                  <Users className="w-10 h-10 text-warning mb-4" />
+                  <h4 className="font-heading font-bold mb-2">Corporate Wellness Programs</h4>
+                  <p className="text-sm text-muted-foreground mb-4">
+                    Health camps, chronic care, preventive screenings for employee groups.
+                  </p>
+                  <div className="flex items-center text-xs text-success">
+                    <CheckCircle className="w-4 h-4 mr-1" />
+                    Expand service offerings
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -251,26 +296,123 @@ const BrokersCorporateWellness = () => {
           </div>
         </section>
 
-        {/* Delivery Modes */}
+        {/* Delivery Modes & Coverage */}
         <section className="py-20 bg-background">
           <div className="container mx-auto px-6">
             <div className="max-w-5xl mx-auto">
-              <h2 className="text-3xl font-heading font-bold mb-12 text-center">Delivery Modes & Coverage</h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                {[
-                  { icon: Home, mode: "Home Collection", color: "primary" },
-                  { icon: Video, mode: "Teleconsultation", color: "success" },
-                  { icon: Stethoscope, mode: "Center Visit", color: "secondary" },
-                  { icon: Users, mode: "Health Camps", color: "warning" }
-                ].map((item, index) => {
-                  const Icon = item.icon;
-                  return (
-                    <div key={index} className="bg-card-gradient p-6 rounded-xl border border-border/20 text-center">
-                      <Icon className={`w-10 h-10 text-${item.color} mx-auto mb-3`} />
-                      <h4 className="font-heading font-bold">{item.mode}</h4>
+              <h2 className="text-3xl font-heading font-bold mb-4 text-center">Delivery Modes & Coverage</h2>
+              <p className="text-center text-muted-foreground mb-12 max-w-3xl mx-auto">
+                Multiple fulfillment options designed for member convenience
+              </p>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+                {/* Home Collection */}
+                <div className="bg-card-gradient p-8 rounded-xl border border-border/20">
+                  <div className="flex items-center space-x-3 mb-4">
+                    <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
+                      <Home className="w-6 h-6 text-primary" />
                     </div>
-                  );
-                })}
+                    <h3 className="text-xl font-heading font-bold">Home Collection</h3>
+                  </div>
+                  <p className="text-sm text-muted-foreground mb-4">
+                    Sample collection and medicine delivery at member's doorstep for convenience.
+                  </p>
+                  <div className="space-y-2">
+                    <div className="flex items-start space-x-2">
+                      <CheckCircle className="w-4 h-4 text-success mt-0.5 flex-shrink-0" />
+                      <span className="text-xs">Flexible 6 AM to 9 PM slots</span>
+                    </div>
+                    <div className="flex items-start space-x-2">
+                      <CheckCircle className="w-4 h-4 text-success mt-0.5 flex-shrink-0" />
+                      <span className="text-xs">Available in 9,000+ pincodes</span>
+                    </div>
+                    <div className="flex items-start space-x-2">
+                      <CheckCircle className="w-4 h-4 text-success mt-0.5 flex-shrink-0" />
+                      <span className="text-xs">Medicine delivery in 24-48 hours</span>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Teleconsultation */}
+                <div className="bg-card-gradient p-8 rounded-xl border border-border/20">
+                  <div className="flex items-center space-x-3 mb-4">
+                    <div className="w-12 h-12 rounded-full bg-success/10 flex items-center justify-center">
+                      <Video className="w-6 h-6 text-success" />
+                    </div>
+                    <h3 className="text-xl font-heading font-bold">Teleconsultation</h3>
+                  </div>
+                  <p className="text-sm text-muted-foreground mb-4">
+                    24/7 video, audio, and chat consultations with verified doctors nationwide.
+                  </p>
+                  <div className="space-y-2">
+                    <div className="flex items-start space-x-2">
+                      <CheckCircle className="w-4 h-4 text-success mt-0.5 flex-shrink-0" />
+                      <span className="text-xs">Instant access nationwide</span>
+                    </div>
+                    <div className="flex items-start space-x-2">
+                      <CheckCircle className="w-4 h-4 text-success mt-0.5 flex-shrink-0" />
+                      <span className="text-xs">NMC registered doctors</span>
+                    </div>
+                    <div className="flex items-start space-x-2">
+                      <CheckCircle className="w-4 h-4 text-success mt-0.5 flex-shrink-0" />
+                      <span className="text-xs">Digital prescriptions included</span>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Center Visit */}
+                <div className="bg-card-gradient p-8 rounded-xl border border-border/20">
+                  <div className="flex items-center space-x-3 mb-4">
+                    <div className="w-12 h-12 rounded-full bg-secondary/10 flex items-center justify-center">
+                      <Stethoscope className="w-6 h-6 text-secondary" />
+                    </div>
+                    <h3 className="text-xl font-heading font-bold">Center Visit</h3>
+                  </div>
+                  <p className="text-sm text-muted-foreground mb-4">
+                    Walk-in services at accredited diagnostic centers and clinics nationwide.
+                  </p>
+                  <div className="space-y-2">
+                    <div className="flex items-start space-x-2">
+                      <CheckCircle className="w-4 h-4 text-success mt-0.5 flex-shrink-0" />
+                      <span className="text-xs">2,600+ locations nationwide</span>
+                    </div>
+                    <div className="flex items-start space-x-2">
+                      <CheckCircle className="w-4 h-4 text-success mt-0.5 flex-shrink-0" />
+                      <span className="text-xs">NABL/NABH accredited partners</span>
+                    </div>
+                    <div className="flex items-start space-x-2">
+                      <CheckCircle className="w-4 h-4 text-success mt-0.5 flex-shrink-0" />
+                      <span className="text-xs">Same-day appointment slots</span>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Health Camps */}
+                <div className="bg-card-gradient p-8 rounded-xl border border-border/20">
+                  <div className="flex items-center space-x-3 mb-4">
+                    <div className="w-12 h-12 rounded-full bg-warning/10 flex items-center justify-center">
+                      <Users className="w-6 h-6 text-warning" />
+                    </div>
+                    <h3 className="text-xl font-heading font-bold">Health Camps</h3>
+                  </div>
+                  <p className="text-sm text-muted-foreground mb-4">
+                    On-site health screenings and preventive check-ups for corporate groups.
+                  </p>
+                  <div className="space-y-2">
+                    <div className="flex items-start space-x-2">
+                      <CheckCircle className="w-4 h-4 text-success mt-0.5 flex-shrink-0" />
+                      <span className="text-xs">Nationwide availability</span>
+                    </div>
+                    <div className="flex items-start space-x-2">
+                      <CheckCircle className="w-4 h-4 text-success mt-0.5 flex-shrink-0" />
+                      <span className="text-xs">Custom packages available</span>
+                    </div>
+                    <div className="flex items-start space-x-2">
+                      <CheckCircle className="w-4 h-4 text-success mt-0.5 flex-shrink-0" />
+                      <span className="text-xs">Digital health reports</span>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -291,7 +433,8 @@ const BrokersCorporateWellness = () => {
                   { service: "Home Care", coverage: "5,000+ pincodes" },
                   { service: "Emergency", coverage: "Metros" },
                   { service: "Health Camps", coverage: "Nationwide" },
-                  { service: "All Services", coverage: "Pan-India" }
+                  { service: "All Services", coverage: "Pan-India" },
+                  { service: "Active Partners", coverage: "5,000+" }
                 ].map((item, index) => (
                   <div key={index} className="bg-card-gradient p-4 rounded-xl border border-border/20">
                     <CheckCircle className="w-6 h-6 text-success mx-auto mb-2" />

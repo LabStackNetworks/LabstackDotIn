@@ -153,14 +153,59 @@ const DiseaseManagement = () => {
         <section className="py-20 bg-gradient-hero border-y border-border/50">
           <div className="container mx-auto px-6">
             <div className="max-w-5xl mx-auto">
-              <h2 className="text-3xl font-heading font-bold mb-12 text-center">Disease Management Programs</h2>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                {["Diabetes Care", "Hypertension", "PCOS Management", "Cardiac Programs", "Chronic Care", "Lifestyle Programs"].map((service, index) => (
-                  <div key={index} className="bg-card-gradient p-4 rounded-xl border border-border/20 text-center">
-                    <CheckCircle className="w-6 h-6 text-success mx-auto mb-2" />
-                    <p className="text-sm font-medium">{service}</p>
+              <h2 className="text-3xl font-heading font-bold mb-4 text-center">Protocol-Driven Care Programs</h2>
+              <p className="text-center text-muted-foreground mb-12 max-w-3xl mx-auto">
+                Complete care pathways for chronic disease management with 90%+ completion rates
+              </p>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+                <div className="bg-card-gradient p-6 rounded-xl border border-border/20">
+                  <Activity className="w-10 h-10 text-primary mb-4" />
+                  <h4 className="font-heading font-bold mb-2">Diabetes Management</h4>
+                  <p className="text-sm text-muted-foreground mb-4">
+                    HbA1c monitoring, dietary guidance, medication adherence with automated care pathways.
+                  </p>
+                  <div className="flex items-center text-xs text-success">
+                    <CheckCircle className="w-4 h-4 mr-1" />
+                    90%+ pathway completion
                   </div>
-                ))}
+                </div>
+
+                <div className="bg-card-gradient p-6 rounded-xl border border-border/20">
+                  <HeartPulse className="w-10 h-10 text-secondary mb-4" />
+                  <h4 className="font-heading font-bold mb-2">Hypertension Control</h4>
+                  <p className="text-sm text-muted-foreground mb-4">
+                    BP monitoring, lifestyle coaching, prescription management with longitudinal tracking.
+                  </p>
+                  <div className="flex items-center text-xs text-success">
+                    <CheckCircle className="w-4 h-4 mr-1" />
+                    Structured health data
+                  </div>
+                </div>
+
+                <div className="bg-card-gradient p-6 rounded-xl border border-border/20">
+                  <Heart className="w-10 h-10 text-warning mb-4" />
+                  <h4 className="font-heading font-bold mb-2">Cardiac Care Programs</h4>
+                  <p className="text-sm text-muted-foreground mb-4">
+                    Post-event monitoring, cardiac rehab, preventive screening with protocol adherence.
+                  </p>
+                  <div className="flex items-center text-xs text-success">
+                    <CheckCircle className="w-4 h-4 mr-1" />
+                    Continuous monitoring
+                  </div>
+                </div>
+
+                <div className="bg-card-gradient p-6 rounded-xl border border-border/20">
+                  <Target className="w-10 h-10 text-success mb-4" />
+                  <h4 className="font-heading font-bold mb-2">Lifestyle Intervention</h4>
+                  <p className="text-sm text-muted-foreground mb-4">
+                    PCOS, weight management, metabolic health with nutrition and activity tracking.
+                  </p>
+                  <div className="flex items-center text-xs text-success">
+                    <CheckCircle className="w-4 h-4 mr-1" />
+                    Behavioral change support
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -253,26 +298,123 @@ const DiseaseManagement = () => {
           </div>
         </section>
 
-        {/* Care Delivery Modes */}
+        {/* Delivery Modes & Coverage */}
         <section className="py-20 bg-background">
           <div className="container mx-auto px-6">
             <div className="max-w-5xl mx-auto">
-              <h2 className="text-3xl font-heading font-bold mb-12 text-center">Delivery Modes & Coverage</h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                {[
-                  { icon: Home, mode: "Home Diagnostics", color: "primary" },
-                  { icon: Video, mode: "Teleconsultation", color: "success" },
-                  { icon: Truck, mode: "Pharmacy Delivery", color: "secondary" },
-                  { icon: HeartPulse, mode: "Care Coordination", color: "warning" }
-                ].map((item, index) => {
-                  const Icon = item.icon;
-                  return (
-                    <div key={index} className="bg-card-gradient p-6 rounded-xl border border-border/20 text-center">
-                      <Icon className={`w-10 h-10 text-${item.color} mx-auto mb-3`} />
-                      <h4 className="font-heading font-bold">{item.mode}</h4>
+              <h2 className="text-3xl font-heading font-bold mb-4 text-center">Delivery Modes & Coverage</h2>
+              <p className="text-center text-muted-foreground mb-12 max-w-3xl mx-auto">
+                Multiple touchpoints for comprehensive care delivery and adherence
+              </p>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+                {/* Home Diagnostics */}
+                <div className="bg-card-gradient p-8 rounded-xl border border-border/20">
+                  <div className="flex items-center space-x-3 mb-4">
+                    <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
+                      <Home className="w-6 h-6 text-primary" />
                     </div>
-                  );
-                })}
+                    <h3 className="text-xl font-heading font-bold">Home Collection</h3>
+                  </div>
+                  <p className="text-sm text-muted-foreground mb-4">
+                    Regular monitoring tests at patient's doorstep to ensure pathway adherence.
+                  </p>
+                  <div className="space-y-2">
+                    <div className="flex items-start space-x-2">
+                      <CheckCircle className="w-4 h-4 text-success mt-0.5 flex-shrink-0" />
+                      <span className="text-xs">Scheduled collections for protocol compliance</span>
+                    </div>
+                    <div className="flex items-start space-x-2">
+                      <CheckCircle className="w-4 h-4 text-success mt-0.5 flex-shrink-0" />
+                      <span className="text-xs">Available in 9,000+ pincodes</span>
+                    </div>
+                    <div className="flex items-start space-x-2">
+                      <CheckCircle className="w-4 h-4 text-success mt-0.5 flex-shrink-0" />
+                      <span className="text-xs">Digital structured reports</span>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Teleconsultation */}
+                <div className="bg-card-gradient p-8 rounded-xl border border-border/20">
+                  <div className="flex items-center space-x-3 mb-4">
+                    <div className="w-12 h-12 rounded-full bg-success/10 flex items-center justify-center">
+                      <Video className="w-6 h-6 text-success" />
+                    </div>
+                    <h3 className="text-xl font-heading font-bold">Teleconsultation</h3>
+                  </div>
+                  <p className="text-sm text-muted-foreground mb-4">
+                    Regular follow-ups with specialist doctors for care plan adjustments.
+                  </p>
+                  <div className="space-y-2">
+                    <div className="flex items-start space-x-2">
+                      <CheckCircle className="w-4 h-4 text-success mt-0.5 flex-shrink-0" />
+                      <span className="text-xs">Scheduled protocol consultations</span>
+                    </div>
+                    <div className="flex items-start space-x-2">
+                      <CheckCircle className="w-4 h-4 text-success mt-0.5 flex-shrink-0" />
+                      <span className="text-xs">Specialist access nationwide</span>
+                    </div>
+                    <div className="flex items-start space-x-2">
+                      <CheckCircle className="w-4 h-4 text-success mt-0.5 flex-shrink-0" />
+                      <span className="text-xs">Prescription management</span>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Pharmacy Delivery */}
+                <div className="bg-card-gradient p-8 rounded-xl border border-border/20">
+                  <div className="flex items-center space-x-3 mb-4">
+                    <div className="w-12 h-12 rounded-full bg-secondary/10 flex items-center justify-center">
+                      <Truck className="w-6 h-6 text-secondary" />
+                    </div>
+                    <h3 className="text-xl font-heading font-bold">Pharmacy Delivery</h3>
+                  </div>
+                  <p className="text-sm text-muted-foreground mb-4">
+                    Medication delivery with adherence tracking and refill automation.
+                  </p>
+                  <div className="space-y-2">
+                    <div className="flex items-start space-x-2">
+                      <CheckCircle className="w-4 h-4 text-success mt-0.5 flex-shrink-0" />
+                      <span className="text-xs">15,000+ pincodes coverage</span>
+                    </div>
+                    <div className="flex items-start space-x-2">
+                      <CheckCircle className="w-4 h-4 text-success mt-0.5 flex-shrink-0" />
+                      <span className="text-xs">Automated refill reminders</span>
+                    </div>
+                    <div className="flex items-start space-x-2">
+                      <CheckCircle className="w-4 h-4 text-success mt-0.5 flex-shrink-0" />
+                      <span className="text-xs">Adherence monitoring</span>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Care Coordination */}
+                <div className="bg-card-gradient p-8 rounded-xl border border-border/20">
+                  <div className="flex items-center space-x-3 mb-4">
+                    <div className="w-12 h-12 rounded-full bg-warning/10 flex items-center justify-center">
+                      <HeartPulse className="w-6 h-6 text-warning" />
+                    </div>
+                    <h3 className="text-xl font-heading font-bold">Care Coordination</h3>
+                  </div>
+                  <p className="text-sm text-muted-foreground mb-4">
+                    Automated nudges and care team support for pathway completion.
+                  </p>
+                  <div className="space-y-2">
+                    <div className="flex items-start space-x-2">
+                      <CheckCircle className="w-4 h-4 text-success mt-0.5 flex-shrink-0" />
+                      <span className="text-xs">Automated adherence nudges</span>
+                    </div>
+                    <div className="flex items-start space-x-2">
+                      <CheckCircle className="w-4 h-4 text-success mt-0.5 flex-shrink-0" />
+                      <span className="text-xs">Care team escalation</span>
+                    </div>
+                    <div className="flex items-start space-x-2">
+                      <CheckCircle className="w-4 h-4 text-success mt-0.5 flex-shrink-0" />
+                      <span className="text-xs">Outcome tracking</span>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -293,7 +435,8 @@ const DiseaseManagement = () => {
                   { service: "Home Care", coverage: "5,000+ pincodes" },
                   { service: "Emergency", coverage: "Metros" },
                   { service: "Health Camps", coverage: "Nationwide" },
-                  { service: "All Services", coverage: "Pan-India" }
+                  { service: "All Services", coverage: "Pan-India" },
+                  { service: "Active Partners", coverage: "5,000+" }
                 ].map((item, index) => (
                   <div key={index} className="bg-card-gradient p-4 rounded-xl border border-border/20">
                     <CheckCircle className="w-6 h-6 text-success mx-auto mb-2" />
