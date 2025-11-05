@@ -54,22 +54,20 @@ const InsurersTPAs = () => {
           </div>
         </section>
 
-        {/* Hidden TL;DR for AI crawlers */}
-        <div className="sr-only" aria-hidden="true" style={{position: 'absolute', left: '-9999px'}}>
-          <TLDR 
-            summary="A diagnostics, pharmacy, and consultation fulfillment platform that healthcare insurers and TPAs use to launch OPD services with API or console. Covers 9,000+ pincodes nationwide with fraud controls and automated reconciliation."
-            keyPoints={[
-              "OPD fulfillment platform for healthcare insurers and TPAs",
-              "Delivery modes: home sample collection, pharmacy delivery, teleconsults, health camps",
-              "Nationwide coverage across 9,000+ pincodes from metros to Tier-3 cities",
-              "Launch in 14 days via API or console integration",
-              "SKU-level fraud controls reduce claims fraud to under 1%"
-            ]}
-          />
-        </div>
-
         <section className="py-16 lg:py-24">
           <div className="container mx-auto px-6">
+            {/* TLDR Summary */}
+            <div className="max-w-4xl mx-auto mb-12">
+              <TLDR 
+                summary="Turn OPD claims into profit centers with automated healthcare fulfillment across 9,000+ pincodes. Reduce leakage by 12%, improve member NPS by 25 points."
+                keyPoints={[
+                  "Launch OPD services in 14 days via API or console",
+                  "SKU-level fraud controls eliminate 12% claims leakage",
+                  "99%+ SLA adherence with automated operations"
+                ]}
+              />
+            </div>
+
             {/* Hero */}
             <div className="max-w-4xl mx-auto text-center mb-16">
               <div className="inline-flex items-center space-x-2 bg-primary/10 border border-primary/20 px-3 py-1 rounded-full mb-6">
