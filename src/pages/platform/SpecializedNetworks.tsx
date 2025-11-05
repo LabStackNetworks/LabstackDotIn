@@ -60,7 +60,7 @@ const SpecializedNetworks = () => {
           <div className="container mx-auto px-6">
             <div className="max-w-4xl mx-auto text-center">
               <p className="text-lg text-muted-foreground">
-                Specialized healthcare networks platform that businesses use to launch ambulance, vision, dental, mental health, physiotherapy, and home care services through one API with standardized workflows.
+                Network for home care, mental health, physiotherapy, vision, dental, and ambulance services unified by one API and standardised workflows for Insurers, TPAs, Brokers, Corporate wellness, InsureTech, and Digital Health platforms.
               </p>
             </div>
           </div>

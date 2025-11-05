@@ -81,7 +81,7 @@ const Diagnostics = () => {
           <div className="container mx-auto px-6">
             <div className="max-w-4xl mx-auto text-center">
               <p className="text-lg text-muted-foreground">
-                Complete diagnostics network that healthcare businesses use to launch pathology, radiology, cardiac, and genetic testing with built-in quality frameworks and 100% report verification.
+                Diagnostics network for home pickup, health camps, and center visits including pathology, radiology, cardiac, and genetic tests. Built-in quality frameworks and 100% report verification for Insurers, TPAs, Brokers, Corporate wellness, InsureTech, and Digital Health platforms.
               </p>
             </div>
           </div>

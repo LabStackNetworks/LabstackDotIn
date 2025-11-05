@@ -63,7 +63,7 @@ const Pharmacy = () => {
           <div className="container mx-auto px-6">
             <div className="max-w-4xl mx-auto text-center">
               <p className="text-lg text-muted-foreground">
-                Nationwide pharmacy network that healthcare businesses use to launch medicine delivery with 60-minute service in metros, prescription verification, SKU-level fraud controls, and unified reconciliation.
+                Medicine delivery network across India 60-minute metro delivery, verified prescriptions, and fraud-safe SKU tracking. For Insurers, TPAs, Brokers, Corporate wellness, InsureTech, and Digital Health platforms.
               </p>
             </div>
           </div>

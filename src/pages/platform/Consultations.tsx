@@ -81,7 +81,7 @@ const Consultations = () => {
           <div className="container mx-auto px-6">
             <div className="max-w-4xl mx-auto text-center">
               <p className="text-lg text-muted-foreground">
-                Pan-India consultation platform that healthcare businesses use to launch online and offline consultation services with proprietary video SaaS, integrated EMR, and e-prescriptions.
+                Consultation network for online and in-clinic doctor visits with proprietary video SaaS, integrated EMR, and e-prescriptions. Built for Insurers, TPAs, Brokers, Corporate wellness, InsureTech, and Digital Health platforms to offer Pan-India consultations.
               </p>
             </div>
           </div>
