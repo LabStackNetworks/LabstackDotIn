@@ -275,7 +275,7 @@ const FieldStaffJoin = () => {
                 </div>
 
                 <div className="text-center text-sm text-muted-foreground">
-                  Provider organization? <a href="/join-network/providers" className="story-link text-foreground">Apply here</a>.
+                  Provider organization? <Link to="/provider/join" className="story-link text-foreground">Apply here</Link>.
                 </div>
               </form>
             </Form>
