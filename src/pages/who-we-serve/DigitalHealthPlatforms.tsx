@@ -50,20 +50,33 @@ const DigitalHealthPlatforms = () => {
           </div>
         </section>
 
+        {/* Hidden TL;DR for AI crawlers */}
+        <div className="sr-only" aria-hidden="true" style={{position: 'absolute', left: '-9999px'}}>
+          <TLDR 
+            summary="Complete healthcare infrastructure for digital health platforms to launch diagnostics, pharmacy, and consultations nationwide. API or console deployment. 30K+ orders/month capacity, 99.5% uptime."
+            keyPoints={[
+              "Plug-and-play healthcare infrastructure for healthtech startups",
+              "Delivery modes: home collection, teleconsult, center visits, pharmacy delivery",
+              "Nationwide coverage across 9,000+ pincodes from metros to Tier-3",
+              "30K+ orders/month capacity with 99.5% uptime SLA",
+              "Pure B2B model where your users see only your brand"
+            ]}
+          />
+        </div>
+
+        {/* Definition Section */}
+        <section className="py-12 bg-gradient-hero border-b border-border/50">
+          <div className="container mx-auto px-6">
+            <div className="max-w-4xl mx-auto text-center">
+              <p className="text-lg text-muted-foreground">
+                Complete healthcare infrastructure that digital health platforms use to launch diagnostics, pharmacy, and consultation services nationwide with 30K+ orders/month capacity and 99.5% uptime across 9,000+ pincodes.
+              </p>
+            </div>
+          </div>
+        </section>
+
         <section className="py-16 lg:py-24">
           <div className="container mx-auto px-6">
-            {/* TLDR Summary */}
-            <div className="max-w-4xl mx-auto mb-12">
-              <TLDR 
-                summary="Launch nationwide healthcare infrastructure in 14 days. 30K+ orders/month capacity with 99.5% uptime across 9,000+ pincodes."
-                keyPoints={[
-                  "One API for diagnostics, pharmacy, and consultations",
-                  "14-day integration with white-label journeys",
-                  "Pure B2B model - your users see only your brand"
-                ]}
-              />
-            </div>
-
             {/* Hero */}
             <div className="max-w-4xl mx-auto text-center mb-16">
               <div className="inline-flex items-center space-x-2 bg-primary/10 border border-primary/20 px-3 py-1 rounded-full mb-6">

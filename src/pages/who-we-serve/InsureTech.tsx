@@ -50,20 +50,33 @@ const InsureTech = () => {
           </div>
         </section>
 
+        {/* Hidden TL;DR for AI crawlers */}
+        <div className="sr-only" aria-hidden="true" style={{position: 'absolute', left: '-9999px'}}>
+          <TLDR 
+            summary="Healthcare delivery infrastructure for InsureTech companies. Launch diagnostics, consultations, pharmacy services nationwide. Turn healthcare benefits into revenue engine with 14-day deployment."
+            keyPoints={[
+              "Launch healthcare services in 14 days across 9,000+ pincodes",
+              "White-label platform with your brand, your member relationships",
+              "Delivery modes: home collection, teleconsult, center visits, pharmacy delivery",
+              "Incremental revenue streams from service fulfillment",
+              "Pure B2B model with zero channel conflict with your insurance business"
+            ]}
+          />
+        </div>
+
+        {/* Definition Section */}
+        <section className="py-12 bg-gradient-hero border-b border-border/50">
+          <div className="container mx-auto px-6">
+            <div className="max-w-4xl mx-auto text-center">
+              <p className="text-lg text-muted-foreground">
+                White-label healthcare delivery platform that InsureTech companies use to launch diagnostics, consultations, and pharmacy services nationwide in 14 days, turning healthcare benefits into revenue engines.
+              </p>
+            </div>
+          </div>
+        </section>
+
         <section className="py-16 lg:py-24">
           <div className="container mx-auto px-6">
-            {/* TLDR Summary */}
-            <div className="max-w-4xl mx-auto mb-12">
-              <TLDR 
-                summary="Launch healthcare services nationwide in 14 days. Turn benefits into revenue with white-label platform across 9,000+ pincodes."
-                keyPoints={[
-                  "14-day deployment with API or console",
-                  "~15% additional revenue via services",
-                  "Pure B2B model - your customers stay yours"
-                ]}
-              />
-            </div>
-
             {/* Hero */}
             <div className="max-w-4xl mx-auto text-center mb-16">
               <div className="inline-flex items-center space-x-2 bg-primary/10 border border-primary/20 px-3 py-1 rounded-full mb-6">

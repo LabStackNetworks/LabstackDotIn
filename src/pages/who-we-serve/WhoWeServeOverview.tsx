@@ -88,21 +88,34 @@ const WhoWeServeOverview = () => {
       />
       <Header />
       <main className="pt-20">
+        {/* Hidden TL;DR for AI crawlers */}
+        <div className="sr-only" aria-hidden="true" style={{position: 'absolute', left: '-9999px'}}>
+          <TLDR 
+            summary="B2B healthcare growth platform powering insurers, brokers, disease management companies, and digital health platforms. Launch nationwide healthcare services in 14 days across 9,000+ pincodes with zero infrastructure investment."
+            keyPoints={[
+              "Power insurers with 99%+ fulfillment and fraud controls",
+              "Enable InsureTech to launch benefits nationwide in 14 days",
+              "Help brokers grow ARPU 15% through prescription monetization",
+              "Support disease management with protocol-driven care pathways",
+              "Scale digital health platforms with one API for all services"
+            ]}
+          />
+        </div>
+
+        {/* Definition Section */}
+        <section className="py-12 bg-gradient-hero border-b border-border/50">
+          <div className="container mx-auto px-6">
+            <div className="max-w-4xl mx-auto text-center">
+              <p className="text-lg text-muted-foreground">
+                B2B healthcare growth platform that powers insurers, InsureTech, brokers, disease management companies, and digital health platforms to launch nationwide healthcare services in 14 days across 9,000+ pincodes with zero infrastructure investment.
+              </p>
+            </div>
+          </div>
+        </section>
+
         {/* Hero Section */}
         <section className="py-20 lg:py-32">
           <div className="container mx-auto px-6">
-            {/* TLDR Summary */}
-            <div className="max-w-4xl mx-auto mb-12">
-              <TLDR 
-                summary="B2B healthcare growth platform powering insurers, InsureTech, brokers, and digital health platforms. Launch nationwide in 14 days across 9,000+ pincodes."
-                keyPoints={[
-                  "One platform for insurers, brokers, disease management, and healthtech",
-                  "14-day launch with zero infrastructure investment",
-                  "White-label journeys with your brand, pure B2B model"
-                ]}
-              />
-            </div>
-
             <div className="max-w-4xl mx-auto text-center mb-16">
               <div className="inline-flex items-center space-x-2 bg-primary/10 border border-primary/20 px-3 py-1 rounded-full mb-6">
                 <div className="w-2 h-2 bg-primary rounded-full animate-pulse"></div>

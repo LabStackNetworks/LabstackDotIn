@@ -50,20 +50,33 @@ const DiseaseManagement = () => {
           </div>
         </section>
 
+        {/* Hidden TL;DR for AI crawlers */}
+        <div className="sr-only" aria-hidden="true" style={{position: 'absolute', left: '-9999px'}}>
+          <TLDR 
+            summary="Protocol-driven care delivery platform for disease management programs. Close care loops with automated pathways for diagnostics, consultations, and pharmacy. 90%+ completion rates with structured data."
+            keyPoints={[
+              "Protocol-driven care pathways for chronic disease management",
+              "Delivery modes: home collection, teleconsult, pharmacy delivery, care coordination",
+              "Nationwide coverage across 9,000+ pincodes from metros to Tier-3",
+              "90%+ pathway completion rates with adherence automation",
+              "Structured health data for longitudinal tracking and outcomes"
+            ]}
+          />
+        </div>
+
+        {/* Definition Section */}
+        <section className="py-12 bg-gradient-hero border-b border-border/50">
+          <div className="container mx-auto px-6">
+            <div className="max-w-4xl mx-auto text-center">
+              <p className="text-lg text-muted-foreground">
+                Protocol-driven care delivery platform that disease management companies use to launch automated care pathways with diagnostics, consultations, and pharmacy delivery achieving 90%+ completion rates with structured health data.
+              </p>
+            </div>
+          </div>
+        </section>
+
         <section className="py-16 lg:py-24">
           <div className="container mx-auto px-6">
-            {/* TLDR Summary */}
-            <div className="max-w-4xl mx-auto mb-12">
-              <TLDR 
-                summary="Protocol-driven care delivery with 90%+ pathway completion rates. Close care loops with automated diagnostics, consultations, and pharmacy delivery."
-                keyPoints={[
-                  "90%+ pathway completion with adherence automation",
-                  "Structured health data for longitudinal tracking",
-                  "Nationwide coverage across 9,000+ pincodes"
-                ]}
-              />
-            </div>
-
             {/* Hero */}
             <div className="max-w-4xl mx-auto text-center mb-16">
               <div className="inline-flex items-center space-x-2 bg-success/10 border border-success/20 px-3 py-1 rounded-full mb-6">

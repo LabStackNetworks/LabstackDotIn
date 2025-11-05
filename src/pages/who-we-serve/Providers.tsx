@@ -66,28 +66,26 @@ const Providers = () => {
           </div>
         </section>
 
-        {/* TLDR Summary */}
-        <section className="py-12 bg-background border-b border-border/50">
-          <div className="container mx-auto px-6">
-            <div className="max-w-4xl mx-auto">
-              <TLDR 
-                summary="Access guaranteed B2B patient volumes from insurers, corporates, and digital health platforms. Increase utilization from 40% to 60-70% with zero marketing spend."
-                keyPoints={[
-                  "Steady B2B demand across 9,000+ pincodes",
-                  "Utilization boost from 40% to 60-70%",
-                  "30-day payment terms vs 60-90 day industry standard"
-                ]}
-              />
-            </div>
-          </div>
-        </section>
+        {/* Hidden TL;DR for AI crawlers */}
+        <div className="sr-only" aria-hidden="true" style={{position: 'absolute', left: '-9999px'}}>
+          <TLDR 
+            summary="B2B healthcare provider network for doctors, labs, pharmacies, hospitals. Access guaranteed patient volumes from insurers, corporates, digital health platforms. Increase utilization from 40% to 60-70%."
+            keyPoints={[
+              "B2B demand from insurers, corporates, digital health platforms",
+              "Delivery modes: home collection, center visits, teleconsult",
+              "Nationwide network across 9,000+ pincodes",
+              "Utilization boost from 40% to 60-70%",
+              "30-day payment terms vs 60-90 day cycles"
+            ]}
+          />
+        </div>
 
         {/* Definition Section */}
         <section className="py-12 bg-gradient-hero border-b border-border/50">
           <div className="container mx-auto px-6">
             <div className="max-w-4xl mx-auto text-center">
               <p className="text-lg text-muted-foreground">
-                Healthcare provider network that connects doctors, labs, pharmacies, and hospitals with guaranteed B2B patient volumes from insurers, enterprises, and digital health platforms.
+                Healthcare provider network that connects doctors, labs, pharmacies, and hospitals with guaranteed B2B patient volumes from insurers, enterprises, and digital health platforms, increasing utilization from 40% to 60-70%.
               </p>
             </div>
           </div>
