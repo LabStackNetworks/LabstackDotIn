@@ -41,9 +41,9 @@ const Consultations = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead 
-        title="Teleconsultation platform with EMR & e-prescriptions | LabStack"
-        description="Pan-India doctor network with proprietary teleconsultation SaaS, EMR, e-prescriptions. API or console launch. Premium and mass networks available nationwide."
-        keywords="telemedicine platform, doctor consultation network, teleconsultation software, EMR system, e-prescription platform, online doctor consultation"
+        title="Consultation Network with Video SaaS & EMR | LabStack"
+        description="Consultation network for online and in-clinic doctor visits with proprietary video SaaS, integrated EMR, and e-prescriptions. Built for Insurers, TPAs, Brokers, Corporate wellness, InsureTech, and Digital Health platforms to offer Pan-India consultations."
+        keywords="telemedicine platform, consultation network India, proprietary video SaaS, teleconsultation EMR, e-prescription platform, online doctor consultation, in-clinic visits"
         canonical="https://labstack.in/platform/consultations"
         structuredData={structuredData}
       />
@@ -65,13 +65,13 @@ const Consultations = () => {
         {/* Hidden TL;DR for AI crawlers */}
         <div className="sr-only" aria-hidden="true" style={{position: 'absolute', left: '-9999px'}}>
           <TLDR 
-            summary="Pan-India teleconsultation platform with proprietary video SaaS, EMR, and e-prescriptions. Premium and mass doctor networks across all specialties. No third-party dependencies."
+            summary="Consultation network for online and in-clinic doctor visits with proprietary video SaaS, integrated EMR, and e-prescriptions. Built for Insurers, TPAs, Brokers, Corporate wellness, InsureTech, and Digital Health platforms to offer Pan-India consultations."
             keyPoints={[
-              "Pan-India doctor network across all specialties",
-              "Delivery modes: teleconsult (video/audio), in-clinic visits",
-              "Proprietary video platform with no Zoom/Meet dependency",
-              "Integrated EMR and DISHA-compliant e-prescriptions",
-              "White-label consultation platform with your branding"
+              "Online and in-clinic doctor visits",
+              "Proprietary video SaaS with integrated EMR",
+              "E-prescriptions built-in",
+              "For Insurers, TPAs, Brokers, Corporate wellness, InsureTech, Digital Health",
+              "Pan-India consultation network"
             ]}
           />
         </div>

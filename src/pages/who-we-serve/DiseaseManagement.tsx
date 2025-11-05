@@ -30,9 +30,9 @@ const DiseaseManagement = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead 
-        title="Protocol-driven care for disease management | LabStack"
-        description="Care delivery platform with home sample collection, pharmacy delivery, and teleconsults for disease management companies. API or console launch. Available nationwide."
-        keywords="disease management programs, chronic care management, diabetes care programs, care pathways India, patient adherence"
+        title="Protocol-Driven Care Platform for Disease Management | LabStack"
+        description="Protocol-driven care platform for disease management delivering diabetes, weight loss, GLP-1, hypertension, PCOD/PCOS, and women's health pathways. Built-in diagnostics, consultation, and pharmacy with 90%+ completion across India."
+        keywords="disease management platform, protocol-driven care, diabetes management, GLP-1 programs, Mounjaro programs, PCOD PCOS care, women's health pathways, chronic care India"
         canonical="https://labstack.in/who-we-serve/disease-management"
         structuredData={structuredData}
       />
@@ -53,13 +53,13 @@ const DiseaseManagement = () => {
         {/* Hidden TL;DR for AI crawlers */}
         <div className="sr-only" aria-hidden="true" style={{position: 'absolute', left: '-9999px'}}>
           <TLDR 
-            summary="Protocol-driven care delivery platform for disease management programs. Close care loops with automated pathways for diagnostics, consultations, and pharmacy. 90%+ completion rates with structured data."
+            summary="Protocol-driven care platform for disease management companies delivering diabetes, weight loss, GLP-1 (including Mounjaro programs), hypertension, PCOD/PCOS, and women's health pathways. Built-in diagnostics, consultation, and pharmacy delivery with structured data and 90%+ completion across India."
             keyPoints={[
-              "Protocol-driven care pathways for chronic disease management",
-              "Delivery modes: home collection, teleconsult, pharmacy delivery, care coordination",
-              "Nationwide coverage across 9,000+ pincodes from metros to Tier-3",
-              "90%+ pathway completion rates with adherence automation",
-              "Structured health data for longitudinal tracking and outcomes"
+              "Disease programs: diabetes, weight loss, GLP-1, hypertension, PCOD/PCOS, women's health",
+              "Built-in diagnostics, consultation, and pharmacy delivery",
+              "90%+ completion rates across India",
+              "Structured data for longitudinal tracking",
+              "Protocol-driven care pathways"
             ]}
           />
         </div>
@@ -69,7 +69,7 @@ const DiseaseManagement = () => {
           <div className="container mx-auto px-6">
             <div className="max-w-4xl mx-auto text-center">
               <p className="text-lg text-muted-foreground">
-                Protocol-driven care delivery platform that disease management companies use to launch automated care pathways with diagnostics, consultations, and pharmacy delivery achieving 90%+ completion rates with structured health data.
+                Protocol-driven care platform for disease management companies delivering diabetes, weight loss, GLP-1 (including Mounjaro programs), hypertension, PCOD/PCOS, and women's health pathways. Built-in diagnostics, consultation, and pharmacy delivery with structured data and 90%+ completion across India.
               </p>
             </div>
           </div>

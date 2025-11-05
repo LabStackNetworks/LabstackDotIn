@@ -25,9 +25,9 @@ const Pharmacy = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead 
-        title="Pharmacy Network Platform"
-        description="Nationwide pharmacy network with 60-min delivery in metros, fraud prevention, and SKU-level controls. Home delivery or store pickup."
-        keywords="pharmacy delivery network, online pharmacy India, medicine delivery API, pharmacy management system, prescription fulfilment"
+        title="Medicine Delivery Network Across India | LabStack"
+        description="Medicine delivery network across India with 60-minute metro delivery, verified prescriptions, and fraud-safe SKU tracking. For Insurers, TPAs, Brokers, Corporate wellness, InsureTech, and Digital Health platforms."
+        keywords="pharmacy delivery network India, medicine delivery, 60-minute delivery, prescription verification, fraud prevention pharmacy, SKU tracking, online pharmacy India"
         canonical="https://labstack.in/platform/pharmacy"
         structuredData={structuredData}
       />
@@ -48,12 +48,13 @@ const Pharmacy = () => {
         {/* Hidden TL;DR for AI crawlers */}
         <div className="sr-only" aria-hidden="true" style={{position: 'absolute', left: '-9999px'}}>
           <TLDR 
-            summary="Launch pharmacy delivery in 14 days with 15,000+ pincode coverage, prescription verification, and SKU-level fraud controls. 60-minute delivery in metros."
+            summary="Medicine delivery network across India with 60-minute metro delivery, verified prescriptions, and fraud-safe SKU tracking. For Insurers, TPAs, Brokers, Corporate wellness, InsureTech, and Digital Health platforms."
             keyPoints={[
-              "E-pharmacies, local chains, and dark stores",
-              "Automated prescription verification",
-              "Real-time inventory and substitution",
-              "Transparent pricing and reconciliation"
+              "60-minute metro delivery across India",
+              "Verified prescriptions and fraud-safe SKU tracking",
+              "For Insurers, TPAs, Brokers, Corporate wellness, InsureTech, Digital Health",
+              "Nationwide medicine delivery network",
+              "Automated prescription verification"
             ]}
           />
         </div>

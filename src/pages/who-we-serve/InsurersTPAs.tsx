@@ -34,9 +34,9 @@ const InsurersTPAs = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead 
-        title="OPD fulfilment for healthcare insurers | LabStack"
-        description="OPD service with home sample collection, pharmacy delivery, and teleconsults for healthcare insurers. API or console launch. Available across major Indian cities."
-        keywords="health insurance OPD, TPA healthcare services, claims management, healthcare fraud prevention, cashless OPD India"
+        title="PPMC & OPD Fulfillment Platform for Insurers & TPAs | LabStack"
+        description="PPMC & OPD fulfillment platform for insurers and TPAs delivering cashless diagnostics, pharmacy, and consultations with automated reconciliation and fraud controls. 99%+ SLAs across 9,000+ pincodes."
+        keywords="PPMC platform, OPD fulfillment insurers, TPA healthcare automation, claims reconciliation, fraud controls healthcare, cashless OPD India, digital MER"
         canonical="https://labstack.in/who-we-serve/insurers-tpas"
         structuredData={structuredData}
       />
@@ -57,13 +57,13 @@ const InsurersTPAs = () => {
         {/* Hidden TL;DR for AI crawlers */}
         <div className="sr-only" aria-hidden="true" style={{position: 'absolute', left: '-9999px'}}>
           <TLDR 
-            summary="A diagnostics, pharmacy, and consultation fulfillment platform that healthcare insurers and TPAs use to launch OPD services with API or console. Covers 9,000+ pincodes nationwide with fraud controls and automated reconciliation."
+            summary="PPMC & OPD fulfillment platform for insurers and TPAs to deliver cashless diagnostics, pharmacy, and consultations with automated reconciliation and fraud controls. 99%+ SLAs and Pan-India coverage across 9,000+ pincodes."
             keyPoints={[
-              "OPD fulfillment platform for healthcare insurers and TPAs",
-              "Delivery modes: home sample collection, pharmacy delivery, teleconsults, health camps",
-              "Nationwide coverage across 9,000+ pincodes from metros to Tier-3 cities",
-              "Launch in 14 days via API or console integration",
-              "SKU-level fraud controls reduce claims fraud to under 1%"
+              "PPMC & OPD fulfillment platform for healthcare insurers and TPAs",
+              "Delivery modes: home collection, center visits, digital + physical MER",
+              "Automated reconciliation with fraud controls",
+              "99%+ SLA adherence across 9,000+ pincodes nationwide",
+              "Cashless diagnostics, pharmacy, and consultations"
             ]}
           />
         </div>
@@ -73,7 +73,7 @@ const InsurersTPAs = () => {
           <div className="container mx-auto px-6">
             <div className="max-w-4xl mx-auto text-center">
               <p className="text-lg text-muted-foreground">
-                OPD fulfillment platform that healthcare insurers and TPAs use to launch diagnostics, pharmacy, and consultation services with fraud controls, automated reconciliation, and 99%+ SLA adherence across 9,000+ pincodes.
+                PPMC & OPD fulfillment platform for insurers and TPAs to deliver cashless diagnostics, pharmacy, and consultations with automated reconciliation and fraud controls. Home collection, center visits, and digital + physical MER with 99%+ SLAs and Pan-India coverage across 9,000+ pincodes.
               </p>
             </div>
           </div>

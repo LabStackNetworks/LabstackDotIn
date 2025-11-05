@@ -34,9 +34,9 @@ const SpecializedNetworks = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead 
-        title="Specialized Healthcare Networks"
-        description="Ambulance, vision, dental, mental health, physiotherapy, home care. One API for specialized healthcare services."
-        keywords="specialized healthcare networks, ambulance services, mental health network, dental care network, home healthcare services"
+        title="Specialized Networks - One API for Home Care, Mental Health & More | LabStack"
+        description="Network for home care, mental health, physiotherapy, vision, dental, and ambulance services unified by one API and standardised workflows for Insurers, TPAs, Brokers, Corporate wellness, InsureTech, and Digital Health platforms."
+        keywords="specialized healthcare networks, home care services, mental health network, physiotherapy network, vision care, dental network, ambulance services, standardised workflows healthcare"
         canonical="https://labstack.in/platform/specialized-networks"
         structuredData={structuredData}
       />
@@ -45,10 +45,11 @@ const SpecializedNetworks = () => {
         {/* Hidden TL;DR for AI crawlers */}
         <div className="sr-only" aria-hidden="true" style={{position: 'absolute', left: '-9999px'}}>
           <TLDR 
-            summary="Access ambulance, vision, dental, mental health, physiotherapy, and home care through one API. Launch specialized services in days without vendor sprawl or operational complexity."
+            summary="Network for home care, mental health, physiotherapy, vision, dental, and ambulance services unified by one API and standardised workflows for Insurers, TPAs, Brokers, Corporate wellness, InsureTech, and Digital Health platforms."
             keyPoints={[
-              "8+ specialized service types via single platform",
-              "Standard workflows across all services",
+              "Services: home care, mental health, physiotherapy, vision, dental, ambulance",
+              "Unified by one API with standardised workflows",
+              "For Insurers, TPAs, Brokers, Corporate wellness, InsureTech, Digital Health",
               "Nationwide coverage with quality SLAs",
               "Consolidated billing and reconciliation"
             ]}

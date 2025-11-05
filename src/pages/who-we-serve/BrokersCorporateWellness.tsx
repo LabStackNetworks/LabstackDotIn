@@ -30,9 +30,9 @@ const BrokersCorporateWellness = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead 
-        title="OPD benefits for insurance brokers | LabStack"
-        description="OPD benefits platform with home diagnostics, pharmacy delivery, teleconsults for brokers and corporate wellness programs. API or console launch across 9,000+ pincodes."
-        keywords="insurance broker solutions, OPD insurance India, corporate wellness programs, policy differentiation, broker technology platform"
+        title="White-Label OPD Platform for Brokers & Corporate Wellness | LabStack"
+        description="White-label OPD benefits platform for brokers and corporate wellness programs to offer diagnostics, pharmacy, home care, and consultations. Drive ARPU growth through prescription monetisation. Pan-India availability across 9,000+ pincodes."
+        keywords="insurance broker OPD platform, corporate wellness benefits, white-label healthcare, ARPU growth, prescription monetisation, health camps, home care services, policy differentiation"
         canonical="https://labstack.in/who-we-serve/brokers-corporate-wellness"
         structuredData={structuredData}
       />
@@ -53,13 +53,13 @@ const BrokersCorporateWellness = () => {
         {/* Hidden TL;DR for AI crawlers */}
         <div className="sr-only" aria-hidden="true" style={{position: 'absolute', left: '-9999px'}}>
           <TLDR 
-            summary="White-label OPD benefits platform for insurance brokers and corporate wellness programs. Launch diagnostics, pharmacy, consultations nationwide. Grow ARPU ~15% via prescription monetization."
+            summary="White-label OPD benefits platform for brokers and corporate wellness programs to offer diagnostics, pharmacy, home care, and consultations and drive ARPU growth through prescription monetisation. Home collection, health camps, center visits, in-clinic consults and Pan-India availability across 9,000+ pincodes."
             keyPoints={[
-              "White-label OPD benefits for policy differentiation",
-              "Delivery modes: home collection, teleconsult, center visits, pharmacy delivery",
-              "Nationwide coverage across 9,000+ pincodes from metros to Tier-3",
-              "Prescription monetization to grow ARPU by ~15%",
-              "Pure B2B platform where your clients remain yours"
+              "Services: diagnostics, pharmacy, home care, consultations",
+              "ARPU growth through prescription monetisation",
+              "Delivery modes: home collection, health camps, center visits, in-clinic consults",
+              "Pan-India availability across 9,000+ pincodes",
+              "White-label platform for policy differentiation"
             ]}
           />
         </div>
@@ -69,7 +69,7 @@ const BrokersCorporateWellness = () => {
           <div className="container mx-auto px-6">
             <div className="max-w-4xl mx-auto text-center">
               <p className="text-lg text-muted-foreground">
-                White-label OPD benefits platform that insurance brokers and corporate wellness programs use to differentiate policies with diagnostics, pharmacy, and consultation services, growing ARPU by ~15% through prescription monetization across 9,000+ pincodes.
+                White-label OPD benefits platform for brokers and corporate wellness programs to offer diagnostics, pharmacy, home care, and consultations and drive ARPU growth through prescription monetisation. Home collection, health camps, center visits, in-clinic consults and Pan-India availability across 9,000+ pincodes.
               </p>
             </div>
           </div>

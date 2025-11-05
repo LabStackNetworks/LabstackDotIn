@@ -41,9 +41,9 @@ const Diagnostics = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead 
-        title="Diagnostics network with quality frameworks | LabStack"
-        description="Complete diagnostics network across 9,000+ pincodes. Pathology, radiology, cardiac, genetic testing. 100% report verification. Home collection and 2,600+ centers."
-        keywords="diagnostics network India, pathology services, radiology network, home sample collection, diagnostic testing API, lab network"
+        title="Diagnostics Network with Quality Frameworks | LabStack"
+        description="Diagnostics network for home pickup, health camps, and center visits including pathology, radiology, cardiac, and genetic tests. Built-in quality frameworks and 100% report verification across 9,000+ pincodes."
+        keywords="diagnostics network India, pathology services, radiology network, cardiac tests, genetic testing, home sample collection, health camps diagnostics, quality frameworks healthcare"
         canonical="https://labstack.in/platform/diagnostics"
         structuredData={structuredData}
       />
@@ -65,13 +65,13 @@ const Diagnostics = () => {
         {/* Hidden TL;DR for AI crawlers */}
         <div className="sr-only" aria-hidden="true" style={{position: 'absolute', left: '-9999px'}}>
           <TLDR 
-            summary="Complete diagnostics network across 9,000+ pincodes with pathology, radiology, cardiac, genetic testing. 100% report verification with quality frameworks. Home collection and 2,600+ centers nationwide."
+            summary="Diagnostics network for home pickup, health camps, and center visits including pathology, radiology, cardiac, and genetic tests. Built-in quality frameworks and 100% report verification for Insurers, TPAs, Brokers, Corporate wellness, InsureTech, and Digital Health platforms."
             keyPoints={[
-              "Complete diagnostics: pathology, radiology, cardiac, genetic, allergy testing",
-              "Delivery modes: home sample collection (9K+ pincodes), center visits (2.6K+ centers)",
-              "100% report verification before delivery to patients",
-              "Digital raw values with structured health data",
-              "CSAT-based lab selection and phlebo blacklisting"
+              "Services: pathology, radiology, cardiac, genetic tests",
+              "Delivery modes: home pickup, health camps, center visits",
+              "Built-in quality frameworks and 100% report verification",
+              "For Insurers, TPAs, Brokers, Corporate wellness, InsureTech, Digital Health",
+              "Nationwide coverage across 9,000+ pincodes"
             ]}
           />
         </div>

@@ -30,9 +30,9 @@ const DigitalHealthPlatforms = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead 
-        title="Healthcare fulfillment for health apps | LabStack"
-        description="Diagnostics, pharmacy, teleconsults platform for digital health companies. API or console launch. 30K+ orders capacity across 9,000+ pincodes nationwide."
-        keywords="digital health platform, healthtech infrastructure, healthcare API integration India, telemedicine platform, health startup solutions"
+        title="Healthcare Delivery Platform for Digital Health Companies | LabStack"
+        description="Healthcare delivery platform for digital health companies to add diagnostics, pharmacy delivery, home care and consultation through one integration powering complete care. Home sample pickup, center visits, in-clinic consults across India, fully white-labelled."
+        keywords="digital health platform, healthcare delivery API, healthtech infrastructure, white-label healthcare, telemedicine integration, home care platform, continuous care journeys"
         canonical="https://labstack.in/who-we-serve/digital-health-platforms"
         structuredData={structuredData}
       />
@@ -53,13 +53,13 @@ const DigitalHealthPlatforms = () => {
         {/* Hidden TL;DR for AI crawlers */}
         <div className="sr-only" aria-hidden="true" style={{position: 'absolute', left: '-9999px'}}>
           <TLDR 
-            summary="Complete healthcare infrastructure for digital health platforms to launch diagnostics, pharmacy, and consultations nationwide. API or console deployment. 30K+ orders/month capacity, 99.5% uptime."
+            summary="Healthcare delivery platform for digital health companies to add diagnostics, pharmacy delivery, home care and consultation through one integration powering complete care inside their product. Home sample pickup, center visits, in-clinic consults, and continuous care journeys live Pan-India and fully white-labelled."
             keyPoints={[
-              "Plug-and-play healthcare infrastructure for healthtech startups",
-              "Delivery modes: home collection, teleconsult, center visits, pharmacy delivery",
-              "Nationwide coverage across 9,000+ pincodes from metros to Tier-3",
-              "30K+ orders/month capacity with 99.5% uptime SLA",
-              "Pure B2B model where your users see only your brand"
+              "One integration for diagnostics, pharmacy, home care, and consultation",
+              "Complete care inside your product",
+              "Delivery modes: home sample pickup, center visits, in-clinic consults",
+              "Continuous care journeys Pan-India",
+              "Fully white-labelled platform"
             ]}
           />
         </div>
@@ -69,7 +69,7 @@ const DigitalHealthPlatforms = () => {
           <div className="container mx-auto px-6">
             <div className="max-w-4xl mx-auto text-center">
               <p className="text-lg text-muted-foreground">
-                Complete healthcare infrastructure that digital health platforms use to launch diagnostics, pharmacy, and consultation services nationwide with 30K+ orders/month capacity and 99.5% uptime across 9,000+ pincodes.
+                Healthcare delivery platform for digital health companies to add diagnostics, pharmacy delivery, home care and consultation through one integration powering complete care inside their product. Home sample pickup, center visits, in-clinic consults, and continuous care journeys live Pan-India and fully white-labelled.
               </p>
             </div>
           </div>

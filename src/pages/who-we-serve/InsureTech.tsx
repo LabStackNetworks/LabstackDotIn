@@ -30,9 +30,9 @@ const InsureTech = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead 
-        title="Healthcare Infrastructure for InsureTech | Labstack"
-        description="Launch healthcare benefits for digital insurance platforms. White-label diagnostics, teleconsults, pharmacy delivery. Scale nationwide in 14 days with zero operational setup."
-        keywords="InsureTech healthcare, digital insurance OPD, health benefits platform, insurance technology, healthcare delivery API, white-label health services"
+        title="White-Label Healthcare Platform for InsureTech | Labstack"
+        description="White-label healthcare delivery platform for InsureTech companies to launch diagnostics, consultations, and pharmacy services in under 14 days. Unified digital journeys and Pan-India coverage across 9,000+ pincodes."
+        keywords="InsureTech healthcare platform, white-label health services, digital insurance healthcare, health camps, InsureTech API, healthcare delivery InsureTech, home care services"
         canonical="https://labstack.in/who-we-serve/insuretech"
         structuredData={structuredData}
       />
@@ -53,13 +53,13 @@ const InsureTech = () => {
         {/* Hidden TL;DR for AI crawlers */}
         <div className="sr-only" aria-hidden="true" style={{position: 'absolute', left: '-9999px'}}>
           <TLDR 
-            summary="Healthcare delivery infrastructure for InsureTech companies. Launch diagnostics, consultations, pharmacy services nationwide. Turn healthcare benefits into revenue engine with 14-day deployment."
+            summary="White-label healthcare delivery platform for InsureTech companies to launch diagnostics, consultations, and pharmacy services in under 14 days. Home collection, health camps, center visits, in-clinic consults, and home care with unified digital journeys and Pan-India coverage across 9,000+ pincodes."
             keyPoints={[
-              "Launch healthcare services in 14 days across 9,000+ pincodes",
-              "White-label platform with your brand, your member relationships",
-              "Delivery modes: home collection, teleconsult, center visits, pharmacy delivery",
-              "Incremental revenue streams from service fulfillment",
-              "Pure B2B model with zero channel conflict with your insurance business"
+              "Launch in under 14 days across 9,000+ pincodes",
+              "White-label platform with unified digital journeys",
+              "Delivery modes: home collection, health camps, center visits, in-clinic consults, home care",
+              "Pan-India availability across 9,000+ pincodes",
+              "Complete white-label healthcare platform"
             ]}
           />
         </div>
@@ -69,7 +69,7 @@ const InsureTech = () => {
           <div className="container mx-auto px-6">
             <div className="max-w-4xl mx-auto text-center">
               <p className="text-lg text-muted-foreground">
-                White-label healthcare delivery platform that InsureTech companies use to launch diagnostics, consultations, and pharmacy services nationwide in 14 days, turning healthcare benefits into revenue engines.
+                White-label healthcare delivery platform for InsureTech companies to launch diagnostics, consultations, and pharmacy services in under 14 days. Home collection, health camps, center visits, in-clinic consults, and home care with unified digital journeys and Pan-India coverage across 9,000+ pincodes.
               </p>
             </div>
           </div>
