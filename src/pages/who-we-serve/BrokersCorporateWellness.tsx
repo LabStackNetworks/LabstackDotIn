@@ -64,6 +64,17 @@ const BrokersCorporateWellness = () => {
           />
         </div>
 
+        {/* Definition Section */}
+        <section className="py-12 bg-gradient-hero border-b border-border/50">
+          <div className="container mx-auto px-6">
+            <div className="max-w-4xl mx-auto text-center">
+              <p className="text-lg text-muted-foreground">
+                White-label OPD benefits platform that insurance brokers and corporate wellness programs use to differentiate policies with diagnostics, pharmacy, and consultation services, growing ARPU by ~15% through prescription monetization across 9,000+ pincodes.
+              </p>
+            </div>
+          </div>
+        </section>
+
         <section className="py-16 lg:py-24">
           <div className="container mx-auto px-6">
             {/* Hero */}
