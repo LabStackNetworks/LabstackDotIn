@@ -101,35 +101,46 @@ const DigitalHealthPlatforms = () => {
 
             {/* Problem → Solution */}
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto mb-20">
-              <div className="space-y-4">
-                <h3 className="text-2xl font-heading font-bold mb-6">What's Breaking</h3>
-                {[
-                  "12-18 months lost signing vendor contracts",
-                  "No standard SLAs with ops break city by city",
-                  "Engineers pulled into compliance vs growth",
-                  "Investors want nationwide coverage yesterday"
-                ].map((problem, i) => (
-                  <div key={i} className="flex items-start space-x-3 p-4 bg-destructive/5 border border-destructive/10 rounded-xl">
-                    <span className="text-destructive mt-1">✗</span>
-                    <span className="text-sm">{problem}</span>
-                  </div>
-                ))}
-              </div>
+{/* ❌ What's Breaking */}
+<div className="space-y-4">
+  <h3 className="text-2xl font-heading font-bold mb-6">What's Breaking</h3>
+  {[
+    "12-18 months lost signing vendor contracts",
+    "No standard SLAs with ops break city by city",
+    "Engineers pulled into compliance vs growth",
+    "Investors want nationwide coverage yesterday",
+  ].map((problem, i) => (
+    <div
+      key={i}
+      className="flex items-center space-x-3 p-4 bg-destructive/5 border border-destructive/10 rounded-xl"
+    >
+      <div className="w-5 h-5 flex items-center justify-center flex-shrink-0">
+        <span className="text-destructive text-lg leading-none">✗</span>
+      </div>
+      <span className="text-sm leading-snug">{problem}</span>
+    </div>
+  ))}
+</div>
 
-              <div className="space-y-4">
-                <h3 className="text-2xl font-heading font-bold mb-6">With Labstack</h3>
-                {[
-                  "14-day launch with infra ready nationwide",
-                  "One API • One Console • One Network",
-                  "9K+ pincodes, 30K+ orders/month capacity",
-                  "Pure B2B model where your customers remain yours"
-                ].map((solution, i) => (
-                  <div key={i} className="flex items-start space-x-3 p-4 bg-success/5 border border-success/10 rounded-xl">
-                    <CheckCircle className="w-5 h-5 text-success mt-1 flex-shrink-0" />
-                    <span className="text-sm">{solution}</span>
-                  </div>
-                ))}
-              </div>
+{/* ✅ With Labstack */}
+<div className="space-y-4">
+  <h3 className="text-2xl font-heading font-bold mb-6">With Labstack</h3>
+  {[
+    "14-day launch with infra ready nationwide",
+    "One API • One Console • One Network",
+    "9K+ pincodes, 30K+ orders/month capacity",
+    "Pure B2B model where your customers remain yours",
+  ].map((solution, i) => (
+    <div
+      key={i}
+      className="flex items-center space-x-3 p-4 bg-success/5 border border-success/10 rounded-xl"
+    >
+      <CheckCircle className="w-5 h-5 text-success flex-shrink-0" />
+      <span className="text-sm leading-snug">{solution}</span>
+    </div>
+  ))}
+</div>
+
             </div>
           </div>
         </section>

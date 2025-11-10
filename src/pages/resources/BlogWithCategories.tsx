@@ -243,8 +243,8 @@ const BlogWithCategories = () => {
             {/* Category Filter */}
             <div className="max-w-4xl mx-auto mb-12">
               <div className="flex items-center justify-center gap-2 mb-8">
-                <Filter className="w-5 h-5 text-muted-foreground" />
-                <span className="text-sm font-medium text-muted-foreground">Filter by Category:</span>
+                {/* <Filter className="w-5 h-5 text-muted-foreground" /> */}
+                {/* <span className="text-sm font-medium text-muted-foreground">Filter by Category:</span> */}
               </div>
               <div className="flex flex-wrap justify-center gap-3">
                 {categories.map((category) => (

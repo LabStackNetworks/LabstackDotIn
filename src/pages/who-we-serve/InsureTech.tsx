@@ -101,36 +101,47 @@ const InsureTech = () => {
 
             {/* Current Blockers → What Changes */}
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto mb-20">
-              <div className="space-y-4">
-                <h3 className="text-2xl font-heading font-bold mb-6">Current Blockers</h3>
-                {[
-                  "Low utilization equals lost outcomes and revenue",
-                  "Fragmented delivery damages member trust",
-                  "Operational friction delays market launches",
-                  "Support costs rise with service uncertainty"
-                ].map((problem, i) => (
-                  <div key={i} className="flex items-start space-x-3 p-4 bg-destructive/5 border border-destructive/10 rounded-xl">
-                    <span className="text-destructive mt-1">✗</span>
-                    <span className="text-sm">{problem}</span>
-                  </div>
-                ))}
-              </div>
+              {/* ❌ Current Blockers */}
+<div className="space-y-4">
+  <h3 className="text-2xl font-heading font-bold mb-6">Current Blockers</h3>
+  {[
+    "Low utilization equals lost outcomes and revenue",
+    "Fragmented delivery damages member trust",
+    "Operational friction delays market launches",
+    "Support costs rise with service uncertainty",
+  ].map((problem, i) => (
+    <div
+      key={i}
+      className="flex items-center space-x-3 p-4 bg-destructive/5 border border-destructive/10 rounded-xl"
+    >
+      <div className="w-5 h-5 flex items-center justify-center flex-shrink-0">
+        <span className="text-destructive text-lg leading-none">✗</span>
+      </div>
+      <span className="text-sm leading-snug">{problem}</span>
+    </div>
+  ))}
+</div>
 
-              <div className="space-y-4">
-                <h3 className="text-2xl font-heading font-bold mb-6">What Changes with Labstack</h3>
-                {[
-                  "Health services that just work",
-                  "Home-first access across cities",
-                  "Faster launches (≈14 days)",
-                  "Incremental revenue streams",
-                  "Own the healthcare wallet"
-                ].map((solution, i) => (
-                  <div key={i} className="flex items-start space-x-3 p-4 bg-success/5 border border-success/10 rounded-xl">
-                    <CheckCircle className="w-5 h-5 text-success mt-1 flex-shrink-0" />
-                    <span className="text-sm">{solution}</span>
-                  </div>
-                ))}
-              </div>
+{/* ✅ What Changes with Labstack */}
+<div className="space-y-4">
+  <h3 className="text-2xl font-heading font-bold mb-6">What Changes with Labstack</h3>
+  {[
+    "Health services that just work",
+    "Home-first access across cities",
+    "Faster launches (≈14 days)",
+    "Incremental revenue streams",
+    "Own the healthcare wallet",
+  ].map((solution, i) => (
+    <div
+      key={i}
+      className="flex items-center space-x-3 p-4 bg-success/5 border border-success/10 rounded-xl"
+    >
+      <CheckCircle className="w-5 h-5 text-success flex-shrink-0" />
+      <span className="text-sm leading-snug">{solution}</span>
+    </div>
+  ))}
+</div>
+
             </div>
           </div>
         </section>

@@ -317,9 +317,12 @@ const Diagnostics = () => {
                 <div className="bg-card-gradient p-8 rounded-2xl border border-border/20">
                   <Clock className="w-12 h-12 text-primary mb-4" />
                   <h3 className="text-xl font-heading font-bold mb-4">Optimised Experience</h3>
-                  <p className="text-sm text-muted-foreground">
-                    Single console across the entire network for booking & tracking
-                  </p>
+                  <ul className="space-y-2 text-sm text-muted-foreground">
+                    <li className="flex items-start space-x-2">
+                      <CheckCircle className="w-4 h-4 text-success mt-0.5 flex-shrink-0" />
+                      <span> Single console across the entire network for booking & tracking</span>
+                    </li>
+                  </ul>  
                 </div>
               </div>
             </div>
@@ -360,9 +363,9 @@ const Diagnostics = () => {
                   </div>
                 </div>
               </div>
-              <Button variant="outline" size="lg">
+              {/* <Button variant="outline" size="lg">
                 Download Quality Whitepaper
-              </Button>
+              </Button> */}
             </div>
 
             {/* Proof */}

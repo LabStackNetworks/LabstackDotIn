@@ -33,6 +33,13 @@ const schema = z.object({
   agreeToPrivacy: z.boolean().refine((val) => val === true, {
     message: "You must agree to the Privacy Policy",
   }),
+  resume: z
+    .any()
+    .refine(
+      (file) => !file || (file instanceof File && file.type === "application/pdf"),
+      "Only PDF files are allowed"
+    )
+    .optional(),
 });
 
 type FormValues = z.infer<typeof schema>;
@@ -50,6 +57,7 @@ const FieldStaffJoin = () => {
     certifications: "",
     message: "",
     agreeToPartnerTerms: false,
+    resume: undefined, // new line
     agreeToTerms: false,
     agreeToPrivacy: false,
   }});
@@ -68,6 +76,11 @@ const FieldStaffJoin = () => {
     formData.append("Availability", values.availability);
     formData.append("Certifications", values.certifications || "N/A");
     formData.append("Message", values.message || "N/A");
+
+    // ✅ Add resume if uploaded
+    if (values.resume) {
+      formData.append("Resume", values.resume);
+    }
     
     try {
       await fetch("https://formsubmit.co/contact@labstack.in", {
@@ -205,6 +218,27 @@ const FieldStaffJoin = () => {
                     <FormMessage />
                   </FormItem>
                 )} />
+
+                <FormField
+                  name="resume"
+                  control={form.control}
+                  render={({ field: { onChange, value, ...rest } }) => (
+                    <FormItem>
+                      <FormLabel>Upload Resume (PDF)</FormLabel>
+                      <FormControl>
+                        <Input
+                          type="file"
+                          accept="application/pdf"
+                          onChange={(e) => onChange(e.target.files?.[0])}
+                          {...rest}
+                        />
+                      </FormControl>
+                      <FormDescription>Attach your resume in PDF format (optional)</FormDescription>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+
 
                 <FormField name="message" control={form.control} render={({ field }) => (
                   <FormItem>

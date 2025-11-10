@@ -221,7 +221,7 @@ const ProvidersOverview = () => {
               Join thousands of healthcare professionals serving patients nationwide through Labstack's infrastructure.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link to="/contact">
+              <Link to="/provider/join-network">
                 <Button size="lg" variant="secondary" className="min-w-[200px]">
                   Apply to Join
                 </Button>

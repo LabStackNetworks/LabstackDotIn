@@ -101,35 +101,46 @@ const DiseaseManagement = () => {
 
             {/* Problem → Solution */}
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto mb-20">
-              <div className="space-y-4">
-                <h3 className="text-2xl font-heading font-bold mb-6">Where Care Loops Break</h3>
-                {[
-                  "Patients drop off: test → consult → meds",
-                  "Reports stuck in PDFs, no clinical insight",
-                  "Manual nudges don't scale",
-                  "Limited network prevents continuity"
-                ].map((problem, i) => (
-                  <div key={i} className="flex items-start space-x-3 p-4 bg-destructive/5 border border-destructive/10 rounded-xl">
-                    <span className="text-destructive mt-1">✗</span>
-                    <span className="text-sm">{problem}</span>
-                  </div>
-                ))}
-              </div>
+{/* ❌ Where Care Loops Break */}
+<div className="space-y-4">
+  <h3 className="text-2xl font-heading font-bold mb-6">Where Care Loops Break</h3>
+  {[
+    "Patients drop off: test → consult → meds",
+    "Reports stuck in PDFs, no clinical insight",
+    "Manual nudges don't scale",
+    "Limited network prevents continuity",
+  ].map((problem, i) => (
+    <div
+      key={i}
+      className="flex items-center space-x-3 p-4 bg-destructive/5 border border-destructive/10 rounded-xl"
+    >
+      <div className="w-5 h-5 flex items-center justify-center flex-shrink-0">
+        <span className="text-destructive text-lg leading-none">✗</span>
+      </div>
+      <span className="text-sm leading-snug">{problem}</span>
+    </div>
+  ))}
+</div>
 
-              <div className="space-y-4">
-                <h3 className="text-2xl font-heading font-bold mb-6">Labstack Closes Gaps</h3>
-                {[
-                  "Protocol pathways for tests, consults, pharmacy linked",
-                  "Raw digital values with longitudinal structured data",
-                  "Automated follow-ups for adherence",
-                  "Nationwide coverage ensures continuity"
-                ].map((solution, i) => (
-                  <div key={i} className="flex items-start space-x-3 p-4 bg-success/5 border border-success/10 rounded-xl">
-                    <CheckCircle className="w-5 h-5 text-success mt-1 flex-shrink-0" />
-                    <span className="text-sm">{solution}</span>
-                  </div>
-                ))}
-              </div>
+{/* ✅ Labstack Closes Gaps */}
+<div className="space-y-4">
+  <h3 className="text-2xl font-heading font-bold mb-6">Labstack Closes Gaps</h3>
+  {[
+    "Protocol pathways for tests, consults, pharmacy linked",
+    "Raw digital values with longitudinal structured data",
+    "Automated follow-ups for adherence",
+    "Nationwide coverage ensures continuity",
+  ].map((solution, i) => (
+    <div
+      key={i}
+      className="flex items-center space-x-3 p-4 bg-success/5 border border-success/10 rounded-xl"
+    >
+      <CheckCircle className="w-5 h-5 text-success flex-shrink-0" />
+      <span className="text-sm leading-snug">{solution}</span>
+    </div>
+  ))}
+</div>
+
             </div>
           </div>
         </section>
