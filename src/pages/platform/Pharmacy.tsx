@@ -87,9 +87,11 @@ const Pharmacy = () => {
                     <ArrowRight className="ml-2 h-5 w-5" />
                   </Button>
                 </Link>
-                <Button size="lg" variant="outline">
-                  Explore Pharmacy Network
-                </Button>
+                <Link to="/solutions/coverage-expansion">
+                  <Button size="lg" variant="outline">
+                    Explore Pharmacy Network
+                  </Button>
+                </Link>
               </div>
             </div>
             <div className="max-w-5xl mx-auto mb-20">

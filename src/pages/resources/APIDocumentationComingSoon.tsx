@@ -121,7 +121,7 @@ Email: ${email}
                   Our team can provide custom documentation and integration support for urgent projects.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Link to="/contact">
+                  <Link to="/start-building">
                     <Button size="lg" className="btn-gradient">
                       Contact Us <ArrowRight className="ml-2 h-5 w-5" />
                     </Button>

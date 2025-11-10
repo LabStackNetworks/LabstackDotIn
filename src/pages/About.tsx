@@ -58,15 +58,15 @@ const About = () => {
               </p>
               <ul className="space-y-3 text-muted-foreground">
                 <li className="flex items-start space-x-2">
-                  <span className="text-destructive mt-1">•</span>
-                  Businesses lose 12-18 months just to get basic services live
+                  <span className="text-destructive">•</span>
+                  <span>Businesses lose 12-18 months just to get basic services live</span>
                 </li>
                 <li className="flex items-start space-x-2">
-                  <span className="text-destructive mt-1">•</span>
+                  <span className="text-destructive">•</span>
                   <span>Providers operate in silos with no shared standards</span>
                 </li>
                 <li className="flex items-start space-x-2">
-                  <span className="text-destructive mt-1">•</span>
+                  <span className="text-destructive">•</span>
                   <span>Patients face delays, confusion, and uneven quality</span>
                 </li>
               </ul>
@@ -179,7 +179,7 @@ const About = () => {
                   <p className="text-sm text-muted-foreground mb-4">
                     Hospital, lab, or clinic looking to modernise ops and tap digital demand?
                   </p>
-                  <Link to="/join-network/providers">
+                  <Link to="/provider/join-network">
                     <Button variant="outline" className="w-full">Become a Provider</Button>
                   </Link>
                 </div>

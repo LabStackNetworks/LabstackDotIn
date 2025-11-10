@@ -104,9 +104,11 @@ const Consultations = () => {
                     <ArrowRight className="ml-2 h-5 w-5" />
                   </Button>
                 </Link>
-                <Button size="lg" variant="outline">
-                  Explore Doctors Network
-                </Button>
+                <Link to="/solutions/coverage-expansion">
+                  <Button size="lg" variant="outline">
+                    Explore Doctors Network
+                  </Button>
+                </Link>
               </div>
             </div>
 

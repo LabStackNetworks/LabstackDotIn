@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import tailwindcssAnimate from "tailwindcss-animate";
 
 export default {
 	darkMode: ["class"],
@@ -142,6 +143,50 @@ export default {
 					'100%': {
 						boxShadow: '0 0 40px hsl(var(--primary) / 0.6), 0 0 80px hsl(var(--primary) / 0.2)'
 					}
+				},
+				// New animations for "How it Ramps" section
+				'progress-fill': {
+					'0%': { width: '0%' },
+					'25%': { width: '25%' },
+					'50%': { width: '50%' },
+					'75%': { width: '75%' },
+					'100%': { width: '100%' }
+				},
+				// Step 1
+				'step-highlight-1': {
+					'0%': { backgroundColor: 'hsl(var(--card) / 0.5)', borderColor: 'hsl(var(--border))', transform: 'scale(1)' },
+					'1%, 100%': { backgroundColor: 'hsl(var(--primary) / 0.15)', borderColor: 'hsl(var(--primary) / 0.5)', transform: 'scale(1.02)' }
+				},
+				'icon-bounce-1': {
+					'0%': { transform: 'scale(1)', opacity: '0.5' },
+					'1%, 100%': { transform: 'scale(1.1) translateY(-3px)', opacity: '1' }
+				},
+				// Step 2
+				'step-highlight-2': {
+					'0%, 24.9%': { backgroundColor: 'hsl(var(--card) / 0.5)', borderColor: 'hsl(var(--border))', transform: 'scale(1)' },
+					'25%, 100%': { backgroundColor: 'hsl(var(--primary) / 0.15)', borderColor: 'hsl(var(--primary) / 0.5)', transform: 'scale(1.02)' }
+				},
+				'icon-bounce-2': {
+					'0%, 24.9%': { transform: 'scale(1)', opacity: '0.5' },
+					'25%, 100%': { transform: 'scale(1.1) translateY(-3px)', opacity: '1' }
+				},
+				// Step 3
+				'step-highlight-3': {
+					'0%, 49.9%': { backgroundColor: 'hsl(var(--card) / 0.5)', borderColor: 'hsl(var(--border))', transform: 'scale(1)' },
+					'50%, 100%': { backgroundColor: 'hsl(var(--primary) / 0.15)', borderColor: 'hsl(var(--primary) / 0.5)', transform: 'scale(1.02)' }
+				},
+				'icon-bounce-3': {
+					'0%, 49.9%': { transform: 'scale(1)', opacity: '0.5' },
+					'50%, 100%': { transform: 'scale(1.1) translateY(-3px)', opacity: '1' }
+				},
+				// Step 4
+				'step-highlight-4': {
+					'0%, 74.9%': { backgroundColor: 'hsl(var(--card) / 0.5)', borderColor: 'hsl(var(--border))', transform: 'scale(1)' },
+					'75%, 100%': { backgroundColor: 'hsl(var(--secondary) / 0.15)', borderColor: 'hsl(var(--secondary) / 0.5)', transform: 'scale(1.02)' }
+				},
+				'icon-bounce-4': {
+					'0%, 74.9%': { transform: 'scale(1)', opacity: '0.5' },
+					'75%, 100%': { transform: 'scale(1.1) translateY(-3px)', opacity: '1' }
 				}
 			},
 			animation: {
@@ -152,7 +197,17 @@ export default {
 				'scale-in': 'scale-in 0.4s ease-out',
 				'pulse-subtle': 'pulse-subtle 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
 				'glow': 'glow 2s ease-in-out infinite alternate',
-				'spin-slow': 'spin 8s linear infinite'
+				'spin-slow': 'spin 8s linear infinite',
+				// New animations for "How it Ramps" section
+				'progress-fill': 'progress-fill 8s ease-in-out infinite',
+				'step-highlight-1': 'step-highlight-1 8s ease-in-out infinite',
+				'step-highlight-2': 'step-highlight-2 8s ease-in-out infinite',
+				'step-highlight-3': 'step-highlight-3 8s ease-in-out infinite',
+				'step-highlight-4': 'step-highlight-4 8s ease-in-out infinite',
+				'icon-bounce-1': 'icon-bounce-1 8s ease-in-out linear infinite',
+				'icon-bounce-2': 'icon-bounce-2 8s ease-in-out linear infinite',
+				'icon-bounce-3': 'icon-bounce-3 8s ease-in-out linear infinite',
+				'icon-bounce-4': 'icon-bounce-4 8s ease-in-out linear infinite'
 			},
 			scale: {
 				'102': '1.02',
@@ -161,5 +216,5 @@ export default {
 			}
 		}
 	},
-	plugins: [require("tailwindcss-animate")],
+	plugins: [tailwindcssAnimate],
 } satisfies Config;

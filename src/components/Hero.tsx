@@ -15,13 +15,12 @@
  * @component
  */
 
-import { Button } from "@/components/ui/button";
-import { ArrowRight, Play } from "lucide-react";
-import { Link } from "react-router-dom";
+import { useState } from "react"; // Import useState
 import CTAButtons from "@/components/CTAButtons";
 
-const Hero = () => {
-  // Partner logos with Sora Bold font
+  // --- Helper Functions & Constants (moved outside component for performance) ---
+
+  // Original list of partner logos
   const trustedLogos = [
     "Plum Benefits",
     "Health Assure",
@@ -65,6 +64,24 @@ const Hero = () => {
     "Narayana Health",
     "Sparsh Hospitals",
   ];
+
+/**
+ * Shuffles an array in-place using the Fisher-Yates algorithm.
+ * @param {Array<T>} array Array to shuffle
+ * @returns {Array<T>} The shuffled array
+ */
+const shuffleArray = <T,>(array: T[]): T[] => {
+  const shuffled = [...array];
+  for (let i = shuffled.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]]; // Swap elements
+  }
+  return shuffled;
+};
+
+const Hero = () => {
+  // Shuffle the logos once on component mount and store in state
+  const [shuffledLogos] = useState(() => shuffleArray(trustedLogos));
 
   return (
     <section className="relative min-h-screen flex items-center justify-center bg-gradient-hero overflow-hidden">
@@ -113,7 +130,7 @@ const Hero = () => {
 
             {/* CTAs */}
             <div className="flex justify-center mb-16">
-              <CTAButtons 
+              <CTAButtons
                 primaryText="Book a Demo"
                 secondaryText="Start Building"
                 secondaryLink="/start-building"
@@ -126,14 +143,15 @@ const Hero = () => {
               <p className="text-muted-foreground text-sm font-medium uppercase tracking-wider">
                 Trusted by leading healthcare companies
               </p>
-              
+
               {/* Scrolling Logo Strip */}
               <div className="relative overflow-hidden mobile-no-scroll-x group">
-                <div className="inline-flex w-max animate-scroll gap-12 sm:gap-16 lg:gap-20">
-                  {[...trustedLogos, ...trustedLogos].map((logo, index) => (
-                    <div 
+                <div className="inline-flex w-max animate-scroll group-hover:running gap-12 sm:gap-16 lg:gap-20">
+                  {/* MODIFIED: Use shuffledLogos and added group-hover:running */}
+                  {[...shuffledLogos, ...shuffledLogos].map((logo, index) => (
+                    <div
                       key={`${logo}-${index}`}
-                      className="flex-shrink-0 text-foreground/50 hover:text-foreground/80 transition-smooth font-sora font-bold whitespace-nowrap text-base"
+                      className="flex-shrink-0 text-foreground/50 hover:text-foreground/80 transition-smooth font-sora font-bold whitespace-nowrap text-base select-none cursor-default"
                     >
                       {logo}
                     </div>

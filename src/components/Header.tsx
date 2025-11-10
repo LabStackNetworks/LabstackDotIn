@@ -248,7 +248,7 @@ const Header = () => {
                 
                 {/* Dropdown Menu */}
                 {item.hasDropdown && activeDropdown === item.label && (
-                  <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-[800px] bg-card/95 backdrop-blur-xl border border-border/50 rounded-2xl shadow-neural overflow-hidden z-50 animate-scale-in">
+                  <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-[800px] bg-card/95 backdrop-blur-xl border border-border/50 rounded-2xl shadow-neural overflow-hidden z-50">
                     <div className="grid grid-cols-12 min-h-[400px]">
                       {/* Featured Section */}
                       <div className="col-span-5 bg-gradient-primary p-8 flex flex-col justify-between text-white relative overflow-hidden">

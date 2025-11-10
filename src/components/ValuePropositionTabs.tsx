@@ -116,13 +116,7 @@ const ValuePropositionTabs = () => {
                 >
                   <IconComponent className={`w-5 h-5 transition-transform duration-300 ${activeTab === index ? 'scale-110' : 'group-hover:scale-105'}`} />
                   <span className="text-xs sm:text-sm lg:text-base whitespace-nowrap">{tab.label}</span>
-                  
-                  {/* Active indicator */}
-                  {activeTab === index && (
-                    <div className="absolute -bottom-3 left-1/2 transform -translate-x-1/2">
-                      <div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>
-                    </div>
-                  )}
+                
                 </button>
               );
             })}

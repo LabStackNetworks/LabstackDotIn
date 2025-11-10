@@ -67,9 +67,9 @@ const Footer = () => {
   };
 
   const social = [
-    { name: "LinkedIn", href: "#", icon: Linkedin },
-    { name: "Twitter", href: "#", icon: Twitter },
-    { name: "Facebook", href: "#", icon: Facebook }
+    { name: "LinkedIn", href: "https://www.linkedin.com/company/labstacknetworks/", icon: Linkedin },
+    { name: "Twitter", href: "https://x.com/labstacknetwork", icon: Twitter },
+    // { name: "Facebook", href: "#", icon: Facebook }
   ];
 
   return (

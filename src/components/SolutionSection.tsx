@@ -295,14 +295,16 @@ const SolutionSection = () => {
                   
                   <div className="relative mb-6">
                     <div className="w-full bg-muted rounded-full h-3">
-                      <div className="bg-primary h-3 rounded-full animate-[progress-fill_8s_ease-in-out_infinite]"></div>
+                      <div className="bg-primary h-3 rounded-full animate-progress-fill"></div>
                     </div>
                   </div>
                   
                   <div className="grid gap-3 grid-cols-2 md:grid-cols-4 mb-6">
-                    <div className="text-center p-3 rounded border bg-card/50 animate-[step-highlight_8s_ease-in-out_infinite]">
+                    
+                    {/* Step 1: Plan */}
+                    <div className="text-center p-3 rounded border bg-card/50 animate-step-highlight-1">
                       <div className="flex flex-col items-center">
-                        <div className="rounded-full p-2 mb-2 bg-primary/30 text-primary animate-[icon-bounce_8s_ease-in-out_infinite]">
+                        <div className="rounded-full p-2 mb-2 bg-primary/30 text-primary animate-icon-bounce-1">
                           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                             <path d="M21.801 10A10 10 0 1 1 17 3.335"></path>
                             <path d="m9 11 3 3L22 4"></path>
@@ -311,9 +313,11 @@ const SolutionSection = () => {
                         <span className="text-sm font-bold font-heading">Plan</span>
                       </div>
                     </div>
-                    <div className="text-center p-3 rounded border bg-card/50 animate-[step-highlight_8s_ease-in-out_2s_infinite]">
+
+                    {/* Step 2: Integrate */}
+                    <div className="text-center p-3 rounded border bg-card/50 animate-step-highlight-2">
                       <div className="flex flex-col items-center">
-                        <div className="rounded-full p-2 mb-2 bg-primary/30 text-primary animate-[icon-bounce_8s_ease-in-out_2s_infinite]">
+                        <div className="rounded-full p-2 mb-2 bg-primary/30 text-primary animate-icon-bounce-2">
                           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                             <polyline points="16 18 22 12 16 6"></polyline>
                             <polyline points="8 6 2 12 8 18"></polyline>
@@ -322,9 +326,11 @@ const SolutionSection = () => {
                         <span className="text-sm font-bold font-heading">Integrate</span>
                       </div>
                     </div>
-                    <div className="text-center p-3 rounded border bg-card/50 animate-[step-highlight_8s_ease-in-out_4s_infinite]">
+
+                    {/* Step 3: Go Live */}
+                    <div className="text-center p-3 rounded border bg-card/50 animate-step-highlight-3">
                       <div className="flex flex-col items-center">
-                        <div className="rounded-full p-2 mb-2 bg-primary/30 text-primary animate-[icon-bounce_8s_ease-in-out_4s_infinite]">
+                        <div className="rounded-full p-2 mb-2 bg-primary/30 text-primary animate-icon-bounce-3">
                           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                             <path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"></path>
                             <path d="m3.3 7 8.7 5 8.7-5"></path>
@@ -334,9 +340,11 @@ const SolutionSection = () => {
                         <span className="text-sm font-bold font-heading">Go Live</span>
                       </div>
                     </div>
-                    <div className="text-center p-3 rounded border bg-card/50 animate-[step-highlight_8s_ease-in-out_6s_infinite]">
+                    
+                    {/* Step 4: Optimize */}
+                    <div className="text-center p-3 rounded border bg-card/50 animate-step-highlight-4">
                       <div className="flex flex-col items-center">
-                        <div className="rounded-full p-2 mb-2 bg-secondary/30 text-secondary animate-[icon-bounce_8s_ease-in-out_6s_infinite]">
+                        <div className="rounded-full p-2 mb-2 bg-secondary/30 text-secondary animate-icon-bounce-4">
                           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                             <path d="M21 12a9 9 0 0 0-9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"></path>
                             <path d="M3 3v5h5"></path>
