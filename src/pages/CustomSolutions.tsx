@@ -51,16 +51,16 @@ const CustomSolutions = () => {
               When off-the-shelf doesn't fit, we architect custom healthcare infrastructure tailored to your needs.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link to="/contact">
+              <Link to="/book-demo">
                 <Button size="lg" className="btn-gradient">
                   Schedule Discovery Call <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
               </Link>
-              <Link to="/book-demo">
+              {/* <Link to="/book-demo">
                 <Button size="lg" variant="outline">
                   See Platform First
                 </Button>
-              </Link>
+              </Link> */}
             </div>
           </div>
 

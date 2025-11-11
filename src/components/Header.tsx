@@ -22,6 +22,7 @@ import ThemeToggle from "./ThemeToggle";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const timeoutRef = useRef<NodeJS.Timeout>();
 
@@ -48,6 +49,31 @@ const Header = () => {
       }
     };
   }, []);
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.matchMedia("(max-width: 1023px)").matches);
+    };
+
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
+
+  useEffect(() => {
+
+    if (isMenuOpen && isMobile) {
+      document.body.style.overflow = "hidden"; // Disable scroll
+    } else {
+      document.body.style.overflow = ""; // Restore scroll
+    }
+
+    // Cleanup when component unmounts
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [isMenuOpen, isMobile]);
 
   // Navigation structure with dropdowns
   const navItems = [
@@ -330,18 +356,32 @@ const Header = () => {
 
           {/* CTA Buttons */}
           <div className="hidden lg:flex items-center space-x-4">
-            <ThemeToggle />
-            <Link to="/login">
-              <Button variant="ghost" size="sm" className="text-muted-foreground hover:text-foreground mobile-touch-target font-body">
-                Login
-              </Button>
-            </Link>
-            <Link to="/book-demo">
-              <Button size="sm" className="btn-gradient mobile-touch-target font-body font-medium">
-                Book a Demo
-              </Button>
-            </Link>
-          </div>
+  <ThemeToggle />
+  
+  <a
+    href="https://console.labstack.in"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <Button
+      variant="ghost"
+      size="sm"
+      className="text-muted-foreground hover:text-foreground mobile-touch-target font-body"
+    >
+      Login
+    </Button>
+  </a>
+
+  <Link to="/book-demo">
+    <Button
+      size="sm"
+      className="btn-gradient mobile-touch-target font-body font-medium"
+    >
+      Book a Demo
+    </Button>
+  </Link>
+</div>
+
 
           {/* Mobile Actions: Theme + Menu */}
           <div className="lg:hidden flex items-center gap-1">
@@ -397,11 +437,21 @@ const Header = () => {
                 </div>
               ))}
               <div className="px-4 pt-4 space-y-3 border-t border-border/50">
-                <Link to="/login" onClick={() => setIsMenuOpen(false)}>
-                  <Button variant="ghost" size="sm" className="w-full justify-center mobile-btn mobile-tap-highlight font-body">
-                    Login
-                  </Button>
-                </Link>
+                <a
+  href="https://console.labstack.in"
+  target="_blank" // optional, opens in new tab
+  rel="noopener noreferrer"
+  onClick={() => setIsMenuOpen(false)}
+>
+  <Button
+    variant="ghost"
+    size="sm"
+    className="w-full justify-center mobile-btn mobile-tap-highlight font-body"
+  >
+    Loginn
+  </Button>
+</a>
+
                 <Link to="/book-demo" onClick={() => setIsMenuOpen(false)}>
                   <Button size="sm" className="w-full btn-gradient mobile-btn mobile-tap-highlight font-body font-medium">
                     Book a Demo

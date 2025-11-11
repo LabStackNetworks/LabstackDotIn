@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -11,6 +11,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/hooks/use-toast";
+import { ArrowRight } from "lucide-react";
 
 const schema = z.object({
   orgType: z.enum(["Hospital", "Diagnostic Lab", "Clinic", "Imaging Center"], { required_error: "Select organization type" }),
@@ -21,7 +22,7 @@ const schema = z.object({
   designation: z.string().trim().min(2, "Designation is required").max(50),
   email: z.string().trim().email("Enter a valid email").max(255),
   phone: z.string().trim().min(10, "Enter a valid 10-digit phone number").max(15),
-  services: z.string().trim().min(10, "Please describe your services (minimum 10 characters)").max(500),
+  services: z.string().trim().max(500).optional(),
   registrationNo: z.string().trim().optional(),
   message: z.string().trim().max(1000).optional(),
   agreeToTerms: z.boolean().refine((val) => val === true, {
@@ -36,6 +37,7 @@ type FormValues = z.infer<typeof schema>;
 
 const HospitalsLabsForm = () => {
   const { toast } = useToast();
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const form = useForm<FormValues>({ 
     resolver: zodResolver(schema), 
     defaultValues: {
@@ -60,35 +62,73 @@ const HospitalsLabsForm = () => {
   }, []);
 
   const onSubmit = async (values: FormValues) => {
-    const formData = new FormData();
-    formData.append("_subject", "Hospital/Lab Partnership Application - Join Network");
-    formData.append("Organization Type", values.orgType);
-    formData.append("Organization Name", values.orgName);
-    formData.append("City", values.city);
-    formData.append("State", values.state);
-    formData.append("Contact Name", values.contactName);
-    formData.append("Designation", values.designation);
-    formData.append("Email", values.email);
-    formData.append("Phone", values.phone);
-    formData.append("Services", values.services);
-    formData.append("Registration Number", values.registrationNo || "N/A");
-    formData.append("Message", values.message || "N/A");
-    
-    try {
-      await fetch("https://formsubmit.co/contact@labstack.in", {
-        method: "POST",
-        body: formData,
-      });
-      
-      toast({ 
-        title: "Application received!", 
-        description: "Our partnership team will review your application and reach out within 2 business days." 
-      });
-      form.reset();
-    } catch (error) {
-      toast({ title: "Error", description: "Failed to submit application. Please try again.", variant: "destructive" });
+    const API_ENDPOINT = "http://localhost:3000"; // Move to env var later
+
+  if (!API_ENDPOINT) {
+    toast({
+      title: "Configuration Error",
+      description: "API endpoint is not configured. Please contact support.",
+      variant: "destructive",
+    });
+    return;
+  }
+
+  const fullUrl = `${API_ENDPOINT}/api/dev/forms/hospital-labs-form`;
+
+  setIsSubmitting(true);
+
+  try {
+
+    const response = await fetch(fullUrl, {
+      method: "POST",
+      body: JSON.stringify(values),
+    });
+
+    const data = await response.json().catch(() => ({}));
+
+    if (!response.ok) {
+      if (response.status === 429) {
+        toast({
+          title: "Too Many Requests",
+          description: data.message || "Please wait before submitting again.",
+          variant: "destructive",
+        });
+      } else if (response.status >= 400 && response.status < 500) {
+        toast({
+          title: "Submission Error",
+          description:
+            data.message ||
+            "Invalid input. Please check your form details and try again.",
+          variant: "destructive",
+        });
+      } else {
+        throw new Error(data.message || "Unexpected server error occurred.");
+      }
+      return;
     }
-  };
+
+    toast({
+      title: "Application Received!",
+      description:
+        data.message ||
+        "Our team will reach out within 2 business days.",
+    });
+
+    form.reset();
+  } catch (error) {
+    console.error("Submission error:", error);
+    toast({
+      title: "Error",
+      description:
+        error instanceof Error
+          ? error.message
+          : "Failed to submit application. Please check your connection and try again.",
+      variant: "destructive",
+    });
+  } finally {
+    setIsSubmitting(false);
+  }
+};
 
   return (
     <div className="min-h-screen bg-background">
@@ -272,8 +312,9 @@ const HospitalsLabsForm = () => {
                   )} />
                 </div>
 
-                <Button type="submit" size="lg" className="w-full btn-gradient">
-                  Submit Application
+                <Button type="submit" size="lg" className="w-full btn-gradient" disabled={isSubmitting}>
+                  {isSubmitting ? "Submitting..." : "Submit Application"}
+                  {!isSubmitting && <ArrowRight className="ml-2 h-5 w-5" />}
                 </Button>
               </form>
             </Form>

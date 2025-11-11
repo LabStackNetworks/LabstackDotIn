@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -11,19 +11,20 @@ import { Textarea } from "@/components/ui/textarea";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/hooks/use-toast";
+import { ArrowRight } from "lucide-react";
 
 const schema = z.object({
   role: z.enum(["Nutritionist", "Dietitian", "Health Coach", "Wellness Coach"], { required_error: "Select your role" }),
   fullName: z.string().trim().min(3, "Full name is required").max(100),
   qualification: z.string().trim().min(2, "Qualification is required").max(100),
-  certifications: z.string().trim().min(5, "Please list your certifications").max(300),
-  experienceYears: z.string().trim().min(1, "Experience years is required"),
-  city: z.string().trim().min(2, "City is required").max(50),
-  state: z.string().trim().min(2, "State is required").max(50),
+  certifications: z.string().trim().max(300).optional(),
+  experienceYears: z.string().trim().optional(),
+  city: z.string().trim().max(50).optional(),
+  state: z.string().trim().max(50),
   email: z.string().trim().email("Enter a valid email").max(255),
   phone: z.string().trim().min(10, "Enter a valid 10-digit phone number").max(15),
-  specializations: z.string().trim().min(10, "Please describe your specializations").max(300),
-  availability: z.string().trim().min(5, "Please share your availability").max(300),
+  specializations: z.string().trim().max(300).optional(),
+  availability: z.string().trim().max(300).optional(),
   message: z.string().trim().max(1000).optional(),
   agreeToTerms: z.boolean().refine((val) => val === true, {
     message: "You must agree to the Terms of Service",
@@ -37,6 +38,7 @@ type FormValues = z.infer<typeof schema>;
 
 const NutritionistsForm = () => {
   const { toast } = useToast();
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const form = useForm<FormValues>({ 
     resolver: zodResolver(schema), 
     defaultValues: {
@@ -61,37 +63,75 @@ const NutritionistsForm = () => {
     document.title = "Nutritionist & Health Coach Application – Join Labstack | Labstack"; 
   }, []);
 
-  const onSubmit = async (values: FormValues) => {
-    const formData = new FormData();
-    formData.append("_subject", "Nutritionist/Health Coach Application - Join Network");
-    formData.append("Role", values.role);
-    formData.append("Full Name", values.fullName);
-    formData.append("Qualification", values.qualification);
-    formData.append("Certifications", values.certifications);
-    formData.append("Experience", `${values.experienceYears} years`);
-    formData.append("City", values.city);
-    formData.append("State", values.state);
-    formData.append("Email", values.email);
-    formData.append("Phone", values.phone);
-    formData.append("Specializations", values.specializations);
-    formData.append("Availability", values.availability);
-    formData.append("Message", values.message || "N/A");
-    
-    try {
-      await fetch("https://formsubmit.co/contact@labstack.in", {
-        method: "POST",
-        body: formData,
-      });
-      
-      toast({ 
-        title: "Application received!", 
-        description: "Our wellness network team will review your credentials and reach out within 2 business days." 
-      });
-      form.reset();
-    } catch (error) {
-      toast({ title: "Error", description: "Failed to submit application. Please try again.", variant: "destructive" });
+    const onSubmit = async (values: FormValues) => {
+    const API_ENDPOINT = "http://localhost:3000"; // Move to env var later
+
+  if (!API_ENDPOINT) {
+    toast({
+      title: "Configuration Error",
+      description: "API endpoint is not configured. Please contact support.",
+      variant: "destructive",
+    });
+    return;
+  }
+
+  const fullUrl = `${API_ENDPOINT}/api/dev/forms/nutritionists-form`;
+
+  setIsSubmitting(true);
+
+  try {
+
+    const response = await fetch(fullUrl, {
+      method: "POST",
+      body: JSON.stringify(values),
+    });
+
+    const data = await response.json().catch(() => ({}));
+
+    if (!response.ok) {
+      if (response.status === 429) {
+        toast({
+          title: "Too Many Requests",
+          description: data.message || "Please wait before submitting again.",
+          variant: "destructive",
+        });
+      } else if (response.status >= 400 && response.status < 500) {
+        toast({
+          title: "Submission Error",
+          description:
+            data.message ||
+            "Invalid input. Please check your form details and try again.",
+          variant: "destructive",
+        });
+      } else {
+        throw new Error(data.message || "Unexpected server error occurred.");
+      }
+      return;
     }
-  };
+
+    toast({
+      title: "Application Received!",
+      description:
+        data.message ||
+        "Our team will reach out within 2 business days.",
+    });
+
+    form.reset();
+  } catch (error) {
+    console.error("Submission error:", error);
+    toast({
+      title: "Error",
+      description:
+        error instanceof Error
+          ? error.message
+          : "Failed to submit application. Please check your connection and try again.",
+      variant: "destructive",
+    });
+  } finally {
+    setIsSubmitting(false);
+  }
+};
+
 
   return (
     <div className="min-h-screen bg-background">
@@ -292,8 +332,9 @@ const NutritionistsForm = () => {
                   )} />
                 </div>
 
-                <Button type="submit" size="lg" className="w-full btn-gradient">
-                  Submit Application
+                <Button type="submit" size="lg" className="w-full btn-gradient" disabled={isSubmitting}>
+                  {isSubmitting ? "Submitting..." : "Submit Application"}
+                  {!isSubmitting && <ArrowRight className="ml-2 h-5 w-5" />}
                 </Button>
               </form>
             </Form>

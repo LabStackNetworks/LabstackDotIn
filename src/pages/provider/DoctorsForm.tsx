@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -14,29 +14,27 @@ import { useToast } from "@/hooks/use-toast";
 
 const schema = z.object({
   fullName: z.string().trim().min(3, "Full name is required").max(100),
-  specialty: z.string().trim().min(2, "Specialty is required").max(50),
-  qualification: z.string().trim().min(2, "Qualification is required").max(100),
-  registrationNo: z.string().trim().min(5, "MCI/State registration number is required").max(50),
-  experienceYears: z.string().trim().min(1, "Experience years is required"),
-  city: z.string().trim().min(2, "City is required").max(50),
-  state: z.string().trim().min(2, "State is required").max(50),
+  specialty: z.string().trim().max(50).optional(),
+  qualification: z.string().trim().max(100).optional(),
+  registrationNo: z.string().trim().max(50).optional(),
+  experienceYears: z.string().trim().max(50).optional(),
+  city: z.string().trim().max(50).optional(),
+  state: z.string().trim().max(50).optional(),
   email: z.string().trim().email("Enter a valid email").max(255),
   phone: z.string().trim().min(10, "Enter a valid 10-digit phone number").max(15),
-  consultationTypes: z.string().trim().min(5, "Please specify consultation types").max(200),
-  availability: z.string().trim().min(5, "Please share your availability").max(300),
+  consultationTypes: z.string().trim().max(200).optional(),
+  availability: z.string().trim().max(300).optional(),
   message: z.string().trim().max(1000).optional(),
-  agreeToTerms: z.boolean().refine((val) => val === true, {
-    message: "You must agree to the Terms of Service",
-  }),
-  agreeToPrivacy: z.boolean().refine((val) => val === true, {
-    message: "You must agree to the Privacy Policy",
-  }),
+  agreeToTerms: z.boolean(),
+  agreeToPrivacy: z.boolean(),
 });
 
 type FormValues = z.infer<typeof schema>;
 
 const DoctorsForm = () => {
   const { toast } = useToast();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  
   const form = useForm<FormValues>({ 
     resolver: zodResolver(schema), 
     defaultValues: {
@@ -62,34 +60,77 @@ const DoctorsForm = () => {
   }, []);
 
   const onSubmit = async (values: FormValues) => {
-    const formData = new FormData();
-    formData.append("_subject", "Doctor Application - Join Network");
-    formData.append("Full Name", values.fullName);
-    formData.append("Email", values.email);
-    formData.append("Phone", values.phone);
-    formData.append("Registration Number", values.registrationNo);
-    formData.append("Specialty", values.specialty);
-    formData.append("Qualification", values.qualification);
-    formData.append("Experience", `${values.experienceYears} years`);
-    formData.append("City", values.city);
-    formData.append("State", values.state);
-    formData.append("Consultation Types", values.consultationTypes);
-    formData.append("Availability", values.availability);
-    formData.append("Message", values.message || "N/A");
+    // Check if API endpoint is configured
+    const API_ENDPOINT = "http://localhost:3000"; // Replace with actual environment variable if needed
+    
+    if (!API_ENDPOINT) {
+      console.error("API endpoint not configured");
+      toast({ 
+        title: "Configuration Error", 
+        description: "API endpoint is not configured. Please contact support.",
+        variant: "destructive" 
+      });
+      return;
+    }
+
+    const fullUrl = `${API_ENDPOINT}/api/dev/forms/doctor-application`;
+    
+    setIsSubmitting(true);
     
     try {
-      await fetch("https://formsubmit.co/contact@labstack.in", {
-        method: "POST",
-        body: formData,
-      });
+      console.log("Sending data to:", fullUrl);
+      console.log("Data:", values);
       
+      const response = await fetch(fullUrl, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(values),
+      });
+
+      const data = await response.json();
+      console.log("Response data:", data);
+      
+      if (!response.ok) {
+        // Handle specific error cases
+        if (response.status === 429) {
+          toast({ 
+            title: "Too Many Requests", 
+            description: data.message || "Please wait before submitting again.",
+            variant: "destructive" 
+          });
+        } else if (response.status === 400) {
+          const errorMsg = data.errors?.join(", ") || data.message || "Validation error occurred";
+          toast({ 
+            title: "Validation Error", 
+            description: errorMsg,
+            variant: "destructive" 
+          });
+        } else {
+          throw new Error(data.message || "Failed to submit application.");
+        }
+        return;
+      }
+
+      // Success
       toast({ 
         title: "Application received!", 
-        description: "Our medical network team will review your credentials and reach out within 2 business days." 
+        description: data.message || "Our medical network team will review your credentials and reach out within 2 business days." 
       });
       form.reset();
+
     } catch (error) {
-      toast({ title: "Error", description: "Failed to submit application. Please try again.", variant: "destructive" });
+      console.error("Submission error:", error);
+      // Network or unexpected errors
+      const errorMessage = error instanceof Error ? error.message : "Failed to submit application. Please check your connection and try again.";
+      toast({ 
+        title: "Error", 
+        description: errorMessage, 
+        variant: "destructive" 
+      });
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
@@ -281,8 +322,13 @@ const DoctorsForm = () => {
                   )} />
                 </div>
 
-                <Button type="submit" size="lg" className="w-full btn-gradient">
-                  Submit Application
+                <Button 
+                  type="submit" 
+                  size="lg" 
+                  className="w-full btn-gradient" 
+                  disabled={isSubmitting}
+                >
+                  {isSubmitting ? "Submitting..." : "Submit Application"}
                 </Button>
               </form>
             </Form>

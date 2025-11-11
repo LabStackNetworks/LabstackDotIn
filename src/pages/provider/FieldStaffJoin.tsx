@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
@@ -13,6 +13,7 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { Link } from "react-router-dom";
 import { useToast } from "@/hooks/use-toast";
 import { generateServiceSchema, generateBreadcrumbSchema } from "@/lib/structured-data";
+import { ArrowRight } from "lucide-react";
 
 const schema = z.object({
   role: z.enum(["Phlebotomist", "Nurse"], { required_error: "Select your role" }),
@@ -32,20 +33,14 @@ const schema = z.object({
   }),
   agreeToPrivacy: z.boolean().refine((val) => val === true, {
     message: "You must agree to the Privacy Policy",
-  }),
-  resume: z
-    .any()
-    .refine(
-      (file) => !file || (file instanceof File && file.type === "application/pdf"),
-      "Only PDF files are allowed"
-    )
-    .optional(),
+  })
 });
 
 type FormValues = z.infer<typeof schema>;
 
 const FieldStaffJoin = () => {
   const { toast } = useToast();
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const form = useForm<FormValues>({ resolver: zodResolver(schema), defaultValues: {
     role: "Phlebotomist",
     fullName: "",
@@ -57,43 +52,85 @@ const FieldStaffJoin = () => {
     certifications: "",
     message: "",
     agreeToPartnerTerms: false,
-    resume: undefined, // new line
     agreeToTerms: false,
     agreeToPrivacy: false,
   }});
 
   useEffect(() => { document.title = "Join the Network – Phlebotomists & Nurses | Labstack"; }, []);
 
-  const onSubmit = async (values: FormValues) => {
-    const formData = new FormData();
-    formData.append("_subject", "Field Staff Application - Join Network");
-    formData.append("Role", values.role);
-    formData.append("Full Name", values.fullName);
-    formData.append("Email", values.email);
-    formData.append("Phone", values.phone);
-    formData.append("City", values.city);
-    formData.append("Experience", `${values.experienceYears} years`);
-    formData.append("Availability", values.availability);
-    formData.append("Certifications", values.certifications || "N/A");
-    formData.append("Message", values.message || "N/A");
+const onSubmit = async (values: FormValues) => {
+  const API_ENDPOINT = "http://localhost:3000"; // Move to env var later
 
-    // ✅ Add resume if uploaded
-    if (values.resume) {
-      formData.append("Resume", values.resume);
+  if (!API_ENDPOINT) {
+    toast({
+      title: "Configuration Error",
+      description: "API endpoint is not configured. Please contact support.",
+      variant: "destructive",
+    });
+    return;
+  }
+
+  const fullUrl = `${API_ENDPOINT}/api/dev/forms/field-staff-application`;
+
+  setIsSubmitting(true);
+
+  try {
+    console.log("Submitting field staff data to:", fullUrl);
+
+    const response = await fetch(fullUrl, {
+      method: "POST",
+      body: JSON.stringify(values), // If backend expects multipart/form-data
+      // If backend expects JSON instead, use:
+      // headers: { "Content-Type": "application/json" },
+      // body: JSON.stringify(payload),
+    });
+
+    const data = await response.json().catch(() => ({}));
+
+    if (!response.ok) {
+      if (response.status === 429) {
+        toast({
+          title: "Too Many Requests",
+          description: data.message || "Please wait before submitting again.",
+          variant: "destructive",
+        });
+      } else if (response.status >= 400 && response.status < 500) {
+        toast({
+          title: "Submission Error",
+          description:
+            data.message ||
+            "Invalid input. Please check your form details and try again.",
+          variant: "destructive",
+        });
+      } else {
+        throw new Error(data.message || "Unexpected server error occurred.");
+      }
+      return;
     }
-    
-    try {
-      await fetch("https://formsubmit.co/contact@labstack.in", {
-        method: "POST",
-        body: formData,
-      });
-      
-      toast({ title: "Application received", description: "Our team will reach out within 2 business days." });
-      form.reset();
-    } catch (error) {
-      toast({ title: "Error", description: "Failed to submit application. Please try again.", variant: "destructive" });
-    }
-  };
+
+    toast({
+      title: "Application Received!",
+      description:
+        data.message ||
+        "Our team will reach out within 2 business days.",
+    });
+
+    form.reset();
+  } catch (error) {
+    console.error("Submission error:", error);
+    toast({
+      title: "Error",
+      description:
+        error instanceof Error
+          ? error.message
+          : "Failed to submit application. Please check your connection and try again.",
+      variant: "destructive",
+    });
+  } finally {
+    setIsSubmitting(false);
+  }
+};
+
 
   const structuredData = [
     generateServiceSchema({
@@ -219,26 +256,6 @@ const FieldStaffJoin = () => {
                   </FormItem>
                 )} />
 
-                <FormField
-                  name="resume"
-                  control={form.control}
-                  render={({ field: { onChange, value, ...rest } }) => (
-                    <FormItem>
-                      <FormLabel>Upload Resume (PDF)</FormLabel>
-                      <FormControl>
-                        <Input
-                          type="file"
-                          accept="application/pdf"
-                          onChange={(e) => onChange(e.target.files?.[0])}
-                          {...rest}
-                        />
-                      </FormControl>
-                      <FormDescription>Attach your resume in PDF format (optional)</FormDescription>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
-
 
                 <FormField name="message" control={form.control} render={({ field }) => (
                   <FormItem>
@@ -305,7 +322,10 @@ const FieldStaffJoin = () => {
 
                 <div className="flex items-center justify-between gap-3">
                   <p className="text-xs text-muted-foreground">We never share your details. By submitting, you agree to be contacted about onboarding.</p>
-                  <Button type="submit" size="lg" className="btn-gradient">Submit Application</Button>
+                  <Button type="submit" size="lg" className="btn-gradient" disabled={isSubmitting}>
+                    {isSubmitting ? "Submitting..." : "Submit Application"}
+                    {!isSubmitting && <ArrowRight className="ml-2 h-5 w-5" />}
+                  </Button>
                 </div>
 
                 <div className="text-center text-sm text-muted-foreground">
