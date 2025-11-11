@@ -66,7 +66,7 @@ const StartBuilding = () => {
 
   /* --------------------------- ✅ Submit Handler --------------------------- */
   const onSubmit = async (values: FormValues) => {
-    const API_ENDPOINT = "http://localhost:3000"; // Move to env var later
+    const API_ENDPOINT = import.meta.env.VITE_CONSOLE_API_ENDPOINT; 
     const fullUrl = `${API_ENDPOINT}/api/dev/forms/start-building-form`;
 
     setIsSubmitting(true);

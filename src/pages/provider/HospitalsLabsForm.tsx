@@ -62,7 +62,7 @@ const HospitalsLabsForm = () => {
   }, []);
 
   const onSubmit = async (values: FormValues) => {
-    const API_ENDPOINT = "http://localhost:3000"; // Move to env var later
+    const API_ENDPOINT = import.meta.env.VITE_CONSOLE_API_ENDPOINT; 
 
   if (!API_ENDPOINT) {
     toast({

@@ -46,7 +46,7 @@ const BookDemo = () => {
   }, []);
 
   const onSubmit = async (values: FormValues) => {
-    const API_ENDPOINT = "http://localhost:3000"; // move to env var later
+    const API_ENDPOINT = import.meta.env.VITE_CONSOLE_API_ENDPOINT; // move to env var later
     if (!API_ENDPOINT) {
       toast({
         title: "Configuration Error",
