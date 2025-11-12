@@ -28,6 +28,7 @@ dist-ssr
 
 /build
 ecosystem.config.js
+ecosystem.config.cjs
 package-lock.json
 
 # debug
