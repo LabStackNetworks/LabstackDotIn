@@ -258,129 +258,136 @@ const Header = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center space-x-8">
-            {navItems.map((item) => (
-              <div 
-                key={item.label}
-                className="relative"
-                onMouseEnter={() => item.hasDropdown && handleMouseEnter(item.label)}
-                onMouseLeave={handleMouseLeave}
-              >
-                <button className="text-muted-foreground hover:text-foreground transition-smooth text-sm font-medium mobile-touch-target flex items-center group">
-                  <span className="font-body">{item.label}</span>
-                  {item.hasDropdown && (
-                    <ChevronDown className="ml-1 w-4 h-4 transition-transform group-hover:rotate-180" />
-                  )}
-                </button>
-                
-                {/* Dropdown Menu */}
-                {item.hasDropdown && activeDropdown === item.label && (
-                  <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-[800px] bg-card/95 backdrop-blur-xl border border-border/50 rounded-2xl shadow-neural overflow-hidden z-50">
-                    <div className="grid grid-cols-12 min-h-[400px]">
-                      {/* Featured Section */}
-                      <div className="col-span-5 bg-gradient-primary p-8 flex flex-col justify-between text-white relative overflow-hidden">
-                        <div className="absolute inset-0 bg-black/10"></div>
-                        <div className="relative z-10">
-                          <item.dropdown.featured.icon className="w-12 h-12 mb-4 text-white/90" />
-                          <h3 className="text-xl font-heading font-bold mb-2">{item.dropdown.featured.title}</h3>
-                          <p className="text-white/80 text-sm font-body leading-relaxed mb-6">{item.dropdown.featured.description}</p>
+            {navItems.map((item, index) => {
+              // Align right for last 2 items to prevent overflow
+              const isRightAligned = index >= navItems.length - 2;
+              
+              return (
+                <div 
+                  key={item.label}
+                  className="relative"
+                  onMouseEnter={() => item.hasDropdown && handleMouseEnter(item.label)}
+                  onMouseLeave={handleMouseLeave}
+                >
+                  <button className="text-muted-foreground hover:text-foreground transition-smooth text-sm font-medium mobile-touch-target flex items-center group">
+                    <span className="font-body">{item.label}</span>
+                    {item.hasDropdown && (
+                      <ChevronDown className="ml-1 w-4 h-4 transition-transform group-hover:rotate-180" />
+                    )}
+                  </button>
+                  
+                  {/* Dropdown Menu */}
+                  {item.hasDropdown && activeDropdown === item.label && (
+                    <div className={`absolute top-full mt-2 w-[700px] max-w-[90vw] bg-card/95 backdrop-blur-xl border border-border/50 rounded-2xl shadow-neural overflow-hidden z-50 ${
+                      isRightAligned ? 'right-0' : 'left-1/2 -translate-x-1/2'
+                    }`}>
+                      <div className="grid grid-cols-12 min-h-[350px]">
+                        {/* Featured Section */}
+                        <div className="col-span-5 bg-gradient-primary p-8 flex flex-col justify-between text-white relative overflow-hidden">
+                          <div className="absolute inset-0 bg-black/10"></div>
+                          <div className="relative z-10">
+                            <item.dropdown.featured.icon className="w-12 h-12 mb-4 text-white/90" />
+                            <h3 className="text-xl font-heading font-bold mb-2">{item.dropdown.featured.title}</h3>
+                            <p className="text-white/80 text-sm font-body leading-relaxed mb-6">{item.dropdown.featured.description}</p>
+                          </div>
+                          {item.dropdown.featured.href.startsWith('/') ? (
+                            <Link 
+                              to={item.dropdown.featured.href}
+                              className="relative z-10 inline-flex items-center text-sm font-medium text-white hover:text-white/80 transition-colors"
+                            >
+                              Learn more →
+                            </Link>
+                          ) : (
+                            <a 
+                              href={item.dropdown.featured.href}
+                              className="relative z-10 inline-flex items-center text-sm font-medium text-white hover:text-white/80 transition-colors"
+                            >
+                              Learn more →
+                            </a>
+                          )}
+                          {/* Decorative Elements */}
+                          <div className="absolute -right-8 -bottom-8 w-24 h-24 bg-white/10 rounded-full"></div>
+                          <div className="absolute -right-4 -top-4 w-16 h-16 bg-white/5 rounded-full"></div>
                         </div>
-                        {item.dropdown.featured.href.startsWith('/') ? (
-                          <Link 
-                            to={item.dropdown.featured.href}
-                            className="relative z-10 inline-flex items-center text-sm font-medium text-white hover:text-white/80 transition-colors"
-                          >
-                            Learn more →
-                          </Link>
-                        ) : (
-                          <a 
-                            href={item.dropdown.featured.href}
-                            className="relative z-10 inline-flex items-center text-sm font-medium text-white hover:text-white/80 transition-colors"
-                          >
-                            Learn more →
-                          </a>
-                        )}
-                        {/* Decorative Elements */}
-                        <div className="absolute -right-8 -bottom-8 w-24 h-24 bg-white/10 rounded-full"></div>
-                        <div className="absolute -right-4 -top-4 w-16 h-16 bg-white/5 rounded-full"></div>
-                      </div>
-                      
-                      {/* Navigation Sections */}
-                      <div className="col-span-7 p-6">
-                        <div className="grid grid-cols-2 gap-6 h-full">
-                          {item.dropdown.sections.map((section, sectionIdx) => (
-                            <div key={section.title} className="flex flex-col">
-                              <h4 className="text-sm font-heading font-semibold text-muted-foreground uppercase tracking-wider mb-4">
-                                {section.title}
-                              </h4>
-                              <div className="space-y-3 flex-1">
-                                {section.items.map((subItem) => (
-                                  subItem.href.startsWith('/') ? (
-                                    <Link 
-                                      key={subItem.label}
-                                      to={subItem.href}
-                                      className="group block p-3 rounded-xl hover:bg-accent/50 transition-all duration-200 hover:scale-102"
-                                    >
-                                      <div className="text-sm font-medium font-body text-foreground group-hover:text-primary transition-colors">
-                                        {subItem.label}
-                                      </div>
-                                      <div className="text-xs text-muted-foreground mt-1 font-body">
-                                        {subItem.description}
-                                      </div>
-                                    </Link>
-                                  ) : (
-                                    <a 
-                                      key={subItem.label}
-                                      href={subItem.href}
-                                      className="group block p-3 rounded-xl hover:bg-accent/50 transition-all duration-200 hover:scale-102"
-                                    >
-                                      <div className="text-sm font-medium font-body text-foreground group-hover:text-primary transition-colors">
-                                        {subItem.label}
-                                      </div>
-                                      <div className="text-xs text-muted-foreground mt-1 font-body">
-                                        {subItem.description}
-                                      </div>
-                                    </a>
-                                  )
-                                ))}
+                        
+                        {/* Navigation Sections */}
+                        <div className="col-span-7 p-6">
+                          <div className="grid grid-cols-2 gap-6 h-full">
+                            {item.dropdown.sections.map((section, sectionIdx) => (
+                              <div key={section.title} className="flex flex-col">
+                                <h4 className="text-sm font-heading font-semibold text-muted-foreground uppercase tracking-wider mb-4">
+                                  {section.title}
+                                </h4>
+                                <div className="space-y-3 flex-1">
+                                  {section.items.map((subItem) => (
+                                    subItem.href.startsWith('/') ? (
+                                      <Link 
+                                        key={subItem.label}
+                                        to={subItem.href}
+                                        className="group block p-3 rounded-xl hover:bg-accent/50 transition-all duration-200 hover:scale-102"
+                                      >
+                                        <div className="text-sm font-medium font-body text-foreground group-hover:text-primary transition-colors">
+                                          {subItem.label}
+                                        </div>
+                                        <div className="text-xs text-muted-foreground mt-1 font-body">
+                                          {subItem.description}
+                                        </div>
+                                      </Link>
+                                    ) : (
+                                      <a 
+                                        key={subItem.label}
+                                        href={subItem.href}
+                                        className="group block p-3 rounded-xl hover:bg-accent/50 transition-all duration-200 hover:scale-102"
+                                      >
+                                        <div className="text-sm font-medium font-body text-foreground group-hover:text-primary transition-colors">
+                                          {subItem.label}
+                                        </div>
+                                        <div className="text-xs text-muted-foreground mt-1 font-body">
+                                          {subItem.description}
+                                        </div>
+                                      </a>
+                                    )
+                                  ))}
+                                </div>
                               </div>
-                            </div>
-                          ))}
+                            ))}
+                          </div>
                         </div>
                       </div>
                     </div>
-                  </div>
-                )}
-              </div>
-            ))}
+                  )}
+                </div>
+              );
+            })}
           </nav>
 
           {/* CTA Buttons */}
           <div className="hidden lg:flex items-center space-x-4">
-  <ThemeToggle />
-  
-  <a
-    href="https://console.labstack.in"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    <Button
-      variant="ghost"
-      size="sm"
-      className="text-muted-foreground hover:text-foreground mobile-touch-target font-body"
-    >
-      Login
-    </Button>
-  </a>
+              <ThemeToggle />
+              
+              <a
+                href="https://console.labstack.in"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button
+                  variant="ghost"
+                  size="sm"
+                  className="text-muted-foreground hover:text-foreground mobile-touch-target font-body"
+                >
+                  Login
+                </Button>
+              </a>
 
-  <Link to="/book-demo">
-    <Button
-      size="sm"
-      className="btn-gradient mobile-touch-target font-body font-medium"
-    >
-      Book a Demo
-    </Button>
-  </Link>
-</div>
+              <Link to="/book-demo">
+                <Button
+                  size="sm"
+                  className="btn-gradient mobile-touch-target font-body font-medium"
+                >
+                  Book a Demo
+                </Button>
+              </Link>
+            </div>
 
 
           {/* Mobile Actions: Theme + Menu */}
